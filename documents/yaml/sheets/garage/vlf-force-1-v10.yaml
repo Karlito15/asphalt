@@ -1,0 +1,56 @@
+Class: A
+Brand: VLF
+Model: 'Force 1 V10'
+'Car Name': 'VLF Force 1 V10'
+Slug: vlf-force-1-v10
+Unlocked: false
+Golded: true
+'Game Update': 0
+Stars: 5
+'Order Car': 15
+'Order Car Total': 56
+'Order Stat': 38
+'Order Stat Total': 56
+'Level Actual': 12
+'Level Max': 12
+'Commmon Actual': 24
+'Commmon Max': 24
+'Rare Actual': 20
+'Rare Max': 20
+'Epic Actual': 12
+'Epic Max': 12
+'Blueprint Star 1': '45'
+'Blueprint Setting 1': '45'
+'Diff Star 1': 0
+'Blueprint Star 2': 17
+'Blueprint Setting 2': 17
+'Diff Star 2': 0
+'Blueprint Star 3': 23
+'Blueprint Setting 3': 23
+'Diff Star 3': 0
+'Blueprint Star 4': 32
+'Blueprint Setting 4': 32
+'Diff Star 4': 0
+'Blueprint Star 5': 45
+'Blueprint Setting 5': 45
+'Diff Star 5': 0
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 2706
+'Rank Star 1': 2846
+'Rank Star 2': 3038
+'Rank Star 3': 3272
+'Rank Star 4': 3587
+'Rank Star 5': 3929
+'Rank Star 6': 0
+'Stat Min Speed': 350.0
+'Stat Max Speed': 368.8
+'Stat Min Acceleration': 73.9
+'Stat Max Acceleration': 80.33
+'Stat Min Handly': 43.04
+'Stat Max Handly': 54.68
+'Stat Min Nitro': 60.87
+'Stat Max Nitro': 74.62
+'Stat Min Average': 131.95
+'Stat Max Average': 144.61

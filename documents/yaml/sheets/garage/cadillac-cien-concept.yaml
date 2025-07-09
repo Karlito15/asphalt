@@ -1,0 +1,56 @@
+Class: B
+Brand: Cadillac
+Model: 'Cien Concept'
+'Car Name': 'Cadillac Cien Concept'
+Slug: cadillac-cien-concept
+Unlocked: false
+Golded: true
+'Game Update': 0
+Stars: 4
+'Order Car': 13
+'Order Car Total': 66
+'Order Stat': 46
+'Order Stat Total': 66
+'Level Actual': 11
+'Level Max': 11
+'Commmon Actual': 24
+'Commmon Max': 24
+'Rare Actual': 16
+'Rare Max': 16
+'Epic Actual': 8
+'Epic Max': 8
+'Blueprint Star 1': '40'
+'Blueprint Setting 1': '40'
+'Diff Star 1': 0
+'Blueprint Star 2': 18
+'Blueprint Setting 2': 18
+'Diff Star 2': 0
+'Blueprint Star 3': 24
+'Blueprint Setting 3': 24
+'Diff Star 3': 0
+'Blueprint Star 4': 36
+'Blueprint Setting 4': 36
+'Diff Star 4': 0
+'Blueprint Star 5': 0
+'Blueprint Setting 5': 0
+'Diff Star 5': 0
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 1937
+'Rank Star 1': 2163
+'Rank Star 2': 2504
+'Rank Star 3': 2856
+'Rank Star 4': 3155
+'Rank Star 5': 0
+'Rank Star 6': 0
+'Stat Min Speed': 350.0
+'Stat Max Speed': 368.0
+'Stat Min Acceleration': 68.5
+'Stat Max Acceleration': 76.55
+'Stat Min Handly': 30.04
+'Stat Max Handly': 36.14
+'Stat Min Nitro': 50.68
+'Stat Max Nitro': 61.1
+'Stat Min Average': 124.81
+'Stat Max Average': 135.45

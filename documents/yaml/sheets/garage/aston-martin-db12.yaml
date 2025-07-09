@@ -1,0 +1,56 @@
+Class: B
+Brand: 'Aston Martin'
+Model: DB12
+'Car Name': 'Aston Martin DB12'
+Slug: aston-martin-db12
+Unlocked: false
+Golded: false
+'Game Update': 37
+Stars: 5
+'Order Car': 28
+'Order Car Total': 66
+'Order Stat': 32
+'Order Stat Total': 66
+'Level Actual': 6
+'Level Max': 12
+'Commmon Actual': 0
+'Commmon Max': 32
+'Rare Actual': 0
+'Rare Max': 20
+'Epic Actual': 1
+'Epic Max': 8
+'Blueprint Star 1': '45'
+'Blueprint Setting 1': '45'
+'Diff Star 1': 0
+'Blueprint Star 2': 17
+'Blueprint Setting 2': 17
+'Diff Star 2': 0
+'Blueprint Star 3': 18
+'Blueprint Setting 3': 23
+'Diff Star 3': 5
+'Blueprint Star 4': 0
+'Blueprint Setting 4': 32
+'Diff Star 4': 32
+'Blueprint Star 5': 0
+'Blueprint Setting 5': 45
+'Diff Star 5': 45
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 2247
+'Rank Star 1': 2435
+'Rank Star 2': 0
+'Rank Star 3': 0
+'Rank Star 4': 0
+'Rank Star 5': 3721
+'Rank Star 6': 0
+'Stat Min Speed': 325.0
+'Stat Max Speed': 345.1
+'Stat Min Acceleration': 67.6
+'Stat Max Acceleration': 74.8
+'Stat Min Handly': 53.87
+'Stat Max Handly': 71.36
+'Stat Min Nitro': 53.87
+'Stat Max Nitro': 80.44
+'Stat Min Average': 125.09
+'Stat Max Average': 142.93

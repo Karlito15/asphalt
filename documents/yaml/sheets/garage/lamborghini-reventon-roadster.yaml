@@ -1,0 +1,56 @@
+Class: B
+Brand: Lamborghini
+Model: 'Reventón Roadster'
+'Car Name': 'Lamborghini Reventón Roadster'
+Slug: lamborghini-reventon-roadster
+Unlocked: false
+Golded: true
+'Game Update': 25
+Stars: 5
+'Order Car': 36
+'Order Car Total': 66
+'Order Stat': 24
+'Order Stat Total': 66
+'Level Actual': 8
+'Level Max': 12
+'Commmon Actual': 26
+'Commmon Max': 32
+'Rare Actual': 6
+'Rare Max': 20
+'Epic Actual': 3
+'Epic Max': 8
+'Blueprint Star 1': Key
+'Blueprint Setting 1': Key
+'Diff Star 1': 0
+'Blueprint Star 2': 26
+'Blueprint Setting 2': 26
+'Diff Star 2': 0
+'Blueprint Star 3': 34
+'Blueprint Setting 3': 34
+'Diff Star 3': 0
+'Blueprint Star 4': 19
+'Blueprint Setting 4': 40
+'Diff Star 4': 21
+'Blueprint Star 5': 0
+'Blueprint Setting 5': 62
+'Diff Star 5': 62
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 2555
+'Rank Star 1': 2747
+'Rank Star 2': 3021
+'Rank Star 3': 3266
+'Rank Star 4': 3622
+'Rank Star 5': 3984
+'Rank Star 6': 0
+'Stat Min Speed': 340.0
+'Stat Max Speed': 356.3
+'Stat Min Acceleration': 69.4
+'Stat Max Acceleration': 78.35
+'Stat Min Handly': 51.14
+'Stat Max Handly': 67.65
+'Stat Min Nitro': 55.63
+'Stat Max Nitro': 74.41
+'Stat Min Average': 129.04
+'Stat Max Average': 144.18

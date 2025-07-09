@@ -1,0 +1,56 @@
+Class: B
+Brand: 'Aston Martin'
+Model: Valour
+'Car Name': 'Aston Martin Valour'
+Slug: aston-martin-valour
+Unlocked: true
+Golded: false
+'Game Update': 39
+Stars: 4
+'Order Car': 15
+'Order Car Total': 66
+'Order Stat': 60
+'Order Stat Total': 66
+'Level Actual': 7
+'Level Max': 11
+'Commmon Actual': 20
+'Commmon Max': 24
+'Rare Actual': 4
+'Rare Max': 16
+'Epic Actual': 3
+'Epic Max': 8
+'Blueprint Star 1': '0'
+'Blueprint Setting 1': Key
+'Diff Star 1': 0
+'Blueprint Star 2': 35
+'Blueprint Setting 2': 35
+'Diff Star 2': 0
+'Blueprint Star 3': 11
+'Blueprint Setting 3': 55
+'Diff Star 3': 44
+'Blueprint Star 4': 0
+'Blueprint Setting 4': 85
+'Diff Star 4': 85
+'Blueprint Star 5': 0
+'Blueprint Setting 5': 0
+'Diff Star 5': 0
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 1954
+'Rank Star 1': 0
+'Rank Star 2': 0
+'Rank Star 3': 0
+'Rank Star 4': 3178
+'Rank Star 5': 0
+'Rank Star 6': 0
+'Stat Min Speed': 322.0
+'Stat Max Speed': 331.0
+'Stat Min Acceleration': 73.0
+'Stat Max Acceleration': 78.23
+'Stat Min Handly': 39.83
+'Stat Max Handly': 56.43
+'Stat Min Nitro': 28.55
+'Stat Max Nitro': 60.73
+'Stat Min Average': 115.85
+'Stat Max Average': 131.6

@@ -1,0 +1,56 @@
+Class: B
+Brand: Ferrari
+Model: 'Enzo Ferrari'
+'Car Name': 'Ferrari Enzo Ferrari'
+Slug: ferrari-enzo-ferrari
+Unlocked: false
+Golded: false
+'Game Update': 15
+Stars: 5
+'Order Car': 37
+'Order Car Total': 66
+'Order Stat': 23
+'Order Stat Total': 66
+'Level Actual': 12
+'Level Max': 12
+'Commmon Actual': 32
+'Commmon Max': 32
+'Rare Actual': 20
+'Rare Max': 20
+'Epic Actual': 8
+'Epic Max': 8
+'Blueprint Star 1': '45'
+'Blueprint Setting 1': '45'
+'Diff Star 1': 0
+'Blueprint Star 2': 17
+'Blueprint Setting 2': 17
+'Diff Star 2': 0
+'Blueprint Star 3': 23
+'Blueprint Setting 3': 23
+'Diff Star 3': 0
+'Blueprint Star 4': 32
+'Blueprint Setting 4': 32
+'Diff Star 4': 0
+'Blueprint Star 5': 45
+'Blueprint Setting 5': 45
+'Diff Star 5': 0
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 2574
+'Rank Star 1': 2769
+'Rank Star 2': 3050
+'Rank Star 3': 3304
+'Rank Star 4': 3665
+'Rank Star 5': 4009
+'Rank Star 6': 0
+'Stat Min Speed': 350.0
+'Stat Max Speed': 364.8
+'Stat Min Acceleration': 67.15
+'Stat Max Acceleration': 75.29
+'Stat Min Handly': 49.16
+'Stat Max Handly': 64.95
+'Stat Min Nitro': 60.88
+'Stat Max Nitro': 72.26
+'Stat Min Average': 131.8
+'Stat Max Average': 144.33

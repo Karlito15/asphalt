@@ -1,0 +1,56 @@
+Class: D
+Brand: Hyundai
+Model: 'Ioniq 5 N'
+'Car Name': 'Hyundai Ioniq 5 N'
+Slug: hyundai-ioniq-5-n
+Unlocked: false
+Golded: true
+'Game Update': 42
+Stars: 4
+'Order Car': 99
+'Order Car Total': 40
+'Order Stat': 29
+'Order Stat Total': 40
+'Level Actual': 9
+'Level Max': 99
+'Commmon Actual': 22
+'Commmon Max': 99
+'Rare Actual': 8
+'Rare Max': 99
+'Epic Actual': 1
+'Epic Max': 99
+'Blueprint Star 1': '15'
+'Blueprint Setting 1': '15'
+'Diff Star 1': 0
+'Blueprint Star 2': 25
+'Blueprint Setting 2': 25
+'Diff Star 2': 0
+'Blueprint Star 3': 35
+'Blueprint Setting 3': 35
+'Diff Star 3': 0
+'Blueprint Star 4': 38
+'Blueprint Setting 4': 50
+'Diff Star 4': 12
+'Blueprint Star 5': 0
+'Blueprint Setting 5': 0
+'Diff Star 5': 0
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 1034
+'Rank Star 1': 1782
+'Rank Star 2': 0
+'Rank Star 3': 0
+'Rank Star 4': 2559
+'Rank Star 5': 0
+'Rank Star 6': 0
+'Stat Min Speed': 260.0
+'Stat Max Speed': 271.4
+'Stat Min Acceleration': 75.03
+'Stat Max Acceleration': 85.03
+'Stat Min Handly': 41.28
+'Stat Max Handly': 70.08
+'Stat Min Nitro': 18.03
+'Stat Max Nitro': 51.35
+'Stat Min Average': 98.59
+'Stat Max Average': 119.47

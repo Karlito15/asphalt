@@ -1,0 +1,56 @@
+Class: A
+Brand: Noble
+Model: 'M600 Speedster'
+'Car Name': 'Noble M600 Speedster'
+Slug: noble-m600-speedster
+Unlocked: false
+Golded: false
+'Game Update': 32
+Stars: 5
+'Order Car': 42
+'Order Car Total': 56
+'Order Stat': 40
+'Order Stat Total': 56
+'Level Actual': 8
+'Level Max': 13
+'Commmon Actual': 12
+'Commmon Max': 24
+'Rare Actual': 4
+'Rare Max': 20
+'Epic Actual': 1
+'Epic Max': 16
+'Blueprint Star 1': '70'
+'Blueprint Setting 1': '70'
+'Diff Star 1': 0
+'Blueprint Star 2': 23
+'Blueprint Setting 2': 23
+'Diff Star 2': 0
+'Blueprint Star 3': 27
+'Blueprint Setting 3': 27
+'Diff Star 3': 0
+'Blueprint Star 4': 14
+'Blueprint Setting 4': 36
+'Diff Star 4': 22
+'Blueprint Star 5': 0
+'Blueprint Setting 5': 52
+'Diff Star 5': 52
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 59
+'Diff Star 6': 59
+'Rank Start': 3154
+'Rank Star 1': 3328
+'Rank Star 2': 3535
+'Rank Star 3': 3723
+'Rank Star 4': 3975
+'Rank Star 5': 4224
+'Rank Star 6': 4464
+'Stat Min Speed': 361.0
+'Stat Max Speed': 375.7
+'Stat Min Acceleration': 73.0
+'Stat Max Acceleration': 81.3
+'Stat Min Handly': 62.0
+'Stat Max Handly': 58.47
+'Stat Min Nitro': 30.98
+'Stat Max Nitro': 61.71
+'Stat Min Average': 131.75
+'Stat Max Average': 144.3

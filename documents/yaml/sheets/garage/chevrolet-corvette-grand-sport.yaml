@@ -1,0 +1,56 @@
+Class: B
+Brand: Chevrolet
+Model: 'Corvette Grand Sport'
+'Car Name': 'Chevrolet Corvette Grand Sport'
+Slug: chevrolet-corvette-grand-sport
+Unlocked: false
+Golded: true
+'Game Update': 0
+Stars: 5
+'Order Car': 31
+'Order Car Total': 66
+'Order Stat': 13
+'Order Stat Total': 66
+'Level Actual': 12
+'Level Max': 12
+'Commmon Actual': 32
+'Commmon Max': 32
+'Rare Actual': 20
+'Rare Max': 20
+'Epic Actual': 8
+'Epic Max': 8
+'Blueprint Star 1': '30'
+'Blueprint Setting 1': '30'
+'Diff Star 1': 0
+'Blueprint Star 2': 9
+'Blueprint Setting 2': 9
+'Diff Star 2': 0
+'Blueprint Star 3': 13
+'Blueprint Setting 3': 13
+'Diff Star 3': 0
+'Blueprint Star 4': 21
+'Blueprint Setting 4': 21
+'Diff Star 4': 0
+'Blueprint Star 5': 32
+'Blueprint Setting 5': 32
+'Diff Star 5': 0
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 2506
+'Rank Star 1': 2702
+'Rank Star 2': 2977
+'Rank Star 3': 3227
+'Rank Star 4': 3581
+'Rank Star 5': 3921
+'Rank Star 6': 0
+'Stat Min Speed': 314.0
+'Stat Max Speed': 331.2
+'Stat Min Acceleration': 67.6
+'Stat Max Acceleration': 76.55
+'Stat Min Handly': 70.28
+'Stat Max Handly': 92.99
+'Stat Min Nitro': 66.74
+'Stat Max Nitro': 80.87
+'Stat Min Average': 129.66
+'Stat Max Average': 145.4

@@ -1,0 +1,56 @@
+Class: S
+Brand: McLaren
+Model: Senna
+'Car Name': 'McLaren Senna'
+Slug: mclaren-senna
+Unlocked: false
+Golded: false
+'Game Update': 7
+Stars: 6
+'Order Car': 17
+'Order Car Total': 69
+'Order Stat': 33
+'Order Stat Total': 69
+'Level Actual': 13
+'Level Max': 13
+'Commmon Actual': 28
+'Commmon Max': 28
+'Rare Actual': 20
+'Rare Max': 20
+'Epic Actual': 14
+'Epic Max': 16
+'Blueprint Star 1': '60'
+'Blueprint Setting 1': '60'
+'Diff Star 1': 0
+'Blueprint Star 2': 13
+'Blueprint Setting 2': 13
+'Diff Star 2': 0
+'Blueprint Star 3': 16
+'Blueprint Setting 3': 16
+'Diff Star 3': 0
+'Blueprint Star 4': 25
+'Blueprint Setting 4': 25
+'Diff Star 4': 0
+'Blueprint Star 5': 38
+'Blueprint Setting 5': 38
+'Diff Star 5': 0
+'Blueprint Star 6': 48
+'Blueprint Setting 6': 48
+'Diff Star 6': 0
+'Rank Start': 2855
+'Rank Star 1': 3058
+'Rank Star 2': 3297
+'Rank Star 3': 3552
+'Rank Star 4': 3812
+'Rank Star 5': 4112
+'Rank Star 6': 4406
+'Stat Min Speed': 335.0
+'Stat Max Speed': 358.3
+'Stat Min Acceleration': 74.8
+'Stat Max Acceleration': 82.91
+'Stat Min Handly': 73.57
+'Stat Max Handly': 101.81
+'Stat Min Nitro': 53.07
+'Stat Max Nitro': 78.25
+'Stat Min Average': 134.11
+'Stat Max Average': 155.32

@@ -1,0 +1,56 @@
+Class: C
+Brand: Chevrolet
+Model: 'Corvette Stingray'
+'Car Name': 'Chevrolet Corvette Stingray'
+Slug: chevrolet-corvette-stingray
+Unlocked: false
+Golded: false
+'Game Update': 13
+Stars: 5
+'Order Car': 36
+'Order Car Total': 52
+'Order Stat': 31
+'Order Stat Total': 52
+'Level Actual': 12
+'Level Max': 12
+'Commmon Actual': 16
+'Commmon Max': 36
+'Rare Actual': 8
+'Rare Max': 16
+'Epic Actual': 8
+'Epic Max': 8
+'Blueprint Star 1': '35'
+'Blueprint Setting 1': '35'
+'Diff Star 1': 0
+'Blueprint Star 2': 15
+'Blueprint Setting 2': 15
+'Diff Star 2': 0
+'Blueprint Star 3': 21
+'Blueprint Setting 3': 21
+'Diff Star 3': 0
+'Blueprint Star 4': 28
+'Blueprint Setting 4': 28
+'Diff Star 4': 0
+'Blueprint Star 5': 35
+'Blueprint Setting 5': 35
+'Diff Star 5': 0
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 2176
+'Rank Star 1': 2381
+'Rank Star 2': 2677
+'Rank Star 3': 2937
+'Rank Star 4': 3250
+'Rank Star 5': 3787
+'Rank Star 6': 0
+'Stat Min Speed': 312.0
+'Stat Max Speed': 327.7
+'Stat Min Acceleration': 73.0
+'Stat Max Acceleration': 81.56
+'Stat Min Handly': 45.3
+'Stat Max Handly': 60.15
+'Stat Min Nitro': 48.59
+'Stat Max Nitro': 64.44
+'Stat Min Average': 119.72
+'Stat Max Average': 133.46

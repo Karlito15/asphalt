@@ -1,0 +1,56 @@
+Class: B
+Brand: Ford
+Model: 'GT MK IV'
+'Car Name': 'Ford GT MK IV'
+Slug: ford-gt-mk-iv
+Unlocked: false
+Golded: false
+'Game Update': 42
+Stars: 6
+'Order Car': 99
+'Order Car Total': 66
+'Order Stat': 57
+'Order Stat Total': 66
+'Level Actual': 0
+'Level Max': 99
+'Commmon Actual': 0
+'Commmon Max': 99
+'Rare Actual': 0
+'Rare Max': 99
+'Epic Actual': 0
+'Epic Max': 99
+'Blueprint Star 1': '20'
+'Blueprint Setting 1': '25'
+'Diff Star 1': 0
+'Blueprint Star 2': 0
+'Blueprint Setting 2': 30
+'Diff Star 2': 30
+'Blueprint Star 3': 0
+'Blueprint Setting 3': 35
+'Diff Star 3': 35
+'Blueprint Star 4': 0
+'Blueprint Setting 4': 40
+'Diff Star 4': 40
+'Blueprint Star 5': 0
+'Blueprint Setting 5': 50
+'Diff Star 5': 50
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 60
+'Diff Star 6': 60
+'Rank Start': 2328
+'Rank Star 1': 0
+'Rank Star 2': 0
+'Rank Star 3': 0
+'Rank Star 4': 0
+'Rank Star 5': 0
+'Rank Star 6': 4322
+'Stat Min Speed': 350.0
+'Stat Max Speed': 358.7
+'Stat Min Acceleration': 75.5
+'Stat Max Acceleration': 82.61
+'Stat Min Handly': 33.86
+'Stat Max Handly': 42.01
+'Stat Min Nitro': 32.33
+'Stat Max Nitro': 46.95
+'Stat Min Average': 122.92
+'Stat Max Average': 132.57

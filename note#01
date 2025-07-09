@@ -1,0 +1,34 @@
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+github.com/phpro/grumphp
+github.com/jakzal/phpqa
+https://www.youtube.com/@developpeur.muscle
+https://www.youtube.com/@nicelydev
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+https://www.itefficience.com/article/les-bundles-les-plus-utilises-dans-les-projets-symfony
+https://github.com/FriendsOfSymfony/FOSUserBundle/tree/master/src/Controller
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+<?php
+{% set color = 'danger' %}
+{% if garage.gold == 1 %}
+    {% set color = 'warning' %}
+{% elseif garage.toupgrade == 1 %}
+    {% set color = 'info' %}
+{% elseif garage.locked == 0 and garage.gold == 0 %}
+    {% set color = 'success' %}
+{% endif %}
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+https://htmx.org/examples/active-search/
+Garage
+> progress bar
+> Chart Js
+Dashboard
+components-widgets.html
+pages-search.html
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+{{ asset('elisyam/XXX', 'themes') }}
+{{ path('kw.layouts.dashboard.index', {'theme': 'elisyam'}) }}
+{% block contents %}
+{% endblock %}
+{% extends '@Layouts/themes/elisyam/bases/full.html.twig' %}

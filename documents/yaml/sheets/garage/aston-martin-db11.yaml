@@ -1,0 +1,56 @@
+Class: B
+Brand: 'Aston Martin'
+Model: DB11
+'Car Name': 'Aston Martin DB11'
+Slug: aston-martin-db11
+Unlocked: false
+Golded: true
+'Game Update': 0
+Stars: 3
+'Order Car': 2
+'Order Car Total': 66
+'Order Stat': 65
+'Order Stat Total': 66
+'Level Actual': 10
+'Level Max': 10
+'Commmon Actual': 24
+'Commmon Max': 24
+'Rare Actual': 4
+'Rare Max': 4
+'Epic Actual': 4
+'Epic Max': 4
+'Blueprint Star 1': '30'
+'Blueprint Setting 1': '30'
+'Diff Star 1': 0
+'Blueprint Star 2': 30
+'Blueprint Setting 2': 30
+'Diff Star 2': 0
+'Blueprint Star 3': 70
+'Blueprint Setting 3': 70
+'Diff Star 3': 0
+'Blueprint Star 4': 0
+'Blueprint Setting 4': 0
+'Diff Star 4': 0
+'Blueprint Star 5': 0
+'Blueprint Setting 5': 0
+'Diff Star 5': 0
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 1302
+'Rank Star 1': 1671
+'Rank Star 2': 2029
+'Rank Star 3': 2330
+'Rank Star 4': 0
+'Rank Star 5': 0
+'Rank Star 6': 0
+'Stat Min Speed': 322.0
+'Stat Max Speed': 340.6
+'Stat Min Acceleration': 66.7
+'Stat Max Acceleration': 74.2
+'Stat Min Handly': 38.03
+'Stat Max Handly': 43.21
+'Stat Min Nitro': 43.92
+'Stat Max Nitro': 55.4
+'Stat Min Average': 117.66
+'Stat Max Average': 128.35

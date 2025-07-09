@@ -1,0 +1,56 @@
+Class: A
+Brand: Ferrari
+Model: '812 Superfast'
+'Car Name': 'Ferrari 812 Superfast'
+Slug: ferrari-812-superfast
+Unlocked: false
+Golded: true
+'Game Update': 6
+Stars: 5
+'Order Car': 12
+'Order Car Total': 56
+'Order Stat': 46
+'Order Stat Total': 56
+'Level Actual': 12
+'Level Max': 12
+'Commmon Actual': 24
+'Commmon Max': 24
+'Rare Actual': 20
+'Rare Max': 20
+'Epic Actual': 12
+'Epic Max': 12
+'Blueprint Star 1': '50'
+'Blueprint Setting 1': '50'
+'Diff Star 1': 0
+'Blueprint Star 2': 23
+'Blueprint Setting 2': 23
+'Diff Star 2': 0
+'Blueprint Star 3': 27
+'Blueprint Setting 3': 27
+'Diff Star 3': 0
+'Blueprint Star 4': 36
+'Blueprint Setting 4': 36
+'Diff Star 4': 0
+'Blueprint Star 5': 51
+'Blueprint Setting 5': 51
+'Diff Star 5': 0
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 2643
+'Rank Star 1': 2778
+'Rank Star 2': 2963
+'Rank Star 3': 3189
+'Rank Star 4': 3493
+'Rank Star 5': 3827
+'Rank Star 6': 0
+'Stat Min Speed': 340.0
+'Stat Max Speed': 353.6
+'Stat Min Acceleration': 73.9
+'Stat Max Acceleration': 81.13
+'Stat Min Handly': 46.64
+'Stat Max Handly': 63.17
+'Stat Min Nitro': 60.62
+'Stat Max Nitro': 74.36
+'Stat Min Average': 130.29
+'Stat Max Average': 143.07

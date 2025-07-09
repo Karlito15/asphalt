@@ -1,0 +1,56 @@
+Class: D
+Brand: Mitsubishi
+Model: 'Lancer Evolution'
+'Car Name': 'Mitsubishi Lancer Evolution'
+Slug: mitsubishi-lancer-evolution
+Unlocked: false
+Golded: false
+'Game Update': 0
+Stars: 3
+'Order Car': 1
+'Order Car Total': 40
+'Order Stat': 40
+'Order Stat Total': 40
+'Level Actual': 10
+'Level Max': 10
+'Commmon Actual': 20
+'Commmon Max': 20
+'Rare Actual': 4
+'Rare Max': 4
+'Epic Actual': 0
+'Epic Max': 0
+'Blueprint Star 1': '5'
+'Blueprint Setting 1': '5'
+'Diff Star 1': 0
+'Blueprint Star 2': 12
+'Blueprint Setting 2': 12
+'Diff Star 2': 0
+'Blueprint Star 3': 30
+'Blueprint Setting 3': 30
+'Diff Star 3': 0
+'Blueprint Star 4': 0
+'Blueprint Setting 4': 0
+'Diff Star 4': 0
+'Blueprint Star 5': 0
+'Blueprint Setting 5': 0
+'Diff Star 5': 0
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 467
+'Rank Star 1': 789
+'Rank Star 2': 1066
+'Rank Star 3': 1381
+'Rank Star 4': 0
+'Rank Star 5': 0
+'Rank Star 6': 0
+'Stat Min Speed': 250.0
+'Stat Max Speed': 270.1
+'Stat Min Acceleration': 42.4
+'Stat Max Acceleration': 55.03
+'Stat Min Handly': 54.8
+'Stat Max Handly': 53.79
+'Stat Min Nitro': 54.8
+'Stat Max Nitro': 68.19
+'Stat Min Average': 100.5
+'Stat Max Average': 111.78

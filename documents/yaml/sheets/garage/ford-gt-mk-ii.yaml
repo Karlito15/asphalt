@@ -1,0 +1,56 @@
+Class: B
+Brand: Ford
+Model: 'GT MK II'
+'Car Name': 'Ford GT MK II'
+Slug: ford-gt-mk-ii
+Unlocked: false
+Golded: false
+'Game Update': 13
+Stars: 4
+'Order Car': 14
+'Order Car Total': 66
+'Order Stat': 44
+'Order Stat Total': 66
+'Level Actual': 11
+'Level Max': 11
+'Commmon Actual': 24
+'Commmon Max': 24
+'Rare Actual': 14
+'Rare Max': 16
+'Epic Actual': 6
+'Epic Max': 8
+'Blueprint Star 1': Key
+'Blueprint Setting 1': Key
+'Diff Star 1': 0
+'Blueprint Star 2': 35
+'Blueprint Setting 2': 35
+'Diff Star 2': 0
+'Blueprint Star 3': 55
+'Blueprint Setting 3': 55
+'Diff Star 3': 0
+'Blueprint Star 4': 85
+'Blueprint Setting 4': 85
+'Diff Star 4': 0
+'Blueprint Star 5': 0
+'Blueprint Setting 5': 0
+'Diff Star 5': 0
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 1970
+'Rank Star 1': 2199
+'Rank Star 2': 2552
+'Rank Star 3': 2898
+'Rank Star 4': 3200
+'Rank Star 5': 0
+'Rank Star 6': 0
+'Stat Min Speed': 300.0
+'Stat Max Speed': 315.5
+'Stat Min Acceleration': 76.6
+'Stat Max Acceleration': 86.26
+'Stat Min Handly': 57.8
+'Stat Max Handly': 79.0
+'Stat Min Nitro': 49.12
+'Stat Max Nitro': 67.88
+'Stat Min Average': 120.88
+'Stat Max Average': 137.16

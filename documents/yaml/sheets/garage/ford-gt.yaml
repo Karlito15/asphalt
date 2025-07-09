@@ -1,0 +1,56 @@
+Class: B
+Brand: Ford
+Model: GT
+'Car Name': 'Ford GT'
+Slug: ford-gt
+Unlocked: false
+Golded: false
+'Game Update': 0
+Stars: 4
+'Order Car': 7
+'Order Car Total': 66
+'Order Stat': 56
+'Order Stat Total': 66
+'Level Actual': 11
+'Level Max': 11
+'Commmon Actual': 24
+'Commmon Max': 24
+'Rare Actual': 16
+'Rare Max': 16
+'Epic Actual': 8
+'Epic Max': 8
+'Blueprint Star 1': '30'
+'Blueprint Setting 1': '30'
+'Diff Star 1': 0
+'Blueprint Star 2': 23
+'Blueprint Setting 2': 23
+'Diff Star 2': 0
+'Blueprint Star 3': 54
+'Blueprint Setting 3': 54
+'Diff Star 3': 0
+'Blueprint Star 4': 0
+'Blueprint Setting 4': 0
+'Diff Star 4': 0
+'Blueprint Star 5': 0
+'Blueprint Setting 5': 0
+'Diff Star 5': 0
+'Blueprint Star 6': 0
+'Blueprint Setting 6': 0
+'Diff Star 6': 0
+'Rank Start': 1685
+'Rank Star 1': 1895
+'Rank Star 2': 2216
+'Rank Star 3': 2535
+'Rank Star 4': 2816
+'Rank Star 5': 0
+'Rank Star 6': 0
+'Stat Min Speed': 348.0
+'Stat Max Speed': 362.8
+'Stat Min Acceleration': 70.3
+'Stat Max Acceleration': 79.15
+'Stat Min Handly': 29.92
+'Stat Max Handly': 34.36
+'Stat Min Nitro': 38.29
+'Stat Max Nitro': 54.49
+'Stat Min Average': 121.63
+'Stat Max Average': 132.7

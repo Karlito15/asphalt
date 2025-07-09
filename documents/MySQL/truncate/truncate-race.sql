@@ -1,0 +1,9 @@
+SET FOREIGN_KEY_CHECKS=0;
+TRUNCATE `race_app`;
+TRUNCATE `race_mode`;
+TRUNCATE `race_region`;
+TRUNCATE `race_season`;
+TRUNCATE `race_time`;
+TRUNCATE `race_track`;
+TRUNCATE `ext_log_entries`;
+SET FOREIGN_KEY_CHECKS=1;
