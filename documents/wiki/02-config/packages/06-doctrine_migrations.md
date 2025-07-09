@@ -10,7 +10,7 @@ doctrine_migrations:
 
     # Entity manager to use for migrations. This overrides the "connection" setting.
     em: 						default
-
+    
     # Run all migrations in a transaction.
     all_or_nothing: 			true
 

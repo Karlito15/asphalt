@@ -1,4 +1,5 @@
-# Kernel
+# Kernel.php
+
 
 #### Modify Kernel.php
 
@@ -23,5 +24,4 @@ Add
     {
         return dirname($this->getProjectDir()) . DIRECTORY_SEPARATOR . 'vars' . DIRECTORY_SEPARATOR;
     }
-````
-
+```

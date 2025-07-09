@@ -6,9 +6,12 @@ when@dev:
     framework:
         profiler:
             collect_serializer_data: true
+            only_exceptions: false
 
 when@test:
+    web_profiler:
+        toolbar: false
+        intercept_redirects: false
+
     framework:
-        profiler:
-            collect: false
-            collect_serializer_data: true
+        profiler: { collect: false }

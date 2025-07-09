@@ -1,10 +1,10 @@
 # Read the documentation: https://symfony.com/doc/current/bundles/StofDoctrineExtensionsBundle/index.html
 # See the official DoctrineExtensions documentation for more details: https://github.com/doctrine-extensions/DoctrineExtensions/tree/main/doc
 stof_doctrine_extensions:
-    default_locale:                 en_US
-    translation_fallback:           true
-    persist_default_translation:    true
-    skip_translation_on_load:       true
+    default_locale:                  'fr_FR'
+    translation_fallback:            true
+    persist_default_translation:     true
+    skip_translation_on_load:        true
     orm:
         default:
             loggable: true
