@@ -24,3 +24,8 @@ php bin/console doctrine:migrations:diff
 ``` shell
 php bin/console doctrine:migrations:migrate
 ```
+
+#### Asset Mapper
+``` shell
+php bin/console asset-map:compile
+```

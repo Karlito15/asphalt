@@ -1,0 +1,9 @@
+{% for label, flashes in app.flashes %}
+    {% for flash in flashes %}
+<div id="sweet" class="{{ label }}">
+    <div class="swal2-html-container" id="swal2-html-container" style="display: none;">
+        {{ flash }}
+    </div>
+</div>
+    {% endfor %}
+{% endfor %}

@@ -17,6 +17,12 @@ when@dev:
                 channels: ["!event"]
                 date_format: Y-m-d
                 ident: true
+            security:
+                # log all messages (since debug is the lowest level)
+                level:    debug
+                type:     stream
+                path:     '%kernel.logs_dir%/security.log'
+                channels: [security]
             # uncomment to get logging in your browser
             # you may have to allow bigger header sizes in your Web server configuration
             #firephp:

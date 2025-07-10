@@ -1,0 +1,44 @@
+{% if app.environment == 'dev' %}
+    {% set logo = 'images/logo-yellow.png' %}
+{% else %}
+    {% set logo = 'images/logo-white.png' %}
+{% endif %}
+{% set items = app.request.attributes.get('_route')|split('.') %}
+{% set admin = '/'~app.request.defaultLocale~'/admin/' %}
+
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}" data-bs-theme="dark">
+<head>
+    <title>{% block title %}{{ controller_name | default('Title') }}{% endblock %} - {{ metas.title }}</title>
+    {% block metas %}{% include '@App/partials/commons/meta.html.twig' %}{% endblock %}
+    {% block favicons %}{% include '@App/partials/commons/favicon.html.twig' %}{% endblock %}
+
+    {% block importmap %}{{ importmap('app') }}{% endblock %}
+
+    <!-- Stylesheet -->
+    {% block stylesheets %}
+        <link href="{{ asset('fontawesome/6.7.2/css/all.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('/styles/fonts.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('/styles/scrollbar.css') }}" rel="stylesheet" type="text/css" />
+{#        <link href="{{ asset('/styles/app.css') }}" rel="stylesheet" type="text/css" />#}
+{#        <link href="{{ asset('/styles/breadcrumb.css') }}" rel="stylesheet" type="text/css" />#}
+
+        {# SASS #}
+{#        <link href="{{ asset('styles/bootstrap.scss') }}" rel="stylesheet" type="text/css"/>#}
+{#        <link href="{{ asset('/bootstrap.css') }}" rel="stylesheet" type="text/css" />#}
+    {% endblock %}
+</head>
+
+{% block body %}<body>{% endblock %}
+
+{% block containers %}{% endblock %}
+
+<!-- Scripts -->
+{% block javascripts %}
+    <script src="{{ asset('fontawesome/6.7.2/js/all.min.js') }}"></script>
+{#    <script src="{{ asset('bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js') }}"></script>#}
+{#    <script src="{{ asset('/vendor/bootstrap/bootstrap.index.js') }}"></script>#}
+{% endblock %}
+
+</body>
+</html>

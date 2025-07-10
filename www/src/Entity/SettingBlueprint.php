@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use App\Able\Entity\BlueprintCommonAble;
+use App\Able\Entity\BlueprintAble;
 use App\Repository\SettingBlueprintRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -31,7 +31,7 @@ class SettingBlueprint
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use BlueprintCommonAble;
+    use BlueprintAble;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]

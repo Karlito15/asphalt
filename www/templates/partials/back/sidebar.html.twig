@@ -1,0 +1,41 @@
+{##}
+
+<!-- Begin Left Sidebar -->
+<div class="default-sidebar">
+    <!-- Begin Side Navbar -->
+    <nav class="side-navbar box-scroll sidebar-scroll">
+        <!-- Begin Main Navigation -->
+        <span class="heading">Back</span>
+        <ul class="list-unstyled">
+            <li{% if app.request.get('_route') starts with 'app.race.' %} class="active"{% endif %}><a href="#dropdown-db" aria-expanded="{% if app.request.get('_route') starts with 'app.race.' %}true{% else %}false{% endif %}" data-toggle="collapse"><i class="fa-solid fa-flag-checkered mr-3"></i><span>Races</span></a>
+                <ul id="dropdown-db" class="collapse list-unstyled pt-0{% if app.request.get('_route') starts with 'app.race.' %} show{% endif %}">
+                    <li><a href="javascript:void(0);">Mode</a></li>
+                    <li><a href="javascript:void(0);">Region</a></li>
+                    <li><a href="javascript:void(0);">Season</a></li>
+                    <li><a href="javascript:void(0);">Time</a></li>
+                    <li><a href="javascript:void(0);">Track</a></li>
+                </ul>
+            </li>
+            <li{% if app.request.get('_route') starts with 'app.setting.' %} class="active"{% endif %}><a href="#dropdown-app" aria-expanded="{% if app.request.get('_route') starts with 'app.setting.' %}true{% else %}false{% endif %}" data-toggle="collapse"><i class="fa-solid fa-screwdriver-wrench mr-3"></i><span>Settings</span></a>
+                <ul id="dropdown-app" class="collapse list-unstyled pt-0{% if app.request.get('_route') starts with 'app.setting.' %} show{% endif %}">
+                    <li><a class="active" href="{{ path('app.setting.blueprint.index') }}">Blueprint</a></li>
+                    <li><a href="{{ path('app.setting.brand.index') }}">Brand</a></li>
+                    <li><a href="{{ path('app.setting.class.index') }}">Class</a></li>
+                    <li><a href="{{ path('app.setting.level.index') }}">Level</a></li>
+                    <li><a href="{{ path('app.setting.tag.index') }}">Tag</a></li>
+                    <li><a href="{{ path('app.setting.unit-price.index') }}">Unit Price</a></li>
+                </ul>
+            </li>
+            <li{% if app.request.get('_route') starts with 'app.mission.' %} class="active"{% endif %}><a href="#dropdown-ui" aria-expanded="{% if app.request.get('_route') starts with 'app.mission.' %}true{% else %}false{% endif %}" data-toggle="collapse"><i class="fa-solid fa-bullseye mr-3"></i><span>Missions</span></a>
+                <ul id="dropdown-ui" class="collapse list-unstyled pt-0{% if app.request.get('_route') starts with 'app.mission.' %} show{% endif %}">
+                    <li><a href="javascript:void(0);">Buttons</a></li>
+                    <li><a href="javascript:void(0);">Alerts</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);"><i class="fa-solid fa-box-archive mr-3"></i><span>Inventory</span></a></li>
+        </ul>
+        <!-- End Main Navigation -->
+    </nav>
+    <!-- End Side Navbar -->
+</div>
+<!-- End Left Sidebar -->

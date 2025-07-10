@@ -1,0 +1,49 @@
+{% extends '@App/bases/back/full.html.twig' %}
+
+{% block table %}
+<tbody>
+{% for item in entities %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.star1 }}</td>
+        <td>{{ item.star2 }}</td>
+        <td>{{ item.star3 }}</td>
+        <td>{{ item.star4 }}</td>
+        <td>{{ item.star5 }}</td>
+        <td>{{ item.star6 }}</td>
+        <td>{{ item.total }}</td>
+        <td>{{ item.slug }}</td>
+        <td>{{ item.createdAt ? item.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+        <td>{{ item.updatedAt ? item.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+        <td>{{ item.deletedAt ? item.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+        <td><a href="{{ path('app.setting.blueprint.update', {'id': item.id}) }}">edit</a></td>
+    </tr>
+{% else %}
+    {{ component('TableNoRecords', {value: 13}) }}
+{% endfor %}
+</tbody>
+<thead>
+    {{ _self.tr() }}
+</thead>
+<tfoot>
+    {{ _self.tr() }}
+</tfoot>
+{% endblock %}
+
+{% macro tr() %}
+<tr>
+    <th>Id</th>
+    <th>Star1</th>
+    <th>Star2</th>
+    <th>Star3</th>
+    <th>Star4</th>
+    <th>Star5</th>
+    <th>Star6</th>
+    <th>Total</th>
+    <th>Slug</th>
+    <th>CreatedAt</th>
+    <th>UpdatedAt</th>
+    <th>DeletedAt</th>
+    <th>Actions</th>
+</tr>
+{% endmacro %}

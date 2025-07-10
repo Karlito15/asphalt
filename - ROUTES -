@@ -1,98 +1,63 @@
-https://127.0.0.1:8000/fr/admin/inventory/index.php
-https://127.0.0.1:8000/fr/admin/inventory/create.php
-https://127.0.0.1:8000/fr/admin/mission/task/index.php
-https://127.0.0.1:8000/fr/admin/mission/task/create.php
-https://127.0.0.1:8000/fr/admin/mission/type/index.php
-https://127.0.0.1:8000/fr/admin/mission/type/create.php
-https://127.0.0.1:8000/fr/admin/race/mode/index.php
-https://127.0.0.1:8000/fr/admin/race/mode/create.php
-https://127.0.0.1:8000/fr/admin/race/region/index.php
-https://127.0.0.1:8000/fr/admin/race/region/create.php
-https://127.0.0.1:8000/fr/admin/race/season/index.php
-https://127.0.0.1:8000/fr/admin/race/season/create.php
-https://127.0.0.1:8000/fr/admin/race/time/index.php
-https://127.0.0.1:8000/fr/admin/race/time/create.php
-https://127.0.0.1:8000/fr/admin/race/track/index.php
-https://127.0.0.1:8000/fr/admin/race/track/create.php
-https://127.0.0.1:8000/fr/admin/setting/blueprint/index.php
-https://127.0.0.1:8000/fr/admin/setting/blueprint/create.php
-https://127.0.0.1:8000/fr/admin/setting/brand/index.php
-https://127.0.0.1:8000/fr/admin/setting/brand/create.php
-https://127.0.0.1:8000/fr/admin/setting/class/index.php
-https://127.0.0.1:8000/fr/admin/setting/class/create.php
-https://127.0.0.1:8000/fr/admin/setting/level/index.php
-https://127.0.0.1:8000/fr/admin/setting/level/create.php
-https://127.0.0.1:8000/fr/admin/setting/tag/index.php
-https://127.0.0.1:8000/fr/admin/setting/tag/create.php
-https://127.0.0.1:8000/fr/admin/setting/unit-price/index.php
-https://127.0.0.1:8000/fr/admin/setting/unit-price/create.php
-https://127.0.0.1:8000/fr/garage/index.php
-https://127.0.0.1:8000/fr/garage/create.php
-https://127.0.0.1:8000/fr/mission/index.php
-https://127.0.0.1:8000/fr/mission/create.php
-https://127.0.0.1:8000/fr/race/index.php
-https://127.0.0.1:8000/fr/race/create.php
-https://127.0.0.1:8000/fr/index.php
-------------------------------- ---------- ------------ ------ ----------------------------------------------------
-Name                            Method     Scheme       Host   Path
-------------------------------- ---------- ------------ ------ ----------------------------------------------------
-app.inventory.delete
-app.mission.task.delete
-app.mission.type.delete
-app.race.mode.delete
-app.race.region.delete
-app.race.season.delete
-app.race.time.delete
-app.race.track.delete
-app.setting.blueprint.delete
-app.setting.brand.delete
-app.setting.class.delete
-app.setting.level.delete
-app.setting.tag.delete
-app.setting.unit-price.delete
-app.dashboard
-app.dashboard.noLocale
-app.garage.read
-app.garage.delete
-app.mission.delete
-app.race.delete
-------------------------------- ---------- ------------ ------ ----------------------------------------------------
-app.inventory.update
-app.mission.type.update
-app.race.track.update
-------------------------------- ---------- ------------ ------ ----------------------------------------------------
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/inventory/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/inventory/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/mission/task/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/mission/task/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/mission/type/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/mission/type/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/race/mode/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/race/mode/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/race/region/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/race/region/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/race/season/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/race/season/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/race/time/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/race/time/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/race/track/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/race/track/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/setting/blueprint/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/setting/blueprint/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/setting/brand/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/setting/brand/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/setting/class/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/setting/class/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/setting/level/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/setting/level/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/setting/tag/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/setting/tag/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/setting/unit-price/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/admin/setting/unit-price/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/garage/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/garage/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/mission/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/mission/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/race/index.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/race/create.php
-https://mikasa.giancarlo-palumbo.myds.me/fr/index.php
+https://127.0.0.1:8000/en/admin/inventory/index.php
+https://127.0.0.1:8000/en/admin/inventory/create.php
+https://127.0.0.1:8000/en/admin/mission/task/index.php
+https://127.0.0.1:8000/en/admin/mission/task/create.php
+https://127.0.0.1:8000/en/admin/mission/type/index.php
+https://127.0.0.1:8000/en/admin/mission/type/create.php
+https://127.0.0.1:8000/en/admin/race/mode/index.php
+https://127.0.0.1:8000/en/admin/race/mode/create.php
+https://127.0.0.1:8000/en/admin/race/region/index.php
+https://127.0.0.1:8000/en/admin/race/region/create.php
+https://127.0.0.1:8000/en/admin/race/season/index.php
+https://127.0.0.1:8000/en/admin/race/season/create.php
+https://127.0.0.1:8000/en/admin/race/time/index.php
+https://127.0.0.1:8000/en/admin/race/time/create.php
+https://127.0.0.1:8000/en/admin/race/track/index.php
+https://127.0.0.1:8000/en/admin/race/track/create.php
+https://127.0.0.1:8000/en/admin/setting/blueprint/index.php
+https://127.0.0.1:8000/en/admin/setting/blueprint/create.php
+https://127.0.0.1:8000/en/admin/setting/brand/index.php
+https://127.0.0.1:8000/en/admin/setting/brand/create.php
+https://127.0.0.1:8000/en/admin/setting/class/index.php
+https://127.0.0.1:8000/en/admin/setting/class/create.php
+https://127.0.0.1:8000/en/admin/setting/level/index.php
+https://127.0.0.1:8000/en/admin/setting/level/create.php
+https://127.0.0.1:8000/en/admin/setting/tag/index.php
+https://127.0.0.1:8000/en/admin/setting/tag/create.php
+https://127.0.0.1:8000/en/admin/setting/unit-price/index.php
+https://127.0.0.1:8000/en/admin/setting/unit-price/create.php
+https://127.0.0.1:8000/en/garage/index.php
+https://127.0.0.1:8000/en/garage/create.php
+https://127.0.0.1:8000/en/mission/index.php
+https://127.0.0.1:8000/en/mission/create.php
+https://127.0.0.1:8000/en/race/index.php
+https://127.0.0.1:8000/en/race/create.php
+https://127.0.0.1:8000/en/index.php
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+app.dashboard.admin             /{_locale}/admin/admin.php
+app.setting.blueprint.index     /{_locale}/admin/setting/blueprint/index.php
+app.setting.blueprint.create    /{_locale}/admin/setting/blueprint/create.php
+app.setting.blueprint.update    /{_locale}/admin/setting/blueprint/update/{id}.php
+app.setting.blueprint.delete    /{_locale}/admin/setting/blueprint/delete/{id}.php
+app.setting.brand.index         /{_locale}/admin/setting/brand/index.php
+app.setting.brand.create        /{_locale}/admin/setting/brand/create.php
+app.setting.brand.update        /{_locale}/admin/setting/brand/update/{id}.php
+app.setting.brand.delete        /{_locale}/admin/setting/brand/delete/{id}
+app.setting.class.index         /{_locale}/admin/setting/class/index.php
+app.setting.class.create        /{_locale}/admin/setting/class/create.php
+app.setting.class.update        /{_locale}/admin/setting/class/update/{id}.php
+app.setting.class.delete        /{_locale}/admin/setting/class/delete/{id}
+app.setting.level.index         /{_locale}/admin/setting/level/index.php
+app.setting.level.create        /{_locale}/admin/setting/level/create.php
+app.setting.level.update        /{_locale}/admin/setting/level/update/{id}.php
+app.setting.level.delete        /{_locale}/admin/setting/level/delete/{id}.php
+app.setting.tag.index           /{_locale}/admin/setting/tag/index.php
+app.setting.tag.create          /{_locale}/admin/setting/tag/create.php
+app.setting.tag.update          /{_locale}/admin/setting/tag/update/{id}.php
+app.setting.tag.delete          /{_locale}/admin/setting/tag/delete/{id}
+app.setting.unit-price.index    /{_locale}/admin/setting/unit-price/index.php
+app.setting.unit-price.create   /{_locale}/admin/setting/unit-price/create.php
+app.setting.unit-price.update   /{_locale}/admin/setting/unit-price/update/{id}.php
+app.setting.unit-price.delete   /{_locale}/admin/setting/unit-price/delete/{id}.php
+app.dashboard.index             /{_locale}/index.php
+app.dashboard.noLocale          /

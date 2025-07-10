@@ -1,0 +1,45 @@
+{% extends '@App/bases/back/full.html.twig' %}
+
+{% block table %}
+<tbody>
+{% for item in entities %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.level }}</td>
+        <td>{{ item.common }}</td>
+        <td>{{ item.rare }}</td>
+        <td>{{ item.epic }}</td>
+        <td>{{ item.slug }}</td>
+        <td>{{ item.createdAt ? item.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+        <td>{{ item.updatedAt ? item.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+        <td>{{ item.deletedAt ? item.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+        <td><a href="{{ path('app.setting.level.update', {'id': item.id}) }}">edit</a></td>
+    </tr>
+{% else %}
+    <tr>
+        <td colspan="10">no records found</td>
+    </tr>
+{% endfor %}
+</tbody>
+<thead>
+    {{ _self.tr() }}
+</thead>
+<tfoot>
+    {{ _self.tr() }}
+</tfoot>
+{% endblock %}
+
+{% macro tr() %}
+<tr>
+    <th>Id</th>
+    <th>Level</th>
+    <th>Common</th>
+    <th>Rare</th>
+    <th>Epic</th>
+    <th>Slug</th>
+    <th>CreatedAt</th>
+    <th>UpdatedAt</th>
+    <th>DeletedAt</th>
+    <th>actions</th>
+</tr>
+{% endmacro %}

@@ -1,18 +1,18 @@
 doctrine:
     dbal:
-#        charset:  utf8
-#        driver:   pdo_mysql
-#        dbname:   '%env(resolve:DATABASE_NAME)%'
-#        host:     '%env(resolve:DATABASE_HOST)%'
-#        port:     '%env(resolve:DATABASE_PORT)%'
-#        user:     '%env(resolve:DATABASE_USER)%'
-#        password: '%env(resolve:DATABASE_PASS)%'
-        url:       '%env(resolve:DATABASE_URL)%'
+        charset:  utf8
+        driver:   pdo_mysql
+        dbname:   '%env(resolve:DATABASE_NAME)%'
+        host:     '%env(resolve:DATABASE_HOST)%'
+        port:     '%env(resolve:DATABASE_PORT)%'
+        user:     '%env(resolve:DATABASE_USER)%'
+        password: '%env(resolve:DATABASE_PASS)%'
+#        url:       '%env(resolve:DATABASE_URL)%'
 
         # IMPORTANT: You MUST configure your server version,
         # either here or in the DATABASE_URL env var (see .env file)
-        server_version: '10'
-#        server_version:  '%env(resolve:DATABASE_SERVER_VERSION)%'
+#        server_version: '10'
+        server_version: '%env(resolve:DATABASE_SERVER_VERSION)%'
 
         profiling_collect_backtrace: '%kernel.debug%'
         use_savepoints: true
