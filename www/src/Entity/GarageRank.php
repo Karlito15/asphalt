@@ -2,28 +2,21 @@
 
 namespace App\Entity;
 
-use App\Able\Entity\BlueprintAble;
-use App\Repository\SettingBlueprintRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Repository\GarageRankRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Component\Serializer\Attribute\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
-#[ORM\Entity(repositoryClass: SettingBlueprintRepository::class)]
-#[ORM\Table(name: 'setting_blueprint')]
-#[ORM\Index(name: 'setting_blueprint_idx', columns: ['slug'])]
+#[ORM\Entity(repositoryClass: GarageRankRepository::class)]
+#[ORM\Table(name: 'garage_rank')]
+#[ORM\Index(name: 'garage_rank_idx', columns: ['id'])]
 #[ORM\HasLifecycleCallbacks]
 #[Gedmo\Loggable]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
-#[UniqueEntity(fields: ['star1', 'star2', 'star3', 'star4', 'star5', 'star6', 'total'])]
-#[UniqueEntity(fields: ['slug'])]
-class SettingBlueprint
+class GarageRank
 {
     /**
      * Hook timestamp behavior
@@ -33,71 +26,60 @@ class SettingBlueprint
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use BlueprintAble;
-
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::STRING, length: 3, nullable: false)]
-    #[Assert\Length(min: 1, max: 3)]
-    #[Groups(['index'])]
-    #[Gedmo\Versioned]
-    private string $star1;
+    #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
+    #[Assert\PositiveOrZero]
+    private int $star0 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
     #[Assert\PositiveOrZero]
-    #[Assert\Range(min: 0, max: 99)]
-    #[Groups(['index'])]
-    #[Gedmo\Versioned]
+    private int $star1 = 0;
+
+    #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
+    #[Assert\PositiveOrZero]
     private int $star2 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
     #[Assert\PositiveOrZero]
-    #[Assert\Range(min: 0, max: 99)]
-    #[Groups(['index'])]
-    #[Gedmo\Versioned]
     private int $star3 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
     #[Assert\PositiveOrZero]
-    #[Assert\Range(min: 0, max: 99)]
-    #[Groups(['index'])]
-    #[Gedmo\Versioned]
     private int $star4 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
     #[Assert\PositiveOrZero]
-    #[Assert\Range(min: 0, max: 99)]
-    #[Groups(['index'])]
-    #[Gedmo\Versioned]
     private int $star5 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
     #[Assert\PositiveOrZero]
-    #[Assert\Range(min: 0, max: 99)]
-    #[Groups(['index'])]
-    #[Gedmo\Versioned]
     private int $star6 = 0;
 
-    #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
-    #[Assert\PositiveOrZero]
-    #[Assert\Range(min: 0, max: 999)]
-    #[Groups(['index'])]
-    #[Gedmo\Versioned]
-    private int $total = 0;
+    #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'rank')]
+    #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
+    private GarageApp $garage;
 
-    #[ORM\Column(type: Types::STRING, length: 64, unique: true, nullable: false)]
-    #[Gedmo\Versioned]
-    private string $slug;
-
-    #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingBlueprint')]
-    protected Collection $garage;
-
-    public function __construct()
+    public function __toString() : string
     {
-        $this->garage = new ArrayCollection();
+        return $this->getGarage();
     }
 
     public function getId(): ?int
@@ -105,17 +87,24 @@ class SettingBlueprint
         return $this->id;
     }
 
-    public function __toString(): string
+    public function getStar0(): ?int
     {
-        return $this->getSlug();
+        return $this->star0;
     }
 
-    public function getStar1(): ?string
+    public function setStar0(int $star0): static
+    {
+        $this->star0 = $star0;
+
+        return $this;
+    }
+
+    public function getStar1(): ?int
     {
         return $this->star1;
     }
 
-    public function setStar1(string $star1): static
+    public function setStar1(int $star1): static
     {
         $this->star1 = $star1;
 
@@ -182,37 +171,14 @@ class SettingBlueprint
         return $this;
     }
 
-    public function getSlug(): ?string
-    {
-        return $this->slug;
-    }
-
-    /**
-     * @return Collection<int, GarageApp>
-     */
-    public function getGarage(): Collection
+    public function getGarage(): ?GarageApp
     {
         return $this->garage;
     }
 
-    public function addGarage(GarageApp $garage): static
+    public function setGarage(?GarageApp $garage): static
     {
-        if (!$this->garage->contains($garage)) {
-            $this->garage->add($garage);
-            $garage->setSettingBlueprint($this);
-        }
-
-        return $this;
-    }
-
-    public function removeGarage(GarageApp $garage): static
-    {
-        if ($this->garage->removeElement($garage)) {
-            // set the owning side to null (unless already changed)
-            if ($garage->getSettingBlueprint() === $this) {
-                $garage->setSettingBlueprint(null);
-            }
-        }
+        $this->garage = $garage;
 
         return $this;
     }

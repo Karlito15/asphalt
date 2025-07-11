@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Able\Entity\SettingLevelAble;
 use App\Repository\SettingLevelRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -70,6 +72,14 @@ class SettingLevel
     #[Gedmo\Versioned]
     private string $slug;
 
+    #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingLevel')]
+    protected Collection $garage;
+
+    public function __construct()
+    {
+        $this->garage = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -131,5 +141,35 @@ class SettingLevel
     public function getSlug(): ?string
     {
         return $this->slug;
+    }
+
+    /**
+     * @return Collection<int, GarageApp>
+     */
+    public function getGarage(): Collection
+    {
+        return $this->garage;
+    }
+
+    public function addGarage(GarageApp $garage): static
+    {
+        if (!$this->garage->contains($garage)) {
+            $this->garage->add($garage);
+            $garage->setSettingLevel($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGarage(GarageApp $garage): static
+    {
+        if ($this->garage->removeElement($garage)) {
+            // set the owning side to null (unless already changed)
+            if ($garage->getSettingLevel() === $this) {
+                $garage->setSettingLevel(null);
+            }
+        }
+
+        return $this;
     }
 }

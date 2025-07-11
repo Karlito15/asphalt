@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Able\Entity\SettingUnitPriceAble;
 use App\Repository\SettingUnitPriceRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -27,9 +29,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 ])]
 class SettingUnitPrice
 {
-    use SettingUnitPriceAble;
-    use SoftDeleteableEntity;
-
     /**
      * Hook timestamp behavior
      * updates createdAt, updatedAt fields
@@ -37,6 +36,8 @@ class SettingUnitPrice
      * updates deletedAt field.
      */
     use TimestampableEntity;
+    use SoftDeleteableEntity;
+    use SettingUnitPriceAble;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -183,6 +184,14 @@ class SettingUnitPrice
     #[Assert\Length(min: 3, max: 128)]
     #[Gedmo\Versioned]
     private string $slug;
+
+    #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingUnitPrice')]
+    protected Collection $garage;
+
+    public function __construct()
+    {
+        $this->garage = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -389,5 +398,35 @@ class SettingUnitPrice
     public function getSlug(): ?string
     {
         return $this->slug;
+    }
+
+    /**
+     * @return Collection<int, GarageApp>
+     */
+    public function getGarage(): Collection
+    {
+        return $this->garage;
+    }
+
+    public function addGarage(GarageApp $garage): static
+    {
+        if (!$this->garage->contains($garage)) {
+            $this->garage->add($garage);
+            $garage->setSettingUnitPrice($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGarage(GarageApp $garage): static
+    {
+        if ($this->garage->removeElement($garage)) {
+            // set the owning side to null (unless already changed)
+            if ($garage->getSettingUnitPrice() === $this) {
+                $garage->setSettingUnitPrice(null);
+            }
+        }
+
+        return $this;
     }
 }

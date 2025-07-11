@@ -10,7 +10,7 @@ use App\Entity\GarageStatMin;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Persistence\Event\LifecycleEventArgs;
 
-trait GarageStatCommonAble
+trait GarageStatAble
 {
     public function __toString() : string
     {

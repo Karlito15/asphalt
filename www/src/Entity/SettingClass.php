@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\SettingClassRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -83,6 +85,14 @@ class SettingClass
     #[Gedmo\Versioned]
     private string $slug;
 
+    #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingClass')]
+    protected Collection $garage;
+
+    public function __construct()
+    {
+        $this->garage = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -161,6 +171,36 @@ class SettingClass
     public function setSlug(string $slug): static
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, GarageApp>
+     */
+    public function getGarage(): Collection
+    {
+        return $this->garage;
+    }
+
+    public function addGarage(GarageApp $garage): static
+    {
+        if (!$this->garage->contains($garage)) {
+            $this->garage->add($garage);
+            $garage->setSettingClass($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGarage(GarageApp $garage): static
+    {
+        if ($this->garage->removeElement($garage)) {
+            // set the owning side to null (unless already changed)
+            if ($garage->getSettingClass() === $this) {
+                $garage->setSettingClass(null);
+            }
+        }
 
         return $this;
     }
