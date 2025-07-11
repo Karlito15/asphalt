@@ -17,9 +17,9 @@ trait RaceAppAble
 
         /** @var RaceApp $this  */
         $this->slug = $slugger->slug(
-            $this->getSeason())->lower() . '-' .
-            $slugger->slug($this->getTrack())->lower() . '-' .
-            $slugger->slug($this->getRaceOrder())->lower()
+            (string) $this->getSeason())->lower() . '-' .
+            $slugger->slug((string) $this->getTrack())->lower() . '-' .
+            $slugger->slug((string) $this->getRaceOrder())->lower()
         ;
 
         return $this;

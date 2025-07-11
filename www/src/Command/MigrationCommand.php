@@ -94,6 +94,34 @@ class MigrationCommand extends Command
             $missions->setInteractive(false);
             $this->getApplication()->doRun($missions, $output);
 
+            // the command name is passed as first argument
+            $races = new ArrayInput([
+                'command' => 'asphalt:database:race',
+                'choice' => 'import'
+            ]);
+            // disable interactive behavior for the greet command
+            $races->setInteractive(false);
+            $this->getApplication()->doRun($races, $output);
+
+//            // the command name is passed as first argument
+//            $inventories = new ArrayInput([
+//                'command' => 'asphalt:database:inventory',
+//                'choice' => 'import'
+//            ]);
+//            // disable interactive behavior for the greet command
+//            $inventories->setInteractive(false);
+//            $this->getApplication()->doRun($inventories, $output);
+
+//            // the command name is passed as first argument
+//            $garages = new ArrayInput([
+//                'command' => 'asphalt:database:garage',
+//                'choice' => 'import'
+//            ]);
+//            // disable interactive behavior for the greet command
+//            $garages->setInteractive(false);
+//            $this->getApplication()->doRun($garages, $output);
+//            $result = true;
+
             // Conclusion
             $io->success('Import terminé !');
             $result = true;
@@ -115,6 +143,33 @@ class MigrationCommand extends Command
             // disable interactive behavior for the greet command
             $missions->setInteractive(false);
             $this->getApplication()->doRun($missions, $output);
+
+            // the command name is passed as first argument
+            $races = new ArrayInput([
+                'command' => 'asphalt:database:race',
+                'choice' => 'export'
+            ]);
+            // disable interactive behavior for the greet command
+            $races->setInteractive(false);
+            $this->getApplication()->doRun($races, $output);
+
+//            // the command name is passed as first argument
+//            $inventories = new ArrayInput([
+//                'command' => 'asphalt:database:inventory',
+//                'choice' => 'export'
+//            ]);
+//            // disable interactive behavior for the greet command
+//            $inventories->setInteractive(false);
+//            $this->getApplication()->doRun($inventories, $output);
+
+//            // the command name is passed as first argument
+//            $garages = new ArrayInput([
+//                'command' => 'asphalt:database:garage',
+//                'choice' => 'export'
+//            ]);
+//            // disable interactive behavior for the greet command
+//            $garages->setInteractive(false);
+//            $this->getApplication()->doRun($garages, $output);
 
             // Conclusion
             $io->success('Export terminé !');

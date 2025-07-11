@@ -6,6 +6,9 @@ namespace App\Able\Command;
 
 trait ConfigureAble
 {
+
+    protected static string $help = '(To DO)';
+
     /**
      * Configure your CLI Application
      */
