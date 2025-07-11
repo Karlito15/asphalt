@@ -103,14 +103,14 @@ class MigrationCommand extends Command
             $races->setInteractive(false);
             $this->getApplication()->doRun($races, $output);
 
-//            // the command name is passed as first argument
-//            $inventories = new ArrayInput([
-//                'command' => 'asphalt:database:inventory',
-//                'choice' => 'import'
-//            ]);
-//            // disable interactive behavior for the greet command
-//            $inventories->setInteractive(false);
-//            $this->getApplication()->doRun($inventories, $output);
+            // the command name is passed as first argument
+            $inventories = new ArrayInput([
+                'command' => 'asphalt:database:inventory',
+                'choice' => 'import'
+            ]);
+            // disable interactive behavior for the greet command
+            $inventories->setInteractive(false);
+            $this->getApplication()->doRun($inventories, $output);
 
 //            // the command name is passed as first argument
 //            $garages = new ArrayInput([
@@ -153,14 +153,14 @@ class MigrationCommand extends Command
             $races->setInteractive(false);
             $this->getApplication()->doRun($races, $output);
 
-//            // the command name is passed as first argument
-//            $inventories = new ArrayInput([
-//                'command' => 'asphalt:database:inventory',
-//                'choice' => 'export'
-//            ]);
-//            // disable interactive behavior for the greet command
-//            $inventories->setInteractive(false);
-//            $this->getApplication()->doRun($inventories, $output);
+            // the command name is passed as first argument
+            $inventories = new ArrayInput([
+                'command' => 'asphalt:database:inventory',
+                'choice' => 'export'
+            ]);
+            // disable interactive behavior for the greet command
+            $inventories->setInteractive(false);
+            $this->getApplication()->doRun($inventories, $output);
 
 //            // the command name is passed as first argument
 //            $garages = new ArrayInput([
