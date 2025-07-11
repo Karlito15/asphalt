@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RaceSeason index{% endblock %}
+
+{% block body %}
+    <h1>RaceSeason index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Chapter</th>
+                <th>Name</th>
+                <th>Slug</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>DeletedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for race_season in race_seasons %}
+            <tr>
+                <td>{{ race_season.id }}</td>
+                <td>{{ race_season.chapter }}</td>
+                <td>{{ race_season.name }}</td>
+                <td>{{ race_season.slug }}</td>
+                <td>{{ race_season.createdAt ? race_season.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ race_season.updatedAt ? race_season.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ race_season.deletedAt ? race_season.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_race_season_show', {'id': race_season.id}) }}">show</a>
+                    <a href="{{ path('app_race_season_edit', {'id': race_season.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_race_season_new') }}">Create new</a>
+{% endblock %}

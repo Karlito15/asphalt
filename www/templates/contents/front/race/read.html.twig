@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RaceApp{% endblock %}
+
+{% block body %}
+    <h1>RaceApp</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ race_app.id }}</td>
+            </tr>
+            <tr>
+                <th>RaceOrder</th>
+                <td>{{ race_app.raceOrder }}</td>
+            </tr>
+            <tr>
+                <th>Finished</th>
+                <td>{{ race_app.finished ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Slug</th>
+                <td>{{ race_app.slug }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ race_app.createdAt ? race_app.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ race_app.updatedAt ? race_app.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DeletedAt</th>
+                <td>{{ race_app.deletedAt ? race_app.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_race_app_index') }}">back to list</a>
+
+    <a href="{{ path('app_race_app_edit', {'id': race_app.id}) }}">edit</a>
+
+    {{ include('race_app/_delete_form.html.twig') }}
+{% endblock %}

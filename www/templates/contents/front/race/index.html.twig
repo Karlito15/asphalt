@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RaceApp index{% endblock %}
+
+{% block body %}
+    <h1>RaceApp index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>RaceOrder</th>
+                <th>Finished</th>
+                <th>Slug</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>DeletedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for race_app in race_apps %}
+            <tr>
+                <td>{{ race_app.id }}</td>
+                <td>{{ race_app.raceOrder }}</td>
+                <td>{{ race_app.finished ? 'Yes' : 'No' }}</td>
+                <td>{{ race_app.slug }}</td>
+                <td>{{ race_app.createdAt ? race_app.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ race_app.updatedAt ? race_app.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ race_app.deletedAt ? race_app.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_race_app_show', {'id': race_app.id}) }}">show</a>
+                    <a href="{{ path('app_race_app_edit', {'id': race_app.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_race_app_new') }}">Create new</a>
+{% endblock %}
