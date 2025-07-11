@@ -53,7 +53,6 @@ class MigrationCommand extends Command
         /** Init variables */
         $io     = new SymfonyStyle($input, $output);
         $choice = $input->getArgument('choice');
-        $result = false;
 
         /** Start */
         $output->writeln(shell_exec('clear'));
@@ -86,6 +85,15 @@ class MigrationCommand extends Command
             $settings->setInteractive(false);
             $this->getApplication()->doRun($settings, $output);
 
+            // the command name is passed as first argument
+            $missions = new ArrayInput([
+                'command' => 'asphalt:database:mission',
+                'choice' => 'import'
+            ]);
+            // disable interactive behavior for the greet command
+            $missions->setInteractive(false);
+            $this->getApplication()->doRun($missions, $output);
+
             // Conclusion
             $io->success('Import terminé !');
             $result = true;
@@ -99,10 +107,20 @@ class MigrationCommand extends Command
             $settings->setInteractive(false);
             $this->getApplication()->doRun($settings, $output);
 
+            // the command name is passed as first argument
+            $missions = new ArrayInput([
+                'command' => 'asphalt:database:mission',
+                'choice' => 'export'
+            ]);
+            // disable interactive behavior for the greet command
+            $missions->setInteractive(false);
+            $this->getApplication()->doRun($missions, $output);
+
             // Conclusion
             $io->success('Export terminé !');
             $result = true;
         } else {
+            $result = false;
             $io->error('Houston we have a problem !');
         }
 

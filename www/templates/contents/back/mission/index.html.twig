@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MissionTask index{% endblock %}
+
+{% block body %}
+    <h1>MissionTask index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>DeletedAt</th>
+                <th>Value</th>
+                <th>Slug</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for mission_task in mission_tasks %}
+            <tr>
+                <td>{{ mission_task.id }}</td>
+                <td>{{ mission_task.createdAt ? mission_task.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ mission_task.updatedAt ? mission_task.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ mission_task.deletedAt ? mission_task.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ mission_task.value }}</td>
+                <td>{{ mission_task.slug }}</td>
+                <td>
+                    <a href="{{ path('app_mission_task_show', {'id': mission_task.id}) }}">show</a>
+                    <a href="{{ path('app_mission_task_edit', {'id': mission_task.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_mission_task_new') }}">Create new</a>
+{% endblock %}

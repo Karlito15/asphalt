@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MissionApp{% endblock %}
+
+{% block body %}
+    <h1>MissionApp</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ mission_app.id }}</td>
+            </tr>
+            <tr>
+                <th>Week</th>
+                <td>{{ mission_app.week }}</td>
+            </tr>
+            <tr>
+                <th>Region</th>
+                <td>{{ mission_app.region }}</td>
+            </tr>
+            <tr>
+                <th>Track</th>
+                <td>{{ mission_app.track }}</td>
+            </tr>
+            <tr>
+                <th>Class</th>
+                <td>{{ mission_app.class }}</td>
+            </tr>
+            <tr>
+                <th>Brand</th>
+                <td>{{ mission_app.brand }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ mission_app.description }}</td>
+            </tr>
+            <tr>
+                <th>Success</th>
+                <td>{{ mission_app.success }}</td>
+            </tr>
+            <tr>
+                <th>Target</th>
+                <td>{{ mission_app.target }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ mission_app.createdAt ? mission_app.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ mission_app.updatedAt ? mission_app.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DeletedAt</th>
+                <td>{{ mission_app.deletedAt ? mission_app.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_mission_app_index') }}">back to list</a>
+
+    <a href="{{ path('app_mission_app_edit', {'id': mission_app.id}) }}">edit</a>
+
+    {{ include('mission_app/_delete_form.html.twig') }}
+{% endblock %}

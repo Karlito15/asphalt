@@ -165,3 +165,55 @@ tasks:
             - "{{.SYMFONY_CONSOLE}} asphalt:database:migration import"
         ignore_error: true
         platforms: [windows/amd64]
+
+    launch:
+        desc: "Start Symfony server for local dev"
+        cmds:
+            - "clear"
+            - task secure
+            - task start
+            # - task scc
+            - "{{.SYMFONY_CONSOLE}} assets:install"
+            - task open
+        ignore_error: true
+        platforms: [windows/amd64]
+    restart:
+        desc: "Restart Symfony Server for Local Dev"
+        cmds:
+            - "clear"
+            - task stop
+            - task launch
+        ignore_error: true
+        platforms: [windows/amd64]
+    scripts:
+        desc: "Clear Cache, Assets, Import Map & Compile & SASS Build"
+        cmds:
+            - "clear"
+            - "{{.SYMFONY_CONSOLE}} cache:clear --env dev"
+            - "{{.SYMFONY_CONSOLE}} assets:install public"
+            - "{{.SYMFONY_CONSOLE}} importmap:install"
+#            - "{{.SYMFONY_CONSOLE}} sass:build"
+            - "{{.SYMFONY_CONSOLE}} asset-map:compile"
+        ignore_error: true
+        platforms: [windows/amd64]
+    dev:
+        desc: "Clear Cache, Initialize Database, Start Symfony Server & Open Browser"
+        cmds:
+            - task database
+            - task launch
+        ignore_error: true
+        platforms: [windows/amd64]
+    prod:
+        desc: "Clear Cache, Assets"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} cache:clear --env prod"
+            - "{{.SYMFONY_CONSOLE}} assets:install public --env prod"
+            - "{{.SYMFONY_CONSOLE}} importmap:install"
+            - "{{.SYMFONY_CONSOLE}} importmap:update"
+            - "{{.SYMFONY_CONSOLE}} asset-map:compile"
+            - "{{.SYMFONY_CONSOLE}} cache:pool:clear --all"
+#            - "{{.SYMFONY_CONSOLE}} asphalt:database:migration export"
+            - "rm -rf public/cache/"
+#            - "{{.COMPOSER}} run auto-scripts"
+        ignore_error: true
+        platforms: [windows/amd64]
