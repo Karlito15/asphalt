@@ -33,12 +33,12 @@ trait BlueprintAble
     {
         $this->slug =
             strtolower(str_pad($this->getStar1(), 3, '0', STR_PAD_LEFT)).' - '.
-            str_pad($this->getStar2(), 2, '0', STR_PAD_LEFT).' - '.
-            str_pad($this->getStar3(), 2, '0', STR_PAD_LEFT).' - '.
-            str_pad($this->getStar4(), 2, '0', STR_PAD_LEFT).' - '.
-            str_pad($this->getStar5(), 2, '0', STR_PAD_LEFT).' - '.
-            str_pad($this->getStar6(), 2, '0', STR_PAD_LEFT).' || '.
-            strtolower(str_pad($this->getTotal(), 3, '0', STR_PAD_LEFT))
+            str_pad((string) $this->getStar2(), 2, '0', STR_PAD_LEFT).' - '.
+            str_pad((string) $this->getStar3(), 2, '0', STR_PAD_LEFT).' - '.
+            str_pad((string) $this->getStar4(), 2, '0', STR_PAD_LEFT).' - '.
+            str_pad((string) $this->getStar5(), 2, '0', STR_PAD_LEFT).' - '.
+            str_pad((string) $this->getStar6(), 2, '0', STR_PAD_LEFT).' || '.
+            strtolower(str_pad((string) $this->getTotal(), 3, '0', STR_PAD_LEFT))
         ;
 
         return $this;

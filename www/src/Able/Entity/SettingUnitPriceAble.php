@@ -20,13 +20,13 @@ trait SettingUnitPriceAble
         ;
 
         $string =
-            str_pad($total, 7, 0, STR_PAD_LEFT) . ' || ' .
-            str_pad($this->getlevel01(), 5, 0, STR_PAD_LEFT) . ' - ' .
-            str_pad($this->getlevel02(), 5, 0, STR_PAD_LEFT) . ' - ' .
-            str_pad($this->getlevel03(), 5, 0, STR_PAD_LEFT) . ' - ' .
-            str_pad($this->getcommon(), 5, 0, STR_PAD_LEFT) . ' - ' .
-            str_pad($this->getrare(), 6, 0, STR_PAD_LEFT) . ' - ' .
-            str_pad($this->getepic(), 6, 0, STR_PAD_LEFT)
+            str_pad((string) $total, 7, '0', STR_PAD_LEFT) . ' || ' .
+            str_pad((string) $this->getlevel01(), 5, '0', STR_PAD_LEFT) . ' - ' .
+            str_pad((string) $this->getlevel02(), 5, '0', STR_PAD_LEFT) . ' - ' .
+            str_pad((string) $this->getlevel03(), 5, '0', STR_PAD_LEFT) . ' - ' .
+            str_pad((string) $this->getcommon(), 5, '0', STR_PAD_LEFT) . ' - ' .
+            str_pad((string) $this->getrare(), 6, '0', STR_PAD_LEFT) . ' - ' .
+            str_pad((string) $this->getepic(), 6, '0', STR_PAD_LEFT)
         ;
 
         $this->slug = $string;

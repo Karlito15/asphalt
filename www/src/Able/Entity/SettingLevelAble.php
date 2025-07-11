@@ -14,9 +14,9 @@ trait SettingLevelAble
     {
         $this->slug =
             $this->level . ' || ' .
-            str_pad($this->common, 2, '0', STR_PAD_LEFT) . ' - ' .
-            str_pad($this->rare, 2, '0', STR_PAD_LEFT) . ' - ' .
-            str_pad($this->epic, 2, '0', STR_PAD_LEFT)
+            str_pad((string) $this->common, 2, '0', STR_PAD_LEFT) . ' - ' .
+            str_pad((string) $this->rare, 2, '0', STR_PAD_LEFT) . ' - ' .
+            str_pad((string) $this->epic, 2, '0', STR_PAD_LEFT)
         ;
 
         return $this;

@@ -53,6 +53,7 @@ class MigrationCommand extends Command
         /** Init variables */
         $io     = new SymfonyStyle($input, $output);
         $choice = $input->getArgument('choice');
+        $result = false;
 
         /** Start */
         $output->writeln(shell_exec('clear'));
@@ -87,6 +88,7 @@ class MigrationCommand extends Command
 
             // Conclusion
             $io->success('Import terminé !');
+            $result = true;
         } elseif ($choice === 'export') {
             // the command name is passed as first argument
             $settings = new ArrayInput([
@@ -99,8 +101,8 @@ class MigrationCommand extends Command
 
             // Conclusion
             $io->success('Export terminé !');
+            $result = true;
         } else {
-            $result = false;
             $io->error('Houston we have a problem !');
         }
 
