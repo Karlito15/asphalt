@@ -16,6 +16,49 @@ class MissionTaskRepository extends ServiceEntityRepository
         parent::__construct($registry, MissionTask::class);
     }
 
+    /**
+     * Retourne les informations pour les extraire dans un fichier CSV
+     *
+     * @return array
+     */
+    public function exportDatas(): array
+    {
+        $q  = "q.value AS Value, q.slug AS Slug";
+        $qb = $this->createQueryBuilder('q');
+        $qb->select($q);
+        $qb->where('q.deletedAt IS NULL');
+        $qb->orderBy('q.id', 'ASC');
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    /**
+     * @param MissionTask $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function save(MissionTask $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
+     * @param MissionTask $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function remove(MissionTask $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
     //    /**
     //     * @return MissionTask[] Returns an array of MissionTask objects
     //     */

@@ -16,6 +16,49 @@ class MissionTypeRepository extends ServiceEntityRepository
         parent::__construct($registry, MissionType::class);
     }
 
+    /**
+     * Retourne les informations pour les extraire dans un fichier CSV
+     *
+     * @return array
+     */
+    public function exportDatas(): array
+    {
+        $q  = "q.value AS Value, q.slug AS Slug";
+        $qb = $this->createQueryBuilder('q');
+        $qb->select($q);
+        $qb->where('q.deletedAt IS NULL');
+        $qb->orderBy('q.id', 'ASC');
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    /**
+     * @param MissionType $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function save(MissionType $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
+     * @param MissionType $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function remove(MissionType $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
     //    /**
     //     * @return MissionType[] Returns an array of MissionType objects
     //     */

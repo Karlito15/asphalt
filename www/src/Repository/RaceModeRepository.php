@@ -16,6 +16,50 @@ class RaceModeRepository extends ServiceEntityRepository
         parent::__construct($registry, RaceMode::class);
     }
 
+    /**
+     * Retourne les informations pour les extraire dans un fichier CSV
+     *
+     * @return array
+     */
+    public function exportDatas(): array
+    {
+        $q  = "q.name AS Name, q.slug AS Slug";
+        $qb = $this->createQueryBuilder('q');
+        $qb->select($q);
+        $qb->where('q.deletedAt IS NULL');
+        $qb->orderBy('q.id', 'ASC');
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    /**
+     * @param RaceMode $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function save(RaceMode $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
+     * @param RaceMode $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function remove(RaceMode $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
     //    /**
     //     * @return RaceMode[] Returns an array of RaceMode objects
     //     */

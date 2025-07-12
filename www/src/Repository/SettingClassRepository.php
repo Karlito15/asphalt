@@ -16,6 +16,50 @@ class SettingClassRepository extends ServiceEntityRepository
         parent::__construct($registry, SettingClass::class);
     }
 
+    /**
+     * Retourne les informations pour les extraire dans un fichier CSV
+     *
+     * @return array
+     */
+    public function exportDatas(): array
+    {
+        $q  = "q.label AS Label, q.value AS Value, q.classOrder AS Order, q.carsNumber AS Number, q.median AS Median, q.slug AS Slug";
+        $qb = $this->createQueryBuilder('q');
+        $qb->select($q);
+        $qb->where('q.deletedAt IS NULL');
+        $qb->orderBy('q.classOrder', 'ASC');
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    /**
+     * @param SettingClass $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function save(SettingClass $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
+     * @param SettingClass $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function remove(SettingClass $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
     //    /**
     //     * @return SettingClass[] Returns an array of SettingClass objects
     //     */

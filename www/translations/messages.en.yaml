@@ -1,33 +1,32 @@
-# Title
-app.dashboard.admin.title: 'Back'
-app.dashboard.index.coins: 'Coins'
-app.dashboard.index.commons: 'Commons'
-app.dashboard.index.credits: 'Credits'
-app.dashboard.index.epics: 'Epics'
-app.dashboard.index.gauntlets: 'Gauntlets'
-app.dashboard.index.imports: 'Imports'
-app.dashboard.index.jokers: 'Jokers'
-app.dashboard.index.overlocks: 'Overlocks'
-app.dashboard.index.seasons: 'Seasons'
+app.dashboard.admin.title: Back
+app.dashboard.index.coins: Coins
+app.dashboard.index.commons: Commons
+app.dashboard.index.credits: Credits
+app.dashboard.index.epics: Epics
+app.dashboard.index.gauntlets: Gauntlets
+app.dashboard.index.imports: Imports
+app.dashboard.index.jokers: Jokers
+app.dashboard.index.overlocks: Overlocks
+app.dashboard.index.seasons: Seasons
 app.dashboard.index.stats: 'Stats by Class'
-app.dashboard.index.title: 'Dashboard'
-app.dashboard.index.tokens: 'Tokens'
-app.dashboard.index.vip: 'VIP'
+app.dashboard.index.title: Dashboard
+app.dashboard.index.tokens: Tokens
+app.dashboard.index.vip: VIP
 app.garage.create.title: 'Create a Car'
 app.garage.create.flash: 'Une nouvelle voiture est enregistrée dans le garage'
 app.garage.index.title: 'All Cars'
 app.garage.read.title: 'Read Car: '
-app.garage.update.average: 'Average'
-app.garage.update.blueprint: 'Blueprints'
-app.garage.update.median: 'Median'
-app.garage.update.rank: 'Ranks'
-app.garage.update.setting: 'Settings'
-app.garage.update.stat: 'Stats'
+app.garage.update.average: Average
+app.garage.update.blueprint: Blueprints
+app.garage.update.median: Median
+app.garage.update.rank: Ranks
+app.garage.update.setting: Settings
+app.garage.update.stat: Stats
 app.garage.update.statOrder: 'Order / Start'
-app.garage.update.tag: 'Tags'
+app.garage.update.tag: Tags
 app.garage.update.title: 'Edit Car: '
-app.garage.update.total: 'Total'
-app.garage.update.upgrade: 'Upgrades'
+app.garage.update.total: Total
+app.garage.update.upgrade: Upgrades
 app.garage.update.flash: ' a été mise à jour !'
 app.inventory.create.title: 'Create a Inventory'
 app.inventory.index.title: 'All Inventories'
@@ -78,31 +77,29 @@ app.setting.tag.update.title: 'Edit Tag : '
 app.setting.unit-price.create.title: 'Create a Price'
 app.setting.unit-price.index.title: 'All Prices'
 app.setting.unit-price.update.title: 'Edit Price : '
-# Button
 btn.back: 'Back to List'
-btn.create: 'Create'
-btn.read: 'Read'
-btn.update: 'Update'
-btn.delete: 'Delete'
-btn.valid: 'Valid'
-# Table
-table.actions: 'Actions'
-table.active: 'Active'
-table.brand: 'Brand'
+btn.create: Create
+btn.read: Read
+btn.update: Update
+btn.delete: Delete
+btn.valid: Valid
+table.actions: Actions
+table.active: Active
+table.brand: Brand
 table.carorder: 'Car Order'
-table.category: 'Category'
-table.class: 'Class'
-table.common: 'Common'
+table.category: Category
+table.class: Class
+table.common: Common
 table.createdat: 'Created At'
 table.deletedat: 'Deleted At'
-table.description: 'Description'
-table.epic: 'Epic'
-table.filter: 'Filter'
-table.finished: 'Finished'
+table.description: Description
+table.epic: Epic
+table.filter: Filter
+table.finished: Finished
 table.gameupdate: 'Game Update'
-table.gold: 'Gold'
-table.id: 'Id'
-table.label: 'Label'
+table.gold: Gold
+table.id: Id
+table.label: Label
 table.level01: 'Level 01'
 table.level02: 'Level 02'
 table.level03: 'Level 03'
@@ -116,31 +113,33 @@ table.level10: 'Level 10'
 table.level11: 'Level 11'
 table.level12: 'Level 12'
 table.level13: 'Level 13'
-table.level: 'Level'
-table.median: 'Median'
-table.model: 'Model'
-table.name: 'Name'
-table.noRecord: "no datas"
-table.number: 'Number'
-table.order: 'Order'
-table.position: 'Position'
-table.rare: 'Rare'
-table.region: 'Region'
-table.slug: 'Slug'
+table.level: Level
+table.median: Median
+table.model: Model
+table.name: Name
+table.noRecord: 'no datas'
+table.number: Number
+table.order: Order
+table.position: Position
+table.rare: Rare
+table.region: Region
+table.slug: Slug
 table.star1: 'Star 1'
 table.star2: 'Star 2'
 table.star3: 'Star 3'
 table.star4: 'Star 4'
 table.star5: 'Star 5'
 table.star6: 'Star 6'
-table.stars: 'Stars'
+table.stars: Stars
 table.statorder: 'Stat Order'
-table.success: 'Success'
-table.target: 'Target'
-table.time: 'Time'
-table.total: 'Total'
-table.track: 'Track'
-table.unlocked: 'Unlocked'
+table.success: Success
+table.target: Target
+table.time: Time
+table.total: Total
+table.track: Track
+table.unlocked: Unlocked
 table.updatedat: 'Updated At'
-table.value: 'Value'
-table.week: 'Week'
+table.value: Value
+table.week: Week
+app.mission.task.create.title: ''
+app.mission.task.update.title: ''

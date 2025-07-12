@@ -16,6 +16,46 @@ class SettingLevelRepository extends ServiceEntityRepository
         parent::__construct($registry, SettingLevel::class);
     }
 
+    /** @return array */
+    public function exportDatas(): array
+    {
+        $q  = "q.level AS Level, q.common AS Common, q.rare AS Rare, q.epic AS Epic, q.slug AS Slug";
+        $qb = $this->createQueryBuilder('q');
+        $qb->select($q);
+        $qb->where('q.deletedAt IS NULL');
+        $qb->orderBy('q.id', 'ASC');
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    /**
+     * @param SettingLevel $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function save(SettingLevel $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
+     * @param SettingLevel $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function remove(SettingLevel $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
     //    /**
     //     * @return SettingLevel[] Returns an array of SettingLevel objects
     //     */

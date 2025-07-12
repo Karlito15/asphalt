@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Form;
+namespace App\Form\Back;
 
 use App\Entity\InventoryApp;
 use Symfony\Component\Form\AbstractType;

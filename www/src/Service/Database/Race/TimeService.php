@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Service\Database\Race;
 
 use App\Able\Service\Database\ExportAble;
@@ -43,7 +45,7 @@ class TimeService implements ServiceDatabaseInterface
     public function createEntity(array $datas): RaceTime
     {
         $entity = new RaceTime();
-        $entity->setName($datas['Name']);
+        $entity->setName((int) $datas['Name']);
 
         return $entity;
     }

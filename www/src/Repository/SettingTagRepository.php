@@ -16,6 +16,46 @@ class SettingTagRepository extends ServiceEntityRepository
         parent::__construct($registry, SettingTag::class);
     }
 
+    /** @return array */
+    public function exportDatas(): array
+    {
+        $q  = "q.value AS Value, q.carsNumber AS Number, q.slug AS Slug";
+        $qb = $this->createQueryBuilder('q');
+        $qb->select($q);
+        $qb->where('q.deletedAt IS NULL');
+        $qb->orderBy('q.id', 'ASC');
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    /**
+     * @param SettingTag $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function save(SettingTag $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
+     * @param SettingTag $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function remove(SettingTag $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
     //    /**
     //     * @return SettingTag[] Returns an array of SettingTag objects
     //     */

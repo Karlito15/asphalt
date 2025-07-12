@@ -4,7 +4,7 @@ namespace App\Controller\Web\Front;
 
 use App\Able\Controller\WebAble;
 use App\Entity\MissionApp;
-use App\Form\MissionAppType;
+use App\Form\Front\MissionAppType;
 use App\Repository\MissionAppRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -16,6 +16,59 @@ class GarageUpgradeRepository extends ServiceEntityRepository
         parent::__construct($registry, GarageUpgrade::class);
     }
 
+    /**
+     * Retourne les informations pour les extraire dans un fichier CSV
+     *
+     * @return array
+     */
+    public function exportDatas(): array
+    {
+        $datas = [];
+        foreach ($this->findAll() as $garage) {
+            $datas[] = [
+                'Speed' => $garage->getSpeed(),
+                'Acceleration' => $garage->getAcceleration(),
+                'Handly' => $garage->getHandly(),
+                'Nitro' => $garage->getNitro(),
+                'Common' => $garage->getCommon(),
+                'Rare' => $garage->getRare(),
+                'Epic' => $garage->getEpic(),
+                'Brand' => $garage->getGarage()->getSettingBrand()->getName(),
+                'Model' => $garage->getGarage()->getModel(),
+            ];
+        }
+
+        return $datas;
+    }
+
+    /**
+     * @param GarageUpgrade $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function save(GarageUpgrade $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
+     * @param GarageUpgrade $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function remove(GarageUpgrade $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
     //    /**
     //     * @return GarageUpgrade[] Returns an array of GarageUpgrade objects
     //     */

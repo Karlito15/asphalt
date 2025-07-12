@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GarageApp{% endblock %}
+
+{% block body %}
+    <h1>GarageApp</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ garage_app.id }}</td>
+            </tr>
+            <tr>
+                <th>Stars</th>
+                <td>{{ garage_app.stars }}</td>
+            </tr>
+            <tr>
+                <th>GameUpdate</th>
+                <td>{{ garage_app.gameUpdate }}</td>
+            </tr>
+            <tr>
+                <th>CarOrder</th>
+                <td>{{ garage_app.carOrder }}</td>
+            </tr>
+            <tr>
+                <th>StatOrder</th>
+                <td>{{ garage_app.statOrder }}</td>
+            </tr>
+            <tr>
+                <th>Level</th>
+                <td>{{ garage_app.level }}</td>
+            </tr>
+            <tr>
+                <th>Epic</th>
+                <td>{{ garage_app.epic }}</td>
+            </tr>
+            <tr>
+                <th>Model</th>
+                <td>{{ garage_app.model }}</td>
+            </tr>
+            <tr>
+                <th>Unlocked</th>
+                <td>{{ garage_app.unlocked ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Gold</th>
+                <td>{{ garage_app.gold ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Slug</th>
+                <td>{{ garage_app.slug }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ garage_app.createdAt ? garage_app.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ garage_app.updatedAt ? garage_app.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DeletedAt</th>
+                <td>{{ garage_app.deletedAt ? garage_app.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_garage_app_index') }}">back to list</a>
+
+    <a href="{{ path('app_garage_app_edit', {'id': garage_app.id}) }}">edit</a>
+
+    {{ include('garage_app/_delete_form.html.twig') }}
+{% endblock %}

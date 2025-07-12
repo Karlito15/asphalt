@@ -16,6 +16,50 @@ class SettingBrandRepository extends ServiceEntityRepository
         parent::__construct($registry, SettingBrand::class);
     }
 
+    /**
+     * Retourne les informations pour les extraire dans un fichier CSV
+     *
+     * @return array
+     */
+    public function exportDatas(): array
+    {
+        $q  = "q.name AS Name, q.cars_number AS Number, q.slug AS Slug";
+        $qb = $this->createQueryBuilder('q');
+        $qb->select($q);
+        $qb->where('q.deletedAt IS NULL');
+        $qb->orderBy('q.id', 'ASC');
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    /**
+     * @param SettingBrand $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function save(SettingBrand $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
+     * @param SettingBrand $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function remove(SettingBrand $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
     //    /**
     //     * @return SettingBrand[] Returns an array of SettingBrand objects
     //     */

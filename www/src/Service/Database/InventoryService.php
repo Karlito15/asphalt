@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Service\Database;
 
 use App\Able\Service\Database\ExportAble;
@@ -46,9 +48,9 @@ class InventoryService implements ServiceDatabaseInterface
         $entity->setCategory((string) $datas['Category']);
         $entity->setLabel((string) $datas['Label']);
         $entity->setValue((int) $datas['Value']);
-        ($datas['Filter'] != "") ? $entity->setFilter($datas['Filter']) : $entity->setFilter(NULL);
-        $entity->setPosition($datas['Position']);
-        $entity->setActive($datas['Active']);
+        ($datas['Filter'] != "") ? $entity->setFilter($datas['Filter']) : $entity->setFilter('---');
+        $entity->setPosition((int) $datas['Position']);
+        $entity->setActive((bool) $datas['Active']);
 
         return $entity;
     }

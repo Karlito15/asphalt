@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Form;
+namespace App\Form\Back;
 
 use App\Entity\RaceRegion;
 use App\Entity\RaceTrack;

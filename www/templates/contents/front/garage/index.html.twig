@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GarageApp index{% endblock %}
+
+{% block body %}
+    <h1>GarageApp index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Stars</th>
+                <th>GameUpdate</th>
+                <th>CarOrder</th>
+                <th>StatOrder</th>
+                <th>Level</th>
+                <th>Epic</th>
+                <th>Model</th>
+                <th>Unlocked</th>
+                <th>Gold</th>
+                <th>Slug</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>DeletedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for garage_app in garage_apps %}
+            <tr>
+                <td>{{ garage_app.id }}</td>
+                <td>{{ garage_app.stars }}</td>
+                <td>{{ garage_app.gameUpdate }}</td>
+                <td>{{ garage_app.carOrder }}</td>
+                <td>{{ garage_app.statOrder }}</td>
+                <td>{{ garage_app.level }}</td>
+                <td>{{ garage_app.epic }}</td>
+                <td>{{ garage_app.model }}</td>
+                <td>{{ garage_app.unlocked ? 'Yes' : 'No' }}</td>
+                <td>{{ garage_app.gold ? 'Yes' : 'No' }}</td>
+                <td>{{ garage_app.slug }}</td>
+                <td>{{ garage_app.createdAt ? garage_app.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ garage_app.updatedAt ? garage_app.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ garage_app.deletedAt ? garage_app.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_garage_app_show', {'id': garage_app.id}) }}">show</a>
+                    <a href="{{ path('app_garage_app_edit', {'id': garage_app.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="15">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_garage_app_new') }}">Create new</a>
+{% endblock %}

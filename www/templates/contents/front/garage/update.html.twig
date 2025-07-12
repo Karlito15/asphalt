@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit GarageApp{% endblock %}
+
+{% block body %}
+    <h1>Edit GarageApp</h1>
+
+    {{ include('garage_app/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_garage_app_index') }}">back to list</a>
+
+    {{ include('garage_app/_delete_form.html.twig') }}
+{% endblock %}

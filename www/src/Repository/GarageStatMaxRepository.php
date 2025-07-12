@@ -16,6 +16,57 @@ class GarageStatMaxRepository extends ServiceEntityRepository
         parent::__construct($registry, GarageStatMax::class);
     }
 
+    /**
+     * Retourne les informations pour les extraire dans un fichier CSV
+     *
+     * @return array
+     */
+    public function exportDatas(): array
+    {
+        $datas = [];
+        foreach ($this->findAll() as $garage) {
+            $datas[] = [
+                'Speed' => $garage->getSpeed(),
+                'Acceleration' => $garage->getAcceleration(),
+                'Handly' => $garage->getHandly(),
+                'Nitro' => $garage->getNitro(),
+                'Average' => $garage->getAverage(),
+                'Brand' => $garage->getGarage()->getSettingBrand()->getName(),
+                'Model' => $garage->getGarage()->getModel(),
+            ];
+        }
+
+        return $datas;
+    }
+
+    /**
+     * @param GarageStatMax $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function save(GarageStatMax $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
+     * @param GarageStatMax $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function remove(GarageStatMax $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
     //    /**
     //     * @return GarageStatMax[] Returns an array of GarageStatMax objects
     //     */
