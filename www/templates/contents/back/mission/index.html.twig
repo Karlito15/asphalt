@@ -1,43 +1,43 @@
-{% extends 'base.html.twig' %}
+{% extends '@App/bases/back/full.html.twig' %}
 
-{% block title %}MissionTask index{% endblock %}
+{% block title %}{{ controller_name }}{% endblock %}
 
-{% block body %}
-    <h1>MissionTask index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>CreatedAt</th>
-                <th>UpdatedAt</th>
-                <th>DeletedAt</th>
-                <th>Value</th>
-                <th>Slug</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for mission_task in mission_tasks %}
-            <tr>
-                <td>{{ mission_task.id }}</td>
-                <td>{{ mission_task.createdAt ? mission_task.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ mission_task.updatedAt ? mission_task.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ mission_task.deletedAt ? mission_task.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ mission_task.value }}</td>
-                <td>{{ mission_task.slug }}</td>
-                <td>
-                    <a href="{{ path('app_mission_task_show', {'id': mission_task.id}) }}">show</a>
-                    <a href="{{ path('app_mission_task_edit', {'id': mission_task.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="7">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_mission_task_new') }}">Create new</a>
+{% block table %}
+<tbody>
+{% for item in entities %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.value }}</td>
+        <td>{{ item.slug }}</td>
+        <td>{{ component('ValueDate', {value: item.createdAt}) }}</td>
+        <td>{{ component('ValueDate', {value: item.updatedAt}) }}</td>
+        {% if app.current_route == 'app.mission.task.index' %}
+            {{ component('TableAction', {id: item.id, link: 'app.mission.task.update'}) }}
+        {% elseif app.current_route == 'app.mission.type.index' %}
+            {{ component('TableAction', {id: item.id, link: 'app.mission.type.update'}) }}
+        {% endif %}
+    </tr>
+{% else %}
+    {{ component('TableNoRecords', {value: 6}) }}
+{% endfor %}
+</tbody>
+<thead>
+    {{ _self.tr() }}
+</thead>
+<tfoot>
+    {{ _self.tr() }}
+</tfoot>
+<thead>
+</thead>
 {% endblock %}
+
+{% macro tr() %}
+    <tr>
+        <th>{{ 'table.id' | trans }}</th>
+        <th>{{ 'table.value' | trans }}</th>
+        <th>{{ 'table.slug' | trans }}</th>
+        <th>{{ 'table.createdat' | trans }}</th>
+        <th>{{ 'table.updatedat' | trans }}</th>
+        <th>{{ 'table.actions' | trans }}</th>
+    </tr>
+{% endmacro %}

@@ -63,14 +63,14 @@ class MissionsCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        /** Init variables */
+        // Init variables
         $io     = new SymfonyStyle($input, $output);
         $choice = $input->getArgument('choice');
 
-        /** Start */
+        // Start
         $io->section((string) self::getDefaultDescription());
 
-        /** Question */
+        // Question
         if (is_null($choice)) {
             $helper = $this->getHelper('question');
             $question = new ChoiceQuestion(
@@ -82,7 +82,7 @@ class MissionsCommand extends Command
             $choice = $helper->ask($input, $output, $question);
         }
 
-        /** Services Datas */
+        // Services Datas
         if ($choice === 'import') {
             $this->type->import($io);
             $this->task->import($io);

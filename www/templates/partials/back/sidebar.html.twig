@@ -9,30 +9,30 @@
         <ul class="list-unstyled">
             <li{% if app.request.get('_route') starts with 'app.race.' %} class="active"{% endif %}><a href="#dropdown-db" aria-expanded="{% if app.request.get('_route') starts with 'app.race.' %}true{% else %}false{% endif %}" data-toggle="collapse"><i class="fa-solid fa-flag-checkered mr-3"></i><span>Races</span></a>
                 <ul id="dropdown-db" class="collapse list-unstyled pt-0{% if app.request.get('_route') starts with 'app.race.' %} show{% endif %}">
-                    <li><a href="javascript:void(0);">Mode</a></li>
-                    <li><a href="javascript:void(0);">Region</a></li>
-                    <li><a href="javascript:void(0);">Season</a></li>
-                    <li><a href="javascript:void(0);">Time</a></li>
-                    <li><a href="javascript:void(0);">Track</a></li>
+                    <li><a href="{{ path('app.race.mode.index') }}">{{ 'app.race.mode.index.title' | trans }}</a></li>
+                    <li><a href="{{ path('app.race.region.index') }}">{{ 'app.race.region.index.title' | trans }}</a></li>
+                    <li><a href="{{ path('app.race.season.index') }}">{{ 'app.race.season.index.title' | trans }}</a></li>
+                    <li><a href="{{ path('app.race.time.index') }}">{{ 'app.race.time.index.title' | trans }}</a></li>
+                    <li><a href="{{ path('app.race.track.index') }}">{{ 'app.race.track.index.title' | trans }}</a></li>
                 </ul>
             </li>
             <li{% if app.request.get('_route') starts with 'app.setting.' %} class="active"{% endif %}><a href="#dropdown-app" aria-expanded="{% if app.request.get('_route') starts with 'app.setting.' %}true{% else %}false{% endif %}" data-toggle="collapse"><i class="fa-solid fa-screwdriver-wrench mr-3"></i><span>Settings</span></a>
                 <ul id="dropdown-app" class="collapse list-unstyled pt-0{% if app.request.get('_route') starts with 'app.setting.' %} show{% endif %}">
-                    <li><a class="active" href="{{ path('app.setting.blueprint.index') }}">Blueprint</a></li>
-                    <li><a href="{{ path('app.setting.brand.index') }}">Brand</a></li>
-                    <li><a href="{{ path('app.setting.class.index') }}">Class</a></li>
-                    <li><a href="{{ path('app.setting.level.index') }}">Level</a></li>
-                    <li><a href="{{ path('app.setting.tag.index') }}">Tag</a></li>
-                    <li><a href="{{ path('app.setting.unit-price.index') }}">Unit Price</a></li>
+                    <li><a class="active" href="{{ path('app.setting.blueprint.index') }}">{{ 'app.setting.blueprint.index.title' | trans }}</a></li>
+                    <li><a href="{{ path('app.setting.brand.index') }}">{{ 'app.setting.brand.index.title' | trans }}</a></li>
+                    <li><a href="{{ path('app.setting.class.index') }}">{{ 'app.setting.class.index.title' | trans }}</a></li>
+                    <li><a href="{{ path('app.setting.level.index') }}">{{ 'app.setting.level.index.title' | trans }}</a></li>
+                    <li><a href="{{ path('app.setting.tag.index') }}">{{ 'app.setting.tag.index.title' | trans }}</a></li>
+                    <li><a href="{{ path('app.setting.unit-price.index') }}">{{ 'app.setting.unit-price.index.title' | trans }}</a></li>
                 </ul>
             </li>
             <li{% if app.request.get('_route') starts with 'app.mission.' %} class="active"{% endif %}><a href="#dropdown-ui" aria-expanded="{% if app.request.get('_route') starts with 'app.mission.' %}true{% else %}false{% endif %}" data-toggle="collapse"><i class="fa-solid fa-bullseye mr-3"></i><span>Missions</span></a>
                 <ul id="dropdown-ui" class="collapse list-unstyled pt-0{% if app.request.get('_route') starts with 'app.mission.' %} show{% endif %}">
-                    <li><a href="javascript:void(0);">Buttons</a></li>
-                    <li><a href="javascript:void(0);">Alerts</a></li>
+                    <li><a href="{{ path('app.mission.task.index') }}">{{ 'app.mission.task.index.title' | trans }}</a></li>
+                    <li><a href="{{ path('app.mission.type.index') }}">{{ 'app.mission.type.index.title' | trans }}</a></li>
                 </ul>
             </li>
-            <li><a href="javascript:void(0);"><i class="fa-solid fa-box-archive mr-3"></i><span>Inventory</span></a></li>
+            <li><a href="{{ path('app.inventory.index') }}"><i class="fa-solid fa-box-archive mr-3"></i><span>{{ 'app.inventory.index.title' | trans }}</span></a></li>
         </ul>
         <!-- End Main Navigation -->
     </nav>

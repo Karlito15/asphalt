@@ -1,33 +1,49 @@
-{% extends 'base.html.twig' %}
+{% extends '@App/bases/back/full.html.twig' %}
 
-{% block title %}InventoryApp index{% endblock %}
+{% block title %}{{ controller_name }}{% endblock %}
 
-{% block body %}
-    <h1>InventoryApp index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for inventory_app in inventory_apps %}
-            <tr>
-                <td>{{ inventory_app.id }}</td>
-                <td>
-                    <a href="{{ path('app_inventory_app_show', {'id': inventory_app.id}) }}">show</a>
-                    <a href="{{ path('app_inventory_app_edit', {'id': inventory_app.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="2">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_inventory_app_new') }}">Create new</a>
+{% block table %}
+<tbody>
+{% for item in entities %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.category }}</td>
+        <td>{{ item.label }}</td>
+        <td>{{ item.value | number_format }}</td>
+        <td>{{ item.filter }}</td>
+        <td>{{ item.position }}</td>
+        <td>{{ item.active }}</td>
+        <td>{{ item.slug }}</td>
+        <td>{{ component('ValueDate', {value: item.createdAt}) }}</td>
+        <td>{{ component('ValueDate', {value: item.updatedAt}) }}</td>
+        {{ component('TableAction', {id: item.id, link: 'app.inventory.update'}) }}
+    </tr>
+{% else %}
+    {{ component('TableNoRecords', {value: 11}) }}
+{% endfor %}
+</tbody>
+<thead>
+    {{ _self.tr() }}
+</thead>
+<tfoot>
+    {{ _self.tr() }}
+</tfoot>
+<thead>
+</thead>
 {% endblock %}
+
+{% macro tr() %}
+    <tr>
+        <th>{{ 'table.id' | trans }}</th>
+        <th>{{ 'table.category' | trans }}</th>
+        <th>{{ 'table.label' | trans }}</th>
+        <th>{{ 'table.value' | trans }}</th>
+        <th>{{ 'table.filter' | trans }}</th>
+        <th>{{ 'table.position' | trans }}</th>
+        <th>{{ 'table.active' | trans }}</th>
+        <th>{{ 'table.slug' | trans }}</th>
+        <th>{{ 'table.createdat' | trans }}</th>
+        <th>{{ 'table.updatedat' | trans }}</th>
+        <th>{{ 'table.actions' | trans }}</th>
+    </tr>
+{% endmacro %}

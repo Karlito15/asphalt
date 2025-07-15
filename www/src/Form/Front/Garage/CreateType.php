@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Form\Front;
+namespace App\Form\Front\Garage;
 
 use App\Entity\GarageApp;
 use App\Entity\SettingBlueprint;
@@ -14,7 +14,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class GarageAppType extends AbstractType
+class CreateType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {

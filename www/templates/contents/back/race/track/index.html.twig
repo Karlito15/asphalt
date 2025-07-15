@@ -1,45 +1,39 @@
-{% extends 'base.html.twig' %}
+{% extends '@App/bases/back/full.html.twig' %}
 
-{% block title %}RaceTrack index{% endblock %}
+{% block title %}{{ controller_name }}{% endblock %}
 
-{% block body %}
-    <h1>RaceTrack index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>NameEnglish</th>
-                <th>NameFrench</th>
-                <th>Slug</th>
-                <th>CreatedAt</th>
-                <th>UpdatedAt</th>
-                <th>DeletedAt</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for race_track in race_tracks %}
-            <tr>
-                <td>{{ race_track.id }}</td>
-                <td>{{ race_track.nameEnglish }}</td>
-                <td>{{ race_track.nameFrench }}</td>
-                <td>{{ race_track.slug }}</td>
-                <td>{{ race_track.createdAt ? race_track.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ race_track.updatedAt ? race_track.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ race_track.deletedAt ? race_track.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>
-                    <a href="{{ path('app_race_track_show', {'id': race_track.id}) }}">show</a>
-                    <a href="{{ path('app_race_track_edit', {'id': race_track.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="8">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_race_track_new') }}">Create new</a>
+{% block table %}
+<tbody>
+{% for item in entities %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.nameEnglish }}</td>
+        <td>{{ item.nameFrench }}</td>
+        <td>{{ item.slug }}</td>
+        <td>{{ component('ValueDate', {value: item.createdAt}) }}</td>
+        <td>{{ component('ValueDate', {value: item.updatedAt}) }}</td>
+        {{ component('TableAction', {id: item.id, link: 'app.race.track.update'}) }}
+    </tr>
+{% else %}
+    {{ component('TableNoRecords', {value: 7}) }}
+{% endfor %}
+</tbody>
+<thead>
+    {{ _self.tr() }}
+</thead>
+<tfoot>
+    {{ _self.tr() }}
+</tfoot>
 {% endblock %}
+
+{% macro tr() %}
+    <tr>
+        <th>{{ 'table.id' | trans }}</th>
+        <th>{{ 'table.english' | trans }}</th>
+        <th>{{ 'table.french' | trans }}</th>
+        <th>{{ 'table.slug' | trans }}</th>
+        <th>{{ 'table.createdat' | trans }}</th>
+        <th>{{ 'table.updatedat' | trans }}</th>
+        <th>{{ 'table.actions' | trans }}</th>
+    </tr>
+{% endmacro %}

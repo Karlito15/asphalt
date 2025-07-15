@@ -1,0 +1,20 @@
+---
+https://symfony.com/bundles/ux-twig-component/current/index.html
+
+---
+php bin/console sass:build --watch
+
+Deploying
+When you deploy, run sass:build command before the asset-map:compile command so the built file is available:
+
+php bin/console sass:build
+php bin/console asset-map:compile
+
+# Install Sass globally
+npm install -g sass
+
+# Watch your custom Sass for changes and compile it to CSS
+sass --watch assets\styles\bootstrap.scss public\bootstrap.css
+
+---
+D:\Program Files (x86)\CMDer\1.3.25\config\clink_history

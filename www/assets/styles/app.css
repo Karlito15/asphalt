@@ -1,4 +1,9 @@
 body {
-    background-color: skyblue !important;
-    font-size: 2rem;
+    background-color: #fffbe3;
 }
+
+#rightsidebar {
+    display: none;
+}
+
+/*# sourceMappingURL=app.css.map */

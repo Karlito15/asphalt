@@ -2,6 +2,8 @@
 
 namespace App\Controller\Web\Front;
 
+use App\Service\Cache\DashboardService;
+use Psr\Cache\InvalidArgumentException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,32 +17,25 @@ final class DashboardController extends AbstractController
 
     public function __construct(
         private readonly TranslatorInterface $translator,
-//        private readonly InventoryService $inventoryService,
-//        private readonly StatisticalService $statisticalService,
     ) {}
 
     /**
      * @param Request $request
+     * @param DashboardService $cacheDashboardService
      * @return Response
+     * @throws InvalidArgumentException
      */
     #[Route(path: '{_locale<%app.supported_locales%>}/index.php', name: 'index')]
-    public function index(Request $request): Response
+    public function index(Request $request, DashboardService $cacheDashboardService): Response
     {
         $title          = $this->translator->trans('app.dashboard.index.title');
-//        $database       = $this->inventoryService->createDataCache('inventories');
-//        $statistic      = $this->statisticalService->createDataCache('statistical');
+        $dashboard      = $cacheDashboardService->cacheCreate();
 
         return $this->render('@App/contents/front/dashboard/index.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
             'breadcrumb'        => $title,
-//            'formCredit'        => $this->createForm(InventoryType::class, $database['credits'])->handleRequest($request),
-//            'moneys'            => $database['moneys'],
-//            'jokers'            => $database['jokers'],
-//            'rares'             => $database['rares'],
-//            'commons'           => $database['commons'],
-            // ToDo >>> Add Statistical
-//            'statistic'         => $statistic,
+            'dashboard'         => $dashboard,
         ]);
     }
 

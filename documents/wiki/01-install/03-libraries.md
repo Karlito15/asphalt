@@ -45,6 +45,13 @@ composer require --no-scripts twig/string-extra
 
 
 ``` shell
+composer remove --no-scripts symfony/ux-turbo
+```
+
+
+
+
+``` shell
 composer require --no-scripts symfony/ux-autocomplete
 ```
 ``` shell
@@ -56,7 +63,6 @@ composer require --no-scripts symfony/ux-live-component
 ``` shell
 composer require --no-scripts twig/markdown-extra
 ```
-
 
 
 
@@ -89,6 +95,9 @@ php bin/console importmap:require bootstrap
 ```
 ``` shell
 php bin/console importmap:require fontawesome
+```
+``` shell
+php bin/console importmap:require sweetalert
 ```
 ``` shell
 php bin/console asset-map:compile

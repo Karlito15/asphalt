@@ -13,13 +13,12 @@
         <td>{{ item.star6 }}</td>
         <td>{{ item.total }}</td>
         <td>{{ item.slug }}</td>
-        <td>{{ item.createdAt ? item.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-        <td>{{ item.updatedAt ? item.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-        <td>{{ item.deletedAt ? item.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
-        <td><a href="{{ path('app.setting.blueprint.update', {'id': item.id}) }}">edit</a></td>
+        <td>{{ component('ValueDate', {value: item.createdAt}) }}</td>
+        <td>{{ component('ValueDate', {value: item.updatedAt}) }}</td>
+        {{ component('TableAction', {id: item.id, link: 'app.setting.blueprint.update'}) }}
     </tr>
 {% else %}
-    {{ component('TableNoRecords', {value: 13}) }}
+    {{ component('TableNoRecords', {value: 11}) }}
 {% endfor %}
 </tbody>
 <thead>
@@ -32,18 +31,17 @@
 
 {% macro tr() %}
 <tr>
-    <th>Id</th>
-    <th>Star1</th>
-    <th>Star2</th>
-    <th>Star3</th>
-    <th>Star4</th>
-    <th>Star5</th>
-    <th>Star6</th>
-    <th>Total</th>
-    <th>Slug</th>
-    <th>CreatedAt</th>
-    <th>UpdatedAt</th>
-    <th>DeletedAt</th>
-    <th>Actions</th>
+    <th>{{ 'table.id' | trans }}</th>
+    <th>{{ 'table.star1' | trans }}</th>
+    <th>{{ 'table.star2' | trans }}</th>
+    <th>{{ 'table.star3' | trans }}</th>
+    <th>{{ 'table.star4' | trans }}</th>
+    <th>{{ 'table.star5' | trans }}</th>
+    <th>{{ 'table.star6' | trans }}</th>
+    <th>{{ 'table.total' | trans }}</th>
+    <th>{{ 'table.slug' | trans }}</th>
+    <th>{{ 'table.createdat' | trans }}</th>
+    <th>{{ 'table.updatedat' | trans }}</th>
+    <th>{{ 'table.actions' | trans }}</th>
 </tr>
 {% endmacro %}

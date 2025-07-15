@@ -69,14 +69,14 @@ class SettingsCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        /** Init variables */
+        // Init variables
         $io     = new SymfonyStyle($input, $output);
         $choice = $input->getArgument('choice');
 
-        /** Start */
+        // Start
         $io->section((string) self::getDefaultDescription());
 
-        /** Question */
+        // Question
         if (is_null($choice)) {
             $helper = $this->getHelper('question');
             $question = new ChoiceQuestion(
@@ -88,7 +88,7 @@ class SettingsCommand extends Command
             $choice = $helper->ask($input, $output, $question);
         }
 
-        /** Services Datas */
+        // Services Datas
         if ($choice === 'import') {
             $this->blueprint->import($io);
             $this->brand->import($io);

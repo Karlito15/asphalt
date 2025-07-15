@@ -6,7 +6,7 @@ namespace App\Interface;
 
 interface ServiceCacheInterface
 {
-    public function cacheCreate(string $cacheName): array;
+    public function cacheCreate(): array;
 
     public function cacheDelete(): void;
 }

@@ -3,18 +3,46 @@
 {% block title %}{{ controller_name }}{% endblock %}
 
 {% block content %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>E:/Symfony/Asphalt/www/src/Controller/DashboardController.php</code></li>
-        <li>Your template at <code>E:/Symfony/Asphalt/www/templates/dashboard/index.html.twig</code></li>
-    </ul>
+<h6 class="display-4">{{ 'app.dashboard.admin.inventory' | trans }}</h6>
+<div class="row flex-row">
+    {{ _self.card(inventory.link, inventory.title) }}
+</div>
+<h6 class="display-4">{{ 'app.dashboard.admin.mission' | trans }}</h6>
+<div class="row flex-row">
+    {% for item in missions %}
+        {{ _self.card(item.link, item.title) }}
+    {% endfor %}
+</div>
+<h6 class="display-4">{{ 'app.dashboard.admin.race' | trans }}</h6>
+<div class="row flex-row">
+    {% for item in races %}
+        {{ _self.card(item.link, item.title) }}
+    {% endfor %}
+</div>
+<h6 class="display-4">{{ 'app.dashboard.admin.setting' | trans }}</h6>
+<div class="row flex-row">
+    {% for item in settings %}
+        {{ _self.card(item.link, item.title) }}
+    {% endfor %}
 </div>
 {% endblock %}
+
+{% macro card(link, title) %}
+
+    <div class="col-xl-4 col-md-6 col-sm-12">
+        <a href="{{ path(link) }}">
+            <div class="widget widget-12 has-shadow">
+                <div class="widget-body">
+                    <div class="media">
+                        <div class="align-self-center ml-5 mr-5">
+                            <i class="ti-server text-twitter"></i>
+                        </div>
+                        <div class="media-body align-self-center">
+                            <div class="title text-twitter">{{ title }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+{% endmacro %}

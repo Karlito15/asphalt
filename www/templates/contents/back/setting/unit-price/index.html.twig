@@ -22,15 +22,12 @@
         <td>{{ item.rare }}</td>
         <td>{{ item.epic }}</td>
         <td>{{ item.slug }}</td>
-        <td>{{ item.deletedAt ? item.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
-        <td>{{ item.createdAt ? item.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-        <td>{{ item.updatedAt ? item.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+        <td>{{ component('ValueDate', {value: item.createdAt}) }}</td>
+        <td>{{ component('ValueDate', {value: item.updatedAt}) }}</td>
         <td><a href="{{ path('app.setting.unit-price.update', {'id': item.id}) }}">edit</a></td>
     </tr>
 {% else %}
-    <tr>
-        <td colspan="22">no records found</td>
-    </tr>
+    {{ component('TableNoRecords', {value: 21}) }}
 {% endfor %}
 </tbody>
 <thead>
@@ -43,28 +40,26 @@
 
 {% macro tr() %}
 <tr>
-    <th>Id</th>
-    <th>Level01</th>
-    <th>Level02</th>
-    <th>Level03</th>
-    <th>Level04</th>
-    <th>Level05</th>
-    <th>Level06</th>
-    <th>Level07</th>
-    <th>Level08</th>
-    <th>Level09</th>
-    <th>Level10</th>
-    <th>Level11</th>
-    <th>Level12</th>
-    <th>Level13</th>
-    <th>Common</th>
-    <th>Rare</th>
-    <th>Epic</th>
-    <th>Slug</th>
-    <th>DeletedAt</th>
-    <th>CreatedAt</th>
-    <th>UpdatedAt</th>
-    <th>actions</th>
+    <th>{{ 'table.id' | trans }}</th>
+    <th>{{ 'table.level01' | trans }}</th>
+    <th>{{ 'table.level02' | trans }}</th>
+    <th>{{ 'table.level03' | trans }}</th>
+    <th>{{ 'table.level04' | trans }}</th>
+    <th>{{ 'table.level05' | trans }}</th>
+    <th>{{ 'table.level06' | trans }}</th>
+    <th>{{ 'table.level07' | trans }}</th>
+    <th>{{ 'table.level08' | trans }}</th>
+    <th>{{ 'table.level09' | trans }}</th>
+    <th>{{ 'table.level10' | trans }}</th>
+    <th>{{ 'table.level11' | trans }}</th>
+    <th>{{ 'table.level12' | trans }}</th>
+    <th>{{ 'table.level13' | trans }}</th>
+    <th>{{ 'table.common' | trans }}</th>
+    <th>{{ 'table.rare' | trans }}</th>
+    <th>{{ 'table.epic' | trans }}</th>
+    <th>{{ 'table.slug' | trans }}</th>
+    <th>{{ 'table.createdat' | trans }}</th>
+    <th>{{ 'table.updatedat' | trans }}</th>
+    <th>{{ 'table.actions' | trans }}</th>
 </tr>
 {% endmacro %}
-

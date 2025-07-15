@@ -10,15 +10,12 @@
         <td>{{ item.rare }}</td>
         <td>{{ item.epic }}</td>
         <td>{{ item.slug }}</td>
-        <td>{{ item.createdAt ? item.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-        <td>{{ item.updatedAt ? item.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-        <td>{{ item.deletedAt ? item.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
-        <td><a href="{{ path('app.setting.level.update', {'id': item.id}) }}">edit</a></td>
+        <td>{{ component('ValueDate', {value: item.createdAt}) }}</td>
+        <td>{{ component('ValueDate', {value: item.updatedAt}) }}</td>
+        {{ component('TableAction', {id: item.id, link: 'app.setting.level.update'}) }}
     </tr>
 {% else %}
-    <tr>
-        <td colspan="10">no records found</td>
-    </tr>
+    {{ component('TableNoRecords', {value: 9}) }}
 {% endfor %}
 </tbody>
 <thead>
@@ -31,15 +28,14 @@
 
 {% macro tr() %}
 <tr>
-    <th>Id</th>
-    <th>Level</th>
-    <th>Common</th>
-    <th>Rare</th>
-    <th>Epic</th>
-    <th>Slug</th>
-    <th>CreatedAt</th>
-    <th>UpdatedAt</th>
-    <th>DeletedAt</th>
-    <th>actions</th>
+    <th>{{ 'table.id' | trans }}</th>
+    <th>{{ 'table.level' | trans }}Level</th>
+    <th>{{ 'table.common' | trans }}Common</th>
+    <th>{{ 'table.rare' | trans }}Rare</th>
+    <th>{{ 'table.epic' | trans }}Epic</th>
+    <th>{{ 'table.slug' | trans }}</th>
+    <th>{{ 'table.createdat' | trans }}</th>
+    <th>{{ 'table.updatedat' | trans }}</th>
+    <th>{{ 'table.actions' | trans }}</th>
 </tr>
 {% endmacro %}

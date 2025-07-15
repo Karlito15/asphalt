@@ -69,15 +69,15 @@ class TruncateCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        /** Init variables */
+        // Init variables
         $io         = new SymfonyStyle($input, $output);
         $em         = $this->entityManager;
         $connection = $em->getConnection();
 
-        /** Start */
+        // Start
         $io->section(self::getDefaultDescription());
 
-        /** Execution time : start */
+        // Execution time : start
         $this->stopwatch->start(self::$title);
 
         /** Truncate */
@@ -109,11 +109,11 @@ class TruncateCommand extends Command
         self::truncateTable(SettingUnitPrice::class, $em, $io);
         $connection->executeQuery('SET FOREIGN_KEY_CHECKS = 1');
 
-        /** Execution time : stop */
+        // Execution time : stop
         $event      = $this->stopwatch->stop(self::$title);
         $duration   = $event->getDuration() / 1000;
 
-        /** Resume */
+        // Resume
         self::resume($this->io, $duration);
 
         /** Conclusion */

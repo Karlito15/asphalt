@@ -15,7 +15,7 @@ parameters:
         pack:               6
         pack_price:         900
     cache_lifetime:
-        inventories:         300 # 3600    # (60 * 60 = 1 hour)
-        statistical:         300 # 3600    # (60 * 60 = 1 hour)
-        garages:             300 # 3600    # (60 * 60 = 1 hour)
-        races:               300 # 2678400 # (60 * 60 * 24 * 31 = 1 month)
+        dashboards:         120 # 3600    # (60 * 60 = 1 hour)
+        garages:            120 # 3600    # (60 * 60 = 1 hour)
+        missions:           120 # 3600    # (60 * 60 = 1 hour)
+        races:              120 # 2678400 # (60 * 60 * 24 * 31 = 1 month)

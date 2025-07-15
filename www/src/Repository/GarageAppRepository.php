@@ -45,22 +45,48 @@ class GarageAppRepository extends ServiceEntityRepository
 
     /**
      * Retourne la liste des voitures filtrée par Class
-     * (doit impérativement renvoyer des entités pas un tableau)
+     * Doit impérativement renvoyer des entités pas un tableau
      *
      * @param string $class
      * @return GarageApp[]
      */
     public function getCarsByClass(string $class): array
     {
-        $qb = $this->createQueryBuilder('g');
-        $qb
-            ->leftJoin('g.settingClass', 'SettingClass')
-            ->andWhere('SettingClass.value = :class')->setParameter('class', $class)
-            ->addOrderBy('g.carOrder', 'ASC');
-        ;
+        $qb = $this->querySettingClass($class);
 
         return $qb->getQuery()->getResult();
     }
+
+    // DASHBOARD
+
+    /**
+     * @param string $class
+     * @param bool $value
+     * @return array
+     */
+    public function getCarsUnlockedByClass(string $class, bool $value): array
+    {
+        $qb = $this->querySettingClass($class);
+        $qb->andWhere('g.unlocked = :value')->setParameter('value', $value);
+
+        return $qb->getQuery()->getResult();
+    }
+
+    /**
+     * @param string $class
+     * @param bool $value
+     * @return array
+     */
+    public function getCarsGoldByClass(string $class, bool $value): array
+    {
+        $qb = $this->querySettingClass($class);
+        $qb->andWhere('g.gold = :value')->setParameter('value', $value);
+
+        return $qb->getQuery()->getResult();
+    }
+
+    // CSV
+
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -146,6 +172,15 @@ class GarageAppRepository extends ServiceEntityRepository
         ;
 
         return $qb;
+    }
+
+    private function querySettingClass(string $class): QueryBuilder
+    {
+        return $this->createQueryBuilder('g')
+            ->leftJoin('g.settingClass', 'SettingClass')
+            ->andWhere('SettingClass.value = :class')->setParameter('class', $class)
+            ->addOrderBy('g.carOrder', 'ASC')
+        ;
     }
 
     //    /**

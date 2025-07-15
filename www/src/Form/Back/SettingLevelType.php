@@ -2,24 +2,64 @@
 
 namespace App\Form\Back;
 
+use App\Able\Form\FormAble;
 use App\Entity\SettingLevel;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class SettingLevelType extends AbstractType
 {
+    use FormAble;
+
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('level')
-            ->add('common')
-            ->add('rare')
-            ->add('epic')
-            ->add('slug')
-            ->add('createdAt')
-            ->add('updatedAt')
-            ->add('deletedAt')
+            ->add('level', IntegerType::class, [
+                 'attr' => [
+                    'autocomplete' => 'off',
+                    'class' => null,
+                    'max' => 13,
+                    'min' => 0,
+                 ],
+                'label' => 'form.level',
+                'required' => true,
+                'trim' => true,
+            ])
+            ->add('common', IntegerType::class, [
+                 'attr' => [
+                    'autocomplete' => 'off',
+                    'class' => null,
+                    'max' => 36,
+                    'min' => 0,
+                 ],
+                'label' => 'form.common',
+                'required' => true,
+                'trim' => true,
+            ])
+            ->add('rare', IntegerType::class, [
+                 'attr' => [
+                    'autocomplete' => 'off',
+                    'class' => null,
+                    'max' => 20,
+                    'min' => 0,
+                 ],
+                'label' => 'form.rare',
+                'required' => true,
+                'trim' => true,
+            ])
+            ->add('epic', IntegerType::class, [
+                 'attr' => [
+                    'autocomplete' => 'off',
+                    'class' => null,
+                    'max' => 16,
+                    'min' => 0,
+                 ],
+                'label' => 'form.epic',
+                'required' => true,
+                'trim' => true,
+            ])
         ;
     }
 
@@ -27,6 +67,8 @@ class SettingLevelType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => SettingLevel::class,
+            'allow_extra_fields' => true,
+            'translation_domain' => 'forms',
         ]);
     }
 }

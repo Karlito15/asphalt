@@ -11,15 +11,12 @@
         <td>{{ item.carsNumber }}</td>
         <td>{{ item.median }}</td>
         <td>{{ item.slug }}</td>
-        <td>{{ item.createdAt ? item.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-        <td>{{ item.updatedAt ? item.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-        <td>{{ item.deletedAt ? item.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
-        <td><a href="{{ path('app.setting.class.update', {'id': item.id}) }}">edit</a></td>
+        <td>{{ component('ValueDate', {value: item.createdAt}) }}</td>
+        <td>{{ component('ValueDate', {value: item.updatedAt}) }}</td>
+        {{ component('TableAction', {id: item.id, link: 'app.setting.class.update'}) }}
     </tr>
 {% else %}
-    <tr>
-        <td colspan="11">no records found</td>
-    </tr>
+    {{ component('TableNoRecords', {value: 10}) }}
 {% endfor %}
 </tbody>
 <thead>
@@ -32,16 +29,15 @@
 
 {% macro tr() %}
 <tr>
-    <th>Id</th>
-    <th>Label</th>
-    <th>Value</th>
-    <th>ClassOrder</th>
-    <th>CarsNumber</th>
-    <th>Median</th>
-    <th>Slug</th>
-    <th>CreatedAt</th>
-    <th>UpdatedAt</th>
-    <th>DeletedAt</th>
-    <th>actions</th>
+    <th>{{ 'table.id' | trans }}</th>
+    <th>{{ 'table.level' | trans }}</th>
+    <th>{{ 'table.value' | trans }}</th>
+    <th>{{ 'table.order' | trans }}</th>
+    <th>{{ 'table.number' | trans }}</th>
+    <th>{{ 'table.median' | trans }}</th>
+    <th>{{ 'table.slug' | trans }}</th>
+    <th>{{ 'table.createdat' | trans }}</th>
+    <th>{{ 'table.updatedat' | trans }}</th>
+    <th>{{ 'table.actions' | trans }}</th>
 </tr>
 {% endmacro %}

@@ -50,19 +50,19 @@ class MigrationCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        /** Init variables */
+        // Init variables
         $io     = new SymfonyStyle($input, $output);
         $choice = $input->getArgument('choice');
 
-        /** Start */
+        // Start
         $output->writeln(shell_exec('clear'));
         $this->io->title(self::$title);
         $io->section((string) self::getDefaultDescription());
 
-        /** Execution time : start */
+        // Execution time : start
         $this->stopwatch->start(self::$title);
 
-        /** Question */
+        // Question
         if (is_null($choice)) {
             $helper = $this->getHelper('question');
             $question = new ChoiceQuestion(
@@ -74,7 +74,7 @@ class MigrationCommand extends Command
             $choice = $helper->ask($input, $output, $question);
         }
 
-        /** Commands */
+        // Commands
         if ($choice === 'import') {
             // the command name is passed as first argument
             $settings = new ArrayInput([
@@ -179,11 +179,11 @@ class MigrationCommand extends Command
             $io->error('Houston we have a problem !');
         }
 
-        /** Execution time : stop */
+        // Execution time : stop
         $event      = $this->stopwatch->stop(self::$title);
         $duration   = $event->getDuration() / 1000;
 
-        /** Resume */
+        // Resume
         self::resume($this->io, $duration);
 
         return ($result) ? Command::SUCCESS : Command::FAILURE;
