@@ -24,11 +24,10 @@ class InventoryAppType extends AbstractType
                     'class' => 'form-control',
                 ],
                 'choices' => [
-                    'Money' => 'money',
-                    'Common' => 'common',
-                    'Rare' => 'rare',
-                    'Joker' => 'joker',
-
+                    'form.inventory.money'  => 'money',
+                    'form.inventory.common' => 'common',
+                    'form.inventory.rare'   => 'rare',
+                    'form.inventory.joker'  => 'joker',
                 ],
                 'label' => 'form.category',
                 'required' => true,
@@ -44,7 +43,24 @@ class InventoryAppType extends AbstractType
                 'required' => true,
                 'trim' => true,
             ])
-            ->add('filter', TextType::class, [
+//            ->add('filter', TextType::class, [
+//                'label' => 'form.filter',
+//                'required' => true,
+//                'trim' => true,
+//            ])
+            ->add('filter', ChoiceType::class, [
+                'attr' => [
+                    'class' => 'form-control',
+                ],
+                'choices' => [
+                    '---' => '---',
+                    'A' => 'A',
+                    'B' => 'B',
+                    'C' => 'C',
+                    'D' => 'D',
+                    'S' => 'S',
+
+                ],
                 'label' => 'form.filter',
                 'required' => true,
                 'trim' => true,

@@ -1,0 +1,13 @@
+{% extends '@App/bases/back/full.html.twig' %}
+
+{% block content %}
+
+<div class="row flex-row">
+    {{ component('Form', {'form': form, 'link': links.index}) }}
+    {{ component('FormDelete', {'id': entities.id, 'link': links.delete}) }}
+</div>
+
+{% endblock %}
+
+{% block title %}{{ controller_name }}{% endblock %}
+

@@ -20,10 +20,13 @@ final class BrandController extends AbstractController
     use WebAble;
 
     /** @description link to the index page */
-    private static string $index = 'app.setting.brand.index';
+    private static string $index    = 'app.setting.brand.index';
 
     /** @description link to the create page */
-    private static string $create = 'app.setting.brand.create';
+    private static string $create   = 'app.setting.brand.create';
+
+    /** @description link to the delete page */
+    private static string $delete   = 'app.setting.brand.delete';
 
     public function __construct(
         private readonly TranslatorInterface $translator,
@@ -34,10 +37,10 @@ final class BrandController extends AbstractController
     {
         $title = $this->translator->trans('app.setting.brand.index.title');
 
-        return $this->render('@App/contents/back/setting/brand/index.html.twig', [
+        return $this->render('@App/contents/back/setting/brand.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => $title,
+            'breadcrumb'        => ['level1' => 'Brand', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $repository->findAll(),
         ]);
@@ -57,10 +60,10 @@ final class BrandController extends AbstractController
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('@App/contents/back/setting/brand/form.html.twig', [
+        return $this->render('@App/contents/back/common/form.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => $this->translator->trans('app.setting.brand.index.title'), 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Brand', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $entities,
             'form'              => $form,
@@ -79,10 +82,10 @@ final class BrandController extends AbstractController
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('@App/contents/back/setting/brand/form.html.twig', [
+        return $this->render('@App/contents/back/common/form.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => $this->translator->trans('app.setting.brand.index.title'), 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Brand', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $entities,
             'form'              => $form,

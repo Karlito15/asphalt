@@ -20,10 +20,13 @@ final class BlueprintController extends AbstractController
     use WebAble;
 
     /** @description link to the index page */
-    private static string $index = 'app.setting.blueprint.index';
+    private static string $index    = 'app.setting.blueprint.index';
 
     /** @description link to the create page */
-    private static string $create = 'app.setting.blueprint.create';
+    private static string $create   = 'app.setting.blueprint.create';
+
+    /** @description link to the delete page */
+    private static string $delete   = 'app.setting.blueprint.delete';
 
     public function __construct(
         private readonly TranslatorInterface $translator,
@@ -34,10 +37,10 @@ final class BlueprintController extends AbstractController
     {
         $title = $this->translator->trans('app.setting.blueprint.index.title');
 
-        return $this->render('@App/contents/back/setting/blueprint/index.html.twig', [
+        return $this->render('@App/contents/back/setting/blueprint.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => $title,
+            'breadcrumb'        => ['level1' => 'Blueprint', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $repository->findAll(),
         ]);
@@ -57,10 +60,10 @@ final class BlueprintController extends AbstractController
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('@App/contents/back/setting/blueprint/form.html.twig', [
+        return $this->render('@App/contents/back/common/form.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => $this->translator->trans('app.setting.blueprint.index.title'), 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Blueprint', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $entities,
             'form'              => $form,
@@ -79,10 +82,10 @@ final class BlueprintController extends AbstractController
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('@App/contents/back/setting/blueprint/form.html.twig', [
+        return $this->render('@App/contents/back/common/form.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => $this->translator->trans('app.setting.blueprint.index.title'), 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Blueprint', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $entities,
             'form'              => $form,

@@ -3,8 +3,6 @@
 {% else %}
     {% set logo = 'images/logo-white.png' %}
 {% endif %}
-{% set items = app.request.attributes.get('_route')|split('.') %}
-{% set admin = '/'~app.request.defaultLocale~'/admin/' %}
 
 <!DOCTYPE html>
 <html lang="{{ app.request.locale }}" data-bs-theme="dark">

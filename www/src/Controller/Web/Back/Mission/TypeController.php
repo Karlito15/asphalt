@@ -20,12 +20,13 @@ final class TypeController extends AbstractController
     use WebAble;
 
     /** @description link to the index page */
-    private static string $index = 'app.mission.type.index';
+    private static string $index    = 'app.mission.type.index';
 
     /** @description link to the create page */
-    private static string $create = 'app.mission.type.create';
+    private static string $create   = 'app.mission.type.create';
 
-    private static string $page = 'type';
+    /** @description link to the delete page */
+    private static string $delete   = 'app.mission.type.delete';
 
     public function __construct(
         private readonly TranslatorInterface $translator,
@@ -36,10 +37,10 @@ final class TypeController extends AbstractController
     {
         $title = $this->translator->trans('app.mission.type.index.title');
 
-        return $this->render('@App/contents/back/mission/index.html.twig', [
+        return $this->render('@App/contents/back/mission.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => 'Mission', 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Type', 'level2' => $title],
             'links'             => ['index' => self::$index, 'create' => self::$create, 'update' => 'app.mission.type.update'],
             'entities'          => $repository->findAll(),
         ]);
@@ -59,10 +60,10 @@ final class TypeController extends AbstractController
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('@App/contents/back/mission/form.html.twig', [
+        return $this->render('@App/contents/back/common/form.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => $this->translator->trans('app.mission.type.index.title'), 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Type', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $entities,
             'form'              => $form,
@@ -72,8 +73,8 @@ final class TypeController extends AbstractController
     #[Route('/update/{id}.php', name: 'update', requirements: ['id' => Requirement::DIGITS], methods: ['GET', 'POST'])]
     public function update(Request $request, MissionType $entities, EntityManagerInterface $entityManager): Response
     {
-        $title = $this->translator->trans('app.mission.type.update.title');
-        $form = $this->createForm(MissionTypeType::class, $entities)->handleRequest($request);
+        $title = $this->translator->trans('app.mission.type.update.title') . ' ' . $entities->getValue();
+        $form  = $this->createForm(MissionTypeType::class, $entities)->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
@@ -81,10 +82,10 @@ final class TypeController extends AbstractController
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('@App/contents/back/mission/form.html.twig', [
+        return $this->render('@App/contents/back/common/form.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => $this->translator->trans('app.mission.type.index.title'), 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Type', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $entities,
             'form'              => $form,

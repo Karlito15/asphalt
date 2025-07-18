@@ -34,7 +34,7 @@ final class DashboardController extends AbstractController
         return $this->render('@App/contents/front/dashboard/index.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => $title,
+            'breadcrumb'        => ['level1' => $title],
             'dashboard'         => $dashboard,
         ]);
     }

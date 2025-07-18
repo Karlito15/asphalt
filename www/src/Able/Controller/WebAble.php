@@ -9,13 +9,16 @@ use Symfony\Component\HttpFoundation\Response;
 trait WebAble
 {
     /**
+     * Retourne les liens vers la page index et la page création
+     *
      * @return array
      */
     public static function getLinksPage(): array
     {
         return [
-            'index' => self::$index,
-            'create' => self::$create
+            'index'  => self::$index,
+            'create' => self::$create,
+            'delete' => self::$delete,
         ];
     }
 

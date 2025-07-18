@@ -37,7 +37,7 @@ final class RaceAppController extends AbstractController
         return $this->render('@App/contents/front/race/index.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => $title,
+            'breadcrumb'        => ['level1' => 'XXXX', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $repository->findAll(),
         ]);

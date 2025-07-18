@@ -25,6 +25,9 @@ final class InventoryController extends AbstractController
     /** @description link to the create page */
     private static string $create   = 'app.inventory.create';
 
+    /** @description link to the delete page */
+    private static string $delete   = 'app.inventory.delete';
+
     private static string $page     = 'inventory';
 
     public function __construct(
@@ -36,10 +39,10 @@ final class InventoryController extends AbstractController
     {
         $title = $this->translator->trans('app.inventory.index.title');
 
-        return $this->render('@App/contents/back/inventory/index.html.twig', [
+        return $this->render('@App/contents/back/inventory.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => $title,
+            'breadcrumb'        => ['level1' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $repository->findAll(),
         ]);
@@ -59,7 +62,7 @@ final class InventoryController extends AbstractController
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('@App/contents/back/inventory/form.html.twig', [
+        return $this->render('@App/contents/back/common/form.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
             'breadcrumb'        => ['level1' => $this->translator->trans('app.inventory.index.title'), 'level2' => $title],
@@ -81,7 +84,7 @@ final class InventoryController extends AbstractController
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('@App/contents/back/inventory/form.html.twig', [
+        return $this->render('@App/contents/back/common/form.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
             'breadcrumb'        => ['level1' => $this->translator->trans('app.inventory.index.title'), 'level2' => $title],

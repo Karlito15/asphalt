@@ -2,10 +2,12 @@
 <div class="row">
     <div class="page-header">
         <div class="d-flex align-items-center">
-            <h2 class="page-header-title">Dashboard</h2>
+            <h2 class="page-header-title">
+                {% if breadcrumb is defined and app.current_route ends with 'index' %}{{ breadcrumb.level1 }}{% else %}{{ breadcrumb.level2 }}{% endif %}
+            </h2>
             <div>
                 <div class="page-header-tools">
-                    <a class="btn btn-gradient-01" href="javascript:void(0);">Add Widget</a>
+                    {% if links is defined %}<a class="btn btn-gradient-01" href="{{ path(links.create) }}">{{ 'btn.create' | trans }}</a>{% endif %}
                 </div>
             </div>
         </div>

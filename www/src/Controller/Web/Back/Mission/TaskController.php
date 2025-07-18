@@ -25,7 +25,8 @@ final class TaskController extends AbstractController
     /** @description link to the create page */
     private static string $create = 'app.mission.task.create';
 
-    private static string $page = 'task';
+    /** @description link to the delete page */
+    private static string $delete   = 'app.mission.task.delete';
 
     public function __construct(
         private readonly TranslatorInterface $translator,
@@ -36,10 +37,10 @@ final class TaskController extends AbstractController
     {
         $title = $this->translator->trans('app.mission.task.index.title');
 
-        return $this->render('@App/contents/back/mission/index.html.twig', [
+        return $this->render('@App/contents/back/mission.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => $title,
+            'breadcrumb'        => ['level1' => 'Task', 'level2' => $title],
             'links'             => ['index' => self::$index, 'create' => self::$create, 'update' => 'app.mission.task.update'],
             'entities'          => $repository->findAll(),
         ]);
@@ -59,10 +60,10 @@ final class TaskController extends AbstractController
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('@App/contents/back/mission/form.html.twig', [
+        return $this->render('@App/contents/back/common/form.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => $this->translator->trans('app.mission.task.index.title'), 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Task', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $entities,
             'form'              => $form,
@@ -70,9 +71,9 @@ final class TaskController extends AbstractController
     }
 
     #[Route('/update/{id}.php', name: 'update', requirements: ['id' => Requirement::DIGITS], methods: ['GET', 'POST'])]
-    public function edit(Request $request, MissionTask $entities, EntityManagerInterface $entityManager): Response
+    public function update(Request $request, MissionTask $entities, EntityManagerInterface $entityManager): Response
     {
-        $title = $this->translator->trans('app.mission.task.update.title');
+        $title = $this->translator->trans('app.mission.task.update.title') . ' ' . $entities->getValue();
         $form  = $this->createForm(MissionTaskType::class, $entities)->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -81,10 +82,10 @@ final class TaskController extends AbstractController
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('@App/contents/back/mission/form.html.twig', [
+        return $this->render('@App/contents/back/common/form.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => $this->translator->trans('app.mission.task.index.title'), 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Task', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $entities,
             'form'              => $form,

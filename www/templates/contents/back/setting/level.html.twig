@@ -1,0 +1,41 @@
+{% extends '@App/bases/back/full.html.twig' %}
+
+{% block table %}
+<tbody>
+{% for item in entities %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.level }}</td>
+        <td>{{ item.common }}</td>
+        <td>{{ item.rare }}</td>
+        <td>{{ item.epic }}</td>
+        <td>{{ item.slug }}</td>
+        <td>{{ component('ValueDate', {value: item.createdAt}) }}</td>
+        <td>{{ component('ValueDate', {value: item.updatedAt}) }}</td>
+        {{ component('TableAction', {id: item.id, link: 'app.setting.level.update'}) }}
+    </tr>
+{% else %}
+    {{ component('TableNoRecords', {value: 9}) }}
+{% endfor %}
+</tbody>
+<thead>
+    {{ _self.tr() }}
+</thead>
+<tfoot>
+    {{ _self.tr() }}
+</tfoot>
+{% endblock %}
+
+{% macro tr() %}
+<tr>
+    <th>{{ 'table.id' | trans }}</th>
+    <th>{{ 'table.level' | trans }}</th>
+    <th>{{ 'table.common' | trans }}</th>
+    <th>{{ 'table.rare' | trans }}</th>
+    <th>{{ 'table.epic' | trans }}</th>
+    <th>{{ 'table.slug' | trans }}</th>
+    <th>{{ 'table.createdat' | trans }}</th>
+    <th>{{ 'table.updatedat' | trans }}</th>
+    <th>{{ 'table.actions' | trans }}</th>
+</tr>
+{% endmacro %}

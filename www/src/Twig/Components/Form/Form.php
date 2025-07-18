@@ -1,33 +1,31 @@
 <?php
 
-namespace App\Twig\Components\Table;
+namespace App\Twig\Components\Form;
 
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 use Symfony\UX\TwigComponent\Attribute\PreMount;
 
 #[AsTwigComponent(
-    name: 'TableAction',
-    template: '@App/components/table/Action.html.twig',
+    name: 'Form',
+    template: '@App/components/form/Form.html.twig',
 )]
-final class TableAction
+final class Form
 {
-    /**
-     * @var int
-     */
-    private int $id = 0;
+    /** @var mixed|null */
+    private mixed $form = null;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private string $link = '';
 
     #[PreMount]
     public function preMount(array $data): array
     {
         $resolver = new OptionsResolver();
-        $resolver->setRequired('id')->setAllowedTypes('id', 'integer');
-        $resolver->setRequired('link')->setAllowedTypes('link', 'string');
+        $resolver
+            ->setRequired(['form', 'link'])
+            ->setAllowedTypes('link', 'string')
+        ;
 
         return $resolver->resolve($data);
     }

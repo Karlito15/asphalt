@@ -1,0 +1,25 @@
+{#{{ attributes }}#}
+<!-- component HTML -->
+{% if app.current_route ends with 'create' %}
+    &nbsp;
+{% else %}
+<div class="col-3 mt-2">
+    <!-- Form -->
+    <div class="widget has-shadow">
+        <div class="widget-header bordered no-actions d-flex align-items-center">
+            <h4 class="h3">{{ 'app.delete.title' | trans }}</h4>
+        </div>
+        <div class="widget-body text-center">
+            <form
+                method="post"
+                action="{{ path(link, {'id': id}) }}"
+                onsubmit="return confirm('Are you sure you want to delete this item?');"
+            >
+                <button class="btn btn-outline-danger">{{ 'btn.delete' | trans }}</button>
+                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ id) }}">
+            </form>
+        </div>
+    </div>
+    <!-- End Form -->
+</div>
+{% endif %}

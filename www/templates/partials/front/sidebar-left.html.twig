@@ -17,35 +17,34 @@
                 </div>
             </li>
             <li class="active open"><a href="javascript:void(0);"><i class="zmdi zmdi-home"></i><span>{{ 'app.dashboard.index.title' | trans }}</span></a></li>
-            <li><a href="javascript:void(0);"><i class="zmdi zmdi-account"></i><span>{{ 'app.garage.index.title' | trans }}</span></a></li>
-            <li><a href="javascript:void(0);"><i class="zmdi zmdi-account"></i><span>{{ 'app.race.index.title' | trans }}</span></a></li>
-            <li><a href="javascript:void(0);"><i class="zmdi zmdi-account"></i><span>{{ 'app.mission.index.title' | trans }}</span></a></li>
-            <li><a href="javascript:void(0);"><i class="zmdi zmdi-account"></i><span>{{ 'sidebar.front.filter' | trans }}</span></a></li>
+            <li><a href="javascript:void(0);"><i class="zmdi zmdi-account"></i><span>{{ 'sidebar.common.garage' | trans }}</span></a></li>
+            <li><a href="javascript:void(0);"><i class="zmdi zmdi-account"></i><span>{{ 'sidebar.common.race' | trans }}</span></a></li>
+            <li><a href="javascript:void(0);"><i class="zmdi zmdi-account"></i><span>{{ 'sidebar.front.mission' | trans }}</span></a></li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>{{ 'sidebar.front.orders' | trans }}</span></a>
                 <ul class="ml-menu">
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.class' | trans }}</a></li>
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.stat' | trans }}</a></li>
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.event' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.orders.class' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.orders.stat' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.orders.event' | trans }}</a></li>
                 </ul>
             </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>{{ 'sidebar.front.setting' | trans }}</span></a>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>{{ 'sidebar.common.settings' | trans }}</span></a>
                 <ul class="ml-menu">
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.blueprint' | trans }}</a></li>
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.level' | trans }}</a></li>
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.rank' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.settings.blueprint' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.settings.level' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.settings.rank' | trans }}</a></li>
                 </ul>
             </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-folder"></i><span>{{ 'sidebar.front.filter' | trans }}Tags</span></a>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-folder"></i><span>{{ 'sidebar.front.tags' | trans }}</span></a>
                 <ul class="ml-menu">
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.filter' | trans }}Lock</a></li>
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.filter' | trans }}Unlock</a></li>
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.filter' | trans }}Gold</a></li>
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.filter' | trans }}To Upgrade</a></li>
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.filter' | trans }}To Gold</a></li>
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.filter' | trans }}To Unlock</a></li>
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.filter' | trans }}Gauntlet #1</a></li>
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.filter' | trans }}Gauntlet #2</a></li>
-                    <li><a href="javascript:void(0);">{{ 'sidebar.front.filter' | trans }}Gauntlet #3</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.tags.lock' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.tags.unlock' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.tags.gold' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.tags.to.upgrade' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.tags.to.gold' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.tags.to.unlock' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.tags.gauntlet.top1' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.tags.gauntlet.top2' | trans }}</a></li>
+                    <li><a href="javascript:void(0);">{{ 'sidebar.front.tags.gauntlet.top3' | trans }}</a></li>
                 </ul>
             </li>
             <li>
@@ -53,7 +52,9 @@
                     <div class="progress">
                         <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                     </div>
-                    <span class="progress-badge"><a href="{{ path('app.dashboard.admin') }}" target="_blank">{{ 'app.dashboard.admin.title' | trans }}</a></span>
+                    <span class="progress-badge">
+                        <a href="{{ path('app.dashboard.admin') }}" target="_blank">{{ 'app.dashboard.admin.title' | trans }}</a>
+                    </span>
                 </div>
 {#                <div class="progress-container progress-info">#}
 {#                    <span class="progress-badge">Server Load</span>#}

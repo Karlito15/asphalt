@@ -20,10 +20,13 @@ final class TimeController extends AbstractController
     use WebAble;
 
     /** @description link to the index page */
-    private static string $index = 'app.race.time.index';
+    private static string $index    = 'app.race.time.index';
 
     /** @description link to the create page */
-    private static string $create = 'app.race.time.create';
+    private static string $create   = 'app.race.time.create';
+
+    /** @description link to the delete page */
+    private static string $delete   = 'app.race.time.delete';
 
     public function __construct(
         private readonly TranslatorInterface $translator,
@@ -34,10 +37,10 @@ final class TimeController extends AbstractController
     {
         $title = $this->translator->trans('app.race.time.index.title');
 
-        return $this->render('@App/contents/back/race/time/index.html.twig', [
+        return $this->render('@App/contents/back/race/time.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => $title,
+            'breadcrumb'        => ['level1' => 'Time', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $repository->findAll(),
         ]);
@@ -57,10 +60,10 @@ final class TimeController extends AbstractController
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('@App/contents/back/race/time/form.html.twig', [
+        return $this->render('@App/contents/back/common/form.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => $this->translator->trans('app.race.time.index.title'), 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Time', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $entities,
             'form'              => $form,
@@ -79,10 +82,10 @@ final class TimeController extends AbstractController
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('@App/contents/back/race/time/form.html.twig', [
+        return $this->render('@App/contents/back/common/form.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => $this->translator->trans('app.race.time.index.title'), 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Time', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $entities,
             'form'              => $form,
