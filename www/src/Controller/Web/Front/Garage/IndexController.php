@@ -22,6 +22,9 @@ final class IndexController extends AbstractController
     /** @description link to the create page */
     private static string $create = 'app.garage.create';
 
+    /** @description link to the delete page */
+    private static string $delete = 'app.garage.delete';
+
     public function __construct(
         private readonly TranslatorInterface $translator,
     ) {}

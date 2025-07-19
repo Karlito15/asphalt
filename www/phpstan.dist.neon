@@ -1,8 +1,42 @@
+includes:
+    - vendor/phpstan/phpstan-symfony/extension.neon
+    - vendor/phpstan/phpstan-symfony/rules.neon
+
 parameters:
-    level: 6
+    # https://github.com/phpstan/phpstan-symfony
+    symfony:
+        containerXmlPath: var/cache/dev/App_KernelDevDebugContainer.xml
+
+    # https://phpstan.org/user-guide/rule-levels
+    # 0 - 9
+    level: 9
     paths:
-        - bin/
-        - config/
-        - public/
+#        - bin/
+#        - config/
+#        - public/
         - src/
-        - tests/
+#        - tests/
+
+    # https://phpstan.org/config-reference#caching
+    tmpDir: var/phpstan
+
+    fileExtensions:
+        - php
+
+    # https://phpstan.org/user-guide/ignoring-errors
+    ignoreErrors:
+
+    # https://phpstan.org/user-guide/ignoring-errors#excluding-whole-files
+    excludePaths:
+        - src/DependencyInjection/*
+        - src/Command/*
+#       - src/Migrations/*
+
+    checkMissingIterableValueType: true
+
+    checkGenericClassInNonGenericObjectType: false
+
+    phpVersion: 80205 # PHP 8.2.5
+
+    scanDirectories:
+        - var/cache/dev/Symfony/Config

@@ -26,6 +26,9 @@ final class MissionAppController extends AbstractController
     /** @description link to the create page */
     private static string $create = 'app.mission.create';
 
+    /** @description link to the delete page */
+    private static string $delete = 'app.mission.delete';
+
     public function __construct(
         private readonly TranslatorInterface $translator,
     ) {}

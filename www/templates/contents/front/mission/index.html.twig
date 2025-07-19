@@ -1,55 +1,58 @@
-{% extends 'base.html.twig' %}
+{% extends '@App/bases/front/full.html.twig' %}
 
 {% block title %}MissionApp index{% endblock %}
 
-{% block body %}
+{% block content %}
+    <section class="content mr-2">
+        <div class="row">
     <h1>MissionApp index</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Week</th>
-                <th>Region</th>
-                <th>Track</th>
-                <th>Class</th>
-                <th>Brand</th>
-                <th>Description</th>
-                <th>Success</th>
-                <th>Target</th>
-                <th>CreatedAt</th>
-                <th>UpdatedAt</th>
-                <th>DeletedAt</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for mission_app in mission_apps %}
-            <tr>
-                <td>{{ mission_app.id }}</td>
-                <td>{{ mission_app.week }}</td>
-                <td>{{ mission_app.region }}</td>
-                <td>{{ mission_app.track }}</td>
-                <td>{{ mission_app.class }}</td>
-                <td>{{ mission_app.brand }}</td>
-                <td>{{ mission_app.description }}</td>
-                <td>{{ mission_app.success }}</td>
-                <td>{{ mission_app.target }}</td>
-                <td>{{ mission_app.createdAt ? mission_app.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ mission_app.updatedAt ? mission_app.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ mission_app.deletedAt ? mission_app.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>
-                    <a href="{{ path('app_mission_app_show', {'id': mission_app.id}) }}">show</a>
-                    <a href="{{ path('app_mission_app_edit', {'id': mission_app.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="13">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_mission_app_new') }}">Create new</a>
+    <a href="{{ path('app.mission.create') }}">Create new</a>
+        </div>
+    </section>
+{#    <table class="table">#}
+{#        <thead>#}
+{#            <tr>#}
+{#                <th>Id</th>#}
+{#                <th>Week</th>#}
+{#                <th>Region</th>#}
+{#                <th>Track</th>#}
+{#                <th>Class</th>#}
+{#                <th>Brand</th>#}
+{#                <th>Description</th>#}
+{#                <th>Success</th>#}
+{#                <th>Target</th>#}
+{#                <th>CreatedAt</th>#}
+{#                <th>UpdatedAt</th>#}
+{#                <th>DeletedAt</th>#}
+{#                <th>actions</th>#}
+{#            </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        {% for mission_app in mission_apps %}#}
+{#            <tr>#}
+{#                <td>{{ mission_app.id }}</td>#}
+{#                <td>{{ mission_app.week }}</td>#}
+{#                <td>{{ mission_app.region }}</td>#}
+{#                <td>{{ mission_app.track }}</td>#}
+{#                <td>{{ mission_app.class }}</td>#}
+{#                <td>{{ mission_app.brand }}</td>#}
+{#                <td>{{ mission_app.description }}</td>#}
+{#                <td>{{ mission_app.success }}</td>#}
+{#                <td>{{ mission_app.target }}</td>#}
+{#                <td>{{ mission_app.createdAt ? mission_app.createdAt|date('Y-m-d H:i:s') : '' }}</td>#}
+{#                <td>{{ mission_app.updatedAt ? mission_app.updatedAt|date('Y-m-d H:i:s') : '' }}</td>#}
+{#                <td>{{ mission_app.deletedAt ? mission_app.deletedAt|date('Y-m-d H:i:s') : '' }}</td>#}
+{#                <td>#}
+{#                    <a href="{{ path('app_mission_app_show', {'id': mission_app.id}) }}">show</a>#}
+{#                    <a href="{{ path('app_mission_app_edit', {'id': mission_app.id}) }}">edit</a>#}
+{#                </td>#}
+{#            </tr>#}
+{#        {% else %}#}
+{#            <tr>#}
+{#                <td colspan="13">no records found</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
 {% endblock %}

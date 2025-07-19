@@ -26,6 +26,9 @@ final class RaceAppController extends AbstractController
     /** @description link to the create page */
     private static string $create = 'app.race.create';
 
+    /** @description link to the delete page */
+    private static string $delete = 'app.race.delete';
+
     public function __construct(
         private readonly TranslatorInterface $translator,
     ) {}
