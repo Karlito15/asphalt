@@ -14,7 +14,8 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-#[Route('{_locale<%app.supported_locales%>}/admin/setting/level', name: 'app.setting.level.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+//#[Route('{_locale<%app.supported_locales%>}/admin/setting/level', name: 'app.setting.level.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+#[Route('/admin/setting/level', name: 'app.setting.level.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class LevelController extends AbstractController
 {
     use WebAble;
@@ -57,6 +58,9 @@ final class LevelController extends AbstractController
             $entityManager->persist($entities);
             $entityManager->flush();
 
+            // Flash
+            $this->addFlash('success', $this->translator->trans('app.flash.common.create'));
+
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 
@@ -78,6 +82,9 @@ final class LevelController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
+
+            // Flash
+            $this->addFlash('success', $this->translator->trans('app.flash.common.update'));
 
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }

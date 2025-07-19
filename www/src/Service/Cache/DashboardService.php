@@ -46,9 +46,8 @@ class DashboardService implements ServiceCacheInterface
         $cache  = new FilesystemAdapter($this->namespace, $lifetime, 'cache');
         try {
             $values = $cache->getItem($this->namespace);
-            dump($values);
         } catch (InvalidArgumentException $e) {
-            dump($e->getMessage());
+            echo $e->getMessage();
         }
 
         if ($values->isHit()) {
@@ -144,7 +143,7 @@ class DashboardService implements ServiceCacheInterface
         try {
             $cache->deleteItems([$this->namespace]);
         } catch (InvalidArgumentException $e) {
-            dump($e->getMessage());
+            echo $e->getMessage();
         }
     }
 

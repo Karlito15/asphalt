@@ -5,7 +5,7 @@
 {% endif %}
 
 <!DOCTYPE html>
-<html lang="{{ app.request.locale }}" data-bs-theme="dark">
+<html lang="{{ app.request.locale }}">{# data-bs-theme="dark" #}
 <head>
     <title>{% block title %}{{ controller_name | default('Title') }}{% endblock %} - {{ metas.title }}</title>
     {% block metas %}{% include '@App/partials/commons/meta.html.twig' %}{% endblock %}
@@ -15,7 +15,7 @@
 
     <!-- Stylesheet -->
     {% block stylesheets %}
-{#        <link href="{{ asset('fontawesome/6.7.2/css/all.min.css') }}" rel="stylesheet" type="text/css" />#}
+        <link href="{{ asset('libraries/fontawesome/6.7.2/css/all.min.css') }}" rel="stylesheet" type="text/css" />
 {#        <link href="{{ asset('/styles/fonts.css') }}" rel="stylesheet" type="text/css" />#}
 {#        <link href="{{ asset('/styles/scrollbar.css') }}" rel="stylesheet" type="text/css" />#}
 {#        <link href="{{ asset('/styles/app.css') }}" rel="stylesheet" type="text/css" />#}
@@ -33,7 +33,7 @@
 
 <!-- Scripts -->
 {% block javascripts %}
-{#    <script src="{{ asset('fontawesome/6.7.2/js/all.min.js') }}"></script>#}
+    <script src="{{ asset('libraries/fontawesome/6.7.2/js/all.min.js') }}"></script>
 {#    <script src="{{ asset('bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js') }}"></script>#}
 {#    <script src="{{ asset('/vendor/bootstrap/bootstrap.index.js') }}"></script>#}
 {% endblock %}

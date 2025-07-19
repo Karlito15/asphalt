@@ -88,6 +88,8 @@ app.dashboard.admin.setting: 'Settings'
 app.create.title: 'Create an Item'
 app.delete.title: 'Delete this Item'
 app.update.title: 'Update this Item'
+app.flash.common.create: 'A New Item is Saved in Database'
+app.flash.common.update: 'Item is Updated !'
 ### BUTTON
 btn.back: 'Back to List'
 btn.create: 'Create a new Item'

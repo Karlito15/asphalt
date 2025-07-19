@@ -25,11 +25,19 @@ final class DashboardController extends AbstractController
      * @return Response
      * @throws InvalidArgumentException
      */
-    #[Route(path: '{_locale<%app.supported_locales%>}/index.php', name: 'index')]
+//    #[Route(path: '{_locale<%app.supported_locales%>}/index.php', name: 'index')]
+    #[Route('/', name: 'index')]
     public function index(Request $request, DashboardService $cacheDashboardService): Response
     {
         $title          = $this->translator->trans('app.dashboard.index.title');
         $dashboard      = $cacheDashboardService->cacheCreate();
+
+        // Flash
+//        $this->addFlash('error', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing deserunt laboris.');
+//        $this->addFlash('success', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tation gubergren vero. Kasd odio officia.');
+//        $this->addFlash('warning', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Stet autem id.');
+//        $this->addFlash('info', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+//        $this->addFlash('question', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
 
         return $this->render('@App/contents/front/dashboard/index.html.twig', [
             'controller_name'   => $title,
@@ -39,11 +47,11 @@ final class DashboardController extends AbstractController
         ]);
     }
 
-    #[Route(path: '/', name: 'noLocale')]
-    public function indexNoLocale(): Response
-    {
-        return $this->redirectToRoute('app.dashboard.index', [
-            '_locale' => 'en'
-        ], Response::HTTP_PERMANENTLY_REDIRECT);
-    }
+//    #[Route(path: '/', name: 'noLocale')]
+//    public function indexNoLocale(): Response
+//    {
+//        return $this->redirectToRoute('app.dashboard.index', [
+//            '_locale' => 'en'
+//        ], Response::HTTP_PERMANENTLY_REDIRECT);
+//    }
 }

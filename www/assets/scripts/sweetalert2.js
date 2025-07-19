@@ -3,24 +3,42 @@
  */
 import Swal from 'sweetalert2';
 
-const Toast = Swal.mixin({
-    toast: true,
-    draggable:              false,
-    position:               'center',
-    theme:                  'dark',
-    closeButtonAriaLabel:   'Close this dialog',
-    closeButtonHtml:        '&times;',
-    denyButtonText:         "Don't save",
-    showCancelButton:       true,
-    showCloseButton:        true,
-    showConfirmButton:      true,
-    showDenyButton:         true,
-    timer:                  10000,
-    timerProgressBar:       true,
-});
+export default class Flash extends HTMLElement
+{
+    async connectedCallback() {
+        const type    = this.getAttribute('type')
+        const message = this.getAttribute('message')
+        const Toast = Swal.mixin({
+            toast: false,
+            // actions: false,
+            animation: true,
+            draggable: false,
+            heightAuto: true,
+            showCancelButton: false,
+            showCloseButton: true,
+            showConfirmButton: false,
+            showDenyButton: false,
+            timerProgressBar: true,
+            timer: 3000,
+            width: '32rem',
+            padding: '0 0 1rem',
+            // position: 'top-end',
+            position: 'top-start',
+            theme: 'dark',
+            closeButtonHtml: '&times;',
+            closeButtonAriaLabel: 'close this dialog',
+            cancelButtonText: 'Cancel',
+            confirmButtonText: 'OK',
+            denyButtonText: 'No',
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+        });
 
-Toast.fire({
-    icon: "success",
-    title: "Database",
-    template: "#my-template",
-});
+        await Toast.fire({
+            icon: type,
+            title: message,
+        })
+    }
+}

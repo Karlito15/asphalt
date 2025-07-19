@@ -14,7 +14,8 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-#[Route('{_locale<%app.supported_locales%>}/admin/setting/blueprint', name: 'app.setting.blueprint.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+//#[Route('{_locale<%app.supported_locales%>}/admin/setting/blueprint', name: 'app.setting.blueprint.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+#[Route('/admin/setting/blueprint', name: 'app.setting.blueprint.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class BlueprintController extends AbstractController
 {
     use WebAble;
@@ -32,7 +33,7 @@ final class BlueprintController extends AbstractController
         private readonly TranslatorInterface $translator,
     ) {}
 
-    #[Route(path: '/index.php', name: 'index', methods: ['GET'])]
+    #[Route('/index.php', name: 'index', methods: ['GET'])]
     public function index(Request $request, SettingBlueprintRepository $repository): Response
     {
         $title = $this->translator->trans('app.setting.blueprint.index.title');
@@ -46,7 +47,7 @@ final class BlueprintController extends AbstractController
         ]);
     }
 
-    #[Route(path: "/create.php", name: 'create', methods: ['GET', 'POST'])]
+    #[Route("/create.php", name: 'create', methods: ['GET', 'POST'])]
     public function create(Request $request, EntityManagerInterface $entityManager): Response
     {
         $title    = $this->translator->trans('app.setting.blueprint.create.title');
@@ -56,6 +57,9 @@ final class BlueprintController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($entities);
             $entityManager->flush();
+
+            // Flash
+            $this->addFlash('success', $this->translator->trans('app.flash.common.create'));
 
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
@@ -78,6 +82,9 @@ final class BlueprintController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
+
+            // Flash
+            $this->addFlash('success', $this->translator->trans('app.flash.common.update'));
 
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }

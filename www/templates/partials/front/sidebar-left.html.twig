@@ -3,7 +3,10 @@
 <aside id="leftsidebar" class="sidebar">
     <div class="navbar-brand">
         <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-        <a href="javascript:void(0);"><img src="{{ asset('themes/aero/assets/images/logo.svg') }}" width="25" alt="Aero"><span class="m-l-10">{{ metas.title }}</span></a>
+        <a href="javascript:void(0);">
+            <img src="{{ asset(logo) }}" width="25" alt="{{ metas.title }}"> {#'themes/aero/assets/images/logo.svg'#}
+            <span class="m-l-0">{{ metas.title }}</span>
+        </a>
     </div>
     <div class="menu">
         <ul class="list">
@@ -17,24 +20,24 @@
                 </div>
             </li>
             <li class="active open"><a href="javascript:void(0);"><i class="zmdi zmdi-home"></i><span>{{ 'app.dashboard.index.title' | trans }}</span></a></li>
-            <li><a href="javascript:void(0);"><i class="zmdi zmdi-account"></i><span>{{ 'sidebar.common.garage' | trans }}</span></a></li>
-            <li><a href="javascript:void(0);"><i class="zmdi zmdi-account"></i><span>{{ 'sidebar.common.race' | trans }}</span></a></li>
-            <li><a href="javascript:void(0);"><i class="zmdi zmdi-account"></i><span>{{ 'sidebar.front.mission' | trans }}</span></a></li>
-            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>{{ 'sidebar.front.orders' | trans }}</span></a>
+            <li><a href="javascript:void(0);"><i class="fa-solid fa-car-side"></i><span>{{ 'sidebar.common.garage' | trans }}</span></a></li>
+            <li><a href="javascript:void(0);"><i class="fa-solid fa-flag-checkered"></i><span>{{ 'sidebar.common.race' | trans }}</span></a></li>
+            <li><a href="javascript:void(0);"><i class="fa-solid fa-bullseye"></i><span>{{ 'sidebar.front.mission' | trans }}</span></a></li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="fa-solid fa-arrow-up-a-z"></i><span>{{ 'sidebar.front.orders' | trans }}</span></a>
                 <ul class="ml-menu">
                     <li><a href="javascript:void(0);">{{ 'sidebar.front.orders.class' | trans }}</a></li>
                     <li><a href="javascript:void(0);">{{ 'sidebar.front.orders.stat' | trans }}</a></li>
                     <li><a href="javascript:void(0);">{{ 'sidebar.front.orders.event' | trans }}</a></li>
                 </ul>
             </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>{{ 'sidebar.common.settings' | trans }}</span></a>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="fa-solid fa-wrench"></i><span>{{ 'sidebar.common.settings' | trans }}</span></a>
                 <ul class="ml-menu">
                     <li><a href="javascript:void(0);">{{ 'sidebar.front.settings.blueprint' | trans }}</a></li>
                     <li><a href="javascript:void(0);">{{ 'sidebar.front.settings.level' | trans }}</a></li>
                     <li><a href="javascript:void(0);">{{ 'sidebar.front.settings.rank' | trans }}</a></li>
                 </ul>
             </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-folder"></i><span>{{ 'sidebar.front.tags' | trans }}</span></a>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="fa-solid fa-tags"></i><span>{{ 'sidebar.front.tags' | trans }}</span></a>
                 <ul class="ml-menu">
                     <li><a href="javascript:void(0);">{{ 'sidebar.front.tags.lock' | trans }}</a></li>
                     <li><a href="javascript:void(0);">{{ 'sidebar.front.tags.unlock' | trans }}</a></li>
@@ -56,14 +59,6 @@
                         <a href="{{ path('app.dashboard.admin') }}" target="_blank">{{ 'app.dashboard.admin.title' | trans }}</a>
                     </span>
                 </div>
-{#                <div class="progress-container progress-info">#}
-{#                    <span class="progress-badge">Server Load</span>#}
-{#                    <div class="progress">#}
-{#                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">#}
-{#                            <span class="progress-value">86%</span>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
             </li>
         </ul>
     </div>
