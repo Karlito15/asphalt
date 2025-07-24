@@ -106,6 +106,11 @@ class RaceApp
         return $this;
     }
 
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
     public function getMode(): ?RaceMode
     {
         return $this->mode;

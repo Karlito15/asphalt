@@ -3,17 +3,37 @@
 namespace App\Controller\Web\Front\Page\Order;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 
+#[Route('{_locale<%app.supported_locales%>}/pages/order-by-', name: 'app.page.order.', options: ['expose' => false], methods: ['GET'], format: 'html', utf8: true)]
 final class ClassController extends AbstractController
 {
-    #[Route('/order', name: 'app_order')]
-    public function index(): JsonResponse
+    public function __construct(
+        private readonly AppGarageRepository $garage,
+        private readonly SettingClassRepository $class,
+        private readonly TranslatorInterface $translator
+    ) {}
+
+    #[Route('class-{letter}.php', name: 'class', requirements: ['letter' => Requirement::ASCII_SLUG])]
+    public function class(Request $request): Response
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/OrderController.php',
+        $title   = $this->translator->trans('controllerName.app.page.order.class');
+        $letter  = $request->attributes->get('letter');
+        $class   = $this->class->findOneBy(['value' => $letter]);
+
+        return $this->render('@App/app/page/order.html.twig', [
+            'controller_name' => $title,
+            'breadcrumb'      => $title,
+            'current'         => $request->attributes->get('_route'),
+            'results'         => $this->garage->findBy(['settingClass'  => $class], ['carOrder' => 'ASC']),
         ]);
     }
+//    #[Route('/order', name: 'app_order')]
+//    public function index(): JsonResponse
+//    {
+//        return $this->json([
+//            'message' => 'Welcome to your new controller!',
+//            'path' => 'src/Controller/OrderController.php',
+//        ]);
+//    }
 }

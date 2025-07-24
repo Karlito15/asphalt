@@ -1,74 +1,196 @@
-{% extends 'base.html.twig' %}
+{% extends '@App/bases/front/full.html.twig' %}
 
-{% block title %}GarageApp{% endblock %}
+{% block content %}
 
-{% block body %}
-    <h1>GarageApp</h1>
+    {% set car = entity.settingBrand.name ~ ' ' ~ entity.model %}
+    {% if entity.unlocked is true %}
+        {% set status = 'unlock' %}
+    {% else %}
+        {% set status = 'lock' %}
+    {% endif %}
+    {% if entity.gold is true %}
+        {% set gold = 'gold' %}
+    {% else %}
+        {% set gold = null %}
+    {% endif %}
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ garage_app.id }}</td>
-            </tr>
-            <tr>
-                <th>Stars</th>
-                <td>{{ garage_app.stars }}</td>
-            </tr>
-            <tr>
-                <th>GameUpdate</th>
-                <td>{{ garage_app.gameUpdate }}</td>
-            </tr>
-            <tr>
-                <th>CarOrder</th>
-                <td>{{ garage_app.carOrder }}</td>
-            </tr>
-            <tr>
-                <th>StatOrder</th>
-                <td>{{ garage_app.statOrder }}</td>
-            </tr>
-            <tr>
-                <th>Level</th>
-                <td>{{ garage_app.level }}</td>
-            </tr>
-            <tr>
-                <th>Epic</th>
-                <td>{{ garage_app.epic }}</td>
-            </tr>
-            <tr>
-                <th>Model</th>
-                <td>{{ garage_app.model }}</td>
-            </tr>
-            <tr>
-                <th>Unlocked</th>
-                <td>{{ garage_app.unlocked ? 'Yes' : 'No' }}</td>
-            </tr>
-            <tr>
-                <th>Gold</th>
-                <td>{{ garage_app.gold ? 'Yes' : 'No' }}</td>
-            </tr>
-            <tr>
-                <th>Slug</th>
-                <td>{{ garage_app.slug }}</td>
-            </tr>
-            <tr>
-                <th>CreatedAt</th>
-                <td>{{ garage_app.createdAt ? garage_app.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>UpdatedAt</th>
-                <td>{{ garage_app.updatedAt ? garage_app.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>DeletedAt</th>
-                <td>{{ garage_app.deletedAt ? garage_app.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="car">
+        <div class="card-header">
+            {% if car | length > 30 %}
+            <h1 class="display-5">{{ car }}</h1>
+            {% elseif car | length < 10 %}
+            <h1 class="display-3">{{ car }}</h1>
+            {% else %}
+            <h1 class="display-4">{{ car }}</h1>
+            {% endif %}
+        </div>
+        <div class="card-body">
+            <div class="card-title">Garage</div>
+            <table class="table">
+                <tr>
+                    <td>Class</td>
+                    <td>Update</td>
+                    <td>Level</td>
+                    <td>Common</td>
+                    <td>Rare</td>
+                    <td>Epic</td>
+                    <td>Status</td>
+                    <td>Gold</td>
+                </tr>
+                <tr>
+                    <td>{{ entity.settingClass.value }}</td>
+                    <td>{{ entity.gameUpdate }}</td>
+                    <td>{{ entity.level }} / {{ entity.settingLevel.level }}</td>
+                    <td>{{ entity.upgrade.first.common }} / {{ entity.settingLevel.common }}</td>
+                    <td>{{ entity.upgrade.first.rare }} / {{ entity.settingLevel.rare }}</td>
+                    <td>{{ entity.epic }} / {{ entity.settingLevel.epic }}</td>
+                    <td>{{ status }}</td>
+                    <td>{{ gold }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card-body">
+            <div class="card-title">Blueprints</div>
+            <table class="table">
+                <tr>
+                    <td>Star 1</td>
+                    <td>Star 2</td>
+                    <td>Star 3</td>
+                    <td>Star 4</td>
+                    <td>Star 5</td>
+                    <td>Star 6</td>
+                    <td>Total</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.blueprint.first.star1 }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingBlueprint.star1 }}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.blueprint.first.star2 }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingBlueprint.star2 }}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.blueprint.first.star3 }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingBlueprint.star3 }}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.blueprint.first.star4 }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingBlueprint.star4 }}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.blueprint.first.star5 }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingBlueprint.star5 }}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.blueprint.first.star6 }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingBlueprint.star6 }}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.blueprint.first.total }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingBlueprint.total }}">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="card-body">
+            <div class="card-title">Upgrades</div>
+            <table class="table">
+                <tr>
+                    <td>Speed</td>
+                    <td>Acceleration</td>
+                    <td>Handling</td>
+                    <td>Nitro</td>
+                    <td>Commons</td>
+                    <td>Rares</td>
+                    <td>Epics</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.upgrade.first.speed }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingLevel.level }}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.upgrade.first.acceleration }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingLevel.level }}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.upgrade.first.handly }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingLevel.level }}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.upgrade.first.nitro }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingLevel.level }}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.upgrade.first.common }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingLevel.common }}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.upgrade.first.rare }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingLevel.rare }}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.upgrade.first.epic }}">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="" placeholder="" value="{{ entity.settingLevel.epic }}">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="card-body">
+            <div class="card-title">Ranks</div>
+            <table class="table">
+                <tr>
+                    <td>Start</td>
+                    <td>Star 1</td>
+                    <td>Star 2</td>
+                    <td>Star 3</td>
+                    <td>Star 4</td>
+                    <td>Star 5</td>
+                    <td>Star 6</td>
+                </tr>
+                <tr>
+                    <td>{{ entity.rank.first.star0 }}</td>
+                    <td>{{ entity.rank.first.star1 }}</td>
+                    <td>{{ entity.rank.first.star2 }}</td>
+                    <td>{{ entity.rank.first.star3 }}</td>
+                    <td>{{ entity.rank.first.star4 }}</td>
+                    <td>{{ entity.rank.first.star5 }}</td>
+                    <td>{{ entity.rank.first.star6 }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card-footer">
+            &nbsp;{#{{ dump(entity) }}#}
+        </div>
+    </div>
 
-    <a href="{{ path('app_garage_app_index') }}">back to list</a>
-
-    <a href="{{ path('app_garage_app_edit', {'id': garage_app.id}) }}">edit</a>
-
-    {{ include('garage_app/_delete_form.html.twig') }}
 {% endblock %}

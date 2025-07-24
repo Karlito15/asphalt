@@ -143,8 +143,8 @@ class GarageApp
     #[Assert\Type(SettingLevel::class)]
     private ?SettingLevel $settingLevel = null;
 
-    #[ORM\ManyToMany(targetEntity: SettingTag::class, inversedBy: 'garage')]
-    private ?Collection $settingTag = null;
+    #[ORM\ManyToMany(targetEntity: SettingTag::class, mappedBy: 'garage')]
+    private ?Collection $settingTag;
 
     #[ORM\ManyToOne(targetEntity: SettingUnitPrice::class, cascade: ['persist'], inversedBy: 'garage')]
     #[Assert\Type(SettingUnitPrice::class)]
@@ -152,11 +152,12 @@ class GarageApp
 
     public function __construct()
     {
-        $this->blueprint = new ArrayCollection();
-        $this->rank      = new ArrayCollection();
-        $this->statMax   = new ArrayCollection();
-        $this->statMin   = new ArrayCollection();
-        $this->upgrade   = new ArrayCollection();
+        $this->blueprint    = new ArrayCollection();
+        $this->rank         = new ArrayCollection();
+        $this->statMax      = new ArrayCollection();
+        $this->statMin      = new ArrayCollection();
+        $this->upgrade      = new ArrayCollection();
+        $this->settingTag   = new ArrayCollection();
     }
 
     public function __toString(): string
@@ -480,14 +481,29 @@ class GarageApp
         return $this;
     }
 
-    public function getSettingTag(): ?Collection
+    /**
+     * @return Collection<int, SettingTag>
+     */
+    public function getSettingTag(): Collection
     {
         return $this->settingTag;
     }
 
-    public function setSettingTag(?Collection $settingTag): static
+    public function addSettingTag(SettingTag $settingTag): static
     {
-        $this->settingTag = $settingTag;
+        if (!$this->settingTag->contains($settingTag)) {
+            $this->settingTag->add($settingTag);
+            $settingTag->addGarage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSettingTag(SettingTag $settingTag): static
+    {
+        if ($this->settingTag->removeElement($settingTag)) {
+            $settingTag->removeGarage($this);
+        }
 
         return $this;
     }

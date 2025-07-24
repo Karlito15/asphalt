@@ -1,0 +1,22 @@
+<div class="block-header mb-2">
+    <div class="row">
+        <div class="col-lg-7 col-md-6 col-sm-12">
+            <h2>{{ controller_name }}</h2>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ path('app.dashboard.index') }}"><i class="zmdi zmdi-home"></i> {{ metas.title }}</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0);">{{ breadcrumb.level1 }}</a></li>
+                <li class="breadcrumb-item active">{{ breadcrumb.level2 }}</li>
+            </ul>
+            <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
+        </div>
+        <div class="col-lg-5 col-md-6 col-sm-12">
+            {% if links is defined and links is not null %}
+            <a class="btn btn-primary float-right" href="{{ path(links.create) }}">
+                {{ 'btn.create' | trans }}
+                <i class="zmdi zmdi-plus-square"></i>
+            </a>
+            {% else %}
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -14,8 +14,8 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-//#[Route('{_locale<%app.supported_locales%>}/admin/mission/type', name: 'app.mission.type.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-#[Route('/admin/mission/type', name: 'app.mission.type.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+#[Route('{_locale<%app.supported_locales%>}/admin/mission/type', name: 'app.mission.type.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+//#[Route('/admin/mission/type', name: 'app.mission.type.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class TypeController extends AbstractController
 {
     use WebAble;

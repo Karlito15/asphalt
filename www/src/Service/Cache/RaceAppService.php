@@ -6,6 +6,7 @@ namespace App\Service\Cache;
 
 use App\Able\Service\Cache\CacheAble;
 use App\Interface\ServiceCacheInterface;
+use App\Repository\RaceAppRepository;
 use Psr\Cache\InvalidArgumentException;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -23,6 +24,7 @@ class RaceAppService implements ServiceCacheInterface
 
     public function __construct(
         private readonly ContainerInterface      $container,
+        private readonly RaceAppRepository       $repository
     )
     {
     }
@@ -43,7 +45,10 @@ class RaceAppService implements ServiceCacheInterface
         if ($values->isHit()) {
             return $values->get();
         } else {
-            $results = [];
+            $results   = [
+                'index'     => $this->repository->getRaces(),
+            ];
+
 
             $cache->get($this->namespace, function (ItemInterface $item) use ($results) {
                 $item->expiresAt(new \DateTime('+7 days'));

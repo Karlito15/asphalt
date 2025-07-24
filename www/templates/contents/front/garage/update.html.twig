@@ -1,13 +1,21 @@
-{% extends 'base.html.twig' %}
+{% extends '@App/bases/front/full.html.twig' %}
 
-{% block title %}Edit GarageApp{% endblock %}
+{% block content %}
 
-{% block body %}
-    <h1>Edit GarageApp</h1>
+<div class="container-fluid">
 
-    {{ include('garage_app/_form.html.twig', {'button_label': 'Update'}) }}
+    <div class="card bg-primary-subtle">
+        <div class="card-header">
+            <h2 class="text-center">{{ controller_name }}</h2>
+        </div>
+        <div class="card-body">
+            {{ form_start(form) }}
+                {{ form_widget(form) }}
+                <button class="btn">{{ button_label|default('Save') }}</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
 
-    <a href="{{ path('app_garage_app_index') }}">back to list</a>
+</div>
 
-    {{ include('garage_app/_delete_form.html.twig') }}
 {% endblock %}

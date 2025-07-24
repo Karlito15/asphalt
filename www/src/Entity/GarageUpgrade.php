@@ -51,7 +51,7 @@ class GarageUpgrade
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 13)]
-    private int $handly = 0;
+    private int $handling = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
@@ -119,14 +119,14 @@ class GarageUpgrade
         return $this;
     }
 
-    public function getHandly(): ?int
+    public function getHandling(): ?int
     {
-        return $this->handly;
+        return $this->handling;
     }
 
-    public function setHandly(int $handly): static
+    public function setHandling(int $handling): static
     {
-        $this->handly = $handly;
+        $this->handling = $handling;
 
         return $this;
     }

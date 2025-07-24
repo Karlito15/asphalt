@@ -4,6 +4,7 @@ namespace App\Able\Service\Database;
 
 use App\Entity\GarageApp;
 use App\Entity\SettingBrand;
+use RuntimeException;
 
 trait GarageServiceAble
 {
@@ -18,12 +19,8 @@ trait GarageServiceAble
         $brandEntity = $this->entityManager->getRepository(SettingBrand::class)->findOneBy(['name' => $brand]);
         /** @var GarageApp $garage */
         $garage      = $this->entityManager->getRepository(GarageApp::class)->findOneBy(['model' => $model, 'settingBrand' => $brandEntity]);
-        if (is_null($garage)) {
-            echo ' /!\ ' . $brand . ' ' . $model . ' /!\ ';
-            exit();
-        }
 
-        return $garage;
+        return is_null($garage) ? throw new RuntimeException(' /!\ ' . $brand . ' ' . $model . ' /!\ ') : $garage;
     }
 
     /**

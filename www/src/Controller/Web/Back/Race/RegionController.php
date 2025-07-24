@@ -14,8 +14,8 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-//#[Route('{_locale<%app.supported_locales%>}/admin/race/region', name: 'app.race.region.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-#[Route('/admin/race/region', name: 'app.race.region.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+#[Route('{_locale<%app.supported_locales%>}/admin/race/region', name: 'app.race.region.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+//#[Route('/admin/race/region', name: 'app.race.region.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class RegionController extends AbstractController
 {
     use WebAble;

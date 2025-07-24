@@ -6,10 +6,10 @@ namespace App\Event\Garage;
 
 use App\Entity\GarageApp;
 
-final class OrderByClassEvent
+final readonly class OrderByClassEvent
 {
     public function __construct(
-        private readonly GarageApp $garage
+        public GarageApp $garage
     )
     {
     }

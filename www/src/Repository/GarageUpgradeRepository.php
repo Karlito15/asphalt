@@ -26,15 +26,15 @@ class GarageUpgradeRepository extends ServiceEntityRepository
         $datas = [];
         foreach ($this->findAll() as $garage) {
             $datas[] = [
-                'Speed' => $garage->getSpeed(),
+                'Speed'        => $garage->getSpeed(),
                 'Acceleration' => $garage->getAcceleration(),
-                'Handly' => $garage->getHandly(),
-                'Nitro' => $garage->getNitro(),
-                'Common' => $garage->getCommon(),
-                'Rare' => $garage->getRare(),
-                'Epic' => $garage->getEpic(),
-                'Brand' => $garage->getGarage()->getSettingBrand()->getName(),
-                'Model' => $garage->getGarage()->getModel(),
+                'Handling'     => $garage->getHandling(),
+                'Nitro'        => $garage->getNitro(),
+                'Common'       => $garage->getCommon(),
+                'Rare'         => $garage->getRare(),
+                'Epic'         => $garage->getEpic(),
+                'Brand'        => $garage->getGarage()->getSettingBrand()->getName(),
+                'Model'        => $garage->getGarage()->getModel(),
             ];
         }
 

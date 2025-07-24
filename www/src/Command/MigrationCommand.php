@@ -57,7 +57,7 @@ class MigrationCommand extends Command
         // Start
         $output->writeln(shell_exec('clear'));
         $this->io->title(self::$title);
-        $io->section((string) self::getDefaultDescription());
+        $io->section($this->getDescription());
 
         // Execution time : start
         $this->stopwatch->start(self::$title);
@@ -120,7 +120,6 @@ class MigrationCommand extends Command
             // disable interactive behavior for the greet command
             $garages->setInteractive(false);
             $this->getApplication()->doRun($garages, $output);
-            $result = true;
 
             // Conclusion
             $io->success('Import terminé !');

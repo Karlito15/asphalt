@@ -60,7 +60,7 @@ class SettingTag
     #[Gedmo\Versioned]
     private string $slug;
 
-    #[ORM\ManyToMany(targetEntity: GarageApp::class, mappedBy: 'settingTag')]
+    #[ORM\ManyToMany(targetEntity: GarageApp::class, inversedBy: 'settingTag')]
     protected Collection $garage;
 
     public function __construct()
@@ -126,7 +126,6 @@ class SettingTag
     {
         if (!$this->garage->contains($garage)) {
             $this->garage->add($garage);
-            $garage->setSettingTag($this);
         }
 
         return $this;
@@ -134,12 +133,7 @@ class SettingTag
 
     public function removeGarage(GarageApp $garage): static
     {
-        if ($this->garage->removeElement($garage)) {
-            // set the owning side to null (unless already changed)
-            if ($garage->getSettingTag() === $this) {
-                $garage->setSettingTag(null);
-            }
-        }
+        $this->garage->removeElement($garage);
 
         return $this;
     }

@@ -2,7 +2,9 @@
 
 namespace App\Twig\Components\Value;
 
+use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
+use Symfony\UX\TwigComponent\Attribute\PreMount;
 
 #[AsTwigComponent(
     name: 'ValueBoolean',
@@ -10,4 +12,14 @@ use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 )]
 final class ValueBoolean
 {
+    private bool $value = false;
+
+    #[PreMount]
+    public function preMount(array $data): array
+    {
+        $resolver = new OptionsResolver();
+        $resolver->setRequired('value')->setAllowedTypes('value', 'boolean');
+
+        return $resolver->resolve($data);
+    }
 }

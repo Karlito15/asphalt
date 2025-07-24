@@ -40,25 +40,23 @@ composer require --no-scripts twig/intl-extra
 ``` shell
 composer require --no-scripts twig/string-extra
 ```
-
-
-
-
-``` shell
-composer remove --no-scripts symfony/ux-turbo
-```
-
-
-
-
 ``` shell
 composer require --no-scripts symfony/ux-autocomplete
 ```
 ``` shell
-composer require --no-scripts symfony/ux-chartjs
+composer require --no-scripts symfony/apache-pack
 ```
 ``` shell
-composer require --no-scripts symfony/ux-live-component
+composer require twbs/bootstrap
+```
+
+
+
+
+
+
+``` shell
+composer require --no-scripts symfony/ux-chartjs
 ```
 ``` shell
 composer require --no-scripts twig/markdown-extra

@@ -16,7 +16,7 @@ final class DashboardController extends AbstractController
         private readonly TranslatorInterface $translator,
     ) {}
 
-    #[Route('/admin.php', name: 'admin')]
+    #[Route('{_locale<%app.supported_locales%>}/admin.php', name: 'admin')]
     public function admin(): Response
     {
         $title = $this->translator->trans('app.dashboard.admin.title');

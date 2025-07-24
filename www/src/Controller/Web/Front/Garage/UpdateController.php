@@ -4,9 +4,9 @@ namespace App\Controller\Web\Front\Garage;
 
 use App\Able\Controller\WebAble;
 use App\Entity\GarageApp;
+use App\Form\Front\Garage\AppUpdateType;
+use App\Service\Cache\GarageAppService;
 use Doctrine\ORM\EntityManagerInterface;
-use Exception;
-use Psr\Cache\InvalidArgumentException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,8 +15,8 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-//#[Route('/{_locale<%app.supported_locales%>}/garage', name: 'app.garage.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-#[Route('/garage', name: 'app.garage.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+#[Route('/{_locale<%app.supported_locales%>}/garage', name: 'app.garage.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+//#[Route('/garage', name: 'app.garage.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class UpdateController extends AbstractController
 {
     use WebAble;
@@ -27,21 +27,23 @@ final class UpdateController extends AbstractController
     /** @description link to the create page */
     private static string $create = 'app.garage.create';
 
+    /** @description link to the delete page */
+    private static string $delete = 'app.garage.delete';
+
     /**
      * @param Request $request
      * @param GarageApp $garage
-     * @param GarageService $cache
+     * @param GarageAppService $cache
      * @param EntityManagerInterface $entityManager
      * @param EventDispatcherInterface $dispatcher
      * @param TranslatorInterface $translator
      * @return Response
-     * @throws InvalidArgumentException
      */
     #[Route('/update/{slug}-{id}.php', name: 'update', requirements: ['id' => Requirement::DIGITS, 'slug' => Requirement::ASCII_SLUG], methods: ['GET', 'POST'])]
     public function update(
         Request $request,
         GarageApp $garage,
-        GarageService $cache,
+        GarageAppService $cache,
         EntityManagerInterface $entityManager,
         EventDispatcherInterface $dispatcher,
         TranslatorInterface $translator,
@@ -57,19 +59,20 @@ final class UpdateController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             try {
                 /** Events */
-                $dispatcher->dispatch(new GarageOrderCarEvent($garage));
+//                $dispatcher->dispatch(new OrderByClassEvent($garage));
+//                $dispatcher->dispatch(new OrderByStatEvent($garage));
 //                $dispatcher->dispatch(new GarageTagEvent($garage));
                 /** Doctrines */
                 $entityManager->flush();
-                /** Flash */
-                $message = sprintf('%1$s %2$s' . $translator->trans('app.garage.update.flash'), $garage->getSettingBrand(), $garage->getModel());
-                $this->addFlash('success', $message);
                 /** Cache : delete items for Dashboard */
-                $cache->deleteDataCache();
-            } catch (Exception $e) {
+                $cache->cacheDelete();
+                /** Flash */
+                $message = sprintf('%1$s %2$s' . $translator->trans('app.flash.garage.update'), $garage->getSettingBrand(), $garage->getModel());
+                $this->addFlash('success', $message);
+            } catch (\RuntimeException $e) {
                 /** Flash */
                 $this->addFlash('danger', 'Houston, we have a problem !');
-                throw new Exception($e->getMessage(), $e->getCode(), $e);
+                throw new \RuntimeException($e->getMessage(), $e->getCode(), $e);
             }
 
             /** Redirection */

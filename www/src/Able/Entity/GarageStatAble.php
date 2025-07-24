@@ -12,11 +12,6 @@ use Doctrine\Persistence\Event\LifecycleEventArgs;
 
 trait GarageStatAble
 {
-    public function __toString() : string
-    {
-        return $this->getGarage();
-    }
-
     public function getSpeed(): ?float
     {
         return $this->speed;
@@ -41,14 +36,14 @@ trait GarageStatAble
         return $this;
     }
 
-    public function getHandly(): ?float
+    public function getHandling(): ?float
     {
-        return $this->handly;
+        return $this->handling;
     }
 
-    public function setHandly(float $handly): static
+    public function setHandling(float $handling): static
     {
-        $this->handly = $handly;
+        $this->handling = $handling;
 
         return $this;
     }
@@ -75,13 +70,13 @@ trait GarageStatAble
      *
      * @param float|null $speed
      * @param float|null $acceleration
-     * @param float|null $handly
+     * @param float|null $handling
      * @param float|null $nitro
      * @return $this
      */
-    public function setAverage(?float $speed, ?float $acceleration, ?float $handly, ?float $nitro): static
+    public function setAverage(?float $speed, ?float $acceleration, ?float $handling, ?float $nitro): static
     {
-        $total = $speed + $acceleration + $handly + $nitro;
+        $total = $speed + $acceleration + $handling + $nitro;
 
         if ($total != 0) {
             $this->average = round(($total / 4), 2);
@@ -110,7 +105,7 @@ trait GarageStatAble
         $object = $args->getObject();
         if ($object instanceof GarageStatMax or $object instanceof GarageStatMin) {
             // Set Average
-            $object->setAverage($this->getSpeed(), $this->getAcceleration(), $this->getHandly(), $this->getNitro());
+            $object->setAverage($this->getSpeed(), $this->getAcceleration(), $this->getHandling(), $this->getNitro());
         }
     }
 
@@ -120,12 +115,12 @@ trait GarageStatAble
         $object = $args->getObject();
         if ($object instanceof GarageStatMax) {
             // Set Average
-            $object->setAverage($this->getSpeed(), $this->getAcceleration(), $this->getHandly(), $this->getNitro());
+            $object->setAverage($this->getSpeed(), $this->getAcceleration(), $this->getHandling(), $this->getNitro());
             $args->getObjectManager()->getRepository(GarageStatMax::class)->save($object, true);
         }
         if ($object instanceof GarageStatMin) {
             // Set Average
-            $object->setAverage($this->getSpeed(), $this->getAcceleration(), $this->getHandly(), $this->getNitro());
+            $object->setAverage($this->getSpeed(), $this->getAcceleration(), $this->getHandling(), $this->getNitro());
             $args->getObjectManager()->getRepository(GarageStatMin::class)->save($object, true);
         }
     }

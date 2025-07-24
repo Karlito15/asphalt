@@ -11,8 +11,8 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-//#[Route('/{_locale<%app.supported_locales%>}/garage', name: 'app.garage.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-#[Route('/garage', name: 'app.garage.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+#[Route('/{_locale<%app.supported_locales%>}/garage', name: 'app.garage.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+//#[Route('/garage', name: 'app.garage.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class ReadController extends AbstractController
 {
     use WebAble;
@@ -22,6 +22,9 @@ final class ReadController extends AbstractController
 
     /** @description link to the create page */
     private static string $create = 'app.garage.create';
+
+    /** @description link to the delete page */
+    private static string $delete = 'app.garage.delete';
 
     public function __construct(
         private readonly TranslatorInterface $translator,
@@ -36,7 +39,7 @@ final class ReadController extends AbstractController
         return $this->render('@App/contents/front/garage/read.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => 'XXXX', 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Garage', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entity'            => $entity,
         ]);

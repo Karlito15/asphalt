@@ -1,4 +1,4 @@
-{% extends '@App/bases/back/full.html.twig' %}
+{% extends '@App/bases/back/page-index.html.twig' %}
 
 {% block table %}
 <tbody>
@@ -31,14 +31,14 @@
 {% endfor %}
 </tbody>
 <thead>
-    {{ _self.tr() }}
+    {{ _self.legend() }}
 </thead>
 <tfoot>
-    {{ _self.tr() }}
+    {{ _self.legend() }}
 </tfoot>
 {% endblock %}
 
-{% macro tr() %}
+{% macro legend() %}
 <tr>
     <th>{{ 'table.id' | trans }}</th>
     <th>{{ 'table.level01' | trans }}</th>
@@ -58,8 +58,8 @@
     <th>{{ 'table.rare' | trans }}</th>
     <th>{{ 'table.epic' | trans }}</th>
     <th>{{ 'table.slug' | trans }}</th>
-{#    <th>{{ 'table.createdat' | trans }}</th>#}
-{#    <th>{{ 'table.updatedat' | trans }}</th>#}
+{#    <th>{{ 'table.date.created.at' | trans }}</th>#}
+{#    <th>{{ 'table.date.updated.at' | trans }}</th>#}
     <th>{{ 'table.actions' | trans }}</th>
 </tr>
 {% endmacro %}

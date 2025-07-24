@@ -6,10 +6,10 @@ namespace App\Event\Garage;
 
 use App\Entity\GarageApp;
 
-final class CreateEvent
+final readonly class CreateEvent
 {
     public function __construct(
-        private readonly GarageApp $garage
+        public GarageApp $garage
     )
     {
         echo $this->garage->getModel();

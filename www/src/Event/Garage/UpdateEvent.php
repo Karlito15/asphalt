@@ -10,7 +10,7 @@ use App\Entity\GarageUpgrade;
 use App\Entity\SettingBlueprint;
 use App\Entity\SettingLevel;
 
-final class UpdateEvent
+final readonly class UpdateEvent
 {
     public function __construct(
         private readonly GarageApp $garage

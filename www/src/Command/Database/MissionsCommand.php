@@ -68,7 +68,7 @@ class MissionsCommand extends Command
         $choice = $input->getArgument('choice');
 
         // Start
-        $io->section((string) self::getDefaultDescription());
+        $io->section($this->getDescription());
 
         // Question
         if (is_null($choice)) {

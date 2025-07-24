@@ -29,17 +29,9 @@
 
                     {% include '@App/partials/commons/alert.html.twig' %}
 
-                    {% block breadcrumb %}
-                        {% include('@App/partials/back/breadcrumb.html.twig') %}
-                    {% endblock %}
+                    {% include('@App/partials/back/breadcrumb.html.twig') %}
 
-                    {% block content %}
-                        {% if app.request.pathInfo ends with '/index.php' %}
-                        <table class="{{ classes.index_table }}">
-                            {% block table %}{% endblock %}
-                        </table>
-                        {% endif %}
-                    {% endblock %}
+                    {% block content %}{% endblock %}
 
                 </div>
                 <!-- End Container -->

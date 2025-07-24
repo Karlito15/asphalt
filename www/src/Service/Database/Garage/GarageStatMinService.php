@@ -50,7 +50,7 @@ class GarageStatMinService implements ServiceDatabaseInterface
         $entity = new GarageStatMin();
         $entity->setSpeed((float) $datas['Speed']);
         $entity->setAcceleration((float) $datas['Acceleration']);
-        $entity->setHandly((float) $datas['Handly']);
+        $entity->setHandling((float) $datas['Handling']);
         $entity->setNitro((float) $datas['Nitro']);
         $entity->setGarage($garage);
 
@@ -59,6 +59,6 @@ class GarageStatMinService implements ServiceDatabaseInterface
 
     public function getHeader(): array
     {
-        return ['Speed', 'Acceleration', 'Handly', 'Nitro', 'Average', 'Brand', 'Model'];
+        return ['Speed', 'Acceleration', 'Handling', 'Nitro', 'Average', 'Brand', 'Model'];
     }
 }

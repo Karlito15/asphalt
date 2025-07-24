@@ -1,28 +1,28 @@
 {% extends '@App/bases/front/full.html.twig' %}
 
-{% block title %}{{ controller_name }}{% endblock %}
-
 {% block content %}
-    <section class="content mr-2">
-        <div class="row">
-            <div class="col-8">
-                <h2 class="h4 text-center">{{ 'app.dashboard.index.coins'|trans }}</h2>
-                {% include '@App/contents/front/dashboard/_moneys.html.twig' %}
-                <h2 class="h4 text-center">{{ 'app.dashboard.index.jokers'|trans }}</h2>
-                {% include '@App/contents/front/dashboard/_joker-S.html.twig' %}
-                {% include '@App/contents/front/dashboard/_joker-A.html.twig' %}
-                {% include '@App/contents/front/dashboard/_joker-B.html.twig' %}
-                {% include '@App/contents/front/dashboard/_joker-C.html.twig' %}
-                {% include '@App/contents/front/dashboard/_joker-D.html.twig' %}
-                <h2 class="h4 text-center">{{ 'app.dashboard.index.imports'|trans }}</h2>
-                {% include '@App/contents/front/dashboard/_import-rares.html.twig' %}
-                <h2 class="h4 text-center">{{ 'app.dashboard.index.commons'|trans }}</h2>
-                {% include '@App/contents/front/dashboard/_import-commons.html.twig' %}
-            </div>
-            <div class="col-4">
-                <h2 class="h4 text-center">{{ 'app.dashboard.index.stats'|trans }}</h2>
-                {% include '@App/contents/front/dashboard/_statistical.html.twig' %}
-            </div>
-        </div>
-    </section>
+
+<div class="row">
+    <div class="col-8">
+        <h2 class="h4 text-center">{{ 'app.dashboard.index.coins'|trans }}</h2>
+        {% include '@App/contents/front/dashboard/_moneys.html.twig' %}
+        <h2 class="h4 text-center">{{ 'app.dashboard.index.jokers'|trans }}</h2>
+        {% include '@App/contents/front/dashboard/_joker-S.html.twig' %}
+        {% include '@App/contents/front/dashboard/_joker-A.html.twig' %}
+        {% include '@App/contents/front/dashboard/_joker-B.html.twig' %}
+        {% include '@App/contents/front/dashboard/_joker-C.html.twig' %}
+        {% include '@App/contents/front/dashboard/_joker-D.html.twig' %}
+        <h2 class="h4 text-center">{{ 'app.dashboard.index.imports'|trans }}</h2>
+        {% include '@App/contents/front/dashboard/_import-rares.html.twig' %}
+        <h2 class="h4 text-center">{{ 'app.dashboard.index.commons'|trans }}</h2>
+        {% include '@App/contents/front/dashboard/_import-commons.html.twig' %}
+    </div>
+    <div class="col-4">
+        <h2 class="h4 text-center">{{ 'app.dashboard.index.stats'|trans }}</h2>
+        {% include '@App/contents/front/dashboard/_statistical.html.twig' %}
+    </div>
+</div>
+
 {% endblock %}
+
+{% block title %}{{ controller_name }}{% endblock %}

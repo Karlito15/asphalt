@@ -22,26 +22,13 @@ trait FormAble
     {
         $star = '<i class="fa-solid fa-star text-warning"></i>';
 
-        switch ($number):
-            case 2:
-                $return = $star . $star;
-                break;
-            case 3:
-                $return = $star . $star . $star;
-                break;
-            case 4:
-                $return = $star . $star . $star . $star;
-                break;
-            case 5:
-                $return = $star . $star . $star . $star . $star;
-                break;
-            case 6:
-                $return = $star . $star . $star . $star . $star . $star;
-                break;
-            default:
-                $return = $star;
-        endswitch;
-
-        return $return;
+        return match ($number) {
+            2 => $star . $star,
+            3 => $star . $star . $star,
+            4 => $star . $star . $star . $star,
+            5 => $star . $star . $star . $star . $star,
+            6 => $star . $star . $star . $star . $star . $star,
+            default => $star,
+        };
     }
 }

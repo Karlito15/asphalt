@@ -1,48 +1,33 @@
-{% extends '@App/bases/front/full.html.twig' %}
+{% extends '@App/bases/front/page-index.html.twig' %}
 
-{% block title %}RaceApp index{% endblock %}
-
-{% block content %}
-    <section class="content mr-2">
-        <div class="row">
-    <h1>RaceApp index</h1>
-
-    <a href="{{ path('app.race.create') }}">Create new</a>
-        </div>
-    </section>
-{#    <table class="table">#}
-{#        <thead>#}
-{#            <tr>#}
-{#                <th>Id</th>#}
-{#                <th>RaceOrder</th>#}
-{#                <th>Finished</th>#}
-{#                <th>Slug</th>#}
-{#                <th>CreatedAt</th>#}
-{#                <th>UpdatedAt</th>#}
-{#                <th>DeletedAt</th>#}
-{#                <th>actions</th>#}
-{#            </tr>#}
-{#        </thead>#}
-{#        <tbody>#}
-{#        {% for race_app in race_apps %}#}
-{#            <tr>#}
-{#                <td>{{ race_app.id }}</td>#}
-{#                <td>{{ race_app.raceOrder }}</td>#}
-{#                <td>{{ race_app.finished ? 'Yes' : 'No' }}</td>#}
-{#                <td>{{ race_app.slug }}</td>#}
-{#                <td>{{ race_app.createdAt ? race_app.createdAt|date('Y-m-d H:i:s') : '' }}</td>#}
-{#                <td>{{ race_app.updatedAt ? race_app.updatedAt|date('Y-m-d H:i:s') : '' }}</td>#}
-{#                <td>{{ race_app.deletedAt ? race_app.deletedAt|date('Y-m-d H:i:s') : '' }}</td>#}
-{#                <td>#}
-{#                    <a href="{{ path('app_race_app_show', {'id': race_app.id}) }}">show</a>#}
-{#                    <a href="{{ path('app_race_app_edit', {'id': race_app.id}) }}">edit</a>#}
-{#                </td>#}
-{#            </tr>#}
-{#        {% else %}#}
-{#            <tr>#}
-{#                <td colspan="8">no records found</td>#}
-{#            </tr>#}
-{#        {% endfor %}#}
-{#        </tbody>#}
-{#    </table>#}
+{% block table %}
+<tbody>
+{% for entity in entities %}
+    <tr>
+        <td>{{ entity.id }}</td>
+        <td>{{ entity.raceOrder }}</td>
+        <td>{{ component('ValueBoolean', {value: entity.finished}) }}</td>
+        <td>{{ entity.slug }}</td>
+        <td><a class="btn btn-outline-info" href="{{ path('app.race.update', {'id': entity.id, 'slug': entity.slug}) }}" target="_blank"><i class="fa-solid fa-pencil"></i>&nbsp;{{ 'btn.update' | trans }}</a></td>
+    </tr>
+{% else %}
+    {{ component('TableNoRecords', {value: 10}) }}
+{% endfor %}
+</tbody>
+<thead>
+{{ _self.legend() }}
+</thead>
+<tfoot>
+{{ _self.legend() }}
+</tfoot>
 {% endblock %}
+
+{% macro legend() %}
+<tr>
+    <th>{{ 'table.id' | trans }}</th>
+    <th>{{ 'table.order.race' | trans }}</th>
+    <th>{{ 'table.finished' | trans }}</th>
+    <th>{{ 'table.slug' | trans }}</th>
+    <th>{{ 'table.actions' | trans }}</th>
+</tr>
+{% endmacro %}

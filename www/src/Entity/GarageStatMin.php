@@ -49,7 +49,7 @@ class GarageStatMin
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
-    private float $handly = 0;
+    private float $handling = 0;
 
     #[ORM\Column(type: 'float', nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]

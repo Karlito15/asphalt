@@ -26,8 +26,6 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
-//use App\Service\Database\Garage\SettingTagService;
-
 #[AsCommand(
     name: 'asphalt:database:garage',
     description: 'Toutes les données pour le Garage',
@@ -52,7 +50,6 @@ class GaragesCommand extends Command
         private readonly GarageUpgradeService    $upgrade,
         private readonly SettingBlueprintService $settingBlueprint,
         private readonly SettingLevelService     $settingLevel,
-//        private readonly SettingTagService       $settingTag,
         private readonly SettingUnitPriceService $settingUnitPrice,
         private readonly ParameterBagInterface   $parameter,
     )
@@ -85,7 +82,7 @@ class GaragesCommand extends Command
         $choice = $input->getArgument('choice');
 
         // Start
-        $io->section((string) self::getDefaultDescription());
+        $io->section($this->getDescription());
 
         // Question
         if (is_null($choice)) {
@@ -110,7 +107,7 @@ class GaragesCommand extends Command
             $this->statMax->import($io);
             $this->statMin->import($io);
             $this->upgrade->import($io);
-            $io->info('Import RACE terminé');
+            $io->info('Import GARAGE terminé');
             $result = true;
         } elseif ($choice === 'export') {
             $this->settingUnitPrice->export($io);

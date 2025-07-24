@@ -45,7 +45,12 @@ class GarageAppService implements ServiceCacheInterface
         if ($values->isHit()) {
             return $values->get();
         } else {
-            $results = [];
+//            $results = [
+//                'index' => $this->repository->findBy([], ['gameUpdate' => 'DESC']),
+//                'index' => $this->repository->getGarage(),
+//            ];
+//            $results = $this->repository->findBy([], ['gameUpdate' => 'DESC']);
+            $results = $this->repository->getGarage();
 
             $cache->get($this->namespace, function (ItemInterface $item) use ($results) {
                 $item->expiresAt(new \DateTime('+7 days'));

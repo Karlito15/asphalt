@@ -14,8 +14,8 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-//#[Route('/{_locale<%app.supported_locales%>}/race', name: 'app.race.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-#[Route('/race', name: 'app.race.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+#[Route('/{_locale<%app.supported_locales%>}/race', name: 'app.race.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+//#[Route('/race', name: 'app.race.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class RaceAppController extends AbstractController
 {
     use WebAble;
@@ -41,7 +41,7 @@ final class RaceAppController extends AbstractController
         return $this->render('@App/contents/front/race/index.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => 'XXXX', 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Race', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $repository->findAll(),
         ]);
@@ -65,13 +65,14 @@ final class RaceAppController extends AbstractController
 
         return $this->render('@App/contents/front/race/form.html.twig', [
             'controller_name' => $title,
-            'current_page'      => $request->attributes->get('_route'),
-            'race_app' => $raceApp,
-            'form' => $form,
+            'current_page'    => $request->attributes->get('_route'),
+            'race_app'        => $raceApp,
+            'form'            => $form,
+
         ]);
     }
 
-    #[Route('/update/{id}.php', name: 'update', requirements: ['id' => Requirement::DIGITS], methods: ['GET', 'POST'])]
+    #[Route('/update/{slug}-{id}.php', name: 'update', requirements: ['id' => Requirement::DIGITS, 'slug' => Requirement::ASCII_SLUG], methods: ['GET', 'POST'])]
     public function update(Request $request, RaceApp $raceApp, EntityManagerInterface $entityManager): Response
     {
         $title = $this->translator->trans('app.race.update.title');
@@ -87,9 +88,10 @@ final class RaceAppController extends AbstractController
 
         return $this->render('@App/contents/front/race/form.html.twig', [
             'controller_name' => $title,
-            'current_page'      => $request->attributes->get('_route'),
-            'race_app' => $raceApp,
-            'form' => $form,
+            'current_page'    => $request->attributes->get('_route'),
+            'race_app'        => $raceApp,
+            'form'            => $form,
+
         ]);
     }
 

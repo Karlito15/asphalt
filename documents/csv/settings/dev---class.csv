@@ -1,6 +1,6 @@
-﻿"Label";"Value";"Order";"Number";"Median"
-"Class";"D";"1";"41";"125"
-"Class";"C";"2";"53";"139"
-"Class";"B";"3";"67";"146"
-"Class";"A";"4";"58";"150"
-"Class";"S";"5";"70";"159"
+Label;Value;Order;Number;Median
+Class;D;1;41;125
+Class;C;2;54;139
+Class;B;3;69;146
+Class;A;4;61;150
+Class;S;5;72;159

@@ -6,7 +6,7 @@ namespace App\Event\Setting;
 
 use App\Entity\GarageApp;
 
-final class TagEvent
+final readonly class TagEvent
 {
     public function __construct(
         private readonly GarageApp $garage

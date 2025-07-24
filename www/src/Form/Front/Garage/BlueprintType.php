@@ -2,60 +2,102 @@
 
 namespace App\Form\Front\Garage;
 
+use App\Able\Form\FormAble;
 use App\Entity\GarageApp;
-use App\Entity\SettingBlueprint;
-use App\Entity\SettingBrand;
-use App\Entity\SettingClass;
-use App\Entity\SettingLevel;
-use App\Entity\SettingTag;
-use App\Entity\SettingUnitPrice;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class BlueprintType extends AbstractType
 {
+    use FormAble;
+
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('stars')
-            ->add('gameUpdate')
-            ->add('carOrder')
-            ->add('statOrder')
-            ->add('level')
-            ->add('epic')
-            ->add('model')
-            ->add('unlocked')
-            ->add('gold')
-            ->add('slug')
-            ->add('createdAt')
-            ->add('updatedAt')
-            ->add('deletedAt')
-            ->add('settingBlueprint', EntityType::class, [
-                'class' => SettingBlueprint::class,
-                'choice_label' => 'id',
+            ->add('star1', TextType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'form-control-sm text-center fw-bolder text-success',
+                ],
+                'label'      => $this->star(),
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html' => true,
+                'required'   => false,
             ])
-            ->add('settingBrand', EntityType::class, [
-                'class' => SettingBrand::class,
-                'choice_label' => 'id',
+            ->add('star2', IntegerType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'form-control-sm text-center fw-bolder text-success',
+                    'max'          => 99,
+                    'min'          => 0,
+                ],
+                'label'      => $this->star(2),
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html' => true,
+                'required'   => false,
             ])
-            ->add('settingClass', EntityType::class, [
-                'class' => SettingClass::class,
-                'choice_label' => 'id',
+            ->add('star3', IntegerType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'form-control-sm text-center fw-bolder text-success',
+                    'max'          => 99,
+                    'min'          => 0,
+                ],
+                'label'      => $this->star(3),
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html' => true,
+                'required'   => false,
             ])
-            ->add('settingLevel', EntityType::class, [
-                'class' => SettingLevel::class,
-                'choice_label' => 'id',
+            ->add('star4', IntegerType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'form-control-sm text-center fw-bolder text-success',
+                    'max'          => 99,
+                    'min'          => 0,
+                ],
+                'label'      => $this->star(4),
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html' => true,
+                'required'   => false,
             ])
-            ->add('settingTag', EntityType::class, [
-                'class' => SettingTag::class,
-                'choice_label' => 'id',
-                'multiple' => true,
+            ->add('star5', IntegerType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'form-control-sm text-center fw-bolder text-success',
+                    'max'          => 99,
+                    'min'          => 0,
+                ],
+                'label'      => $this->star(5),
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html' => true,
+                'required'   => false,
             ])
-            ->add('settingUnitPrice', EntityType::class, [
-                'class' => SettingUnitPrice::class,
-                'choice_label' => 'id',
+            ->add('star6', IntegerType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'form-control-sm text-center fw-bolder text-success',
+                    'max'          => 99,
+                    'min'          => 0,
+                ],
+                'label'      => $this->star(6),
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html' => true,
+                'required'   => false,
             ])
         ;
     }
@@ -64,6 +106,8 @@ class BlueprintType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => GarageApp::class,
+            'allow_extra_fields' => true,
+            'translation_domain' => 'forms',
         ]);
     }
 }

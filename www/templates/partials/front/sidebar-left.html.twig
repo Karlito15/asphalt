@@ -4,8 +4,8 @@
     <div class="navbar-brand">
         <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
         <a href="{{ path('app.dashboard.index') }}">
-            <img src="{{ asset(logo) }}" width="25" alt="{{ metas.title }}"> {#'themes/aero/assets/images/logo.svg'#}
-            <span class="m-l-0">{{ metas.title }}</span>
+            <img src="{{ asset(logo) }}" width="25" alt="{{ metas.title }}">
+            <span class="m-l-10">{{ metas.title | u.truncate(7) }}</span>
         </a>
     </div>
     <div class="menu">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </li>
-            <li class="active open"><a href="javascript:void(0);"><i class="zmdi zmdi-home"></i><span>{{ 'app.dashboard.index.title' | trans }}</span></a></li>
+            <li class="active open"><a href="{{ path('app.dashboard.index') }}"><i class="zmdi zmdi-home"></i><span>{{ 'app.dashboard.index.title' | trans }}</span></a></li>
             <li><a href="{{ path('app.garage.index') }}"><i class="fa-solid fa-car-side"></i><span>{{ 'sidebar.common.garage' | trans }}</span></a></li>
             <li><a href="{{ path('app.race.index') }}"><i class="fa-solid fa-flag-checkered"></i><span>{{ 'sidebar.common.race' | trans }}</span></a></li>
             <li><a href="{{ path('app.mission.index') }}"><i class="fa-solid fa-bullseye"></i><span>{{ 'sidebar.front.mission' | trans }}</span></a></li>

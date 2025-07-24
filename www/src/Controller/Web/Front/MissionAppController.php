@@ -14,8 +14,8 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-//#[Route('/{_locale<%app.supported_locales%>}/mission', name: 'app.mission.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-#[Route('/mission', name: 'app.mission.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+#[Route('/{_locale<%app.supported_locales%>}/mission', name: 'app.mission.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+//#[Route('/mission', name: 'app.mission.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class MissionAppController extends AbstractController
 {
     use WebAble;
@@ -41,7 +41,7 @@ final class MissionAppController extends AbstractController
         return $this->render('@App/contents/front/mission/index.html.twig', [
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'breadcrumb'        => ['level1' => 'XXXX', 'level2' => $title],
+            'breadcrumb'        => ['level1' => 'Mission', 'level2' => $title],
             'links'             => self::getLinksPage(),
             'entities'          => $repository->findAll(),
         ]);
@@ -65,9 +65,9 @@ final class MissionAppController extends AbstractController
 
         return $this->render('@App/contents/front/mission/form.html.twig', [
             'controller_name' => $title,
-            'current_page'      => $request->attributes->get('_route'),
-            'mission_app' => $missionApp,
-            'form' => $form,
+            'current_page'    => $request->attributes->get('_route'),
+            'mission_app'     => $missionApp,
+            'form'            => $form,
         ]);
     }
 
@@ -87,9 +87,9 @@ final class MissionAppController extends AbstractController
 
         return $this->render('@App/contents/front/mission/form.html.twig', [
             'controller_name' => $title,
-            'current_page'      => $request->attributes->get('_route'),
-            'mission_app' => $missionApp,
-            'form' => $form,
+            'current_page'    => $request->attributes->get('_route'),
+            'mission_app'     => $missionApp,
+            'form'            => $form,
         ]);
     }
 

@@ -50,7 +50,7 @@ class GarageUpgradeService implements ServiceDatabaseInterface
         $entity = new GarageUpgrade();
         $entity->setSpeed((int) $datas['Speed']);
         $entity->setAcceleration((int) $datas['Acceleration']);
-        $entity->setHandly((int) $datas['Handly']);
+        $entity->setHandling((int) $datas['Handling']);
         $entity->setNitro((int) $datas['Nitro']);
         $entity->setCommon((int) $datas["Common"]);
         $entity->setRare((int) $datas["Rare"]);
@@ -62,6 +62,6 @@ class GarageUpgradeService implements ServiceDatabaseInterface
 
     public function getHeader(): array
     {
-        return ['Speed', 'Acceleration', 'Handly', 'Nitro', 'Common', 'Rare', 'Epic', 'Brand', 'Model'];
+        return ['Speed', 'Acceleration', 'Handling', 'Nitro', 'Common', 'Rare', 'Epic', 'Brand', 'Model'];
     }
 }

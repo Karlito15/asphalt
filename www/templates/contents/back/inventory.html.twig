@@ -1,6 +1,4 @@
-{% extends '@App/bases/back/full.html.twig' %}
-
-{% block title %}{{ controller_name }}{% endblock %}
+{% extends '@App/bases/back/page-index.html.twig' %}
 
 {% block table %}
 <tbody>
@@ -23,16 +21,16 @@
 {% endfor %}
 </tbody>
 <thead>
-    {{ _self.tr() }}
+    {{ _self.legend() }}
 </thead>
 <tfoot>
-    {{ _self.tr() }}
+    {{ _self.legend() }}
 </tfoot>
 <thead>
 </thead>
 {% endblock %}
 
-{% macro tr() %}
+{% macro legend() %}
     <tr>
         <th>{{ 'table.id' | trans }}</th>
         <th>{{ 'table.category' | trans }}</th>
@@ -42,8 +40,8 @@
         <th>{{ 'table.position' | trans }}</th>
         <th>{{ 'table.active' | trans }}</th>
         <th>{{ 'table.slug' | trans }}</th>
-        <th>{{ 'table.createdat' | trans }}</th>
-        <th>{{ 'table.updatedat' | trans }}</th>
+        <th>{{ 'table.date.created.at' | trans }}</th>
+        <th>{{ 'table.date.updated.at' | trans }}</th>
         <th>{{ 'table.actions' | trans }}</th>
     </tr>
 {% endmacro %}

@@ -1,11 +1,52 @@
-{% extends 'base.html.twig' %}
+{% extends '@App/bases/front/full.html.twig' %}
 
-{% block title %}New GarageApp{% endblock %}
+{% block content %}
 
-{% block body %}
-    <h1>Create new GarageApp</h1>
+<div class="container-fluid">
 
-    {{ include('garage_app/_form.html.twig') }}
+    <div class="card bg-primary-subtle">
+        <div class="card-header">
+            <h2 class="text-center">{{ controller_name }}</h2>
+        </div>
+        <div class="card-body">
+            {{ form_start(form) }}
+                <div class="form-error">
+                    {{ form_errors(form.settingClass) }}
+                    {{ form_errors(form.settingBrand) }}
+                    {{ form_errors(form.model) }}
+                    {{ form_errors(form.gameUpdate) }}
+                    {{ form_errors(form) }}
+                </div>
 
-    <a href="{{ path('app_garage_app_index') }}">back to list</a>
+                <div class="row">
+                    {{ form_row(form.settingBrand) }}
+                </div>
+
+                <div class="row">
+                    {{ form_row(form.model, {'attr': {'placeholder': '500X'}}) }}
+                </div>
+
+                <div class="row">
+                    {{ form_row(form.settingClass) }}
+                </div>
+
+                <div class="row">
+                    {{ form_row(form.stars) }}
+                </div>
+
+                <div class="row">
+                    {{ form_row(form.gameUpdate, {'attr': {'value': game_update_last}}) }}
+                </div>
+
+                <div class="row row-cols-3">
+                    <div class="w-25"><a class="btn btn-outline-warning text-uppercase w-100" href="{{ path('app.garage.index') }}">{{ 'btn.back' | trans }}</a></div>
+                    <div class="w-25">&nbsp;</div>
+                    <div class="w-50"><button type="submit" class="btn btn-outline-success text-uppercase w-100">{{ 'btn.create' | trans }}</button></div>
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+</div>
+
 {% endblock %}

@@ -1,0 +1,33 @@
+// Color system
+
+@import "01-default";
+//@import "01-default-dark";
+@import "01-custom";
+
+// Create your own map
+$customs-colors: (
+  "credit"           	: $credit,
+  "token"            	: $token,
+  "inventory"        	: $inventory,
+  "biscay"           	: $biscay,
+  "pencil"           	: $pencil,
+
+  "blue"				: $blue,
+  "indigo"				: $indigo,
+  "purple"				: $purple,
+  "pink"				: $pink,
+  "red"					: $red,
+  "orange"				: $orange,
+  "yellow"				: $yellow,
+  "green"				: $green,
+  "teal"				: $teal,
+  "cyan"				: $cyan,
+  "black"				: $black,
+  "white"				: $white,
+  "gray"				: $gray-600,
+  "gray-dark"			: $gray-800
+
+) !default;
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $customs-colors);

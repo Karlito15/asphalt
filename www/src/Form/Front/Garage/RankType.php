@@ -2,60 +2,117 @@
 
 namespace App\Form\Front\Garage;
 
+use App\Able\Form\FormAble;
 use App\Entity\GarageApp;
-use App\Entity\SettingBlueprint;
-use App\Entity\SettingBrand;
-use App\Entity\SettingClass;
-use App\Entity\SettingLevel;
-use App\Entity\SettingTag;
-use App\Entity\SettingUnitPrice;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class RankType extends AbstractType
 {
+    use FormAble;
+
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('stars')
-            ->add('gameUpdate')
-            ->add('carOrder')
-            ->add('statOrder')
-            ->add('level')
-            ->add('epic')
-            ->add('model')
-            ->add('unlocked')
-            ->add('gold')
-            ->add('slug')
-            ->add('createdAt')
-            ->add('updatedAt')
-            ->add('deletedAt')
-            ->add('settingBlueprint', EntityType::class, [
-                'class' => SettingBlueprint::class,
-                'choice_label' => 'id',
+            ->add('star0', NumberType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'text-center fw-bolder',
+                    'max'          => 7000,
+                    'min'          => 0,
+                ],
+                'label'         => 'Start',
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html'    => false,
+                'required'      => false,
             ])
-            ->add('settingBrand', EntityType::class, [
-                'class' => SettingBrand::class,
-                'choice_label' => 'id',
+            ->add('star1', NumberType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'text-center fw-bolder',
+                    'max'          => 7000,
+                    'min'          => 0,
+                ],
+                'label'         => $this->star(),
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html'    => true,
+                'required'      => false,
             ])
-            ->add('settingClass', EntityType::class, [
-                'class' => SettingClass::class,
-                'choice_label' => 'id',
+            ->add('star2', NumberType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'text-center fw-bolder',
+                    'max'          => 7000,
+                    'min'          => 0,
+                ],
+                'label'         => $this->star(2),
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html'    => true,
+                'required'      => false,
             ])
-            ->add('settingLevel', EntityType::class, [
-                'class' => SettingLevel::class,
-                'choice_label' => 'id',
+            ->add('star3', NumberType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'text-center fw-bolder',
+                    'max'          => 7000,
+                    'min'          => 0,
+                ],
+                'label'         => $this->star(3),
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html'    => true,
+                'required'      => false,
             ])
-            ->add('settingTag', EntityType::class, [
-                'class' => SettingTag::class,
-                'choice_label' => 'id',
-                'multiple' => true,
+            ->add('star4', NumberType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'text-center fw-bolder',
+                    'max'          => 7000,
+                    'min'          => 0,
+                ],
+                'label'         => $this->star(4),
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html'    => true,
+                'required'      => false,
             ])
-            ->add('settingUnitPrice', EntityType::class, [
-                'class' => SettingUnitPrice::class,
-                'choice_label' => 'id',
+            ->add('star5', NumberType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'text-center fw-bolder',
+                    'max'          => 7000,
+                    'min'          => 0,
+                ],
+                'label'         => $this->star(5),
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html'    => true,
+                'required'      => false,
+            ])
+            ->add('star6', NumberType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                    'class'        => 'text-center fw-bolder',
+                    'max'          => 7000,
+                    'min'          => 0,
+                ],
+                'label'         => $this->star(6),
+                'label_attr' => [
+                    'class' => 'm-0',
+                ],
+                'label_html'    => true,
+                'required'      => false,
             ])
         ;
     }
@@ -64,6 +121,8 @@ class RankType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => GarageApp::class,
+            'allow_extra_fields' => true,
+            'translation_domain' => 'forms',
         ]);
     }
 }

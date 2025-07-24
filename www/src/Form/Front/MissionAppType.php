@@ -82,14 +82,6 @@ class MissionAppType extends AbstractType
 //                'autocomplete' => true,
 //                'class'        => MissionTypeEntity::class,
 //            ])
-//            ->add('task', EntityType::class, [
-//                'class' => MissionTask::class,
-//                'choice_label' => 'id',
-//            ])
-//            ->add('type', EntityType::class, [
-//                'class' => MissionType::class,
-//                'choice_label' => 'id',
-//            ])
         ;
     }
 

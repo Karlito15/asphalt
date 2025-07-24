@@ -173,8 +173,8 @@ tasks:
             - "{{.SYMFONY_CONSOLE}} assets:install public"
             - "{{.SYMFONY_CONSOLE}} importmap:install"
             - "{{.SYMFONY_CONSOLE}} importmap:update"
-#            - "{{.SYMFONY_CONSOLE}} sass:build"
-#            - "{{.SYMFONY_CONSOLE}} asset-map:compile"
+            - "{{.SYMFONY_CONSOLE}} sass:build"
+            - "{{.SYMFONY_CONSOLE}} asset-map:compile"
         ignore_error: true
         platforms: [windows/amd64]
     launch:

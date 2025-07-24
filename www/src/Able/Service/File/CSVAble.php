@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Able\Service\File;
 
 use League\Csv\CannotInsertRecord;
+use League\Csv\CharsetConverter;
 use League\Csv\Exception;
 use League\Csv\Reader;
 use League\Csv\Statement;
@@ -44,6 +45,8 @@ trait CSVAble
     {
         try {
             $writer = Writer::createFromPath($filepath, 'w+');
+            // add Formatter
+            CharsetConverter::addTo($writer, 'utf-8', 'iso-8859-15');
             $writer->forceEnclosure();
             $writer->setDelimiter(';');
             $writer->setEndOfLine(PHP_EOL);

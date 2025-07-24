@@ -12,7 +12,7 @@
 
 {% block containers %}
     {% block preloader %}
-        {% include '@App/partials/front/loader.html.twig' %}
+{#        {% include '@App/partials/front/loader.html.twig' %}#}
     {% endblock %}
 
     {% block search %}
@@ -33,9 +33,13 @@
 
     {% include '@App/partials/commons/alert.html.twig' %}
 
-    {% block content %}
-        {% include('@App/contents/front/index.html.twig') %}
-    {% endblock %}
+<section class="content mr-2">
+    {% include '@App/partials/front/breadcrumb.html.twig' %}
+
+    <div class="container-fluid">
+        {% block content %}{% endblock %}
+    </div>
+</section>
 
 {% endblock %}
 

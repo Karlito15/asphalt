@@ -24,6 +24,11 @@ class Kernel extends BaseKernel
         return $this->getVarsDir() . 'logs';
     }
 
+    /**
+     * Retourne le chemin du dossier "vars"
+     *
+     * @return string
+     */
     private function getVarsDir(): string
     {
         return dirname($this->getProjectDir()) . DIRECTORY_SEPARATOR . 'vars' . DIRECTORY_SEPARATOR;

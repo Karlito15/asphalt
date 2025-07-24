@@ -1,62 +1,59 @@
-{% extends '@App/bases/front/full.html.twig' %}
+{% extends '@App/bases/front/page-index.html.twig' %}
 
-{% block title %}GarageApp index{% endblock %}
-
-{% block content %}
-    <section class="content mr-2">
-        <div class="row">
-    <h1>GarageApp index</h1>
-
-    <a href="{{ path('app.garage.create') }}" class="btn btn-lg">Create New Car</a>
-        </div>
-    </section>
-{#    <table class="table">#}
-{#        <thead>#}
-{#            <tr>#}
-{#                <th>Id</th>#}
-{#                <th>Stars</th>#}
-{#                <th>GameUpdate</th>#}
-{#                <th>CarOrder</th>#}
-{#                <th>StatOrder</th>#}
-{#                <th>Level</th>#}
-{#                <th>Epic</th>#}
-{#                <th>Model</th>#}
-{#                <th>Unlocked</th>#}
-{#                <th>Gold</th>#}
-{#                <th>Slug</th>#}
-{#                <th>CreatedAt</th>#}
-{#                <th>UpdatedAt</th>#}
-{#                <th>DeletedAt</th>#}
-{#                <th>actions</th>#}
-{#            </tr>#}
-{#        </thead>#}
-{#        <tbody>#}
-{#        {% for garage_app in garage_apps %}#}
-{#            <tr>#}
-{#                <td>{{ garage_app.id }}</td>#}
-{#                <td>{{ garage_app.stars }}</td>#}
-{#                <td>{{ garage_app.gameUpdate }}</td>#}
-{#                <td>{{ garage_app.carOrder }}</td>#}
-{#                <td>{{ garage_app.statOrder }}</td>#}
-{#                <td>{{ garage_app.level }}</td>#}
-{#                <td>{{ garage_app.epic }}</td>#}
-{#                <td>{{ garage_app.model }}</td>#}
-{#                <td>{{ garage_app.unlocked ? 'Yes' : 'No' }}</td>#}
-{#                <td>{{ garage_app.gold ? 'Yes' : 'No' }}</td>#}
-{#                <td>{{ garage_app.slug }}</td>#}
-{#                <td>{{ garage_app.createdAt ? garage_app.createdAt|date('Y-m-d H:i:s') : '' }}</td>#}
-{#                <td>{{ garage_app.updatedAt ? garage_app.updatedAt|date('Y-m-d H:i:s') : '' }}</td>#}
-{#                <td>{{ garage_app.deletedAt ? garage_app.deletedAt|date('Y-m-d H:i:s') : '' }}</td>#}
-{#                <td>#}
-{#                    <a href="{{ path('app_garage_app_show', {'id': garage_app.id}) }}">show</a>#}
-{#                    <a href="{{ path('app_garage_app_edit', {'id': garage_app.id}) }}">edit</a>#}
-{#                </td>#}
-{#            </tr>#}
-{#        {% else %}#}
-{#            <tr>#}
-{#                <td colspan="15">no records found</td>#}
-{#            </tr>#}
-{#        {% endfor %}#}
-{#        </tbody>#}
-{#    </table>#}
+{% block table %}
+    <tbody>
+        {% for entity in entities %}
+            <tr class="">
+                <td class="text-center">{{ entity.classValue }}</td>
+                <td><a href="{{ path('app.garage.update', {id: entity.id, slug: entity.slug}) }}" target="_blank" class="{{ _self.color(entity.unlocked,entity.gold) }}">{{ entity.brand }}</a></td>
+                <td><a href="{{ path('app.garage.update', {id: entity.id, slug: entity.slug}) }}" target="_blank" class="{{ _self.color(entity.unlocked,entity.gold) }}">{{ entity.model }}</a></td>
+                <td class="text-center">{{ entity.gameUpdate }}</td>
+                <td class="text-center">{{ entity.level }}</td>
+                <td class="text-center">{{ entity.epic }}</td>
+                <td class="text-center">{{ component('ValueBoolean', {value: entity.unlocked}) }}</td>
+                <td class="text-center">{{ component('ValueBoolean', {value: entity.gold}) }}</td>
+                <td class="text-right p-0">
+                    <div class="btn-group no-padding" role="group" aria-label="Action">
+                        <a class="btn btn-outline-warning" href="{{ path('app.garage.read', {'id': entity.id, 'slug': entity.slug}) }}" target="_blank">{{ 'btn.read' | trans }}&nbsp;<i class="fa-solid fa-file"></i></a>
+                        <a class="btn btn-outline-info" href="{{ path('app.garage.update', {'id': entity.id, 'slug': entity.slug}) }}" target="_blank"><i class="fa-solid fa-pencil"></i>&nbsp;{{ 'btn.update' | trans }}</a>
+                    </div>
+                </td>
+            </tr>
+        {% else %}
+            {{ component('TableNoRecords', {value: 9}) }}
+        {% endfor %}
+    </tbody>
+    <thead>
+    {{ _self.legend() }}
+    </thead>
+    <tfoot>
+    {{ _self.legend() }}
+    </tfoot>
 {% endblock %}
+
+{% macro legend() %}
+        <tr>
+{#            <th>{{ 'table.id' | trans }}</th>#}
+            <th class="text-center">{{ 'table.class' | trans }}</th>
+            <th>{{ 'table.brand' | trans }}</th>
+            <th>{{ 'table.model' | trans }}</th>
+            <th class="text-center">{{ 'table.game.update' | trans }}</th>
+            <th class="text-center">{{ 'table.level' | trans }}</th>
+            <th class="text-center">{{ 'table.epic' | trans }}</th>
+            <th class="text-center">{{ 'table.unlocked' | trans }}</th>
+            <th class="text-center">{{ 'table.gold' | trans }}</th>
+            <th class="text-right">{{ 'table.actions' | trans }}</th>
+        </tr>
+{% endmacro %}
+
+{% macro color(unlock, gold) %}
+    {% if unlock == true and gold == false %}
+        text-success
+    {% elseif unlock == true and gold == true %}
+        text-warning
+    {% else %}
+        text-danger
+    {% endif %}
+{% endmacro %}
+
+{% block title %}{{ controller_name }}{% endblock %}
