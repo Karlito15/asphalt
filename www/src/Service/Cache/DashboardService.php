@@ -35,7 +35,6 @@ class DashboardService implements ServiceCacheInterface
      * Créé tous les fichiers caches liés au dashboard
      *
      * @return array
-     * @throws InvalidArgumentException
      */
     public function cacheCreate(): array
     {
@@ -46,13 +45,10 @@ class DashboardService implements ServiceCacheInterface
         $cache  = new FilesystemAdapter($this->namespace, $lifetime, 'cache');
         try {
             $values = $cache->getItem($this->namespace);
-        } catch (InvalidArgumentException $e) {
-            echo $e->getMessage();
-        }
 
-        if ($values->isHit()) {
-            return $values->get();
-        } else {
+            if ($values->isHit()) {
+                return $values->get();
+            }
             $totalD = $this->getGarageByClass('D');
             $totalC = $this->getGarageByClass('C');
             $totalB = $this->getGarageByClass('B');
@@ -125,6 +121,8 @@ class DashboardService implements ServiceCacheInterface
             $cache->save($cache->getItem($this->namespace));
 
             return $results;
+        } catch (InvalidArgumentException $e) {
+            throw new \RuntimeException($e->getMessage());
         }
     }
 

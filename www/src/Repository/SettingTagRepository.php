@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Able\Repository\SitemapsAble;
 use App\Entity\SettingTag;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -11,6 +12,8 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class SettingTagRepository extends ServiceEntityRepository
 {
+    use SitemapsAble;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, SettingTag::class);

@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Able\Repository\SitemapsAble;
 use App\Entity\SettingLevel;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -11,6 +12,8 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class SettingLevelRepository extends ServiceEntityRepository
 {
+    use SitemapsAble;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, SettingLevel::class);

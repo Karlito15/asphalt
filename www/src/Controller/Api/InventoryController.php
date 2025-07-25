@@ -6,9 +6,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 
+#[Route('{_locale<%app.supported_locales%>}/api/inventory', name: 'api.inventory.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class InventoryController extends AbstractController
 {
-    #[Route('/inventory', name: 'app_inventory')]
+    #[Route('/index', name: 'index', methods: ['GET'])]
     public function index(): JsonResponse
     {
         return $this->json([

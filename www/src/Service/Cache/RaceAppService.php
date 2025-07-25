@@ -29,6 +29,11 @@ class RaceAppService implements ServiceCacheInterface
     {
     }
 
+    /**
+     * Créé tous les fichiers caches liés aux courses
+     *
+     * @return array
+     */
     public function cacheCreate(): array
     {
         // Get LifeTime Cache
@@ -38,17 +43,13 @@ class RaceAppService implements ServiceCacheInterface
         $cache  = new FilesystemAdapter($this->namespace, $lifetime, 'cache');
         try {
             $values = $cache->getItem($this->namespace);
-        } catch (InvalidArgumentException $e) {
-            echo $e->getMessage();
-        }
 
-        if ($values->isHit()) {
-            return $values->get();
-        } else {
+            if ($values->isHit()) {
+                return $values->get();
+            }
             $results   = [
                 'index'     => $this->repository->getRaces(),
             ];
-
 
             $cache->get($this->namespace, function (ItemInterface $item) use ($results) {
                 $item->expiresAt(new \DateTime('+7 days'));
@@ -59,9 +60,16 @@ class RaceAppService implements ServiceCacheInterface
             $cache->save($cache->getItem($this->namespace));
 
             return $results;
+        } catch (InvalidArgumentException $e) {
+            throw new \RuntimeException($e->getMessage());
         }
     }
 
+    /**
+     * Supprime tous les fichiers caches liés aux courses
+     *
+     * @return void
+     */
     public function cacheDelete(): void
     {
         // Get LifeTime Cache

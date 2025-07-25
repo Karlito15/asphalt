@@ -29,6 +29,11 @@ class GarageAppService implements ServiceCacheInterface
     {
     }
 
+    /**
+     * Créé tous les fichiers caches liés au garage
+     *
+     * @return array
+     */
     public function cacheCreate(): array
     {
         // Get LifeTime Cache
@@ -38,13 +43,10 @@ class GarageAppService implements ServiceCacheInterface
         $cache  = new FilesystemAdapter($this->namespace, $lifetime, 'cache');
         try {
             $values = $cache->getItem($this->namespace);
-        } catch (InvalidArgumentException $e) {
-            echo $e->getMessage();
-        }
 
-        if ($values->isHit()) {
-            return $values->get();
-        } else {
+            if ($values->isHit()) {
+                return $values->get();
+            }
 //            $results = [
 //                'index' => $this->repository->findBy([], ['gameUpdate' => 'DESC']),
 //                'index' => $this->repository->getGarage(),
@@ -61,9 +63,16 @@ class GarageAppService implements ServiceCacheInterface
             $cache->save($cache->getItem($this->namespace));
 
             return $results;
+        } catch (InvalidArgumentException $e) {
+            echo $e->getMessage();
         }
     }
 
+    /**
+     * Supprime tous les fichiers caches liés au garage
+     *
+     * @return void
+     */
     public function cacheDelete(): void
     {
         // Get LifeTime Cache

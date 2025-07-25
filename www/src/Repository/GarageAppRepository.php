@@ -85,9 +85,6 @@ class GarageAppRepository extends ServiceEntityRepository
         return $qb->getQuery()->getResult();
     }
 
-    // CSV
-
-
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
      *
@@ -113,6 +110,23 @@ class GarageAppRepository extends ServiceEntityRepository
         }
 
         return $datas;
+    }
+
+    /**
+     * Retourne les informations pour le sitemap
+     *
+     * @return array
+     */
+    public function sitemapDatas(): array
+    {
+        $qb = $this->createQueryBuilder('g')
+            ->select('g.id')
+            ->addSelect('g.slug')
+            ->orderBy('g.gameUpdate', 'ASC')
+            ->orderBy('g.id', 'ASC')
+        ;
+
+        return $qb->getQuery()->getArrayResult();
     }
 
     /**

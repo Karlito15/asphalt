@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-#[Route('{_locale<%app.supported_locales%>}/pages/filter-by-', name: 'app.page.filter.', options: ['expose' => false], methods: ['GET'], format: 'html', utf8: true)]
+#[Route('{_locale<%app.supported_locales%>}/pages/filter-by-', name: 'app.page.filter.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 //#[Route('/pages/filter-by-', name: 'app.page.filter.', options: ['expose' => false], methods: ['GET'], format: 'html', utf8: true)]
 final class TagController extends AbstractController
 {
@@ -19,18 +19,18 @@ final class TagController extends AbstractController
         private readonly TranslatorInterface $translator,
     ) {}
 
-    #[Route('to-unlock-{letter}.php', name: 'to.unlock', requirements: ['letter' => Requirement::ASCII_SLUG])]
+    #[Route('to-unlock-{letter}.php', name: 'to.unlock', requirements: ['letter' => Requirement::ASCII_SLUG], methods: ['GET'])]
     public function toUnlock(Request $request): Response
     {
         $title  = $this->translator->trans('controllerName.app.page.filter.to.unlock');
         $letter = $request->attributes->get('letter');
 
-        return $this->render('@App/app/page/filter.html.twig', [
+        return $this->render('@App/contents/front/page/filter.html.twig', [
             'controller_name' => $title,
             'breadcrumb'      => $title,
             'index'           => 'app.page.filter.to.unlock',
             'current'         => $request->attributes->get('_route'),
-            'results'         => $this->createDataCache('to.unlock.', $letter, ['where' => 'toUnlock', 'value' => true]),
+            'results'         => $this->cacheCreate('to.unlock.', $letter, ['where' => 'toUnlock', 'value' => true]),
         ]);
     }
 
@@ -40,12 +40,12 @@ final class TagController extends AbstractController
         $title  = $this->translator->trans('controllerName.app.page.filter.to.upgrade');
         $letter = $request->attributes->get('letter');
 
-        return $this->render('@App/app/page/filter.html.twig', [
+        return $this->render('@App/contents/front/page/filter.html.twig', [
             'controller_name' => $title,
             'breadcrumb'      => $title,
             'index'           => 'app.page.filter.to.upgrade',
             'current'         => $request->attributes->get('_route'),
-            'results'         => $this->createDataCache('to.upgrade.', $letter, ['where' => 'toUpgrade', 'value' => true]),
+            'results'         => $this->cacheCreate('to.upgrade.', $letter, ['where' => 'toUpgrade', 'value' => true]),
         ]);
     }
 
@@ -60,12 +60,12 @@ final class TagController extends AbstractController
         $title  = $this->translator->trans('controllerName.app.page.filter.to.gold');
         $letter = $request->attributes->get('letter');
 
-        return $this->render('@App/app/page/filter.html.twig', [
+        return $this->render('@App/contents/front/page/filter.html.twig', [
             'controller_name' => $title,
             'breadcrumb'      => $title,
             'index'           => 'app.page.filter.to.gold',
             'current'         => $request->attributes->get('_route'),
-            'results'         => $this->createDataCache('to.gold.', $letter, ['where' => 'toGold', 'value' => true]),
+            'results'         => $this->cacheCreate('to.gold.', $letter, ['where' => 'toGold', 'value' => true]),
         ]);
     }
 

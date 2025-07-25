@@ -47,6 +47,29 @@ class RaceAppRepository extends ServiceEntityRepository
     }
 
     /**
+     * Retourne les informations pour le sitemap
+     *
+     * @return array
+     */
+    public function sitemapDatas(): array
+    {
+        $qb = $this->createQueryBuilder('r')->select("r.id as id, r.slug AS slug");
+        $qb
+            // SELECT
+            ->addselect('RaceSeason.chapter AS Chapter')
+            ->addselect('RaceSeason.name AS Season')
+            // JOIN
+            ->innerJoin('r.season', 'RaceSeason')
+            // ORDER BY
+            ->addOrderBy('Chapter', 'ASC')
+            ->addOrderBy('Season', 'ASC')
+            ->addOrderBy('r.raceOrder', 'ASC')
+        ;
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    /**
      * @param RaceApp $entity
      * @param bool $flush
      * @return void

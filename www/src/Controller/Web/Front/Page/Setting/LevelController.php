@@ -2,18 +2,23 @@
 
 namespace App\Controller\Web\Front\Page\Setting;
 
+use App\Repository\GarageAppRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Requirement\Requirement;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
-#[Route('{_locale<%app.supported_locales%>}/pages/setting/', name: 'app.page.setting.', options: ['expose' => false], methods: ['GET'], format: 'html', utf8: true)]
+#[Route('{_locale<%app.supported_locales%>}/pages/setting/', name: 'app.page.setting.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class LevelController extends AbstractController
 {
     public function __construct(
-        private readonly AppGarageRepository $garage,
+        private readonly GarageAppRepository $garage,
         private readonly TranslatorInterface $translator,
     ) {}
 
-    #[Route('level-{letter}.php', name: 'level', requirements: ['letter' => Requirement::ASCII_SLUG])]
+    #[Route('level-{letter}.php', name: 'level', requirements: ['letter' => Requirement::ASCII_SLUG], methods: ['GET'])]
     public function level(Request $request): Response
     {
         $title  = $this->translator->trans('controllerName.app.page.setting.level');

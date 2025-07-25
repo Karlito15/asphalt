@@ -6,9 +6,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 
+#[Route('{_locale<%app.supported_locales%>}/api/race/mode', name: 'api.race.mode.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class ModeController extends AbstractController
 {
-    #[Route('/mode', name: 'app_mode')]
+    #[Route('/index', name: 'index', methods: ['GET'])]
     public function index(): JsonResponse
     {
         return $this->json([
