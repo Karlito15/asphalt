@@ -6,15 +6,12 @@ namespace App\Service\Cache;
 
 use App\Able\Service\Cache\CacheAble;
 use App\Interface\ServiceCacheInterface;
+use App\Repository\MissionAppRepository;
 use Psr\Cache\InvalidArgumentException;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 
-/**
- * On retourne les données pour le tableau des stats du dashboard
- *
- */
 class MissionAppService implements ServiceCacheInterface
 {
     use CacheAble;
@@ -23,13 +20,13 @@ class MissionAppService implements ServiceCacheInterface
 
     public function __construct(
         private readonly ContainerInterface      $container,
+        private readonly MissionAppRepository    $repository,
     )
     {
     }
 
-
     /**
-     * Créé tous les fichiers caches liés aux mission
+     * Créé tous les fichiers caches liés aux missions
      *
      * @return array
      */
@@ -46,7 +43,7 @@ class MissionAppService implements ServiceCacheInterface
             if ($values->isHit()) {
                 return $values->get();
             }
-            $results = [];
+            $results = $this->repository->findAll();
 
             $cache->get($this->namespace, function (ItemInterface $item) use ($results) {
                 $item->expiresAt(new \DateTime('+7 days'));

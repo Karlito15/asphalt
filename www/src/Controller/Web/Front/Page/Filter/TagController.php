@@ -11,7 +11,6 @@ use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('{_locale<%app.supported_locales%>}/pages/filter-by-', name: 'app.page.filter.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-//#[Route('/pages/filter-by-', name: 'app.page.filter.', options: ['expose' => false], methods: ['GET'], format: 'html', utf8: true)]
 final class TagController extends AbstractController
 {
     public function __construct(
@@ -19,62 +18,51 @@ final class TagController extends AbstractController
         private readonly TranslatorInterface $translator,
     ) {}
 
-    #[Route('to-unlock-{letter}.php', name: 'to.unlock', requirements: ['letter' => Requirement::ASCII_SLUG], methods: ['GET'])]
+    #[Route('to-unlock-{letter}.php', name: 'to.unlock', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
     public function toUnlock(Request $request): Response
     {
-        $title  = $this->translator->trans('controllerName.app.page.filter.to.unlock');
-        $letter = $request->attributes->get('letter');
+        $title  = $this->translator->trans('app.page.tag.to.unlock');
+        $letter  = strtoupper($request->attributes->get('letter'));
 
         return $this->render('@App/contents/front/page/filter.html.twig', [
             'controller_name' => $title,
-            'breadcrumb'      => $title,
+            'breadcrumb'      => ['level1' => 'Filter', 'level2' => $title],
             'index'           => 'app.page.filter.to.unlock',
             'current'         => $request->attributes->get('_route'),
-            'results'         => $this->cacheCreate('to.unlock.', $letter, ['where' => 'toUnlock', 'value' => true]),
+//            'results'         => $this->cacheCreate('to.unlock.', $letter, ['where' => 'toUnlock', 'value' => true]),
+            'results'         => [],
         ]);
     }
 
-    #[Route('to-upgrade-{letter}.php', name: 'to.upgrade', requirements: ['letter' => Requirement::ASCII_SLUG])]
+    #[Route('to-upgrade-{letter}.php', name: 'to.upgrade', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
     public function toUpgrade(Request $request): Response
     {
-        $title  = $this->translator->trans('controllerName.app.page.filter.to.upgrade');
-        $letter = $request->attributes->get('letter');
+        $title  = $this->translator->trans('app.page.tag.to.upgrade');
+        $letter  = strtoupper($request->attributes->get('letter'));
 
         return $this->render('@App/contents/front/page/filter.html.twig', [
             'controller_name' => $title,
-            'breadcrumb'      => $title,
+            'breadcrumb'      => ['level1' => 'Filter', 'level2' => $title],
             'index'           => 'app.page.filter.to.upgrade',
             'current'         => $request->attributes->get('_route'),
-            'results'         => $this->cacheCreate('to.upgrade.', $letter, ['where' => 'toUpgrade', 'value' => true]),
+//            'results'         => $this->cacheCreate('to.upgrade.', $letter, ['where' => 'toUpgrade', 'value' => true]),
+            'results'         => [],
         ]);
     }
 
-    /**
-     * @throws ContainerExceptionInterface
-     * @throws NotFoundExceptionInterface
-     * @throws InvalidArgumentException
-     */
-    #[Route('to-gold-{letter}.php', name: 'to.gold', requirements: ['letter' => Requirement::ASCII_SLUG])]
+    #[Route('to-gold-{letter}.php', name: 'to.gold', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
     public function toGold(Request $request): Response
     {
-        $title  = $this->translator->trans('controllerName.app.page.filter.to.gold');
-        $letter = $request->attributes->get('letter');
+        $title  = $this->translator->trans('app.page.tag.to.gold');
+        $letter  = strtoupper($request->attributes->get('letter'));
 
         return $this->render('@App/contents/front/page/filter.html.twig', [
             'controller_name' => $title,
-            'breadcrumb'      => $title,
+            'breadcrumb'      => ['level1' => 'Filter', 'level2' => $title],
             'index'           => 'app.page.filter.to.gold',
             'current'         => $request->attributes->get('_route'),
-            'results'         => $this->cacheCreate('to.gold.', $letter, ['where' => 'toGold', 'value' => true]),
+//            'results'         => $this->cacheCreate('to.gold.', $letter, ['where' => 'toGold', 'value' => true]),
+            'results'         => [],
         ]);
     }
-
-//    #[Route('/order', name: 'app_order')]
-//    public function index(): JsonResponse
-//    {
-//        return $this->json([
-//            'message' => 'Welcome to your new controller!',
-//            'path' => 'src/Controller/OrderController.php',
-//        ]);
-//    }
 }

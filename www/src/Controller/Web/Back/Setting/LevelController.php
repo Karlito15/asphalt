@@ -15,7 +15,6 @@ use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('{_locale<%app.supported_locales%>}/admin/setting/level', name: 'app.setting.level.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-//#[Route('/admin/setting/level', name: 'app.setting.level.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class LevelController extends AbstractController
 {
     use WebAble;

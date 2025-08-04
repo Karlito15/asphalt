@@ -3,7 +3,7 @@
 namespace App\Form\Front\Garage;
 
 use App\Able\Form\FormAble;
-use App\Entity\GarageApp;
+use App\Entity\GarageBlueprint;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -105,7 +105,7 @@ class BlueprintType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => GarageApp::class,
+            'data_class' => GarageBlueprint::class,
             'allow_extra_fields' => true,
             'translation_domain' => 'forms',
         ]);

@@ -16,11 +16,10 @@ twig:
     paths:
         '%kernel.project_dir%/templates': 'App'
     globals:
-        metas:   '%metas%'
-        classes: '%classes%'
-        images:  '%images%'
-        games:   '%games%'
-
+        metas:              '%metas%'
+        classes:            '%classes%'
+        games:              '%games%'
+        images:             '%images%'
 when@test:
     twig:
         strict_variables: true

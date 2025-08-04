@@ -28,10 +28,6 @@ use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 
-/**
- * On retourne les données pour le sitemap
- *
- */
 class SitemapService implements ServiceCacheInterface
 {
     use CacheAble;

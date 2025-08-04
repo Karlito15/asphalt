@@ -18,7 +18,6 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('/{_locale<%app.supported_locales%>}/garage', name: 'app.garage.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-//#[Route('/garage', name: 'app.garage.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class CreateController extends AbstractController
 {
     use WebAble;
@@ -65,7 +64,7 @@ final class CreateController extends AbstractController
                 $entityManager->persist($garage);
                 $entityManager->flush();
                 // Flash
-                $message = sprintf($translator->trans('app.flash.garage.create') . ' : %1$s %2$s', $garage->getSettingBrand(), $garage->getModel());
+                $message = sprintf($translator->trans('app.flash.garage.create') . ' : %1$s %2$s', $garage->getSettingBrand()->getName(), $garage->getModel());
                 $this->addFlash('success', $message);
             } catch (RuntimeException $e) {
                 // Flash

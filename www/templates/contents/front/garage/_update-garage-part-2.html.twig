@@ -1,0 +1,59 @@
+<section class="card bg-light py-0 mb-2">
+    <div class="card-header">
+        <h2 class="text-center text-dark-emphasis h3 my-0">{{ 'app.garage.setting'|trans }}</h2>
+    </div>
+    <div class="card-body">
+        <div class="row row-cols-3 g-2">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header text-center">
+                        {{ form_label(form.gameUpdate) }}
+                    </div>
+                    <div class="card-body p-1">
+                        {{ form_widget(form.gameUpdate) }}
+                        {{ form_errors(form.gameUpdate) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header text-center">
+                        {{ form_label(form.stars) }}
+                    </div>
+                    <div class="card-body p-1">
+                        {{ form_widget(form.stars) }}
+                        {{ form_errors(form.stars) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header text-center">
+                        {{ form_label(form.carOrder) }}
+                    </div>
+                    <div class="card-body p-1">
+                        <div class="input-group input-group-sm">
+                            {{ form_widget(form.carOrder) }}
+                            <input type="text" class="{{ classes.input }}" value="/" readonly />
+                            <input type="text" class="{{ classes.input }}" value="{{ garage.settingClass.carsNumber }}" readonly />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <label class="form-label m-0" for="statOrder">{{ 'app.garage.update.statOrder'|trans }}</label>
+                    </div>
+                    <div class="card-body p-1">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="{{ classes.input }} p-2" value="{{ garage.statOrder }}" readonly />
+                            <input type="text" class="{{ classes.input }} p-2" value="/" readonly />
+                            <input type="text" class="{{ classes.input }} p-2" value="{{ garage.settingClass.carsNumber }}" readonly />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

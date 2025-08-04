@@ -13,31 +13,30 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 #[Route('{_locale<%app.supported_locales%>}/pages/setting/', name: 'app.page.setting.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class RankController extends AbstractController
 {
-    public function __construct(
-        private readonly GarageAppRepository $garage,
-        private readonly TranslatorInterface $translator,
-    ) {}
-
-    #[Route('rank-{letter}.php', name: 'rank', requirements: ['letter' => Requirement::ASCII_SLUG], methods: ['GET'])]
-    public function rank(Request $request): Response
+    #[Route('rank-{letter}.php', name: 'rank', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
+    public function rank(Request $request, GarageAppRepository $garage, TranslatorInterface $translator): Response
     {
-        $title  = $this->translator->trans('controllerName.app.page.setting.rank');
-        $letter = $request->attributes->get('letter');
+        $title   = $translator->trans('app.page.setting.rank.title');
+        $letter  = strtoupper($request->attributes->get('letter'));
+        $matchLetter = match ($letter) {
+            'A' => true,
+            'B' => true,
+            'C' => true,
+            'D' => true,
+            'S' => true,
+            default => false,
+        };
 
-        return $this->render('@App/app/page/setting/rank.html.twig', [
+        if (!$matchLetter) {
+            throw $this->createNotFoundException('Class Not Found');
+        }
+
+        return $this->render('@App/contents/front/page/setting-rank.html.twig', [
             'controller_name' => $title,
-            'breadcrumb'      => $title,
+            'breadcrumb'      => ['level1' => 'Page', 'level2' => $title],
             'index'           => 'app.page.setting.rank',
             'current'         => $request->attributes->get('_route'),
-            'results'         => $this->garage->getGarageRank($letter),
+            'results'         => $garage->getGaragePageSetting($letter),
         ]);
     }
-//    #[Route('/rank', name: 'app_rank')]
-//    public function index(): JsonResponse
-//    {
-//        return $this->json([
-//            'message' => 'Welcome to your new controller!',
-//            'path' => 'src/Controller/RankController.php',
-//        ]);
-//    }
 }

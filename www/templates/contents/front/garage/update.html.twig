@@ -2,17 +2,26 @@
 
 {% block content %}
 
-<div class="container-fluid">
+<div class="container-fluid px-0">
 
-    <div class="card bg-primary-subtle">
+    <div class="card bg-primary">
         <div class="card-header">
             <h2 class="text-center">{{ controller_name }}</h2>
         </div>
-        <div class="card-body">
-            {{ form_start(form) }}
-                {{ form_widget(form) }}
-                <button class="btn">{{ button_label|default('Save') }}</button>
-            {{ form_end(form) }}
+        <div class="card-body text-primary p-1">
+            {% include "@App/contents/front/garage/_update-garage-part-1.html.twig" %}
+            {% include "@App/contents/front/garage/_update-garage-part-2.html.twig" %}
+            {% include "@App/contents/front/garage/_update-garage-part-3.html.twig" %}
+            {% include "@App/contents/front/garage/_update-blueprint.html.twig" %}
+            {% include "@App/contents/front/garage/_update-rank.html.twig" %}
+            {% include "@App/contents/front/garage/_update-stat.html.twig" %}
+            {% include "@App/contents/front/garage/_update-tag.html.twig" %}
+            {% include "@App/contents/front/garage/_update-upgrade.html.twig" %}
+{#            {{ form_start(form) }}#}
+{#                {{ form_widget(form) }}#}
+{#                <button class="btn">{{ button_label|default('Save') }}</button>#}
+{#            {{ form_end(form) }}#}
+            {% include "@App/contents/front/garage/_update-errors.html.twig" %}
         </div>
     </div>
 

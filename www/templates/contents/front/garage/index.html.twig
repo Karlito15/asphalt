@@ -3,19 +3,19 @@
 {% block table %}
     <tbody>
         {% for entity in entities %}
-            <tr class="">
-                <td class="text-center">{{ entity.classValue }}</td>
-                <td><a href="{{ path('app.garage.update', {id: entity.id, slug: entity.slug}) }}" target="_blank" class="{{ _self.color(entity.unlocked,entity.gold) }}">{{ entity.brand }}</a></td>
-                <td><a href="{{ path('app.garage.update', {id: entity.id, slug: entity.slug}) }}" target="_blank" class="{{ _self.color(entity.unlocked,entity.gold) }}">{{ entity.model }}</a></td>
-                <td class="text-center">{{ entity.gameUpdate }}</td>
-                <td class="text-center">{{ entity.level }}</td>
-                <td class="text-center">{{ entity.epic }}</td>
-                <td class="text-center">{{ component('ValueBoolean', {value: entity.unlocked}) }}</td>
-                <td class="text-center">{{ component('ValueBoolean', {value: entity.gold}) }}</td>
-                <td class="text-right p-0">
+            <tr>
+                <td class="my-0 py-0 align-middle text-center">{{ entity.class_value }}</td>
+                <td class="my-0 py-0 align-middle text-left"><a href="{{ path('app.garage.update', {id: entity.id, slug: entity.slug}) }}" target="_blank" class="{{ _self.color(entity.unlocked, entity.gold) }}">{{ entity.brand }}</a></td>
+                <td class="my-0 py-0 align-middle text-left"><a href="{{ path('app.garage.update', {id: entity.id, slug: entity.slug}) }}" target="_blank" class="{{ _self.color(entity.unlocked, entity.gold) }}">{{ entity.model }}</a></td>
+                <td class="my-0 py-0 align-middle text-center">{{ entity.gameUpdate }}</td>
+                <td class="my-0 py-0 align-middle text-center">{{ entity.level }}</td>
+                <td class="my-0 py-0 align-middle text-center">{{ entity.epic }}</td>
+                <td class="my-0 py-0 align-middle text-center">{{ component('ValueBoolean', {value: entity.unlocked}) }}</td>
+                <td class="my-0 py-0 align-middle text-center">{{ component('ValueBoolean', {value: entity.gold}) }}</td>
+                <td class="my-0 py-0 align-middle text-right">
                     <div class="btn-group no-padding" role="group" aria-label="Action">
-                        <a class="btn btn-outline-warning" href="{{ path('app.garage.read', {'id': entity.id, 'slug': entity.slug}) }}" target="_blank">{{ 'btn.read' | trans }}&nbsp;<i class="fa-solid fa-file"></i></a>
-                        <a class="btn btn-outline-info" href="{{ path('app.garage.update', {'id': entity.id, 'slug': entity.slug}) }}" target="_blank"><i class="fa-solid fa-pencil"></i>&nbsp;{{ 'btn.update' | trans }}</a>
+                        <a class="btn btn-sm btn-outline-warning" href="{{ path('app.garage.read', {'id': entity.id, 'slug': entity.slug}) }}" target="_blank">{{ 'btn.read'|trans }}&nbsp;<i class="fa-solid fa-file"></i></a>
+                        <a class="btn btn-sm btn-outline-info" href="{{ path('app.garage.update', {'id': entity.id, 'slug': entity.slug}) }}" target="_blank"><i class="fa-solid fa-pencil"></i>&nbsp;{{ 'btn.update'|trans }}</a>
                     </div>
                 </td>
             </tr>
@@ -33,16 +33,16 @@
 
 {% macro legend() %}
         <tr>
-{#            <th>{{ 'table.id' | trans }}</th>#}
-            <th class="text-center">{{ 'table.class' | trans }}</th>
-            <th>{{ 'table.brand' | trans }}</th>
-            <th>{{ 'table.model' | trans }}</th>
-            <th class="text-center">{{ 'table.game.update' | trans }}</th>
-            <th class="text-center">{{ 'table.level' | trans }}</th>
-            <th class="text-center">{{ 'table.epic' | trans }}</th>
-            <th class="text-center">{{ 'table.unlocked' | trans }}</th>
-            <th class="text-center">{{ 'table.gold' | trans }}</th>
-            <th class="text-right">{{ 'table.actions' | trans }}</th>
+{#            <th>{{ 'table.id'|trans }}</th>#}
+            <th class="text-center">{{ 'table.class'|trans }}</th>
+            <th>{{ 'table.brand'|trans }}</th>
+            <th>{{ 'table.model'|trans }}</th>
+            <th class="text-center">{{ 'table.game.update'|trans }}</th>
+            <th class="text-center">{{ 'table.level'|trans }}</th>
+            <th class="text-center">{{ 'table.epic'|trans }}</th>
+            <th class="text-center">{{ 'table.unlocked'|trans }}</th>
+            <th class="text-center">{{ 'table.gold'|trans }}</th>
+            <th class="text-right">{{ 'table.actions'|trans }}</th>
         </tr>
 {% endmacro %}
 

@@ -13,7 +13,7 @@ trait WebAble
      *
      * @return array
      */
-    public static function getLinksPage(): array
+    private static function getLinksPage(): array
     {
         return [
             'index'  => self::$index,
@@ -25,7 +25,7 @@ trait WebAble
     /**
      * @return void
      */
-    public function redirectToIndex(): void
+    private function redirectToIndex(): void
     {
         $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
     }

@@ -16,7 +16,6 @@ use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('/{_locale<%app.supported_locales%>}/garage', name: 'app.garage.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-//#[Route('/garage', name: 'app.garage.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class UpdateController extends AbstractController
 {
     use WebAble;
@@ -49,33 +48,34 @@ final class UpdateController extends AbstractController
         TranslatorInterface $translator,
     ): Response
     {
-        $car   = $garage->getSettingBrand()->getName() . " " . $garage->getModel();
-        $title = $translator->trans('app.garage.update.title') . $car;
+        // Variables
+        $car     = $garage->getSettingBrand()->getName() . " " . $garage->getModel();
+        $title   = $translator->trans('app.garage.update.title') . $car;
+        $message = sprintf('%1$s' . $translator->trans('app.flash.garage.update'), $car);
 
-        /** Création du Formulaire */
+        // Création du Formulaire
         $form = $this->createForm(AppUpdateType::class, $garage)->handleRequest($request);
 
-        /** Vérification des données du formulaire */
+        // Vérification des données du formulaire
         if ($form->isSubmitted() && $form->isValid()) {
             try {
-                /** Events */
+                // Events
 //                $dispatcher->dispatch(new OrderByClassEvent($garage));
 //                $dispatcher->dispatch(new OrderByStatEvent($garage));
 //                $dispatcher->dispatch(new GarageTagEvent($garage));
-                /** Doctrines */
+                // Doctrines
                 $entityManager->flush();
-                /** Cache : delete items for Dashboard */
+                // Cache : delete items for Dashboard
                 $cache->cacheDelete();
-                /** Flash */
-                $message = sprintf('%1$s %2$s' . $translator->trans('app.flash.garage.update'), $garage->getSettingBrand(), $garage->getModel());
+                // Flash
                 $this->addFlash('success', $message);
             } catch (\RuntimeException $e) {
-                /** Flash */
-                $this->addFlash('danger', 'Houston, we have a problem !');
+                // Flash
+                $this->addFlash('danger', $translator->trans('app.flash.error'));
                 throw new \RuntimeException($e->getMessage(), $e->getCode(), $e);
             }
 
-            /** Redirection */
+            // Redirection
             return $this->redirectToRoute(self::$index, [], Response::HTTP_SEE_OTHER);
         }
 

@@ -2,6 +2,7 @@
 
 namespace App\Controller\Web\Front\Page\Filter;
 
+use App\Repository\GarageAppRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,59 +15,88 @@ final class StatusController extends AbstractController
 {
     public function __construct(
         private readonly TranslatorInterface $translator,
+        private readonly GarageAppRepository $repository,
     ) {}
 
-    #[Route('locked-{letter}.php', name: 'locked', requirements: ['letter' => Requirement::ASCII_SLUG], methods: ['GET'])]
+    #[Route('locked-{letter}.php', name: 'locked', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
     public function locked(Request $request): Response
     {
-        $title  = $this->translator->trans('app.page.filter.locked');
-        $letter = $request->attributes->get('letter');
+        $title  = $this->translator->trans('app.page.filter.locked.title');
+        $letter = strtoupper($request->attributes->get('letter'));
+        $matchLetter = match ($letter) {
+            'A' => true,
+            'B' => true,
+            'C' => true,
+            'D' => true,
+            'S' => true,
+            default => false,
+        };
+
+        if (!$matchLetter) {
+            throw $this->createNotFoundException('Class Not Found');
+        }
 
         return $this->render('@App/contents/front/page/filter.html.twig', [
             'controller_name' => $title,
-            'breadcrumb'      => $title,
+            'breadcrumb'      => ['level1' => 'Filter', 'level2' => $title],
             'index'           => 'app.page.filter.locked',
             'current'         => $request->attributes->get('_route'),
-            'results'         => $this->cacheCreate('locked.', $letter, ['where' => 'locked', 'value' => true]),
+            'results'         => $this->repository->getUnlockedCarsByClass($letter, false),
         ]);
     }
 
-    #[Route('unlock-{letter}.php', name: 'unlock', requirements: ['letter' => Requirement::ASCII_SLUG])]
+    #[Route('unlock-{letter}.php', name: 'unlock', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
     public function unlock(Request $request): Response
     {
-        $title  = $this->translator->trans('app.page.filter.unlock');
-        $letter = $request->attributes->get('letter');
+        $title  = $this->translator->trans('app.page.filter.unlock.title');
+        $letter = strtoupper($request->attributes->get('letter'));
+        $matchLetter = match ($letter) {
+            'A' => true,
+            'B' => true,
+            'C' => true,
+            'D' => true,
+            'S' => true,
+            default => false,
+        };
+
+        if (!$matchLetter) {
+            throw $this->createNotFoundException('Class Not Found');
+        }
 
         return $this->render('@App/contents/front/page/filter.html.twig', [
             'controller_name' => $title,
-            'breadcrumb'      => $title,
+            'breadcrumb'      => ['level1' => 'Filter', 'level2' => $title],
             'index'           => 'app.page.filter.unlock',
             'current'         => $request->attributes->get('_route'),
-            'results'         => $this->cacheCreate('unlock.', $letter, ['where' => 'locked', 'value' => false]),
+            'results'         => $this->repository->getUnlockedCarsByClass($letter, true),
         ]);
     }
 
-    #[Route('gold-{letter}.php', name: 'gold', requirements: ['letter' => Requirement::ASCII_SLUG])]
+    #[Route('gold-{letter}.php', name: 'gold', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
     public function gold(Request $request): Response
     {
-        $title  = $this->translator->trans('app.page.filter.gold');
-        $letter = $request->attributes->get('letter');
+        $title  = $this->translator->trans('app.page.filter.gold.title');
+        $letter = strtoupper($request->attributes->get('letter'));
+        $matchLetter = match ($letter) {
+            'A' => true,
+            'B' => true,
+            'C' => true,
+            'D' => true,
+            'S' => true,
+            default => false,
+        };
+
+        if (!$matchLetter) {
+            throw $this->createNotFoundException('Class Not Found');
+        }
 
         return $this->render('@App/contents/front/page/filter.html.twig', [
             'controller_name' => $title,
-            'breadcrumb'      => $title,
+            'breadcrumb'      => ['level1' => 'Filter', 'level2' => $title],
             'index'           => 'app.page.filter.gold',
             'current'         => $request->attributes->get('_route'),
-            'results'         => $this->cacheCreate('gold.', $letter, ['where' => 'gold', 'value' => true]),
+            'results'         => $this->repository->getGoldedCarsByClass($letter, true),
+//            'results'         => $this->repository->getGarageCondition(['g.gold' => 1], ['g.gameUpdate' => 'ASC']),
         ]);
     }
-
-//    #[Route('/order', name: 'app_order')]
-//    public function index(): JsonResponse
-//    {
-//        return $this->json([
-//            'message' => 'Welcome to your new controller!',
-//            'path' => 'src/Controller/OrderController.php',
-//        ]);
-//    }
 }

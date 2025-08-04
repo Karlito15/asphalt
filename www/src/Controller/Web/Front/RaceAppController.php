@@ -5,7 +5,7 @@ namespace App\Controller\Web\Front;
 use App\Able\Controller\WebAble;
 use App\Entity\RaceApp;
 use App\Form\Front\RaceAppType;
-use App\Repository\RaceAppRepository;
+use App\Service\Cache\RaceAppService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,7 +15,6 @@ use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('/{_locale<%app.supported_locales%>}/race', name: 'app.race.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-//#[Route('/race', name: 'app.race.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class RaceAppController extends AbstractController
 {
     use WebAble;
@@ -34,7 +33,7 @@ final class RaceAppController extends AbstractController
     ) {}
 
     #[Route('/index.php', name: 'index', methods: ['GET'])]
-    public function index(Request $request, RaceAppRepository $repository): Response
+    public function index(Request $request, RaceAppService $service): Response
     {
         $title = $this->translator->trans('app.race.index.title');
 
@@ -43,7 +42,7 @@ final class RaceAppController extends AbstractController
             'current_page'      => $request->attributes->get('_route'),
             'breadcrumb'        => ['level1' => 'Race', 'level2' => $title],
             'links'             => self::getLinksPage(),
-            'entities'          => $repository->findAll(),
+            'entities'          => $service->cacheCreate(),
         ]);
     }
 
@@ -64,10 +63,10 @@ final class RaceAppController extends AbstractController
         }
 
         return $this->render('@App/contents/front/race/form.html.twig', [
-            'controller_name' => $title,
-            'current_page'    => $request->attributes->get('_route'),
-            'race_app'        => $raceApp,
-            'form'            => $form,
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'race_app'          => $raceApp,
+            'form'              => $form,
 
         ]);
     }
@@ -87,11 +86,10 @@ final class RaceAppController extends AbstractController
         }
 
         return $this->render('@App/contents/front/race/form.html.twig', [
-            'controller_name' => $title,
-            'current_page'    => $request->attributes->get('_route'),
-            'race_app'        => $raceApp,
-            'form'            => $form,
-
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'race_app'          => $raceApp,
+            'form'              => $form,
         ]);
     }
 

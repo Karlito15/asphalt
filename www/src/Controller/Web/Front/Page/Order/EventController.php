@@ -3,7 +3,6 @@
 namespace App\Controller\Web\Front\Page\Order;
 
 use App\Repository\GarageAppRepository;
-use App\Repository\SettingClassRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,44 +13,29 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 #[Route('{_locale<%app.supported_locales%>}/pages/order-by-', name: 'app.page.order.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class EventController extends AbstractController
 {
-    public function __construct(
-        private readonly GarageAppRepository $garage,
-        private readonly SettingClassRepository $class,
-        private readonly TranslatorInterface $translator
-    ) {}
-
-    #[Route('event-{letter}.php', name: 'event', requirements: ['letter' => Requirement::ASCII_SLUG], methods: ['GET'])]
-    public function eventToken(Request $request): Response
+    #[Route('event-{letter}.php', name: 'event', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
+    public function eventToken(Request $request, GarageAppRepository $repository, TranslatorInterface $translator): Response
     {
-        $title  = $this->translator->trans('controllerName.app.page.order.event');
-        $letter = $request->attributes->get('letter');
-        $class  = $this->class->findBy(['value'  => $letter]);
+        $title  = $translator->trans('app.page.order.event.title');
+        $letter  = strtoupper($request->attributes->get('letter'));
+        $matchLetter = match ($letter) {
+            'A' => true,
+            'B' => true,
+            'C' => true,
+            'D' => true,
+            'S' => true,
+            default => false,
+        };
 
-        switch ($letter):
-//            case 'A':
-//                $result = $garage->findBy(['settingClass'  => $class], ['carOrder' => 'DESC'], 5, 1);
-//                break;
-//            case 'S':
-//                $result = $garage->findBy(['settingClass'  => $class], ['carOrder' => 'DESC'], 5, 3);
-//                break;
-            default;
-                $result = $this->garage->findBy(['settingClass'  => $class], ['carOrder' => 'DESC'], 5);
-                break;
-        endswitch;
+        if (!$matchLetter) {
+            throw $this->createNotFoundException('Class Not Found');
+        }
 
         return $this->render('@App/contents/front/page/order.html.twig', [
             'controller_name' => $title,
-            'breadcrumb'      => $title,
+            'breadcrumb'      => ['level1' => 'Page', 'level2' => $title],
             'current'         => $request->attributes->get('_route'),
-            'results'         => $result,
+            'results'         => $repository->getGarageCondition(['settingClass.value' => $letter], ['g.carOrder' => 'DESC'], [0, 5]),
         ]);
     }
-//    #[Route('/order', name: 'app_order')]
-//    public function index(): JsonResponse
-//    {
-//        return $this->json([
-//            'message' => 'Welcome to your new controller!',
-//            'path' => 'src/Controller/OrderController.php',
-//        ]);
-//    }
 }

@@ -5,15 +5,15 @@
         <!-- Form -->
         <div class="widget has-shadow">
             <div class="widget-header bordered no-actions d-flex align-items-center">
-                <h4>{% if app.current_route ends with 'create' %}{{ 'app.create.title' | trans }}{% else %}{{ 'app.update.title' | trans }}{% endif %}</h4>
+                <h4>{% if app.current_route ends with 'create' %}{{ 'app.create.title'|trans }}{% else %}{{ 'app.update.title'|trans }}{% endif %}</h4>
             </div>
             <div class="widget-body">
                 {{ form_start(form) }}
                     {{ form_widget(form) }}
 
                     <div class="row row-cols-2">
-                        <div class="col text-start"><a href="{{ path(link) }}" class="btn btn-outline-warning">{{ 'btn.back' | trans }}</a></div>
-                        <div class="col text-end"><button class="btn btn-outline-success">{{ button_label|default('btn.register' | trans) }}</button></div>
+                        <div class="col text-left"><a href="{{ path(link) }}" class="btn btn-outline-warning">{{ 'btn.back'|trans }}</a></div>
+                        <div class="col text-right"><button class="btn btn-outline-success">{{ button_label|default('btn.register'|trans) }}</button></div>
                     </div>
                 {{ form_end(form) }}
             </div>

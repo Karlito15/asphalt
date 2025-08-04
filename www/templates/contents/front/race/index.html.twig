@@ -4,14 +4,18 @@
 <tbody>
 {% for entity in entities %}
     <tr>
-        <td>{{ entity.id }}</td>
-        <td>{{ entity.raceOrder }}</td>
-        <td>{{ component('ValueBoolean', {value: entity.finished}) }}</td>
-        <td>{{ entity.slug }}</td>
-        <td><a class="btn btn-outline-info" href="{{ path('app.race.update', {'id': entity.id, 'slug': entity.slug}) }}" target="_blank"><i class="fa-solid fa-pencil"></i>&nbsp;{{ 'btn.update' | trans }}</a></td>
+        <td class="my-0 py-0 align-middle">{{ entity.Mode }}</td>
+        <td class="my-0 py-0 align-middle">{{ entity.Chapter }}</td>
+        <td class="my-0 py-0 align-middle">{{ entity.Season }}</td>
+        <td class="my-0 py-0 align-middle">{{ entity.Order }}</td>
+        <td class="my-0 py-0 align-middle">{{ entity.English }}</td>
+        <td class="my-0 py-0 align-middle">{{ entity.French }}</td>
+        <td class="my-0 py-0 align-middle">{{ entity.Time }}</td>
+        <td class="my-0 py-0 align-middle">{{ entity.Finished }}</td>
+        <td class="my-0 py-0 align-middle"><a class="btn btn-outline-info" href="{{ path('app.race.update', {'id': entity.id, 'slug': entity.slug}) }}" target="_blank"><i class="fa-solid fa-pencil"></i>&nbsp;{{ 'btn.update'|trans }}</a></td>
     </tr>
 {% else %}
-    {{ component('TableNoRecords', {value: 10}) }}
+    {{ component('TableNoRecords', {value: 9}) }}
 {% endfor %}
 </tbody>
 <thead>
@@ -24,10 +28,14 @@
 
 {% macro legend() %}
 <tr>
-    <th>{{ 'table.id' | trans }}</th>
-    <th>{{ 'table.order.race' | trans }}</th>
-    <th>{{ 'table.finished' | trans }}</th>
-    <th>{{ 'table.slug' | trans }}</th>
-    <th>{{ 'table.actions' | trans }}</th>
+    <th>{{ 'table.mode'|trans }}</th>
+    <th>{{ 'table.chapter'|trans }}</th>
+    <th>{{ 'table.season'|trans }}</th>
+    <th>{{ 'table.order.race'|trans }}</th>
+    <th>{{ 'table.name.english'|trans }}</th>
+    <th>{{ 'table.name.french'|trans }}</th>
+    <th>{{ 'table.time'|trans }}</th>
+    <th>{{ 'table.finished'|trans }}</th>
+    <th>{{ 'table.actions'|trans }}</th>
 </tr>
 {% endmacro %}

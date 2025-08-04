@@ -15,7 +15,6 @@ use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('{_locale<%app.supported_locales%>}/admin/race/season', name: 'app.race.season.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-//#[Route('/admin/race/season', name: 'app.race.season.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class SeasonController extends AbstractController
 {
     use WebAble;

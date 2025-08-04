@@ -1,0 +1,42 @@
+
+<div class="card-body">
+    <div class="card-title"><h4 class="text-dark text-center h6">{{ 'app.garage.garage'|trans }}</h4></div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center py-1">{{ 'table.brand'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.model'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.class'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.game.update'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.level'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.epic'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.order.car'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.order.stat'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ component('FormGarageRead', {name: 'table.brand', value: entity.brand }) }}</td>
+                <td>{{ component('FormGarageRead', {name: 'table.model', value: entity.model }) }}</td>
+                <td>{{ component('FormGarageRead', {name: 'table.class', value: entity.class_value }) }}</td>
+                <td>{{ component('FormGarageRead', {name: 'table.game.update', value: entity.gameUpdate }) }}</td>
+                <td>
+                    {% set level = entity.level ~ ' / ' ~ entity.level_level %}
+                    {{ component('FormGarageRead', {name: 'table.level', value: level }) }}
+                </td>
+                <td>
+                    {% set epic = entity.epic ~ ' / ' ~ entity.level_epic %}
+                    {{ component('FormGarageRead', {name: 'table.epic', value: epic }) }}
+                </td>
+                <td>
+                    {% set carOrder = entity.carOrder  ~ ' / ' ~ entity.class_number %}
+                    {{ component('FormGarageRead', {name: 'table.order.car', value: carOrder }) }}
+                </td>
+                <td>
+                    {% set statOrder = entity.statOrder  ~ ' / ' ~ entity.class_number %}
+                    {{ component('FormGarageRead', {name: 'table.order.stat', value: statOrder }) }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

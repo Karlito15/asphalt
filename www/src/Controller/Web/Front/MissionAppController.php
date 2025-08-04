@@ -5,7 +5,7 @@ namespace App\Controller\Web\Front;
 use App\Able\Controller\WebAble;
 use App\Entity\MissionApp;
 use App\Form\Front\MissionAppType;
-use App\Repository\MissionAppRepository;
+use App\Service\Cache\MissionAppService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,7 +15,6 @@ use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('/{_locale<%app.supported_locales%>}/mission', name: 'app.mission.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-//#[Route('/mission', name: 'app.mission.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class MissionAppController extends AbstractController
 {
     use WebAble;
@@ -34,7 +33,7 @@ final class MissionAppController extends AbstractController
     ) {}
 
     #[Route('/index.php', name: 'index', methods: ['GET'])]
-    public function index(Request $request, MissionAppRepository $repository): Response
+    public function index(Request $request, MissionAppService $service): Response
     {
         $title = $this->translator->trans('app.mission.index.title');
 
@@ -43,7 +42,7 @@ final class MissionAppController extends AbstractController
             'current_page'      => $request->attributes->get('_route'),
             'breadcrumb'        => ['level1' => 'Mission', 'level2' => $title],
             'links'             => self::getLinksPage(),
-            'entities'          => $repository->findAll(),
+            'entities'          => $service->cacheCreate(),
         ]);
     }
 

@@ -36,13 +36,13 @@ return [
         'type' => 'css',
     ],
     'bootstrap-table' => [
-        'version' => '1.24.1',
+        'version' => '1.24.2',
     ],
     'jquery' => [
         'version' => '3.7.1',
     ],
     'bootstrap-table/dist/bootstrap-table.min.css' => [
-        'version' => '1.24.1',
+        'version' => '1.24.2',
         'type' => 'css',
     ],
     'htmx.org' => [

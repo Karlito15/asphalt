@@ -1,0 +1,55 @@
+
+<div class="card-body">
+    <div class="card-title"><h4 class="text-dark text-center h6">{{ 'app.garage.blueprint'|trans }}</h4></div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center py-1">{{ 'table.star1'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.star2'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.star3'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.star4'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.star5'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.star6'|trans }}</th>
+                <th class="text-center py-1">{{ 'table.total'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {% set star1 = entity.garage_star1 ~ '/' ~ entity.blueprint_star1 %}
+                    {{ component('FormGarageRead', {name: 'table.star1', value: star1 }) }}
+                </td>
+                <td>
+                    {% set star2 = entity.garage_star2 ~ '/' ~ entity.blueprint_star2 %}
+                    {{ component('FormGarageRead', {name: 'table.star2', value: star2 }) }}
+                </td>
+                <td>
+                    {% set star3 = entity.garage_star3 ~ '/' ~ entity.blueprint_star3 %}
+                    {{ component('FormGarageRead', {name: 'table.star3', value: star3 }) }}
+                </td>
+                <td>
+                    {% set star4 = entity.garage_star4 ~ '/' ~ entity.blueprint_star4 %}
+                    {{ component('FormGarageRead', {name: 'table.star4', value: star4 }) }}
+                </td>
+                <td>
+                    {% set star5 = entity.garage_star5 ~ '/' ~ entity.blueprint_star5 %}
+                    {{ component('FormGarageRead', {name: 'table.star5', value: star5 }) }}
+                </td>
+                <td>
+                    {% set star6 = entity.garage_star6 ~ '/' ~ entity.blueprint_star6 %}
+                    {{ component('FormGarageRead', {name: 'table.star6', value: star6 }) }}
+                </td>
+                <td>
+                    {% set total = entity.garage_total ~ '/' ~ entity.blueprint_total %}
+                    {{ component('FormGarageRead', {name: 'table.total', value: total }) }}
+                </td>
+{#                <td>#}
+{#                    <div class="input-group flex-nowrap">#}
+{#                        <input disabled type="text" class="form-control h5 text-center py-1" placeholder="" value="{{ entity.upgrade.first.epic }}">#}
+{#                        <input disabled type="text" class="form-control h5 text-center py-1" placeholder="" value="{{ entity.settingLevel.epic }}">#}
+{#                    </div>#}
+{#                </td>#}
+            </tr>
+        </tbody>
+    </table>
+</div>

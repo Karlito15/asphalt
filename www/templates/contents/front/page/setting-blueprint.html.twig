@@ -1,0 +1,56 @@
+{% extends '@App/bases/front/page-index.html.twig' %}
+
+{% block table %}
+    <thead>
+        <tr>
+            <th class="text-center">#</th>
+            <th class="text-left">{{ 'table.brand'|trans ~ ' ' ~ 'table.model'|trans }}</th>
+            <th class="text-center" colspan="3">1&nbsp;<i class="fa-solid fa-star fa-rotate-90"></i></th>
+            <th class="text-center" colspan="3">2&nbsp;<i class="fa-solid fa-star fa-rotate-90"></i></th>
+            <th class="text-center" colspan="3">3&nbsp;<i class="fa-solid fa-star fa-rotate-90"></i></th>
+            <th class="text-center" colspan="3">4&nbsp;<i class="fa-solid fa-star fa-rotate-90"></i></th>
+            <th class="text-center" colspan="3">5&nbsp;<i class="fa-solid fa-star fa-rotate-90"></i></th>
+            <th class="text-center" colspan="3">6&nbsp;<i class="fa-solid fa-star fa-rotate-90"></i></th>
+            <th class="text-center" colspan="3">Total</th>
+            <th class="text-center">{{ 'table.actions'|trans }}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for item in results %}
+        <tr>
+            <td class="text-center">{{ loop.index }}</td>
+            <td class="text-left"><a href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank">{{ item.brand }} {{ item.model }}</a></td>
+            <td class="text-center">{{ item.garage_star1 }}</td>
+            <td class="text-center">{{ item.blueprint_star1 }}</td>
+            <td class="text-center">{{ item.garage_star1 }}</td>
+
+            <td class="text-center">{{ item.garage_star2 }}</td>
+            <td class="text-center">{{ item.blueprint_star2 }}</td>
+            <td class="text-center">{{ (item.blueprint_star2|default(0) - item.garage_star2|default(0)) }}</td>
+
+            <td class="text-center">{{ item.garage_star3 }}</td>
+            <td class="text-center">{{ item.blueprint_star3 }}</td>
+            <td class="text-center">{{ (item.blueprint_star3|default(0) - item.garage_star3|default(0)) }}</td>
+
+            <td class="text-center">{{ item.garage_star4 }}</td>
+            <td class="text-center">{{ item.blueprint_star4 }}</td>
+            <td class="text-center">{{ (item.blueprint_star4|default(0) - item.garage_star4|default(0)) }}</td>
+
+            <td class="text-center">{{ item.garage_star5 }}</td>
+            <td class="text-center">{{ item.blueprint_star5 }}</td>
+            <td class="text-center">{{ (item.blueprint_star5|default(0) - item.garage_star5|default(0)) }}</td>
+
+            <td class="text-center">{{ item.garage_star6 }}</td>
+            <td class="text-center">{{ item.blueprint_star6 }}</td>
+            <td class="text-center">{{ (item.blueprint_star6|default(0) - item.garage_star6|default(0)) }}</td>
+
+            <td class="text-center">{{ item.blueprint_total }}</td>
+            <td class="text-center">{{ item.garage_total }}</td>
+            <td class="text-center">{{ (item.blueprint_total|default(0) - item.garage_total|default(0)) }}</td>
+            <td class="my-0 py-0 align-middle text-right"><a class="btn btn-sm btn-outline-info" href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank"><i class="fa-solid fa-pencil"></i>&nbsp;{{ 'btn.update'|trans }}</a></td>
+        </tr>
+    {% else %}
+        {{ component('TableNoRecords', { value: 25 }) }}
+    {% endfor %}
+    </tbody>
+{% endblock %}

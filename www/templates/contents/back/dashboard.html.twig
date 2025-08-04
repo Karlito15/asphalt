@@ -3,23 +3,23 @@
 {% block title %}{{ controller_name }}{% endblock %}
 
 {% block content %}
-<h6 class="display-4">{{ 'app.dashboard.admin.inventory' | trans }}</h6>
+<h6 class="display-4">{{ 'app.dashboard.admin.inventory'|trans }}</h6>
 <div class="row flex-row">
     {{ _self.card(inventory.link, inventory.title) }}
 </div>
-<h6 class="display-4">{{ 'app.dashboard.admin.mission' | trans }}</h6>
+<h6 class="display-4">{{ 'app.dashboard.admin.mission'|trans }}</h6>
 <div class="row flex-row">
     {% for item in missions %}
         {{ _self.card(item.link, item.title) }}
     {% endfor %}
 </div>
-<h6 class="display-4">{{ 'app.dashboard.admin.race' | trans }}</h6>
+<h6 class="display-4">{{ 'app.dashboard.admin.race'|trans }}</h6>
 <div class="row flex-row">
     {% for item in races %}
         {{ _self.card(item.link, item.title) }}
     {% endfor %}
 </div>
-<h6 class="display-4">{{ 'app.dashboard.admin.setting' | trans }}</h6>
+<h6 class="display-4">{{ 'app.dashboard.admin.setting'|trans }}</h6>
 <div class="row flex-row">
     {% for item in settings %}
         {{ _self.card(item.link, item.title) }}

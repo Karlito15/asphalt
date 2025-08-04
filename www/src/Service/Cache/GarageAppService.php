@@ -12,10 +12,6 @@ use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 
-/**
- * On retourne les données pour le tableau des stats du dashboard
- *
- */
 class GarageAppService implements ServiceCacheInterface
 {
     use CacheAble;
@@ -32,7 +28,7 @@ class GarageAppService implements ServiceCacheInterface
     /**
      * Créé tous les fichiers caches liés au garage
      *
-     * @return array
+     * @return array[]
      */
     public function cacheCreate(): array
     {
@@ -47,12 +43,8 @@ class GarageAppService implements ServiceCacheInterface
             if ($values->isHit()) {
                 return $values->get();
             }
-//            $results = [
-//                'index' => $this->repository->findBy([], ['gameUpdate' => 'DESC']),
-//                'index' => $this->repository->getGarage(),
-//            ];
-//            $results = $this->repository->findBy([], ['gameUpdate' => 'DESC']);
-            $results = $this->repository->getGarage();
+//            $results = $this->repository->getGarage();
+            $results = $this->repository->getGarageFullOption();
 
             $cache->get($this->namespace, function (ItemInterface $item) use ($results) {
                 $item->expiresAt(new \DateTime('+7 days'));
@@ -64,7 +56,7 @@ class GarageAppService implements ServiceCacheInterface
 
             return $results;
         } catch (InvalidArgumentException $e) {
-            echo $e->getMessage();
+            throw new \RuntimeException($e->getMessage());
         }
     }
 

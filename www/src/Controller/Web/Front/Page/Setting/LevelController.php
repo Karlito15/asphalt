@@ -13,31 +13,30 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 #[Route('{_locale<%app.supported_locales%>}/pages/setting/', name: 'app.page.setting.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class LevelController extends AbstractController
 {
-    public function __construct(
-        private readonly GarageAppRepository $garage,
-        private readonly TranslatorInterface $translator,
-    ) {}
-
-    #[Route('level-{letter}.php', name: 'level', requirements: ['letter' => Requirement::ASCII_SLUG], methods: ['GET'])]
-    public function level(Request $request): Response
+    #[Route('level-{letter}.php', name: 'level', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
+    public function level(Request $request, GarageAppRepository $garage, TranslatorInterface $translator): Response
     {
-        $title  = $this->translator->trans('controllerName.app.page.setting.level');
-        $letter = $request->attributes->get('letter');
+        $title   = $translator->trans('app.page.setting.level.title');
+        $letter  = strtoupper($request->attributes->get('letter'));
+        $matchLetter = match ($letter) {
+            'A' => true,
+            'B' => true,
+            'C' => true,
+            'D' => true,
+            'S' => true,
+            default => false,
+        };
 
-        return $this->render('@App/app/page/setting/level.html.twig', [
+        if (!$matchLetter) {
+            throw $this->createNotFoundException('Class Not Found');
+        }
+
+        return $this->render('@App/contents/front/page/setting-level.html.twig', [
             'controller_name' => $title,
-            'breadcrumb'      => $title,
+            'breadcrumb'      => ['level1' => 'Page', 'level2' => $title],
             'index'           => 'app.page.setting.level',
             'current'         => $request->attributes->get('_route'),
-            'results'         => $this->garage->getGarageUpgrade($letter),
+            'results'         => $garage->getGaragePageSetting($letter),
         ]);
     }
-//    #[Route('/level', name: 'app_level')]
-//    public function index(): JsonResponse
-//    {
-//        return $this->json([
-//            'message' => 'Welcome to your new controller!',
-//            'path' => 'src/Controller/LevelController.php',
-//        ]);
-//    }
 }

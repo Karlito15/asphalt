@@ -1,0 +1,42 @@
+<section class="card bg-light py-0 mb-2">
+    <div class="card-header">
+        <h2 class="text-center text-dark-emphasis h3 my-0">{{ 'app.garage.setting'|trans }}</h2>
+    </div>
+    <div class="card-body">
+        <div class="row row-cols-3 g-2">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header text-center">
+                        {{ form_label(form.settingBlueprint) }}
+                    </div>
+                    <div class="card-body p-1">
+                        {{ form_widget(form.settingBlueprint) }}
+                        {{ form_errors(form.settingBlueprint) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header text-center">
+                        {{ form_label(form.settingLevel) }}
+                    </div>
+                    <div class="card-body p-1">
+                        {{ form_widget(form.settingLevel) }}
+                        {{ form_errors(form.settingLevel) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header text-center">
+                        {{ form_label(form.settingUnitPrice) }}
+                    </div>
+                    <div class="card-body p-1">
+                        {{ form_widget(form.settingUnitPrice) }}
+                        {{ form_errors(form.settingUnitPrice) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

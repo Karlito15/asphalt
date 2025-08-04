@@ -15,7 +15,6 @@ use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('{_locale<%app.supported_locales%>}/admin/setting/blueprint', name: 'app.setting.blueprint.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-//#[Route('/admin/setting/blueprint', name: 'app.setting.blueprint.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class BlueprintController extends AbstractController
 {
     use WebAble;

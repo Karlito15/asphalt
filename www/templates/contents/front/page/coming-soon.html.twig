@@ -1,0 +1,37 @@
+{% extends '@App/bases/front/empty.html.twig' %}
+
+{% block content %}
+
+<div class="authentication">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12">
+                <div class="card auth_form">
+                    <div class="header">
+                        <img class="logo" src="{{ asset(images.logo) }}" alt="{{ metas.title }}">
+                        <h5>Coming Soon</h5>
+                        <span>back in the future</span>
+                    </div>
+                    <div class="body">
+                        <a href="{{ path('app.dashboard.noLocale') }}" class="btn btn-primary btn-block waves-effect waves-light">GO TO HOMEPAGE</a>
+                        <div class="signin_with mt-3">
+                            <a href="{{ path('app.dashboard.noLocale') }}" class="link">Need Help?</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright text-center">
+                    &copy;
+                    <script>document.write(new Date().getFullYear())</script>,
+                    <span>Designed by <a href="{{ path('app.dashboard.noLocale') }}" target="_blank">ThemeMakker</a></span>
+                </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+                <div class="card">
+                    <img src="{{ asset('themes/aero/assets/images/maintanance.svg') }}" alt="Coming Soon">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -15,7 +15,6 @@ use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('{_locale<%app.supported_locales%>}/admin/inventory', name: 'app.inventory.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-//#[Route('/admin/inventory', name: 'app.inventory.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class InventoryController extends AbstractController
 {
     use WebAble;

@@ -1,0 +1,36 @@
+{% extends '@App/bases/front/page-index.html.twig' %}
+
+{% block table %}
+    <thead>
+        <tr>
+            <th class="text-center">#</th>
+            <th class="text-left">{{ 'table.brand'|trans ~ ' ' ~ 'table.model'|trans }}</th>
+            <th class="text-center">{{ 'table.speed'|trans }}</th>
+            <th class="text-center">{{ 'table.acceleration'|trans }}</th>
+            <th class="text-center">{{ 'table.handling'|trans }}</th>
+            <th class="text-center">{{ 'table.nitro'|trans }}</th>
+            <th class="text-center">{{ 'table.common'|trans }}</th>
+            <th class="text-center">{{ 'table.rare'|trans }}</th>
+            <th class="text-center">{{ 'table.epic'|trans }}</th>
+            <th class="text-right">{{ 'table.actions'|trans }}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for item in results %}
+        <tr>
+            <td class="my-0 py-0 align-middle text-center">{{ loop.index }}</td>
+            <td class="my-0 py-0 align-middle text-left"><a href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank">{{ item.brand }} {{ item.model }}</a></td>
+            <td class="my-0 py-0 align-middle text-center">{{ (item.upgrade_speed - item.level_level) }}</td>
+            <td class="my-0 py-0 align-middle text-center">{{ (item.upgrade_acceleration - item.level_level) }}</td>
+            <td class="my-0 py-0 align-middle text-center">{{ (item.upgrade_handling - item.level_level) }}</td>
+            <td class="my-0 py-0 align-middle text-center">{{ (item.upgrade_nitro - item.level_level) }}</td>
+            <td class="my-0 py-0 align-middle text-center">{{ (item.upgrade_common - item.level_common) }}</td>
+            <td class="my-0 py-0 align-middle text-center">{{ (item.upgrade_rare - item.level_rare) }}</td>
+            <td class="my-0 py-0 align-middle text-center">{{ (item.upgrade_epic - item.level_epic) }}</td>
+            <td class="my-0 py-0 align-middle text-right"><a class="btn btn-sm btn-outline-info" href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank"><i class="fa-solid fa-pencil"></i>&nbsp;{{ 'btn.update'|trans }}</a></td>
+        </tr>
+    {% else %}
+        {{ component('TableNoRecords', { value: 10 }) }}
+    {% endfor %}
+    </tbody>
+{% endblock %}

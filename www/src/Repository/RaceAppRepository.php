@@ -102,7 +102,7 @@ class RaceAppRepository extends ServiceEntityRepository
      */
     private function query(): QueryBuilder
     {
-        $q  = "r.raceOrder as Order, r.finished AS Finished, r.slug AS Slug";
+        $q  = "r.id as id, r.raceOrder as Order, r.finished AS Finished, r.slug";
         $qb = $this->createQueryBuilder('r')->select($q);
         $qb
             // SELECT

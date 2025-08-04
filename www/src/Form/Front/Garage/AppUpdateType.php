@@ -8,12 +8,12 @@ use App\Entity\SettingBlueprint;
 use App\Entity\SettingBrand;
 use App\Entity\SettingClass;
 use App\Entity\SettingLevel;
-use App\Entity\SettingTag;
 use App\Entity\SettingUnitPrice;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -127,7 +127,7 @@ class AppUpdateType extends AbstractType
             // Settings
             ->add('settingBlueprint', EntityType::class, [
                 'attr'          => [
-                    'class' => 'form-control form-select',
+                    'class' => 'form-control',
                 ],
                 'class'         => SettingBlueprint::class,
 //                'choice_label' => 'id',
@@ -141,7 +141,7 @@ class AppUpdateType extends AbstractType
             ])
             ->add('settingBrand', EntityType::class, [
                 'attr'          => [
-                    'class' => 'form-control form-select',
+                    'class' => 'form-control',
                 ],
                 'autocomplete'  => true,
                 'choice_label'  => 'name',
@@ -157,7 +157,7 @@ class AppUpdateType extends AbstractType
             ])
             ->add('settingClass', EntityType::class, [
                 'attr'          => [
-                    'class' => 'form-control form-select',
+                    'class' => 'form-control',
                 ],
                 'choice_label'  => 'value',
                 'class'         => SettingClass::class,
@@ -172,7 +172,7 @@ class AppUpdateType extends AbstractType
             ])
             ->add('settingLevel', EntityType::class, [
                 'attr' => [
-                    'class' => 'form-control form-select',
+                    'class' => 'form-control',
                 ],
                 'class'       => SettingLevel::class,
 //                'choice_label' => 'id',
@@ -186,7 +186,7 @@ class AppUpdateType extends AbstractType
             ])
             ->add('settingUnitPrice', EntityType::class, [
                 'attr' => [
-                    'class' => 'form-control form-select',
+                    'class' => 'form-control',
                 ],
                 'class'       => SettingUnitPrice::class,
 //                'choice_label' => 'id',
@@ -199,35 +199,35 @@ class AppUpdateType extends AbstractType
                 'trim'        => true,
             ])
             // Collections
-//            ->add('blueprint', CollectionType::class, [
-//                'allow_add' => true,
-//                'entry_type' => BlueprintType::class,
-//            ])
-//            ->add('rank', CollectionType::class, [
-//                'allow_add' => true,
-//                'entry_type' => RankType::class,
-//            ])
-//            ->add('statMax', CollectionType::class, [
-//                'allow_add' => true,
-//                'entry_type' => StatMaxType::class,
-//            ])
-//            ->add('statMin', CollectionType::class, [
-//                'allow_add' => true,
-//                'entry_type' => StatMinType::class,
-//            ])
-//            ->add('upgrade', CollectionType::class, [
-//                'allow_add' => true,
-//                'entry_type' => UpgradeType::class,
-//            ])
+            ->add('blueprint', CollectionType::class, [
+                'allow_add' => true,
+                'entry_type' => BlueprintType::class,
+            ])
+            ->add('rank', CollectionType::class, [
+                'allow_add' => true,
+                'entry_type' => RankType::class,
+            ])
+            ->add('statMax', CollectionType::class, [
+                'allow_add' => true,
+                'entry_type' => StatMaxType::class,
+            ])
+            ->add('statMin', CollectionType::class, [
+                'allow_add' => true,
+                'entry_type' => StatMinType::class,
+            ])
+            ->add('upgrade', CollectionType::class, [
+                'allow_add' => true,
+                'entry_type' => UpgradeType::class,
+            ])
 //            ->add('settingTag', CollectionType::class, [
 //                'allow_add' => true,
 //                'entry_type' => SettingTag::class,
 //            ])
-            ->add('settingTag', EntityType::class, [
-                'class'        => SettingTag::class,
-                'choice_label' => 'id',
-                'multiple'     => true,
-            ])
+//            ->add('settingTag', EntityType::class, [
+//                'class'        => SettingTag::class,
+//                'choice_label' => 'id',
+//                'multiple'     => true,
+//            ])
         ;
     }
 

@@ -19,7 +19,7 @@ final class RaceController extends AbstractController
     #[Route('race.php', name: 'race', methods: ['GET', 'POST'])]
     public function race(Request $request, RaceAppRepository $repository): Response
     {
-        $title  = $this->translator->trans('controllerName.app.page.search.race');
+        $title  = $this->translator->trans('app.page.search.race.title');
 //        $search = new SearchRaceDTO();
 //        $form   = $this->createForm(RaceDTOType::class, $search)->handleRequest($request);
         $result = [];

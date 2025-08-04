@@ -22,6 +22,7 @@ api.setting.class.index         GET        http|https   ANY    /{_locale}/api/se
 api.setting.level.index         GET        http|https   ANY    /{_locale}/api/setting/level/index
 api.setting.tag.index           GET        http|https   ANY    /{_locale}/api/setting/tag/index
 api.setting.unit-price.index    GET        http|https   ANY    /{_locale}/api/setting/unit-price/index
+app.cache.index                 ANY        http|https   ANY    /{_locale}/admin/cache.php
 app.dashboard.admin             ANY        http|https   ANY    /{_locale}/admin.php
 app.dashboard.index             ANY        http|https   ANY    /{_locale}/index.php
 app.dashboard.noLocale          ANY        http|https   ANY    /
@@ -37,7 +38,6 @@ app.inventory.update            GET|POST   http|https   ANY    /{_locale}/admin/
 app.mission.create              GET|POST   http|https   ANY    /{_locale}/mission/create.php
 app.mission.delete              POST       http|https   ANY    /{_locale}/mission/delete/{id}.php
 app.mission.index               GET        http|https   ANY    /{_locale}/mission/index.php
-app.mission.update              GET|POST   http|https   ANY    /{_locale}/mission/update/{id}.php
 app.mission.task.create         GET|POST   http|https   ANY    /{_locale}/admin/mission/task/create.php
 app.mission.task.delete         POST       http|https   ANY    /{_locale}/admin/mission/task/delete/{id}
 app.mission.task.index          GET        http|https   ANY    /{_locale}/admin/mission/task/index.php
@@ -46,12 +46,13 @@ app.mission.type.create         GET|POST   http|https   ANY    /{_locale}/admin/
 app.mission.type.delete         POST       http|https   ANY    /{_locale}/admin/mission/type/delete/{id}.php
 app.mission.type.index          GET        http|https   ANY    /{_locale}/admin/mission/type/index.php
 app.mission.type.update         GET|POST   http|https   ANY    /{_locale}/admin/mission/type/update/{id}.php
-app.page.filter.gold            ANY        http|https   ANY    /{_locale}/pages/filter-by-gold-{letter}.php
+app.mission.update              GET|POST   http|https   ANY    /{_locale}/mission/update/{id}.php
+app.page.filter.gold            GET        http|https   ANY    /{_locale}/pages/filter-by-gold-{letter}.php
 app.page.filter.locked          GET        http|https   ANY    /{_locale}/pages/filter-by-locked-{letter}.php
-app.page.filter.to.gold         ANY        http|https   ANY    /{_locale}/pages/filter-by-to-gold-{letter}.php
+app.page.filter.to.gold         GET        http|https   ANY    /{_locale}/pages/filter-by-to-gold-{letter}.php
 app.page.filter.to.unlock       GET        http|https   ANY    /{_locale}/pages/filter-by-to-unlock-{letter}.php
-app.page.filter.to.upgrade      ANY        http|https   ANY    /{_locale}/pages/filter-by-to-upgrade-{letter}.php
-app.page.filter.unlock          ANY        http|https   ANY    /{_locale}/pages/filter-by-unlock-{letter}.php
+app.page.filter.to.upgrade      GET        http|https   ANY    /{_locale}/pages/filter-by-to-upgrade-{letter}.php
+app.page.filter.unlock          GET        http|https   ANY    /{_locale}/pages/filter-by-unlock-{letter}.php
 app.page.order.class            GET        http|https   ANY    /{_locale}/pages/order-by-class-{letter}.php
 app.page.order.event            GET        http|https   ANY    /{_locale}/pages/order-by-event-{letter}.php
 app.page.order.stat             GET        http|https   ANY    /{_locale}/pages/order-by-stat-{letter}.php
@@ -60,10 +61,6 @@ app.page.search.race            GET|POST   http|https   ANY    /{_locale}/pages/
 app.page.setting.blueprint      GET        http|https   ANY    /{_locale}/pages/setting/blueprint-{letter}.php
 app.page.setting.level          GET        http|https   ANY    /{_locale}/pages/setting/level-{letter}.php
 app.page.setting.rank           GET        http|https   ANY    /{_locale}/pages/setting/rank-{letter}.php
-app.race.create                 GET|POST   http|https   ANY    /{_locale}/race/create.php
-app.race.delete                 POST       http|https   ANY    /{_locale}/race/delete/{id}
-app.race.index                  GET        http|https   ANY    /{_locale}/race/index.php
-app.race.update                 GET|POST   http|https   ANY    /{_locale}/race/update/{slug}-{id}.php
 app.race.mode.create            GET|POST   http|https   ANY    /{_locale}/admin/race/mode/create.php
 app.race.mode.delete            POST       http|https   ANY    /{_locale}/admin/race/mode/delete/{id}
 app.race.mode.index             GET        http|https   ANY    /{_locale}/admin/race/mode/index.php
@@ -84,6 +81,10 @@ app.race.track.create           GET|POST   http|https   ANY    /{_locale}/admin/
 app.race.track.delete           POST       http|https   ANY    /{_locale}/admin/race/track/delete/{id}
 app.race.track.index            GET        http|https   ANY    /{_locale}/admin/race/track/index.php
 app.race.track.update           GET|POST   http|https   ANY    /{_locale}/admin/race/track/update/{id}.php
+app.race.create                 GET|POST   http|https   ANY    /{_locale}/race/create.php
+app.race.delete                 POST       http|https   ANY    /{_locale}/race/delete/{id}
+app.race.index                  GET        http|https   ANY    /{_locale}/race/index.php
+app.race.update                 GET|POST   http|https   ANY    /{_locale}/race/update/{slug}-{id}.php
 app.setting.blueprint.create    GET|POST   http|https   ANY    /{_locale}/admin/setting/blueprint/create.php
 app.setting.blueprint.delete    POST       http|https   ANY    /{_locale}/admin/setting/blueprint/delete/{id}.php
 app.setting.blueprint.index     GET        http|https   ANY    /{_locale}/admin/setting/blueprint/index.php
@@ -110,3 +111,4 @@ app.setting.unit-price.index    GET        http|https   ANY    /{_locale}/admin/
 app.setting.unit-price.update   GET|POST   http|https   ANY    /{_locale}/admin/setting/unit-price/update/{id}.php
 sitemap.back                    GET        http|https   ANY    /sitemap/back.xml
 sitemap.front                   GET        http|https   ANY    /sitemap/front.xml
+------------------------------- ---------- ------------ ------ -----------------------------------------------------

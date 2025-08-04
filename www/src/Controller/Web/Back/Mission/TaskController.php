@@ -15,7 +15,6 @@ use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('{_locale<%app.supported_locales%>}/admin/mission/task', name: 'app.mission.task.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-//#[Route('/admin/mission/task', name: 'app.mission.task.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class TaskController extends AbstractController
 {
     use WebAble;

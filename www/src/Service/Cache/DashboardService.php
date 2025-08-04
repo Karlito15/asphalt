@@ -13,10 +13,6 @@ use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 
-/**
- * On retourne les données pour le dashboard
- *
- */
 class DashboardService implements ServiceCacheInterface
 {
     use CacheAble;
@@ -173,11 +169,11 @@ class DashboardService implements ServiceCacheInterface
     private function getLockedByClass(string $class): int
     {
         $garage = match ($class) {
-            'A' => $this->garages->getCarsUnlockedByClass('A', false),
-            'B' => $this->garages->getCarsUnlockedByClass('B', false),
-            'C' => $this->garages->getCarsUnlockedByClass('C', false),
-            'D' => $this->garages->getCarsUnlockedByClass('D', false),
-            default => $this->garages->getCarsUnlockedByClass('S', false),
+            'A' => $this->garages->getUnlockedCarsByClass('A', false),
+            'B' => $this->garages->getUnlockedCarsByClass('B', false),
+            'C' => $this->garages->getUnlockedCarsByClass('C', false),
+            'D' => $this->garages->getUnlockedCarsByClass('D', false),
+            default => $this->garages->getUnlockedCarsByClass('S', false),
         };
 
         return count($garage);
@@ -192,11 +188,11 @@ class DashboardService implements ServiceCacheInterface
     private function getUnlockedByClass(string $class): int
     {
         $garage = match ($class) {
-            'A' => $this->garages->getCarsUnlockedByClass('A', true),
-            'B' => $this->garages->getCarsUnlockedByClass('B', true),
-            'C' => $this->garages->getCarsUnlockedByClass('C', true),
-            'D' => $this->garages->getCarsUnlockedByClass('D', true),
-            default => $this->garages->getCarsUnlockedByClass('S', true),
+            'A' => $this->garages->getUnlockedCarsByClass('A', true),
+            'B' => $this->garages->getUnlockedCarsByClass('B', true),
+            'C' => $this->garages->getUnlockedCarsByClass('C', true),
+            'D' => $this->garages->getUnlockedCarsByClass('D', true),
+            default => $this->garages->getUnlockedCarsByClass('S', true),
         };
 
         return count($garage);
@@ -211,11 +207,11 @@ class DashboardService implements ServiceCacheInterface
     private function getGoldByClass(string $class): int
     {
         $garage = match ($class) {
-            'A' => $this->garages->getCarsGoldByClass('A', true),
-            'B' => $this->garages->getCarsGoldByClass('B', true),
-            'C' => $this->garages->getCarsGoldByClass('C', true),
-            'D' => $this->garages->getCarsGoldByClass('D', true),
-            default => $this->garages->getCarsGoldByClass('S', true),
+            'A' => $this->garages->getGoldedCarsByClass('A', true),
+            'B' => $this->garages->getGoldedCarsByClass('B', true),
+            'C' => $this->garages->getGoldedCarsByClass('C', true),
+            'D' => $this->garages->getGoldedCarsByClass('D', true),
+            default => $this->garages->getGoldedCarsByClass('S', true),
         };
 
         return count($garage);

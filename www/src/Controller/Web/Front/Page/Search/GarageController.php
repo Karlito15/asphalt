@@ -19,7 +19,7 @@ final class GarageController extends AbstractController
     #[Route('garage.php', name: 'garage', methods: ['GET', 'POST'])]
     public function garage(Request $request, GarageAppRepository $repository): Response
     {
-        $title  = $this->translator->trans('controllerName.app.page.search.garage');
+        $title  = $this->translator->trans('app.page.search.garage.title');
 //        $search = new SearchGarageDTO();
 //        $form   = $this->createForm(GarageDTOType::class, $search)->handleRequest($request);
         $result = [];

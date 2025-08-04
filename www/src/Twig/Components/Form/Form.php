@@ -6,6 +6,9 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 use Symfony\UX\TwigComponent\Attribute\PreMount;
 
+/**
+ * Twig Component for Back Office
+ */
 #[AsTwigComponent(
     name: 'Form',
     template: '@App/components/form/Form.html.twig',

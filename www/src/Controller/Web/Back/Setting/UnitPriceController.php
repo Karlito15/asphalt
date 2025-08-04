@@ -15,7 +15,6 @@ use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('{_locale<%app.supported_locales%>}/admin/setting/unit-price', name: 'app.setting.unit-price.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
-//#[Route('/admin/setting/unit-price', name: 'app.setting.unit-price.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class UnitPriceController extends AbstractController
 {
     use WebAble;

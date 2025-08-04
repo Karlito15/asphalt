@@ -3,7 +3,7 @@
 namespace App\Form\Front\Garage;
 
 use App\Able\Form\FormAble;
-use App\Entity\GarageApp;
+use App\Entity\GarageStatMax;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -70,7 +70,7 @@ class StatMaxType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class'         => GarageApp::class,
+            'data_class'         => GarageStatMax::class,
             'allow_extra_fields' => true,
             'translation_domain' => 'forms',
         ]);

@@ -12,10 +12,6 @@ use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 
-/**
- * On retourne les données pour le tableau des stats du dashboard
- *
- */
 class RaceAppService implements ServiceCacheInterface
 {
     use CacheAble;
@@ -32,7 +28,7 @@ class RaceAppService implements ServiceCacheInterface
     /**
      * Créé tous les fichiers caches liés aux courses
      *
-     * @return array
+     * @return array[]
      */
     public function cacheCreate(): array
     {
@@ -47,9 +43,7 @@ class RaceAppService implements ServiceCacheInterface
             if ($values->isHit()) {
                 return $values->get();
             }
-            $results   = [
-                'index'     => $this->repository->getRaces(),
-            ];
+            $results = $this->repository->getRaces();
 
             $cache->get($this->namespace, function (ItemInterface $item) use ($results) {
                 $item->expiresAt(new \DateTime('+7 days'));
