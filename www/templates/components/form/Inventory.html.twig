@@ -1,0 +1,27 @@
+{#{{ attributes }}#}
+<!-- component HTML -->
+<div class="col-auto bg-light border border-danger border-3 p-3 rounded">
+    <h5 class="text-primary p-0 m-0">{{ datas.filter }} {{ datas.label }} <i class="{{ icon | default('fa-solid fa-star fa-3x') }} {{ color }}"></i></h5>
+    <div>
+        <label for="{{ datas.id }}">
+            <input
+                type="text"
+                name="{{ datas.slug }}"
+                id="{{ datas.id }}"
+                class="form-control fw-bold text-right"{# form-control-plaintext#}
+                max="{{ maxValue }}"
+                autocomplete="off"
+                autocapitalize="off"
+                maxlength="10"{#4294967295#}
+                minlength="0"
+                placeholder="Test Here"
+                required="required"
+                tabindex="{{ datas.position }}"
+                value="{{ datas.value|number_format }}"
+                hx-post="{{ path('ajax.dashboard.index') }}"
+                hx-target=".sweet"
+                hx-trigger="change"
+            >
+        </label>
+    </div>
+</div>

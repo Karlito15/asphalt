@@ -3,7 +3,6 @@
 namespace App\Controller\Web\Front;
 
 use App\Service\Cache\DashboardService;
-use Psr\Cache\InvalidArgumentException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,24 +12,21 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 #[Route(name: 'app.dashboard.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
 final class DashboardController extends AbstractController
 {
-    private static string $page = 'Dashboard';
-
-    public function __construct(
-        private readonly TranslatorInterface $translator,
-    ) {}
-
     /**
+     * @param DashboardService $cacheService
      * @param Request $request
-     * @param DashboardService $cacheDashboardService
+     * @param TranslatorInterface $translator
      * @return Response
-     * @throws InvalidArgumentException
      */
     #[Route(path: '{_locale<%app.supported_locales%>}/index.php', name: 'index')]
-//    #[Route('/', name: 'index')]
-    public function index(Request $request, DashboardService $cacheDashboardService): Response
+    public function index(
+        DashboardService $cacheService,
+        Request $request,
+        TranslatorInterface $translator,
+    ): Response
     {
-        $title          = $this->translator->trans('app.dashboard.index.title');
-        $dashboard      = $cacheDashboardService->cacheCreate();
+        $title     = $translator->trans('app.dashboard.index.title');
+        $dashboard = $cacheService->cacheCreate();
 
         return $this->render('@App/contents/front/dashboard/index.html.twig', [
             'controller_name'   => $title,
@@ -38,6 +34,10 @@ final class DashboardController extends AbstractController
             'breadcrumb'        => ['level1' => $title, 'level2' => null],
             'links'             => null,
             'dashboard'         => $dashboard,
+            'moneys'            => $dashboard['moneys'],
+            'commons'           => $dashboard['commons'],
+            'rares'             => $dashboard['rares'],
+            'jokers'            => $dashboard['jokers'],
         ]);
     }
 

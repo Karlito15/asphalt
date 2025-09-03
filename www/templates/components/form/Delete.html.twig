@@ -4,12 +4,12 @@
     &nbsp;
 {% else %}
 <div class="col-3 mt-2">
-    <!-- Form -->
     <div class="widget has-shadow">
         <div class="widget-header bordered no-actions d-flex align-items-center">
             <h4 class="h3">{{ 'app.delete.title'|trans }}</h4>
         </div>
         <div class="widget-body text-center">
+            <!-- Form -->
             <form
                 method="post"
                 action="{{ path(link, {'id': id}) }}"
@@ -18,8 +18,8 @@
                 <button class="btn btn-outline-danger">{{ 'btn.delete'|trans }}</button>
                 <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ id) }}">
             </form>
+            <!-- End Form -->
         </div>
     </div>
-    <!-- End Form -->
 </div>
 {% endif %}

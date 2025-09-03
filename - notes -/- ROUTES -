@@ -2,8 +2,8 @@
 Name                            Method     Scheme       Host   Path
 ------------------------------- ---------- ------------ ------ -----------------------------------------------------
 ux_entity_autocomplete          ANY        ANY          ANY    /autocomplete/{alias}
-ajax.dashboard.index            POST       http|https   ANY    /{_locale}/ajax/dashboard/index.php
-ajax.garage.update              POST       http|https   ANY    /{_locale}/ajax/garage/update.php
+ajax.dashboard.index            POST       http|https   ANY    /ajax/dashboard/index.php
+ajax.garage.update              POST       http|https   ANY    /ajax/garage/update.php
 api.dashboard.index             GET        http|https   ANY    /{_locale}/api/dashboard/index
 api.garage.index                GET        http|https   ANY    /{_locale}/api/garage/index
 api.inventory.index             GET        http|https   ANY    /{_locale}/api/inventory/index

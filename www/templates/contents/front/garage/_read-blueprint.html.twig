@@ -1,3 +1,4 @@
+{% import "@App/contents/front/garage/_macro-read.html.twig" as forms %}
 
 <div class="card-body">
     <div class="card-title"><h4 class="text-dark text-center h6">{{ 'app.garage.blueprint'|trans }}</h4></div>
@@ -17,31 +18,31 @@
             <tr>
                 <td>
                     {% set star1 = entity.garage_star1 ~ '/' ~ entity.blueprint_star1 %}
-                    {{ component('FormGarageRead', {name: 'table.star1', value: star1 }) }}
+                    {{ forms.input('table.star1', star1) }}
                 </td>
                 <td>
                     {% set star2 = entity.garage_star2 ~ '/' ~ entity.blueprint_star2 %}
-                    {{ component('FormGarageRead', {name: 'table.star2', value: star2 }) }}
+                    {{ forms.input('table.star2', star2) }}
                 </td>
                 <td>
                     {% set star3 = entity.garage_star3 ~ '/' ~ entity.blueprint_star3 %}
-                    {{ component('FormGarageRead', {name: 'table.star3', value: star3 }) }}
+                    {{ forms.input('table.star3', star3) }}
                 </td>
                 <td>
                     {% set star4 = entity.garage_star4 ~ '/' ~ entity.blueprint_star4 %}
-                    {{ component('FormGarageRead', {name: 'table.star4', value: star4 }) }}
+                    {{ forms.input('table.star4', star4) }}
                 </td>
                 <td>
                     {% set star5 = entity.garage_star5 ~ '/' ~ entity.blueprint_star5 %}
-                    {{ component('FormGarageRead', {name: 'table.star5', value: star5 }) }}
+                    {{ forms.input('table.star5', star5) }}
                 </td>
                 <td>
                     {% set star6 = entity.garage_star6 ~ '/' ~ entity.blueprint_star6 %}
-                    {{ component('FormGarageRead', {name: 'table.star6', value: star6 }) }}
+                    {{ forms.input('table.star6', star6) }}
                 </td>
                 <td>
                     {% set total = entity.garage_total ~ '/' ~ entity.blueprint_total %}
-                    {{ component('FormGarageRead', {name: 'table.total', value: total }) }}
+                    {{ forms.input('table.total', total) }}
                 </td>
 {#                <td>#}
 {#                    <div class="input-group flex-nowrap">#}

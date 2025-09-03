@@ -1,3 +1,4 @@
+{% import "@App/contents/front/garage/_macro-read.html.twig" as forms %}
 
 <div class="card-body">
     <div class="card-title"><h4 class="text-dark text-center h6">{{ 'app.garage.garage'|trans }}</h4></div>
@@ -16,25 +17,25 @@
         </thead>
         <tbody>
             <tr>
-                <td>{{ component('FormGarageRead', {name: 'table.brand', value: entity.brand }) }}</td>
-                <td>{{ component('FormGarageRead', {name: 'table.model', value: entity.model }) }}</td>
-                <td>{{ component('FormGarageRead', {name: 'table.class', value: entity.class_value }) }}</td>
-                <td>{{ component('FormGarageRead', {name: 'table.game.update', value: entity.gameUpdate }) }}</td>
+                <td>{{ forms.input('table.brand', entity.brand) }}</td>
+                <td>{{ forms.input('table.model', entity.model) }}</td>
+                <td>{{ forms.input('table.class', entity.class_value) }}</td>
+                <td>{{ forms.input('table.game.update', entity.gameUpdate) }}</td>
                 <td>
                     {% set level = entity.level ~ ' / ' ~ entity.level_level %}
-                    {{ component('FormGarageRead', {name: 'table.level', value: level }) }}
+                    {{ forms.input('table.level', level) }}
                 </td>
                 <td>
                     {% set epic = entity.epic ~ ' / ' ~ entity.level_epic %}
-                    {{ component('FormGarageRead', {name: 'table.epic', value: epic }) }}
+                    {{ forms.input('table.epic', epic) }}
                 </td>
                 <td>
                     {% set carOrder = entity.carOrder  ~ ' / ' ~ entity.class_number %}
-                    {{ component('FormGarageRead', {name: 'table.order.car', value: carOrder }) }}
+                    {{ forms.input('table.order.car', carOrder) }}
                 </td>
                 <td>
                     {% set statOrder = entity.statOrder  ~ ' / ' ~ entity.class_number %}
-                    {{ component('FormGarageRead', {name: 'table.order.stat', value: statOrder }) }}
+                    {{ forms.input('table.order.stat', statOrder) }}
                 </td>
             </tr>
         </tbody>

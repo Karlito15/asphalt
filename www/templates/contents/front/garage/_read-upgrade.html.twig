@@ -1,3 +1,4 @@
+{% import "@App/contents/front/garage/_macro-read.html.twig" as forms %}
 
 <div class="card-body">
     <div class="card-title"><h4 class="text-dark text-center h6">{{ 'app.garage.upgrade'|trans }}</h4></div>
@@ -17,31 +18,31 @@
             <tr>
                 <td>
                     {% set speed = entity.upgrade_speed ~ '/' ~ entity.level_level %}
-                    {{ component('FormGarageRead', {name: 'table.speed', value: speed }) }}
+                    {{ forms.input('table.speed', speed) }}
                 </td>
                 <td>
                     {% set acceleration = entity.upgrade_acceleration ~ '/' ~ entity.level_level %}
-                    {{ component('FormGarageRead', {name: 'table.acceleration', value: acceleration }) }}
+                    {{ forms.input('table.acceleration', acceleration) }}
                 </td>
                 <td>
                     {% set handling = entity.upgrade_handling ~ '/' ~ entity.level_level %}
-                    {{ component('FormGarageRead', {name: 'table.handling', value: handling }) }}
+                    {{ forms.input('table.handling', handling) }}
                 </td>
                 <td>
                     {% set nitro = entity.upgrade_nitro ~ '/' ~ entity.level_level %}
-                    {{ component('FormGarageRead', {name: 'table.nitro', value: nitro }) }}
+                    {{ forms.input('table.nitro', nitro) }}
                 </td>
                 <td>
                     {% set common = entity.upgrade_common ~ '/' ~ entity.level_common %}
-                    {{ component('FormGarageRead', {name: 'table.common', value: common }) }}
+                    {{ forms.input('table.common', common) }}
                 </td>
                 <td>
                     {% set rare = entity.upgrade_rare ~ '/' ~ entity.level_rare %}
-                    {{ component('FormGarageRead', {name: 'table.rare', value: rare }) }}
+                    {{ forms.input('table.rare', rare) }}
                 </td>
                 <td>
                     {% set epic = entity.upgrade_epic ~ '/' ~ entity.level_epic %}
-                    {{ component('FormGarageRead', {name: 'table.epic', value: epic }) }}
+                    {{ forms.input('table.epic', epic) }}
                 </td>
 {#                <td>#}
 {#                    <div class="input-group flex-nowrap">#}

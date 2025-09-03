@@ -1,4 +1,4 @@
-/**
+/*
  * Sweet Alert
  */
 import Swal from 'sweetalert2';

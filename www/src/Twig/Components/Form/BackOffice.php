@@ -10,10 +10,10 @@ use Symfony\UX\TwigComponent\Attribute\PreMount;
  * Twig Component for Back Office
  */
 #[AsTwigComponent(
-    name: 'Form',
-    template: '@App/components/form/Form.html.twig',
+    name: 'FormBackOffice',
+    template: '@App/components/form/BackOffice.html.twig',
 )]
-final class Form
+final class BackOffice
 {
     /** @var mixed|null */
     private mixed $form = null;

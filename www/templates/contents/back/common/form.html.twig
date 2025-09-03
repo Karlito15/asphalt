@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="row flex-row">
-    {{ component('Form', {'form': form, 'link': links.index}) }}
+    {{ component('FormBackOffice', {'form': form, 'link': links.index}) }}
     {{ component('FormDelete', {'id': entities.id, 'link': links.delete}) }}
 </div>
 

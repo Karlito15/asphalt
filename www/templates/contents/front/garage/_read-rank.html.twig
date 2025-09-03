@@ -1,4 +1,4 @@
-
+{% import "@App/contents/front/garage/_macro-read.html.twig" as forms %}
 
 <div class="card-body">
     <div class="card-title"><h4 class="text-dark text-center h6">{{ 'app.garage.rank'|trans }}</h4></div>
@@ -17,25 +17,25 @@
         <tbody>
             <tr>
                 <td>
-                   {{ component('FormGarageRead', {name: 'table.start', value: entity.rank_star0 }) }}
+                    {{ forms.input('table.start', entity.rank_star0) }}
                 </td>
                 <td>
-                   {{ component('FormGarageRead', {name: 'table.star1', value: entity.rank_star1 }) }}
+                    {{ forms.input('table.star1', entity.rank_star1) }}
                 </td>
                 <td>
-                   {{ component('FormGarageRead', {name: 'table.star2', value: entity.rank_star2 }) }}
+                    {{ forms.input('table.star2', entity.rank_star2) }}
                 </td>
                 <td>
-                   {{ component('FormGarageRead', {name: 'table.star3', value: entity.rank_star3 }) }}
+                    {{ forms.input('table.star3', entity.rank_star3) }}
                 </td>
                 <td>
-                   {{ component('FormGarageRead', {name: 'table.star4', value: entity.rank_star4 }) }}
+                    {{ forms.input('table.star4', entity.rank_star4) }}
                 </td>
                 <td>
-                   {{ component('FormGarageRead', {name: 'table.star5', value: entity.rank_star5 }) }}
+                    {{ forms.input('table.star5', entity.rank_star5) }}
                 </td>
                 <td>
-                   {{ component('FormGarageRead', {name: 'table.star6', value: entity.rank_star6 }) }}
+                    {{ forms.input('table.star6', entity.rank_star6) }}
                 </td>
             </tr>
         </tbody>
