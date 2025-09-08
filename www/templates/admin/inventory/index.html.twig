@@ -1,0 +1,36 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block datas %}
+    <table class="{{ classes.table_index }}">
+        <thead>
+            <tr>
+                <th class="text-center">Id</th>
+                <th>Label</th>
+                <th class="text-end">Value</th>
+                <th class="text-center">Filter</th>
+                <th class="text-center">Position</th>
+                <th class="text-center">Active</th>
+                <th>Slug</th>
+                <th class="text-end">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for inventory in inventories %}
+            <tr>
+                <td class="text-center">{{ inventory.id }}</td>
+                <td>{{ inventory.label }}</td>
+                <td class="text-end">{{ inventory.value }}</td>
+                <td class="text-center">{{ inventory.filter }}</td>
+                <td class="text-center">{{ inventory.position }}</td>
+                <td class="text-center">{{ inventory.active ? 'Yes' : 'No' }}</td>
+                <td>{{ inventory.slug }}</td>
+                <td class="text-end">{{ component('ButtonEdit', {id: inventory.id, slug: inventory.slug, path: 'admin.inventory.update', target: false}) }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

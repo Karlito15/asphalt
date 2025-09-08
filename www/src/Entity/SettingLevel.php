@@ -2,8 +2,8 @@
 
 namespace App\Entity;
 
-use App\Able\Entity\SettingLevelAble;
 use App\Repository\SettingLevelRepository;
+use App\Service\Entities\SettingLevelService;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -17,8 +17,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: SettingLevelRepository::class)]
 #[ORM\Table(name: 'setting_level')]
-#[ORM\Index(name: 'setting_level_idx', columns: ['slug'])]
 #[ORM\HasLifecycleCallbacks]
+#[ORM\Index(name: 'slug_idx', columns: ['slug'])]
 #[Gedmo\Loggable]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
 #[UniqueEntity(fields: ['level', 'common', 'rare', 'epic'])]
@@ -32,11 +32,12 @@ class SettingLevel
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use SettingLevelAble;
+    use SettingLevelService;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(options: ['unsigned' => true])]
+    #[Groups(['index'])]
     private ?int $id = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 10, 'unsigned' => true])]
@@ -72,7 +73,7 @@ class SettingLevel
     #[Gedmo\Versioned]
     private string $slug;
 
-    #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingLevel')]
+    #[ORM\OneToMany(targetEntity: AppGarage::class, mappedBy: 'settingLevel')]
     protected Collection $garage;
 
     public function __construct()
@@ -80,14 +81,14 @@ class SettingLevel
         $this->garage = new ArrayCollection();
     }
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
     public function __toString(): string
     {
         return $this->getSlug();
+    }
+
+    public function getId(): ?string
+    {
+        return $this->id;
     }
 
     public function getLevel(): ?int
@@ -144,14 +145,14 @@ class SettingLevel
     }
 
     /**
-     * @return Collection<int, GarageApp>
+     * @return Collection<int, AppGarage>
      */
     public function getGarage(): Collection
     {
         return $this->garage;
     }
 
-    public function addGarage(GarageApp $garage): static
+    public function addGarage(AppGarage $garage): static
     {
         if (!$this->garage->contains($garage)) {
             $this->garage->add($garage);
@@ -161,7 +162,7 @@ class SettingLevel
         return $this;
     }
 
-    public function removeGarage(GarageApp $garage): static
+    public function removeGarage(AppGarage $garage): static
     {
         if ($this->garage->removeElement($garage)) {
             // set the owning side to null (unless already changed)

@@ -16,8 +16,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: RaceTrackRepository::class)]
 #[ORM\Table(name: 'race_track')]
-#[ORM\Index(name: 'race_track_idx', columns: ['slug'])]
 #[ORM\HasLifecycleCallbacks]
+#[ORM\Index(name: 'slug_idx', columns: ['slug'])]
 #[Gedmo\Loggable]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
 #[UniqueEntity(fields: ['nameEnglish'])]
@@ -34,7 +34,8 @@ class RaceTrack
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(options: ['unsigned' => true])]
+    #[Groups(['index'])]
     private ?int $id = null;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique:true, nullable:false)]
@@ -56,11 +57,13 @@ class RaceTrack
     #[Gedmo\Versioned]
     private ?string $slug = null;
 
-    #[ORM\ManyToOne(targetEntity: RaceRegion::class, cascade: ['persist'], inversedBy: 'track')]
+//    #[ORM\ManyToOne(fetch: 'EAGER')]
+//    #[ORM\JoinColumn(name: "region_id", referencedColumnName: "id", unique: false, nullable: false)]
+    #[ORM\ManyToOne(targetEntity: RaceRegion::class, cascade: ['persist', 'remove'], inversedBy: 'track')]
     #[Assert\Type(RaceRegion::class)]
     private ?RaceRegion $region = null;
 
-    #[ORM\OneToMany(targetEntity: RaceApp::class, mappedBy: 'track', orphanRemoval: true)]
+    #[ORM\OneToMany(targetEntity: AppRace::class, mappedBy: 'track', orphanRemoval: true)]
     private Collection $race;
 
     public function __construct()
@@ -73,7 +76,7 @@ class RaceTrack
         return $this->getNameEnglish();
     }
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -127,14 +130,14 @@ class RaceTrack
     }
 
     /**
-     * @return Collection<int, RaceApp>
+     * @return Collection<int, AppRace>
      */
     public function getRace(): Collection
     {
         return $this->race;
     }
 
-    public function addRace(RaceApp $race): static
+    public function addRace(AppRace $race): static
     {
         if (!$this->race->contains($race)) {
             $this->race->add($race);
@@ -144,7 +147,7 @@ class RaceTrack
         return $this;
     }
 
-    public function removeRace(RaceApp $race): static
+    public function removeRace(AppRace $race): static
     {
         if ($this->race->removeElement($race)) {
             // set the owning side to null (unless already changed)

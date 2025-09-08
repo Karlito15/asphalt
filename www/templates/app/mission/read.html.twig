@@ -1,0 +1,66 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block title %}AppMission{% endblock %}
+
+{% block contents %}
+    <h1>AppMission</h1>
+
+    <table class="{{ classes.table_index }}">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ app_mission.id }}</td>
+            </tr>
+            <tr>
+                <th>Week</th>
+                <td>{{ app_mission.week }}</td>
+            </tr>
+            <tr>
+                <th>Region</th>
+                <td>{{ app_mission.region }}</td>
+            </tr>
+            <tr>
+                <th>Track</th>
+                <td>{{ app_mission.track }}</td>
+            </tr>
+            <tr>
+                <th>Class</th>
+                <td>{{ app_mission.class }}</td>
+            </tr>
+            <tr>
+                <th>Brand</th>
+                <td>{{ app_mission.brand }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ app_mission.description }}</td>
+            </tr>
+            <tr>
+                <th>Success</th>
+                <td>{{ app_mission.success }}</td>
+            </tr>
+            <tr>
+                <th>Target</th>
+                <td>{{ app_mission.target }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ app_mission.createdAt ? app_mission.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ app_mission.updatedAt ? app_mission.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DeletedAt</th>
+                <td>{{ app_mission.deletedAt ? app_mission.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app.mission.index') }}">back to list</a>
+
+    <a href="{{ path('app.mission.update', {'id': app_mission.id}) }}">edit</a>
+
+{#    {{ include('@App/app/mission/_delete_form.html.twig') }}#}
+{% endblock %}

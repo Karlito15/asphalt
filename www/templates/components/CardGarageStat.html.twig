@@ -1,0 +1,25 @@
+<!-- component html -->
+<div class="card bg-primary">
+{% if form == true %}
+    <div class="card-header text-center">
+        {{ form_label(max) }}
+{#        <label class="m-0 form-label" for="">Speed</label>#}
+    </div>
+    <div class="card-body p-0">
+        {{ form_widget(min) }}
+    </div>
+    <div class="card-footer p-0">
+        {{ form_widget(max) }}
+    </div>
+{% else %}
+    <div class="card-header text-center">
+        <label for="stat_average" class="form-label m-0">Average</label>
+    </div>
+    <div class="card-body p-0">
+        <label class="form-label m-0"><input type="text" class="{{ classes.input }}" inputmode="decimal" value="{{ min }}" readonly></label>
+    </div>
+    <div class="card-footer p-0">
+        <label class="form-label m-0"><input type="text" class="{{ classes.input }}" inputmode="decimal" value="{{ max }}" readonly></label>
+    </div>
+{% endif %}
+</div>

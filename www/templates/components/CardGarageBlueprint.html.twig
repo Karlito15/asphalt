@@ -1,0 +1,40 @@
+{#<div{{ attributes }}>#}
+<!-- component html -->
+<div class="card bg-primary col">
+    <div class="card-header text-center p-1">
+        {{ 'total' | trans }}
+    </div>
+
+    <div class="card-body text-center p-1">
+        <div class="input-group input-group-sm">
+            <input type="text" autocomplete="off" class="{{ classes.input }} bg-primary" max="{{ maxValue }}" value="{{ total }}" />
+            <input type="text" autocomplete="off" class="{{ classes.input }} bg-primary" max="{{ maxValue }}" value="{{ maxValue }}" />
+            <input type="text" autocomplete="off" class="{{ classes.input }} bg-primary" max="" value="{{ maxValue - total }}" />
+        </div>
+    </div>
+
+    <div class="card-footer text-center p-1">
+             {{ _self.Resume((maxValue - total)) }}
+    </div>
+</div>
+{#</div>#}
+
+{% macro Resume(blueprint) %}
+    {% if blueprint == 'Key' %}
+        {% set result = 0 %}
+    {% else %}
+        {% set result = (blueprint / games.pack)|round(0, 'ceil') %}
+    {% endif %}
+{##}
+    {% if result != 0 %}
+    <div class="input-group input-group-sm">
+        <input type="text" class="{{ classes.input }} w-50 text-info px-0" tabindex="99" value="{{ (result * games.pack_price)|number_format }} tokens" />
+        <input type="text" class="{{ classes.input }} w-50 text-success" tabindex="99" value="{{ result }} packs" />
+    </div>
+    {% else %}
+    <div class="input-group input-group-sm">
+        <input type="text" class="{{ classes.input }} w-50" tabindex="99" value="" />
+        <input type="text" class="{{ classes.input }} w-50" tabindex="99" value="" />
+    </div>
+    {% endif %}
+{% endmacro %}

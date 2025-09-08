@@ -1,0 +1,23 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block datas %}
+{{ form_start(form) }}
+    <div class="row bg-secondary">
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="row">
+        <div class="col">{{ form_row(form.name) }}</div>
+    </div>
+    <div class="row">
+        <div class="col">{{ form_rest(form) }}</div>
+    </div>
+
+    {{ component('FormSaveDatas', {link: index}) }}
+{{ form_end(form) }}
+
+{% if items.3 == 'update' %}
+    {{ component('FormDeleteDatas', {link: 'admin.race.region.delete', id: race_region.id}) }}
+{% endif %}
+
+{% endblock %}

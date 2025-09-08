@@ -1,0 +1,37 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block contents %}
+	<div class="card bg-primary container">
+		<div class="card-header">
+			<h2 class="text-center text-warning py-3">{{ controller_name }}</h2>
+		</div>
+		<div class="card-body">
+			{{ form_start(form) }}
+				<div class="form-error">
+					{{ form_errors(form.settingClass) }}
+					{{ form_errors(form.settingBrand) }}
+					{{ form_errors(form.model) }}
+					{{ form_errors(form.gameUpdate) }}
+					{{ form_errors(form) }}
+				</div>
+
+				<div class="row row-cols-2 g-5 mb-3">
+					{{ form_row(form.settingBrand) }}
+                    {{ form_row(form.model, {'attr': {'value': '500X'}}) }}
+				</div>
+
+				<div class="row row-cols-3 g-5 mb-3">
+					{{ form_row(form.settingClass) }}
+					{{ form_row(form.stars) }}
+					{{ form_row(form.gameUpdate, {'attr': {'value': game_update_last}}) }}
+				</div>
+
+				<div class="row row-cols-3">
+					<div class="w-25"><a class="btn btn-outline-warning text-uppercase w-100 fs-4 mx-2" href="{{ path('app.garage.index') }}">Back to List</a></div>
+					<div class="w-25">&nbsp;</div>
+					<div class="w-50"><button type="submit" class="btn btn-outline-success text-uppercase w-100 fs-4 px-4">{{ button_label|default('Create') }}</button></div>
+				</div>
+			{{ form_end(form) }}
+		</div>
+	</div>
+{% endblock %}

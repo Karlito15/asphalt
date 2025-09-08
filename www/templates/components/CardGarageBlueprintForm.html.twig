@@ -1,0 +1,62 @@
+{% if maxValue == 'Key' or form.vars.value == 'Key' %}
+{% set total = 'Key' %}
+{% elseif maxValue == 'Key' or form.vars.value == 'Key' %}
+{% set total = null %}
+{% else %}
+    {% if form.vars.value is not empty %}
+        {% set total = (maxValue - form.vars.value) %}
+    {% else %}
+        {% set total = (maxValue - 0) %}
+    {% endif %}
+{% endif %}
+
+{#<div{{ attributes }}>#}
+<!-- component html -->
+<div class="card bg-primary col">
+    <div class="card-header text-center p-1">
+        {{ form_label(form) }}
+    </div>
+
+    <div class="card-body text-center p-1">
+        <div class="input-group input-group-sm">
+            {{ form_widget(form, {attr: {'max': maxValue}}) }}
+            <input type="text" autocomplete="off" class="form-control form-control-sm text-center fw-bolder" max="{{ maxValue }}" value="{{ maxValue }}" />
+            <input type="text" autocomplete="off" class="form-control form-control-sm text-center fw-bolder" max="" value="{{ total }}" />
+        </div>
+    </div>
+
+    <div class="card-footer text-center p-1">
+        {{ _self.Resume(total) }}
+    </div>
+</div>
+{#</div>#}
+
+{% macro diff(max, curent) %}
+    {% if max == 'Key' and curent == 'Key' %}
+        Key
+    {% elseif max == 'Key' and curent != 'Key' %}
+        None
+    {% else %}
+      {{ max - curent }}
+    {% endif %}
+{% endmacro %}
+
+{% macro Resume(blueprint) %}
+    {% if blueprint == 'Key' %}
+        {% set result = 0 %}
+    {% else %}
+        {% set result = (blueprint / games.pack)|round(0, 'ceil') %}
+    {% endif %}
+
+    {% if result != 0 %}
+    <div class="input-group input-group-sm">
+        <input type="text" class="{{ classes.input }} w-50 text-info" tabindex="99" value="{{ (result * games.pack_price)|number_format }} t." />
+        <input type="text" class="{{ classes.input }} w-50 text-success" tabindex="99" value="{{ result }} p." />
+    </div>
+    {% else %}
+    <div class="input-group input-group-sm">
+        <input type="text" class="{{ classes.input }} w-50" tabindex="99" value="" />
+        <input type="text" class="{{ classes.input }} w-50" tabindex="99" value="" />
+    </div>
+    {% endif %}
+{% endmacro %}

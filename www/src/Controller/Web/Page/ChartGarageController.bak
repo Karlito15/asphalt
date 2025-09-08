@@ -1,0 +1,165 @@
+<?php
+
+namespace App\Controller\Web\Page\Stat;
+
+use App\Repository\StatisticalRepository;
+use Psr\Cache\InvalidArgumentException;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Cache\ItemInterface;
+use Symfony\UX\Chartjs\Builder\ChartBuilderInterface;
+use Symfony\UX\Chartjs\Model\Chart;
+
+/**
+ * Class GarageController
+ *
+ * @package App\Controller\Web\Page\Stat
+ */
+#[Route('{_locale<%app.supported_locales%>}/stat', format: 'html', utf8: true)]
+class GarageController extends AbstractController
+{
+	#[Route('/garage.php', name: 'app_web_stats_garage', methods: ['GET'])]
+    public function index(ChartBuilderInterface $chartBuilder,
+    StatisticalRepository $repository): Response
+    {
+		// Entity
+		$cache  = new FilesystemAdapter();
+		$entity = [];
+        $repository->findBy([], [], 5, 0);
+
+		// Charts
+		$chart  = $chartBuilder->createChart(Chart::TYPE_PIE);
+		$lock   = $chartBuilder->createChart(Chart::TYPE_PIE);
+		$unlock = $chartBuilder->createChart(Chart::TYPE_PIE);
+		$gold   = $chartBuilder->createChart(Chart::TYPE_PIE);
+
+		// Options
+		$chart->setOptions([
+			'plugins' => [
+				'title' => ['display' => true, 'text' => 'Garage', 'padding' => ['top' => 0, 'bottom' => 0]],
+			],
+		]);
+		$lock->setOptions([
+			'plugins' => [
+				'title' => ['display' => true, 'text' => 'Locks', 'padding' => ['top' => 0, 'bottom' => 0]],
+			],
+		]);
+		$unlock->setOptions([
+			'plugins' => [
+				'title' => ['display' => true, 'text' => 'Unlocks', 'padding' => ['top' => 0, 'bottom' => 0]],
+			],
+		]);
+		$gold->setOptions([
+			'plugins' => [
+				'title' => ['display' => true, 'text' => 'Golds', 'padding' => ['top' => 0, 'bottom' => 0]],
+			],
+		]);
+
+		// Datas
+		$chart->setData([
+			'labels' => ['Lock', 'Unlock'],
+			'datasets' => [
+				[
+					'label' => 'My Garage Dataset',
+					'backgroundColor' => [
+					  'rgba(255, 99, 132, 0.2)',
+					  'rgba(75, 192, 192, 0.2)',
+					],
+					'borderColor' => [
+					  'rgb(255, 99, 132)',
+					  'rgb(75, 192, 192)',
+					],
+					'borderWidth' => 1,
+					'data' => [50, 100],
+				],
+			],
+		]);
+		$lock->setData([
+			'labels' => ['Class D', 'Class C', 'Class B', 'Class A', 'Class S'],
+			'datasets' => [
+				[
+					'label' => 'My Garage Dataset',
+					'backgroundColor' => [
+					  'rgba(255, 159, 64, 0.2)',
+					  'rgba(255, 205, 86, 0.2)',
+					  'rgba(54, 162, 235, 0.2)',
+					  'rgba(153, 102, 255, 0.2)',
+					  'rgba(201, 203, 207, 0.2)'
+					],
+					'borderColor' => [
+					  'rgb(255, 159, 64)',
+					  'rgb(255, 205, 86)',
+					  'rgb(54, 162, 235)',
+					  'rgb(153, 102, 255)',
+					  'rgb(201, 203, 207)'
+					],
+					'borderWidth' => 1,
+					'data' => [10, 30, 40, 50, 60],
+				],
+			],
+		]);
+		$unlock->setData([
+			'labels' => ['Class D', 'Class C', 'Class B', 'Class A', 'Class S'],
+			'datasets' => [
+				[
+					'label' => 'My Garage Dataset',
+					'backgroundColor' => [
+					  'rgba(255, 159, 64, 0.2)',
+					  'rgba(255, 205, 86, 0.2)',
+					  'rgba(54, 162, 235, 0.2)',
+					  'rgba(153, 102, 255, 0.2)',
+					  'rgba(201, 203, 207, 0.2)'
+					],
+					'borderColor' => [
+					  'rgb(255, 159, 64)',
+					  'rgb(255, 205, 86)',
+					  'rgb(54, 162, 235)',
+					  'rgb(153, 102, 255)',
+					  'rgb(201, 203, 207)'
+					],
+					'borderWidth' => 1,
+					'data' => [10, 30, 40, 50, 60],
+				],
+			],
+		]);
+		$gold->setData([
+			'labels' => ['Class D', 'Class C', 'Class B', 'Class A', 'Class S'],
+			'datasets' => [
+				[
+					'label' => 'My Garage Dataset',
+					'backgroundColor' => [
+					  'rgba(255, 159, 64, 0.2)',
+					  'rgba(255, 205, 86, 0.2)',
+					  'rgba(54, 162, 235, 0.2)',
+					  'rgba(153, 102, 255, 0.2)',
+					  'rgba(201, 203, 207, 0.2)'
+					],
+					'borderColor' => [
+					  'rgb(255, 159, 64)',
+					  'rgb(255, 205, 86)',
+					  'rgb(54, 162, 235)',
+					  'rgb(153, 102, 255)',
+					  'rgb(201, 203, 207)'
+					],
+					'borderWidth' => 1,
+					'data' => [10, 30, 40, 50, 60],
+				],
+			],
+		]);
+
+		return $this->render('@App/theme/bootstrap/contents/page/stat/garage.html.twig', [
+			'controller_name' => 'Stats : Garage',
+			'garage'          => ['label' => $entity[0]->getLabel(), 'value' => json_decode($entity[0]->getValue())],
+			'upgrade'         => ['label' => $entity[1]->getLabel(), 'value' => json_decode($entity[1]->getValue())],
+			'common'          => ['label' => $entity[2]->getLabel(), 'value' => json_decode($entity[2]->getValue())],
+			'rare'            => ['label' => $entity[3]->getLabel(), 'value' => json_decode($entity[3]->getValue())],
+			'epic'            => ['label' => $entity[4]->getLabel(), 'value' => json_decode($entity[4]->getValue())],
+			'chart'           => $chart,
+			'lock'            => $lock,
+			'unlock'          => $unlock,
+			'gold'            => $gold,
+		]);
+    }
+}

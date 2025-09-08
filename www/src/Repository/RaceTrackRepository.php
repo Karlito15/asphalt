@@ -2,7 +2,6 @@
 
 namespace App\Repository;
 
-use App\Able\Repository\SitemapsAble;
 use App\Entity\RaceTrack;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -12,28 +11,24 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class RaceTrackRepository extends ServiceEntityRepository
 {
-    use SitemapsAble;
-
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, RaceTrack::class);
     }
 
     /**
-     * Retourne les informations pour les extraire dans un fichier CSV
-     *
      * @return array
      */
-    public function exportDatas(): array
+    public function getDatas(): array
     {
-        $q  = "q.nameEnglish AS English, q.nameFrench AS French, q.slug AS Slug";
         $qb = $this->createQueryBuilder('q');
-        $qb->select($q);
-        $qb->leftJoin('q.region', 'r')->addselect('r.name AS Region');
+        $qb->select('q.id, q.nameEnglish, q.nameFrench, q.slug, r.name');
+        $qb->leftJoin('q.region', 'r')->addselect('r.name AS region');
         $qb->where('q.deletedAt IS NULL');
         $qb->orderBy('q.id', 'ASC');
+        $r = $qb->getQuery();
 
-        return $qb->getQuery()->getArrayResult();
+        return $r->getArrayResult();
     }
 
     /**
@@ -63,29 +58,4 @@ class RaceTrackRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
-    //    /**
-    //     * @return RaceTrack[] Returns an array of RaceTrack objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('r')
-    //            ->andWhere('r.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('r.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
-
-    //    public function findOneBySomeField($value): ?RaceTrack
-    //    {
-    //        return $this->createQueryBuilder('r')
-    //            ->andWhere('r.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
 }

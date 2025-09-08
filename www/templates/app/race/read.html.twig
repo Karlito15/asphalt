@@ -1,0 +1,46 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block title %}AppRace{% endblock %}
+
+{% block contents %}
+    <h1>AppRace</h1>
+
+    <table class="{{ classes.table_index }}">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ app_race.id }}</td>
+            </tr>
+            <tr>
+                <th>RaceOrder</th>
+                <td>{{ app_race.raceOrder }}</td>
+            </tr>
+            <tr>
+                <th>Finished</th>
+                <td>{{ app_race.finished ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Slug</th>
+                <td>{{ app_race.slug }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ app_race.createdAt ? app_race.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ app_race.updatedAt ? app_race.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DeletedAt</th>
+                <td>{{ app_race.deletedAt ? app_race.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app.race.index') }}">back to list</a>
+
+    <a href="{{ path('app.race.update', {'id': app_race.id}) }}">edit</a>
+
+    {{ component('FormDeleteDatas', {link: 'app.race.delete', id: app_race.id}) }}
+{% endblock %}

@@ -4,12 +4,11 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 imports:
-    - { resource: 'parameters.yaml' }
-
+    - { resource: '../../documents/yaml/parameters.yaml' }
 parameters:
-    app.supported_locales:  'en|fr|it'
+    app.supported_locales:  'en|fr'
     app.env:                '%env(APP_ENV)%'
-    locale:                 'en'
+    locale:                 'fr'
 
 services:
     # default configuration for services in *this* file
@@ -21,6 +20,10 @@ services:
     # this creates a service per class whose id is the fully-qualified class name
     App\:
         resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

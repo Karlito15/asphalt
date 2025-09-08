@@ -1,0 +1,10 @@
+/** DEV ENV */
+if (process.env.NODE_ENV === 'development') {
+	console.info('loaded :: Bootstrap 5.3');
+}
+
+/** Load Bootstrap */
+import * as bootstrap from 'bootstrap'
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
+import '../scss/bootstrap-5.3.scss'

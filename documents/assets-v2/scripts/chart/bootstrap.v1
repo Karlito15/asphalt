@@ -1,0 +1,13 @@
+/** DEV ENV */
+if (process.env.NODE_ENV === 'development') {
+	console.info('loaded :: Chart.js');
+}
+
+/**
+ * Chart.js
+ *
+ * @link 	: https://www.chartjs.org/
+ * @doc 	: https://www.chartjs.org/docs/2.9.4/
+ */
+
+import Chart from 'chart.js/dist/chart.min';

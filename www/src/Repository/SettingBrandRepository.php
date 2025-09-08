@@ -2,7 +2,6 @@
 
 namespace App\Repository;
 
-use App\Able\Repository\SitemapsAble;
 use App\Entity\SettingBrand;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -12,27 +11,23 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class SettingBrandRepository extends ServiceEntityRepository
 {
-    use SitemapsAble;
-
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, SettingBrand::class);
     }
 
     /**
-     * Retourne les informations pour les extraire dans un fichier CSV
-     *
      * @return array
      */
-    public function exportDatas(): array
+    public function getDatas(): array
     {
-        $q  = "q.name AS Name, q.cars_number AS Number, q.slug AS Slug";
         $qb = $this->createQueryBuilder('q');
-        $qb->select($q);
+        $qb->select('q.id, q.name, q.cars_number AS carsNumber, q.slug');
         $qb->where('q.deletedAt IS NULL');
         $qb->orderBy('q.id', 'ASC');
+        $r = $qb->getQuery();
 
-        return $qb->getQuery()->getArrayResult();
+        return $r->getArrayResult();
     }
 
     /**
@@ -62,29 +57,4 @@ class SettingBrandRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
-    //    /**
-    //     * @return SettingBrand[] Returns an array of SettingBrand objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('s')
-    //            ->andWhere('s.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('s.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
-
-    //    public function findOneBySomeField($value): ?SettingBrand
-    //    {
-    //        return $this->createQueryBuilder('s')
-    //            ->andWhere('s.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
 }

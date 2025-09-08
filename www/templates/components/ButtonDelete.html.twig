@@ -1,0 +1,5 @@
+<!-- component html -->
+<form method="post" action="{{ path(link, {'id': id}) }}" onsubmit="return confirm('Are you sure you want to delete this item ?');">
+{#	<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ id) }}">#}
+	<button class="btn btn-outline-danger text-uppercase w-100">Delete</button>
+</form>

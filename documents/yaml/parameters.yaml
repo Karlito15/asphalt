@@ -1,0 +1,22 @@
+parameters:
+    metas:
+        title:              'Asphalt Legends Unite'
+        author:             'Giancarlo PALUMBO'
+        email:              'giancarlo.palumbo@free.fr'
+        description:        ~
+        generator:          ~
+    classes:
+        table_index:        'table table-bordered table-striped table-dark'
+        btn_index:          'btn btn-outline-info p-2 border border-info rounded-right'
+        input:              'form-control form-control-sm bg-transparent text-center fw-bolder'
+    images:
+        logo:               'images/logo-white.png'
+    games:
+        pack:               6
+        pack_price:         900
+    paths:
+        csv:                '%kernel.project_dir%/../documents/csv/'
+    cache_lifetime:
+        inventory:          120  # (60 * 60 * 24 * 7)
+        garage:             120  # (60 * 60 * 24 * 7)
+        race:               2678400 # (60 * 60 * 24 * 31)

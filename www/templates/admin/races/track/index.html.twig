@@ -1,0 +1,29 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block datas %}
+    <table class="{{ classes.table_index }}">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>English</th>
+                <th>French</th>
+                <th>Slug</th>
+                <th class="text-end">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for track in tracks %}
+            <tr>
+                <td>{{ track.id }}</td>
+                <td>{{ track.nameEnglish }}</td>
+                <td>{{ track.nameFrench }}</td>
+                <td>{{ track.slug }}</td>
+                <td class="text-end">{{ component('ButtonEdit', {id: track.id, slug: track.slug, path: 'admin.race.track.update', target: false}) }}</td>
+            </tr>
+        {% else %}
+            	{{ component('TableNoRecords', {value: 5}) }}
+        {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}

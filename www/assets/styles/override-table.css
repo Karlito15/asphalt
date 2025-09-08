@@ -1,0 +1,16 @@
+.table, option {
+    font-family: monospace;
+}
+
+.table > tbody > tr > td:nth-child(1),
+.table > tbody > tr > td:nth-child(2) {
+    font-family: "Oxanium", monospace;
+}
+
+.table > thead > tr > th, .table > tbody > tr > td {
+    padding: 0.25rem;
+}
+
+.ts-wrapper {
+    padding: 0.1rem 0.5rem;
+}

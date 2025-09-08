@@ -1,0 +1,31 @@
+<div class="jumbotron bg-secondary p-3 mb-0">
+    {{ form_start(form, {'attr': {'class': 'm-0'}}) }}
+    <div class="form-row row-cols-4 g-4">
+    {#            <div>{{ form_widget(form.gameUpdate) }}</div>#}
+        <div class="col">{{ form_widget(form.classLetter) }}</div>
+{#        <div class="col">#}
+{#            <div class="btn-group" role="group" aria-label="booleans">#}
+{#                <input type="radio" class="btn-check" name="locked" id="false" autocomplete="off" value="0" checked>#}
+{#                <label class="btn" for="false">Unlocked</label>#}
+{#                <input type="radio" class="btn-check" name="locked" id="true" autocomplete="off" value="1">#}
+{#                <label class="btn" for="true">Locked</label>#}
+
+{#                <input type="checkbox" id="locked" class="btn-check" name="{{ field_name(form.locked) }}" autocomplete="off" value="{{ field_value(form.locked) }}">#}
+{#                <label class="btn btn-outline-primary" for="locked">Is Locked ?</label>#}
+{#                <input type="checkbox" id="gold" class="btn-check" name="{{ field_name(form.gold) }}" autocomplete="off" value="{{ field_value(form.gold) }}">#}
+{#                <label class="btn btn-outline-primary" for="gold">Is Gold ?</label>#}
+{#            </div>#}
+{#            {{ form_widget(form.gold) }}#}
+{#        </div>#}
+        <div class="col">
+            {{ form_widget(form.locked) }}
+        </div>
+        <div class="col">
+            {{ form_widget(form.gold) }}
+        </div>
+        <div class="col"><button type="submit" class="btn btn-outline-success w-100 px-3 text-uppercase">Search</button></div>
+    </div>
+    {{ form_errors(form) }}
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+</div>

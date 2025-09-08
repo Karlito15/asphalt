@@ -2,7 +2,6 @@
 
 namespace App\Repository;
 
-use App\Able\Repository\SitemapsAble;
 use App\Entity\RaceMode;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -12,27 +11,23 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class RaceModeRepository extends ServiceEntityRepository
 {
-    use SitemapsAble;
-
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, RaceMode::class);
     }
 
     /**
-     * Retourne les informations pour les extraire dans un fichier CSV
-     *
      * @return array
      */
-    public function exportDatas(): array
+    public function getDatas(): array
     {
-        $q  = "q.name AS Name, q.slug AS Slug";
         $qb = $this->createQueryBuilder('q');
-        $qb->select($q);
+        $qb->select('q.id, q.name, q.slug');
         $qb->where('q.deletedAt IS NULL');
         $qb->orderBy('q.id', 'ASC');
+        $r = $qb->getQuery();
 
-        return $qb->getQuery()->getArrayResult();
+        return $r->getArrayResult();
     }
 
     /**
@@ -62,29 +57,4 @@ class RaceModeRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
-    //    /**
-    //     * @return RaceMode[] Returns an array of RaceMode objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('r')
-    //            ->andWhere('r.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('r.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
-
-    //    public function findOneBySomeField($value): ?RaceMode
-    //    {
-    //        return $this->createQueryBuilder('r')
-    //            ->andWhere('r.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
 }

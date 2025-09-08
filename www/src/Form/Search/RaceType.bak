@@ -1,0 +1,32 @@
+<?php
+use App\Form\Race\TrackAutocompleteField;
+use App\Search\RaceSearch;
+
+class RaceType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        $builder
+//			->add('raceOrder', ChoiceType::class, [
+//				'choices'     => [
+//					'1' => 1,
+//					'2' => 2,
+//					'3' => 3,
+//					'4' => 4,
+//					'5' => 5,
+//				],
+//				'label'       => false,
+//				'placeholder' => 'Race Order',
+//				'required'    => false,
+//				'trim'        => true,
+//			])
+        ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefaults([
+			'data_class'         => RaceSearch::class,
+        ]);
+    }
+}

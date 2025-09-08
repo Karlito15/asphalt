@@ -1,0 +1,119 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block contents %}
+
+    <div id="sweet" style="display: none;"></div>
+
+    <div class="row">
+        <div class="col-8">
+            <!-- Begin Page Header-->
+            <div class="row">
+                <div class="page-header">
+                    <div class="d-flex align-items-center">
+                        <h2 class="page-header-title">{{ controller_name }}</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- End Page Header -->
+
+            {% include '@App/app/dashboard/_credit.html.twig' %}
+
+            <!-- Begin Row -->
+            <h3 class="text-uppercase text-center fw-bold h2 shadow-lg border-top pt-1">Jokers</h3>
+            {% include '@App/app/dashboard/_joker-1.html.twig' %}
+            {% include '@App/app/dashboard/_joker-2.html.twig' %}
+            {% include '@App/app/dashboard/_joker-3.html.twig' %}
+            {% include '@App/app/dashboard/_joker-4.html.twig' %}
+            {% include '@App/app/dashboard/_joker-5.html.twig' %}
+            <!-- End Row -->
+
+            {% include '@App/app/dashboard/_rare.html.twig' %}
+
+            {% include '@App/app/dashboard/_common.html.twig' %}
+        </div>
+
+        <div class="col-4">
+            {% include '@App/app/dashboard/_stats.html.twig' %}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block sweatalert %}
+<script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+<script>
+/**
+ * HTMX
+ */
+console.info('HTMX loaded !');
+
+/**
+ * Sweat Alert
+ */
+console.info('SWAT loaded !');
+document.body.addEventListener('htmx:afterRequest', function(evt) {
+    let response = evt.detail.xhr.response;
+    let status   = evt.detail.xhr.status;
+    let option   = {};
+
+    // 1. The requirement to show the sweet alert is that the element has a confirm-with-sweet-alert
+    //    attribute on it, if it doesn't we can return early and let the default behavior happen
+    if (!evt.detail.target.hasAttribute('id')) return
+
+    // 2. Get the question from the attribute
+    const id = evt.detail.target.getAttribute('id');
+
+    // 3. Prevent the default behavior (this will prevent the request from being issued)
+    evt.preventDefault();
+
+    // 4. Show the sweet alert
+    if (status === 200) {
+        option = {
+            position: 				'top-end',
+            title: 					'BDD',
+            text: 					response,
+            icon: 					'success',
+            iconColor: 				'green',
+            showConfirmButton: 		false,
+            timerProgressBar: 		true,
+            timer: 					1500,
+            toast:					true,
+            showCloseButton: 		false,
+            closeButtonHtml: 		'&times;',
+            closeButtonAriaLabel: 	'Close this dialog',
+            width:					'600px',
+            heightAuto:				true,
+        }
+    } else {
+        option = {
+            position: 				'top-end',
+            title: 					'Houston !',
+            text: 					'We have a problem !',
+            icon: 					'error',
+            iconColor:  			'red',
+            showConfirmButton: 		false,
+            timerProgressBar: 		true,
+            timer: 					500,
+            toast:					false,
+            showCloseButton: 		false,
+            closeButtonHtml: 		'&times;',
+            closeButtonAriaLabel: 	'Close this dialog',
+        }
+    }
+
+    Swal.fire(option);
+});
+</script>
+{% endblock %}
+
+{% macro faIcon(value) %}
+    {% if value == 'Speed' %}
+        fa-solid fa-rocket fa-3x
+    {% elseif value == 'Acceleration' %}
+        fa-solid fa-gauge-high fa-3x
+    {% elseif value == 'Handly' %}
+        fa-solid fa-gear fa-3x
+    {% elseif value == 'Nitro' %}
+        fa-solid fa-fire fa-3x
+    {% endif %}
+{% endmacro %}

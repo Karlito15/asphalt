@@ -1,0 +1,43 @@
+{% set id = this.datas.id %}
+{% set label = this.datas.label %}
+{% set value = this.datas.value %}
+{% set class = 'form-control form-control-plaintext fw-bold text-end' %}
+{% if value == maxValue %}
+    {% set class = class ~ ' text-danger' %}
+{% elseif value == (maxValue - 1) %}
+    {% set class = class ~ ' text-warning' %}
+{% else %}
+    {% set class = class ~ ' ' ~ color %}
+{% endif %}
+
+<!-- component html -->
+<div class="widget widget-12 has-shadow">
+    <div class="widget-body p-3">
+        <div class="media">
+            <div class="align-self-center mx-1 my-0">
+                <i class="{{ icon | default('fa-solid fa-star fa-3x') }} {{ color }}"></i>
+            </div>
+            <div class="align-self-center media-body">
+                <div class="title {{ color }} text-end text-nowrap">{{ title }}</div>
+                <div class="number">
+                    <form>
+                        <label for="{{ id }}">
+                            <input
+                                type="text"
+                                id="{{ id }}"
+                                class="{{ class }}"
+                                name="{{ this.datas.slug }}"
+                                value="{{ value|number_format }}"
+                                tabindex="{{ tabindex }}"
+                                autocomplete="off"
+                                hx-post="{{ path('ajax.request.inventory.without.form') }}"
+                                hx-target="#sweet"
+                                hx-trigger="change"
+                            >
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

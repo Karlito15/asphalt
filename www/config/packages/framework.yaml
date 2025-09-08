@@ -1,5 +1,6 @@
 # see https://symfony.com/doc/current/reference/configuration/framework.html
 framework:
+    default_locale: fr
     ide: phpstorm
     secret: '%env(APP_SECRET)%'
 
@@ -8,6 +9,19 @@ framework:
 
     #esi: true
     #fragments: true
+
+    csrf_protection:
+        enabled:              true
+        stateless_token_ids:  []
+        check_header:         false
+        cookie_name:          csrf-token
+
+    # HTTP cache configuration  
+    http_cache:  
+        enabled: true  
+        debug: '%kernel.debug%'  
+        trace-level: full  
+        trace-header: X-Symfony-Cache
 
 when@test:
     framework:

@@ -2,8 +2,8 @@
 
 namespace App\Entity;
 
-use App\Able\Entity\BlueprintAble;
 use App\Repository\SettingBlueprintRepository;
+use App\Service\Entities\BlueprintService;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -17,12 +17,11 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: SettingBlueprintRepository::class)]
 #[ORM\Table(name: 'setting_blueprint')]
-#[ORM\Index(name: 'setting_blueprint_idx', columns: ['slug'])]
+#[ORM\Index(name: 'slug_idx', columns: ['slug'])]
 #[ORM\HasLifecycleCallbacks]
 #[Gedmo\Loggable]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
 #[UniqueEntity(fields: ['star1', 'star2', 'star3', 'star4', 'star5', 'star6', 'total'])]
-#[UniqueEntity(fields: ['slug'])]
 class SettingBlueprint
 {
     /**
@@ -33,11 +32,12 @@ class SettingBlueprint
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use BlueprintAble;
+    use BlueprintService;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(options: ['unsigned' => true])]
+    #[Groups(['index'])]
     private ?int $id = null;
 
     #[ORM\Column(type: Types::STRING, length: 3, nullable: false)]
@@ -92,7 +92,7 @@ class SettingBlueprint
     #[Gedmo\Versioned]
     private string $slug;
 
-    #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingBlueprint')]
+    #[ORM\OneToMany(targetEntity: AppGarage::class, mappedBy: 'settingBlueprint')]
     protected Collection $garage;
 
     public function __construct()
@@ -100,14 +100,14 @@ class SettingBlueprint
         $this->garage = new ArrayCollection();
     }
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
     public function __toString(): string
     {
         return $this->getSlug();
+    }
+
+    public function getId(): ?string
+    {
+        return $this->id;
     }
 
     public function getStar1(): ?string
@@ -182,20 +182,25 @@ class SettingBlueprint
         return $this;
     }
 
+    public function getTotal(): ?int
+    {
+        return $this->total;
+    }
+
     public function getSlug(): ?string
     {
         return $this->slug;
     }
 
     /**
-     * @return Collection<int, GarageApp>
+     * @return Collection<int, AppGarage>
      */
     public function getGarage(): Collection
     {
         return $this->garage;
     }
 
-    public function addGarage(GarageApp $garage): static
+    public function addGarage(AppGarage $garage): static
     {
         if (!$this->garage->contains($garage)) {
             $this->garage->add($garage);
@@ -205,7 +210,7 @@ class SettingBlueprint
         return $this;
     }
 
-    public function removeGarage(GarageApp $garage): static
+    public function removeGarage(AppGarage $garage): static
     {
         if ($this->garage->removeElement($garage)) {
             // set the owning side to null (unless already changed)

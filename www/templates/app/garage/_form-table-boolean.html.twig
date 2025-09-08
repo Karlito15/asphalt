@@ -1,0 +1,81 @@
+{# BOOLEANS #}
+{% set form_background, color = 'bg-danger', 'danger' %}
+{% if garage.boolean.0.gold == 1 %}
+    {% set form_background, color = 'bg-warning text-warning', 'warning' %}
+{% elseif garage.boolean.0.toUpgrade == 1 %}
+    {% set form_background, color = 'bg-info text-info', 'info' %}
+{% elseif garage.boolean.0.locked == 0 and garage.boolean.0.gold == 0 %}
+    {% set form_background, color = 'bg-success text-success', 'success' %}
+{% endif %}
+{% set checkbox = 'btn btn-outline-' ~ color ~ '' %}
+
+{% set first = {
+  'locked': form.boolean.0.locked,
+  'fullBlueprint': form.boolean.0.fullBlueprint,
+  'gold': form.boolean.0.gold
+}
+%}
+
+{% set second = {
+  'unlock': form.boolean.0.to_unlock,
+  'upgrade': form.boolean.0.to_upgrade,
+  'gol': form.boolean.0.to_gold
+}
+%}
+
+{% set third = {
+  'speed': form.boolean.0.install_speed,
+  'acceleration': form.boolean.0.install_acceleration,
+  'handly': form.boolean.0.install_handly,
+  'nitro': form.boolean.0.install_nitro,
+  'common': form.boolean.0.install_common,
+  'rare': form.boolean.0.install_rare,
+  'epic': form.boolean.0.install_epic,
+}
+%}
+
+{% set fourth = {
+  'speed': form.boolean.0.full_speed,
+  'acceleration': form.boolean.0.full_acceleration,
+  'handly': form.boolean.0.full_handly,
+  'nitro': form.boolean.0.full_nitro,
+  'common': form.boolean.0.full_common,
+  'rare': form.boolean.0.full_rare,
+  'epic': form.boolean.0.full_epic,
+}
+%}
+<section class="card bg-primary py-0 mb-4">
+    <div class="card-header"><h3 class="text-center pt-1">Booleans</h3></div>
+    <div class="card-body">
+        <div class="card-group">
+            {{ component('CardGarageBoolean', {
+                title: 'Locked',
+                forms: first,
+                values: {},
+                class: checkbox,
+            }) }}
+            {{ component('CardGarageBoolean', {
+                title: 'Install',
+                forms: third,
+                values: {},
+                class: checkbox,
+            }) }}
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="card-group">
+            {{ component('CardGarageBoolean', {
+                title: 'To DO',
+                forms: second,
+                values: {},
+                class: checkbox,
+            }) }}
+            {{ component('CardGarageBoolean', {
+                title: 'Full',
+                forms: fourth,
+                values: {},
+                class: checkbox,
+            }) }}
+        </div>
+    </div>
+</section>

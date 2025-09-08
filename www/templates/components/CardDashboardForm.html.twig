@@ -1,0 +1,33 @@
+{% set class = form.value.vars.attr.class ~ ' ' ~ color %}
+
+<!-- component html -->
+<div class="widget widget-12 has-shadow">
+    <div class="widget-body">
+        <div class="media">
+            <div class="align-self-center mx-1 my-0">
+                <i class="{{ icon | default('fa-solid fa-star fa-3x') }} {{ color }}"></i>
+            </div>
+            <div class="align-self-center media-body">
+                <div class="title {{ color }} text-end">{{ title }}</div>
+                <div class="number">
+                    <form>
+                        <label for="{{ form.vars.value.id }}">
+                            {{ form_start(form) }}
+                            {{ form_widget(form.value, {
+                                'attr': {
+                                    'autocomplete': 'off',
+                                    'class': class,
+                                    'data-entity-id': form.vars.value.id,
+                                    'hx-post': path('ajax.request.inventory'),
+                                    'hx-target': "#sweet",
+                                    'hx-trigger': "change",
+                                }
+                            }) }}
+                            {{ form_end(form) }}
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

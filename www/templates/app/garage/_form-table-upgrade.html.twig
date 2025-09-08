@@ -1,0 +1,35 @@
+<section class="card bg-primary py-0 mb-4 col-20">
+    <div class="card-header"><h3 class="text-center pt-1">Upgrades</h3></div>
+    <div class="card-body">
+        <div class="card-group">
+            {{ component('CardGarageUpgrade', {
+                form: form.upgrade.0.speed,
+                garage: garage.level,
+            }) }}
+            {{ component('CardGarageUpgrade', {
+                form: form.upgrade.0.acceleration,
+                garage: garage.level,
+            }) }}
+            {{ component('CardGarageUpgrade', {
+                form: form.upgrade.0.handly,
+                garage: garage.level,
+            }) }}
+            {{ component('CardGarageUpgrade', {
+                form: form.upgrade.0.nitro,
+                garage: garage.level,
+            }) }}
+            {{ component('CardGarageUpgrade', {
+                form: form.upgrade.0.common,
+                garage: garage.settingLevel.common,
+            }) }}
+            {{ component('CardGarageUpgrade', {
+                form: form.upgrade.0.rare,
+                garage: garage.settingLevel.rare,
+            }) }}
+            {{ component('CardGarageUpgrade', {
+                form: form.upgrade.0.epic,
+                garage: garage.epic,
+            }) }}
+        </div>
+    </div>
+</section>

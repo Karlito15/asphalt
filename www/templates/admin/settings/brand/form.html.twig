@@ -1,0 +1,24 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block datas %}
+{{ form_start(form) }}
+    <div class="row bg-secondary">
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="row">
+        <div class="col-10">{{ form_row(form.name) }}</div>
+        <div class="col-2">{{ form_row(form.cars_number) }}</div>
+    </div>
+    <div class="row">
+        <div class="col">{{ form_rest(form) }}</div>
+    </div>
+
+    {{ component('FormSaveDatas', {link: index}) }}
+{{ form_end(form) }}
+
+{% if items.3 == 'update' %}
+    {{ component('FormDeleteDatas', {link: 'admin.setting.brand.delete', id: setting_brand.id}) }}
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,859 @@
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+ Line  Command\CSV\ExportGarageCommand.php
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+  59     Cannot call method getProjectDir() on object|null.                                                                          
+  67     Parameter #1 $message of method Symfony\Component\Console\Style\SymfonyStyle::section() expects string, string|null given.  
+  141    Cannot call method getId() on App\Entity\SettingGarage|null.                                                                
+  166    Cannot call method getBrand() on App\Entity\Car|null.                                                                       
+  166    Cannot call method getModel() on App\Entity\Car|null.                                                                       
+  189    Cannot call method getBrand() on App\Entity\Car|null.                                                                       
+  189    Cannot call method getModel() on App\Entity\Car|null.                                                                       
+  216    Cannot call method getBrand() on App\Entity\Car|null.                                                                       
+  216    Cannot call method getModel() on App\Entity\Car|null.                                                                       
+  240    Cannot call method getBrand() on App\Entity\Car|null.                                                                       
+  240    Cannot call method getModel() on App\Entity\Car|null.                                                                       
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+ Line  Command\CSV\ExportOtherCommand.php
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+  63     Cannot call method getProjectDir() on object|null.                                                                          
+  72     Parameter #1 $message of method Symfony\Component\Console\Style\SymfonyStyle::section() expects string, string|null given.  
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+ Line  Command\CSV\ExportRaceCommand.php
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+  63     Cannot call method getProjectDir() on object|null.                                                                          
+  71     Parameter #1 $message of method Symfony\Component\Console\Style\SymfonyStyle::section() expects string, string|null given.  
+  145    Cannot call method getName() on App\Entity\RaceMode|null.                                                                   
+  145    Cannot call method getName() on App\Entity\RaceSeason|null.                                                                 
+  145    Cannot call method getName() on App\Entity\RaceTime|null.                                                                   
+  145    Cannot call method getNameEnglish() on App\Entity\RaceTrack|null.                                                           
+  240    Cannot call method getName() on App\Entity\RaceRegion|null.                                                                 
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Command\CSV\ImportGarageCommand.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  51     Cannot call method getProjectDir() on object|null.                                                                                                                                                                
+  65     Parameter #1 $message of method Symfony\Component\Console\Style\SymfonyStyle::section() expects string, string|null given.                                                                                        
+  68     Inner named functions are not supported by PHPStan. Consider refactoring to an anonymous function, class method, or a top-level-defined function. See issue #165 (https://github.com/phpstan/phpstan/issues/165)  
+         for more details.                                                                                                                                                                                                 
+  72     Inner named functions are not supported by PHPStan. Consider refactoring to an anonymous function, class method, or a top-level-defined function. See issue #165 (https://github.com/phpstan/phpstan/issues/165)  
+         for more details.                                                                                                                                                                                                 
+  89     Function stringBoolean not found.                                                                                                                                                                                 
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  90     Function stringBoolean not found.                                                                                                                                                                                 
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  91     Function stringBoolean not found.                                                                                                                                                                                 
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  92     Function stringBoolean not found.                                                                                                                                                                                 
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  113    Function nullInteger not found.                                                                                                                                                                                   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  114    Function nullInteger not found.                                                                                                                                                                                   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  115    Function nullInteger not found.                                                                                                                                                                                   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  116    Function nullInteger not found.                                                                                                                                                                                   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  117    Function nullInteger not found.                                                                                                                                                                                   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  119    Function nullInteger not found.                                                                                                                                                                                   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  120    Function nullInteger not found.                                                                                                                                                                                   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  121    Function nullInteger not found.                                                                                                                                                                                   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  122    Function nullInteger not found.                                                                                                                                                                                   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  123    Function nullInteger not found.                                                                                                                                                                                   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                                                                                                
+  154    Call to function is_null() with App\Entity\Car will always evaluate to false.                                                                                                                                     
+         💡 Because the type is coming from a PHPDoc, you can turn off this check by setting [36mtreatPhpDocTypesAsCertain: false in your [36mphpstan.neon.
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+ Line  Command\CSV\ImportOtherCommand.php
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+  51     Cannot call method getProjectDir() on object|null.                                                                          
+  64     Parameter #1 $message of method Symfony\Component\Console\Style\SymfonyStyle::section() expects string, string|null given.  
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Command\CSV\ImportRaceCommand.php
+ ------ -------------------------------------------------------------------------------------------------------------------------------------------- 
+  54     Cannot call method getProjectDir() on object|null.                                                                                          
+  69     Parameter #1 $message of method Symfony\Component\Console\Style\SymfonyStyle::section() expects string, string|null given.                  
+  106    Parameter #1 $name of method App\Entity\RaceTime::setName() expects int, string given.                                                      
+  138    Strict comparison using === between App\Entity\RaceTrack and null will always evaluate to false.                                            
+         💡 Because the type is coming from a PHPDoc, you can turn off this check by setting [36mtreatPhpDocTypesAsCertain: false in your [36mphpstan.neon.
+ ------ -------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------- 
+ Line  Command\DatabaseDumpCommand.php
+ ------ -------------------------------------------------- 
+  62     Call to an undefined method object::getParams().  
+ ------ -------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+ Line  Command\PurgeDatabaseCommand.php
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+  38     Parameter #1 $message of method Symfony\Component\Console\Style\SymfonyStyle::section() expects string, string|null given.  
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Controller\AxiosController.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------ 
+  44     Parameter #1 $json of function json_decode expects string, resource|string given.                                                               
+  60     Cannot call method setValue() on App\Entity\Datas|App\Entity\Inventory|null.                                                                    
+  62     Parameter #1 $object of method Doctrine\Persistence\ObjectManager::persist() expects object, App\Entity\Datas|App\Entity\Inventory|null given.  
+  92     Parameter #1 $json of function json_decode expects string, resource|string given.                                                               
+  113    Cannot call method setValue() on App\Entity\Datas|App\Entity\Inventory|null.                                                                    
+  115    Parameter #1 $object of method Doctrine\Persistence\ObjectManager::persist() expects object, App\Entity\Datas|App\Entity\Inventory|null given.  
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Controller\CacheController.php
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------- 
+  42     Parameter #1 $url of method Symfony\Bundle\FrameworkBundle\Controller\AbstractController::redirect() expects string, string|null given.  
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Controller\Car\CarController.php
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  49     Parameter #2 $token of method Symfony\Bundle\FrameworkBundle\Controller\AbstractController::isCsrfTokenValid() expects string|null, bool|float|int|string|null given.  
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------ 
+ Line  Controller\Car\UpdateController.php
+ ------ ------------------------------------------------------------------------------------------------------------------------ 
+  37     Cannot call method getClass() on App\Entity\Car|null.                                                                   
+  38     Cannot call method getCarOrder() on App\Entity\Car|null.                                                                
+  39     Cannot call method getGameUpdate() on App\Entity\Car|null.                                                              
+  40     Cannot call method getStars() on App\Entity\Car|null.                                                                   
+  41     Cannot call method getBrand() on App\Entity\Car|null.                                                                   
+  42     Cannot call method getModel() on App\Entity\Car|null.                                                                   
+  43     Cannot call method getPlayerLevel() on App\Entity\Car|null.                                                             
+  44     Cannot call method getPlayerEpic() on App\Entity\Car|null.                                                              
+  45     Cannot call method isUnlocked() on App\Entity\Car|null.                                                                 
+  46     Cannot call method isFulled() on App\Entity\Car|null.                                                                   
+  47     Cannot call method isGolded() on App\Entity\Car|null.                                                                   
+  48     Cannot call method isToUpgraded() on App\Entity\Car|null.                                                               
+  50     Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  50     Cannot call method getDefaultStar1() on App\Entity\GarageBlueprint|null.                                                
+  51     Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  51     Cannot call method getDefaultStar2() on App\Entity\GarageBlueprint|null.                                                
+  52     Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  52     Cannot call method getDefaultStar3() on App\Entity\GarageBlueprint|null.                                                
+  53     Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  53     Cannot call method getDefaultStar4() on App\Entity\GarageBlueprint|null.                                                
+  54     Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  54     Cannot call method getDefaultStar5() on App\Entity\GarageBlueprint|null.                                                
+  55     Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  55     Cannot call method getDefaultStar6() on App\Entity\GarageBlueprint|null.                                                
+  56     Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  56     Cannot call method getPlayerStar1() on App\Entity\GarageBlueprint|null.                                                 
+  57     Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  57     Cannot call method getPlayerStar2() on App\Entity\GarageBlueprint|null.                                                 
+  58     Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  58     Cannot call method getPlayerStar3() on App\Entity\GarageBlueprint|null.                                                 
+  59     Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  59     Cannot call method getPlayerStar4() on App\Entity\GarageBlueprint|null.                                                 
+  60     Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  60     Cannot call method getPlayerStar5() on App\Entity\GarageBlueprint|null.                                                 
+  61     Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  61     Cannot call method getPlayerStar6() on App\Entity\GarageBlueprint|null.                                                 
+  63     Cannot call method getRank() on App\Entity\Car|null.                                                                    
+  63     Cannot call method getStart() on App\Entity\GarageRank|null.                                                            
+  64     Cannot call method getRank() on App\Entity\Car|null.                                                                    
+  64     Cannot call method getStar1() on App\Entity\GarageRank|null.                                                            
+  65     Cannot call method getRank() on App\Entity\Car|null.                                                                    
+  65     Cannot call method getStar2() on App\Entity\GarageRank|null.                                                            
+  66     Cannot call method getRank() on App\Entity\Car|null.                                                                    
+  66     Cannot call method getStar3() on App\Entity\GarageRank|null.                                                            
+  67     Cannot call method getRank() on App\Entity\Car|null.                                                                    
+  67     Cannot call method getStar4() on App\Entity\GarageRank|null.                                                            
+  68     Cannot call method getRank() on App\Entity\Car|null.                                                                    
+  68     Cannot call method getStar5() on App\Entity\GarageRank|null.                                                            
+  69     Cannot call method getRank() on App\Entity\Car|null.                                                                    
+  69     Cannot call method getStar6() on App\Entity\GarageRank|null.                                                            
+  71     Cannot call method getSpeedMin() on App\Entity\GarageStat|null.                                                         
+  71     Cannot call method getStat() on App\Entity\Car|null.                                                                    
+  72     Cannot call method getAccelerationMin() on App\Entity\GarageStat|null.                                                  
+  72     Cannot call method getStat() on App\Entity\Car|null.                                                                    
+  73     Cannot call method getHandlyMin() on App\Entity\GarageStat|null.                                                        
+  73     Cannot call method getStat() on App\Entity\Car|null.                                                                    
+  74     Cannot call method getNitroMin() on App\Entity\GarageStat|null.                                                         
+  74     Cannot call method getStat() on App\Entity\Car|null.                                                                    
+  75     Cannot call method getSpeedMax() on App\Entity\GarageStat|null.                                                         
+  75     Cannot call method getStat() on App\Entity\Car|null.                                                                    
+  76     Cannot call method getAccelerationMax() on App\Entity\GarageStat|null.                                                  
+  76     Cannot call method getStat() on App\Entity\Car|null.                                                                    
+  77     Cannot call method getHandlyMax() on App\Entity\GarageStat|null.                                                        
+  77     Cannot call method getStat() on App\Entity\Car|null.                                                                    
+  78     Cannot call method getNitroMax() on App\Entity\GarageStat|null.                                                         
+  78     Cannot call method getStat() on App\Entity\Car|null.                                                                    
+  79     Cannot call method getAverageMin() on App\Entity\GarageStat|null.                                                       
+  79     Cannot call method getStat() on App\Entity\Car|null.                                                                    
+  80     Cannot call method getAverageMax() on App\Entity\GarageStat|null.                                                       
+  80     Cannot call method getStat() on App\Entity\Car|null.                                                                    
+  82     Cannot call method getSpeed() on App\Entity\GarageUpgrade|null.                                                         
+  82     Cannot call method getUpgrade() on App\Entity\Car|null.                                                                 
+  83     Cannot call method getAcceleration() on App\Entity\GarageUpgrade|null.                                                  
+  83     Cannot call method getUpgrade() on App\Entity\Car|null.                                                                 
+  84     Cannot call method getHandly() on App\Entity\GarageUpgrade|null.                                                        
+  84     Cannot call method getUpgrade() on App\Entity\Car|null.                                                                 
+  85     Cannot call method getNitro() on App\Entity\GarageUpgrade|null.                                                         
+  85     Cannot call method getUpgrade() on App\Entity\Car|null.                                                                 
+  86     Cannot call method getCommon() on App\Entity\GarageUpgrade|null.                                                        
+  86     Cannot call method getUpgrade() on App\Entity\Car|null.                                                                 
+  87     Cannot call method getRare() on App\Entity\GarageUpgrade|null.                                                          
+  87     Cannot call method getUpgrade() on App\Entity\Car|null.                                                                 
+  88     Cannot call method getEpic() on App\Entity\GarageUpgrade|null.                                                          
+  88     Cannot call method getUpgrade() on App\Entity\Car|null.                                                                 
+  90     Cannot call method getDefaultLevel() on App\Entity\SettingGarage|null.                                                  
+  90     Cannot call method getGarage() on App\Entity\Car|null.                                                                  
+  91     Cannot call method getDefaultCommon() on App\Entity\SettingGarage|null.                                                 
+  91     Cannot call method getGarage() on App\Entity\Car|null.                                                                  
+  92     Cannot call method getDefaultRare() on App\Entity\SettingGarage|null.                                                   
+  92     Cannot call method getGarage() on App\Entity\Car|null.                                                                  
+  93     Cannot call method getDefaultEpic() on App\Entity\SettingGarage|null.                                                   
+  93     Cannot call method getGarage() on App\Entity\Car|null.                                                                  
+  95     Cannot call method getUnitPrice() on App\Entity\Car|null.                                                               
+  106    Cannot call method setClass() on App\Entity\Car|null.                                                                   
+  111    Cannot call method getBlueprint() on App\Entity\Car|null.                                                               
+  111    Cannot call method setDefaultStar1() on App\Entity\GarageBlueprint|null.                                                
+  116    Cannot call method getRank() on App\Entity\Car|null.                                                                    
+  116    Cannot call method setStart() on App\Entity\GarageRank|null.                                                            
+  118    Cannot call method getStat() on App\Entity\Car|null.                                                                    
+  118    Cannot call method setSpeedMin() on App\Entity\GarageStat|null.                                                         
+  123    Cannot call method getUpgrade() on App\Entity\Car|null.                                                                 
+  123    Cannot call method setSpeed() on App\Entity\GarageUpgrade|null.                                                         
+  129    Parameter #2 $car of class App\Event\CarUpdateEvent constructor expects App\Entity\Car, App\Entity\Car|null given.      
+  132    Parameter #1 $entity of method App\Repository\CarRepository::save() expects App\Entity\Car, App\Entity\Car|null given.  
+  135    Cannot call method getBrand() on App\Entity\Car|null.                                                                   
+  135    Cannot call method getModel() on App\Entity\Car|null.                                                                   
+  137    Cannot call method getId() on App\Entity\Car|null.                                                                      
+ ------ ------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Controller\Race\ModeController.php
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  72     Parameter #2 $token of method Symfony\Bundle\FrameworkBundle\Controller\AbstractController::isCsrfTokenValid() expects string|null, bool|float|int|string|null given.  
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Controller\Race\RaceController.php
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  94     Parameter #1 $entity of method App\Repository\RaceRepository::save() expects App\Entity\Race, App\Entity\Race|null given.                                              
+  109    Parameter #2 $token of method Symfony\Bundle\FrameworkBundle\Controller\AbstractController::isCsrfTokenValid() expects string|null, bool|float|int|string|null given.  
+  123    Method App\Controller\Race\RaceController::generateCache() has parameter $result with no value type specified in iterable type array.                                  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                                               
+  123    Method App\Controller\Race\RaceController::generateCache() has parameter $tags with no value type specified in iterable type array.                                    
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                                               
+  123    Method App\Controller\Race\RaceController::generateCache() return type has no value type specified in iterable type array.                                             
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                                               
+  125    Call to an undefined method Symfony\Component\Cache\Adapter\TagAwareAdapterInterface::get().                                                                           
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Controller\Race\RegionController.php
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  72     Parameter #2 $token of method Symfony\Bundle\FrameworkBundle\Controller\AbstractController::isCsrfTokenValid() expects string|null, bool|float|int|string|null given.  
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Controller\Race\SeasonController.php
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  72     Parameter #2 $token of method Symfony\Bundle\FrameworkBundle\Controller\AbstractController::isCsrfTokenValid() expects string|null, bool|float|int|string|null given.  
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Controller\Race\TimeController.php
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  72     Parameter #2 $token of method Symfony\Bundle\FrameworkBundle\Controller\AbstractController::isCsrfTokenValid() expects string|null, bool|float|int|string|null given.  
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Controller\Race\TrackController.php
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  72     Parameter #2 $token of method Symfony\Bundle\FrameworkBundle\Controller\AbstractController::isCsrfTokenValid() expects string|null, bool|float|int|string|null given.  
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Controller\Setting\GarageController.php
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  72     Parameter #2 $token of method Symfony\Bundle\FrameworkBundle\Controller\AbstractController::isCsrfTokenValid() expects string|null, bool|float|int|string|null given.  
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Controller\Setting\UnitPriceController.php
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  72     Parameter #2 $token of method Symfony\Bundle\FrameworkBundle\Controller\AbstractController::isCsrfTokenValid() expects string|null, bool|float|int|string|null given.  
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\Car.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  13     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+  107    Property App\Entity\Car::$tags type has no value type specified in iterable type array.                                                                                       
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                                                      
+  315    Method App\Entity\Car::getTags() return type has no value type specified in iterable type array.                                                                              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                                                      
+  320    Method App\Entity\Car::setTags() has parameter $tags with no value type specified in iterable type array.                                                                     
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                                                      
+  322    Property App\Entity\Car::$tags (array) does not accept array|null.                                                                                                            
+  348    Parameter #1 $car of method App\Entity\GarageBlueprint::setCar() expects App\Entity\Car, null given.                                                                          
+  370    Parameter #1 $car of method App\Entity\GarageRank::setCar() expects App\Entity\Car, null given.                                                                               
+  392    Parameter #1 $car of method App\Entity\GarageStat::setCar() expects App\Entity\Car, null given.                                                                               
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\Datas.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  12     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\GarageBlueprint.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  13     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+  94     Method App\Entity\GarageBlueprint::__toString() should return string but returns App\Entity\Car|null.                                                                         
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\GarageRank.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  13     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+  74     Method App\Entity\GarageRank::__toString() should return string but returns App\Entity\Car|null.                                                                              
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\GarageStat.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  12     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+  88     Method App\Entity\GarageStat::__toString() should return string but returns App\Entity\Car|null.                                                                              
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\GarageUpgrade.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  13     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+  81     Method App\Entity\GarageUpgrade::__toString() should return string but returns App\Entity\Car|null.                                                                           
+  96     Property App\Entity\GarageUpgrade::$speed (int) does not accept int|null.                                                                                                     
+  108    Property App\Entity\GarageUpgrade::$acceleration (int) does not accept int|null.                                                                                              
+  120    Property App\Entity\GarageUpgrade::$handly (int) does not accept int|null.                                                                                                    
+  132    Property App\Entity\GarageUpgrade::$nitro (int) does not accept int|null.                                                                                                     
+  144    Property App\Entity\GarageUpgrade::$common (int) does not accept int|null.                                                                                                    
+  156    Property App\Entity\GarageUpgrade::$rare (int) does not accept int|null.                                                                                                      
+  168    Property App\Entity\GarageUpgrade::$epic (int) does not accept int|null.                                                                                                      
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\Inventory.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  13     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\Race.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  13     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\RaceMode.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  14     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+  44     Property App\Entity\RaceMode::$race with generic interface Doctrine\Common\Collections\Collection does not specify its types: TKey, T                                         
+         💡 You can turn this off by setting [36mcheckGenericClassInNonGenericObjectType: false in your [36mphpstan.neon.
+  53     Method App\Entity\RaceMode::__toString() should return string but returns string|null.                                                                                        
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\RaceRegion.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  14     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+  44     Property App\Entity\RaceRegion::$track with generic interface Doctrine\Common\Collections\Collection does not specify its types: TKey, T                                      
+         💡 You can turn this off by setting [36mcheckGenericClassInNonGenericObjectType: false in your [36mphpstan.neon.
+  53     Method App\Entity\RaceRegion::__toString() should return string but returns string|null.                                                                                      
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\RaceSeason.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  15     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+  47     Property App\Entity\RaceSeason::$race with generic interface Doctrine\Common\Collections\Collection does not specify its types: TKey, T                                       
+         💡 You can turn this off by setting [36mcheckGenericClassInNonGenericObjectType: false in your [36mphpstan.neon.
+  56     Method App\Entity\RaceSeason::__toString() should return string but returns string|null.                                                                                      
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\RaceTime.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  16     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+  41     Property App\Entity\RaceTime::$race with generic interface Doctrine\Common\Collections\Collection does not specify its types: TKey, T                                         
+         💡 You can turn this off by setting [36mcheckGenericClassInNonGenericObjectType: false in your [36mphpstan.neon.
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\RaceTrack.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  14     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+  55     Property App\Entity\RaceTrack::$race with generic interface Doctrine\Common\Collections\Collection does not specify its types: TKey, T                                        
+         💡 You can turn this off by setting [36mcheckGenericClassInNonGenericObjectType: false in your [36mphpstan.neon.
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\SettingGarage.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  15     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+  55     Property App\Entity\SettingGarage::$car with generic interface Doctrine\Common\Collections\Collection does not specify its types: TKey, T                                     
+         💡 You can turn this off by setting [36mcheckGenericClassInNonGenericObjectType: false in your [36mphpstan.neon.
+  64     Parameter #1 $string of function str_pad expects string, int|null given.                                                                                                      
+  65     Parameter #1 $string of function str_pad expects string, int|null given.                                                                                                      
+  66     Parameter #1 $string of function str_pad expects string, int|null given.                                                                                                      
+  67     Parameter #1 $string of function str_pad expects string, int|null given.                                                                                                      
+  68     Parameter #1 $string of function str_pad expects string, int|null given.                                                                                                      
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Entity\SettingUnitPrice.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+  15     Parameter $indexes of attribute class Doctrine\ORM\Mapping\Table constructor expects array<Doctrine\ORM\Mapping\Index>|null, array<string, array<int, string>|string> given.  
+  116    Property App\Entity\SettingUnitPrice::$car with generic interface Doctrine\Common\Collections\Collection does not specify its types: TKey, T                                  
+         💡 You can turn this off by setting [36mcheckGenericClassInNonGenericObjectType: false in your [36mphpstan.neon.
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+ Line  EventListener\CarCreateEventListener.php
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  55     Cannot call method setDefaultStar1() on App\Entity\GarageBlueprint|null.                                          
+  57     Parameter #1 $playerStar1 of method App\Entity\GarageBlueprint::setPlayerStar1() expects string|null, int given.  
+  59     Cannot call method setStart() on App\Entity\GarageRank|null.                                                      
+  62     Cannot call method setDefaultStar1() on App\Entity\GarageBlueprint|null.                                          
+  64     Parameter #1 $playerStar1 of method App\Entity\GarageBlueprint::setPlayerStar1() expects string|null, int given.  
+  66     Cannot call method setStart() on App\Entity\GarageRank|null.                                                      
+  69     Cannot call method setDefaultStar1() on App\Entity\GarageBlueprint|null.                                          
+  71     Parameter #1 $playerStar1 of method App\Entity\GarageBlueprint::setPlayerStar1() expects string|null, int given.  
+  73     Cannot call method setStart() on App\Entity\GarageRank|null.                                                      
+  76     Cannot call method setDefaultStar1() on App\Entity\GarageBlueprint|null.                                          
+  78     Parameter #1 $playerStar1 of method App\Entity\GarageBlueprint::setPlayerStar1() expects string|null, int given.  
+  80     Cannot call method setStart() on App\Entity\GarageRank|null.                                                      
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  EventListener\CarUpdateEventListener.php
+ ------ ------------------------------------------------------------------------------------------------------------------------------------- 
+  42     Cannot call method getDefaultStar1() on App\Entity\GarageBlueprint|null.                                                             
+  43     Cannot call method getDefaultStar2() on App\Entity\GarageBlueprint|null.                                                             
+  44     Cannot call method getDefaultStar3() on App\Entity\GarageBlueprint|null.                                                             
+  45     Cannot call method getDefaultStar4() on App\Entity\GarageBlueprint|null.                                                             
+  46     Cannot call method getDefaultStar5() on App\Entity\GarageBlueprint|null.                                                             
+  47     Cannot call method getDefaultStar6() on App\Entity\GarageBlueprint|null.                                                             
+  50     Cannot call method getPlayerStar1() on App\Entity\GarageBlueprint|null.                                                              
+  51     Cannot call method getPlayerStar2() on App\Entity\GarageBlueprint|null.                                                              
+  52     Cannot call method getPlayerStar3() on App\Entity\GarageBlueprint|null.                                                              
+  53     Cannot call method getPlayerStar4() on App\Entity\GarageBlueprint|null.                                                              
+  54     Cannot call method getPlayerStar5() on App\Entity\GarageBlueprint|null.                                                              
+  55     Cannot call method getPlayerStar6() on App\Entity\GarageBlueprint|null.                                                              
+  62     Cannot call method setDefaultTotal() on App\Entity\GarageBlueprint|null.                                                             
+  63     Parameter #1 $object of method Doctrine\Persistence\ObjectManager::persist() expects object, App\Entity\GarageBlueprint|null given.  
+  80     Cannot call method getSpeedMin() on App\Entity\GarageStat|null.                                                                      
+  81     Cannot call method getAccelerationMin() on App\Entity\GarageStat|null.                                                               
+  82     Cannot call method getHandlyMin() on App\Entity\GarageStat|null.                                                                     
+  83     Cannot call method getNitroMin() on App\Entity\GarageStat|null.                                                                      
+  86     Cannot call method getSpeedMax() on App\Entity\GarageStat|null.                                                                      
+  87     Cannot call method getAccelerationMax() on App\Entity\GarageStat|null.                                                               
+  88     Cannot call method getHandlyMax() on App\Entity\GarageStat|null.                                                                     
+  89     Cannot call method getNitroMax() on App\Entity\GarageStat|null.                                                                      
+  92     Parameter #1 $stat1 of static method App\EventListener\CarUpdateEventListener::setAverage() expects float, float|null given.         
+  92     Parameter #2 $stat2 of static method App\EventListener\CarUpdateEventListener::setAverage() expects float, float|null given.         
+  92     Parameter #3 $stat3 of static method App\EventListener\CarUpdateEventListener::setAverage() expects float, float|null given.         
+  92     Parameter #4 $stat4 of static method App\EventListener\CarUpdateEventListener::setAverage() expects float, float|null given.         
+  93     Parameter #1 $stat1 of static method App\EventListener\CarUpdateEventListener::setAverage() expects float, float|null given.         
+  93     Parameter #2 $stat2 of static method App\EventListener\CarUpdateEventListener::setAverage() expects float, float|null given.         
+  93     Parameter #3 $stat3 of static method App\EventListener\CarUpdateEventListener::setAverage() expects float, float|null given.         
+  93     Parameter #4 $stat4 of static method App\EventListener\CarUpdateEventListener::setAverage() expects float, float|null given.         
+  96     Cannot call method setAverageMin() on App\Entity\GarageStat|null.                                                                    
+  97     Parameter #1 $object of method Doctrine\Persistence\ObjectManager::persist() expects object, App\Entity\GarageStat|null given.       
+  118    Cannot call method getAverageMax() on App\Entity\GarageStat|null.                                                                    
+  129    Cannot call method setStatOrder() on App\Entity\Car|null.                                                                            
+  130    Parameter #1 $object of method Doctrine\Persistence\ObjectManager::persist() expects object, App\Entity\Car|null given.              
+  149    Cannot call method getDefaultLevel() on App\Entity\SettingGarage|null.                                                               
+  150    Cannot call method getUpgradeTotal() on App\Entity\GarageUpgrade|null.                                                               
+  152    Cannot call method getDefaultLevel() on App\Entity\SettingGarage|null.                                                               
+  178    Cannot call method getDefaultLevel() on App\Entity\SettingGarage|null.                                                               
+  179    Cannot call method getUpgradeTotal() on App\Entity\GarageUpgrade|null.                                                               
+  180    Cannot call method getDefaultCommon() on App\Entity\SettingGarage|null.                                                              
+  181    Cannot call method getCommon() on App\Entity\GarageUpgrade|null.                                                                     
+  181    Parameter #1 $array of function array_sum expects array, int|null given.                                                             
+  182    Cannot call method getDefaultRare() on App\Entity\SettingGarage|null.                                                                
+  183    Cannot call method getRare() on App\Entity\GarageUpgrade|null.                                                                       
+  183    Parameter #1 $array of function array_sum expects array, int|null given.                                                             
+  187    Cannot call method getDefaultLevel() on App\Entity\SettingGarage|null.                                                               
+  191    Cannot call method getDefaultEpic() on App\Entity\SettingGarage|null.                                                                
+ ------ ------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Fixture\Command.php (in context of class App\Command\CSV\ExportGarageCommand)
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------ 
+  26     Method App\Command\CSV\ExportGarageCommand::initialize() has no return type specified.                                                    
+  39     Method App\Command\CSV\ExportGarageCommand::runSymfonyCommand() has parameter $tags with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                  
+  43     Cannot call method find() on Symfony\Component\Console\Application|null.                                                                  
+  94     Method App\Command\CSV\ExportGarageCommand::Render() has parameter $datas with no value type specified in iterable type array.            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                  
+  94     Method App\Command\CSV\ExportGarageCommand::Render() has parameter $headers with no value type specified in iterable type array.          
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                  
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Command.php (in context of class App\Command\CSV\ExportOtherCommand)
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------- 
+  26     Method App\Command\CSV\ExportOtherCommand::initialize() has no return type specified.                                                    
+  39     Method App\Command\CSV\ExportOtherCommand::runSymfonyCommand() has parameter $tags with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                 
+  43     Cannot call method find() on Symfony\Component\Console\Application|null.                                                                 
+  94     Method App\Command\CSV\ExportOtherCommand::Render() has parameter $datas with no value type specified in iterable type array.            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                 
+  94     Method App\Command\CSV\ExportOtherCommand::Render() has parameter $headers with no value type specified in iterable type array.          
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                 
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Command.php (in context of class App\Command\CSV\ExportRaceCommand)
+ ------ ---------------------------------------------------------------------------------------------------------------------------------------- 
+  26     Method App\Command\CSV\ExportRaceCommand::initialize() has no return type specified.                                                    
+  39     Method App\Command\CSV\ExportRaceCommand::runSymfonyCommand() has parameter $tags with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                
+  43     Cannot call method find() on Symfony\Component\Console\Application|null.                                                                
+  94     Method App\Command\CSV\ExportRaceCommand::Render() has parameter $datas with no value type specified in iterable type array.            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                
+  94     Method App\Command\CSV\ExportRaceCommand::Render() has parameter $headers with no value type specified in iterable type array.          
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                
+ ------ ---------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Fixture\Command.php (in context of class App\Command\CSV\ImportGarageCommand)
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------ 
+  26     Method App\Command\CSV\ImportGarageCommand::initialize() has no return type specified.                                                    
+  39     Method App\Command\CSV\ImportGarageCommand::runSymfonyCommand() has parameter $tags with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                  
+  43     Cannot call method find() on Symfony\Component\Console\Application|null.                                                                  
+  94     Method App\Command\CSV\ImportGarageCommand::Render() has parameter $datas with no value type specified in iterable type array.            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                  
+  94     Method App\Command\CSV\ImportGarageCommand::Render() has parameter $headers with no value type specified in iterable type array.          
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                  
+ ------ ------------------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Command.php (in context of class App\Command\CSV\ImportOtherCommand)
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------- 
+  26     Method App\Command\CSV\ImportOtherCommand::initialize() has no return type specified.                                                    
+  39     Method App\Command\CSV\ImportOtherCommand::runSymfonyCommand() has parameter $tags with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                 
+  43     Cannot call method find() on Symfony\Component\Console\Application|null.                                                                 
+  94     Method App\Command\CSV\ImportOtherCommand::Render() has parameter $datas with no value type specified in iterable type array.            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                 
+  94     Method App\Command\CSV\ImportOtherCommand::Render() has parameter $headers with no value type specified in iterable type array.          
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                 
+ ------ ----------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Command.php (in context of class App\Command\CSV\ImportRaceCommand)
+ ------ ---------------------------------------------------------------------------------------------------------------------------------------- 
+  26     Method App\Command\CSV\ImportRaceCommand::initialize() has no return type specified.                                                    
+  39     Method App\Command\CSV\ImportRaceCommand::runSymfonyCommand() has parameter $tags with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                
+  43     Cannot call method find() on Symfony\Component\Console\Application|null.                                                                
+  94     Method App\Command\CSV\ImportRaceCommand::Render() has parameter $datas with no value type specified in iterable type array.            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                
+  94     Method App\Command\CSV\ImportRaceCommand::Render() has parameter $headers with no value type specified in iterable type array.          
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                                
+ ------ ---------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Controller.php (in context of class App\Controller\AxiosController)
+ ------ -------------------------------------------------------------------------------------------------------------------------------- 
+  14     Method App\Controller\AxiosController::getHeaders() return type has no value type specified in iterable type array.             
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                        
+  26     Method App\Controller\AxiosController::getContext() has parameter $config with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                        
+  26     Method App\Controller\AxiosController::getContext() return type has no value type specified in iterable type array.             
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                        
+ ------ -------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Form.php (in context of class App\Form\Car\CreateType)
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+  11     Method App\Form\Car\CreateType::configInput() has parameter $options with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                   
+  11     Method App\Form\Car\CreateType::configInput() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                   
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Form.php (in context of class App\Form\Car\UpdateType)
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+  11     Method App\Form\Car\UpdateType::configInput() has parameter $options with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                   
+  11     Method App\Form\Car\UpdateType::configInput() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                   
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Form.php (in context of class App\Form\Game\DatasType)
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+  11     Method App\Form\Game\DatasType::configInput() has parameter $options with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                   
+  11     Method App\Form\Game\DatasType::configInput() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                   
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Form.php (in context of class App\Form\Game\InventoryType)
+ ------ ------------------------------------------------------------------------------------------------------------------------------- 
+  11     Method App\Form\Game\InventoryType::configInput() has parameter $options with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                       
+  11     Method App\Form\Game\InventoryType::configInput() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                       
+ ------ ------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Form.php (in context of class App\Form\RaceType)
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+  11     Method App\Form\RaceType::configInput() has parameter $options with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  11     Method App\Form\RaceType::configInput() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Fixture\Form.php (in context of class App\Form\Race\RaceModeType)
+ ------ ------------------------------------------------------------------------------------------------------------------------------ 
+  11     Method App\Form\Race\RaceModeType::configInput() has parameter $options with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                      
+  11     Method App\Form\Race\RaceModeType::configInput() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                      
+ ------ ------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ -------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Form.php (in context of class App\Form\Race\RaceRegionType)
+ ------ -------------------------------------------------------------------------------------------------------------------------------- 
+  11     Method App\Form\Race\RaceRegionType::configInput() has parameter $options with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                        
+  11     Method App\Form\Race\RaceRegionType::configInput() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                        
+ ------ -------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Form.php (in context of class App\Form\Race\RaceSeasonType)
+ ------ -------------------------------------------------------------------------------------------------------------------------------- 
+  11     Method App\Form\Race\RaceSeasonType::configInput() has parameter $options with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                        
+  11     Method App\Form\Race\RaceSeasonType::configInput() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                        
+ ------ -------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------ 
+ Line  Fixture\Form.php (in context of class App\Form\Race\RaceTimeType)
+ ------ ------------------------------------------------------------------------------------------------------------------------------ 
+  11     Method App\Form\Race\RaceTimeType::configInput() has parameter $options with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                      
+  11     Method App\Form\Race\RaceTimeType::configInput() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                      
+ ------ ------------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Form.php (in context of class App\Form\Race\RaceTrackType)
+ ------ ------------------------------------------------------------------------------------------------------------------------------- 
+  11     Method App\Form\Race\RaceTrackType::configInput() has parameter $options with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                       
+  11     Method App\Form\Race\RaceTrackType::configInput() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                       
+ ------ ------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Form.php (in context of class App\Form\Search\FilterCarType)
+ ------ --------------------------------------------------------------------------------------------------------------------------------- 
+  11     Method App\Form\Search\FilterCarType::configInput() has parameter $options with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                         
+  11     Method App\Form\Search\FilterCarType::configInput() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                         
+ ------ --------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Form.php (in context of class App\Form\Search\FilterRaceType)
+ ------ ---------------------------------------------------------------------------------------------------------------------------------- 
+  11     Method App\Form\Search\FilterRaceType::configInput() has parameter $options with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                          
+  11     Method App\Form\Search\FilterRaceType::configInput() return type has no value type specified in iterable type array.              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                          
+ ------ ---------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Repository.php (in context of class App\Repository\CarRepository)
+ ------ ---------------------------------------------------------------------------------------------------------------- 
+  12     Method App\Repository\CarRepository::getList() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                        
+  22     Parameter #1 $flag of method Doctrine\ORM\QueryBuilder::distinct() expects bool, string given.                  
+ ------ ---------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+ Line  Fixture\Repository.php (in context of class App\Repository\DatasRepository)
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  12     Method App\Repository\DatasRepository::getList() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                          
+  22     Parameter #1 $flag of method Doctrine\ORM\QueryBuilder::distinct() expects bool, string given.                    
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Repository.php (in context of class App\Repository\InventoryRepository)
+ ------ ---------------------------------------------------------------------------------------------------------------------- 
+  12     Method App\Repository\InventoryRepository::getList() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                              
+  22     Parameter #1 $flag of method Doctrine\ORM\QueryBuilder::distinct() expects bool, string given.                        
+ ------ ---------------------------------------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Repository.php (in context of class App\Repository\RaceModeRepository)
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+  12     Method App\Repository\RaceModeRepository::getList() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  22     Parameter #1 $flag of method Doctrine\ORM\QueryBuilder::distinct() expects bool, string given.                       
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Repository.php (in context of class App\Repository\RaceRegionRepository)
+ ------ ----------------------------------------------------------------------------------------------------------------------- 
+  12     Method App\Repository\RaceRegionRepository::getList() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                               
+  22     Parameter #1 $flag of method Doctrine\ORM\QueryBuilder::distinct() expects bool, string given.                         
+ ------ ----------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Repository.php (in context of class App\Repository\RaceRepository)
+ ------ ----------------------------------------------------------------------------------------------------------------- 
+  12     Method App\Repository\RaceRepository::getList() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                         
+  22     Parameter #1 $flag of method Doctrine\ORM\QueryBuilder::distinct() expects bool, string given.                   
+ ------ ----------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Repository.php (in context of class App\Repository\RaceSeasonRepository)
+ ------ ----------------------------------------------------------------------------------------------------------------------- 
+  12     Method App\Repository\RaceSeasonRepository::getList() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                               
+  22     Parameter #1 $flag of method Doctrine\ORM\QueryBuilder::distinct() expects bool, string given.                         
+ ------ ----------------------------------------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Repository.php (in context of class App\Repository\RaceTimeRepository)
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+  12     Method App\Repository\RaceTimeRepository::getList() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                             
+  22     Parameter #1 $flag of method Doctrine\ORM\QueryBuilder::distinct() expects bool, string given.                       
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------- 
+ Line  Fixture\Repository.php (in context of class App\Repository\RaceTrackRepository)
+ ------ ---------------------------------------------------------------------------------------------------------------------- 
+  12     Method App\Repository\RaceTrackRepository::getList() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                              
+  22     Parameter #1 $flag of method Doctrine\ORM\QueryBuilder::distinct() expects bool, string given.                        
+ ------ ---------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------- 
+ Line  Form\Search\FilterCarType.php
+ ------ ---------------------------------------------------------------------------------------- 
+  17     Method App\Form\Search\FilterCarType::buildForm() has no return type specified.         
+  98     Method App\Form\Search\FilterCarType::configureOptions() has no return type specified.  
+ ------ ---------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------- 
+ Line  Form\Search\FilterRaceType.php
+ ------ ----------------------------------------------------------------------------------------- 
+  22     Method App\Form\Search\FilterRaceType::buildForm() has no return type specified.         
+  94     Method App\Form\Search\FilterRaceType::configureOptions() has no return type specified.  
+ ------ ----------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------------------- 
+ Line  Repository\CarRepository.php
+ ------ --------------------------------------------------------------------------------------------------------------- 
+  79     Method App\Repository\CarRepository::Search() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                       
+  131    Cannot call method getGameUpdate() on App\Entity\Car|null.                                                     
+  131    Method App\Repository\CarRepository::getLastGameUpdate() should return int but returns int|null.               
+ ------ --------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+ Line  Repository\RaceRepository.php
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  64     Method App\Repository\RaceRepository::AllRaces() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                          
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+
+ ------ --------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Twig\Components\ActionComponent.php
+ ------ --------------------------------------------------------------------------------------------------------------------------------- 
+  16     Property App\Twig\Components\ActionComponent::$datas type has no value type specified in iterable type array.                    
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                         
+  21     Method App\Twig\Components\ActionComponent::preMount() has parameter $data with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                         
+  21     Method App\Twig\Components\ActionComponent::preMount() return type has no value type specified in iterable type array.           
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                         
+ ------ --------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Twig\Components\AlertComponent.php
+ ------ -------------------------------------------------------------------------------------------------------------------------------- 
+  18     Method App\Twig\Components\AlertComponent::preMount() has parameter $data with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                        
+  18     Method App\Twig\Components\AlertComponent::preMount() return type has no value type specified in iterable type array.           
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                        
+ ------ -------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------------------- 
+ Line  Twig\Components\BooleanComponent.php
+ ------ ---------------------------------------------------------------------------------------------------------------------------------- 
+  15     Method App\Twig\Components\BooleanComponent::preMount() has parameter $data with no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                          
+  15     Method App\Twig\Components\BooleanComponent::preMount() return type has no value type specified in iterable type array.           
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                          
+ ------ ---------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------ 
+ Line  Twig\Runtime\CacheRuntime.php
+ ------ ------------------------------------------------------------------------------------------------------------------------ 
+  73     Method App\Twig\Runtime\CacheRuntime::getAllRaces() return type has no value type specified in iterable type array.     
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  76     Call to an undefined method Symfony\Component\Cache\Adapter\TagAwareAdapterInterface::get().                            
+  90     Method App\Twig\Runtime\CacheRuntime::getDatas() return type has no value type specified in iterable type array.        
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  93     Call to an undefined method Symfony\Component\Cache\Adapter\TagAwareAdapterInterface::get().                            
+  107    Method App\Twig\Runtime\CacheRuntime::getInventories() return type has no value type specified in iterable type array.  
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  110    Call to an undefined method Symfony\Component\Cache\Adapter\TagAwareAdapterInterface::get().                            
+  124    Method App\Twig\Runtime\CacheRuntime::getBrands() return type has no value type specified in iterable type array.       
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  127    Call to an undefined method Symfony\Component\Cache\Adapter\TagAwareAdapterInterface::get().                            
+  141    Method App\Twig\Runtime\CacheRuntime::getClasses() return type has no value type specified in iterable type array.      
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  144    Call to an undefined method Symfony\Component\Cache\Adapter\TagAwareAdapterInterface::get().                            
+  158    Method App\Twig\Runtime\CacheRuntime::getTags() return type has no value type specified in iterable type array.         
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  161    Call to an undefined method Symfony\Component\Cache\Adapter\TagAwareAdapterInterface::get().                            
+  175    Method App\Twig\Runtime\CacheRuntime::getGarages() return type has no value type specified in iterable type array.      
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  183    Method App\Twig\Runtime\CacheRuntime::getUnitPrices() return type has no value type specified in iterable type array.   
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  199    Method App\Twig\Runtime\CacheRuntime::getFavicon() has no return type specified.                                        
+  201    Call to an undefined method Symfony\Component\Cache\Adapter\TagAwareAdapterInterface::get().                            
+  215    Method App\Twig\Runtime\CacheRuntime::getFooter() has no return type specified.                                         
+  217    Call to an undefined method Symfony\Component\Cache\Adapter\TagAwareAdapterInterface::get().                            
+ ------ ------------------------------------------------------------------------------------------------------------------------ 
+
+[ERROR] Found 391 errors

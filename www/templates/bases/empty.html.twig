@@ -1,0 +1,23 @@
+{% extends '@App/bases/index.html.twig' %}
+
+{% block body %}<body class="bg-white">{% endblock %}
+
+{% block containers %}
+<!-- Begin Container -->
+<div class="container-fluid no-padding h-100">
+    <div class="row flex-row h-100 bg-white">
+        {% block contents %}{% endblock %}
+    </div>
+    <!-- End Row -->
+</div>
+<!-- End Container -->
+
+{% endblock %}
+
+{% block importmap %}{{ importmap('app') }}{% endblock %}
+
+{% block javascripts %}
+<!-- Begin Page Vendor Js -->
+<script type="text/javascript" src="{{ asset('themes/elisyam/vendors/js/app/app.min.js') }}"></script>
+<!-- End Page Vendor Js -->
+{% endblock %}

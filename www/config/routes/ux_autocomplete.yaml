@@ -1,3 +1,5 @@
 ux_autocomplete:
     resource: '@AutocompleteBundle/config/routes.php'
     prefix: '/autocomplete'
+    # adjust prefix to add localization to your components
+    #prefix: '/{_locale}/_components'

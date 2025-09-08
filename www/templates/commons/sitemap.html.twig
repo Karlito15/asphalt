@@ -1,0 +1,9 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block datas %}
+<ul class="list-group">
+    <li class="list-group-item"><a class="w-100" href="{{ path('sitemap.admin') }}">Admin</a></li>
+    <li class="list-group-item"><a class="w-100" href="{{ path('sitemap.api') }}">Api</a></li>
+    <li class="list-group-item"><a class="w-100" href="{{ path('sitemap.app') }}">App</a></li>
+</ul>
+{% endblock %}

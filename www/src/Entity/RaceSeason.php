@@ -2,23 +2,24 @@
 
 namespace App\Entity;
 
-use App\Able\Entity\RaceSeasonAble;
 use App\Repository\RaceSeasonRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Serializer\Attribute\Groups;
+use Symfony\Component\String\Slugger\AsciiSlugger;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: RaceSeasonRepository::class)]
 #[ORM\Table(name: 'race_season')]
-#[ORM\Index(name: 'race_season_idx', columns: ['slug'])]
 #[ORM\HasLifecycleCallbacks]
+#[ORM\Index(name: 'slug_idx', columns: ['slug'])]
 #[Gedmo\Loggable]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
 #[UniqueEntity(fields: ['chapter', 'name'])]
@@ -33,11 +34,11 @@ class RaceSeason
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use RaceSeasonAble;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(options: ['unsigned' => true])]
+    #[Groups(['index'])]
     private ?int $id = null;
 
     #[ORM\Column(type: Types::SMALLINT, unique:false, nullable:false, options: ['default' => 1, 'unsigned' => true])]
@@ -65,7 +66,7 @@ class RaceSeason
     #[Gedmo\Versioned]
     private ?string $slug = null;
 
-    #[ORM\OneToMany(targetEntity: RaceApp::class, mappedBy: 'season', orphanRemoval: true)]
+    #[ORM\OneToMany(targetEntity: AppRace::class, mappedBy: 'season', orphanRemoval: true)]
     protected Collection $race;
 
     public function __construct()
@@ -78,7 +79,7 @@ class RaceSeason
         return '(Ch. ' . $this->getChapter() . ') - ' . $this->getName();
     }
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -112,15 +113,25 @@ class RaceSeason
         return $this->slug;
     }
 
+    public function setSlug(): static
+    {
+        $slugger = new AsciiSlugger();
+
+        /** @var RaceSeason $this  */
+        $this->slug = $this->getChapter() . ' || ' . $slugger->slug($this->getName())->lower();
+
+        return $this;
+    }
+
     /**
-     * @return Collection<int, RaceApp>
+     * @return Collection<int, AppRace>
      */
     public function getRace(): Collection
     {
         return $this->race;
     }
 
-    public function addRace(RaceApp $race): static
+    public function addRace(AppRace $race): static
     {
         if (!$this->race->contains($race)) {
             $this->race->add($race);
@@ -130,7 +141,7 @@ class RaceSeason
         return $this;
     }
 
-    public function removeRace(RaceApp $race): static
+    public function removeRace(AppRace $race): static
     {
         if ($this->race->removeElement($race)) {
             // set the owning side to null (unless already changed)
@@ -140,5 +151,33 @@ class RaceSeason
         }
 
         return $this;
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    #[ORM\PrePersist]
+    public function prePersist(LifecycleEventArgs $args): void
+    {
+        /* @var RaceSeason $object */
+        $object = $args->getObject();
+        if ($object instanceof RaceSeason) {
+            $object->setSlug();
+        }
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    #[ORM\PreUpdate]
+    public function preUpdate(LifecycleEventArgs $args): void
+    {
+        /* @var RaceSeason $object */
+        $object = $args->getObject();
+        if ($object instanceof RaceSeason) {// Slug
+            $object->setSlug();
+        }
     }
 }

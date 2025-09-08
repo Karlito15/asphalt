@@ -16,8 +16,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: RaceRegionRepository::class)]
 #[ORM\Table(name: 'race_region')]
-#[ORM\Index(name: 'race_region_idx', columns: ['slug'])]
 #[ORM\HasLifecycleCallbacks]
+#[ORM\Index(name: 'slug_idx', columns: ['slug'])]
 #[Gedmo\Loggable]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
 #[UniqueEntity(fields: ['name'])]
@@ -34,7 +34,8 @@ class RaceRegion
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(options: ['unsigned' => true])]
+    #[Groups(['index'])]
     private ?int $id = null;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique:true, nullable:false)]
@@ -63,7 +64,7 @@ class RaceRegion
         return $this->getName();
     }
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->id;
     }

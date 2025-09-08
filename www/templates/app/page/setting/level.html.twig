@@ -1,0 +1,43 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block datas %}
+<table class="{{ classes.table_index }}">
+    <thead>
+        <tr>
+            <th class="col-1 text-center">#</th>
+            <th class="col-3 text-start">Car</th>
+            <th class="col-1 text-center">Speed</th>
+            <th class="col-1 text-center">Accel.</th>
+            <th class="col-1 text-center">Handly</th>
+            <th class="col-1 text-center">Nitro</th>
+            <th class="col-1 text-center">Commons</th>
+            <th class="col-1 text-center">Rares</th>
+            <th class="col-1 text-center">Epics</th>
+            <th class="col-1 text-end">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for item in results %}
+        <tr>
+            <td class="col-1 text-center">{{ loop.index }}</td>
+            <td class="col-3 text-start"><a href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank">{{ item.brand }} {{ item.model }}</a></td>
+            <td class="col-1 text-center">{{ (item.speed_installed - item.level) }}</td>
+            <td class="col-1 text-center">{{ (item.acceleration_installed - item.level) }}</td>
+            <td class="col-1 text-center">{{ (item.handly_installed - item.level) }}</td>
+            <td class="col-1 text-center">{{ (item.nitro_installed - item.level) }}</td>
+            <td class="col-1 text-center">{{ (item.common_installed - item.common_to_install) }}</td>
+            <td class="col-1 text-center">{{ (item.rare_installed - item.rare_to_install) }}</td>
+            <td class="col-1 text-center">{{ (item.epic_installed - item.epic) }}</td>
+            <td class="col-1 text-end">{{ component('ButtonEdit', { path: 'app.garage.update', id: item.id, slug: item.slug, target: true }) }}</td>
+        </tr>
+    {% else %}
+        {{ component('TableNoRecords', { value: 10 }) }}
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('styles/override-table.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}

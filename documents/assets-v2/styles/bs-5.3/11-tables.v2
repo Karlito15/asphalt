@@ -1,0 +1,10 @@
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+// scss-docs-start table-variables
+//$table-cell-padding-y:        .05rem;
+//$table-cell-padding-x:        .05rem;
+//$table-cell-padding-y-sm:     .15rem;
+//$table-cell-padding-x-sm:     .15rem;
+// scss-docs-end table-variables

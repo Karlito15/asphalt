@@ -1,0 +1,38 @@
+<section class="card bg-primary py-0 mb-4">
+    <div class="card-header"><h3 class="text-center pt-1">Settings</h3></div>
+    <div class="card-body">
+        <div class="card-group">
+            <div class="card bg-primary">
+                <div class="card-header text-center">
+                    {{ form_label(form.settingBlueprint) }}
+                </div>
+                <div class="card-body p-1">
+                    {{ form_widget(form.settingBlueprint) }}
+                    {{ form_errors(form.settingBlueprint) }}
+                </div>
+            </div>
+            <div class="card bg-primary">
+                <div class="card-header text-center">
+                    {{ form_label(form.settingLevel) }}
+                </div>
+                <div class="card-body p-1">
+                    {{ form_widget(form.settingLevel) }}
+                    {{ form_errors(form.settingLevel) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="card-group">
+            <div class="card bg-primary">
+                <div class="card-header text-center">
+                    {{ form_label(form.settingUnitPrice) }}
+                </div>
+                <div class="card-body p-1">
+                    {{ form_widget(form.settingUnitPrice) }}
+                    {{ form_errors(form.settingUnitPrice) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

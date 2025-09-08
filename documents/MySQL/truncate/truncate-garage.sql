@@ -1,6 +1,7 @@
 SET FOREIGN_KEY_CHECKS=0;
-TRUNCATE `garage_app`;
+TRUNCATE `app_garage`;
 TRUNCATE `garage_blueprint`;
+TRUNCATE `garage_boolean`;
 TRUNCATE `garage_rank`;
 TRUNCATE `garage_stat_max`;
 TRUNCATE `garage_stat_min`;

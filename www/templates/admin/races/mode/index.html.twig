@@ -1,0 +1,26 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block datas %}
+    <table class="{{ classes.table_index }}">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Slug</th>
+                <th class="text-end">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for mode in modes %}
+            <tr>
+                <td>{{ mode.id }}</td>
+                <td>{{ mode.name }}</td>
+                <td>{{ mode.slug }}</td>
+                <td class="text-end">{{ component('ButtonEdit', {id: mode.id, slug: mode.slug, path: 'admin.race.mode.update', target: false}) }}</td>
+            </tr>
+        {% else %}
+            	{{ component('TableNoRecords', {value: 4}) }}
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

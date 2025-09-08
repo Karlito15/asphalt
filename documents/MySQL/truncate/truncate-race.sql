@@ -1,5 +1,5 @@
 SET FOREIGN_KEY_CHECKS=0;
-TRUNCATE `race_app`;
+TRUNCATE `app_race`;
 TRUNCATE `race_mode`;
 TRUNCATE `race_region`;
 TRUNCATE `race_season`;

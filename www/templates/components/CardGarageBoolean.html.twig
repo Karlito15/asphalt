@@ -1,0 +1,19 @@
+<!-- component html -->
+<div class="card bg-primary">
+    <div class="card-header text-center">
+        {{ title }}
+    </div>
+    <div class="card-body p-1">
+        <div class="btn-group btn-group-sm" role="group" aria-label="boolean">
+            {% for item in forms %}
+                {% set addClass = null %}
+                {% if loop.first %}
+                {% set addClass = ' rounded-end rounded-pill' %}
+                {% elseif loop.last %}
+                {% set addClass = ' rounded-start rounded-pill' %}
+                {% endif %}
+                {{ form_widget(item, {'label_attr': {'class': class ~ addClass}}) }}
+            {% endfor %}
+        </div>
+    </div>
+</div>

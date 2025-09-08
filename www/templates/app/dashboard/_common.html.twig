@@ -1,0 +1,13 @@
+{% import "@App/app/dashboard/index.html.twig" as fn %}
+
+<!-- Begin Row -->
+<h3 class="text-uppercase text-center fw-bold h2 shadow-lg border-top pt-1">Commons</h3>
+<div class="row flex-row">
+{% for common in commons %}
+    {% set ico = fn.faIcon(common.label) %}
+    <div class="col-xl-3 col-md-6 col-sm-6">
+        {{ component('CardDashboard', {tabindex: common.position, maxValue: 999, color: 'text-body-emphasis', title: common.label, icon: ico|striptags, datas: common}) }}
+    </div>
+{% endfor %}
+</div>
+<!-- End Row -->

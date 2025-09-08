@@ -16,14 +16,14 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: RaceTimeRepository::class)]
 #[ORM\Table(name: 'race_time')]
-#[ORM\Index(name: 'race_time_idx', columns: ['name'])]
 #[ORM\HasLifecycleCallbacks]
+#[ORM\Index(columns: ['name'], name: 'name_idx')]
 #[Gedmo\Loggable]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
 #[UniqueEntity(fields: ['name'])]
 class RaceTime
 {
-     /**
+    /**
      * Hook timestamp behavior
      * updates createdAt, updatedAt fields
      * Hook SoftDeleteable behavior
@@ -32,9 +32,10 @@ class RaceTime
     use TimestampableEntity;
     use SoftDeleteableEntity;
 
-   #[ORM\Id]
+    #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(options: ['unsigned' => true])]
+    #[Groups(['index'])]
     private ?int $id = null;
 
     #[ORM\Column(type: Types::SMALLINT, unique:true, nullable:false, options: ['unsigned' => true])]
@@ -45,7 +46,7 @@ class RaceTime
     #[Gedmo\Versioned]
     private int $name;
 
-    #[ORM\OneToMany(targetEntity: RaceApp::class, mappedBy: 'time', orphanRemoval: true)]
+    #[ORM\OneToMany(targetEntity: AppRace::class, mappedBy: 'time', orphanRemoval: true)]
     protected Collection $race;
 
     public function __construct()
@@ -58,7 +59,7 @@ class RaceTime
         return (string) $this->getName();
     }
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -76,14 +77,14 @@ class RaceTime
     }
 
     /**
-     * @return Collection<int, RaceApp>
+     * @return Collection<int, AppRace>
      */
     public function getRace(): Collection
     {
         return $this->race;
     }
 
-    public function addRace(RaceApp $race): static
+    public function addRace(AppRace $race): static
     {
         if (!$this->race->contains($race)) {
             $this->race->add($race);
@@ -93,7 +94,7 @@ class RaceTime
         return $this;
     }
 
-    public function removeRace(RaceApp $race): static
+    public function removeRace(AppRace $race): static
     {
         if ($this->race->removeElement($race)) {
             // set the owning side to null (unless already changed)

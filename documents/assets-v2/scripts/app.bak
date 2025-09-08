@@ -1,0 +1,23 @@
+/*
+ * Welcome to your app's main JavaScript file!
+ *
+ * We recommend including the built version of this JavaScript file
+ * (and its CSS file) in your base layout (base.html.twig).
+ */
+/** jQuery */
+// Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
+import { $, jQuery } from 'jquery';
+global.$ = global.jQuery = $;
+
+/** JS ROUTING */
+// php bin/console fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json
+const routes = require('../../public/js/fos_js_routes.json');
+import Routing from '../../public/bundles/fosjsrouting/js/router.min';
+
+Routing.setRoutingData(routes);
+
+/** IMPORT JS FILES */
+import '../stimulus';				// Start the Stimulus application
+
+/** EXPORT VARIABLES */
+export { $, jQuery, Routing, routes };

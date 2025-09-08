@@ -2,7 +2,6 @@
 
 namespace App\Repository;
 
-use App\Able\Repository\SitemapsAble;
 use App\Entity\RaceSeason;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -12,27 +11,23 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class RaceSeasonRepository extends ServiceEntityRepository
 {
-    use SitemapsAble;
-
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, RaceSeason::class);
     }
 
     /**
-     * Retourne les informations pour les extraire dans un fichier CSV
-     *
      * @return array
      */
-    public function exportDatas(): array
+    public function getDatas(): array
     {
-        $q  = "q.chapter AS Chapter, q.name AS Name, q.slug AS Slug";
         $qb = $this->createQueryBuilder('q');
-        $qb->select($q);
+        $qb->select('q.id, q.chapter, q.name, q.slug');
         $qb->where('q.deletedAt IS NULL');
         $qb->orderBy('q.id', 'ASC');
+        $r = $qb->getQuery();
 
-        return $qb->getQuery()->getArrayResult();
+        return $r->getArrayResult();
     }
 
     /**
@@ -62,29 +57,4 @@ class RaceSeasonRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
-    //    /**
-    //     * @return RaceSeason[] Returns an array of RaceSeason objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('r')
-    //            ->andWhere('r.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('r.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
-
-    //    public function findOneBySomeField($value): ?RaceSeason
-    //    {
-    //        return $this->createQueryBuilder('r')
-    //            ->andWhere('r.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
 }

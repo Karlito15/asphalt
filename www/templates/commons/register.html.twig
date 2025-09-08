@@ -1,0 +1,85 @@
+{% extends '@App/bases/empty.html.twig' %}
+
+{% block contents %}
+<!-- Begin Left Content -->
+<div class="col-xl-8 col-lg-6 col-md-5 no-padding">
+    <div class="elisyam-bg background-05">
+        <div class="elisyam-overlay overlay-04"></div>
+        <div class="authentication-col-content mx-auto">
+            <h1 class="gradient-text-01">{{ metas.title }} !</h1>
+            <span class="description">
+                Enflammez votre esprit de compétition avec Asphalt Legends Unite et plongez dans ce monde de course automobile palpitant.
+                Collaborez avec d'autres pilotes dans des courses multijoueurs en ligne exaltantes, faites des dérapages et des acrobaties,
+                et foncez vers la victoire dans des voitures sublimes !
+            </span>
+        </div>
+    </div>
+</div>
+<!-- End Left Content -->
+<!-- Begin Right Content -->
+<div class="col-xl-4 col-lg-6 col-md-7 my-auto no-padding">
+    <!-- Begin Form -->
+    <div class="authentication-form mx-auto">
+        <div class="logo-centered">
+            <a href="{{ path('app.dashboard.index') }}">
+                <img src="{{ asset(logo) }}" alt="{{ metas.title }}">
+            </a>
+        </div>
+
+    {% for flash_error in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger p-3" role="alert">{{ flash_error }}</div>
+    {% endfor %}
+
+        <h3>Create An Account</h3>
+
+        {{ form_errors(registrationForm) }}
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {label: 'Password'}) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <div class="sign-btn text-center">
+            <button type="submit" class="btn btn-lg btn-gradient-01">Create an account</button>
+        </div>
+    {{ form_end(registrationForm) }}
+
+{#        <form>#}
+{#            <div class="group material-input">#}
+{#                <input type="text" name="email" required>#}
+{#                <span class="highlight"></span>#}
+{#                <span class="bar"></span>#}
+{#                <label>Email</label>#}
+{#            </div>#}
+{#            <div class="group material-input">#}
+{#                <input type="password" required>#}
+{#                <span class="highlight"></span>#}
+{#                <span class="bar"></span>#}
+{#                <label>Password</label>#}
+{#            </div>#}
+{#            <div class="group material-input">#}
+{#                <input type="password" required>#}
+{#                <span class="highlight"></span>#}
+{#                <span class="bar"></span>#}
+{#                <label>Confirm Password</label>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="col text-start">#}
+{#                    <div class="styled-checkbox">#}
+{#                        <input type="checkbox" name="checkbox" id="agree">#}
+{#                        <label for="agree">I Accept <a href="javascript:void(0);">Terms and Conditions</a></label>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="sign-btn text-center">#}
+{#                <button type="submit" class="btn btn-lg btn-gradient-01">Create an account</button>#}
+{#            </div>#}
+{#        </form>#}
+        <div class="register"> Already have an account? <br> <a href="{{ path('app.security.login') }}">Sign In</a></div>
+    </div>
+    <!-- End Form -->
+</div>
+<!-- End Right Content -->
+{% endblock %}
+
+{% block title %}Register{% endblock %}

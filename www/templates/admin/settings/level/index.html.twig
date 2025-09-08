@@ -1,0 +1,32 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block datas %}
+    <table class="{{ classes.table_index }}">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Level</th>
+                <th>Common</th>
+                <th>Rare</th>
+                <th>Epic</th>
+                <th>Slug</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for level in levels %}
+            <tr>
+                <td>{{ level.id }}</td>
+                <td>{{ level.level }}</td>
+                <td>{{ level.common }}</td>
+                <td>{{ level.rare }}</td>
+                <td>{{ level.epic }}</td>
+                <td>{{ level.slug }}</td>
+                <td class="text-end">{{ component('ButtonEdit', {id: level.id, slug: level.slug, path: 'admin.setting.level.update', target: false}) }}</td>
+            </tr>
+        {% else %}
+            	{{ component('TableNoRecords', {value: 7}) }}
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

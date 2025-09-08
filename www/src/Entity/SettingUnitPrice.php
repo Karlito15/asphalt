@@ -2,8 +2,8 @@
 
 namespace App\Entity;
 
-use App\Able\Entity\SettingUnitPriceAble;
 use App\Repository\SettingUnitPriceRepository;
+use App\Service\Entities\SettingUnitPriceService;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -17,16 +17,11 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: SettingUnitPriceRepository::class)]
 #[ORM\Table(name: 'setting_unit_price')]
-#[ORM\Index(name: 'setting_unit_price_idx', columns: ['slug'])]
 #[ORM\HasLifecycleCallbacks]
+#[ORM\Index(name: 'slug_idx', columns: ['slug'])]
 #[Gedmo\Loggable]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
-#[UniqueEntity(fields: [
-    'level01', 'level02', 'level03', 'level04', 'level05',
-    'level06', 'level07', 'level08', 'level09', 'level10',
-    'level11', 'level12', 'level13',
-    'common', 'rare', 'epic',
-])]
+#[UniqueEntity(fields: ['level01', 'level02', 'level03', 'level04', 'level05', 'level06', 'level07', 'level08', 'level09', 'level10', 'level11', 'level12', 'level13', 'common', 'rare', 'epic'])]
 class SettingUnitPrice
 {
     /**
@@ -37,11 +32,12 @@ class SettingUnitPrice
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use SettingUnitPriceAble;
+    use SettingUnitPriceService;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(options: ['unsigned' => true])]
+    #[Groups(['index'])]
     private ?int $id = null;
 
     #[ORM\Column(type: Types::INTEGER, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -185,7 +181,7 @@ class SettingUnitPrice
     #[Gedmo\Versioned]
     private string $slug;
 
-    #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingUnitPrice')]
+    #[ORM\OneToMany(targetEntity: AppGarage::class, mappedBy: 'settingUnitPrice')]
     protected Collection $garage;
 
     public function __construct()
@@ -193,14 +189,14 @@ class SettingUnitPrice
         $this->garage = new ArrayCollection();
     }
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
     public function __toString(): string
     {
         return (string) $this->getSlug();
+    }
+
+    public function getId(): ?string
+    {
+        return $this->id;
     }
 
     public function getLevel01(): ?int
@@ -401,14 +397,14 @@ class SettingUnitPrice
     }
 
     /**
-     * @return Collection<int, GarageApp>
+     * @return Collection<int, AppGarage>
      */
     public function getGarage(): Collection
     {
         return $this->garage;
     }
 
-    public function addGarage(GarageApp $garage): static
+    public function addGarage(AppGarage $garage): static
     {
         if (!$this->garage->contains($garage)) {
             $this->garage->add($garage);
@@ -418,7 +414,7 @@ class SettingUnitPrice
         return $this;
     }
 
-    public function removeGarage(GarageApp $garage): static
+    public function removeGarage(AppGarage $garage): static
     {
         if ($this->garage->removeElement($garage)) {
             // set the owning side to null (unless already changed)

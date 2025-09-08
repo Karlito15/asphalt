@@ -1,0 +1,19 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block datas %}
+
+    {% if app.current_route == 'app.page.search.garage' %}
+        {% include('@App/app/page/search/garage.html.twig') %}
+        <table class="{{ classes.table_index }}">{% include '@App/app/garage/_table.html.twig' %}</table>
+    {% endif %}
+
+    {% if app.current_route == 'app.page.search.race' %}
+        {% include('@App/app/page/search/race.html.twig') %}
+        <table class="{{ classes.table_index }}">{% include '@App/app/race/_table.html.twig' %}</table>
+    {% endif %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('styles/override-table.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}

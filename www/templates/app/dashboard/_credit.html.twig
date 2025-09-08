@@ -1,0 +1,24 @@
+<!-- Begin Row -->
+<div class="row flex-row">
+    <!-- Begin Credits -->
+    <div class="col-xl-3 col-md-6 col-sm-6">
+        {{ component('CardDashboardForm', {form: formCredit, tabindex: formCredit.vars.value.position, maxValue: 999999999, color: 'text-warning', title: 'Credits', icon: 'fa-solid fa-money-check-dollar fa-4x'}) }}
+    </div>
+    <!-- End Credits -->
+    <!-- Begin Tokens -->
+    <div class="col-xl-3 col-md-6 col-sm-6">
+        {{ component('CardDashboardForm', {form: formToken, tabindex: formToken.vars.value.position, maxValue: 999999999, color: 'text-info', title: 'Tokens', icon: 'fa-solid fa-coins fa-4x'}) }}
+    </div>
+    <!-- End Tokens -->
+    <!-- Begin Epics -->
+    <div class="col-xl-3 col-md-6 col-sm-6">
+        {{ component('CardDashboardForm', {form: formEpic, tabindex: formEpic.vars.value.position, maxValue: 999999999, color: 'text-danger', title: 'Epics', icon: 'fa-regular fa-money-bill-1 fa-4x'}) }}
+    </div>
+    <!-- End Epics -->
+    <!-- Begin Overlocks -->
+    <div class="col-xl-3 col-md-6 col-sm-6">
+        {{ component('CardDashboardForm', {form: formOverlock, tabindex: formOverlock.vars.value.position, maxValue: 999999999, color: 'text-secondary', title: 'Overlocks', icon: 'fa-solid fa-sack-dollar fa-4x'}) }}
+    </div>
+    <!-- End Overlocks -->
+</div>
+<!-- End Row -->

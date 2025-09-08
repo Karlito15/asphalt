@@ -1,0 +1,30 @@
+
+<div class="row row-cols-5 g-3">
+{% for joker in jokers %}
+    {% if joker.slug == 'joker-s-4' %}
+        <div class="col">
+            {{ component('CardDashboard', {tabindex: joker.position, maxValue: 6, color: 'text-primary', title: 'Class S *****', icon: null, datas: joker}) }}
+        </div>
+    {% endif %}
+    {% if joker.slug == 'joker-s-3' %}
+        <div class="col">
+            {{ component('CardDashboard', {tabindex: joker.position, maxValue: 8, color: 'text-primary', title: 'Class S ****', icon: null, datas: joker}) }}
+        </div>
+    {% endif %}
+    {% if joker.slug == 'joker-s-2' %}
+        <div class="col">
+            {{ component('CardDashboard', {tabindex: joker.position, maxValue: 10, color: 'text-primary', title: 'Class S ***', icon: null, datas: joker}) }}
+        </div>
+    {% endif %}
+    {% if joker.slug == 'joker-s-1' %}
+        <div class="col">
+            {{ component('CardDashboard', {tabindex: joker.position, maxValue: 10, color: 'text-primary', title: 'Class S **', icon: null, datas: joker}) }}
+        </div>
+    {% endif %}
+    {% if joker.slug == 'joker-s' %}
+        <div class="col">
+            {{ component('CardDashboard', {tabindex: joker.position, maxValue: 10, color: 'text-primary', title: 'Class S *', icon: null, datas: joker}) }}
+        </div>
+    {% endif %}
+{% endfor %}
+</div>

@@ -2,21 +2,23 @@
 
 namespace App\Entity;
 
-use App\Able\Entity\BlueprintAble;
 use App\Repository\GarageBlueprintRepository;
+use App\Service\Entities\BlueprintService;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: GarageBlueprintRepository::class)]
 #[ORM\Table(name: 'garage_blueprint')]
-#[ORM\Index(name: 'garage_blueprint_idx', columns: ['id'])]
 #[ORM\HasLifecycleCallbacks]
+#[ORM\Index(name: 'name_idx', columns: ['id'])]
 #[Gedmo\Loggable]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
+//#[UniqueEntity(fields: ['label', 'value'], ignoreNull: 'value')]
 class GarageBlueprint
 {
     /**
@@ -27,11 +29,11 @@ class GarageBlueprint
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use BlueprintAble;
+    use BlueprintService;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(options: ['unsigned' => true])]
     private ?int $id = null;
 
     #[ORM\Column(type: Types::STRING, length: 8, nullable: true)]
@@ -68,16 +70,16 @@ class GarageBlueprint
     #[Assert\Range(min: 0, max: 999)]
     private ?int $total = null;
 
-    #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'blueprint')]
+    #[ORM\ManyToOne(targetEntity: AppGarage::class, cascade: ['persist', 'remove'], inversedBy: 'blueprint')]
     #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
-    private GarageApp $garage;
+    private AppGarage $garage;
 
     public function __toString() : string
     {
         return $this->getGarage();
     }
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -154,12 +156,17 @@ class GarageBlueprint
         return $this;
     }
 
-    public function getGarage(): ?GarageApp
+    public function getTotal(): ?int
+    {
+        return $this->total;
+    }
+
+    public function getGarage(): ?AppGarage
     {
         return $this->garage;
     }
 
-    public function setGarage(?GarageApp $garage): static
+    public function setGarage(?AppGarage $garage): static
     {
         $this->garage = $garage;
 

@@ -16,8 +16,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: RaceModeRepository::class)]
 #[ORM\Table(name: 'race_mode')]
-#[ORM\Index(name: 'race_mode_idx', columns: ['slug'])]
 #[ORM\HasLifecycleCallbacks]
+#[ORM\Index(name: 'slug_idx', columns: ['slug'])]
 #[Gedmo\Loggable]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
 #[UniqueEntity(fields: ['name'])]
@@ -34,7 +34,8 @@ class RaceMode
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(options: ['unsigned' => true])]
+    #[Groups(['index'])]
     private ?int $id = null;
 
     #[ORM\Column(type: Types::STRING, length: 32, unique:true, nullable:false)]
@@ -50,7 +51,7 @@ class RaceMode
     #[Gedmo\Versioned]
     private string $slug;
 
-    #[ORM\OneToMany(targetEntity: RaceApp::class, mappedBy: 'mode', orphanRemoval: true)]
+    #[ORM\OneToMany(targetEntity: AppRace::class, mappedBy: 'mode', orphanRemoval: true)]
     protected Collection $race;
 
     public function __construct()
@@ -63,7 +64,7 @@ class RaceMode
         return $this->getName();
     }
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -93,14 +94,14 @@ class RaceMode
     }
 
     /**
-     * @return Collection<int, RaceApp>
+     * @return Collection<int, AppRace>
      */
     public function getRace(): Collection
     {
         return $this->race;
     }
 
-    public function addRace(RaceApp $race): static
+    public function addRace(AppRace $race): static
     {
         if (!$this->race->contains($race)) {
             $this->race->add($race);
@@ -110,7 +111,7 @@ class RaceMode
         return $this;
     }
 
-    public function removeRace(RaceApp $race): static
+    public function removeRace(AppRace $race): static
     {
         if ($this->race->removeElement($race)) {
             // set the owning side to null (unless already changed)

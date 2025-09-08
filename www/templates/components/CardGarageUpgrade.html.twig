@@ -1,0 +1,20 @@
+<!-- component html -->
+{% set result = (garage - form.vars.value) %}
+<div class="card bg-primary">
+    <div class="card-header text-center">
+        {{ form_label(form) }}
+    </div>
+    <div class="card-body p-0">
+        {{ form_widget(form, {attr: {'max': garage}}) }}
+    </div>
+    <div class="card-footer p-0">
+        <label class="m-0">
+    {% if result != 0 %}
+        <input type="text" class="form-control bg-primary text-info text-center fw-bolder" value="{{ result }}" min="0" max="99" tabindex="99" autocomplete="off" disabled />
+    {% else %}
+        <input type="text" class="form-control bg-primary" value="" tabindex="99" disabled />
+    {% endif %}
+        </label>
+    </div>
+</div>
+

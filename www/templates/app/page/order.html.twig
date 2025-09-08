@@ -1,0 +1,51 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block datas %}
+    <table class="{{ classes.table_index }}">
+        <thead>
+            <tr>
+                <th class="col-1 py-2 text-center">#</th>
+                <th class="col-5 py-2 text-start">Garage</th>
+                <th class="col-1 py-2 text-center">Upd.</th>
+                <th class="col-1 py-2 text-center">isLocked</th>
+                <th class="col-1 py-2 text-center">isFullBlueprint</th>
+                <th class="col-1 py-2 text-center">isGold</th>
+                <th class="col-1 py-2 text-center">Average Max</th>
+                <th class="col-1 py-2 text-end">Action</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th class="col-1 py-2 text-center">#</th>
+                <th class="col-5 py-2 text-start">Garage</th>
+                <th class="col-1 py-2 text-center">Upd.</th>
+                <th class="col-1 py-2 text-center">isLocked</th>
+                <th class="col-1 py-2 text-center">isFullBlueprint</th>
+                <th class="col-1 py-2 text-center">isGold</th>
+                <th class="col-1 py-2 text-center">Average Max</th>
+                <th class="col-1 py-2 text-end">Action</th>
+            </tr>
+        </tfoot>
+        <tbody>
+        {% for result in results %}
+            <tr>
+                <td class="text-center">{{ loop.index }}</td>
+                <td class="text-start"><a href="{{ path('app.garage.update', {'id': result.id, 'slug': result.slug}) }}" target="_blank">{{ result.settingBrand.name }} {{ result.model }}</a></td>
+                <td class="text-center">{{ result.gameUpdate }}</td>
+                <td class="text-center">{{ component('Boolean', {value: result.boolean.0.isLocked}) }}</td>
+                <td class="text-center">{{ component('Boolean', {value: result.boolean.0.isFullBlueprint}) }}</td>
+                <td class="text-center">{{ component('Boolean', {value: result.boolean.0.isGold}) }}</td>
+                <td class="text-center">{{ result.statMax.0.average | number_format(2, ',', ' ') }}</td>
+                <td class="text-end">{{ component('ButtonEdit', {'id': result.id, 'slug': result.slug, 'path': 'app.garage.update', 'target': true }) }}</td>
+            </tr>
+        {% else %}
+            {{ component('TableNoRecords', { value: 8 }) }}
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('styles/override-table.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}

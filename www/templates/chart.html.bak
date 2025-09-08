@@ -1,0 +1,364 @@
+	<div class="card">
+		<div class="card-header"><h5 class="text-center">Graphs</h5></div>
+		<div class="card-body">
+			<div class="row row-cols-4">
+				<div class="col">{{ render_chart(chart) }}</div>
+				<div class="col">{{ render_chart(lock) }}</div>
+				<div class="col">{{ render_chart(unlock) }}</div>
+				<div class="col">{{ render_chart(gold) }}</div>
+			</div>
+		</div>
+	</div>
+	<div class="w-100 mb-2"></div>
+	<div class="card">
+		<div class="card-header"><h5 class="text-center">{{ controller_name }}</h5></div>
+		<div class="card-body">
+			<table class="table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th class="col-6" scope="col">#</th>
+						<th class="col-1 text-end" scope="col">Class D</th>
+						<th class="col-1 text-end" scope="col">Class C</th>
+						<th class="col-1 text-end" scope="col">Class B</th>
+						<th class="col-1 text-end" scope="col">Class A</th>
+						<th class="col-1 text-end" scope="col">Class S</th>
+						<th class="col-1 text-end" scope="col">Total</th>
+					</tr>
+				</thead>
+				<tbody class=" table-group-divider">
+					<tr>
+						<th class="text-start fw-normal" scope="row">{{ garage.value.Garage.label }}</th>
+						<td class="text-end">{{ garage.value.Garage.D }}</td>
+						<td class="text-end">{{ garage.value.Garage.C }}</td>
+						<td class="text-end">{{ garage.value.Garage.B }}</td>
+						<td class="text-end">{{ garage.value.Garage.A }}</td>
+						<td class="text-end">{{ garage.value.Garage.S }}</td>
+						<td class="text-end">{{ garage.value.Garage.Total }}</td>
+					</tr>
+					<tr>
+						<th class="text-start fw-normal" scope="row">{{ garage.value.Lock.label }}</th>
+						<td class="text-end">{{ garage.value.Lock.D }}</td>
+						<td class="text-end">{{ garage.value.Lock.C }}</td>
+						<td class="text-end">{{ garage.value.Lock.B }}</td>
+						<td class="text-end">{{ garage.value.Lock.A }}</td>
+						<td class="text-end">{{ garage.value.Lock.S }}</td>
+						<td class="text-end">{{ garage.value.Lock.Total }}</td>
+					</tr>
+					<tr>
+						<th class="text-start fw-normal" scope="row">{{ garage.value.Unlock.label }}</th>
+						<td class="text-end">{{ garage.value.Unlock.D }}</td>
+						<td class="text-end">{{ garage.value.Unlock.C }}</td>
+						<td class="text-end">{{ garage.value.Unlock.B }}</td>
+						<td class="text-end">{{ garage.value.Unlock.A }}</td>
+						<td class="text-end">{{ garage.value.Unlock.S }}</td>
+						<td class="text-end">{{ garage.value.Unlock.Total }}</td>
+					</tr>
+					<tr>
+						<th class="text-start fw-normal" scope="row">{{ garage.value.Full_Blueprint.label }}</th>
+						<td class="text-end">{{ garage.value.Full_Blueprint.D }}</td>
+						<td class="text-end">{{ garage.value.Full_Blueprint.C }}</td>
+						<td class="text-end">{{ garage.value.Full_Blueprint.B }}</td>
+						<td class="text-end">{{ garage.value.Full_Blueprint.A }}</td>
+						<td class="text-end">{{ garage.value.Full_Blueprint.S }}</td>
+						<td class="text-end">{{ garage.value.Full_Blueprint.Total }}</td>
+					</tr>
+					<tr>
+						<th class="text-start fw-normal" scope="row">{{ garage.value.Full_Upgrade.label }}</th>
+						<td class="text-end">{{ garage.value.Full_Upgrade.D }}</td>
+						<td class="text-end">{{ garage.value.Full_Upgrade.C }}</td>
+						<td class="text-end">{{ garage.value.Full_Upgrade.B }}</td>
+						<td class="text-end">{{ garage.value.Full_Upgrade.A }}</td>
+						<td class="text-end">{{ garage.value.Full_Upgrade.S }}</td>
+						<td class="text-end">{{ garage.value.Full_Upgrade.Total }}</td>
+					</tr>
+					<tr>
+						<th class="text-start fw-normal" scope="row">{{ garage.value.Gold.label }}</th>
+						<td class="text-end">{{ garage.value.Gold.D }}</td>
+						<td class="text-end">{{ garage.value.Gold.C }}</td>
+						<td class="text-end">{{ garage.value.Gold.B }}</td>
+						<td class="text-end">{{ garage.value.Gold.A }}</td>
+						<td class="text-end">{{ garage.value.Gold.S }}</td>
+						<td class="text-end">{{ garage.value.Gold.Total }}</td>
+					</tr>
+					<tr>
+						<th class="text-start fw-normal" scope="row">{{ garage.value.To_Upgrade.label }}</th>
+						<td class="text-end">{{ garage.value.To_Upgrade.D }}</td>
+						<td class="text-end">{{ garage.value.To_Upgrade.C }}</td>
+						<td class="text-end">{{ garage.value.To_Upgrade.B }}</td>
+						<td class="text-end">{{ garage.value.To_Upgrade.A }}</td>
+						<td class="text-end">{{ garage.value.To_Upgrade.S }}</td>
+						<td class="text-end">{{ garage.value.To_Upgrade.Total }}</td>
+					</tr>
+					<tr>
+						<th class="text-start fw-normal" scope="row">{{ garage.value.To_Unlock.label }}</th>
+						<td class="text-end">{{ garage.value.To_Unlock.D }}</td>
+						<td class="text-end">{{ garage.value.To_Unlock.C }}</td>
+						<td class="text-end">{{ garage.value.To_Unlock.B }}</td>
+						<td class="text-end">{{ garage.value.To_Unlock.A }}</td>
+						<td class="text-end">{{ garage.value.To_Unlock.S }}</td>
+						<td class="text-end">{{ garage.value.To_Unlock.Total }}</td>
+					</tr>
+					<tr>
+						<th class="text-start fw-normal" scope="row">{{ garage.value.To_Install_Upgrades.label }}</th>
+						<td class="text-end">{{ garage.value.To_Install_Upgrades.D }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Upgrades.C }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Upgrades.B }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Upgrades.A }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Upgrades.S }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Upgrades.Total }}</td>
+					</tr>
+					<tr>
+						<th class="text-start fw-normal" scope="row">{{ garage.value.To_Install_Commons.label }}</th>
+						<td class="text-end">{{ garage.value.To_Install_Commons.D }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Commons.C }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Commons.B }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Commons.A }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Commons.S }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Commons.Total }}</td>
+					</tr>
+					<tr>
+						<th class="text-start fw-normal" scope="row">{{ garage.value.To_Install_Rares.label }}</th>
+						<td class="text-end">{{ garage.value.To_Install_Rares.D }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Rares.C }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Rares.B }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Rares.A }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Rares.S }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Rares.Total }}</td>
+					</tr>
+					<tr>
+						<th class="text-start fw-normal" scope="row">{{ garage.value.To_Install_Epics.label }}</th>
+						<td class="text-end">{{ garage.value.To_Install_Epics.D }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Epics.C }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Epics.B }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Epics.A }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Epics.S }}</td>
+						<td class="text-end">{{ garage.value.To_Install_Epics.Total }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="w-100 mb-2"></div>
+	<div class="card">
+		<div class="card-header"><h5 class="text-center">Stats : Level</h5></div>
+		<div class="card-body">
+			<div class="row row-cols-5">
+				<div class="col text-center">
+					<h6>&nbsp;</h6>
+					<table class="table table-striped table-bordered mt-2">
+						<thead>
+							<tr>
+								<th scope="col" class="text-end">#</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row" class="text-end">Class D</th>
+							</tr>
+							<tr>
+								<th scope="row" class="text-end">Class C</th>
+							</tr>
+							<tr>
+								<th scope="row" class="text-end">Class B</th>
+							</tr>
+							<tr>
+								<th scope="row" class="text-end">Class A</th>
+							</tr>
+							<tr>
+								<th scope="row" class="text-end">Class S</th>
+							</tr>
+						</tbody>
+						<tfoot class=" table-group-divider">
+							<tr>
+								<th scope="row" class="text-end">Total</th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<div class="col text-center">
+					<h6>{{ upgrade.label }}</h6>
+					<table class="table table-striped table-bordered mt-2">
+						<thead>
+							<tr>
+								<th scope="col" class="text-center">None</th>
+								<th scope="col" class="text-center">Done</th>
+								<th scope="col" class="text-center">Need</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-center text-danger">{{ upgrade.value.D.None }}</td>
+								<td class="text-center text-success">{{ upgrade.value.D.Done }}</td>
+								<td class="text-center text-info">{{ upgrade.value.D.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ upgrade.value.C.None }}</td>
+								<td class="text-center text-success">{{ upgrade.value.C.Done }}</td>
+								<td class="text-center text-info">{{ upgrade.value.C.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ upgrade.value.B.None }}</td>
+								<td class="text-center text-success">{{ upgrade.value.B.Done }}</td>
+								<td class="text-center text-info">{{ upgrade.value.B.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ upgrade.value.A.None }}</td>
+								<td class="text-center text-success">{{ upgrade.value.A.Done }}</td>
+								<td class="text-center text-info">{{ upgrade.value.A.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ upgrade.value.S.None }}</td>
+								<td class="text-center text-success">{{ upgrade.value.S.Done }}</td>
+								<td class="text-center text-info">{{ upgrade.value.S.Need }}</td>
+							</tr>
+						</tbody>
+						<tfoot class=" table-group-divider">
+							<tr>
+								<td class="text-center text-danger">{{ upgrade.value.Total.None }}</td>
+								<td class="text-center text-success">{{ upgrade.value.Total.Done }}</td>
+								<td class="text-center text-info">{{ upgrade.value.Total.Need }}</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<div class="col text-center">
+					<h6>{{ common.label }}</h6>
+					<table class="table table-striped table-bordered mt-2">
+						<thead>
+							<tr>
+								<th scope="col" class="text-center">None</th>
+								<th scope="col" class="text-center">Done</th>
+								<th scope="col" class="text-center">Need</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-center text-danger">{{ common.value.D.None }}</td>
+								<td class="text-center text-success">{{ common.value.D.Done }}</td>
+								<td class="text-center text-info">{{ common.value.D.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ common.value.C.None }}</td>
+								<td class="text-center text-success">{{ common.value.C.Done }}</td>
+								<td class="text-center text-info">{{ common.value.C.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ common.value.B.None }}</td>
+								<td class="text-center text-success">{{ common.value.B.Done }}</td>
+								<td class="text-center text-info">{{ common.value.B.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ common.value.A.None }}</td>
+								<td class="text-center text-success">{{ common.value.A.Done }}</td>
+								<td class="text-center text-info">{{ common.value.A.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ common.value.S.None }}</td>
+								<td class="text-center text-success">{{ common.value.S.Done }}</td>
+								<td class="text-center text-info">{{ common.value.S.Need }}</td>
+							</tr>
+						</tbody>
+						<tfoot class=" table-group-divider">
+							<tr>
+								<td class="text-center text-danger">{{ common.value.Total.None }}</td>
+								<td class="text-center text-success">{{ common.value.Total.Done }}</td>
+								<td class="text-center text-info">{{ common.value.Total.Need }}</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<div class="col text-center">
+					<h6>{{ rare.label }}</h6>
+					<table class="table table-striped table-bordered mt-2">
+						<thead>
+							<tr>
+								<th scope="col" class="text-center">None</th>
+								<th scope="col" class="text-center">Done</th>
+								<th scope="col" class="text-center">Need</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-center text-danger">{{ rare.value.D.None }}</td>
+								<td class="text-center text-success">{{ rare.value.D.Done }}</td>
+								<td class="text-center text-info">{{ rare.value.D.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ rare.value.C.None }}</td>
+								<td class="text-center text-success">{{ rare.value.C.Done }}</td>
+								<td class="text-center text-info">{{ rare.value.C.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ rare.value.B.None }}</td>
+								<td class="text-center text-success">{{ rare.value.B.Done }}</td>
+								<td class="text-center text-info">{{ rare.value.B.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ rare.value.A.None }}</td>
+								<td class="text-center text-success">{{ rare.value.A.Done }}</td>
+								<td class="text-center text-info">{{ rare.value.A.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ rare.value.S.None }}</td>
+								<td class="text-center text-success">{{ rare.value.S.Done }}</td>
+								<td class="text-center text-info">{{ rare.value.S.Need }}</td>
+							</tr>
+						</tbody>
+						<tfoot class=" table-group-divider">
+							<tr>
+								<td class="text-center text-danger">{{ rare.value.Total.None }}</td>
+								<td class="text-center text-success">{{ rare.value.Total.Done }}</td>
+								<td class="text-center text-info">{{ rare.value.Total.Need }}</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<div class="col text-center">
+					<h6>{{ epic.label }}</h6>
+					<table class="table table-striped table-bordered mt-2">
+						<thead>
+							<tr>
+								<th scope="col" class="text-center">None</th>
+								<th scope="col" class="text-center">Done</th>
+								<th scope="col" class="text-center">Need</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-center text-danger">{{ epic.value.D.None }}</td>
+								<td class="text-center text-success">{{ epic.value.D.Done }}</td>
+								<td class="text-center text-info">{{ epic.value.D.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ epic.value.C.None }}</td>
+								<td class="text-center text-success">{{ epic.value.C.Done }}</td>
+								<td class="text-center text-info">{{ epic.value.C.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ epic.value.B.None }}</td>
+								<td class="text-center text-success">{{ epic.value.B.Done }}</td>
+								<td class="text-center text-info">{{ epic.value.B.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ epic.value.A.None }}</td>
+								<td class="text-center text-success">{{ epic.value.A.Done }}</td>
+								<td class="text-center text-info">{{ epic.value.A.Need }}</td>
+							</tr>
+							<tr>
+								<td class="text-center text-danger">{{ epic.value.S.None }}</td>
+								<td class="text-center text-success">{{ epic.value.S.Done }}</td>
+								<td class="text-center text-info">{{ epic.value.S.Need }}</td>
+							</tr>
+						</tbody>
+						<tfoot class=" table-group-divider">
+							<tr>
+								<td class="text-center text-danger">{{ epic.value.Total.None }}</td>
+								<td class="text-center text-success">{{ epic.value.Total.Done }}</td>
+								<td class="text-center text-info">{{ epic.value.Total.Need }}</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>

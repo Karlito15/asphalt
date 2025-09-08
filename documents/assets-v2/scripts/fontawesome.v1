@@ -1,0 +1,8 @@
+/** DEV ENV */
+if (process.env.NODE_ENV === 'development') {
+	console.info('loaded :: FontAwesome 6.5');
+}
+
+/** Load Fontawesome */
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "@fortawesome/fontawesome-free/js/all.min.js";

@@ -1,0 +1,12 @@
+<!-- component html -->
+<a
+    class="{{ classes.btn_index }}"
+    {% if slug is null %}
+    href="{{ path(path, {'id': id}) }}"
+    {% else %}
+    href="{{ path(path, {'id': id, 'slug': slug}) }}"
+    {% endif %}
+    {% if target %} target="_blank"{% endif %}
+>
+    <i class="fa-solid fa-pencil"></i>&nbsp;Edit
+</a>

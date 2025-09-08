@@ -1,0 +1,47 @@
+<?php
+
+namespace App\Form\Search;
+
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class RaceSearchType extends AbstractType
+{
+    use FormFeature;
+
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        $builder
+//          ->add('region', EntityType::class, [
+//              'class'       => RaceRegion::class,
+//              'label'       => false,
+//              'placeholder' => 'Select a Region',
+//              'required'    => false,
+//              'trim'        => false,
+//          ])
+//          ->add('chapter', EntityType::class, [
+//              'class'         => RaceSeason::class,
+//              'disabled'      => true,
+//              'label'         => false,
+//              'mapped'        => false,
+//              'placeholder'   => 'Select a Chapter',
+//              'required'      => false,
+//              'query_builder' => function(EntityRepository $repo) {
+//                  return $repo->createQueryBuilder('r')->groupBy('r.chapter')->orderBy('r.chapter', 'ASC');
+//              },
+//          ])
+//          ->add('track', TrackAutocompleteField::class)
+            // BUTTONS
+            ->add('submit', SubmitType::class, [
+                'attr'       => [
+                    'class'  => 'btn btn-outline-success w-100 px-3 text-uppercase'
+                ],
+                'label'      => 'Search',
+                'label_html' => false,
+            ])
+        ;
+    }
+}

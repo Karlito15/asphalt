@@ -2,35 +2,53 @@
 <html lang="{{ app.request.locale }}">
 <head>
     <title>{% block title %}{{ controller_name | default('Title') }}{% endblock %} - {{ metas.title }}</title>
-    {% block metas %}{% include '@App/partials/commons/meta.html.twig' %}{% endblock %}
-    {% block favicons %}{% include '@App/partials/commons/favicon.html.twig' %}{% endblock %}
-
-    {% block importmap %}{{ importmap('app') }}{% endblock %}
-
+    {%- block metas -%}{% include '@App/partials/meta.html.twig' %}{% endblock %}
+    {%- block favicons -%}{% include '@App/partials/favicon.html.twig' %}{% endblock %}
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Code:wght@400;700&family=Oxanium:wght@400;800&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
-    {% block stylesheets %}
-        <link href="{{ asset('libraries/fontawesome/6.7.2/css/all.min.css') }}" rel="stylesheet" type="text/css" />
-{#        <link href="{{ asset('styles/fonts.css') }}" rel="stylesheet" type="text/css" />#}
-{#        <link href="{{ asset('styles/scrollbar.css') }}" rel="stylesheet" type="text/css" />#}
-{#        <link href="{{ asset('styles/app.css') }}" rel="stylesheet" type="text/css" />#}
-{#        <link href="{{ asset('styles/breadcrumb.css') }}" rel="stylesheet" type="text/css" />#}
+    <link href="{{ asset('styles/scrollbar.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('themes/elisyam/vendors/css/base/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('vendor/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('themes/elisyam/vendors/css/base/elisyam-1.5-dark.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('styles/override-bootstrap.css') }}" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css" rel="stylesheet" />
+    {% block stylesheets %}{% endblock %}
 
-        {# SASS #}
-{#        <link href="{{ asset('styles/bootstrap.scss') }}" rel="stylesheet" type="text/css"/>#}
-{#        <link href="{{ asset('bootstrap.css') }}" rel="stylesheet" type="text/css" />#}
-    {% endblock %}
+    {%- if app.environment == 'dev' -%}
+    <style>
+        .page, nav.navbar, .default-sidebar {background-color: #3C3C3C!important;}
+    </style>
+        {% set logo = 'images/logo-green.png' %}
+    {% else %}
+        {% set logo = 'images/logo-white.png' %}
+    {% endif %}
+
 </head>
 
-{% block body %}<body>{% endblock %}
+{% block body %}<body id="page-top">{% endblock %}
 
-{% block containers %}{% endblock %}
+{% include '@App/partials/loader.html.twig' %}
 
-<!-- Scripts -->
-{% block javascripts %}
-    <script src="{{ asset('libraries/fontawesome/6.7.2/js/all.min.js') }}"></script>
-{#    <script src="{{ asset('bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js') }}"></script>#}
-{#    <script src="{{ asset('vendor/bootstrap/bootstrap.index.js') }}"></script>#}
-{% endblock %}
+{%- block containers -%}{% endblock %}
 
+<!-- Tweaks for older IEs-->
+<!--[if lt IE 9]>
+<script src="{{ asset('scripts/html5shiv.min.js') }}"></script>
+<script src="{{ asset('scripts/respond.min.js') }}"></script>
+<![endif]-->
+
+<!-- Begin Vendor Js -->
+<script type="text/javascript" src="{{ asset('themes/elisyam/vendors/js/base/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('themes/elisyam/vendors/js/base/core.min.js') }}"></script>
+<!-- End Vendor Js -->
+
+<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+
+{% block importmap %}{{ importmap('app') }}{% endblock %}
+
+{% block javascripts %}{% endblock %}
 </body>
 </html>

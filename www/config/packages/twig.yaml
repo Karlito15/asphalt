@@ -1,5 +1,7 @@
 twig:
     cache:                      '%kernel.cache_dir%/twig'
+#    cache:                      false
+    # The default format options used by the date filter
     date:
         format:                 'Y-m-d, H:i:s'
         interval_format:        '%d days'
@@ -8,7 +10,9 @@ twig:
     default_path:               '%kernel.project_dir%/templates'
     file_name_pattern:          '*.twig'
     form_themes:
+        # Default:
         - bootstrap_5_layout.html.twig
+    # The default format options for the number_format filter
     number_format:
         decimals:               0
         decimal_point:          ','
@@ -16,10 +20,12 @@ twig:
     paths:
         '%kernel.project_dir%/templates': 'App'
     globals:
-        metas:              '%metas%'
-        classes:            '%classes%'
-        games:              '%games%'
-        images:             '%images%'
+        metas:   '%metas%'
+        classes: '%classes%'
+        images:  '%images%'
+        games:   '%games%'
+
 when@test:
     twig:
         strict_variables: true
+        cache:            '%kernel.cache_dir%/twig-test'

@@ -8,14 +8,17 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Serializer\Attribute\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: GarageUpgradeRepository::class)]
 #[ORM\Table(name: 'garage_upgrade')]
-#[ORM\Index(name: 'garage_upgrade_idx', columns: ['id'])]
 #[ORM\HasLifecycleCallbacks]
+#[ORM\Index(name: 'name_idx', columns: ['id'])]
 #[Gedmo\Loggable]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
+//#[UniqueEntity(fields: ['label', 'value'], ignoreNull: 'value')]
 class GarageUpgrade
 {
     /**
@@ -29,7 +32,7 @@ class GarageUpgrade
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(options: ['unsigned' => true])]
     private ?int $id = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -51,7 +54,7 @@ class GarageUpgrade
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 13)]
-    private int $handling = 0;
+    private int $handly = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
@@ -81,11 +84,11 @@ class GarageUpgrade
     #[Assert\Range(min: 0, max: 13)]
     private int $epic = 0;
 
-    #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'upgrade')]
+    #[ORM\ManyToOne(targetEntity: AppGarage::class, cascade: ['persist', 'remove'], inversedBy: 'upgrade')]
     #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
-    private GarageApp $garage;
+    private AppGarage $garage;
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -119,14 +122,14 @@ class GarageUpgrade
         return $this;
     }
 
-    public function getHandling(): ?int
+    public function getHandly(): ?int
     {
-        return $this->handling;
+        return $this->handly;
     }
 
-    public function setHandling(int $handling): static
+    public function setHandly(int $handly): static
     {
-        $this->handling = $handling;
+        $this->handly = $handly;
 
         return $this;
     }
@@ -179,12 +182,12 @@ class GarageUpgrade
         return $this;
     }
 
-    public function getGarage(): ?GarageApp
+    public function getGarage(): ?AppGarage
     {
         return $this->garage;
     }
 
-    public function setGarage(?GarageApp $garage): static
+    public function setGarage(?AppGarage $garage): static
     {
         $this->garage = $garage;
 

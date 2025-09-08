@@ -2,7 +2,6 @@
 
 namespace App\Repository;
 
-use App\Able\Repository\SitemapsAble;
 use App\Entity\SettingUnitPrice;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -12,8 +11,6 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class SettingUnitPriceRepository extends ServiceEntityRepository
 {
-    use SitemapsAble;
-
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, SettingUnitPrice::class);
@@ -22,18 +19,17 @@ class SettingUnitPriceRepository extends ServiceEntityRepository
     /**
      * @return array
      */
-    public function exportDatas(): array
+    public function getDatas(): array
     {
-        $q  = "q.level01 AS Level01, q.level02 AS Level02, q.level03 AS Level03, q.level04 AS Level04, ";
-        $q .= "q.level05 AS Level05, q.level06 AS Level06, q.level07 AS Level07, q.level08 AS Level08, ";
-        $q .= "q.level09 AS Level09, q.level10 AS Level10, q.level11 AS Level11, q.level12 AS Level12, ";
-        $q .= "q.level13 AS Level13, q.common AS Common, q.rare AS Rare, q.epic AS Epic, q.slug AS Slug";
+        $q  = "q.id, q.level01, q.level01, q.level02, q.level03, q.level04, q.level05, q.level06, q.level07, q.level08, q.level09, ";
+        $q .= "q.level10, q.level11, q.level12, q.level13, q.common, q.rare, q.epic, q.slug";
         $qb = $this->createQueryBuilder('q');
         $qb->select($q);
         $qb->where('q.deletedAt IS NULL');
         $qb->orderBy('q.id', 'ASC');
+        $r = $qb->getQuery();
 
-        return $qb->getQuery()->getArrayResult();
+        return $r->getArrayResult();
     }
 
     /**
@@ -63,29 +59,4 @@ class SettingUnitPriceRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
-    //    /**
-    //     * @return SettingUnitPrice[] Returns an array of SettingUnitPrice objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('s')
-    //            ->andWhere('s.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('s.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
-
-    //    public function findOneBySomeField($value): ?SettingUnitPrice
-    //    {
-    //        return $this->createQueryBuilder('s')
-    //            ->andWhere('s.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
 }

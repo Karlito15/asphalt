@@ -1,0 +1,13 @@
+if (process.env.NODE_ENV === 'development') {
+	console.debug('loaded :: Bootstrap Table');
+}
+import { bootstrapTable, Button, Icon, Pagination, Search, Display, Setting } from './Bootstrap-Table'
+import { Column } from './conf-race'
+
+/* Overwrite Options */
+Display.showButtonText = false
+
+let options = Object.assign(Button, Icon, Pagination, Search, Display, Setting, Column);
+
+
+jQuery('#RaceDataTable').bootstrapTable(options)

@@ -1,0 +1,34 @@
+<thead class="sticky-top">
+    <tr>
+{#                <th class="col-1 text-center">Id</th>#}
+        <th class="col-1 text-center">Mode</th>
+        <th class="col-1 text-center">Chapter</th>
+        <th class="col-2 text-start">Season</th>
+        <th class="col-1 text-center">Order</th>
+        <th class="col-2 text-start">Track EN</th>
+        <th class="col-2 text-start">Track FR</th>
+        <th class="col-1 text-center">Time</th>
+        <th class="col-1 text-center">Finished</th>
+        <th class="col-1 text-end">Actions</th>
+    </tr>
+</thead>
+<tbody>
+{% for race in races %}
+{#    {% cache 'cacheRace-'~race.id ttl(3600) %}#}
+    <tr>
+{#                <td class="col-1 text-center">{{ race.id }}</td>#}
+        <td class="col-1 text-center">{{ race.mode }}</td>
+        <td class="col-1 text-center">{{ race.chapter }}</td>
+        <td class="col-2 text-start">{{ race.season }}</td>
+        <td class="col-1 text-center">{{ race.raceOrder }}</td>
+        <td class="col-2 text-start">{{ race.trackEnglish }}</td>
+        <td class="col-2 text-start">{{ race.trackFrench }}</td>
+        <td class="col-1 text-center">{{ race.time }}</td>
+        <td class="col-1 text-center">{{ component('Boolean', { value: race.finished }) }}</td>
+        <td class="col-1 text-end">{{ component('ButtonEdit', {id: race.id, slug: race.slug, path: 'app.race.update', target: false}) }}</td>
+    </tr>
+{#    {% endcache %}#}
+{% else %}
+    {{ component('TableNoRecords', {value: 10}) }}
+{% endfor %}
+</tbody>

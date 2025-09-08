@@ -16,8 +16,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: SettingClassRepository::class)]
 #[ORM\Table(name: 'setting_class')]
-#[ORM\Index(name: 'setting_class_idx', columns: ['slug'])]
 #[ORM\HasLifecycleCallbacks]
+#[ORM\Index(name: 'slug_idx', columns: ['slug'])]
 #[Gedmo\Loggable]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
 #[UniqueEntity(fields: ['label', 'value'])]
@@ -34,8 +34,10 @@ class SettingClass
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(options: ['unsigned' => true])]
+    #[Groups(['index'])]
     private ?int $id = null;
+
 
     #[ORM\Column(type: Types::STRING, length: 8, nullable:false)]
     #[Assert\Length(min: 1, max: 8)]
@@ -85,7 +87,7 @@ class SettingClass
     #[Gedmo\Versioned]
     private string $slug;
 
-    #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingClass')]
+    #[ORM\OneToMany(targetEntity: AppGarage::class, mappedBy: 'settingClass')]
     protected Collection $garage;
 
     public function __construct()
@@ -93,14 +95,14 @@ class SettingClass
         $this->garage = new ArrayCollection();
     }
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
     public function __toString(): string
     {
         return $this->getSlug();
+    }
+
+    public function getId(): ?string
+    {
+        return $this->id;
     }
 
     public function getLabel(): ?string
@@ -176,14 +178,14 @@ class SettingClass
     }
 
     /**
-     * @return Collection<int, GarageApp>
+     * @return Collection<int, AppGarage>
      */
     public function getGarage(): Collection
     {
         return $this->garage;
     }
 
-    public function addGarage(GarageApp $garage): static
+    public function addGarage(AppGarage $garage): static
     {
         if (!$this->garage->contains($garage)) {
             $this->garage->add($garage);
@@ -193,7 +195,7 @@ class SettingClass
         return $this;
     }
 
-    public function removeGarage(GarageApp $garage): static
+    public function removeGarage(AppGarage $garage): static
     {
         if ($this->garage->removeElement($garage)) {
             // set the owning side to null (unless already changed)

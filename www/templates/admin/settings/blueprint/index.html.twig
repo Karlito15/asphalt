@@ -1,0 +1,38 @@
+{% extends '@App/bases/full.html.twig' %}
+
+{% block datas %}
+    <table class="{{ classes.table_index }}">
+        <thead>
+            <tr>
+                <th class="text-center">Id</th>
+                <th class="text-center">Star1</th>
+                <th class="text-center">Star2</th>
+                <th class="text-center">Star3</th>
+                <th class="text-center">Star4</th>
+                <th class="text-center">Star5</th>
+                <th class="text-center">Star6</th>
+                <th class="text-center">Total</th>
+                <th class="text-end">Slug</th>
+                <th class="text-end">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for blueprint in blueprints %}
+            <tr>
+                <td class="text-center">{{ blueprint.id }}</td>
+                <td class="text-center">{{ blueprint.star1 }}</td>
+                <td class="text-center">{{ blueprint.star2 }}</td>
+                <td class="text-center">{{ blueprint.star3 }}</td>
+                <td class="text-center">{{ blueprint.star4 }}</td>
+                <td class="text-center">{{ blueprint.star5 }}</td>
+                <td class="text-center">{{ blueprint.star6 }}</td>
+                <td class="text-center">{{ blueprint.total }}</td>
+                <td class="text-end">{{ blueprint.slug }}</td>
+                <td class="text-end">{{ component('ButtonEdit', {id: blueprint.id, slug: null, path: 'admin.setting.blueprint.update', target: false}) }}</td>
+            </tr>
+        {% else %}
+            	{{ component('TableNoRecords', {value: 10}) }}
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

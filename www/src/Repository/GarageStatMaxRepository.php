@@ -17,29 +17,6 @@ class GarageStatMaxRepository extends ServiceEntityRepository
     }
 
     /**
-     * Retourne les informations pour les extraire dans un fichier CSV
-     *
-     * @return array
-     */
-    public function exportDatas(): array
-    {
-        $datas = [];
-        foreach ($this->findAll() as $garage) {
-            $datas[] = [
-                'Speed'        => $garage->getSpeed(),
-                'Acceleration' => $garage->getAcceleration(),
-                'Handling'     => $garage->getHandling(),
-                'Nitro'        => $garage->getNitro(),
-                'Average'      => $garage->getAverage(),
-                'Brand'        => $garage->getGarage()->getSettingBrand()->getName(),
-                'Model'        => $garage->getGarage()->getModel(),
-            ];
-        }
-
-        return $datas;
-    }
-
-    /**
      * @param GarageStatMax $entity
      * @param bool $flush
      * @return void
@@ -66,29 +43,4 @@ class GarageStatMaxRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
-    //    /**
-    //     * @return GarageStatMax[] Returns an array of GarageStatMax objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('g')
-    //            ->andWhere('g.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('g.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
-
-    //    public function findOneBySomeField($value): ?GarageStatMax
-    //    {
-    //        return $this->createQueryBuilder('g')
-    //            ->andWhere('g.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
 }

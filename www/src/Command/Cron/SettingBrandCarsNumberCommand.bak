@@ -1,0 +1,48 @@
+<?php
+
+namespace App\Command\CRON;
+
+use App\Entity\Garage;
+use App\Entity\SettingBrand;
+use App\Event\SettingBrandEvent;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\Console\Attribute\AsCommand;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+
+#[AsCommand(
+	name: 'asphalt:cron:brand:number',
+	description: 'Compte le nombre de voitures par Marque',
+	aliases: ['a:c:b:n', 'asphalt-cron-brand-number'],
+	hidden: false,
+)]
+class SettingBrandCarsNumberCommand extends Command
+{
+    public function __construct(
+		private readonly EntityManagerInterface $manager,
+		private readonly EventDispatcherInterface $dispatcher,
+    )
+    {
+        parent::__construct();
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output): int
+    {
+		// Init Variables
+        $io = new SymfonyStyle($input, $output);
+
+	    //
+		foreach ($this->manager->getRepository(Garage::class)->findAll() as $garage) {
+            $this->dispatcher->dispatch(new SettingBrandEvent($garage->getSettingBrand()));
+		}
+		$this->manager->flush();
+
+		// Conclusion
+	    $io->success($this->getDescription());
+
+        return Command::SUCCESS;
+    }
+}
