@@ -28,6 +28,7 @@
     {% block main %}{% endblock %}
 
     {% block javascripts %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
 
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -40,7 +41,6 @@
         {% include "@App/share/_script-sweet-alert.html.twig" %}
         <script src="{{ asset('libraries/dashboard-flash-message.js') }}"></script>
         {% include "@App/share/_script-back-to-top.html.twig" %}
-        {% block importmap %}{{ importmap('app') }}{% endblock %}
     {% endblock %}
 
 </body>
