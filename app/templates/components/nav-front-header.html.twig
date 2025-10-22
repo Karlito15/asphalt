@@ -1,0 +1,13 @@
+{#{{ attributes }}#}
+<!-- component HTML -->
+{% if app.current_route == link %}
+    {% set color = 'warning' %}
+{% else %}
+    {% set color = 'white' %}
+{% endif %}
+<li>
+    <a href="{{ path(link) }}" class="nav-link text-{{ color }}">
+        <i class="fa {{ icon }} d-block mx-auto mb-1" aria-hidden="true"></i>
+        {{ text }}
+    </a>
+</li>

@@ -1,0 +1,42 @@
+
+<!-- Header -->
+<div class="{{ container|default('container') }}">
+	<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+		<a href="{{ path('admin.dashboard.index') }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+			<img src="{{ asset(images.logo) }}" alt="{{ metas.title }}" style="max-height: 50px;" />
+		</a>
+		<ul class="nav nav-pills">
+			<li class="nav-item"><a href="{{ path('admin.dashboard.index') }}" class="nav-link active" aria-current="page">{{ 'text.dashboard'|trans }}</a></li>
+			<li class="nav-item"><a href="{{ path('admin.dashboard.cache') }}" class="nav-link">{{ 'text.cache'|trans }}</a></li>
+			<li class="nav-item"><a href="{{ path('admin.inventory.index') }}" class="nav-link">{{ 'text.inventory'|trans }}</a></li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">{{ 'text.mission'|trans }}</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ path('admin.mission.index') }}">{{ 'text.mission'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.mission.task.index') }}">{{ 'text.task'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.mission.type.index') }}">{{ 'text.type'|trans }}</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">{{ 'text.race'|trans }}</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ path('admin.race.index') }}">{{ 'text.race'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.race.mode.index') }}">{{ 'text.mode'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.race.region.index') }}">{{ 'text.region'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.race.season.index') }}">{{ 'text.season'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.race.time.index') }}">{{ 'text.time'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.race.track.index') }}">{{ 'text.track'|trans }}</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">{{ 'text.setting'|trans }}</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ path('admin.setting.blueprint.index') }}">{{ 'text.blueprint'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.setting.brand.index') }}">{{ 'text.brand'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.setting.class.index') }}">{{ 'text.class'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.setting.level.index') }}">{{ 'text.level'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.setting.tag.index') }}">{{ 'text.tag'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.setting.unit-price.index') }}">{{ 'text.unit-price'|trans }}</a></li>
+                </ul>
+            </li>
+			<li class="nav-item"><a href="{{ path('app.dashboard.index') }}" class="nav-link">{{ 'text.front-office'|trans }}</a></li>
+        </ul>
+	</header>
+</div>

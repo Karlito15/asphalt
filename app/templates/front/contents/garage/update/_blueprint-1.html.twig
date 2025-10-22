@@ -1,0 +1,100 @@
+
+<section class="{{ container|default('container') }} mb-2">
+    <div class="card mx-5">
+        <div class="card-header bg-secondary py-1">
+            <h2 class="h6 text-center m-0">{{ 'text.blueprint'|trans|plural }}</h2>
+        </div>
+        <div class="card-body pt-0">
+            <div class="card-group">
+{{ _self.blueprintCard(entity.settingBlueprint.star1, form.blueprint.0.star1) }}
+{{ _self.blueprintCard(entity.settingBlueprint.star2, form.blueprint.0.star2) }}
+{{ _self.blueprintCard(entity.settingBlueprint.star3, form.blueprint.0.star3) }}
+{{ _self.blueprintCard(entity.settingBlueprint.star4, form.blueprint.0.star4) }}
+{{ _self.blueprintCard(entity.settingBlueprint.star5, form.blueprint.0.star5) }}
+{{ _self.blueprintCard(entity.settingBlueprint.star6, form.blueprint.0.star6) }}
+{{ _self.blueprintCardTotal(entity.settingBlueprint.total, entity.blueprint.0.total) }}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% macro blueprintCard(maxValue, form) %}
+
+{% if maxValue == 'Key' or form.vars.value == 'Key' %}
+    {% set total = 'Key' %}
+{% elseif maxValue == 'Key' or form.vars.value == 'Key' %}
+    {% set total = null %}
+{% else %}
+    {% if form.vars.value is not empty %}
+        {% set total = (maxValue - form.vars.value) %}
+    {% else %}
+        {% set total = (maxValue - 0) %}
+    {% endif %}
+{% endif %}
+
+<div class="card">
+    <div class="card-header text-center py-1">
+        {{ form_label(form) }}
+    </div>
+    <div class="card-body p-1">
+        <div class="input-group input-group-sm">
+            {{ form_widget(form, {attr: {'max': maxValue}}) }}
+            <input type="text" autocomplete="off" class="text-center fw-bolder form-control form-control-sm" max="{{ maxValue }}" value="{{ maxValue }}" />
+            <input type="text" autocomplete="off" class="text-center fw-bolder form-control form-control-sm" max="" value="{{ total }}" />
+        </div>
+    </div>
+    <div class="card-footer p-1">
+        {{ _self.Resume(total) }}
+    </div>
+</div>
+{% endmacro %}
+
+{% macro blueprintCardTotal(maxValue, total) %}
+<div class="card">
+    <div class="card-header text-center py-1">
+        {{ 'text.total'|trans }}
+    </div>
+
+    <div class="card-body p-1">
+        <div class="input-group input-group-sm">
+            <input type="text" class="text-center fw-bolder form-control form-control-sm w-25" max="{{ maxValue }}" value="{{ total }}" autocomplete="off" />
+            <input type="text" class="text-center fw-bolder form-control form-control-sm w-25" max="{{ maxValue }}" value="{{ maxValue }}" autocomplete="off" />
+            <input type="text" class="text-center fw-bolder form-control form-control-sm w-25" value="{{ maxValue - total }}" readonly />
+        </div>
+    </div>
+
+    <div class="card-footer p-1">
+        {{ _self.Resume((maxValue - total)) }}
+    </div>
+</div>
+{% endmacro %}
+
+{% macro diff(max, curent) %}
+    {% if max == 'Key' and curent == 'Key' %}
+        Key
+    {% elseif max == 'Key' and curent != 'Key' %}
+        None
+    {% else %}
+      {{ max - curent }}
+    {% endif %}
+{% endmacro %}
+
+{% macro Resume(blueprint) %}
+    {% if blueprint == 'Key' %}
+        {% set result = 0 %}
+    {% else %}
+        {% set result = (blueprint / games.pack)|round(0, 'ceil') %}
+    {% endif %}
+
+    {% if result != 0 %}
+    <div class="input-group input-group-sm">
+        <input type="text" class="text-center form-control form-control-sm w-50" tabindex="99" value="{{ (result * games.pack_price)|number_format }} token(s)" />
+        <input type="text" class="text-center form-control form-control-sm w-50" tabindex="99" value="{{ result }} pack(s)" />
+    </div>
+    {% else %}
+    <div class="input-group input-group-sm">
+        <input type="text" class="text-center form-control form-control-sm w-50" value="" readonly />
+        <input type="text" class="text-center form-control form-control-sm w-50" value="" readonly />
+    </div>
+    {% endif %}
+{% endmacro %}

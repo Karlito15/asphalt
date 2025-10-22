@@ -1,0 +1,49 @@
+<div class="card-title">
+    <h4 class="text-center">{{ 'text.blueprint'|trans|plural() }}</h4>
+</div>
+<table class="{{ classes.table }}">
+    <thead>
+        <tr class="text-center">
+            <th>&nbsp;</th>
+            <th style="width: 175px;">{{ 'text.total'|trans }}</th>
+            <th style="width: 175px;">{{ component('ValueIcon', {'repeat': 1, 'icon': 'fa-solid fa-star'}) }}</th>
+            <th style="width: 175px;">{{ component('ValueIcon', {'repeat': 2, 'icon': 'fa-solid fa-star'}) }}</th>
+            <th style="width: 175px;">{{ component('ValueIcon', {'repeat': 3, 'icon': 'fa-solid fa-star'}) }}</th>
+            <th style="width: 175px;">{{ component('ValueIcon', {'repeat': 4, 'icon': 'fa-solid fa-star'}) }}</th>
+            <th style="width: 175px;">{{ component('ValueIcon', {'repeat': 5, 'icon': 'fa-solid fa-star'}) }}</th>
+            <th style="width: 175px;">{{ component('ValueIcon', {'repeat': 6, 'icon': 'fa-solid fa-star'}) }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="text-center">
+            <td>&nbsp;</td>
+            <td>{{ entity.garage_total }}</td>
+            <td>{{ entity.garage_star1 }}</td>
+            <td>{{ entity.garage_star2 }}</td>
+            <td>{{ entity.garage_star3 }}</td>
+            <td>{{ entity.garage_star4 }}</td>
+            <td>{{ entity.garage_star5 }}</td>
+            <td>{{ entity.garage_star6 }}</td>
+        </tr>
+        <tr class="text-center">
+            <td>&nbsp;</td>
+            <td>{{ entity.blueprint_total }}</td>
+            <td>{{ entity.blueprint_star1 }}</td>
+            <td>{{ entity.blueprint_star2 }}</td>
+            <td>{{ entity.blueprint_star3 }}</td>
+            <td>{{ entity.blueprint_star4 }}</td>
+            <td>{{ entity.blueprint_star5 }}</td>
+            <td>{{ entity.blueprint_star6 }}</td>
+        </tr>
+        <tr class="text-center">
+            <td>&nbsp;</td>
+            <td>{{ (entity.blueprint_total - entity.garage_total) }}</td>
+            <td>{# if entity.blueprint_star1 matches '/^\\d+$/' %}{{ (entity.blueprint_star1 - entity.garage_star1) }}{% else %}&nbsp;{% endif #}</td>
+            <td>{{ (entity.blueprint_star2 - entity.garage_star2) }}</td>
+            <td>{{ (entity.blueprint_star3 - entity.garage_star3) }}</td>
+            <td>{{ (entity.blueprint_star4 - entity.garage_star4) }}</td>
+            <td>{{ (entity.blueprint_star5 - entity.garage_star5) }}</td>
+            <td>{{ (entity.blueprint_star6 - entity.garage_star6) }}</td>
+        </tr>
+    </tbody>
+</table>

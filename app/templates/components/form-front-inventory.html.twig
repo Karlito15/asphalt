@@ -1,0 +1,74 @@
+
+{# title #}
+{% if form.vars.value.filter == '-' %}
+    {% set title = form.vars.value.label %}
+{% else %}
+    {% set title = form.vars.value.filter ~ ' ' ~ form.vars.value.label %}
+{% endif %}
+
+{# title #}
+{% set resume = (form.vars.value.value / maxValue * 100) %}
+
+{#{{ attributes }}#}
+<!-- component HTML -->
+<div class="card">
+{{ form_start(form) }}
+    <div class="card-body">
+        <div class="row row-cols-2">
+            <div class="col text-center align-content-center w-25">
+                {{ this.icon()|raw }}
+            </div>
+            <div class="col w-75">
+                <div class="m-0">
+                    <h6 class="{{ this.color() }} fw-bold text-uppercase text-end pe-1"><label for="value">{{ title }}</label></h6>
+                    <input
+                        type="text"
+                        id="{{ form.vars.value.id }}"
+                        name="{{ field_name(form.children.value) }}"
+                        required="required"
+                        autocomplete="off"
+                        autocapitalize="none"
+                        class="{{ this.color() }} {{ form.children.value.vars.attr.class }}"
+                        max="{{ maxValue }}"
+                        maxlength="10"
+                        minlength="0"
+                        inputmode="decimal"
+                        value="{{ field_value(form.children.value)|number_format }}"
+                        placeholder="{{ title }}"
+                        tabindex="{{ form.vars.value.position }}"
+                        hx-post="{{ path('ajax.dashboard.inventory') }}"
+                        hx-target="#flash-messages"
+                        hx-trigger="change"
+                        aria-label="{{ title|trans }}"
+                        aria-describedby="{{ title|trans }}"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix mb-1"></div>
+
+        <div>
+            <small class="text-white-50 float-start">{{ form.vars.value.value|number_format }} on {{ maxValue|number_format }}</small>
+            <span class="badge text-bg-dark float-end">{{ resume|number_format(2, ',') }}%</span>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="progress">
+            <div
+                class="progress-bar l-amber"
+                role="progressbar"
+                aria-valuenow="{{ form.vars.value.value }}"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: {{ resume }}%;"></div>
+        </div>
+
+    </div>
+{% if form.vars.errors|length > 0 %}
+    <div class="card-footer">
+        {{ form_errors(form) }}
+    </div>
+{% endif %}
+{{ form_end(form) }}
+</div>

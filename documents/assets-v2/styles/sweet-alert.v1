@@ -1,6 +1,0 @@
-@import '../../../node_modules/@sweetalert2/themes/dark/dark';
-
-.swal2-html-container {
-  	color: $white;
-	background-color: $dark;
-}

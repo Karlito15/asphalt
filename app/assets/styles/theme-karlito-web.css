@@ -1,0 +1,21 @@
+.progress {
+    background: #f7f7f7;
+    border-radius: 8px;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: .75rem;
+    height: auto;
+    overflow: visible;
+}
+
+.progress-bar {
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
+    background-color: #46b6fe;
+    line-height: 8px;
+    height: 8px;
+}
+
+.l-amber {
+    background: linear-gradient(0deg, #f9bd65, rgba(249, 189, 101, 0.7)) !important;
+    color: #fff !important;
+}

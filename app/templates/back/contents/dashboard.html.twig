@@ -1,0 +1,14 @@
+{% block content %}
+<section class="py-3 text-center">
+
+    <h1 class="display-6 fw-bolder">{{ metas.title }}</h1>
+
+    <figure>
+      <img src="{{ asset('images/logo-black.png') }}" alt="{{ metas.title }}" height="300" />
+      <figcaption class="display-4">{{ breadcrumb.level2 }}</figcaption>
+    </figure>
+
+</section>
+{% endblock %}
+
+{% extends '@App/back/bases/full.html.twig' %}

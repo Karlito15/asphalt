@@ -1,0 +1,18 @@
+{% import "@App/contents/front/garage/_macro-read.html.twig" as forms %}
+
+{% import "@App/contents/front/garage/_macro-read.html.twig" as forms %}
+
+{% macro input(name, value) %}
+
+<label class="m-0">
+    <input
+        type="text"
+        name="{{ name|trans }}"
+        class="form-control bg-dark text-center h5 p-1 m-0"
+        placeholder="{{ name|trans }}"
+        value="{{ value }}"
+        disabled
+    >
+</label>
+
+{% endmacro %}

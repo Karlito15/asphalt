@@ -1,0 +1,39 @@
+{% block table %}
+    <tbody>
+    {% for item in entities %}
+        <tr>
+            <td>{{ component('ValueInteger', {value: item.week}) }}</td>
+            <td>{{ item.region }}</td>
+            <td>{{ item.track }}</td>
+            <td>{{ item.class }}</td>
+            <td>{{ item.brand }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ component('ValueInteger', {value: item.success}) }}</td>
+            <td>{{ component('ValueInteger', {value: item.target}) }}</td>
+        </tr>
+    {% else %}
+        {{ component('TableEmpty', {value: 9}) }}
+    {% endfor %}
+    </tbody>
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr>
+        <th>{{ 'text.week'|trans }}</th>
+        <th>{{ 'text.region'|trans }}</th>
+        <th>{{ 'text.track'|trans }}</th>
+        <th>{{ 'text.class'|trans }}</th>
+        <th>{{ 'text.brand'|trans }}</th>
+        <th>{{ 'text.description'|trans }}</th>
+        <th>{{ 'text.success'|trans }}</th>
+        <th>{{ 'text.target'|trans }}</th>
+    </tr>
+{% endmacro %}
+
+{% extends '@App/front/contents/common/index.html.twig' %}

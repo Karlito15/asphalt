@@ -1,0 +1,47 @@
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('styles/override-table.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('vendor/bootstrap-table/dist/bootstrap-table.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.24.0/dist/bootstrap-table.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.24.0/dist/extensions/sticky-header/bootstrap-table-sticky-header.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.24.0/dist/bootstrap-table.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.24.0/dist/bootstrap-table-locale-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.24.0/dist/extensions/sticky-header/bootstrap-table-sticky-header.min.js"></script>
+    <script type="module" async>
+/**
+ * Bootstrap Table
+ */
+import Columns from '{{ asset('scripts/bstable-conf-column-garage.js') }}';
+console.info('Bootstrap Table loaded !');
+
+let table = $('#GarageTable').bootstrapTable({
+    buttonsAlign: 'left',
+    buttonsClass: 'primary btn-lg',
+    locale: 'fr_FR',
+    pageList: [15, 45, 75, 105],
+    pageSize: 15,
+    pagination: false,
+    search: true,
+    searchHighlight: true,
+    showButtonText: false,
+    showColumns: true,
+    showColumnsSearch: true,
+    // showExtendedPagination: true,
+    showPaginationSwitch: true,
+    showSearchButton: false,
+    showSearchClearButton: true,
+    silentSort: false,
+    sortStable: true,
+    stickyHeader: true,
+    stickyHeaderOffsetY: 70,
+    columns: [Columns]
+});
+$('.search').css("width", '500px');
+    </script>
+{% endblock %}

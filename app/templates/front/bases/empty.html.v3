@@ -1,0 +1,10 @@
+{% extends '@App/bases/index.html.twig' %}
+
+{% set items = app.request.attributes.get('_route')|split('.') %}
+{% set admin = '/'~app.request.defaultLocale~'/admin/' %}
+
+{% block body %}{% endblock %}
+
+{% block containers %}
+    {% block contents %}{% endblock %}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% block content %}
+
+<div class="card bg-dark">
+    <div class="card-header">
+
+        <div class="row row-col-2 row-gap-5">
+            <div class="col-3">
+                <h2 class="h1">{{ controller_name }}</h2>
+            </div>
+            <div class="col-6 bg-light-subtle admin-toolbar">
+{#                <div class="input-group">#}
+{#                    <input type="search" class="form-control search-input" aria-label="Rechercher" placeholder="Rechercher" autocomplete="off" disabled>#}
+{#                    <div class="input-group-append">#}
+{#                        <button class="btn btn-secondary" type="button" name="clearSearch" title="Effacer la recherche"> <i class="fa fa-trash"></i> </button>#}
+{#                    </div>#}
+{#                </div>#}
+            </div>
+            <div class="col-3">
+                <a class="float-end btn btn-lg btn-outline-success w-100 text-uppercase" href="{{ path(links.create) }}">
+                    {{ 'btn.create'|trans }}&nbsp;<i class="fa fa-plus-square"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="card-body">
+        <table class="{{ classes.table }}" id="admin">
+            {% block table %}{% endblock %}
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+
+{% extends '@App/back/bases/full.html.twig' %}

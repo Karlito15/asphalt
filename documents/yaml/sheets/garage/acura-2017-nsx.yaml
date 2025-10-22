@@ -1,0 +1,51 @@
+'Car Name': 'Acura 2017 NSX'
+Slug: acura-2017-nsx
+Brand: Acura
+Model: '2017 NSX'
+Class: C
+'Game Update': 0
+Stars: 4
+Unlocked: false
+Golded: true
+Orders:
+    Car: 19/54
+    Stat: 41/54
+Level: 11/11
+Commmon: 24/24
+Rare: 12/12
+Epic: 4/4
+'Blueprint 1 Star': '35'
+'Blueprint 1 Setting': '35'
+'Blueprint 1': 1
+'Blueprint 2 Star': 15
+'Blueprint 2 Setting': 15
+'Blueprint 2': 0
+'Blueprint 3 Star': 21
+'Blueprint 3 Setting': 21
+'Blueprint 3': 0
+'Blueprint 4 Star': 32
+'Blueprint 4 Setting': 32
+'Blueprint 4': 0
+'Blueprint 5 Star': 0
+'Blueprint 5 Setting': 0
+'Blueprint 5': 0
+'Blueprint 6 Star': 0
+'Blueprint 6 Setting': 0
+'Blueprint 6': 0
+'Rank Start': 1824
+'Rank Star 1': 2117
+'Rank Star 2': 2501
+'Rank Star 3': 2884
+'Rank Star 4': 3199
+'Rank Star 5': 0
+'Rank Star 6': 0
+'Stat Min Speed': 305.0
+'Stat Max Speed': 335.7
+'Stat Min Acceleration': 75.7
+'Stat Max Acceleration': 74.43
+'Stat Min Handly': 48.17
+'Stat Max Handly': 41.38
+'Stat Min Nitro': 36.81
+'Stat Max Nitro': 72.91
+'Stat Min Average': 116.42
+'Stat Max Average': 131.11

@@ -1,4 +1,4 @@
 SET FOREIGN_KEY_CHECKS=0;
-TRUNCATE `app_inventory`;
+TRUNCATE `inventory_app`;
 TRUNCATE `ext_log_entries`;
 SET FOREIGN_KEY_CHECKS=1;

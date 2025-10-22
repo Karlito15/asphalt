@@ -1,0 +1,41 @@
+{% block content %}
+
+<div class="card bg-dark">
+    <div class="card-header py-1">
+
+        <div class="row row-col-2 row-gap-5">
+            <div class="col-3">
+                <h2 class="mb-0">{{ controller_name }}</h2>
+            </div>
+
+            {% if app.current_route starts with 'app.page.search' %}
+            <div class="col-9">
+                {% block search %}{% include '@App/front/partials/search.html.twig' %}{% endblock %}
+            </div>
+
+            {% elseif app.current_route starts with 'app.page' %}
+            <div class="col-9">
+                {{ component('NavListClass', {'link': app.current_route}) }}
+            </div>
+
+            {% else %}
+            <div class="col-6 bg-light-subtle table-toolbar"></div>
+            <div class="col-3">
+                <a class="float-end btn btn-outline-success w-100 text-uppercase" href="{{ path(links.create) }}">
+                {{ 'btn.create'|trans }}&nbsp;<i class="fa fa-plus-square"></i>
+            </a>
+            </div>
+            {% endif %}
+        </div>
+
+    </div>
+    <div class="card-body">
+        <table class="{{ classes.table }}" id="table" data-buttons-toolbar=".table-toolbar">{# id="GarageTable" data-sort-class="table-secondary"#}
+            {% block table %}{% endblock %}
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+
+{% extends '@App/front/bases/full.html.twig' %}

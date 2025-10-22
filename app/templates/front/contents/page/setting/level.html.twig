@@ -1,0 +1,45 @@
+{% block table %}
+    <tbody>
+    {% for item in entities %}
+        <tr>
+            <td class="{{ classes.td }} text-center">{{ loop.index }}</td>
+            <td class="{{ classes.td }} text-start">
+                <a class="text-decoration-none" href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank">{{ item.brand }} {{ item.model }}</a>
+            </td>
+            <td class="{{ classes.td }} text-center">{{ (item.upgrade_speed - item.level_level) }}</td>
+            <td class="{{ classes.td }} text-center">{{ (item.upgrade_acceleration - item.level_level) }}</td>
+            <td class="{{ classes.td }} text-center">{{ (item.upgrade_handling - item.level_level) }}</td>
+            <td class="{{ classes.td }} text-center">{{ (item.upgrade_nitro - item.level_level) }}</td>
+            <td class="{{ classes.td }} text-center">{{ (item.upgrade_common - item.level_common) }}</td>
+            <td class="{{ classes.td }} text-center">{{ (item.upgrade_rare - item.level_rare) }}</td>
+            <td class="{{ classes.td }} text-center">{{ (item.upgrade_epic - item.level_epic) }}</td>
+            {{ component('TableAction', {id: item.id, slug: item.slug, link: 'app.garage.update'}) }}
+        </tr>
+    {% else %}
+        {{ component('TableEmpty', {value: 10}) }}
+    {% endfor %}
+    </tbody>
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr>
+        <th class="col-1 text-center">#</th>
+        <th class="col text-start">{{ 'text.garage'|trans }}</th>
+        <th class="col-1 text-center">{{ 'text.speed'|trans }}</th>
+        <th class="col-1 text-center">{{ 'text.acceleration'|trans }}</th>
+        <th class="col-1 text-center">{{ 'text.handling'|trans }}</th>
+        <th class="col-1 text-center">{{ 'text.nitro'|trans }}</th>
+        <th class="col-1 text-center">{{ 'text.common'|trans }}</th>
+        <th class="col-1 text-center">{{ 'text.rare'|trans }}</th>
+        <th class="col-1 text-center">{{ 'text.epic'|trans }}</th>
+        <th class="col text-end">{{ 'text.action'|trans }}</th>
+    </tr>
+{% endmacro %}
+
+{% extends '@App/front/contents/common/index.html.twig' %}

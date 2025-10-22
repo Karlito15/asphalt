@@ -1,0 +1,39 @@
+{% block table %}
+
+    <tbody>
+    {% for item in entities %}
+        <tr>
+            <td class="{{ classes.td }}">{{ component('ValueInteger', {value: item.id}) }}</td>
+            <td class="{{ classes.td }}">{{ item.value }}</td>
+            <td class="{{ classes.td }}">{{ item.slug }}</td>
+            {{ component('TableDate', {entity: item}) }}
+            {% if app.current_route == 'admin.mission.task.index' %}
+                {{ component('TableAction', {id: item.id, link: 'admin.mission.task.update'}) }}
+            {% elseif app.current_route == 'admin.mission.type.index' %}
+                {{ component('TableAction', {id: item.id, link: 'admin.mission.type.update'}) }}
+            {% endif %}
+        </tr>
+    {% else %}
+        {{ component('TableEmpty', {value: 6}) }}
+    {% endfor %}
+    </tbody>
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr>
+        <th>{{ 'text.id'|trans }}</th>
+        <th>{{ 'text.value'|trans }}</th>
+        <th>{{ 'text.slug'|trans }}</th>
+        <th>{{ 'text.date.created.at'|trans }}</th>
+        <th>{{ 'text.date.updated.at'|trans }}</th>
+        <th>{{ 'text.action'|trans }}</th>
+    </tr>
+{% endmacro %}
+
+{% extends '@App/back/contents/common/index.html.twig' %}

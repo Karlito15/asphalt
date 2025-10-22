@@ -1,0 +1,15 @@
+
+{% if form.vars.errors|length > 0 %}
+<section class="card py-0 mb-2">
+    <div class="card-header bg-secondary-subtle">
+        <h6 class="h4 text-center my-0 card-title">{{ 'text.error'|trans|plural }}</h6>
+    </div>
+    <div class="card-body">
+        <div class="row g-3">
+            <div class="col">{{ form_errors(form) }}</div>
+        </div>
+    </div>
+</section>
+{% else %}
+{#    {{ dump(form.vars.errors) }}#}
+{% endif %}

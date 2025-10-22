@@ -1,0 +1,39 @@
+
+<div class="card">
+    <div class="card-header bg-dark-subtle py-1">
+        <h2 class="h6 text-center m-0">{{ 'text.upgrade'|trans|plural }}</h2>
+    </div>
+    <div class="card-body pt-0">
+        <div class="card-group">
+{{ _self.upgradeCard(form.upgrade.0.speed, entity.level, entity.settingLevel.level, (entity.level - form.upgrade.0.speed.vars.value)) }}
+{{ _self.upgradeCard(form.upgrade.0.acceleration, entity.level, entity.settingLevel.level, (entity.level - form.upgrade.0.acceleration.vars.value)) }}
+{{ _self.upgradeCard(form.upgrade.0.handling, entity.level, entity.settingLevel.level, (entity.level - form.upgrade.0.handling.vars.value)) }}
+{{ _self.upgradeCard(form.upgrade.0.nitro, entity.level, entity.settingLevel.level, (entity.level - form.upgrade.0.nitro.vars.value)) }}
+{{ _self.upgradeCard(form.upgrade.0.common, entity.level, entity.settingLevel.common, (entity.settingLevel.common - form.upgrade.0.common.vars.value)) }}
+{{ _self.upgradeCard(form.upgrade.0.rare, entity.level, entity.settingLevel.rare, (entity.settingLevel.rare - form.upgrade.0.rare.vars.value)) }}
+{{ _self.upgradeCard(form.upgrade.0.epic, entity.level, entity.settingLevel.epic, (entity.epic - form.upgrade.0.epic.vars.value)) }}
+        </div>
+    </div>
+</div>
+
+{% macro upgradeCard(form, level, max, result) %}
+
+    {% set class = 'text-center fw-bolder m-0 p-0 form-control-plaintext form-control-sm' %}
+
+<div class="card">
+    <div class="card-header text-center py-1">
+        {{ form_label(form) }}
+    </div>
+    <div class="card-body px-3 py-1">
+        {{ form_widget(form, {attr: {'max': max}}) }}
+    </div>
+    <div class="card-footer px-3 py-1">
+    {% if result != 0 %}
+        <label class="m-0"><input type="text" class="{{ class }} text-info" value="{{ result }}" disabled /></label>
+    {% else %}
+        <label class="m-0"><input type="text" class="{{ class }} text-info" value="" disabled /></label>
+    {% endif %}
+    </div>
+</div>
+
+{% endmacro %}

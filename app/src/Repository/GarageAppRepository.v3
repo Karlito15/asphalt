@@ -1,0 +1,112 @@
+<?php
+
+namespace App\Repository;
+
+use App\Entity\GarageApp;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+
+use Doctrine\Persistence\ManagerRegistry;
+
+/**
+ * @extends ServiceEntityRepository<GarageApp>
+ */
+class GarageAppRepository extends ServiceEntityRepository
+{
+//    /**
+//     * @param string $class
+//     * @return array
+//     * @uses \App\Controller\Web\Page\SettingController
+//     */
+//    public function getGarageBlueprint(string $class = 'S'): array
+//    {
+//        $qb = $this->queryGarage()
+//            // JOIN
+//            ->leftJoin('g.blueprint', 'gbl')
+//            ->addSelect('gbl.star1')
+//            ->addSelect('gbl.star2')
+//            ->addSelect('gbl.star3')
+//            ->addSelect('gbl.star4')
+//            ->addSelect('gbl.star5')
+//            ->addSelect('gbl.star6')
+//            ->addSelect('gbl.total')
+//            // JOIN
+//            ->leftJoin('g.settingBlueprint', 'sbp')
+//            ->addSelect('sbp.star1 AS sbp1')
+//            ->addSelect('sbp.star2 AS sbp2')
+//            ->addSelect('sbp.star3 AS sbp3')
+//            ->addSelect('sbp.star4 AS sbp4')
+//            ->addSelect('sbp.star5 AS sbp5')
+//            ->addSelect('sbp.star6 AS sbp6')
+//            ->addSelect('sbp.total AS sbptotal')
+//            // WHERE
+//            ->andWhere('sc.value = :class')
+//            ->setParameter('class', $class)
+//            // ORDER
+//            ->addOrderBy('g.carOrder', 'ASC')
+//        ;
+//
+//        return $qb->getQuery()->getArrayResult();
+//    }
+
+//    /**
+//     * @param string $class
+//     * @return array
+//     * @uses \App\Controller\Web\Page\SettingController
+//     */
+//    public function getGarageRank(string $class): array
+//    {
+//        $qb = $this->queryGarage()
+//            // JOIN
+//            ->leftJoin('g.rank', 'rank')
+//            ->addSelect('rank.star0')
+//            ->addSelect('rank.star1')
+//            ->addSelect('rank.star2')
+//            ->addSelect('rank.star3')
+//            ->addSelect('rank.star4')
+//            ->addSelect('rank.star5')
+//            ->addSelect('rank.star6')
+//            // WHERE
+//            ->andWhere('sc.value = :class')
+//            ->setParameter('class', $class)
+//            // ORDER
+//            ->addOrderBy('g.carOrder', 'ASC')
+//        ;
+//
+//        return $qb->getQuery()->getArrayResult();
+//    }
+
+//    /**
+//     * @param string $class
+//     * @return array
+//     * @uses \App\Controller\Web\Page\SettingController
+//     */
+//    public function getGarageUpgrade(string $class): array
+//    {
+//        $qb = $this->queryGarage()
+//            // JOIN
+//            ->leftJoin('g.upgrade', 'upgrade')
+//            ->addSelect('upgrade.speed AS speed_installed')
+//            ->addSelect('upgrade.acceleration AS acceleration_installed')
+//            ->addSelect('upgrade.handly AS handly_installed')
+//            ->addSelect('upgrade.nitro AS nitro_installed')
+//            ->addSelect('upgrade.common AS common_installed')
+//            ->addSelect('upgrade.rare AS rare_installed')
+//            ->addSelect('upgrade.epic AS epic_installed')
+//            // JOIN
+//            ->leftJoin('g.settingLevel', 'sl')
+//            ->addSelect('sl.common AS common_to_install')
+//            ->addSelect('sl.rare AS rare_to_install')
+//            // WHERE
+//            ->andWhere('sc.value = :class')
+//            ->setParameter('class', $class)
+//            ->andWhere('gb.locked = 0')
+//            ->andWhere('gb.gold = 0')
+//            ->andWhere('gb.toUpgrade = 0')
+//            // ORDER
+//            ->addOrderBy('g.carOrder', 'ASC')
+//
+//        ;
+//
+//        return $qb->getQuery()->getArrayResult();
+//    }
+}

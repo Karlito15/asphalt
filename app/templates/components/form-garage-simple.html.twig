@@ -1,0 +1,15 @@
+
+{#{{ attributes }}#}
+<!-- component HTML -->
+<div class="card">
+    <div class="card-header text-center py-0">
+        <span class="card-title">{{ form_label(form) }}</span>
+    </div>
+    <div class="card-body px-3 py-1">
+    {% if maxValue is defined %}
+        {{ form_widget(form, {'attr': {'max': maxValue}}) }}
+    {% else %}
+        {{ form_widget(form) }}
+    {% endif %}
+    </div>
+</div>

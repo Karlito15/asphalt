@@ -1,0 +1,65 @@
+{% block table %}
+
+    <tbody>
+    {% for item in entities %}
+        <tr>
+            <td class="{{ classes.td }}">{{ component('ValueInteger', {value: item.id}) }}</td>
+            <td class="{{ classes.td }} text-end">{{ component('ValueInteger', {value: item.level01}) }}</td>
+            <td class="{{ classes.td }} text-end">{{ component('ValueInteger', {value: item.level02}) }}</td>
+            <td class="{{ classes.td }} text-end">{{ component('ValueInteger', {value: item.level03}) }}</td>
+            <td class="{{ classes.td }} d-none">{{ component('ValueInteger', {value: item.level04}) }}</td>
+            <td class="{{ classes.td }} d-none">{{ component('ValueInteger', {value: item.level05}) }}</td>
+            <td class="{{ classes.td }} d-none">{{ component('ValueInteger', {value: item.level06}) }}</td>
+            <td class="{{ classes.td }} d-none">{{ component('ValueInteger', {value: item.level07}) }}</td>
+            <td class="{{ classes.td }} d-none">{{ component('ValueInteger', {value: item.level08}) }}</td>
+            <td class="{{ classes.td }} d-none">{{ component('ValueInteger', {value: item.level09}) }}</td>
+            <td class="{{ classes.td }} d-none">{{ component('ValueInteger', {value: item.level10}) }}</td>
+            <td class="{{ classes.td }} text-end">{{ component('ValueInteger', {value: item.level11}) }}</td>
+            <td class="{{ classes.td }} text-end">{{ component('ValueInteger', {value: item.level12}) }}</td>
+            <td class="{{ classes.td }} text-end">{{ component('ValueInteger', {value: item.level13}) }}</td>
+            <td class="{{ classes.td }} text-end">{{ component('ValueInteger', {value: item.common}) }}</td>
+            <td class="{{ classes.td }} text-end">{{ component('ValueInteger', {value: item.rare}) }}</td>
+            <td class="{{ classes.td }} text-end">{{ component('ValueInteger', {value: item.epic}) }}</td>
+            <td class="{{ classes.td }} text-end">{{ item.slug|u.truncate(12, '...') }}</td>
+{#            {{ component('TableDate', {entity: item}) }}#}
+            {{ component('TableAction', {id: item.id, link: 'admin.setting.unit-price.update'}) }}
+        </tr>
+    {% else %}
+        {{ component('TableEmpty', {value: 21}) }}
+    {% endfor %}
+    </tbody>
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+<tr>
+    <th>{{ 'text.id'|trans }}</th>
+    <th class="text-end">{{ 'text.level01'|trans }}</th>
+    <th class="text-end">{{ 'text.level02'|trans }}</th>
+    <th class="text-end">{{ 'text.level03'|trans }}</th>
+    <th class="d-none">{{ 'text.level04'|trans }}</th>
+    <th class="d-none">{{ 'text.level05'|trans }}</th>
+    <th class="d-none">{{ 'text.level06'|trans }}</th>
+    <th class="d-none">{{ 'text.level07'|trans }}</th>
+    <th class="d-none">{{ 'text.level08'|trans }}</th>
+    <th class="d-none">{{ 'text.level09'|trans }}</th>
+    <th class="d-none">{{ 'text.level10'|trans }}</th>
+    <th class="text-end">{{ 'text.level11'|trans }}</th>
+    <th class="text-end">{{ 'text.level12'|trans }}</th>
+    <th class="text-end">{{ 'text.level13'|trans }}</th>
+    <th class="text-end">{{ 'text.common'|trans }}</th>
+    <th class="text-end">{{ 'text.rare'|trans }}</th>
+    <th class="text-end">{{ 'text.epic'|trans }}</th>
+    <th class="text-end">{{ 'text.slug'|trans }}</th>
+{#    <th class="text-end">{{ 'text.date.created.at'|trans }}</th>#}
+{#    <th class="text-end">{{ 'text.date.updated.at'|trans }}</th>#}
+    <th class="text-end">{{ 'text.action'|trans }}</th>
+</tr>
+{% endmacro %}
+
+{% extends '@App/back/contents/common/index.html.twig' %}

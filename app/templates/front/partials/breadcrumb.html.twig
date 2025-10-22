@@ -1,0 +1,23 @@
+
+<!-- Breadcrumb -->
+{#{{ controller_name }}#}
+{% if current_page is defined and current_page ends with 'index' %}
+    {% set url = 'app.dashboard.index' %}
+{% else %}
+    {% set url = links.index|default('app.dashboard.index') %}
+{% endif %}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-chevron px-3 py-2 mb-2 bg-body-tertiary rounded-3">
+        <li class="breadcrumb-item">
+            <a class="link-body-emphasis" href="{{ path('app.dashboard.index') }}">
+                <i class="fa-solid fa-house"></i>
+                <span class="visually-hidden">{{ metas.title }}</span>
+            </a>
+        </li>
+        <li class="breadcrumb-item">
+            <a class="link-body-emphasis fw-semibold text-decoration-none" href="{{ path(url) }}">{{ breadcrumb.level1 }}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">{{ breadcrumb.level2 }}</li>
+    </ol>
+</nav>

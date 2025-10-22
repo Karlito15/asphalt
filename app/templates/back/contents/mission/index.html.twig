@@ -1,0 +1,44 @@
+{% block table %}
+
+    <tbody>
+    {% for item in entities %}
+        <tr>
+            <td class="{{ classes.td }}">{{ component('ValueInteger', {value: item.id}) }}</td>
+            <td class="{{ classes.td }}">{{ component('ValueInteger', {value: item.week}) }}</td>
+            <td class="{{ classes.td }}">{{ item.region }}</td>
+            <td class="{{ classes.td }}">{{ item.track }}</td>
+            <td class="{{ classes.td }}">{{ item.class }}</td>
+            <td class="{{ classes.td }}">{{ item.brand }}</td>
+            <td class="{{ classes.td }}">{{ item.description }}</td>
+            <td class="{{ classes.td }}">{{ component('ValueInteger', {value: item.success}) }}</td>
+            <td class="{{ classes.td }}">{{ component('ValueInteger', {value: item.target}) }}</td>
+            {{ component('TableAction', {id: item.id, link: 'admin.mission.update'}) }}
+        </tr>
+    {% else %}
+        {{ component('TableEmpty', {value: 10}) }}
+    {% endfor %}
+    </tbody>
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr>
+        <th>{{ 'text.id'|trans }}</th>
+        <th>{{ 'text.week'|trans }}</th>
+        <th>{{ 'text.region'|trans }}</th>
+        <th>{{ 'text.track'|trans }}</th>
+        <th>{{ 'text.class'|trans }}</th>
+        <th>{{ 'text.brand'|trans }}</th>
+        <th>{{ 'text.description'|trans }}</th>
+        <th>{{ 'text.success'|trans }}</th>
+        <th>{{ 'text.target'|trans }}</th>
+        <th class="text-end">{{ 'text.action'|trans }}</th>
+    </tr>
+{% endmacro %}
+
+{% extends '@App/back/contents/common/index.html.twig' %}

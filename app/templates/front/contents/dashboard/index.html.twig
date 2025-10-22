@@ -1,0 +1,27 @@
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-xxl-8 col-md-12">
+            <h2 class="h4 text-center">{{ 'text.coin'|trans|plural() }}</h2>
+            {% include '@App/front/contents/dashboard/_moneys.html.twig' %}
+            <h2 class="h4 text-center">{{ 'text.joker'|trans|plural() }}</h2>
+            {% include '@App/front/contents/dashboard/_joker-S.html.twig' %}
+            {% include '@App/front/contents/dashboard/_joker-A.html.twig' %}
+            {% include '@App/front/contents/dashboard/_joker-B.html.twig' %}
+            {% include '@App/front/contents/dashboard/_joker-C.html.twig' %}
+            {% include '@App/front/contents/dashboard/_joker-D.html.twig' %}
+            <h2 class="h4 text-center">{{ 'text.import'|trans|plural() }}</h2>
+            {% include '@App/front/contents/dashboard/_import-rares.html.twig' %}
+            <h2 class="h4 text-center">{{ 'text.common'|trans|plural() }}</h2>
+            {% include '@App/front/contents/dashboard/_import-commons.html.twig' %}
+        </div>
+        <div class="col-xxl-4 col-md-12">
+            <h2 class="h4 text-center">{{ 'text.stat.class'|trans }}</h2>
+            {% include '@App/front/contents/dashboard/_statistical.html.twig' %}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% extends '@App/front/bases/full.html.twig' %}

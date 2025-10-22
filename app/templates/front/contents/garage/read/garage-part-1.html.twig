@@ -1,0 +1,42 @@
+
+<div class="card-title">
+    <h4 class="text-center">{{ 'text.garage'|trans }}</h4>
+</div>
+<table class="{{ classes.table }}">
+    <thead>
+        <tr>
+            <th>{{ 'text.brand'|trans }}</th>
+            <th>{{ 'text.model'|trans }}</th>
+            <th>{{ 'text.class'|trans }}</th>
+            <th>{{ 'text.game.update'|trans }}</th>
+            <th>{{ 'text.level'|trans }}</th>
+            <th>{{ 'text.epic'|trans }}</th>
+            <th>{{ 'text.order.class'|trans }}</th>
+            <th>{{ 'text.order.stat'|trans }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ entity.brand }}</td>
+            <td>{{ entity.model }}</td>
+            <td>{{ entity.class_value }}</td>
+            <td>{{ entity.gameUpdate }}</td>
+            <td>
+                {% set level = entity.level ~ ' / ' ~ entity.level_level %}
+                {{ level }}
+            </td>
+            <td>
+                {% set epic = entity.epic ~ ' / ' ~ entity.level_epic %}
+                {{ epic }}
+            </td>
+            <td>
+                {% set carOrder = entity.carOrder  ~ ' / ' ~ entity.class_number %}
+                {{ carOrder }}
+            </td>
+            <td>
+                {% set statOrder = entity.statOrder  ~ ' / ' ~ entity.class_number %}
+                {{ statOrder }}
+            </td>
+        </tr>
+    </tbody>
+</table>

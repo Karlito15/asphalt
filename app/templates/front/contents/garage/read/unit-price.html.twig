@@ -1,0 +1,85 @@
+<div class="card-title">
+    <h4 class="text-center">{{ 'text.unit-price'|trans|plural() }}</h4>
+</div>
+<table class="{{ classes.table }}">
+    <thead>
+        <tr>
+            <th>{{ 'text.level01'|trans }}</th>
+            <th>{{ 'text.level02'|trans }}</th>
+            <th>{{ 'text.level03'|trans }}</th>
+            <th>{{ 'text.level04'|trans }}</th>
+            <th>{{ 'text.level05'|trans }}</th>
+            <th>{{ 'text.level06'|trans }}</th>
+            <th>{{ 'text.level07'|trans }}</th>
+            <th>{{ 'text.level08'|trans }}</th>
+            <th>{{ 'text.level09'|trans }}</th>
+            <th>{{ 'text.level10'|trans }}</th>
+            <th>{{ 'text.level11'|trans }}</th>
+            <th>{{ 'text.level12'|trans }}</th>
+            <th>{{ 'text.level13'|trans }}</th>
+            <th>{{ 'text.common'|trans }}</th>
+            <th>{{ 'text.rare'|trans }}</th>
+            <th>{{ 'text.epic'|trans }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level01) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level02) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level03) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level04) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level05) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level06) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level07) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level08) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level09) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level10) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level11) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level12) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level13) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_common) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_rare) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_epic) }}</td>
+        </tr>
+        <tr>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level01) }}</td>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level02) }}</td>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level03) }}</td>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level04) }}</td>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level05) }}</td>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level06) }}</td>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level07) }}</td>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level08) }}</td>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level09) }}</td>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level10) }}</td>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level11) }}</td>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level12) }}</td>
+            <td class="small">{{ _self.price(4, entity.unitPrice_level13) }}</td>
+            <td class="small">{{ _self.price(entity.upgrade_common, entity.unitPrice_common) }}</td>
+            <td class="small">{{ _self.price(entity.upgrade_rare, entity.unitPrice_rare) }}</td>
+            <td class="small">{{ _self.price(entity.upgrade_epic, entity.unitPrice_epic) }}</td>
+        </tr>
+        <tr>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level01) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level02) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level03) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level04) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level05) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level06) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level07) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level08) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level09) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level10) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level11) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level12) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_level13) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_common) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_rare) }}</td>
+            <td class="small">{{ _self.price(0, entity.unitPrice_epic) }}</td>
+        </tr>
+    </tbody>
+</table>
+
+{% macro price(level, price) %}
+    {{ (price * level)|number_format }}
+{% endmacro %}

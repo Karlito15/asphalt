@@ -1,0 +1,10 @@
+# IDE
+.idea/
+.vscode/
+
+# Dist other files
+dist/*.zip
+
+# Root min files
+/*.min.js
+/*.min.css

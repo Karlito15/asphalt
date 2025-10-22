@@ -1,0 +1,49 @@
+{% block content %}
+
+{% if entity.unlocked is true %}
+    {% set status = 'unlock' %}
+{% else %}
+    {% set status = 'lock' %}
+{% endif %}
+
+{% if entity.gold is true %}
+    {% set gold = 'gold' %}
+{% else %}
+    {% set gold = null %}
+{% endif %}
+
+<div class="row">
+    <div class="col-xxl-10">
+        <div class="card">
+            <div class="card-header text-center">
+                {% include "@App/front/contents/garage/common/_title.html.twig" %}
+            </div>
+            <div class="card-body">
+                {% include '@App/front/contents/garage/read/garage-part-1.html.twig' %}
+                {% include '@App/front/contents/garage/read/garage-part-2.html.twig' %}
+                {% include '@App/front/contents/garage/read/garage-part-3.html.twig' %}
+                {% include '@App/front/contents/garage/read/blueprint.html.twig' %}
+                {% include '@App/front/contents/garage/read/rank.html.twig' %}
+                {% include '@App/front/contents/garage/read/stat.html.twig' %}
+                {% include '@App/front/contents/garage/read/tag.html.twig' %}
+                {% include '@App/front/contents/garage/read/upgrade.html.twig' %}
+                {% include '@App/front/contents/garage/read/unit-price.html.twig' %}
+            </div>
+            <div class="card-footer">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-2">
+        <div style="display: block; position: sticky; top: 20px;">
+            <h6 class="h4 text-end">{{ 'text.action'|trans|plural }}</h6>
+            <a href="{{ path(links.index) }}" class="btn btn-outline-warning btn-lg rounded-top-5 rounded-bottom-0 w-100 mb-3">{{ 'btn.back'|trans }}</a>
+            <a href="{{ path('app.garage.update', {'id': entity.id, 'slug': entity.slug}) }}" class="btn btn-outline-info btn-lg w-100 mb-3">{{ 'btn.update'|trans }}</a>
+            {{ include('@App/front/contents/garage/_delete_form.html.twig') }}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% extends '@App/front/bases/full.html.twig' %}

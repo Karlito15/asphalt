@@ -1,0 +1,12 @@
+{#{{ attributes }}#}
+<!-- component HTML -->
+{% for pathItem in links %}
+    {% if app.current_route == pathItem.path %}
+        {% set color = 'primary' %}
+    {% else %}
+        {% set color = 'secondary' %}
+    {% endif %}
+    <li class="nav-item mb-2">
+        <a href="{{ path(pathItem.path) }}" class="nav-link p-0 text-body-{{ color }}">{{ pathItem.text }}</a>
+    </li>
+{% endfor %}

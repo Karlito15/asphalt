@@ -1,0 +1,62 @@
+{% block table %}
+    <tbody>
+    {% for item in entities %}
+        <tr>
+            <td class="{{ classes.td }} text-center">{{ loop.index }}</td>
+            <td class="{{ classes.td }} text-center">{{ item.gameUpdate }}</td>
+            <td class="{{ classes.td }} text-center">{{ item.class_value }}</td>
+            <td class="{{ classes.td }} text-center">{{ component('ValueBoolean', {value: item.unlocked}) }}</td>
+            <td class="{{ classes.td }} text-center">{{ component('ValueBoolean', {value: item.gold}) }}</td>
+            <td class="{{ classes.td }} text-start">
+                <a href="{{ path('app.garage.update', {id: item.id, slug: item.slug}) }}" target="_blank" class="text-decoration-none {{ _self.color(item.unlocked, item.gold) }}">{{ item.brand }}</a>
+            </td>
+            <td class="{{ classes.td }} text-start">
+                <a href="{{ path('app.garage.update', {id: item.id, slug: item.slug}) }}" target="_blank" class="text-decoration-none {{ _self.color(item.unlocked, item.gold) }}">{{ item.model }}</a>
+            </td>
+            <td class="{{ classes.td }} text-end">
+                <div class="btn-group no-padding" role="group" aria-label="{{ 'text.action'|trans }}">
+                    <a class="btn btn-sm btn-outline-warning" href="{{ path('app.garage.read', {'id': item.id, 'slug': item.slug}) }}" target="_blank">
+                        <span class="d-md-none d-lg-inline-block">{{ 'btn.read'|trans }}&nbsp;</span><i class="fa-solid fa-file"></i>
+                    </a>
+                    <a class="btn btn-sm btn-outline-info" href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank">
+                        <i class="fa-solid fa-pencil"></i><span class="d-md-none d-lg-inline-block">&nbsp;{{ 'btn.update'|trans }}</span>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    {% else %}
+        {{ component('TableEmpty', {value: 9}) }}
+    {% endfor %}
+    </tbody>
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr class="sticky-top">
+        <th class="col-xxl-auto text-center">&nbsp;</th>
+        <th class="col-xxl-1 text-center" data-sortable="true">{{ 'text.game.update'|trans }}</th>
+        <th class="col-xxl-1 text-center">{{ 'text.class'|trans }}</th>
+        <th class="col-xxl-1 text-center">{{ 'text.unlocked'|trans }}</th>
+        <th class="col-xxl-1 text-center">{{ 'text.gold'|trans }}</th>
+        <th class="col-xxl-auto text-start" data-sortable="true">{{ 'text.brand'|trans }}</th>
+        <th class="col-xxl-auto text-start" data-sortable="true">{{ 'text.model'|trans }}</th>
+        <th class="col-xxl-auto text-end">{{ 'text.action'|trans }}</th>
+    </tr>
+{% endmacro %}
+
+{% macro color(unlock, gold) %}
+    {% if unlock == true and gold == false %}
+        text-success
+    {% elseif unlock == true and gold == true %}
+        text-warning
+    {% else %}
+        text-danger
+    {% endif %}
+{% endmacro %}
+
+{% extends '@App/front/contents/common/index.html.twig' %}

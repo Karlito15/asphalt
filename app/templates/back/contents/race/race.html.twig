@@ -1,0 +1,47 @@
+{% block table %}
+
+    <tbody>
+    {% for item in entities %}
+        <tr>
+            <td class="{{ classes.td }}">{{ component('ValueInteger', {value: item.Chapter}) }}</td>
+            <td class="{{ classes.td }}">{{ component('ValueInteger', {value: item.Order}) }}</td>
+            <td class="{{ classes.td }} text-truncate">{{ item.Mode }}</td>
+            <td class="{{ classes.td }} text-truncate">{{ item.Season }}</td>
+            <td class="{{ classes.td }} text-truncate">{{ item.English }}</td>
+            <td class="{{ classes.td }} text-truncate">{{ item.French }}</td>
+            <td class="{{ classes.td }} text-center">{{ component('ValueInteger', {value: item.Time}) }}</td>
+            <td class="{{ classes.td }} text-center">{{ component('ValueBoolean', {value: item.Finished}) }}</td>
+{#            {{ component('TableAction', {id: item.id, slug: item.slug, link: 'admin.race.update'}) }}#}
+            <td class="{{ classes.td }} text-end">
+                <a href="{{ path('admin.race.update', {id: item.id, slug: item.slug}) }}" class="{{ classes.btn }}">
+                    <i class="fa-solid fa-pencil"></i>
+                </a>
+            </td>
+        </tr>
+    {% else %}
+        {{ component('TableEmpty', {value: 9}) }}
+    {% endfor %}
+    </tbody>
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr>
+        <th>{{ 'text.chapter'|trans }}</th>
+        <th>{{ 'text.order.race'|trans|raw }}</th>
+        <th>{{ 'text.mode'|trans }}</th>
+        <th>{{ 'text.season'|trans }}</th>
+        <th>{{ 'text.name-english'|trans|raw }}</th>
+        <th>{{ 'text.name-french'|trans|raw }}</th>
+        <th>{{ 'text.time'|trans }}</th>
+        <th>{{ 'text.finished'|trans }}</th>
+        <th>{{ 'text.action'|trans }}</th>
+    </tr>
+{% endmacro %}
+
+{% extends '@App/back/contents/common/index.html.twig' %}

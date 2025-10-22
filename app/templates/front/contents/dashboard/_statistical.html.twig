@@ -1,0 +1,59 @@
+
+<table class="{{ classes.table }} table-responsive">
+    <tbody>
+        <tr class="font-weight-bolder">
+            <td class="my-0 py-1 align-middle text-start">{{ 'text.garage'|trans }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.total.D }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.total.C }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.total.B }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.total.A }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.total.S }}</td>
+            <td class="my-0 py-1 align-middle text-end">{{ statistic.total.Total }}</td>
+        </tr>
+        <tr class="font-weight-bolder">
+            <td class="my-0 py-1 align-middle text-start">{{ 'text.unlock'|trans }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.unlock.D }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.unlock.C }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.unlock.B }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.unlock.A }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.unlock.S }}</td>
+            <td class="my-0 py-1 align-middle text-end">{{ statistic.unlock.Total }}</td>
+        </tr>
+        <tr class="font-weight-bolder">
+            <td class="my-0 py-1 align-middle text-start">{{ 'text.locked'|trans }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.lock.D }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.lock.C }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.lock.B }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.lock.A }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.lock.S }}</td>
+            <td class="my-0 py-1 align-middle text-end">{{ statistic.lock.Total }}</td>
+        </tr>
+        <tr class="font-weight-bolder">
+            <td class="my-0 py-1 align-middle text-start">{{ 'text.gold'|trans }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.gold.D }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.gold.C }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.gold.B }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.gold.A }}</td>
+            <td class="my-0 py-1 align-middle text-center">{{ statistic.gold.S }}</td>
+            <td class="my-0 py-1 align-middle text-end">{{ statistic.gold.Total }}</td>
+        </tr>
+    </tbody>
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+{#    <tfoot>#}
+{#        {{ _self.legend() }}#}
+{#    </tfoot>#}
+</table>
+
+{% macro legend() %}
+    <tr class="table-secondary small">
+        <th class="my-0 py-1 align-middle text-start">{{ 'text.legend'|trans }}</th>
+        <th class="my-0 py-1 align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>D</th>
+        <th class="my-0 py-1 align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>C</th>
+        <th class="my-0 py-1 align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>B</th>
+        <th class="my-0 py-1 align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>A</th>
+        <th class="my-0 py-1 align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>S</th>
+        <th class="my-0 py-1 align-middle text-end">{{ 'text.total'|trans }}</th>
+    </tr>
+{% endmacro %}

@@ -1,3 +1,0 @@
-$grid-columns:      36;
-$grid-gutter-width: 0.25rem;
-$grid-row-columns:  12;

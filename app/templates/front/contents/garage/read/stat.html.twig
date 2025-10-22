@@ -1,0 +1,61 @@
+
+<div class="card-title">
+    <h4 class="text-center">{{ 'text.stat'|trans|plural() }}</h4>
+</div>
+<table class="{{ classes.table }}">
+    <thead>
+        <tr>
+            <th class="text-center py-1">
+                {{ 'text.speed'|trans }}
+            </th>
+            <th class="text-center py-1">
+                {{ 'text.acceleration'|trans }}
+            </th>
+            <th class="text-center py-1">
+                {{ 'text.handling'|trans }}
+            </th>
+            <th class="text-center py-1">
+                {{ 'text.nitro'|trans }}
+            </th>
+            <th class="text-center py-1">
+                {{ 'text.average'|trans }}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="text-center py-1">
+                {{ entity.min_speed|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}
+            </td>
+            <td class="text-center py-1">
+                {{ entity.min_acceleration|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}
+            </td>
+            <td class="text-center py-1">
+                {{ entity.min_handling|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}
+            </td>
+            <td class="text-center py-1">
+                {{ entity.min_nitro|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}
+            </td>
+            <td class="text-center py-1">
+                {{ entity.min_average|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center py-1">
+                {{ entity.max_speed|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}
+            </td>
+            <td class="text-center py-1">
+                {{ entity.max_acceleration|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}
+            </td>
+            <td class="text-center py-1">
+                {{ entity.max_handling|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}
+            </td>
+            <td class="text-center py-1">
+                {{ entity.max_nitro|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}
+            </td>
+            <td class="text-center py-1">
+                {{ entity.max_average|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}
+            </td>
+        </tr>
+    </tbody>
+</table>

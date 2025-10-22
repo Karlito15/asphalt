@@ -1,0 +1,60 @@
+
+<!-- Footer -->
+<div class="{{ container|default('container') }} py-3">
+    <footer class="footer bg-body-tertiary row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3">
+            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="{{ metas.title }}">
+                <figure>
+                    <img src="{{ asset(images.logo) }}" alt="{{ metas.title }}" width="200" />
+                    <figcaption class="text-center">{{ metas.title }}</figcaption>
+                </figure>
+            </a>
+        </div>
+        <div class="col mb-3">
+            <h5>{{ 'text.page'|trans }}</h5>
+            <ul class="nav flex-column">
+                {{ component('NavBackFooter', { links: [
+                    {'path': 'admin.inventory.index', 'text': 'text.inventory'|trans},
+                    {'path': 'sitemap.back', 'text': 'text.sitemap'|trans},
+                ]}) }}
+            </ul>
+        </div>
+        <div class="col mb-3">
+            <h5>{{ 'text.mission'|trans }}</h5>
+            <ul class="nav flex-column">
+                {{ component('NavBackFooter', { links: [
+                    {'path': 'admin.mission.index', 'text': 'text.mission'|trans},
+                    {'path': 'admin.mission.task.index', 'text': 'text.task'|trans},
+                    {'path': 'admin.mission.type.index', 'text': 'text.type'|trans},
+                ]}) }}
+            </ul>
+        </div>
+        <div class="col mb-3">
+            <h5>{{ 'text.race'|trans }}</h5>
+            <ul class="nav flex-column">
+                {{ component('NavBackFooter', { links: [
+                    {'path': 'admin.race.index', 'text': 'text.race'|trans},
+                    {'path': 'admin.race.mode.index', 'text': 'text.mode'|trans},
+                    {'path': 'admin.race.region.index', 'text': 'text.region'|trans},
+                    {'path': 'admin.race.season.index', 'text': 'text.season'|trans},
+                    {'path': 'admin.race.time.index', 'text': 'text.time'|trans},
+                    {'path': 'admin.race.track.index', 'text': 'text.track'|trans},
+                ]}) }}
+            </ul>
+        </div>
+        <div class="col mb-3">
+            <h5>{{ 'text.setting'|trans }}</h5>
+            <ul class="nav flex-column">
+                {{ component('NavBackFooter', { links: [
+                    {'path': 'admin.setting.blueprint.index', 'text': 'text.blueprint'|trans},
+                    {'path': 'admin.setting.brand.index', 'text': 'text.brand'|trans},
+                    {'path': 'admin.setting.class.index', 'text': 'text.class'|trans},
+                    {'path': 'admin.setting.level.index', 'text': 'text.level'|trans},
+                    {'path': 'admin.setting.tag.index', 'text': 'text.tag'|trans},
+                    {'path': 'admin.setting.unit-price.index', 'text': 'text.unit-price'|trans},
+                ]}) }}
+            </ul>
+        </div>
+    </footer>
+    <p class="text-center text-body-secondary small">© 2020 - {{ "now"|date("Y") }}</p>
+</div>

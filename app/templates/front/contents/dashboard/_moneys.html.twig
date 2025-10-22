@@ -1,0 +1,16 @@
+
+<div class="row mb-2">
+    <div class="card-group">
+        {{ component('FormFrontInventory', {color: 'warning', icon: 'fa-money-check-dollar', maxValue: 999999999, form: credits}) }}
+        {{ component('FormFrontInventory', {color: 'primary', icon: 'fa-coins', maxValue: 999999, form: tokens}) }}
+        {{ component('FormFrontInventory', {color: 'danger', icon: 'fa-money-bill-1', maxValue: 999999, form: epics}) }}
+        {{ component('FormFrontInventory', {color: 'danger-emphasis', icon: 'fa-sack-dollar', maxValue: 1000, form: overlocks}) }}
+    </div>
+</div>
+<div class="row mb-2">
+    <div class="card-group">
+        {{ component('FormFrontInventory', {color: 'info-emphasis', icon: 'fa-medal', maxValue: 999999, form: gauntlet}) }}
+        {{ component('FormFrontInventory', {color: 'success', icon: 'fa-star', maxValue: 999999, form: style}) }}
+        {{ component('FormFrontInventory', {color: 'info', icon: 'fa-crown', maxValue: 999999, form: vip}) }}
+    </div>
+</div>

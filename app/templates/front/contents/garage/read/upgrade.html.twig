@@ -1,0 +1,49 @@
+
+<div class="card-title">
+    <h4 class="text-center">{{ 'text.upgrade'|trans|plural() }}</h4>
+</div>
+<table class="{{ classes.table }}">
+    <thead>
+        <tr>
+            <th>{{ 'text.speed'|trans }}</th>
+            <th>{{ 'text.acceleration'|trans }}</th>
+            <th>{{ 'text.handling'|trans }}</th>
+            <th>{{ 'text.nitro'|trans }}</th>
+            <th>{{ 'text.common'|trans }}</th>
+            <th>{{ 'text.rare'|trans }}</th>
+            <th>{{ 'text.epic'|trans }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                {% set speed = entity.upgrade_speed ~ '/' ~ entity.level_level %}
+                {{ speed }}
+            </td>
+            <td>
+                {% set acceleration = entity.upgrade_acceleration ~ '/' ~ entity.level_level %}
+                {{ acceleration }}
+            </td>
+            <td>
+                {% set handling = entity.upgrade_handling ~ '/' ~ entity.level_level %}
+                {{ handling }}
+            </td>
+            <td>
+                {% set nitro = entity.upgrade_nitro ~ '/' ~ entity.level_level %}
+                {{ nitro }}
+            </td>
+            <td>
+                {% set common = entity.upgrade_common ~ '/' ~ entity.level_common %}
+                {{ common }}
+            </td>
+            <td>
+                {% set rare = entity.upgrade_rare ~ '/' ~ entity.level_rare %}
+                {{ rare }}
+            </td>
+            <td>
+                {% set epic = entity.upgrade_epic ~ '/' ~ entity.level_epic %}
+                {{ epic }}
+            </td>
+        </tr>
+    </tbody>
+</table>

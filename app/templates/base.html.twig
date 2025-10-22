@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale|default('en') }}" data-bs-theme="dark">
+<head>
+    {% block metas %}{% include '@App/share/meta.html.twig' %}{% endblock %}
+
+    <title>{% block title %}{{ controller_name|default('Page Title') }}{% endblock %} - {{ metas.title }}</title>
+
+    {% block favicons %}{% include '@App/share/favicon.html.twig' %}{% endblock %}
+
+    {% block stylesheets %}
+    <!-- Stylesheets -->
+    <link href="{{ asset('libraries/scroll-to-top-button/dist/jquery-backToTop.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('libraries/fontawesome/6.7.2/css/all.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('vendor/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <!-- Libraries -->
+    <link href="{{ asset('styles/fonts.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('styles/scrollbar.css') }}" rel="stylesheet" type="text/css" />
+    {% endblock %}
+</head>
+
+<body{% block body %}{% endblock %}>
+
+    {% block notification %}
+    {#    {% include '@App/share/alert.html.twig' %}#}
+        {% include '@App/share/sweet-alert.html.twig' %}
+    {% endblock %}
+
+    {% block main %}{% endblock %}
+
+    {% block javascripts %}
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        {# back to top #}
+        <script src="{{ asset('libraries/scroll-to-top-button/jquery-backToTop.js') }}"></script>
+        {# pour le dropdwon dans le header #}
+        <script src="{{ asset('libraries/bootstrap/5.3.8/js/bootstrap.bundle.js') }}"></script>
+        <script src="{{ asset('libraries/fontawesome/6.7.2/js/all.min.js') }}"></script>
+        <!-- Libraries -->
+        {% include "@App/share/_script-sweet-alert.html.twig" %}
+        <script src="{{ asset('libraries/dashboard-flash-message.js') }}"></script>
+        {% include "@App/share/_script-back-to-top.html.twig" %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+<div id="flash-messages" class="d-none"></div>
+
+{% for label, flashes in app.flashes %}
+    {% for flash in flashes %}
+        <app-notification id="flash-messages" type="{{ label }}" title="{{ flash.title }}" message="{{ flash.message }}"></app-notification>
+    {% endfor %}
+{% endfor %}

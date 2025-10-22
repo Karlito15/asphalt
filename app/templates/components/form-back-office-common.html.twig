@@ -1,0 +1,36 @@
+{#{{ attributes }}#}
+{% if app.current_route ends with 'create' %}
+    {% set title = 'text.item.create'|trans %}
+    {% set delete = '&nbsp;' %}
+{% else %}
+    {% set title = 'text.item.update'|trans %}
+    {% set delete = include('@App/back/contents/common/_delete.html.twig') %}
+{% endif %}
+
+<!-- component HTML -->
+<div class="row">
+    <div class="col-10">
+        <!-- Start Form -->
+        {{ form_start(form) }}
+        <div class="card">
+            <div class="card-header">
+                <h2 class="display-5">{{ title }}</h2>
+            </div>
+            <div class="card-body">
+                {{ form_widget(form) }}
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-outline-success rounded-top-0 rounded-4 w-100">{{ button_label|default('btn.register'|trans) }}</button>
+            </div>
+        </div>
+        {{ form_end(form) }}
+        <!-- End Form -->
+    </div>
+    <div class="col-2">
+        <div style="display: block; position: sticky; top: 20px;">
+            <h6 class="h4">{{ 'text.action'|trans }}</h6>
+            <a href="{{ path(link.index) }}" class="btn btn-outline-warning mb-3 w-100">{{ 'btn.back'|trans }}</a>
+            {{ delete|raw }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+{% block table %}
+    <tbody>
+    {% for item in entities %}
+        {% set garage = item.brand~' '~item.model %}
+        <tr>
+            <td class="{{ classes.td }} text-center">{{ loop.index }}</td>
+            <td class="{{ classes.td }} text-start">
+                <a class="text-decoration-none" href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank">
+                    {{ garage }}
+                </a>
+            </td>
+            <td class="{{ classes.td }} text-center">{{ component('ValueInteger', {value: item.gameUpdate}) }}</td>
+            <td class="{{ classes.td }} text-center">{{ component('ValueInteger', {value: item.level}) }}</td>
+            <td class="{{ classes.td }} text-center">{{ component('ValueInteger', {value: item.epic}) }}</td>
+            <td class="{{ classes.td }} text-center">{{ item.max_average|number_format(2, ',', ' ') }}</td>
+            {{ component('TableAction', {id: item.id, slug: item.slug, link: 'app.garage.update'}) }}
+        </tr>
+    {% else %}
+        {{ component('TableEmpty', {value: 9}) }}
+    {% endfor %}
+    </tbody>
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr>
+        <th class="col-1 text-center">#</th>
+        <th class="col-auto text-start">{{ 'text.garage'|trans }}</th>
+        <th class="col-1 text-center">{{ 'text.game.update'|trans }}</th>
+        <th class="col-1 text-center">{{ 'text.level'|trans }}</th>
+        <th class="col-1 text-center">{{ 'text.epic'|trans }}</th>
+        <th class="col-1 text-center">{{ 'text.average'|trans }}</th>
+        <th class="col-1 text-end">{{ 'text.action'|trans }}</th>
+    </tr>
+{% endmacro %}
+
+{% extends '@App/front/contents/common/index.html.twig' %}

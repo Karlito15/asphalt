@@ -1,0 +1,12 @@
+{#{{ attributes }}>#}
+{% if slug is defined %}
+    {% set url = path(link, {'id': id, 'slug': slug}) %}
+{% else %}
+    {% set url = path(link, {'id': id}) %}
+{% endif %}
+<!-- component HTML -->
+<td class="{{ classes.td }} text-end">
+    <a href="{{ url }}" class="{{ classes.btn }}">
+        <i class="fa-solid fa-pencil"></i><span class="d-xxl-inline-block d-xl-none">&nbsp;{{ 'btn.update'|trans }}</span>
+    </a>
+</td>

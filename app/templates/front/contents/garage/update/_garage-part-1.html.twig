@@ -1,0 +1,40 @@
+
+<section class="{{ container|default('container') }} mb-2">
+    <div class="card">
+        <div class="card-header bg-dark-subtle py-1">
+            <h2 class="h6 text-center m-0">{{ 'text.garage'|trans|plural }}</h2>
+        </div>
+        <div class="card-body pt-0">
+            <div class="row g-3 align-items-center">
+                <div class="col-1">
+                    {{ form_label(form.settingClass) }}
+                    {{ form_widget(form.settingClass) }}
+                </div>
+                <div class="col-2">
+                    {{ form_label(form.settingBrand) }}
+                    {{ form_widget(form.settingBrand) }}
+                </div>
+                <div class="col">
+                    {{ form_label(form.model) }}
+                    {{ form_widget(form.model) }}
+                </div>
+                <div class="col-1">
+                    {{ form_label(form.stars) }}
+                    {{ form_widget(form.stars) }}
+                </div>
+                <div class="col-1">
+                    {{ form_label(form.gameUpdate) }}
+                    {{ form_widget(form.gameUpdate) }}
+                </div>
+                <div class="col-1">
+                    {{ form_label(form.level) }}
+                    {{ form_widget(form.level) }}
+                </div>
+                <div class="col-1">
+                    {{ form_label(form.epic) }}
+                    {{ form_widget(form.epic) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

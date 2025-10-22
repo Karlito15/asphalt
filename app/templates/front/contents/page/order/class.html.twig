@@ -1,0 +1,24 @@
+{% block table %}
+    <tbody>
+    {% for item in entities %}
+        <tr>
+        </tr>
+    {% else %}
+        {{ component('TableEmpty', {value: 9}) }}
+    {% endfor %}
+    </tbody>
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr>
+{#        <th>{{ 'text.id'|trans }}</th>#}
+    </tr>
+{% endmacro %}
+
+{% extends '@App/front/contents/common/index.html.twig' %}

@@ -1,0 +1,46 @@
+
+<div class="card-title">
+    <h4 class="text-center">{{ 'text.rank'|trans|plural() }}</h4>
+</div>
+<table class="{{ classes.table }}">
+    <thead>
+        <tr class="text-center">
+            <th>&nbsp;</th>
+            <th style="width: 175px;">{{ 'text.start'|trans }}</th>
+            <th style="width: 175px;">{{ component('ValueIcon', {'repeat': 1, 'icon': 'fa-solid fa-star'}) }}</th>
+            <th style="width: 175px;">{{ component('ValueIcon', {'repeat': 2, 'icon': 'fa-solid fa-star'}) }}</th>
+            <th style="width: 175px;">{{ component('ValueIcon', {'repeat': 3, 'icon': 'fa-solid fa-star'}) }}</th>
+            <th style="width: 175px;">{{ component('ValueIcon', {'repeat': 4, 'icon': 'fa-solid fa-star'}) }}</th>
+            <th style="width: 175px;">{{ component('ValueIcon', {'repeat': 5, 'icon': 'fa-solid fa-star'}) }}</th>
+            <th style="width: 175px;">{{ component('ValueIcon', {'repeat': 6, 'icon': 'fa-solid fa-star'}) }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="text-center">
+            <td>
+
+            </td>
+            <td>
+                {{ entity.rank_star0 }}
+            </td>
+            <td>
+                {{ entity.rank_star1 }}
+            </td>
+            <td>
+                {{ entity.rank_star2 }}
+            </td>
+            <td>
+                {{ entity.rank_star3 }}
+            </td>
+            <td>
+                {{ entity.rank_star4 }}
+            </td>
+            <td>
+                {{ entity.rank_star5 }}
+            </td>
+            <td>
+                {{ entity.rank_star6 }}
+            </td>
+        </tr>
+    </tbody>
+</table>

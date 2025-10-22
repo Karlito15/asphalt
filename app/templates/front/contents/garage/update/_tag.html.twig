@@ -1,0 +1,10 @@
+<section class="{{ container|default('container') }} mb-2">
+    <div class="card">
+        <div class="card-header bg-dark-subtle py-1">
+            <h2 class="h6 text-center m-0">{{ 'text.tag'|trans|plural }}</h2>
+        </div>
+        <div class="card-body">
+            {{ form_widget(form.settingTag) }}
+        </div>
+    </div>
+</section>

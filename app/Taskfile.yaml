@@ -1,0 +1,217 @@
+version: '3'
+
+silent: true
+
+vars:
+    GREETING: "Hello, Welcome to Symfony And Docker Taskfile !"
+    COMPOSER: composer
+    SYMFONY: symfony
+    SYMFONY_CONSOLE: "{{.SYMFONY}} console"
+
+tasks:
+    default:
+        cmds:
+            - task: help
+
+    help:
+        desc: Display this help
+        cmds:
+            - echo "{{.GREETING}}"
+            - task --list
+
+### COMPOSER
+    cc:
+        desc: "Clears composer's internal package cache"
+        cmds:
+            - "{{.COMPOSER}} clear-cache"
+    ci:
+        desc: "Install composer dependencies"
+        cmds:
+            - "{{.COMPOSER}} install"
+    cri:
+        desc: "Uninstalls and reinstalls the given package names"
+        cmds:
+            - "{{.COMPOSER}} reinstall"
+    csu:
+        desc: "Install composer dependencies"
+        cmds:
+            - "{{.COMPOSER}} self-update"
+    cu:
+        desc: "Update composer dependencies"
+        cmds:
+            - "{{.COMPOSER}} update"
+    cv:
+        desc: Validate composer.json file.
+        cmds:
+            - "{{.COMPOSER}} validate"
+    cvd:
+        desc: Validate composer.json and composer.lock files in strict mode.
+        cmds:
+            - "{{.COMPOSER}} validate --strict --check-lock"
+
+
+### SYMFONY
+    check-requirements:
+        desc: "Check symfony requirements"
+        cmds:
+            - "{{.SYMFONY}} check:requirements"
+    # Clear
+    scc:
+        desc: "Clear symfony cache"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} cache:clear --env dev"
+    # Database & Doctrine
+    dc:
+        desc: "Create symfony database"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:database:create" # --if-not-exists
+    dd:
+        desc: "Drop symfony database"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:database:drop --force" # --if-exists
+    du:
+        desc: "Update symfony schema database"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:schema:update --force"
+    dmd:
+        desc: "Generate a migration by comparing your current database to your mapping information."
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:migrations:diff --no-interaction"
+    dmm:
+        desc: "Execute a migration to the latest available version."
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:migrations:migrate --no-interaction"
+    dmmp:
+        desc: "Execute a migration to a specified version."
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:migrations:migrate prev --no-interaction"
+    fixtures:
+        desc: "Load fixtures"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:fixtures:load --no-interaction"
+    # Maker
+    mm:
+        desc: "Make symfony migration"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:migration"
+    me:
+        desc: "Make entity"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:entity"
+    mcmd:
+        desc: "Make command"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:command"
+    mc:
+        desc: "Make controller"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:controller"
+    mf:
+        desc: "Make form"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:form"
+    mfix:
+        desc: "Make fixtures"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:fixtures"
+    tc:
+        desc: "Make twig-component"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:twig-component"
+    # Debug
+    dbg-env:
+        desc: "Dump env"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} debug:dotenv"
+    dbg-rtr:
+        desc: "Dump routes"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} debug:router"
+    # SERVER
+    start:
+        desc: "Server Symfony Start"
+        cmds:
+            - "{{.SYMFONY}} local:server:start -d --allow-http"
+    stop:
+        desc: "Server Symfony Stop"
+        cmds:
+            - "{{.SYMFONY}} local:server:stop --all"
+    status:
+        desc: "Server Symfony Status"
+        cmds:
+            - "{{.SYMFONY}} local:server:status"
+    open:
+        desc: "Server Symfony Open"
+        cmds:
+            - "{{.SYMFONY}} open:local"
+    open-webmail:
+        desc: "Server Symfony Open Webmail"
+        cmds:
+            - "{{.SYMFONY}} open:local:webmail"
+    secure:
+        desc: "Server Certificate Authority for serving HTTPS"
+        cmds:
+            - "{{.SYMFONY}} local:server:ca:install"
+
+### CUSTOM
+    database:
+        desc: "Delete database, Create database, Load migrations & import datas"
+        cmds:
+            - task dd
+            - task dc
+            - task dmm
+            - "{{.SYMFONY_CONSOLE}} asphalt:database:migration import"
+        ignore_error: true
+        platforms: [windows/amd64]
+    scripts:
+        desc: "Clear Cache, Assets, Import Map & Compile & SASS Build"
+        cmds:
+            - "clear"
+            - "{{.SYMFONY_CONSOLE}} cache:clear --env=dev"
+            - "{{.SYMFONY_CONSOLE}} assets:install public"
+            - "{{.SYMFONY_CONSOLE}} importmap:install"
+            - "{{.SYMFONY_CONSOLE}} importmap:update"
+            - "{{.SYMFONY_CONSOLE}} sass:build"
+            - "{{.SYMFONY_CONSOLE}} asset-map:compile"
+        ignore_error: true
+        platforms: [windows/amd64]
+    launch:
+        desc: "Start Symfony server for local dev"
+        cmds:
+            - "clear"
+#            - task scripts
+            - task secure
+            - task start
+            - task open
+        ignore_error: true
+        platforms: [windows/amd64]
+    restart:
+        desc: "Restart Symfony Server for Local Dev"
+        cmds:
+            - "clear"
+            - task stop
+            - task launch
+        ignore_error: true
+        platforms: [windows/amd64]
+    dev:
+        desc: "Clear Cache, Initialize Database, Start Symfony Server & Open Browser"
+        cmds:
+            - task database
+            - task launch
+        ignore_error: true
+        platforms: [windows/amd64]
+    prod:
+        desc: "Clear Cache, Assets"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} cache:clear --env prod"
+            - "{{.SYMFONY_CONSOLE}} assets:install public --env=prod"
+            - "{{.SYMFONY_CONSOLE}} importmap:install"
+            - "{{.SYMFONY_CONSOLE}} importmap:update"
+            - "{{.SYMFONY_CONSOLE}} sass:build"
+            - "{{.SYMFONY_CONSOLE}} asset-map:compile --env=prod"
+            - "{{.SYMFONY_CONSOLE}} cache:pool:clear --all"
+#            - "{{.SYMFONY_CONSOLE}} asphalt:database:migration export"
+            - "rm -rf public/cache/"
+#            - "{{.COMPOSER}} run auto-scripts"
+        ignore_error: true
+        platforms: [windows/amd64]

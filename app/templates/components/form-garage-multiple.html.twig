@@ -1,0 +1,39 @@
+{#{{ attributes }}#}
+
+<!-- component HTML -->
+<div class="card">
+    <div class="card-header text-center py-1">
+    {% if label is defined %}
+        <label class="m-0 form-label">{{ label }}</label>
+    {% else %}
+        {{ form_label(form) }}
+    {% endif %}
+    </div>
+    <div class="card-body p-1">
+        <div class="input-group input-group-sm">
+{% if label is defined %}
+            <input
+                type="text"
+                autocomplete="off"
+                class="{{ classes.input }} bg-body-tertiary px-0"
+                value="{{ value }}"
+             />
+{% else %}
+            <input
+                type="number"
+                id="{{ form.vars.id }}"
+                name="{{ form.vars.name }}"
+                required="required"
+                autocomplete="off"
+                class="{{ form.vars.attr.class }}"
+                max="{{ form.vars.attr.max }}"
+                min="{{ form.vars.attr.min }}"
+                placeholder="{{ form.vars.attr.placeholder }}"
+                value="{{ form.vars.value }}"
+             />
+{% endif %}
+            <input type="text" class="{{ classes.input }} bg-body-tertiary px-0" disabled="disabled" value="/" />
+            <input type="text" class="{{ classes.input }} bg-body-tertiary px-0" disabled="disabled" value="{{ classNumber }}" />
+        </div>
+    </div>
+</div>

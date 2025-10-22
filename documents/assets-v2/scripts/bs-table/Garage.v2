@@ -1,9 +1,0 @@
-if (process.env.NODE_ENV === 'development') {
-	console.debug('loaded :: Bootstrap Table');
-}
-import { bootstrapTable, Button, Icon, Pagination, Search, Display, Setting } from './Bootstrap-Table'
-import { Column } from './conf-garage'
-
-let options = Object.assign(Button, Icon, Pagination, Search, Display, Setting, Column);
-
-jQuery('#GarageDataTable').bootstrapTable(options)

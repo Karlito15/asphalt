@@ -1,0 +1,25 @@
+{% block main %}
+
+    {% block preloader %}
+{#        {% include '@App/front/partials/loader.html.twig' %}#}
+    {% endblock %}
+
+    {% block header %}
+        {% include '@App/front/partials/header.html.twig' %}
+    {% endblock %}
+
+<main class="{% block container %}{{ container|default('container') }}{% endblock %} h-100">
+    {% block breadcrumb %}
+        {% include '@App/front/partials/breadcrumb.html.twig' %}
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+</main>
+
+    {% block footer %}
+        {% include '@App/front/partials/footer.html.twig' %}
+    {% endblock %}
+
+{% endblock %}
+
+{% extends '@App/base.html.twig' %}

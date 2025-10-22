@@ -1,0 +1,8 @@
+{% if car | length > 30 %}
+    {% set display = 'display-5' %}
+{% elseif car | length < 10 %}
+    {% set display = 'display-3' %}
+{% else %}
+    {% set display = 'display-4' %}
+{% endif %}
+<h1 class="{{ display }} text-center mb-0">{{ car }}</h1>

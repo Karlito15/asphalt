@@ -1,0 +1,42 @@
+<!-- Search -->
+{{ form_start(form, {'attr': {'class': 'm-0'}}) }}
+
+    {% if app.current_route == 'app.page.search.race' %}
+<div class="row row-cols-7 g-4 m-0 bg-primary-subtle">
+    <div class="col">{{ form_row(form.mode) }}</div>
+    <div class="col">{{ form_row(form.region) }}</div>
+    <div class="col">{{ form_row(form.season) }}</div>
+    <div class="col">{{ form_row(form.time) }}</div>
+    <div class="col">{{ form_row(form.raceOrder) }}</div>
+    <div class="col">
+        <div class="btn-group" role="group" aria-label="finished">
+            <input type="checkbox" id="finished" class="btn-check" name="{{ field_name(form.finished) }}" autocomplete="off" value="{{ field_value(form.finished) }}">
+            <label class="btn btn-outline-primary rounded-pill" for="finished">{{ 'form.placeholder.is.finish'|trans }}</label>
+        </div>
+    </div>
+
+    {% elseif app.current_route == 'app.page.search.garage' %}
+<div class="row row-cols-8 g-4 m-0 bg-primary-subtle">
+    <div class="col">{{ form_row(form.gameUpdate) }}</div>
+    <div class="col">{{ form_row(form.brand) }}</div>
+    <div class="col">{{ form_row(form.classLetter) }}</div>
+    <div class="col">{{ form_row(form.unlocked) }}</div>
+    <div class="col">{{ form_row(form.gold) }}</div>
+    <div class="col">{{ form_row(form.order) }}</div>
+    {% endif %}
+
+    <div class="col-1">
+        <p class="btn btn-primary position-relative">
+            Result <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ count }}</span>
+        </p>
+    </div>
+    <div class="col text-end">
+        <div class="btn-group" role="group" aria-label="button">
+            <button class="btn btn-outline-danger text-uppercase" type="reset">Reset</button>
+            <button class="btn btn-outline-success text-uppercase" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+{#{{ form_errors(form) }}#}
+{#{{ form_rest(form) }}#}
+{{ form_end(form) }}

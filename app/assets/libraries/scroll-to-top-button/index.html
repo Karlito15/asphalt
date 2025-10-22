@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery-backToTop</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- Import dependencies -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- jquery-backToTop -->
+    <script src="jquery-backToTop.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="themes.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="effects.css" media="screen">
+
+    <!-- Website resources -->
+    <link rel="stylesheet" type="text/css" href="example/example.css" media="screen">
+</head>
+<body>
+
+<!-- Body, default -->
+<script>
+    $.backToTop();
+</script>
+
+<div class="inner">
+    <div class="inner-text">
+        Work in progress ...
+    </div>
+</div>
+
+<!-- Scrollable div -->
+<script>
+    let $button = $.backToTop({
+        backgroundColor: '#846990',
+        container: $('.inner'),
+        effect: 'spin-inverse',
+        position: 'bottom left',
+        scrollAnimation: 400,
+        theme: 'fawesome'
+    });
+    $button.resize(50, 50);
+</script>
+</body>
+</html>
