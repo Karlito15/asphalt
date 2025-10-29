@@ -31,30 +31,21 @@
 
 <div class="card {{ background }}">
     <div class="card-header {{ background }}">
-        {% include "@App/front/contents/garage/update/_nav.html.twig" %}
+        {% include "@App/front/contents/garage/common/_title.html.twig" %}
     </div>
     <div class="card-body">
         {{ form_start(form) }}
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                {% include "@App/front/contents/garage/update/_errors.html.twig" %}
-                {% include "@App/front/contents/garage/update/_garage-part-1.html.twig" %}
-                <section class="{{ container|default('container') }} mb-2">
-                    <div class="row row-cols-sm-1 row-cols-xxl-2">
-{#                        <div class="col">{% include "@App/front/contents/garage/update/_stat.html.twig" %}</div>#}
-                        <div class="col">{% include "@App/front/contents/garage/update/_stat-2.html.twig" %}</div>
-                        <div class="col">{% include "@App/front/contents/garage/update/_upgrade-2.html.twig" %}</div>
-                    </div>
-                </section>
-                {% include "@App/front/contents/garage/update/_blueprint-2.html.twig" %}
-                {% include "@App/front/contents/garage/update/_rank-2.html.twig" %}
+            {% include "@App/front/contents/garage/update/_garage-part-1.html.twig" %}
+            <div class="row rows-2">
+                {% include "@App/front/contents/garage/update/_upgrade.html.twig" %}
+                {% include "@App/front/contents/garage/update/_rank.html.twig" %}
             </div>
-            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                {% include "@App/front/contents/garage/update/_tag.html.twig" %}
-                {% include "@App/front/contents/garage/update/_garage-part-2.html.twig" %}
-                {{ form_rest(form) }}
+            <div class="row rows-2">
+                {% include "@App/front/contents/garage/update/_blueprint.html.twig" %}
+                {% include "@App/front/contents/garage/update/_stat.html.twig" %}
             </div>
-        </div>
+            {% include "@App/front/contents/garage/update/_tag.html.twig" %}
+            {{ form_rest(form) }}
         {% include "@App/front/contents/garage/update/_button.html.twig" %}
         {{ form_end(form) }}
     </div>

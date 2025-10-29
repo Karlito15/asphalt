@@ -1,0 +1,30 @@
+
+{#<section class="{{ container|default('container') }} mb-2 px-0">#}
+<div class="col">
+    <h2 class="text-center">{{ 'text.rank'|trans|plural }}</h2>
+    <table class="table table-striped table-bordered mb-0">
+        <thead>
+            <tr>
+                <th class="text-center">{{ form_label(form.rank.0.star0) }}</th>
+                <th class="text-center">{{ form_label(form.rank.0.star1) }}</th>
+                <th class="text-center">{{ form_label(form.rank.0.star2) }}</th>
+                <th class="text-center">{{ form_label(form.rank.0.star3) }}</th>
+                <th class="text-center">{{ form_label(form.rank.0.star4) }}</th>
+                <th class="text-center">{{ form_label(form.rank.0.star5) }}</th>
+                <th class="text-center">{{ form_label(form.rank.0.star6) }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ form_widget(form.rank.0.star0) }}</td>
+                <td>{{ form_widget(form.rank.0.star1) }}</td>
+                <td>{{ form_widget(form.rank.0.star2) }}</td>
+                <td>{{ form_widget(form.rank.0.star3) }}</td>
+                <td>{{ form_widget(form.rank.0.star4) }}</td>
+                <td>{{ form_widget(form.rank.0.star5) }}</td>
+                <td>{{ form_widget(form.rank.0.star6) }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{#</section>#}

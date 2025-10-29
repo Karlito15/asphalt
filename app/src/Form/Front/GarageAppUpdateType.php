@@ -150,7 +150,7 @@ class GarageAppUpdateType extends AbstractType
             ])
             ->add('settingClass', EntityType::class, [
                 'attr'          => [
-                    'class' => self::attrClass(),
+//                    'class' => self::attrClass(),
                 ],
                 'choice_label'  => 'value',
                 'class'         => SettingClass::class,
@@ -229,6 +229,7 @@ class GarageAppUpdateType extends AbstractType
      */
     private static function attrClass(): string
     {
-        return 'text-start fw-bolder m-0 px-3 py-0 form-control-sm';
+//        return 'text-start fw-bolder m-0 px-3 py-0 form-control-sm';
+        return 'fw-bolder';
     }
 }

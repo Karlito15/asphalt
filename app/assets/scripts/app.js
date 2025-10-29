@@ -1,4 +1,4 @@
-// console.clear();
+console.clear();
 
 /*
  * Stimulus
@@ -11,10 +11,14 @@ import './bootstrap.js';
  * This file will be included onto the page via the importmap() Twig function,
  * which should already be in your base.html.twig.
  */
+
+// CSS
 import '../styles/app.css';
+import '../styles/fonts.css';
+import '../styles/scrollbar.css';
 import '../styles/theme-karlito-web.css';
-/* StyleSheets */
-// import '../styles/bootstrap/5.3.7.sass';
+import '../libraries/scroll-to-top-button/dist/jquery-backToTop.min.css';
+import '../libraries/fontawesome/6.7.2/css/all.min.css';
 
 console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
 

@@ -87,7 +87,7 @@ class GarageRankType extends AbstractType
     {
         return [
             'autocomplete' => 'off',
-            'class'        => 'text-center fw-bolder m-0 p-0 form-control-plaintext form-control-sm',
+            'class'        => 'text-center fw-bolder form-control-plaintext form-control-sm',
             'max'          => $max,
             'min'          => 0,
         ];

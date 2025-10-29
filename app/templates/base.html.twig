@@ -9,12 +9,8 @@
 
     {% block stylesheets %}
     <!-- Stylesheets -->
-    <link href="{{ asset('libraries/scroll-to-top-button/dist/jquery-backToTop.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('libraries/fontawesome/6.7.2/css/all.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('vendor/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <!-- Libraries -->
-    <link href="{{ asset('styles/fonts.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('styles/scrollbar.css') }}" rel="stylesheet" type="text/css" />
+{#    <link href="{{ asset('vendor/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />#}
+        <link href="{{ asset('styles/bootstrap/5.3.8/bootstrap.scss') }}" rel="stylesheet" type="text/css" />
     {% endblock %}
 </head>
 
@@ -31,15 +27,14 @@
         {% block importmap %}{{ importmap('app') }}{% endblock %}
 
         <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        {# back to top #}
-        <script src="{{ asset('libraries/scroll-to-top-button/jquery-backToTop.js') }}"></script>
+        <script src="{{ asset('libraries/jquery/3.7.1.min.js') }}"></script>
         {# pour le dropdwon dans le header #}
         <script src="{{ asset('libraries/bootstrap/5.3.8/js/bootstrap.bundle.js') }}"></script>
-        <script src="{{ asset('libraries/fontawesome/6.7.2/js/all.min.js') }}"></script>
-        <!-- Libraries -->
+        <!-- flash messages -->
         {% include "@App/share/_script-sweet-alert.html.twig" %}
         <script src="{{ asset('libraries/dashboard-flash-message.js') }}"></script>
+        {# back to top #}
+        <script src="{{ asset('libraries/scroll-to-top-button/jquery-backToTop.js') }}"></script>
         {% include "@App/share/_script-back-to-top.html.twig" %}
     {% endblock %}
 

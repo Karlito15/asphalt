@@ -1,0 +1,117 @@
+// Credit
+//$credit: $yellow-500 !default;
+$credit: #f5cd79 !default;
+$credit-100: tint-color($credit, 80%) !default;
+$credit-200: tint-color($credit, 60%) !default;
+$credit-300: tint-color($credit, 40%) !default;
+$credit-400: tint-color($credit, 20%) !default;
+$credit-500: $credit !default;
+$credit-600: shade-color($credit, 20%) !default;
+$credit-700: shade-color($credit, 40%) !default;
+$credit-800: shade-color($credit, 60%) !default;
+$credit-900: shade-color($credit, 80%) !default;
+$credits: (
+  "credit-100": $credit-100,
+  "credit-200": $credit-200,
+  "credit-300": $credit-300,
+  "credit-400": $credit-400,
+  "credit-500": $credit-500,
+  "credit-600": $credit-600,
+  "credit-700": $credit-700,
+  "credit-800": $credit-800,
+  "credit-900": $credit-900
+) !default;
+
+// Token
+//$token: $blue-500 !default;
+$token: #546de5 !default;
+$token-100: tint-color($token, 80%) !default;
+$token-200: tint-color($token, 60%) !default;
+$token-300: tint-color($token, 40%) !default;
+$token-400: tint-color($token, 20%) !default;
+$token-500: $token !default;
+$token-600: shade-color($token, 20%) !default;
+$token-700: shade-color($token, 40%) !default;
+$token-800: shade-color($token, 60%) !default;
+$token-900: shade-color($token, 80%) !default;
+$tokens: (
+  "token-100": $token-100,
+  "token-200": $token-200,
+  "token-300": $token-300,
+  "token-400": $token-400,
+  "token-500": $token-500,
+  "token-600": $token-600,
+  "token-700": $token-700,
+  "token-800": $token-800,
+  "token-900": $token-900
+) !default;
+
+// Inventory
+//$inventory: $red-500 !default;
+$inventory: #e15f41 !default;
+$inventory-100: tint-color($inventory, 80%) !default;
+$inventory-200: tint-color($inventory, 60%) !default;
+$inventory-300: tint-color($inventory, 40%) !default;
+$inventory-400: tint-color($inventory, 20%) !default;
+$inventory-500: $inventory !default;
+$inventory-600: shade-color($inventory, 20%) !default;
+$inventory-700: shade-color($inventory, 40%) !default;
+$inventory-800: shade-color($inventory, 60%) !default;
+$inventory-900: shade-color($inventory, 80%) !default;
+$inventories: (
+  "inventory-100": $inventory-100,
+  "inventory-200": $inventory-200,
+  "inventory-300": $inventory-300,
+  "inventory-400": $inventory-400,
+  "inventory-500": $inventory-500,
+  "inventory-600": $inventory-600,
+  "inventory-700": $inventory-700,
+  "inventory-800": $inventory-800,
+  "inventory-900": $inventory-900
+) !default;
+
+// Biscay
+$biscay: #303952 !default;
+$biscay-100: tint-color($biscay, 80%) !default;
+$biscay-200: tint-color($biscay, 60%) !default;
+$biscay-300: tint-color($biscay, 40%) !default;
+$biscay-400: tint-color($biscay, 20%) !default;
+$biscay-500: $biscay !default;
+$biscay-600: shade-color($biscay, 20%) !default;
+$biscay-700: shade-color($biscay, 40%) !default;
+$biscay-800: shade-color($biscay, 60%) !default;
+$biscay-900: shade-color($biscay, 80%) !default;
+$biscay: (
+  "biscay-100": $biscay-100,
+  "biscay-200": $biscay-200,
+  "biscay-300": $biscay-300,
+  "biscay-400": $biscay-400,
+  "biscay-500": $biscay-500,
+  "biscay-600": $biscay-600,
+  "biscay-700": $biscay-700,
+  "biscay-800": $biscay-800,
+  "biscay-900": $biscay-900
+) !default;
+
+// Pencil
+$pencil: #596275 !default;
+$pencil-100: tint-color($pencil, 80%) !default;
+$pencil-200: tint-color($pencil, 60%) !default;
+$pencil-300: tint-color($pencil, 40%) !default;
+$pencil-400: tint-color($pencil, 20%) !default;
+$pencil-500: $pencil !default;
+$pencil-600: shade-color($pencil, 20%) !default;
+$pencil-700: shade-color($pencil, 40%) !default;
+$pencil-800: shade-color($pencil, 60%) !default;
+$pencil-900: shade-color($pencil, 80%) !default;
+$pencil: (
+  "pencil-100": $pencil-100,
+  "pencil-200": $pencil-200,
+  "pencil-300": $pencil-300,
+  "pencil-400": $pencil-400,
+  "pencil-500": $pencil-500,
+  "pencil-600": $pencil-600,
+  "pencil-700": $pencil-700,
+  "pencil-800": $pencil-800,
+  "pencil-900": $pencil-900
+) !default;

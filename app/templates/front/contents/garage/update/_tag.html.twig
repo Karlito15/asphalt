@@ -1,10 +1,14 @@
-<section class="{{ container|default('container') }} mb-2">
-    <div class="card">
-        <div class="card-header bg-dark-subtle py-1">
-            <h2 class="h6 text-center m-0">{{ 'text.tag'|trans|plural }}</h2>
+
+<section class="{{ container|default('container') }} mb-2 px-0">
+    <div class="row row-cols-5">
+        <div class="col-1">
+            <twig:FormGroup1Value form="{{ form.unlocked }}" />
         </div>
-        <div class="card-body">
-            {{ form_widget(form.settingTag) }}
+        <div class="col-1">
+            <twig:FormGroup1Value form="{{ form.gold }}" />
+        </div>
+        <div class="col-1">
+            <twig:FormGroup1Value form="{{ form.settingTag }}" />
         </div>
     </div>
 </section>

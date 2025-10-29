@@ -1,0 +1,53 @@
+
+{#<section class="{{ container|default('container') }} mb-2 px-0">#}
+<div class="col-3">
+    <h2 class="text-center">{{ 'text.stat'|trans|plural }}</h2>
+    <table class="table table-striped table-bordered mb-0">
+        <thead>
+            <tr>
+{#                <th class="text-center">&nbsp;</th>#}
+                <th class="text-center">{{ form_label(form.statMin.0.speed) }}</th>
+                <th class="text-center">{{ form_label(form.statMin.0.acceleration) }}</th>
+                <th class="text-center">{{ form_label(form.statMin.0.handling) }}</th>
+                <th class="text-center">{{ form_label(form.statMin.0.nitro) }}</th>
+                <th class="text-center">
+                    <label class="form-label fw-light m-0 p-0 position-relative" for="{{ 'text.average'|trans }}">
+                        {{ 'text.average'|trans }}
+                        <span class="position-absolute top-0 start-100 translate-middle-y badge rounded-pill bg-danger">{{ entity.settingClass.median }}</span>
+                    </label>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+{#                <td>Min</td>#}
+                <td>{{ form_widget(form.statMin.0.speed) }}</td>
+                <td>{{ form_widget(form.statMin.0.acceleration) }}</td>
+                <td>{{ form_widget(form.statMin.0.handling) }}</td>
+                <td>{{ form_widget(form.statMin.0.nitro) }}</td>
+                <td>
+                    <input type="text" class="text-end fw-bolder m-0 p-0 form-control-plaintext form-control-sm form-control" value="{{ entity.statMin.0.average|number_format('2', ',', ' ') }}">
+                </td>
+            </tr>
+{#            <tr>#}
+{#                <td>Actual</td>#}
+{#                <td class="text-center fw-bolder">coming soon</td>#}
+{#                <td class="text-center fw-bolder">coming soon</td>#}
+{#                <td class="text-center fw-bolder">coming soon</td>#}
+{#                <td class="text-center fw-bolder">coming soon</td>#}
+{#                <td class="text-end fw-bolder">coming soon</td>#}
+{#            </tr>#}
+            <tr>
+{#                <td>Max</td>#}
+                <td>{{ form_widget(form.statMax.0.speed) }}</td>
+                <td>{{ form_widget(form.statMax.0.acceleration) }}</td>
+                <td>{{ form_widget(form.statMax.0.handling) }}</td>
+                <td>{{ form_widget(form.statMax.0.nitro) }}</td>
+                <td>
+                    <input type="text" class="text-end fw-bolder m-0 p-0 form-control-plaintext form-control-sm form-control" value="{{ entity.statMax.0.average|number_format('2', ',', ' ') }}">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{#</section>#}

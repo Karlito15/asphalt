@@ -1,0 +1,54 @@
+{#<div{{ attributes }}>#}
+{#    <!-- component HTML -->#}
+{#</div>#}
+
+{% if conclusion is defined %}
+    {% set total = (entity - form) %}
+    <div class="input-group mb-2">{# input-group-sm #}
+        <input type="text" class="text-center fw-bolder form-control form-control-sm w-25" max="{{ entity }}" value="{{ form }}" autocomplete="off" />
+        <input type="text" class="text-center fw-bolder form-control form-control-sm w-25" max="{{ entity }}" value="{{ entity }}" autocomplete="off" />
+        <input type="text" class="text-center fw-bolder form-control form-control-sm w-25" value="{{ total }}" readonly />
+    </div>
+{% else %}
+    {% set class = form.vars.attr.class %}
+    {% set total = _self.needs(entity, form.vars.value)|u.toString %}
+
+    <div class="input-group mb-2">{# input-group-sm #}
+        {{ form_widget(form, {attr: {'max': entity}}) }}
+        <input type="text" class="{{ class }}" value="{{ entity }}" readonly="readonly">
+        <input type="text" class="{{ class }}" value="{{- total -}}" disabled="disabled">
+    </div>
+{% endif %}
+    {{ _self.resume(total) }}
+
+{# ### ### ### MACROS ### ### ### #}
+
+{% macro needs(valueMax, actualValue) %}
+    {%- if valueMax == 'Key' and actualValue == 'Key' -%}
+        Done
+    {%- elseif valueMax == 'Key' and actualValue != 'Key' -%}
+        None
+    {%- else -%}
+      {{- valueMax - actualValue -}}
+    {%- endif -%}
+{% endmacro %}
+
+{% macro resume(blueprint) %}
+    {% if blueprint == 'Done' or blueprint == 'None' %}
+        {% set result = 0 %}
+    {% else %}
+        {% set result = (blueprint / games.pack)|round(0, 'ceil') %}
+    {% endif %}
+
+    {% if result != 0 %}
+    <div class="input-group">{# input-group-sm #}
+        <input type="text" class="text-info text-center form-control form-control-sm w-50" tabindex="99" value="{{ (result * games.pack_price)|number_format }} {{ 'text.token'|trans }}">
+        <input type="text" class="text-success text-center form-control form-control-sm w-50" tabindex="99" value="{{ result }} {{ 'text.pack'|trans }}">
+    </div>
+    {% else %}
+    <div class="input-group">{# input-group-sm #}
+        <input type="text" class="form-control form-control-sm w-50" readonly="readonly">
+        <input type="text" class="form-control form-control-sm w-50" readonly="readonly">
+    </div>
+    {% endif %}
+{% endmacro %}

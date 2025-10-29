@@ -90,7 +90,7 @@ final class UpdateController extends AbstractController
         return $this->render('@App/front/contents/garage/update.html.twig', [
             'controller_name' => $car,
             'current_page'    => $request->attributes->get('_route'),
-            'container'       => 'container', // container-fluid
+            'container'       => 'container-fluid', // container-fluid
             'breadcrumb'      => ['level1' => $translator->trans('text.garage'), 'level2' => $translator->trans('text.update')],
             'links'           => self::getLinksPage(),
             'entity'          => $entity,

@@ -1,0 +1,39 @@
+{#<div{{ attributes }}>#}
+{#    <!-- component HTML -->#}
+{#</div>#}
+
+{% if form.vars.block_prefixes.1 == 'checkbox' %}
+   {% set bg = 'btn-danger' %}
+    <div>
+        <label for="{{ field_id(form) }}">{{ field_label(form) }}</label>
+    </div>
+    <div class="form-control">
+        <input
+            type="checkbox"
+            class="btn-check"
+            name="{{ field_name(form) }}"
+            id="{{ field_id(form) }}"
+            value="{{ field_value(form) }}"
+            placeholder="{{ field_label(form) }}"
+            autocomplete="off"
+        {% if form.vars.data == true %}
+            {% set bg = 'btn-success' %}
+            checked="checked"
+        {% endif %}
+        >
+        <label
+            class="btn {{ bg }} btn-sm w-100"
+            for="{{ field_id(form) }}"
+        >
+            {{ field_label(form) }}
+        </label>
+
+    </div>
+{% else %}
+<div class="form-floating">
+    {{ form_widget(form) }}
+    {{ form_label(form) }}
+</div>
+{{ form_help(form) }}
+{{ form_errors(form) }}
+{% endif %}

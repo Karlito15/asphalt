@@ -80,7 +80,7 @@ class GarageBlueprintType extends AbstractType
     {
         return [
             'autocomplete' => 'off',
-            'class'        => 'text-center fw-bolder m-0 p-0 form-control form-control-sm',
+            'class'        => 'text-center fw-bolder form-control form-control-sm',
             'max'          => 99,
             'min'          => 0,
         ];

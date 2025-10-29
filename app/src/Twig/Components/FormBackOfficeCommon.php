@@ -8,7 +8,7 @@ use Symfony\UX\TwigComponent\Attribute\PreMount;
 
 #[AsTwigComponent(
     name: 'FormBackOfficeCommon',
-    template: 'form-back-office-common.html.twig',
+    template: '@App/components/form-back-office-common.html.twig',
 )]
 final class FormBackOfficeCommon
 {

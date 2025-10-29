@@ -1,40 +1,49 @@
 
-<section class="{{ container|default('container') }} mb-2">
-    <div class="card">
-        <div class="card-header bg-dark-subtle py-1">
-            <h2 class="h6 text-center m-0">{{ 'text.garage'|trans|plural }}</h2>
+<section class="{{ container|default('container') }} mb-2 px-0">
+    <div class="row row-cols-5">
+        <div class="col-4">
+            <twig:FormGroup1Value form="{{ form.settingBrand }}" />
         </div>
-        <div class="card-body pt-0">
-            <div class="row g-3 align-items-center">
-                <div class="col-1">
-                    {{ form_label(form.settingClass) }}
-                    {{ form_widget(form.settingClass) }}
-                </div>
-                <div class="col-2">
-                    {{ form_label(form.settingBrand) }}
-                    {{ form_widget(form.settingBrand) }}
-                </div>
-                <div class="col">
-                    {{ form_label(form.model) }}
-                    {{ form_widget(form.model) }}
-                </div>
-                <div class="col-1">
-                    {{ form_label(form.stars) }}
-                    {{ form_widget(form.stars) }}
-                </div>
-                <div class="col-1">
-                    {{ form_label(form.gameUpdate) }}
-                    {{ form_widget(form.gameUpdate) }}
-                </div>
-                <div class="col-1">
-                    {{ form_label(form.level) }}
-                    {{ form_widget(form.level) }}
-                </div>
-                <div class="col-1">
-                    {{ form_label(form.epic) }}
-                    {{ form_widget(form.epic) }}
-                </div>
-            </div>
+        <div class="col-5">
+            <twig:FormGroup1Value form="{{ form.model }}" />
+        </div>
+        <div class="col-1">
+            <twig:FormGroup1Value form="{{ form.settingClass }}" />
+        </div>
+        <div class="col-1">
+            <twig:FormGroup1Value form="{{ form.stars }}" />
+        </div>
+        <div class="col-1">
+            <twig:FormGroup1Value form="{{ form.gameUpdate }}" />
+        </div>
+    </div>
+    <div class="row row-cols-9">
+        <div class="col-1">
+            <twig:FormGroup2Values form="{{ form.level }}" entity="{{ entity.settingLevel.level }}" />
+        </div>
+        <div class="col-1">
+            <twig:FormGroup2Values form="{{ form.epic }}" entity="{{ entity.settingLevel.epic }}" />
+        </div>
+        <div class="col-1">
+            <twig:FormGroup2Values form="{{ form.carOrder }}" entity="{{ entity.settingClass.carsNumber }}" />
+        </div>
+        <div class="col-1">
+            <twig:InputGroup2Values form="{{ entity.statOrder }}" entity="{{ entity.settingClass.carsNumber }}" label="{{ 'text.order.stat'|trans }}" />
+        </div>
+{#        <div class="col-1">#}
+{#            <twig:FormGroup1Value form="{{ form.unlocked }}" />#}
+{#        </div>#}
+{#        <div class="col-1">#}
+{#            <twig:FormGroup1Value form="{{ form.gold }}" />#}
+{#        </div>#}
+        <div class="col-3">
+            <twig:FormGroup1Value form="{{ form.settingBlueprint }}" />
+        </div>
+        <div class="col-2">
+            <twig:FormGroup1Value form="{{ form.settingLevel }}" />
+        </div>
+        <div class="col-3">
+            <twig:FormGroup1Value form="{{ form.settingUnitPrice }}" />
         </div>
     </div>
 </section>
