@@ -13,6 +13,7 @@ import './bootstrap.js';
  */
 
 // CSS
+console.info('CSS');
 import '../styles/app.css';
 import '../styles/fonts.css';
 import '../styles/scrollbar.css';
@@ -20,14 +21,14 @@ import '../styles/theme-karlito-web.css';
 import '../libraries/scroll-to-top-button/dist/jquery-backToTop.min.css';
 import '../libraries/fontawesome/6.7.2/css/all.min.css';
 
-console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
-
 /*
  * Bootstrap Table
  */
-// import './bs-table-garage.js';
-// import './bs-table-mission.js';
-// import './bs-table-race.js';
+// console.info('Bootstrap Table');
+// import './bs-table/garage.js';
+// import './bs-table/mission.js';
+// import './bs-table/race.js';
+
 
 /*
  * Sweet Alert
@@ -50,9 +51,11 @@ console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
 // customElements.define('app-notification', Flash);
 
 
-/* HTMX */
+/*
+ * HTMX
+ */
 import htmx from 'htmx.org';
-
-window.htmx = require('htmx.org');
+window.htmx = htmx;
 
 console.log('🎉🎉🎉');
+console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');

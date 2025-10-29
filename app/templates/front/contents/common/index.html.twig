@@ -1,3 +1,5 @@
+{% extends '@App/front/bases/full.html.twig' %}
+
 {% block content %}
 
 <div class="card bg-dark">
@@ -30,12 +32,12 @@
 
     </div>
     <div class="card-body">
-        <table class="{{ classes.table }}" id="table" data-buttons-toolbar=".table-toolbar">{# id="GarageTable" data-sort-class="table-secondary"#}
+        {# id="GarageTable" data-sort-class="table-secondary"#}
+{#         data-buttons-toolbar=".table-toolbar"#}
+        <table class="{{ classes.table }}" id="table">
             {% block table %}{% endblock %}
         </table>
     </div>
 </div>
 
 {% endblock %}
-
-{% extends '@App/front/bases/full.html.twig' %}

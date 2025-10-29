@@ -29,13 +29,16 @@
     {%- elseif valueMax == 'Key' and actualValue != 'Key' -%}
         None
     {%- else -%}
-      {{- valueMax - actualValue -}}
+        {% if actualValue == '' %}
+        {% set actualValue = 0 %}
+        {% endif %}
+        {{- valueMax - actualValue -}}
     {%- endif -%}
 {% endmacro %}
 
 {% macro resume(blueprint) %}
+    {% set result = 0 %}
     {% if blueprint == 'Done' or blueprint == 'None' %}
-        {% set result = 0 %}
     {% else %}
         {% set result = (blueprint / games.pack)|round(0, 'ceil') %}
     {% endif %}

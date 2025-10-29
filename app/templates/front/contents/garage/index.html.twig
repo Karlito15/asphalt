@@ -1,3 +1,5 @@
+{% extends '@App/front/contents/common/index.html.twig' %}
+
 {% block table %}
     <tbody>
     {% for item in entities %}
@@ -36,6 +38,17 @@
     </tfoot>
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.25.0/dist/bootstrap-table.min.css">
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.25.0/dist/bootstrap-table.min.js"></script>
+    {% include '@App/front/contents/garage/_script-datatable-garage.html.twig' %}
+{% endblock %}
+
 {% macro legend() %}
     <tr class="sticky-top">
         <th class="col-xxl-auto text-center">&nbsp;</th>
@@ -58,5 +71,3 @@
         text-danger
     {% endif %}
 {% endmacro %}
-
-{% extends '@App/front/contents/common/index.html.twig' %}

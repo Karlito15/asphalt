@@ -1,0 +1,41 @@
+export const MissionColumns = [{
+    field: 'mode',
+    searchable: true,
+    sortable: false,
+    title: 'Mode'
+}, {
+    field: 'chapter',
+    searchable: false,
+    sortable: true,
+    title: 'Chapitre'
+}, {
+    field: 'order',
+    searchable: false,
+    sortable: true,
+    title: 'Ordre'
+}, {
+    field: 'season',
+    searchable: true,
+    sortable: true,
+    title: 'Saison'
+}, {
+    field: 'english',
+    searchable: true,
+    sortable: true,
+    title: 'Anglais'
+}, {
+    field: 'french',
+    searchable: true,
+    sortable: true,
+    title: 'Français'
+}, {
+    field: 'time',
+    searchable: true,
+    sortable: true,
+    title: 'Temps'
+}, {
+    field: 'finished',
+    searchable: false,
+    sortable: false,
+    title: 'Fini'
+}];
