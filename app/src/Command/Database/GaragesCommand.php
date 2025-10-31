@@ -4,16 +4,18 @@ declare(strict_types=1);
 
 namespace App\Command\Database;
 
-use App\Service\Database\Garage\GarageAppService;
-use App\Service\Database\Garage\GarageBlueprintService;
-use App\Service\Database\Garage\GarageGauntletService;
-use App\Service\Database\Garage\GarageRankService;
-use App\Service\Database\Garage\GarageStatMaxService;
-use App\Service\Database\Garage\GarageStatMinService;
-use App\Service\Database\Garage\GarageUpgradeService;
-use App\Service\Database\Garage\SettingBlueprintService;
-use App\Service\Database\Garage\SettingLevelService;
-use App\Service\Database\Garage\SettingUnitPriceService;
+use App\Service\Command\Database\Garage\GarageAppService;
+use App\Service\Command\Database\Garage\GarageBlueprintService;
+use App\Service\Command\Database\Garage\GarageGauntletService;
+use App\Service\Command\Database\Garage\GarageRankService;
+use App\Service\Command\Database\Garage\GarageStatActualService;
+use App\Service\Command\Database\Garage\GarageStatMaxService;
+use App\Service\Command\Database\Garage\GarageStatMinService;
+use App\Service\Command\Database\Garage\GarageStatusService;
+use App\Service\Command\Database\Garage\GarageUpgradeService;
+use App\Service\Command\Database\Garage\SettingBlueprintService;
+use App\Service\Command\Database\Garage\SettingLevelService;
+use App\Service\Command\Database\Garage\SettingUnitPriceService;
 use App\Trait\Command\ConfigureTrait;
 use App\Trait\Command\InitializeTrait;
 use Doctrine\ORM\EntityManagerInterface;
@@ -38,7 +40,7 @@ class GaragesCommand extends Command
     use ConfigureTrait;
     use InitializeTrait;
 
-    protected static string $title = '::::: XXX :::::';
+    protected static string $title = '::::: Garages Datas :::::';
 
     public function __construct(
         private readonly ContainerInterface      $container,
@@ -47,8 +49,10 @@ class GaragesCommand extends Command
         private readonly GarageGauntletService   $gauntlet,
         private readonly GarageBlueprintService  $blueprint,
         private readonly GarageRankService       $rank,
+        private readonly GarageStatActualService $statActual,
         private readonly GarageStatMaxService    $statMax,
         private readonly GarageStatMinService    $statMin,
+        private readonly GarageStatusService     $status,
         private readonly GarageUpgradeService    $upgrade,
         private readonly SettingBlueprintService $settingBlueprint,
         private readonly SettingLevelService     $settingLevel,
@@ -93,8 +97,10 @@ class GaragesCommand extends Command
             $this->blueprint->import($io);
             $this->gauntlet->import($io);
             $this->rank->import($io);
+            $this->statActual->import($io);
             $this->statMax->import($io);
             $this->statMin->import($io);
+            $this->status->import($io);
             $this->upgrade->import($io);
             $io->info('Import GARAGE terminé');
             $result = true;
@@ -103,8 +109,10 @@ class GaragesCommand extends Command
             $this->settingLevel->export($io);
             $this->settingBlueprint->export($io);
             $this->upgrade->export($io);
+            $this->status->export($io);
             $this->statMin->export($io);
             $this->statMax->export($io);
+            $this->statActual->export($io);
             $this->rank->export($io);
             $this->gauntlet->export($io);
             $this->blueprint->export($io);

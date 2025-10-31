@@ -23,6 +23,6 @@ twig:
         images:                 '%images%'
 when@test:
     twig:
-        strict_variables: true
+        strict_variables:       true
 
 ```

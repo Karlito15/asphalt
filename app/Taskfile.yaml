@@ -200,18 +200,18 @@ tasks:
             - task launch
         ignore_error: true
         platforms: [windows/amd64]
-    prod:
-        desc: "Clear Cache, Assets"
-        cmds:
-            - "{{.SYMFONY_CONSOLE}} cache:clear --env prod"
-            - "{{.SYMFONY_CONSOLE}} assets:install public --env=prod"
-            - "{{.SYMFONY_CONSOLE}} importmap:install"
-            - "{{.SYMFONY_CONSOLE}} importmap:update"
-            - "{{.SYMFONY_CONSOLE}} sass:build"
-            - "{{.SYMFONY_CONSOLE}} asset-map:compile --env=prod"
-            - "{{.SYMFONY_CONSOLE}} cache:pool:clear --all"
+#    prod:
+#        desc: "Clear Cache, Assets"
+#        cmds:
+#            - "{{.SYMFONY_CONSOLE}} cache:clear --env prod"
+#            - "{{.SYMFONY_CONSOLE}} assets:install public --env=prod"
+#            - "{{.SYMFONY_CONSOLE}} importmap:install"
+#            - "{{.SYMFONY_CONSOLE}} importmap:update"
+#            - "{{.SYMFONY_CONSOLE}} sass:build"
+#            - "{{.SYMFONY_CONSOLE}} asset-map:compile --env=prod"
+#            - "{{.SYMFONY_CONSOLE}} cache:pool:clear --all"
 #            - "{{.SYMFONY_CONSOLE}} asphalt:database:migration export"
-            - "rm -rf public/cache/"
+#            - "rm -rf public/cache/"
 #            - "{{.COMPOSER}} run auto-scripts"
-        ignore_error: true
-        platforms: [windows/amd64]
+#        ignore_error: true
+#        platforms: [windows/amd64]

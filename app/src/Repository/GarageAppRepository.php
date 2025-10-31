@@ -19,6 +19,34 @@ class GarageAppRepository extends ServiceEntityRepository
     }
 
     /**
+     * @param GarageApp $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function save(GarageApp $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
+     * @param GarageApp $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function remove(GarageApp $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
      * GarageAppService
      *
      * @return array
@@ -111,41 +139,13 @@ class GarageAppRepository extends ServiceEntityRepository
         $qb = $this->queryGarage()
             // WHERE
             ->andWhere('settingClass.value = :class')->setParameter('class', $letter)
-            ->andWhere('g.unlocked = 1')
-            ->andWhere('g.gold = 0')
+            ->andWhere('status.unblock = 1')
+            ->andWhere('status.gold = 0')
             // ORDER
             ->addOrderBy('g.carOrder', 'ASC')
         ;
 
         return $qb->getQuery()->getArrayResult();
-    }
-
-    /**
-     * @param GarageApp $entity
-     * @param bool $flush
-     * @return void
-     */
-    public function save(GarageApp $entity, bool $flush = false): void
-    {
-        $this->getEntityManager()->persist($entity);
-
-        if ($flush) {
-            $this->getEntityManager()->flush();
-        }
-    }
-
-    /**
-     * @param GarageApp $entity
-     * @param bool $flush
-     * @return void
-     */
-    public function remove(GarageApp $entity, bool $flush = false): void
-    {
-        $this->getEntityManager()->remove($entity);
-
-        if ($flush) {
-            $this->getEntityManager()->flush();
-        }
     }
 
     // START DASHBOARD
@@ -172,7 +172,7 @@ class GarageAppRepository extends ServiceEntityRepository
     public function getUnlockedCarsByClass(string $class, bool $value): array
     {
         $qb = $this->querySettingClass($class);
-        $qb->andWhere('g.unlocked = :value')->setParameter('value', $value);
+//        $qb->andWhere('status.unblock = :value')->setParameter('value', $value);
 
         return $qb->getQuery()->getResult();
     }
@@ -185,7 +185,7 @@ class GarageAppRepository extends ServiceEntityRepository
     public function getGoldedCarsByClass(string $class, bool $value): array
     {
         $qb = $this->querySettingClass($class);
-        $qb->andWhere('g.gold = :value')->setParameter('value', $value);
+//        $qb->andWhere('status.gold = :value')->setParameter('value', $value);
 
         return $qb->getQuery()->getResult();
     }
@@ -212,8 +212,6 @@ class GarageAppRepository extends ServiceEntityRepository
                 'StatOrder' => $garage->getStatOrder(),
                 'Level' => $garage->getLevel(),
                 'Epic' => $garage->getEpic(),
-                'Locked' => ($garage->isUnlocked()) ? 0 : 1,
-                'Gold' => ($garage->isGold()) ? 1 : 0,
                 'SettingClassValue' => $garage->getSettingClass()->getValue(),
             ];
         }
@@ -222,6 +220,7 @@ class GarageAppRepository extends ServiceEntityRepository
     }
 
     // SEARCH
+
     /**
      * @param GarageDTO|null $search
      * @return GarageApp[]
@@ -258,16 +257,16 @@ class GarageAppRepository extends ServiceEntityRepository
         if ($search->getClassLetter()) {
             $qb = $qb->andWhere('settingClass.value = :letter')->setParameter('letter', $search->getClassLetter());
         }
-        if ($search->isLocked()) {
-            $qb = $qb->andWhere('g.unlocked = 1');
-        } elseif ($search->isLocked() === false) {
-            $qb = $qb->andWhere('g.unlocked = 0');
-        }
-        if ($search->isGold()) {
-            $qb = $qb->andWhere('g.gold = 1');
-        } elseif ($search->isGold() === false) {
-            $qb = $qb->andWhere('g.gold = 0');
-        }
+//        if ($search->isLocked()) {
+//            $qb = $qb->andWhere('status.unblock = 1');
+//        } elseif ($search->isLocked() === false) {
+//            $qb = $qb->andWhere('status.unblock = 0');
+//        }
+//        if ($search->isGold()) {
+//            $qb = $qb->andWhere('status.gold = 1');
+//        } elseif ($search->isGold() === false) {
+//            $qb = $qb->andWhere('status.gold = 0');
+//        }
 
         return $qb->getQuery()->getArrayResult();
     }
@@ -310,8 +309,6 @@ class GarageAppRepository extends ServiceEntityRepository
             ->addSelect('g.level')
             ->addSelect('g.epic')
             ->addSelect('g.model')
-            ->addSelect('g.unlocked')
-            ->addSelect('g.gold')
             ->addSelect('g.slug')
             ->addSelect('g.updatedAt')
             // Join Garage Blueprint
@@ -323,6 +320,9 @@ class GarageAppRepository extends ServiceEntityRepository
             ->addSelect('blueprint.star5 AS garage_star5')
             ->addSelect('blueprint.star6 AS garage_star6')
             ->addSelect('blueprint.total AS garage_total')
+            // Join Garage Gauntlet
+            ->leftJoin('g.gauntlet', 'gauntlet')
+            ->addSelect('gauntlet.division AS gauntlet_division')
             // Join Garage Rank
             ->leftJoin('g.rank', 'rank')
             ->addSelect('rank.star0 AS rank_star0')
@@ -332,6 +332,13 @@ class GarageAppRepository extends ServiceEntityRepository
             ->addSelect('rank.star4 AS rank_star4')
             ->addSelect('rank.star5 AS rank_star5')
             ->addSelect('rank.star6 AS rank_star6')
+            // Join Garage Stat Actual
+            ->leftJoin('g.statActual', 'statActual')
+            ->addSelect('statActual.speed AS actual_speed')
+            ->addSelect('statActual.acceleration AS actual_acceleration')
+            ->addSelect('statActual.handling AS actual_handling')
+            ->addSelect('statActual.nitro AS actual_nitro')
+            ->addSelect('statActual.average AS actual_average')
             // Join Garage Stat Max
             ->leftJoin('g.statMax', 'statMax')
             ->addSelect('statMax.speed AS max_speed')
@@ -346,6 +353,11 @@ class GarageAppRepository extends ServiceEntityRepository
             ->addSelect('statMin.handling AS min_handling')
             ->addSelect('statMin.nitro AS min_nitro')
             ->addSelect('statMin.average AS min_average')
+            // Join Garage Status
+            ->leftJoin('g.status', 'status')
+            ->addSelect('status.unblock AS status_unblock')
+            ->addSelect('status.gold AS status_gold')
+            ->addSelect('status.toUpgradeLevel AS status_to_upgrade_level')
             // Join Garage Upgrade
             ->leftJoin('g.upgrade', 'upgrade')
             ->addSelect('upgrade.speed AS upgrade_speed')

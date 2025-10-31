@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Command\Database;
 
-use App\Service\Database\Setting\BlueprintService;
-use App\Service\Database\Setting\BrandService;
-use App\Service\Database\Setting\ClassService;
-use App\Service\Database\Setting\LevelService;
-use App\Service\Database\Setting\TagService;
-use App\Service\Database\Setting\UnitPriceService;
+use App\Service\Command\Database\Setting\BlueprintService;
+use App\Service\Command\Database\Setting\BrandService;
+use App\Service\Command\Database\Setting\ClassService;
+use App\Service\Command\Database\Setting\LevelService;
+use App\Service\Command\Database\Setting\TagService;
+use App\Service\Command\Database\Setting\UnitPriceService;
 use App\Trait\Command\ConfigureTrait;
 use App\Trait\Command\InitializeTrait;
 use Doctrine\ORM\EntityManagerInterface;
@@ -33,7 +33,7 @@ class SettingsCommand extends Command
     use ConfigureTrait;
     use InitializeTrait;
 
-    protected static string $title = '::::: XXX :::::';
+    protected static string $title = '::::: Settings Datas :::::';
 
     public function __construct(
         private readonly ContainerInterface     $container,
@@ -58,6 +58,11 @@ class SettingsCommand extends Command
         $this->addArgument('choice', InputArgument::OPTIONAL, 'Choose Export or Import');
     }
 
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return int
+     */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         // Init variables
@@ -65,6 +70,7 @@ class SettingsCommand extends Command
         $choice = $input->getArgument('choice');
 
         // Start
+        $io->title(self::$title);
         $io->section($this->getDescription());
 
         // Question

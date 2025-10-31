@@ -19,6 +19,6 @@ trait ConfigureTrait
         $this->setAliases($this->getAliases());
         $this->setHidden($this->isHidden());
         $this->setProcessTitle(self::$title);
-        $this->setHelp($this->help);
+        // $this->setHelp($this->help);
     }
 }

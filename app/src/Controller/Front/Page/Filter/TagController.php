@@ -25,7 +25,7 @@ final class TagController extends AbstractController
     public function toUnlock(Request $request): Response
     {
         // Variables
-        $title  = $this->translator->trans('text.to.unlock');
+        $title  = $this->translator->trans('text.to.unblock');
         $letter = strtoupper($request->attributes->get('letter'));
         $matchLetter = match ($letter) {
             'A' => true,

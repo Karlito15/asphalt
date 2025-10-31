@@ -19,16 +19,16 @@ stof_doctrine_extensions:
             uploadable:             false
             reference_integrity:    false
     class:
-        translatable: Gedmo\Translatable\TranslatableListener
+#        translatable: Gedmo\Translatable\TranslatableListener
         timestampable: Gedmo\Timestampable\TimestampableListener
-        blameable: Gedmo\Blameable\BlameableListener
+#        blameable: Gedmo\Blameable\BlameableListener
         sluggable: Gedmo\Sluggable\SluggableListener
-        tree: Gedmo\Tree\TreeListener
+#        tree: Gedmo\Tree\TreeListener
         loggable: Gedmo\Loggable\LoggableListener
-        sortable: Gedmo\Sortable\SortableListener
+#        sortable: Gedmo\Sortable\SortableListener
         softdeleteable: Gedmo\SoftDeleteable\SoftDeleteableListener
-        uploadable: Gedmo\Uploadable\UploadableListener
-        reference_integrity: Gedmo\ReferenceIntegrity\ReferenceIntegrityListener
+#        uploadable: Gedmo\Uploadable\UploadableListener
+#        reference_integrity: Gedmo\ReferenceIntegrity\ReferenceIntegrityListener
 #    uploadable:
 #        default_file_path:           "%kernel.project_dir%/public/uploads"
 #        mime_type_guesser_class:     Stof\DoctrineExtensionsBundle\Uploadable\MimeTypeGuesserAdapter

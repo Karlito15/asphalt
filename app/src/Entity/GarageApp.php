@@ -101,12 +101,6 @@ class GarageApp
     #[Gedmo\Versioned]
     private string $model;
 
-    #[ORM\Column(nullable: false, options: ['default' => false])]
-    private bool $unlocked = false;
-
-    #[ORM\Column(nullable: false, options: ['default' => false])]
-    private bool $gold = false;
-
     #[ORM\Column(type: Types::STRING, length: 255, unique: true, nullable: false)]
     #[Assert\Length(min: 1, max: 255)]
     #[Gedmo\Versioned]
@@ -121,11 +115,17 @@ class GarageApp
     #[ORM\OneToMany(targetEntity: GarageRank::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
     private Collection $rank;
 
+    #[ORM\OneToMany(targetEntity: GarageStatActual::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    private Collection $statActual;
+
     #[ORM\OneToMany(targetEntity: GarageStatMax::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
     private Collection $statMax;
 
     #[ORM\OneToMany(targetEntity: GarageStatMin::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
     private Collection $statMin;
+
+    #[ORM\OneToMany(targetEntity: GarageStatus::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    private Collection $status;
 
     #[ORM\OneToMany(targetEntity: GarageUpgrade::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
     private Collection $upgrade;
@@ -158,8 +158,10 @@ class GarageApp
         $this->blueprint    = new ArrayCollection();
         $this->gauntlet     = new ArrayCollection();
         $this->rank         = new ArrayCollection();
+        $this->statActual   = new ArrayCollection();
         $this->statMax      = new ArrayCollection();
         $this->statMin      = new ArrayCollection();
+        $this->status       = new ArrayCollection();
         $this->upgrade      = new ArrayCollection();
         $this->settingTag   = new ArrayCollection();
     }
@@ -258,30 +260,6 @@ class GarageApp
         return $this;
     }
 
-    public function isUnlocked(): ?bool
-    {
-        return $this->unlocked;
-    }
-
-    public function setUnlocked(bool $unlocked): static
-    {
-        $this->unlocked = $unlocked;
-
-        return $this;
-    }
-
-    public function isGold(): ?bool
-    {
-        return $this->gold;
-    }
-
-    public function setGold(bool $gold): static
-    {
-        $this->gold = $gold;
-
-        return $this;
-    }
-
     public function getSlug(): ?string
     {
         return $this->slug;
@@ -371,6 +349,66 @@ class GarageApp
             // set the owning side to null (unless already changed)
             if ($rank->getGarage() === $this) {
                 $rank->setGarage(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, GarageStatus>
+     */
+    public function getStatus(): Collection
+    {
+        return $this->status;
+    }
+
+    public function addStatus(GarageStatus $status): static
+    {
+        if (!$this->status->contains($status)) {
+            $this->status->add($status);
+            $status->setGarage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStatus(GarageStatus $status): static
+    {
+        if ($this->status->removeElement($status)) {
+            // set the owning side to null (unless already changed)
+            if ($status->getGarage() === $this) {
+                $status->setGarage(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, GarageStatActual>
+     */
+    public function getStatActual(): Collection
+    {
+        return $this->statActual;
+    }
+
+    public function addStatActual(GarageStatActual $statActual): static
+    {
+        if (!$this->statActual->contains($statActual)) {
+            $this->statActual->add($statActual);
+            $statActual->setGarage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStatActual(GarageStatActual $statActual): static
+    {
+        if ($this->statActual->removeElement($statActual)) {
+            // set the owning side to null (unless already changed)
+            if ($statActual->getGarage() === $this) {
+                $statActual->setGarage(null);
             }
         }
 

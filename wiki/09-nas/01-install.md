@@ -18,14 +18,30 @@ git clone https://github.com/Karlito15/asphalt.git Asphalt
 ``` shell
 sudo chmod -R a+rw documents/
 ```
+OR
+``` shell
+sudo chmod -R 0777 documents/
+```
 ``` shell
 sudo chmod -R a+rw vars/
 ```
+OR
 ``` shell
-sudo chmod -R a+rw www/vendor/
+sudo chmod -R 0777 vars/
 ```
 ``` shell
-sudo chmod -R a+rw www/public/
+sudo chmod -R a+rw app/vendor/
+```
+OR
+``` shell
+sudo chmod -R 0777 app/vendor/
+```
+``` shell
+sudo chmod -R a+rw app/public/
+```
+OR
+``` shell
+sudo chmod -R 0777 app/public/
 ```
 
 ### .env
@@ -36,6 +52,9 @@ php82 /volume3/web/WWW-CDN/composer.phar dump-env prod
 ### Composer
 ``` shell
 php82 /volume3/web/WWW-CDN/composer.phar install --no-dev --no-scripts --optimize-autoloader
+```
+``` shell
+php82 /volume3/web/WWW-CDN/composer.phar update --no-dev --no-scripts --optimize-autoloader
 ```
 
 ### Database
@@ -71,4 +90,7 @@ php82 bin/console importmap:install
 ```
 ``` shell
 php82 bin/console asset-map:compile
+```
+``` shell
+php82 bin/console asphalt:database:migration export
 ```

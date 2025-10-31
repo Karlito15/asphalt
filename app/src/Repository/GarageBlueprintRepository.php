@@ -3,7 +3,6 @@
 namespace App\Repository;
 
 use App\Entity\GarageBlueprint;
-use App\Trait\Repository\SitemapTrait;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -12,8 +11,6 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class GarageBlueprintRepository extends ServiceEntityRepository
 {
-    use SitemapTrait;
-
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, GarageBlueprint::class);

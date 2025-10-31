@@ -2,20 +2,20 @@
 
 {% set background, text = '', '' %}
 
-{% if entity.unlocked == false %}
-    {% set background = 'bg-danger-subtle' %}
-    {% set text = 'text-danger' %}
-{% endif %}
+{#{% if entity.unlocked == false %}#}
+{#    {% set background = 'bg-danger-subtle' %}#}
+{#    {% set text = 'text-danger' %}#}
+{#{% endif %}#}
 
-{% if entity.unlocked == true %}
-    {% set background = 'bg-success-subtle' %}
-    {% set text = 'text-success' %}
-{% endif %}
+{#{% if entity.unlocked == true %}#}
+{#    {% set background = 'bg-success-subtle' %}#}
+{#    {% set text = 'text-success' %}#}
+{#{% endif %}#}
 
-{% if entity.unlocked == true and entity.gold == true %}
-    {% set background = 'bg-warning-subtle' %}
-    {% set text = 'text-warning' %}
-{% endif %}
+{#{% if entity.unlocked == true and entity.gold == true %}#}
+{#    {% set background = 'bg-warning-subtle' %}#}
+{#    {% set text = 'text-warning' %}#}
+{#{% endif %}#}
 
 {#{% if entity.unlocked is true %}#}
 {#    {% set status = 'unlock' %}#}

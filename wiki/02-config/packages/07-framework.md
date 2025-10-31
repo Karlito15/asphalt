@@ -1,6 +1,17 @@
 ``` yaml
 # see https://symfony.com/doc/current/reference/configuration/framework.html
 framework:
+    # HTTP cache configuration
+    http_cache:
+        enabled: false
+        debug: '%kernel.debug%'
+        trace-level: full
+#        trace-header: X-Symfony-Cache
+
+    # Set true to enable support for the '_method' request parameter to determine the intended HTTP method on POST requests.
+    # Note: When using the HttpCache, you need to call the method in your front controller instead.
+    http_method_override: true
+
     ide: phpstorm
     secret: '%env(APP_SECRET)%'
 

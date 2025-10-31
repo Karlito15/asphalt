@@ -68,6 +68,11 @@ class GarageGauntlet
     #[Assert\Range(min: 0, max: 9)]
     private ?int $finalMark = null;
 
+    #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
+    #[Assert\PositiveOrZero]
+    #[Assert\Range(min: 0, max: 9)]
+    private ?int $division = null;
+
     #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'gauntlet')]
     #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
     private GarageApp $garage;
@@ -157,6 +162,18 @@ class GarageGauntlet
     public function setFinalMark(?int $finalMark): static
     {
         $this->finalMark = $finalMark;
+
+        return $this;
+    }
+
+    public function getDivision(): ?int
+    {
+        return $this->division;
+    }
+
+    public function setDivision(?int $division): static
+    {
+        $this->division = $division;
 
         return $this;
     }

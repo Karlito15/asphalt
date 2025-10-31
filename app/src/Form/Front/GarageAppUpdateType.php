@@ -14,7 +14,6 @@ use App\Entity\SettingUnitPrice;
 use App\Trait\Form\FormTrait;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -108,20 +107,20 @@ class GarageAppUpdateType extends AbstractType
                 'required'      => true,
                 'trim'          => true,
             ])
-            ->add('unlocked', CheckboxType::class, [
-                'attr'          => [
-                    'class' => 'btn-check'
-                ],
-                'label'         => 'form.unlocked',
-                'required'      => false,
-            ])
-            ->add('gold', CheckboxType::class, [
-                'attr'          => [
-                    'class' => 'btn-check'
-                ],
-                'label'         => 'form.gold',
-                'required'      => false,
-            ])
+//            ->add('unlocked', CheckboxType::class, [
+//                'attr'          => [
+//                    'class' => 'btn-check'
+//                ],
+//                'label'         => 'form.unlocked',
+//                'required'      => false,
+//            ])
+//            ->add('gold', CheckboxType::class, [
+//                'attr'          => [
+//                    'class' => 'btn-check'
+//                ],
+//                'label'         => 'form.gold',
+//                'required'      => false,
+//            ])
 
             // Settings
             ->add('settingBlueprint', EntityType::class, [

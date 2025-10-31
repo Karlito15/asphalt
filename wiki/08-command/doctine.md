@@ -21,11 +21,19 @@ php bin/console doctrine:mapping:describe GarageRank
 ```
 
 ``` shell
+php bin/console doctrine:mapping:describe GarageStatActual
+```
+
+``` shell
 php bin/console doctrine:mapping:describe GarageStatMax
 ```
 
 ``` shell
 php bin/console doctrine:mapping:describe GarageStatMin
+```
+
+``` shell
+php bin/console doctrine:mapping:describe GarageStatus
 ```
 
 ``` shell
@@ -95,4 +103,3 @@ php bin/console doctrine:mapping:describe SettingTag
 ``` shell
 php bin/console doctrine:mapping:describe SettingUnitPrice
 ```
-

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Command\Database;
 
-use App\Service\Database\InventoryService;
+use App\Service\Command\Database\InventoryService;
 use App\Trait\Command\ConfigureTrait;
 use App\Trait\Command\InitializeTrait;
 use Doctrine\ORM\EntityManagerInterface;
@@ -28,7 +28,7 @@ class InventoriesCommand extends Command
     use ConfigureTrait;
     use InitializeTrait;
 
-    protected static string $title = '::::: XXX :::::';
+    protected static string $title = '::::: Inventories Datas :::::';
 
     public function __construct(
         private readonly ContainerInterface     $container,
@@ -48,6 +48,11 @@ class InventoriesCommand extends Command
         $this->addArgument('choice', InputArgument::OPTIONAL, 'Choose Export or Import');
     }
 
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return int
+     */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         // Init variables
@@ -55,6 +60,7 @@ class InventoriesCommand extends Command
         $choice = $input->getArgument('choice');
 
         // Start
+        $io->title(self::$title);
         $io->section($this->getDescription());
 
         // Question

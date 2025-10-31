@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Command\Database;
 
-use App\Service\Database\Mission\AppService;
-use App\Service\Database\Mission\TaskService;
-use App\Service\Database\Mission\TypeService;
+use App\Service\Command\Database\Mission\AppService;
+use App\Service\Command\Database\Mission\TaskService;
+use App\Service\Command\Database\Mission\TypeService;
 use App\Trait\Command\ConfigureTrait;
 use App\Trait\Command\InitializeTrait;
 use Doctrine\ORM\EntityManagerInterface;
@@ -30,7 +30,7 @@ class MissionsCommand extends Command
     use ConfigureTrait;
     use InitializeTrait;
 
-    protected static string $title = '::::: XXX :::::';
+    protected static string $title = '::::: Missions Datas :::::';
 
     public function __construct(
         private readonly ContainerInterface     $container,
@@ -52,6 +52,11 @@ class MissionsCommand extends Command
         $this->addArgument('choice', InputArgument::OPTIONAL, 'Choose Export or Import');
     }
 
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return int
+     */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         // Init variables
@@ -59,6 +64,7 @@ class MissionsCommand extends Command
         $choice = $input->getArgument('choice');
 
         // Start
+        $io->title(self::$title);
         $io->section($this->getDescription());
 
         // Question

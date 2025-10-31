@@ -3,29 +3,29 @@ symfonycasts_sass:
     # Path to your Sass root file
     root_sass:
         # Default:
-        - '%kernel.project_dir%/assets/styles/app.scss'
+        - '%kernel.project_dir%/assets/styles/bootstrap/5.3.8/bootstrap.scss'
 
 #    # The Sass binary to use
-    binary:               null
+    binary: null
     sass_options:
 #
 #        # The style of the generated CSS: compressed or expanded.
-#        style:                expanded # One of "compressed"; "expanded"
+        style:                expanded # One of "compressed"; "expanded"
 #
 #        # Whether to include the charset declaration in the generated Sass.
-#        charset:              true
+        charset:              true
 #
 #        # Emit a CSS file when an error occurs.
-#        error_css:            true
+        error_css:            true
 #
 #        # Whether to generate source maps.
-#        source_map:           true
+        source_map:           true
 #
 #        # Embed source file contents in source maps.
 #        embed_sources:        ~
 #
 #        # Embed source map contents in CSS.
-        embed_source_map:     '%kernel.debug%'
+        embed_source_map: '%kernel.debug%'
 #
 #        # Additional load paths
 #        load_path:            []
@@ -41,5 +41,4 @@ symfonycasts_sass:
 #
 #        # Print full Dart stack traces for exceptions.
 #        trace:                ~
-#    embed_sourcemap:      null # Deprecated (Since symfonycast/sass-bundle 0.4: Option "embed_sourcemap" at "symfonycasts_sass" is deprecated. Use "sass_options.embed_source_map" instead".)
 ```

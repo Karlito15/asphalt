@@ -29,7 +29,7 @@ trait GarageAppTrait
     }
 
     /**
-     * Cré le slug
+     * Crée le slug
      * Order : 1
      *
      * @param PrePersistEventArgs $args
@@ -47,7 +47,6 @@ trait GarageAppTrait
     }
 
     /**
-     * Met à jour le slug si le model change
      * Order : 2
      *
      * @param PostPersistEventArgs $args
@@ -63,6 +62,7 @@ trait GarageAppTrait
     }
 
     /**
+     * Met à jour le slug si le model change
      * Order : 3
      *
      * @param PreUpdateEventArgs $args

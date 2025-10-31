@@ -3,7 +3,6 @@
 namespace App\Repository;
 
 use App\Entity\GarageGauntlet;
-use App\Trait\Repository\SitemapTrait;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -12,12 +11,12 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class GarageGauntletRepository extends ServiceEntityRepository
 {
-    use SitemapTrait;
-
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, GarageGauntlet::class);
     }
+
+    // EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -36,6 +35,7 @@ class GarageGauntletRepository extends ServiceEntityRepository
                 'CalculateMark' => $garage->getCalculateMark(),
                 'TempMark'      => $garage->getTempMark(),
                 'FinalMark'     => $garage->getFinalMark(),
+                'Division'      => $garage->getDivision(),
                 'Brand'         => $garage->getGarage()->getSettingBrand()->getName(),
                 'Model'         => $garage->getGarage()->getModel(),
             ];

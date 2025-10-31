@@ -1,7 +1,6 @@
 # parameters.yaml
 
 ``` yaml
-parameters:
     metas:
         title:              'Asphalt Legends Unite'
         author:             'Giancarlo PALUMBO'
@@ -9,9 +8,11 @@ parameters:
         description:        ~
         generator:          ~
     classes:
-        table-index:        'table table-bordered table-striped text-light'
-        classes.table:          'btn btn-outline-info border border-info rounded-right rounded-4 py-0'
-        input:              'form-control form-control-sm bg-transparent text-center fw-bolder'
+        table:              'table table-bordered table-striped text-light'
+        td:                 'my-0 py-0 align-middle'
+        btn:                'btn btn-sm btn-outline-info rounded-3 py-1 m-0'
+        input:              'text-center fw-bolder form-control-sm form-control'
+#        input:              'text-center fw-bolder form-control-plaintext form-control-sm'
     games:
         pack:               6
         pack_price:         900
@@ -20,22 +21,23 @@ parameters:
 when@dev:
     parameters:
         cache_lifetime:
-            dashboards:         600 # 10 min
-            garages:            600 # 10 min
-            missions:           600 # 10 min
-            races:              600 # 10 min
-            sitemaps:           600 # 10 min
+            dashboards:     2  # 10 min
+            garages:        600  # 10 min
+            missions:       600  # 10 min
+            races:          600  # 10 min
+            sitemaps:       600  # 10 min
+            statistics:     3600 # 60 min
         images:
-            logo:          'images/logo-yellow.png'
+            logo:           'images/logo-green.png'
 when@prod:
     parameters:
         cache_lifetime:
-            dashboards:         3600    # (60 * 60 = 1 hour)
-            garages:            3600    # (60 * 60 = 1 hour)
-            missions:           3600    # (60 * 60 = 1 hour)
-            races:              2678400 # (60 * 60 * 24 * 31 = 1 month)
-            sitemaps:           2678400 # (60 * 60 * 24 * 31 = 1 month)
+            dashboards:     3600    # (60 * 60 = 1 hour)
+            garages:        3600    # (60 * 60 = 1 hour)
+            missions:       3600    # (60 * 60 = 1 hour)
+            races:          2678400 # (60 * 60 * 24 * 31 = 1 month)
+            sitemaps:       2678400 # (60 * 60 * 24 * 31 = 1 month)
+            statistics:     2678400 # (60 * 60 * 24 * 31 = 1 month)
         images:
-            logo:          'images/logo-white.png'
-
+            logo:           'images/logo-white.png'
 ```

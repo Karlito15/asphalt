@@ -1,14 +1,58 @@
 # .env
 
 
-### symfony/framework-bundle
-``` text
-```
+# In all environments, the following files are loaded if they exist,
+# the latter taking precedence over the former:
+#
+#  * .env                contains default values for the environment variables needed by the app
+#  * .env.local          uncommitted file with local overrides
+#  * .env.$APP_ENV       committed environment-specific defaults
+#  * .env.$APP_ENV.local uncommitted environment-specific overrides
+#
+# Real environment variables win over .env files.
+#
+# DO NOT DEFINE PRODUCTION SECRETS IN THIS FILE NOR IN ANY OTHER COMMITTED FILES.
+# https://symfony.com/doc/current/configuration/secrets.html
+#
+# Run "composer dump-env prod" to compile .env files for production use (requires symfony/flex >=1.2).
+# https://symfony.com/doc/current/best_practices.html#use-environment-variables-for-infrastructure-configuration
 
-### doctrine/doctrine-bundle
-``` text
-```
+###> symfony/framework-bundle ###
+APP_ENV=dev
+APP_SECRET=ff93dfdb487e2d442c29b87404818f65
+###< symfony/framework-bundle ###
 
-### symfony/mailer
-``` text
-```
+###> doctrine/doctrine-bundle ###
+# Format described at https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url
+# IMPORTANT: You MUST configure your server version, either here or in config/packages/doctrine.yaml
+#
+# DATABASE_URL="sqlite:///%kernel.project_dir%/var/data_%kernel.environment%.db"
+# DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.32&charset=utf8mb4"
+# DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=10.11.2-MariaDB&charset=utf8mb4"
+# DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=10.11.6-MariaDB"
+# DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&charset=utf8"
+DATABASE_NAME=sym-asphalt
+DATABASE_HOST=localhost
+DATABASE_PORT=3306
+DATABASE_USER=sym_asphalt_user
+DATABASE_PASS=NqjW{{tJA9pzAJEKL5j4kUwYU76seu9q
+DATABASE_SERVER_VERSION=10.11.6-MariaDB
+###< doctrine/doctrine-bundle ###
+
+###> symfony/messenger ###
+# Choose one of the transports below
+# MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages
+# MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages
+MESSENGER_TRANSPORT_DSN=doctrine://default?auto_setup=0
+###< symfony/messenger ###
+
+###> symfony/mailer ###
+# MAILER_DSN=null://null
+MAILER_DSN="smtp://36d2321826f5e4:6e0e9c0438b106@sandbox.smtp.mailtrap.io:2525"
+###< symfony/mailer ###
+
+###> symfony/routing ###
+# Configure how to generate URLs in non-HTTP contexts, such as CLI commands.
+# See https://symfony.com/doc/current/routing.html#generating-urls-in-commands
+DEFAULT_URI=http://localhost
+###< symfony/routing ###

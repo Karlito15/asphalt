@@ -22,7 +22,7 @@ trait GarageServiceTrait
         /** @var GarageApp $garage */
         $garage      = $this->entityManager->getRepository(GarageApp::class)->findOneBy(['model' => $model, 'settingBrand' => $brandEntity]);
 
-        return is_null($garage) ? throw new RuntimeException(' /!\ ' . $brand . ' ' . $model . ' /!\ ') : $garage;
+        return is_null($garage) ? throw new RuntimeException(sprintf(' /!\ %1$s %2$s /!\ ', $brand, $model)) : $garage;
     }
 
     /**

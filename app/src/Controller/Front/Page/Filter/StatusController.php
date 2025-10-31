@@ -52,7 +52,7 @@ final class StatusController extends AbstractController
     public function unlock(Request $request): Response
     {
         // Variables
-        $title  = $this->translator->trans('text.unlock');
+        $title  = $this->translator->trans('text.unblock');
         $letter = strtoupper($request->attributes->get('letter'));
         $matchLetter = match ($letter) {
             'A' => true,

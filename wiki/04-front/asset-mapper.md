@@ -2,6 +2,23 @@
 
 [Documentation](https://symfony.com/doc/current/frontend/asset_mapper.html)
 
+#### Edit File
+``` php
+    'app' => [
+        'path' => './assets/app.js',
+        'entrypoint' => true,
+    ],
+
+```
+TO
+``` php
+    'app' => [
+        'path' => './assets/scripts/app.js',
+        'entrypoint' => true,
+    ],
+
+```
+
 #### Compile
 ``` shell
 php bin/console asset-map:compile
@@ -11,9 +28,10 @@ php bin/console asset-map:compile
 ``` shell
 php bin/console importmap:require bootstrap
 php bin/console importmap:require bootstrap-table
+php bin/console importmap:require fontawesome
+php bin/console importmap:require jquery
 php bin/console importmap:require htmx.org
 php bin/console importmap:require sweetalert2
-php bin/console importmap:require fontawesome
 ```
 
 #### Install libraries

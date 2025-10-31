@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Command\Database;
 
-use App\Service\Database\Race\AppService;
-use App\Service\Database\Race\ModeService;
-use App\Service\Database\Race\RegionService;
-use App\Service\Database\Race\SeasonService;
-use App\Service\Database\Race\TimeService;
-use App\Service\Database\Race\TrackService;
+use App\Service\Command\Database\Race\AppService;
+use App\Service\Command\Database\Race\ModeService;
+use App\Service\Command\Database\Race\RegionService;
+use App\Service\Command\Database\Race\SeasonService;
+use App\Service\Command\Database\Race\TimeService;
+use App\Service\Command\Database\Race\TrackService;
 use App\Trait\Command\ConfigureTrait;
 use App\Trait\Command\InitializeTrait;
 use Doctrine\ORM\EntityManagerInterface;
@@ -33,7 +33,7 @@ class RacesCommand extends Command
     use ConfigureTrait;
     use InitializeTrait;
 
-    protected static string $title = '::::: XXX :::::';
+    protected static string $title = '::::: Races Datas :::::';
 
     public function __construct(
         private readonly ContainerInterface     $container,
@@ -58,6 +58,11 @@ class RacesCommand extends Command
         $this->addArgument('choice', InputArgument::OPTIONAL, 'Choose Export or Import');
     }
 
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return int
+     */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         // Init variables
@@ -65,6 +70,7 @@ class RacesCommand extends Command
         $choice = $input->getArgument('choice');
 
         // Start
+        $io->title(self::$title);
         $io->section($this->getDescription());
 
         // Question

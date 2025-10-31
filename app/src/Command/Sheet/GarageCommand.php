@@ -3,7 +3,7 @@
 namespace App\Command\Sheet;
 
 use App\Entity\GarageApp;
-use App\Service\Sheet\GarageService;
+use App\Service\Command\Sheet\GarageService;
 use App\Trait\Command\ConfigureTrait;
 use App\Trait\Command\InitializeTrait;
 use App\Trait\Command\ResumeTrait;
