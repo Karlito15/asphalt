@@ -16,13 +16,13 @@
         </thead>
         <tbody>
             <tr>
-                <td>{{ form_widget(form.upgrade.0.speed, {attr: {'max': entity.settingLevel.level}}) }}</td>
-                <td>{{ form_widget(form.upgrade.0.acceleration, {attr: {'max': entity.settingLevel.level}}) }}</td>
-                <td>{{ form_widget(form.upgrade.0.handling, {attr: {'max': entity.settingLevel.level}}) }}</td>
-                <td>{{ form_widget(form.upgrade.0.nitro, {attr: {'max': entity.settingLevel.level}}) }}</td>
+                <td>{{ form_widget(form.upgrade.0.speed, {attr: {'max': entity.level}}) }}</td>
+                <td>{{ form_widget(form.upgrade.0.acceleration, {attr: {'max': entity.level}}) }}</td>
+                <td>{{ form_widget(form.upgrade.0.handling, {attr: {'max': entity.level}}) }}</td>
+                <td>{{ form_widget(form.upgrade.0.nitro, {attr: {'max': entity.level}}) }}</td>
                 <td>{{ form_widget(form.upgrade.0.common, {attr: {'max': entity.settingLevel.common}}) }}</td>
                 <td>{{ form_widget(form.upgrade.0.rare, {attr: {'max': entity.settingLevel.rare}}) }}</td>
-                <td>{{ form_widget(form.upgrade.0.epic, {attr: {'max': entity.settingLevel.epic}}) }}</td>
+                <td>{{ form_widget(form.upgrade.0.epic, {attr: {'max': entity.epic}}) }}</td>
             </tr>
         </tbody>
         <tfoot>
@@ -33,7 +33,7 @@
                 <td>{{ _self.diff(entity.level, form.upgrade.0.nitro.vars.value) }}</td>
                 <td>{{ _self.diff(entity.settingLevel.common, form.upgrade.0.common.vars.value) }}</td>
                 <td>{{ _self.diff(entity.settingLevel.rare, form.upgrade.0.rare.vars.value) }}</td>
-                <td>{{ _self.diff(entity.settingLevel.epic, form.upgrade.0.epic.vars.value) }}</td>
+                <td>{{ _self.diff(entity.epic, form.upgrade.0.epic.vars.value) }}</td>
             </tr>
         </tfoot>
     </table>

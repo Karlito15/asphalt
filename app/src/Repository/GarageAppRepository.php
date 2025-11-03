@@ -169,10 +169,10 @@ class GarageAppRepository extends ServiceEntityRepository
      * @param bool $value
      * @return array
      */
-    public function getUnlockedCarsByClass(string $class, bool $value): array
+    public function getUnblockCarsByClass(string $class, bool $value): array
     {
         $qb = $this->querySettingClass($class);
-//        $qb->andWhere('status.unblock = :value')->setParameter('value', $value);
+        $qb->andWhere('status.unblock = :value')->setParameter('value', $value);
 
         return $qb->getQuery()->getResult();
     }
@@ -182,10 +182,20 @@ class GarageAppRepository extends ServiceEntityRepository
      * @param bool $value
      * @return array
      */
-    public function getGoldedCarsByClass(string $class, bool $value): array
+    public function getGoldCarsByClass(string $class, bool $value): array
     {
         $qb = $this->querySettingClass($class);
-//        $qb->andWhere('status.gold = :value')->setParameter('value', $value);
+        $qb->andWhere('status.gold = :value')->setParameter('value', $value);
+
+        return $qb->getQuery()->getResult();
+    }
+
+    public function getStatusByClass(string $class, string $status, bool $value): array
+    {
+
+        $condition = 'status.'.$status.' = :value';
+        $qb = $this->querySettingClass($class);
+        $qb->andWhere($condition)->setParameter('value', $value);
 
         return $qb->getQuery()->getResult();
     }
@@ -416,7 +426,12 @@ class GarageAppRepository extends ServiceEntityRepository
     private function querySettingClass(string $class): QueryBuilder
     {
         return $this->createQueryBuilder('g')
+            // Join Garage Status
             ->leftJoin('g.settingClass', 'SettingClass')
+            ->leftJoin('g.status', 'status')
+            ->addSelect('status.unblock AS status_unblock')
+            ->addSelect('status.gold AS status_gold')
+            ->addSelect('status.toUpgradeLevel AS status_to_upgrade_level')
             ->andWhere('SettingClass.value = :class')->setParameter('class', $class)
             ->addOrderBy('g.carOrder', 'ASC')
         ;

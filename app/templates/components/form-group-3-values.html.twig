@@ -14,9 +14,10 @@
     {% set total = _self.needs(entity, form.vars.value)|u.toString %}
 
     <div class="input-group mb-2">{# input-group-sm #}
-        {{ form_widget(form, {attr: {'max': entity}}) }}
-        <input type="text" class="{{ class }}" value="{{ entity }}" readonly="readonly">
-        <input type="text" class="{{ class }}" value="{{- total -}}" disabled="disabled">
+        {{ form_widget(form, {attr: {'max': entity, 'class': class ~ ' text-success'}}) }}
+        <input type="text" class="{{ class }} text-info" value="{{ entity }}" readonly="readonly">
+        <input type="text" class="{{ class }}{% if total > 0 or total == 'None' %} text-danger{% endif %}" value="{{- total -}}" disabled="disabled">
+
     </div>
 {% endif %}
     {{ _self.resume(total) }}

@@ -17,6 +17,7 @@ use App\Entity\SettingBlueprint;
 use App\Entity\SettingLevel;
 use App\Entity\SettingUnitPrice;
 use App\Event\Garage\CreateEvent;
+use App\Event\Garage\UpdateEvent;
 use Doctrine\ORM\EntityManagerInterface;
 
 class GarageAppService
@@ -51,6 +52,73 @@ class GarageAppService
             $event->garage->setSettingBlueprint($blueprintEntity);
             $event->garage->setSettingLevel($levelEntity);
             $event->garage->setSettingUnitPrice($unitPriceEntity);
+        }
+    }
+
+    /**
+     * Met à jour la colonne Level dans Garage.
+     *
+     * @param UpdateEvent $event
+     * @return void
+     */
+    public function levelHandler(UpdateEvent $event): void
+    {
+        /**
+         * Get Values
+         *
+         * @var GarageApp $garage
+         * @var GarageStatus $status
+         */
+        $garage = $event->garage;
+        $status = $garage->getStatus()->getValues()[0];
+
+        if ($garage instanceof GarageApp) {
+            /** Car 3 Stars */
+            if ($status->isFullBlueprintStar3() && $garage->getStars() === 3) :
+                $garage->setLevel(10);
+            endif;
+
+            /** Car 4 Stars */
+            if ($status->isFullBlueprintStar4() && $garage->getStars() === 4) :
+                $garage->setLevel(11);
+            endif;
+
+            if ($status->isFullBlueprintStar3() && $status->isFullBlueprintStar4() === false && $garage->getStars() === 4) :
+                $garage->setLevel(9);
+            endif;
+
+            if ($status->isFullBlueprintStar2() && $status->isFullBlueprintStar3() === false && $garage->getStars() === 4) :
+                $garage->setLevel(7);
+            endif;
+
+            if ($status->isFullBlueprintStar1() && $status->isFullBlueprintStar2() === false && $garage->getStars() === 4) :
+                $garage->setLevel(4);
+            endif;
+
+            /** Car 5 & 6 Stars */
+            if ($status->isFullBlueprintStar6() && $garage->getStars() > 5) :
+                $garage->setLevel(13);
+            endif;
+
+            if ($status->isFullBlueprintStar5() && $status->isFullBlueprintStar6() === false && $garage->getStars() > 4) :
+                $garage->setLevel(12);
+            endif;
+
+            if ($status->isFullBlueprintStar4() && $status->isFullBlueprintStar5() === false && $garage->getStars() > 4) :
+                $garage->setLevel(10);
+            endif;
+
+            if ($status->isFullBlueprintStar3() && $status->isFullBlueprintStar4() === false && $garage->getStars() > 4) :
+                $garage->setLevel(8);
+            endif;
+
+            if ($status->isFullBlueprintStar2() && $status->isFullBlueprintStar3() === false && $garage->getStars() > 4) :
+                $garage->setLevel(6);
+            endif;
+
+            if ($status->isFullBlueprintStar1() && $status->isFullBlueprintStar2() === false && $garage->getStars() > 4) :
+                $garage->setLevel(3);
+            endif;
         }
     }
 }

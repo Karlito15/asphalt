@@ -6,120 +6,103 @@ namespace App\EventSubscriber\Garage;
 
 use App\Event\Garage\UpdateEvent;
 use App\Service\Event\GarageAppService;
-use Doctrine\ORM\EntityManagerInterface;
+use App\Service\Event\GarageBlueprintService;
+use App\Service\Event\GarageStatusService;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 readonly final class UpdateSubscriber implements EventSubscriberInterface
 {
     public function __construct(
-        private EntityManagerInterface $manager,
-        private GarageAppService $garageService,
+        private GarageAppService        $garageService,
+        private GarageBlueprintService  $blueprintService,
+        private GarageStatusService     $statusService,
     ) {}
 
     public static function getSubscribedEvents(): array
     {
         return [
             UpdateEvent::class => [
-                // States
-                ['isUnlocked', 1099],
-                ['isGold', 1098],
+                // Blueprint
+                ['blueprint', 1200],
+                // Status
+                ['status', 1100],
+                // Garage
+                ['garage', 1000],
                 // Tags
-                ['isToUnlock', 1089],
-                ['isToGold', 1088],
-                ['isFullBlueprint', 1079],
-                ['isFullSpeed', 1078],
-                ['isFullAcceleration', 1077],
-                ['isFullHandling', 1076],
-                ['isFullNitro', 1075],
-                ['isFullCommon', 1074],
-                ['isFullRare', 1073],
-                ['isFullEpic', 1072],
-                ['isFullAllUpgrades', 1069],
-                ['isFullAllImports', 1068],
                 // Orders
-                ['orderByClass', 1010],
-                ['orderByStat', 1000],
+//                ['orderByClass', XXXX],
+//                ['orderByStat', XXXX],
             ],
         ];
     }
 
-    public function orderByClass(UpdateEvent $event): void
+    public function garage(UpdateEvent $event): void
     {
-        $this->garageService->orderByClass($event, $this->manager);
+        $this->garageService->levelHandler($event);
     }
 
-    public function orderByStat(UpdateEvent $event): void
+    public function blueprint(UpdateEvent $event): void
     {
-        $this->garageService->orderByStat($event, $this->manager);
+
+        $stars = $event->garage->getStars();
+        switch ($stars):
+            case $stars === 6:
+                $this->blueprintService->isFullBlueprintStar1($event);
+                $this->blueprintService->isFullBlueprintStar2($event);
+                $this->blueprintService->isFullBlueprintStar3($event);
+                $this->blueprintService->isFullBlueprintStar4($event);
+                $this->blueprintService->isFullBlueprintStar5($event);
+                $this->blueprintService->isFullBlueprintStar6($event);
+                break;
+            case $stars === 5:
+                $this->blueprintService->isFullBlueprintStar1($event);
+                $this->blueprintService->isFullBlueprintStar2($event);
+                $this->blueprintService->isFullBlueprintStar3($event);
+                $this->blueprintService->isFullBlueprintStar4($event);
+                $this->blueprintService->isFullBlueprintStar5($event);
+                break;
+            case $stars === 4:
+                $this->blueprintService->isFullBlueprintStar1($event);
+                $this->blueprintService->isFullBlueprintStar2($event);
+                $this->blueprintService->isFullBlueprintStar3($event);
+                $this->blueprintService->isFullBlueprintStar4($event);
+                break;
+
+            default:
+                $this->blueprintService->isFullBlueprintStar1($event);
+                $this->blueprintService->isFullBlueprintStar2($event);
+                $this->blueprintService->isFullBlueprintStar3($event);
+                break;
+        endswitch;
     }
 
-    public function isUnlocked(UpdateEvent $event): void
+    public function status(UpdateEvent $event): void
     {
-        $this->garageService->isUnlocked($event);
+        $this->statusService->isUnblock($event);
+        $this->statusService->isToUnblock($event);
+        $this->statusService->isGold($event);
+        $this->statusService->isToGold($event);
+
+        $this->statusService->isFullUpgrade($event, 'Speed');
+        $this->statusService->isToInstallUpgrade($event, 'Speed');
+        $this->statusService->isFullUpgrade($event, 'Acceleration');
+        $this->statusService->isToInstallUpgrade($event, 'Acceleration');
+        $this->statusService->isFullUpgrade($event, 'Handling');
+        $this->statusService->isToInstallUpgrade($event, 'Handling');
+        $this->statusService->isFullUpgrade($event, 'Nitro');
+        $this->statusService->isToInstallUpgrade($event, 'Nitro');
+        $this->statusService->isFullImport($event, 'Common');
+        $this->statusService->isFullImport($event, 'Rare');
+        $this->statusService->isFullImport($event, 'Epic');
     }
 
-    public function isGold(UpdateEvent $event): void
-    {
-        $this->garageService->isGold($event);
-    }
+//    public function orderByClass(UpdateEvent $event): void
+//    {
+//        $this->garageService->orderByClass($event, $this->manager);
+//    }
 
-    public function isToUnlock(UpdateEvent $event): void
-    {
-        $this->garageService->isToUnlock($event, $this->manager);
-    }
-
-    public function isToGold(UpdateEvent $event): void
-    {
-        $this->garageService->isToGold($event, $this->manager);
-    }
-
-    public function isFullBlueprint(UpdateEvent $event): void
-    {
-        $this->garageService->isFullBlueprint($event, $this->manager);
-    }
-
-    public function isFullSpeed(UpdateEvent $event): void
-    {
-        $this->garageService->isFullUpgrade($event, $this->manager, 'Speed');
-    }
-
-    public function isFullAcceleration(UpdateEvent $event): void
-    {
-        $this->garageService->isFullUpgrade($event, $this->manager, 'Acceleration');
-    }
-
-    public function isFullHandling(UpdateEvent $event): void
-    {
-        $this->garageService->isFullUpgrade($event, $this->manager, 'Handling');
-    }
-
-    public function isFullNitro(UpdateEvent $event): void
-    {
-        $this->garageService->isFullUpgrade($event, $this->manager, 'Nitro');
-    }
-
-    public function isFullCommon(UpdateEvent $event): void
-    {
-        $this->garageService->isFullImport($event, $this->manager, 'Common');
-    }
-
-    public function isFullRare(UpdateEvent $event): void
-    {
-        $this->garageService->isFullImport($event, $this->manager, 'Rare');
-    }
-
-    public function isFullEpic(UpdateEvent $event): void
-    {
-        $this->garageService->isFullImport($event, $this->manager, 'Epic');
-    }
-
-    public function isFullAllUpgrades(UpdateEvent $event): void
-    {
-        $this->garageService->isFullAllUpgrades($event, $this->manager);
-    }
-
-    public function isFullAllImports(UpdateEvent $event): void
-    {
-        $this->garageService->isFullAllImports($event, $this->manager);
-    }
+//    public function orderByStat(UpdateEvent $event): void
+//    {
+//        $this->garageService->orderByStat($event, $this->manager);
+//    }
 }

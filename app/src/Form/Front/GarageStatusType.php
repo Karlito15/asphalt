@@ -18,8 +18,7 @@ class GarageStatusType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('unlock', CheckboxType::class, self::getOptions())
-            ->add('toUnlock', CheckboxType::class, self::getOptions())
+            ->add('unblock', CheckboxType::class, self::getOptions())
             ->add('gold', CheckboxType::class, self::getOptions())
             ->add('toGold', CheckboxType::class, self::getOptions())
             ->add('fullUpgradeLevel', CheckboxType::class, self::getOptions())
@@ -65,7 +64,7 @@ class GarageStatusType extends AbstractType
             'attr'          => [
                 'class' => 'btn-check'
             ],
-            'label'         => 'form.unlocked',
+            'label'         => 'form.unblock',
             'required'      => true,
         ];
     }

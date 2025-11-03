@@ -1,5 +1,5 @@
 # Database
 
 ``` shell
-php bin/console XXX
+php bin/console asphalt:sheet:garage
 ```

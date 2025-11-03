@@ -168,7 +168,8 @@ class GarageApp
 
     public function __toString(): string
     {
-        return $this->getModel();
+//        return $this->getModel();
+        return $this->getSlug();
     }
 
     public function getId(): ?int

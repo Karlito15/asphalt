@@ -20,7 +20,7 @@ class StatisticService implements CacheServiceInterface
 
     public function __construct(
         private readonly ContainerInterface      $container,
-        private readonly GarageAppRepository     $garages,
+        private readonly GarageAppRepository     $repo,
     ) {}
 
     /**
@@ -41,32 +41,51 @@ class StatisticService implements CacheServiceInterface
             if ($values->isHit()) {
                 return $values->get();
             }
-            $totalD = $this->getGarageByClass('D');
-            $totalC = $this->getGarageByClass('C');
-            $totalB = $this->getGarageByClass('B');
-            $totalA = $this->getGarageByClass('A');
-            $totalS = $this->getGarageByClass('S');
 
-            $unlockedD = $this->getUnlockedByClass('D');
-            $unlockedC = $this->getUnlockedByClass('C');
-            $unlockedB = $this->getUnlockedByClass('B');
-            $unlockedA = $this->getUnlockedByClass('A');
-            $unlockedS = $this->getUnlockedByClass('S');
+            $totalD          = $this->getGarageByClass('D');
+            $totalC          = $this->getGarageByClass('C');
+            $totalB          = $this->getGarageByClass('B');
+            $totalA          = $this->getGarageByClass('A');
+            $totalS          = $this->getGarageByClass('S');
 
-            $lockedD = $this->getLockedByClass('D');
-            $lockedC = $this->getLockedByClass('C');
-            $lockedB = $this->getLockedByClass('B');
-            $lockedA = $this->getLockedByClass('A');
-            $lockedS = $this->getLockedByClass('S');
+            $unlockedD       = $this->getStatusByClass('D', 'unblock', true);
+            $unlockedC       = $this->getStatusByClass('C', 'unblock', true);
+            $unlockedB       = $this->getStatusByClass('B', 'unblock', true);
+            $unlockedA       = $this->getStatusByClass('A', 'unblock', true);
+            $unlockedS       = $this->getStatusByClass('S', 'unblock', true);
 
-            $goldD = $this->getGoldByClass('D');
-            $goldC = $this->getGoldByClass('C');
-            $goldB = $this->getGoldByClass('B');
-            $goldA = $this->getGoldByClass('A');
-            $goldS = $this->getGoldByClass('S');
+            $lockedD         = $this->getStatusByClass('D', 'unblock', false);
+            $lockedC         = $this->getStatusByClass('C', 'unblock', false);
+            $lockedB         = $this->getStatusByClass('B', 'unblock', false);
+            $lockedA         = $this->getStatusByClass('A', 'unblock', false);
+            $lockedS         = $this->getStatusByClass('S', 'unblock', false);
+
+            $goldD           = $this->getStatusByClass('D', 'gold', true);
+            $goldC           = $this->getStatusByClass('C', 'gold', true);
+            $goldB           = $this->getStatusByClass('B', 'gold', true);
+            $goldA           = $this->getStatusByClass('A', 'gold', true);
+            $goldS           = $this->getStatusByClass('S', 'gold', true);
+
+            $toUpgradeLevelD = $this->getStatusByClass('D', 'toUpgradeLevel', true);
+            $toUpgradeLevelC = $this->getStatusByClass('C', 'toUpgradeLevel', true);
+            $toUpgradeLevelB = $this->getStatusByClass('B', 'toUpgradeLevel', true);
+            $toUpgradeLevelA = $this->getStatusByClass('A', 'toUpgradeLevel', true);
+            $toUpgradeLevelS = $this->getStatusByClass('S', 'toUpgradeLevel', true);
+
+            $toUnblockD      = $this->getStatusByClass('D', 'toUnblock', true);
+            $toUnblockC      = $this->getStatusByClass('C', 'toUnblock', true);
+            $toUnblockB      = $this->getStatusByClass('B', 'toUnblock', true);
+            $toUnblockA      = $this->getStatusByClass('A', 'toUnblock', true);
+            $toUnblockS      = $this->getStatusByClass('S', 'toUnblock', true);
+
+            $toGoldD         = $this->getStatusByClass('D', 'toGold', true);
+            $toGoldC         = $this->getStatusByClass('C', 'toGold', true);
+            $toGoldB         = $this->getStatusByClass('B', 'toGold', true);
+            $toGoldA         = $this->getStatusByClass('A', 'toGold', true);
+            $toGoldS         = $this->getStatusByClass('S', 'toGold', true);
 
             $results = [
-                'total'     => [
+                'total'          => [
                     'D' => $totalD,
                     'C' => $totalC,
                     'B' => $totalB,
@@ -74,7 +93,7 @@ class StatisticService implements CacheServiceInterface
                     'S' => $totalS,
                     'Total' => $totalD + $totalC + $totalB + $totalA + $totalS
                 ],
-                'unlock'    => [
+                'unblock'        => [
                     'D' => $unlockedD,
                     'C' => $unlockedC,
                     'B' => $unlockedB,
@@ -82,7 +101,7 @@ class StatisticService implements CacheServiceInterface
                     'S' => $unlockedS,
                     'Total' => $unlockedD + $unlockedC + $unlockedB + $unlockedA + $unlockedS
                 ],
-                'lock'      => [
+                'block'          => [
                     'D' => $lockedD,
                     'C' => $lockedC,
                     'B' => $lockedB,
@@ -90,13 +109,37 @@ class StatisticService implements CacheServiceInterface
                     'S' => $lockedS,
                     'Total' => $lockedD + $lockedC + $lockedB + $lockedA + $lockedS
                 ],
-                'gold'      => [
+                'gold'           => [
                     'D' => $goldD,
                     'C' => $goldC,
                     'B' => $goldB,
                     'A' => $goldA,
                     'S' => $goldS,
                     'Total' => $goldD + $goldC + $goldB + $goldA + $goldS
+                ],
+                'toUpgradeLevel' => [
+                    'D' => $toUpgradeLevelD,
+                    'C' => $toUpgradeLevelC,
+                    'B' => $toUpgradeLevelB,
+                    'A' => $toUpgradeLevelA,
+                    'S' => $toUpgradeLevelS,
+                    'Total' => $toUpgradeLevelD + $toUpgradeLevelC + $toUpgradeLevelB + $toUpgradeLevelA + $toUpgradeLevelS
+                ],
+                'toUnblock'      => [
+                    'D' => $toUnblockD,
+                    'C' => $toUnblockC,
+                    'B' => $toUnblockB,
+                    'A' => $toUnblockA,
+                    'S' => $toUnblockS,
+                    'Total' => $toUnblockD + $toUnblockC + $toUnblockB + $toUnblockA + $toUnblockS
+                ],
+                'toGold'         => [
+                    'D' => $toGoldD,
+                    'C' => $toGoldC,
+                    'B' => $toGoldB,
+                    'A' => $toGoldA,
+                    'S' => $toGoldS,
+                    'Total' => $toGoldD + $toGoldC + $toGoldB + $toGoldA + $toGoldS
                 ],
             ];
 
@@ -142,11 +185,11 @@ class StatisticService implements CacheServiceInterface
     private function getGarageByClass(string $class): int
     {
         $garage = match ($class) {
-            'A' => $this->garages->getCarsByClass('A'),
-            'B' => $this->garages->getCarsByClass('B'),
-            'C' => $this->garages->getCarsByClass('C'),
-            'D' => $this->garages->getCarsByClass('D'),
-            default => $this->garages->getCarsByClass('S'),
+            'A' => $this->repo->getCarsByClass('A'),
+            'B' => $this->repo->getCarsByClass('B'),
+            'C' => $this->repo->getCarsByClass('C'),
+            'D' => $this->repo->getCarsByClass('D'),
+            default => $this->repo->getCarsByClass('S'),
         };
 
         return count($garage);
@@ -161,11 +204,11 @@ class StatisticService implements CacheServiceInterface
     private function getLockedByClass(string $class): int
     {
         $garage = match ($class) {
-            'A' => $this->garages->getUnlockedCarsByClass('A', false),
-            'B' => $this->garages->getUnlockedCarsByClass('B', false),
-            'C' => $this->garages->getUnlockedCarsByClass('C', false),
-            'D' => $this->garages->getUnlockedCarsByClass('D', false),
-            default => $this->garages->getUnlockedCarsByClass('S', false),
+            'A' => $this->repo->getUnblockCarsByClass('A', false),
+            'B' => $this->repo->getUnblockCarsByClass('B', false),
+            'C' => $this->repo->getUnblockCarsByClass('C', false),
+            'D' => $this->repo->getUnblockCarsByClass('D', false),
+            default => $this->repo->getUnblockCarsByClass('S', false),
         };
 
         return count($garage);
@@ -180,11 +223,11 @@ class StatisticService implements CacheServiceInterface
     private function getUnlockedByClass(string $class): int
     {
         $garage = match ($class) {
-            'A' => $this->garages->getUnlockedCarsByClass('A', true),
-            'B' => $this->garages->getUnlockedCarsByClass('B', true),
-            'C' => $this->garages->getUnlockedCarsByClass('C', true),
-            'D' => $this->garages->getUnlockedCarsByClass('D', true),
-            default => $this->garages->getUnlockedCarsByClass('S', true),
+            'A' => $this->repo->getUnblockCarsByClass('A', true),
+            'B' => $this->repo->getUnblockCarsByClass('B', true),
+            'C' => $this->repo->getUnblockCarsByClass('C', true),
+            'D' => $this->repo->getUnblockCarsByClass('D', true),
+            default => $this->repo->getUnblockCarsByClass('S', true),
         };
 
         return count($garage);
@@ -199,11 +242,24 @@ class StatisticService implements CacheServiceInterface
     private function getGoldByClass(string $class): int
     {
         $garage = match ($class) {
-            'A' => $this->garages->getGoldedCarsByClass('A', true),
-            'B' => $this->garages->getGoldedCarsByClass('B', true),
-            'C' => $this->garages->getGoldedCarsByClass('C', true),
-            'D' => $this->garages->getGoldedCarsByClass('D', true),
-            default => $this->garages->getGoldedCarsByClass('S', true),
+            'A' => $this->repo->getGoldCarsByClass('A', true),
+            'B' => $this->repo->getGoldCarsByClass('B', true),
+            'C' => $this->repo->getGoldCarsByClass('C', true),
+            'D' => $this->repo->getGoldCarsByClass('D', true),
+            default => $this->repo->getGoldCarsByClass('S', true),
+        };
+
+        return count($garage);
+    }
+
+    private function getStatusByClass(string $class, string $status, bool $value): int
+    {
+        $garage = match ($class) {
+            'A' => $this->repo->getStatusByClass('A', $status, $value),
+            'B' => $this->repo->getStatusByClass('B', $status, $value),
+            'C' => $this->repo->getStatusByClass('C', $status, $value),
+            'D' => $this->repo->getStatusByClass('D', $status, $value),
+            default => $this->repo->getStatusByClass('S', $status, $value),
         };
 
         return count($garage);

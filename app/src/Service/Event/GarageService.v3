@@ -1,0 +1,92 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Service\Event;
+
+use App\Entity\GarageApp;
+use App\Entity\SettingBlueprint;
+use App\Entity\SettingLevel;
+use App\Entity\SettingTag;
+use App\Entity\SettingUnitPrice;
+use App\Event\Garage\CreateEvent;
+use App\Event\Garage\UpdateEvent;
+use Doctrine\ORM\EntityManagerInterface;
+
+class GarageAppService
+{
+    /**
+     * Calcule la position de la voiture en fonction de sa Class
+     *
+     * @param UpdateEvent $event
+     * @param EntityManagerInterface $manager
+     * @return void
+     */
+    public function orderByClass(UpdateEvent $event, EntityManagerInterface $manager): void
+    {
+        if ($event->garage instanceof GarageApp) {
+            // Update Garage
+            $class    = $event->getClass();
+            $garages  = $manager->getRepository(GarageApp::class)->getCarsByClass($class);
+            $position = $event->getOrderPositionByClass();
+            $event->garage->setCarOrder($position);
+            $manager->persist($event->garage);
+
+            // Re Order Other Cars After New Position
+            $list     = [];
+            $id       = $event->getId();
+            foreach ($garages as $garage) {
+                /** @var GarageApp $garage */
+                if (
+                    $garage->getCarOrder() >= $position &&
+                    $garage->getCarOrder() < 90 && $garage->getId() !== $id
+                ) {
+                    $list[] = $garage;
+                }
+            }
+
+            $pos = $position +1;
+            foreach ($list as $item) {
+                $item->setCarOrder($pos++);
+                $manager->persist($item);
+            }
+            $manager->flush();
+            $manager->clear();
+        }
+    }
+
+    /**
+     * Calcule la position de la voiture en fonction des Stats
+     *
+     * @param UpdateEvent $event
+     * @param EntityManagerInterface $manager
+     * @return void
+     */
+    public function orderByStat(UpdateEvent $event, EntityManagerInterface $manager): void{
+        $datas    = [];
+        $position = 0;
+        if ($event->garage instanceof GarageApp) {
+            $class    = $event->getClass();
+            $garages  = $manager->getRepository(GarageApp::class)->getCarsByClass($class);
+
+            /** @var GarageApp $garage */
+            foreach ($garages as $garage) {
+                $datas[] = [
+                    'id'         => $garage->getId(),
+                    'averageMax' => $garage->getStatMax()->getValues()[0]->getAverage(),
+                ];
+                $avMax = array_column($datas, 'averageMax');
+                array_multisort($avMax, SORT_DESC, SORT_NUMERIC, $datas);
+            }
+
+            foreach ($datas as $data) {
+                $position++;
+                $garage = $manager->getRepository(GarageApp::class)->findOneBy(['id' => $data['id']]);
+                $garage->setStatOrder($position);
+                $manager->persist($garage);
+            }
+            $manager->flush();
+            $manager->clear();
+        }
+    }
+}

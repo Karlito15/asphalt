@@ -9,9 +9,7 @@ use App\Trait\Command\InitializeTrait;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -22,10 +20,12 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
     aliases: ['asphalt-cron-tag'],
     hidden: false,
 )]
-class TagCommand extends Command
+class GarageTagCommand extends Command
 {
     use ConfigureTrait;
     use InitializeTrait;
+
+    protected static string $title = '::::: Tags :::::';
 
     public function __construct(
         private readonly ContainerInterface     $container,
@@ -35,26 +35,14 @@ class TagCommand extends Command
         parent::__construct();
     }
 
-    protected function configure(): void
-    {
-        $this
-            ->addArgument('arg1', InputArgument::OPTIONAL, 'Argument description')
-            ->addOption('option1', null, InputOption::VALUE_NONE, 'Option description')
-        ;
-    }
-
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
+        // Init variables
         $io = new SymfonyStyle($input, $output);
-        $arg1 = $input->getArgument('arg1');
 
-        if ($arg1) {
-            $io->note(sprintf('You passed an argument: %s', $arg1));
-        }
-
-        if ($input->getOption('option1')) {
-            // ...
-        }
+        // Start
+        $io->title(self::$title);
+        $io->section($this->getDescription());
 
         $io->success('You have a new command! Now make it your own! Pass --help to see your options.');
 

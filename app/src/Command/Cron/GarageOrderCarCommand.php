@@ -29,7 +29,7 @@ use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
     aliases: ['asphalt-cron-order-car'],
     hidden: false,
 )]
-class CarOrderCommand extends Command
+class GarageOrderCarCommand extends Command
 {
     use ConfigureTrait;
     use InitializeTrait;
@@ -103,9 +103,6 @@ class CarOrderCommand extends Command
         $classes = ['D', 'C', 'B', 'A', 'S'];
 
         foreach ($classes as $class) {
-            /** SettingClass */
-            $settingClass = $this->getClass($class);
-
             /** Get Filepath */
             $file = str_replace("XXX", $class, self::$file);
             $csv  = $this->getCSVFile($file, self::$folder);

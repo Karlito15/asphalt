@@ -9,7 +9,6 @@ use App\Entity\SettingBlueprint;
 use App\Entity\SettingBrand;
 use App\Entity\SettingClass;
 use App\Entity\SettingLevel;
-use App\Entity\SettingTag;
 use App\Entity\SettingUnitPrice;
 use App\Trait\Form\FormTrait;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -107,20 +106,6 @@ class GarageAppUpdateType extends AbstractType
                 'required'      => true,
                 'trim'          => true,
             ])
-//            ->add('unlocked', CheckboxType::class, [
-//                'attr'          => [
-//                    'class' => 'btn-check'
-//                ],
-//                'label'         => 'form.unlocked',
-//                'required'      => false,
-//            ])
-//            ->add('gold', CheckboxType::class, [
-//                'attr'          => [
-//                    'class' => 'btn-check'
-//                ],
-//                'label'         => 'form.gold',
-//                'required'      => false,
-//            ])
 
             // Settings
             ->add('settingBlueprint', EntityType::class, [
@@ -191,6 +176,10 @@ class GarageAppUpdateType extends AbstractType
                 'allow_add'     => true,
                 'entry_type'    => GarageRankType::class,
             ])
+//            ->add('statActual', CollectionType::class, [
+//                'allow_add'     => true,
+//                'entry_type'    => GarageStatActualType::class,
+//            ])
             ->add('statMax', CollectionType::class, [
                 'allow_add'     => true,
                 'entry_type'    => GarageStatMaxType::class,
@@ -199,18 +188,22 @@ class GarageAppUpdateType extends AbstractType
                 'allow_add'     => true,
                 'entry_type'    => GarageStatMinType::class,
             ])
+//            ->add('status', CollectionType::class, [
+//                'allow_add'     => true,
+//                'entry_type'    => GarageStatusType::class,
+//            ])
             ->add('upgrade', CollectionType::class, [
                 'allow_add'     => true,
                 'entry_type'    => GarageUpgradeType::class,
             ])
-            ->add('settingTag', EntityType::class, [
-                'attr'          => [
-                    'class' => self::attrClass(),
-                ],
-                'class'         => SettingTag::class,
-                'multiple'      => true,
-                'expanded'      => true, // Checkbox
-            ])
+//            ->add('settingTag', EntityType::class, [
+//                'attr'          => [
+//                    'class' => self::attrClass(),
+//                ],
+//                'class'         => SettingTag::class,
+//                'multiple'      => true,
+//                'expanded'      => true, // Checkbox
+//            ])
         ;
     }
 

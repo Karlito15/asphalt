@@ -13,7 +13,7 @@ class SettingBrandService
 {
     /**
      * Compte le nombre de voitures par Marque
-     * Met à jour l'entitée SettingBrand
+     * Met à jour une entité SettingBrand
      *
      * @param BrandEvent $event
      * @param EntityManagerInterface $manager
@@ -24,7 +24,7 @@ class SettingBrandService
         if ($event->garage->getSettingBrand() instanceof SettingBrand) {
             $brand  = $manager->getRepository(SettingBrand::class)->findOneBy(['name' => $event->getName()]);
             $garage = $manager->getRepository(GarageApp::class)->findBy(['settingBrand' => $brand]);
-            $result = (count($garage) + 1);
+            $result = (count($garage));
             $brand->setCarsNumber($result);
             $manager->persist($brand);
             $manager->flush();

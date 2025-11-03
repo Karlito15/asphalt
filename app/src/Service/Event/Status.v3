@@ -1,0 +1,148 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Service\Event;
+
+use App\Entity\GarageApp;
+use App\Entity\SettingBlueprint;
+use App\Entity\SettingLevel;
+use App\Entity\SettingTag;
+use App\Entity\SettingUnitPrice;
+use App\Event\Garage\CreateEvent;
+use App\Event\Garage\UpdateEvent;
+use Doctrine\ORM\EntityManagerInterface;
+
+class GarageAppService
+{
+//    /**
+//     * Détermine si la voiture a toutes les cartes
+//     *
+//     * @param UpdateEvent $event
+//     * @return void
+//     */
+//    public function isBlueprintFull(UpdateEvent $event): void
+//    {
+//        // Get Values
+//        $blueprint = $event->getBlueprint();
+//        $setting   = $event->getSettingBlueprint();
+//        $garage    = $event->garage->getBoolean()->getValues()[0];
+//        // Conditions
+//        if ($garage instanceof GarageBoolean) {
+//            if ($blueprint->getTotal() === $setting->getTotal()) {
+//                $garage->setFullBlueprint(true);
+//            } else {
+//                $garage->setFullBlueprint(false);
+//            }
+//        }
+//    }
+//
+//    /**
+//     * Détermine si la voiture doit être débloquée en fonction de sa moyenne
+//     *
+//     * @param UpdateEvent $event
+//     * @return void
+//     */
+//    public function toUnlock(UpdateEvent $event): void
+//    {
+//        // Get Values
+//        $garage = $event->garage->getBoolean()->getValues()[0];
+//        // Conditions
+//        if ($garage instanceof GarageBoolean) {
+//            if ($event->getAverageMax() >= $event->getMedian()) {
+//                $garage->setToUnlock(true);
+//            }
+//        }
+//    }
+//
+//    /**
+//     * Détermine si la voiture à toutes les cartes, toutes les épics et n'est pas encore en Gold
+//     *
+//     * @param UpdateEvent $event
+//     * @return void
+//     */
+//    public function toGold(UpdateEvent $event): void
+//    {
+//        // Get Values
+//        $garage  = $event->garage->getBoolean()->getValues()[0];
+//        $setting = $event->getSettingLevel();
+//        // Conditions
+//        if ($garage instanceof GarageBoolean) {
+//            /** Si on a toutes les cartes && Si on a toutes les épics && voiture pas encore en gold */
+//            if ($garage->isFullBlueprint() AND ($setting->getEpic() === $garage->getGarage()->getEpic()) AND $garage->isGold() === false) {
+//                $garage->setToGold(true);
+//            } else {
+//                $garage->setToGold(false);
+//            }
+//        }
+//    }
+
+    /**
+     * Détermine si la voiture a obtenu toutes les cartes
+     *
+     * @param UpdateEvent $event
+     * @param EntityManagerInterface $manager
+     * @return void
+     */
+    public function isFullBlueprint(UpdateEvent $event, EntityManagerInterface $manager): void
+    {
+        if ($event->garage instanceof GarageApp) {
+            $garage_total = $event->getBlueprint()->getTotal();
+            $target_total = $event->getSettingBlueprint()->getTotal();
+
+            if ($garage_total === $target_total) {
+                $tag = $manager->getRepository(SettingTag::class)->findOneBy(['slug' => 'full-blueprint']);
+                $event->garage->addSettingTag($tag);
+            }
+        }
+    }
+
+    /**
+     * Détermine si la voiture a atteint le niveau maximum dans toutes les catégories
+     *
+     * @param UpdateEvent $event
+     * @param EntityManagerInterface $manager
+     * @return void
+     */
+    public function isFullAllUpgrades(UpdateEvent $event, EntityManagerInterface $manager): void
+    {
+        if ($event->garage instanceof GarageApp) {
+            // Get Max Level
+            $upgrade_total = $event->getSettingLevel()->getLevel();
+            if (
+                $upgrade_total === $event->getUpgrade()->getSpeed() &&
+                $upgrade_total === $event->getUpgrade()->getAcceleration() &&
+                $upgrade_total === $event->getUpgrade()->getHandling() &&
+                $upgrade_total === $event->getUpgrade()->getNitro()
+            ) {
+                $tag = $manager->getRepository(SettingTag::class)->findOneBy(['slug' => 'full-upgrades']);
+                $event->garage->addSettingTag($tag);
+            }
+        }
+    }
+
+    /**
+     * Détermine si la voiture a atteint le niveau maximum dans toutes les catégories
+     *
+     * @param UpdateEvent $event
+     * @param EntityManagerInterface $manager
+     * @return void
+     */
+    public function isFullAllImports(UpdateEvent $event, EntityManagerInterface $manager): void
+    {
+        if ($event->garage instanceof GarageApp) {
+            // Get Max Level
+            $common_total  = $event->getSettingLevel()->getCommon();
+            $rare_total    = $event->getSettingLevel()->getRare();
+            $epic_total    = $event->getSettingLevel()->getEpic();
+            if (
+                $common_total === $event->getUpgrade()->getCommon() &&
+                $rare_total === $event->getUpgrade()->getRare() &&
+                $epic_total === $event->getUpgrade()->getEpic()
+            ) {
+                $tag = $manager->getRepository(SettingTag::class)->findOneBy(['slug' => 'full-imports']);
+                $event->garage->addSettingTag($tag);
+            }
+        }
+    }
+}

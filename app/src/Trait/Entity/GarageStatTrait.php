@@ -49,10 +49,6 @@ trait GarageStatTrait
     #[Assert\PositiveOrZero]
     private float $average = 0;
 
-    #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'statActual')]
-    #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
-    private GarageApp $garage;
-
     public function getId(): ?int
     {
         return $this->id;

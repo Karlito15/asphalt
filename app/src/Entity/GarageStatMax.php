@@ -26,4 +26,8 @@ class GarageStatMax
     use TimestampableEntity;
     use SoftDeleteableEntity;
     use GarageStatTrait;
+
+    #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'statMax')]
+    #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
+    private GarageApp $garage;
 }

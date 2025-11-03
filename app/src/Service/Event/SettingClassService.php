@@ -13,7 +13,7 @@ class SettingClassService
 {
     /**
      * Compte le nombre de voitures par Class
-     * Met à jour l'entitée SettingClass
+     * Met à jour une entité SettingClass
      *
      * @param ClassEvent $event
      * @param EntityManagerInterface $manager
@@ -24,7 +24,7 @@ class SettingClassService
         if ($event->garage->getSettingClass() instanceof SettingClass) {
             $class  = $manager->getRepository(SettingClass::class)->findOneBy(['value' => $event->getClass()]);
             $garage = $manager->getRepository(GarageApp::class)->findBy(['settingClass' => $class]);
-            $result = (count($garage) + 1);
+            $result = (count($garage));
             $class->setCarsNumber($result);
             $manager->persist($class);
             $manager->flush();

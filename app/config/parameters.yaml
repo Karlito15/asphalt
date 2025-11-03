@@ -19,12 +19,12 @@ parameters:
 when@dev:
     parameters:
         cache_lifetime:
-            dashboards:     2  # 10 min
-            garages:        600  # 10 min
-            missions:       600  # 10 min
-            races:          600  # 10 min
-            sitemaps:       600  # 10 min
-            statistics:     3600 # 60 min
+            dashboards:     60  # 1 min
+            garages:        60  # 1 min
+            missions:       60  # 1 min
+            races:          60  # 1 min
+            sitemaps:       300  # 5 mins
+            statistics:     300  # 5 mins
         images:
             logo:           'images/logo-green.png'
 when@prod:

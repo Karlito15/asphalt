@@ -6,6 +6,7 @@ namespace App\Event\Garage;
 
 use App\Entity\GarageApp;
 use App\Entity\GarageBlueprint;
+use App\Entity\GarageStatus;
 use App\Entity\GarageUpgrade;
 use App\Entity\SettingBlueprint;
 use App\Entity\SettingLevel;
@@ -52,6 +53,14 @@ final readonly class UpdateEvent
     public function getBlueprint(): GarageBlueprint
     {
         return $this->garage->getBlueprint()->getValues()[0];
+    }
+
+    /**
+     * @return GarageStatus
+     */
+    public function getStatus(): GarageStatus
+    {
+        return $this->garage->getStatus()->getValues()[0];
     }
 
     /**

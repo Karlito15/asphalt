@@ -2,7 +2,8 @@ symfonycasts_sass:
     # Path to your Sass root file
     root_sass:
         # Default:
-        - '%kernel.project_dir%/assets/styles/bootstrap/5.3.8/bootstrap.scss'
+#        - '%kernel.project_dir%/assets/styles/bootstrap/5.3.8/bootstrap.scss'
+        - '%kernel.project_dir%/assets/styles/app.scss'
 
 #    # The Sass binary to use
     binary: null

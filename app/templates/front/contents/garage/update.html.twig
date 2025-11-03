@@ -2,32 +2,20 @@
 
 {% set background, text = '', '' %}
 
-{#{% if entity.unlocked == false %}#}
-{#    {% set background = 'bg-danger-subtle' %}#}
-{#    {% set text = 'text-danger' %}#}
-{#{% endif %}#}
+{% if entity.status.current.unblock == false %}
+    {% set background = 'bg-danger-subtle' %}
+    {% set text       = 'text-danger' %}
+{% endif %}
 
-{#{% if entity.unlocked == true %}#}
-{#    {% set background = 'bg-success-subtle' %}#}
-{#    {% set text = 'text-success' %}#}
-{#{% endif %}#}
+{% if entity.status.current.unblock == true %}
+    {% set background = 'bg-success-subtle' %}
+    {% set text       = 'text-success' %}
+{% endif %}
 
-{#{% if entity.unlocked == true and entity.gold == true %}#}
-{#    {% set background = 'bg-warning-subtle' %}#}
-{#    {% set text = 'text-warning' %}#}
-{#{% endif %}#}
-
-{#{% if entity.unlocked is true %}#}
-{#    {% set status = 'unlock' %}#}
-{#{% else %}#}
-{#    {% set status = 'lock' %}#}
-{#{% endif %}#}
-
-{#{% if entity.gold is true %}#}
-{#    {% set gold = 'gold' %}#}
-{#{% else %}#}
-{#    {% set gold = null %}#}
-{#{% endif %}#}
+{% if entity.status.current.unblock == true and entity.status.current.gold == true %}
+    {% set background = 'bg-warning-subtle' %}
+    {% set text       = 'text-warning' %}
+{% endif %}
 
 <div class="card {{ background }}">
     <div class="card-header {{ background }}">
@@ -44,7 +32,7 @@
                 {% include "@App/front/contents/garage/update/_blueprint.html.twig" %}
                 {% include "@App/front/contents/garage/update/_stat.html.twig" %}
             </div>
-            {% include "@App/front/contents/garage/update/_tag.html.twig" %}
+{#            {% include "@App/front/contents/garage/update/_tag.html.twig" %}#}
             {{ form_rest(form) }}
         {% include "@App/front/contents/garage/update/_button.html.twig" %}
         {{ form_end(form) }}
