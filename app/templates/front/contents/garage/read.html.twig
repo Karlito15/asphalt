@@ -1,16 +1,18 @@
 {% block content %}
 
-{% if entity.unlocked is true %}
-    {% set status = 'unlock' %}
-{% else %}
-    {% set status = 'lock' %}
-{% endif %}
+{% set background, text = '', '' %}
 
-{% if entity.gold is true %}
-    {% set gold = 'gold' %}
-{% else %}
-    {% set gold = null %}
-{% endif %}
+{#{% if entity.status.current.unblock is true %}#}
+{#    {% set status = 'unblock' %}#}
+{#{% else %}#}
+{#    {% set status = 'lock' %}#}
+{#{% endif %}#}
+
+{#{% if entity.status.current.gold is true %}#}
+{#    {% set gold = 'gold' %}#}
+{#{% else %}#}
+{#    {% set gold = null %}#}
+{#{% endif %}#}
 
 <div class="row">
     <div class="col-xxl-10">

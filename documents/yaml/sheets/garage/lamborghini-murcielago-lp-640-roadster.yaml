@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Lamborghini Murcielago LP 640 Roadster'
+    Slug: lamborghini-murcielago-lp-640-roadster
+    Brand: Lamborghini
+    Model: 'Murcielago LP 640 Roadster'
+    Class: B
+    'Median Class': 146
+    'Game Update': 18
+    Stars: 5
+    Progression: { Level: 12, 'Full Level': 12, Epic: 8, 'Full Epic': 8 }
+    Orders: { Car: 32, Stat: 41, 'Total Car': 71 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: 45, Setting: 45, Difference: 0 }
+    'Star 2': { Garage: 17, Setting: 17, Difference: 0 }
+    'Star 3': { Garage: 23, Setting: 23, Difference: 0 }
+    'Star 4': { Garage: 32, Setting: 32, Difference: 0 }
+    'Star 5': { Garage: 45, Setting: 45, Difference: 0 }
+    'Star 6': { Garage: 0, Setting: 0, Difference: 0 }
+    Full: { Garage: 162, Setting: 162, Difference: 0 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 2516
+    'Star 1': 2687
+    'Star 2': 2937
+    'Star 3': 3161
+    'Star 4': 3474
+    'Star 5': 3792
+    'Star 6': 0
+Status:
+    Unblock: { isUnblock: true, toUnblock: false }
+    Gold: { isGold: false, toGold: true }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': true, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '342.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '354.10'
+    'Min Acceleration': '69.40'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '77.54'
+    'Min Handly': '49.88'
+    'Actual Handly': '0.00'
+    'Max Handly': '67.18'
+    'Min Nitro': '37.84'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '61.13'
+    'Min Average': '124.78'
+    'Actual Average': '0.00'
+    'Max Average': '139.99'
+Upgrade:
+    Speed: { Garage: 8, Level: 12, Difference: 4, Setting: 12 }
+    Acceleration: { Garage: 6, Level: 12, Difference: 6, Setting: 12 }
+    Handling: { Garage: 6, Level: 12, Difference: 6, Setting: 12 }
+    Nitro: { Garage: 6, Level: 12, Difference: 6, Setting: 12 }
+    Common: { Garage: 21, Setting: 32, Difference: 11 }
+    Rare: { Garage: 3, Setting: 20, Difference: 17 }
+    Epic: { Garage: 0, Setting: 8, Difference: 8 }
+Price:
+    'Unit Price': { 'Level 01': 7820, 'Level 02': 12800, 'Level 03': 20400, 'Level 04': 30600, 'Level 05': 44200, 'Level 06': 62000, 'Level 07': 86500, 'Level 08': 121500, 'Level 09': 170000, 'Level 10': 237500, 'Level 11': 333000, 'Level 12': 466000, 'Level 13': 0, 'Level Common': 50000, 'Level Rare': 100000, 'Level Epic': 300000 }
+    'Price Real Upgrades': { Speed: 385820, Acceleration: 177820, Handling: 177820, Nitro: 177820 }
+    'Price Total Upgrades': { Speed: 1592320, Acceleration: 1592320, Handling: 1592320, Nitro: 1592320 }
+    'Price Real Imports': { Common: 1050000, Rare: 300000, Epic: 0 }
+    'Price Total Imports': { Common: 1600000, Rare: 2000000, Epic: 2400000 }
+    'Price Gold': 12369280

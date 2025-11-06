@@ -36,6 +36,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Gedmo\Versioned]
     private int $star0 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -43,6 +44,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Gedmo\Versioned]
     private int $star1 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -50,6 +52,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Gedmo\Versioned]
     private int $star2 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -57,6 +60,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Gedmo\Versioned]
     private int $star3 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -64,6 +68,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Gedmo\Versioned]
     private int $star4 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -71,6 +76,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Gedmo\Versioned]
     private int $star5 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -78,6 +84,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Gedmo\Versioned]
     private int $star6 = 0;
 
     #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'rank')]

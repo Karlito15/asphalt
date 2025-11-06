@@ -227,3 +227,6 @@ Speed: 'Speed'
 Acceleration: 'Acceleration'
 Handling: 'Handling'
 Nitro: 'Nitro'
+
+
+form.placeholder.is.finish: 'Is Finish ?'

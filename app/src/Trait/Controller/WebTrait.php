@@ -43,4 +43,31 @@ trait WebTrait
             throw $this->createNotFoundException($this->translator->trans('error.class'));
         }
     }
+
+    /**
+     * Retourne la lettre de la Class en minuscule
+     *
+     * @param string $letter
+     * @return string
+     */
+    private static function getLetter(string $letter): string
+    {
+        return strtoupper($letter);
+    }
+
+    /**
+     * @param string $letter
+     * @return bool
+     */
+    private static function getControlLetter(string $letter): bool
+    {
+        return match ($letter) {
+            'A' => true,
+            'B' => true,
+            'C' => true,
+            'D' => true,
+            'S' => true,
+            default => false,
+        };
+    }
 }

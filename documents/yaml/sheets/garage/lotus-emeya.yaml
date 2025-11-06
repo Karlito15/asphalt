@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Lotus Emeya'
+    Slug: lotus-emeya
+    Brand: Lotus
+    Model: Emeya
+    Class: D
+    'Median Class': 125
+    'Game Update': 45
+    Stars: 4
+    Progression: { Level: 0, 'Full Level': 99, Epic: 0, 'Full Epic': 99 }
+    Orders: { Car: 18, Stat: 8, 'Total Car': 43 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: 0, Setting: 99, Difference: 99 }
+    'Star 2': { Garage: 0, Setting: 99, Difference: 99 }
+    'Star 3': { Garage: 0, Setting: 99, Difference: 99 }
+    'Star 4': { Garage: 0, Setting: 99, Difference: 99 }
+    'Star 5': { Garage: 0, Setting: 99, Difference: 99 }
+    'Star 6': { Garage: 0, Setting: 99, Difference: 99 }
+    Full: { Garage: 0, Setting: 594, Difference: 594 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 0
+    'Star 1': 0
+    'Star 2': 0
+    'Star 3': 0
+    'Star 4': 0
+    'Star 5': 0
+    'Star 6': 0
+Status:
+    Unblock: { isUnblock: false, toUnblock: true }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': false, 'Star 2': false, 'Star 3': false, 'Star 4': false, 'Star 5': false, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '250.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '276.50'
+    'Min Acceleration': '63.10'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '81.79'
+    'Min Handly': '51.15'
+    'Actual Handly': '0.00'
+    'Max Handly': '75.33'
+    'Min Nitro': '46.70'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '67.23'
+    'Min Average': '102.74'
+    'Actual Average': '0.00'
+    'Max Average': '125.21'
+Upgrade:
+    Speed: { Garage: 0, Level: 0, Difference: 0, Setting: 99 }
+    Acceleration: { Garage: 0, Level: 0, Difference: 0, Setting: 99 }
+    Handling: { Garage: 0, Level: 0, Difference: 0, Setting: 99 }
+    Nitro: { Garage: 0, Level: 0, Difference: 0, Setting: 99 }
+    Common: { Garage: 0, Setting: 99, Difference: 99 }
+    Rare: { Garage: 0, Setting: 99, Difference: 99 }
+    Epic: { Garage: 0, Setting: 99, Difference: 0 }
+Price:
+    'Unit Price': { 'Level 01': 99999, 'Level 02': 99999, 'Level 03': 99999, 'Level 04': 99999, 'Level 05': 99999, 'Level 06': 99999, 'Level 07': 99999, 'Level 08': 99999, 'Level 09': 99999, 'Level 10': 999999, 'Level 11': 999999, 'Level 12': 999999, 'Level 13': 999999, 'Level Common': 99999, 'Level Rare': 999999, 'Level Epic': 999999 }
+    'Price Real Upgrades': { Speed: 0, Acceleration: 0, Handling: 0, Nitro: 0 }
+    'Price Total Upgrades': { Speed: 4899987, Acceleration: 4899987, Handling: 4899987, Nitro: 4899987 }
+    'Price Real Imports': { Common: 0, Rare: 0, Epic: 0 }
+    'Price Total Imports': { Common: 9899901, Rare: 98999901, Epic: 98999901 }
+    'Price Gold': 227499651

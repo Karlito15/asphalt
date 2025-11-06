@@ -16,25 +16,24 @@
     </div>
 
     {% elseif app.current_route == 'app.page.search.garage' %}
-<div class="row row-cols-8 g-4 m-0 bg-primary-subtle">
+<div class="row row-cols-7 g-4 m-0 bg-primary-subtle">
     <div class="col">{{ form_row(form.gameUpdate) }}</div>
     <div class="col">{{ form_row(form.brand) }}</div>
     <div class="col">{{ form_row(form.classLetter) }}</div>
-    <div class="col">{{ form_row(form.unlocked) }}</div>
+    <div class="col">{{ form_row(form.unblock) }}</div>
     <div class="col">{{ form_row(form.gold) }}</div>
-    <div class="col">{{ form_row(form.order) }}</div>
     {% endif %}
 
-    <div class="col-1">
-        <p class="btn btn-primary position-relative">
-            Result <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ count }}</span>
-        </p>
-    </div>
-    <div class="col text-end">
+    <div class="col">
         <div class="btn-group" role="group" aria-label="button">
             <button class="btn btn-outline-danger text-uppercase" type="reset">Reset</button>
             <button class="btn btn-outline-success text-uppercase" type="submit">Submit</button>
         </div>
+    </div>
+    <div class="col">
+        <p class="pe-none btn btn-primary position-relative">
+            Result <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ count }}</span>
+        </p>
     </div>
 </div>
 {#{{ form_errors(form) }}#}

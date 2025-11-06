@@ -37,6 +37,7 @@ class GarageUpgrade
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 13)]
+    #[Gedmo\Versioned]
     private int $speed = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -44,6 +45,7 @@ class GarageUpgrade
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 13)]
+    #[Gedmo\Versioned]
     private int $acceleration = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -51,6 +53,7 @@ class GarageUpgrade
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 13)]
+    #[Gedmo\Versioned]
     private int $handling = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -58,6 +61,7 @@ class GarageUpgrade
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 13)]
+    #[Gedmo\Versioned]
     private int $nitro = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -65,6 +69,7 @@ class GarageUpgrade
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 36)]
+    #[Gedmo\Versioned]
     private int $common = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -72,6 +77,7 @@ class GarageUpgrade
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 16)]
+    #[Gedmo\Versioned]
     private int $rare = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -79,6 +85,7 @@ class GarageUpgrade
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 13)]
+    #[Gedmo\Versioned]
     private int $epic = 0;
 
     #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'upgrade')]

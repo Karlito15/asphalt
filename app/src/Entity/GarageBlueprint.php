@@ -36,36 +36,43 @@ class GarageBlueprint
 
     #[ORM\Column(type: Types::STRING, length: 8, nullable: true)]
     #[Assert\Length(min: 1, max: 8)]
+    #[Gedmo\Versioned]
     private ?string $star1 = null;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: true, options: ['unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 99)]
+    #[Gedmo\Versioned]
     private ?int $star2 = null;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: true, options: ['unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 99)]
+    #[Gedmo\Versioned]
     private ?int $star3 = null;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: true, options: ['unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 99)]
+    #[Gedmo\Versioned]
     private ?int $star4 = null;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: true, options: ['unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 99)]
+    #[Gedmo\Versioned]
     private ?int $star5 = null;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: true, options: ['unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 99)]
+    #[Gedmo\Versioned]
     private ?int $star6 = null;
 
     #[ORM\Column(type: Types::SMALLINT, length: 3, nullable: true, options: ['unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 999)]
+    #[Gedmo\Versioned]
     private ?int $total = null;
 
     #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'blueprint')]

@@ -39,7 +39,7 @@ final class ClassController extends AbstractController
             'breadcrumb'      => ['level1' => $translator->trans('text.order'), 'level2' => $title],
             'container'       => 'container',
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => $repository->getGarageCondition(['settingClass.value' => $letter], ['g.carOrder' => 'ASC']),
+            'entities'        => $repository->getGaragePageOrder(['settingClass.value' => $letter], ['g.carOrder' => 'ASC']),
         ]);
     }
 }

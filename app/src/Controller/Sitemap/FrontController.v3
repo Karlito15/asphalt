@@ -41,9 +41,9 @@ final class SitemapController extends AbstractController
 //        $urls[] = ['loc' => $this->generateUrl('app.page.filter.gold')];
 //        $urls[] = ['loc' => $this->generateUrl('app.page.filter.locked')];
 //        $urls[] = ['loc' => $this->generateUrl('app.page.filter.to.gold')];
-//        $urls[] = ['loc' => $this->generateUrl('app.page.filter.to.unlock')];
+//        $urls[] = ['loc' => $this->generateUrl('app.page.filter.to.unblock')];
 //        $urls[] = ['loc' => $this->generateUrl('app.page.filter.to.upgrade')];
-//        $urls[] = ['loc' => $this->generateUrl('app.page.filter.unlock')];
+//        $urls[] = ['loc' => $this->generateUrl('app.page.filter.unblock')];
 //        $urls[] = ['loc' => $this->generateUrl('app.page.order.class')];
 //        $urls[] = ['loc' => $this->generateUrl('app.page.order.event')];
 //        $urls[] = ['loc' => $this->generateUrl('app.page.order.stat')];

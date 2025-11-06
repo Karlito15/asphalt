@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'BMW M4 GT3'
+    Slug: bmw-m4-gt3
+    Brand: BMW
+    Model: 'M4 GT3'
+    Class: B
+    'Median Class': 146
+    'Game Update': 31
+    Stars: 4
+    Progression: { Level: 11, 'Full Level': 11, Epic: 1, 'Full Epic': 8 }
+    Orders: { Car: 12, Stat: 63, 'Total Car': 71 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: 55, Setting: 55, Difference: 0 }
+    'Star 2': { Garage: 35, Setting: 35, Difference: 0 }
+    'Star 3': { Garage: 44, Setting: 44, Difference: 0 }
+    'Star 4': { Garage: 54, Setting: 54, Difference: 0 }
+    'Star 5': { Garage: 0, Setting: 0, Difference: 0 }
+    'Star 6': { Garage: 0, Setting: 0, Difference: 0 }
+    Full: { Garage: 188, Setting: 188, Difference: 0 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 1921
+    'Star 1': 2146
+    'Star 2': 2497
+    'Star 3': 2837
+    'Star 4': 3134
+    'Star 5': 0
+    'Star 6': 0
+Status:
+    Unblock: { isUnblock: true, toUnblock: false }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': false, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '324.60'
+    'Actual Speed': '0.00'
+    'Max Speed': '333.30'
+    'Min Acceleration': '73.04'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '79.46'
+    'Min Handly': '48.28'
+    'Actual Handly': '0.00'
+    'Max Handly': '53.36'
+    'Min Nitro': '56.99'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '63.69'
+    'Min Average': '125.73'
+    'Actual Average': '0.00'
+    'Max Average': '132.45'
+Upgrade:
+    Speed: { Garage: 6, Level: 11, Difference: 5, Setting: 11 }
+    Acceleration: { Garage: 6, Level: 11, Difference: 5, Setting: 11 }
+    Handling: { Garage: 6, Level: 11, Difference: 5, Setting: 11 }
+    Nitro: { Garage: 6, Level: 11, Difference: 5, Setting: 11 }
+    Common: { Garage: 0, Setting: 24, Difference: 24 }
+    Rare: { Garage: 0, Setting: 16, Difference: 16 }
+    Epic: { Garage: 0, Setting: 8, Difference: 1 }
+Price:
+    'Unit Price': { 'Level 01': 5750, 'Level 02': 9400, 'Level 03': 15000, 'Level 04': 22500, 'Level 05': 32500, 'Level 06': 45500, 'Level 07': 63500, 'Level 08': 89000, 'Level 09': 125000, 'Level 10': 175000, 'Level 11': 245000, 'Level 12': 0, 'Level 13': 0, 'Level Common': 40000, 'Level Rare': 80000, 'Level Epic': 240000 }
+    'Price Real Upgrades': { Speed: 130650, Acceleration: 130650, Handling: 130650, Nitro: 130650 }
+    'Price Total Upgrades': { Speed: 828150, Acceleration: 828150, Handling: 828150, Nitro: 828150 }
+    'Price Real Imports': { Common: 0, Rare: 0, Epic: 0 }
+    'Price Total Imports': { Common: 960000, Rare: 1280000, Epic: 1920000 }
+    'Price Gold': 7472600

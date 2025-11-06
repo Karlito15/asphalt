@@ -4,9 +4,13 @@ declare(strict_types=1);
 
 namespace App\EventSubscriber\Garage;
 
+use App\Event\Garage\ActualEvent;
+use App\Event\Garage\GauntletEvent;
 use App\Event\Garage\UpdateEvent;
 use App\Service\Event\GarageAppService;
 use App\Service\Event\GarageBlueprintService;
+use App\Service\Event\GarageGauntletService;
+use App\Service\Event\GarageStatActualService;
 use App\Service\Event\GarageStatusService;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -15,6 +19,8 @@ readonly final class UpdateSubscriber implements EventSubscriberInterface
     public function __construct(
         private GarageAppService        $garageService,
         private GarageBlueprintService  $blueprintService,
+        private GarageGauntletService   $gauntletService,
+        private GarageStatActualService $statActualService,
         private GarageStatusService     $statusService,
     ) {}
 
@@ -27,11 +33,17 @@ readonly final class UpdateSubscriber implements EventSubscriberInterface
                 // Status
                 ['status', 1100],
                 // Garage
-                ['garage', 1000],
+                ['garage', 1000],           // Level
                 // Tags
                 // Orders
 //                ['orderByClass', XXXX],
 //                ['orderByStat', XXXX],
+            ],
+            GauntletEvent::class => [
+                ['gauntlet', 500],
+            ],
+            ActualEvent::class => [
+                ['statActual', 400],
             ],
         ];
     }
@@ -43,7 +55,6 @@ readonly final class UpdateSubscriber implements EventSubscriberInterface
 
     public function blueprint(UpdateEvent $event): void
     {
-
         $stars = $event->garage->getStars();
         switch ($stars):
             case $stars === 6:
@@ -76,6 +87,11 @@ readonly final class UpdateSubscriber implements EventSubscriberInterface
         endswitch;
     }
 
+    public function gauntlet(GauntletEvent $event): void
+    {
+        $this->gauntletService->calculScores($event);
+    }
+
     public function status(UpdateEvent $event): void
     {
         $this->statusService->isUnblock($event);
@@ -94,6 +110,11 @@ readonly final class UpdateSubscriber implements EventSubscriberInterface
         $this->statusService->isFullImport($event, 'Common');
         $this->statusService->isFullImport($event, 'Rare');
         $this->statusService->isFullImport($event, 'Epic');
+    }
+
+    public function statActual(ActualEvent $event): void
+    {
+        $this->statActualService->copyStatMaxtoActual($event);
     }
 
 //    public function orderByClass(UpdateEvent $event): void

@@ -6,6 +6,7 @@ use App\Entity\GarageApp;
 use App\Event\Setting\BrandEvent;
 use App\Trait\Command\ConfigureTrait;
 use App\Trait\Command\InitializeTrait;
+use App\Trait\Command\ResumeTrait;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -24,6 +25,7 @@ class SettingBrandCommand extends Command
 {
     use ConfigureTrait;
     use InitializeTrait;
+    use ResumeTrait;
 
     protected static string $title = '::::: Counter Brand :::::';
 
@@ -38,19 +40,38 @@ class SettingBrandCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         // Init Variables
-        $io = new SymfonyStyle($input, $output);
+        $io        = new SymfonyStyle($input, $output);
+        $stopwatch = $this->stopwatch;
+        $garages   = $this->entityManager->getRepository(GarageApp::class)->findAll();
 
         // Start
         $io->title(self::$title);
         $io->section($this->getDescription());
+        $output->writeln(shell_exec('clear'));
 
-        $garages = $this->entityManager->getRepository(GarageApp::class)->findAll();
+        // Execution time : start
+        $stopwatch->start(self::$title);
+
+        // Progress Bar : Star
+        $this->io->progressStart(count($garages));
+        $this->io->newLine();
         foreach ($garages as $garage) {
+            // Event
             $this->dispatcher->dispatch(new BrandEvent($garage));
+
+            // Progress Bar : +1
+            $this->io->progressAdvance();
         }
 
-        // Conclusion
-        $io->success($this->getDescription());
+        // Progress Bar : Stop
+        $this->io->progressFinish();
+
+        // Execution time : stop
+        $event      = $stopwatch->stop(self::$title);
+        $duration   = $event->getDuration() / 1000;
+
+        // Resume
+        self::resume($this->io, $duration);
 
         return Command::SUCCESS;
     }

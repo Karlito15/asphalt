@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Mercedes-Benz 2022 Showcar Vision AMG'
+    Slug: mercedes-benz-2022-showcar-vision-amg
+    Brand: Mercedes-Benz
+    Model: '2022 Showcar Vision AMG'
+    Class: C
+    'Median Class': 139
+    'Game Update': 34
+    Stars: 4
+    Progression: { Level: 11, 'Full Level': 11, Epic: 0, 'Full Epic': 4 }
+    Orders: { Car: 25, Stat: 43, 'Total Car': 56 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: 50, Setting: 50, Difference: 0 }
+    'Star 2': { Garage: 29, Setting: 29, Difference: 0 }
+    'Star 3': { Garage: 38, Setting: 38, Difference: 0 }
+    'Star 4': { Garage: 48, Setting: 48, Difference: 0 }
+    'Star 5': { Garage: 0, Setting: 0, Difference: 0 }
+    'Star 6': { Garage: 0, Setting: 0, Difference: 0 }
+    Full: { Garage: 165, Setting: 165, Difference: 0 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 1889
+    'Star 1': 2185
+    'Star 2': 2576
+    'Star 3': 2962
+    'Star 4': 3294
+    'Star 5': 0
+    'Star 6': 0
+Status:
+    Unblock: { isUnblock: true, toUnblock: false }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': false, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '321.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '335.10'
+    'Min Acceleration': '64.90'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '75.36'
+    'Min Handly': '34.71'
+    'Actual Handly': '0.00'
+    'Max Handly': '51.75'
+    'Min Nitro': '26.57'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '59.32'
+    'Min Average': '111.80'
+    'Actual Average': '0.00'
+    'Max Average': '130.38'
+Upgrade:
+    Speed: { Garage: 7, Level: 11, Difference: 4, Setting: 11 }
+    Acceleration: { Garage: 7, Level: 11, Difference: 4, Setting: 11 }
+    Handling: { Garage: 7, Level: 11, Difference: 4, Setting: 11 }
+    Nitro: { Garage: 7, Level: 11, Difference: 4, Setting: 11 }
+    Common: { Garage: 20, Setting: 24, Difference: 4 }
+    Rare: { Garage: 2, Setting: 12, Difference: 10 }
+    Epic: { Garage: 0, Setting: 4, Difference: 0 }
+Price:
+    'Unit Price': { 'Level 01': 23000, 'Level 02': 37500, 'Level 03': 60000, 'Level 04': 90000, 'Level 05': 130000, 'Level 06': 182000, 'Level 07': 255000, 'Level 08': 356500, 'Level 09': 499500, 'Level 10': 699000, 'Level 11': 979000, 'Level 12': 1370000, 'Level 13': 2250000, 'Level Common': 90000, 'Level Rare': 180000, 'Level Epic': 540000 }
+    'Price Real Upgrades': { Speed: 777500, Acceleration: 777500, Handling: 777500, Nitro: 777500 }
+    'Price Total Upgrades': { Speed: 3311500, Acceleration: 3311500, Handling: 3311500, Nitro: 3311500 }
+    'Price Real Imports': { Common: 1800000, Rare: 360000, Epic: 0 }
+    'Price Total Imports': { Common: 2160000, Rare: 2160000, Epic: 2160000 }
+    'Price Gold': 19726000

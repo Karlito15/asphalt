@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Ferrari SF90 Stradale'
+    Slug: ferrari-sf90-stradale
+    Brand: Ferrari
+    Model: 'SF90 Stradale'
+    Class: S
+    'Median Class': 159
+    'Game Update': 15
+    Stars: 6
+    Progression: { Level: 13, 'Full Level': 13, Epic: 16, 'Full Epic': 16 }
+    Orders: { Car: 16, Stat: 57, 'Total Car': 76 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: 60, Setting: 60, Difference: 0 }
+    'Star 2': { Garage: 25, Setting: 25, Difference: 0 }
+    'Star 3': { Garage: 30, Setting: 30, Difference: 0 }
+    'Star 4': { Garage: 35, Setting: 35, Difference: 0 }
+    'Star 5': { Garage: 45, Setting: 45, Difference: 0 }
+    'Star 6': { Garage: 55, Setting: 55, Difference: 0 }
+    Full: { Garage: 250, Setting: 250, Difference: 0 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 2928
+    'Star 1': 3124
+    'Star 2': 3350
+    'Star 3': 3587
+    'Star 4': 3832
+    'Star 5': 4117
+    'Star 6': 4395
+Status:
+    Unblock: { isUnblock: true, toUnblock: false }
+    Gold: { isGold: true, toGold: false }
+    'To Upgrade': { isFull: true, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': true, 'Star 6': true }
+    'Full Upgrade': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
+    'To Install': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+Stat:
+    'Min Speed': '340.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '355.40'
+    'Min Acceleration': '77.50'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '86.83'
+    'Min Handly': '66.86'
+    'Actual Handly': '0.00'
+    'Max Handly': '93.51'
+    'Min Nitro': '51.64'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '69.90'
+    'Min Average': '134.00'
+    'Actual Average': '0.00'
+    'Max Average': '151.41'
+Upgrade:
+    Speed: { Garage: 13, Level: 13, Difference: 0, Setting: 13 }
+    Acceleration: { Garage: 13, Level: 13, Difference: 0, Setting: 13 }
+    Handling: { Garage: 13, Level: 13, Difference: 0, Setting: 13 }
+    Nitro: { Garage: 13, Level: 13, Difference: 0, Setting: 13 }
+    Common: { Garage: 28, Setting: 28, Difference: 0 }
+    Rare: { Garage: 20, Setting: 20, Difference: 0 }
+    Epic: { Garage: 16, Setting: 16, Difference: 0 }
+Price:
+    'Unit Price': { 'Level 01': 23000, 'Level 02': 37500, 'Level 03': 60000, 'Level 04': 90000, 'Level 05': 130000, 'Level 06': 182000, 'Level 07': 255000, 'Level 08': 356500, 'Level 09': 499500, 'Level 10': 699000, 'Level 11': 979000, 'Level 12': 1370000, 'Level 13': 2250000, 'Level Common': 90000, 'Level Rare': 180000, 'Level Epic': 540000 }
+    'Price Real Upgrades': { Speed: 6931500, Acceleration: 6931500, Handling: 6931500, Nitro: 6931500 }
+    'Price Total Upgrades': { Speed: 6931500, Acceleration: 6931500, Handling: 6931500, Nitro: 6931500 }
+    'Price Real Imports': { Common: 2520000, Rare: 3600000, Epic: 8640000 }
+    'Price Total Imports': { Common: 2520000, Rare: 3600000, Epic: 8640000 }
+    'Price Gold': 42486000

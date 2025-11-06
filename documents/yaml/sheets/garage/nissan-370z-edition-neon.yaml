@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Nissan 370Z Édition Néon'
+    Slug: nissan-370z-edition-neon
+    Brand: Nissan
+    Model: '370Z Édition Néon'
+    Class: D
+    'Median Class': 125
+    'Game Update': 32
+    Stars: 4
+    Progression: { Level: 11, 'Full Level': 11, Epic: 0, 'Full Epic': 4 }
+    Orders: { Car: 28, Stat: 7, 'Total Car': 43 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: 30, Setting: 30, Difference: 0 }
+    'Star 2': { Garage: 23, Setting: 23, Difference: 0 }
+    'Star 3': { Garage: 33, Setting: 33, Difference: 0 }
+    'Star 4': { Garage: 42, Setting: 42, Difference: 0 }
+    'Star 5': { Garage: 0, Setting: 0, Difference: 0 }
+    'Star 6': { Garage: 0, Setting: 0, Difference: 0 }
+    Full: { Garage: 128, Setting: 128, Difference: 0 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 570
+    'Star 1': 1030
+    'Star 2': 1576
+    'Star 3': 2138
+    'Star 4': 2675
+    'Star 5': 0
+    'Star 6': 0
+Status:
+    Unblock: { isUnblock: true, toUnblock: true }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': false, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '250.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '271.10'
+    'Min Acceleration': '53.20'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '83.26'
+    'Min Handly': '49.95'
+    'Actual Handly': '0.00'
+    'Max Handly': '82.81'
+    'Min Nitro': '35.38'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '65.22'
+    'Min Average': '97.13'
+    'Actual Average': '0.00'
+    'Max Average': '125.60'
+Upgrade:
+    Speed: { Garage: 4, Level: 11, Difference: 7, Setting: 11 }
+    Acceleration: { Garage: 4, Level: 11, Difference: 7, Setting: 11 }
+    Handling: { Garage: 4, Level: 11, Difference: 7, Setting: 11 }
+    Nitro: { Garage: 4, Level: 11, Difference: 7, Setting: 11 }
+    Common: { Garage: 12, Setting: 28, Difference: 16 }
+    Rare: { Garage: 0, Setting: 8, Difference: 8 }
+    Epic: { Garage: 0, Setting: 4, Difference: 0 }
+Price:
+    'Unit Price': { 'Level 01': 4370, 'Level 02': 7100, 'Level 03': 11400, 'Level 04': 17100, 'Level 05': 24700, 'Level 06': 34500, 'Level 07': 48500, 'Level 08': 68000, 'Level 09': 95000, 'Level 10': 133000, 'Level 11': 186000, 'Level 12': 0, 'Level 13': 0, 'Level Common': 20000, 'Level Rare': 40000, 'Level Epic': 120000 }
+    'Price Real Upgrades': { Speed: 39970, Acceleration: 39970, Handling: 39970, Nitro: 39970 }
+    'Price Total Upgrades': { Speed: 629670, Acceleration: 629670, Handling: 629670, Nitro: 629670 }
+    'Price Real Imports': { Common: 240000, Rare: 0, Epic: 0 }
+    'Price Total Imports': { Common: 560000, Rare: 320000, Epic: 480000 }
+    'Price Gold': 3878680

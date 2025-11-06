@@ -9,6 +9,7 @@ use App\Entity\GarageStatMax;
 use App\Entity\GarageStatMin;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Persistence\Event\LifecycleEventArgs;
+use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 
 trait GarageStatTrait
@@ -23,30 +24,35 @@ trait GarageStatTrait
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
+    #[Gedmo\Versioned]
     private float $speed = 0;
 
     #[ORM\Column(type: 'float', length: 6, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
+    #[Gedmo\Versioned]
     private float $acceleration = 0;
 
     #[ORM\Column(type: 'float', length: 6, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
+    #[Gedmo\Versioned]
     private float $handling = 0;
 
     #[ORM\Column(type: 'float', length: 6, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
+    #[Gedmo\Versioned]
     private float $nitro = 0;
 
     #[ORM\Column(type: 'float', length: 6, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
+    #[Gedmo\Versioned]
     private float $average = 0;
 
     public function getId(): ?int

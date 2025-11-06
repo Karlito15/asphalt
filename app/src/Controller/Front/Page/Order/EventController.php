@@ -39,7 +39,7 @@ final class EventController extends AbstractController
             'current_page'    => $request->attributes->get('_route'),
             'container'       => 'container',
             'breadcrumb'      => ['level1' => $translator->trans('text.order'), 'level2' => $title],
-            'entities'        => $repository->getGarageCondition(['settingClass.value' => $letter], ['g.carOrder' => 'DESC'], [0, 5]),
+            'entities'        => $repository->getGaragePageOrder(['settingClass.value' => $letter], ['g.carOrder' => 'DESC'], [0, 5]),
         ]);
     }
 }

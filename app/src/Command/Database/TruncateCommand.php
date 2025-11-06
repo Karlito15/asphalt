@@ -84,6 +84,7 @@ class TruncateCommand extends Command
         // Start
         $io->title(self::$title);
         $io->section($this->getDescription());
+        $output->writeln(shell_exec('clear'));
 
         // Execution time : start
         $this->stopwatch->start(self::$title);

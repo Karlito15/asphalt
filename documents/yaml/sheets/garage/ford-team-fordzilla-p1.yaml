@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Ford Team Fordzilla P1'
+    Slug: ford-team-fordzilla-p1
+    Brand: Ford
+    Model: 'Team Fordzilla P1'
+    Class: A
+    'Median Class': 150
+    'Game Update': 34
+    Stars: 6
+    Progression: { Level: 12, 'Full Level': 13, Epic: 3, 'Full Epic': 16 }
+    Orders: { Car: 55, Stat: 39, 'Total Car': 63 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: 70, Setting: 70, Difference: 0 }
+    'Star 2': { Garage: 23, Setting: 23, Difference: 0 }
+    'Star 3': { Garage: 27, Setting: 27, Difference: 0 }
+    'Star 4': { Garage: 36, Setting: 36, Difference: 0 }
+    'Star 5': { Garage: 52, Setting: 52, Difference: 0 }
+    'Star 6': { Garage: 0, Setting: 59, Difference: 59 }
+    Full: { Garage: 208, Setting: 267, Difference: 59 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 3259
+    'Star 1': 3431
+    'Star 2': 3632
+    'Star 3': 3814
+    'Star 4': 4061
+    'Star 5': 4306
+    'Star 6': 4548
+Status:
+    Unblock: { isUnblock: true, toUnblock: false }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': true, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '358.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '382.00'
+    'Min Acceleration': '82.90'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '87.72'
+    'Min Handly': '42.19'
+    'Actual Handly': '0.00'
+    'Max Handly': '53.75'
+    'Min Nitro': '41.16'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '60.72'
+    'Min Average': '131.06'
+    'Actual Average': '0.00'
+    'Max Average': '146.05'
+Upgrade:
+    Speed: { Garage: 4, Level: 12, Difference: 8, Setting: 13 }
+    Acceleration: { Garage: 4, Level: 12, Difference: 8, Setting: 13 }
+    Handling: { Garage: 4, Level: 12, Difference: 8, Setting: 13 }
+    Nitro: { Garage: 4, Level: 12, Difference: 8, Setting: 13 }
+    Common: { Garage: 8, Setting: 24, Difference: 16 }
+    Rare: { Garage: 0, Setting: 20, Difference: 20 }
+    Epic: { Garage: 0, Setting: 16, Difference: 3 }
+Price:
+    'Unit Price': { 'Level 01': 23000, 'Level 02': 37500, 'Level 03': 60000, 'Level 04': 90000, 'Level 05': 130000, 'Level 06': 182000, 'Level 07': 255000, 'Level 08': 356500, 'Level 09': 499500, 'Level 10': 699000, 'Level 11': 979000, 'Level 12': 1370000, 'Level 13': 2250000, 'Level Common': 90000, 'Level Rare': 180000, 'Level Epic': 540000 }
+    'Price Real Upgrades': { Speed: 210500, Acceleration: 210500, Handling: 210500, Nitro: 210500 }
+    'Price Total Upgrades': { Speed: 6931500, Acceleration: 6931500, Handling: 6931500, Nitro: 6931500 }
+    'Price Real Imports': { Common: 720000, Rare: 0, Epic: 0 }
+    'Price Total Imports': { Common: 2160000, Rare: 3600000, Epic: 8640000 }
+    'Price Gold': 42126000

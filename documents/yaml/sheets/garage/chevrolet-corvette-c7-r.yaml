@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Chevrolet Corvette C7.R'
+    Slug: chevrolet-corvette-c7-r
+    Brand: Chevrolet
+    Model: 'Corvette C7.R'
+    Class: D
+    'Median Class': 125
+    'Game Update': 13
+    Stars: 5
+    Progression: { Level: 12, 'Full Level': 12, Epic: 2, 'Full Epic': 8 }
+    Orders: { Car: 36, Stat: 21, 'Total Car': 43 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: Key, Setting: Key, Difference: 0 }
+    'Star 2': { Garage: 22, Setting: 22, Difference: 0 }
+    'Star 3': { Garage: 30, Setting: 30, Difference: 0 }
+    'Star 4': { Garage: 35, Setting: 35, Difference: 0 }
+    'Star 5': { Garage: 38, Setting: 38, Difference: 0 }
+    'Star 6': { Garage: 0, Setting: 0, Difference: 0 }
+    Full: { Garage: 125, Setting: 125, Difference: 0 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 1440
+    'Star 1': 1637
+    'Star 2': 1868
+    'Star 3': 2122
+    'Star 4': 2433
+    'Star 5': 2948
+    'Star 6': 0
+Status:
+    Unblock: { isUnblock: true, toUnblock: false }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': true, 'Star 6': false }
+    'Full Upgrade': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: false }
+    'To Install': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: true }
+Stat:
+    'Min Speed': '295.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '307.60'
+    'Min Acceleration': '71.20'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '80.48'
+    'Min Handly': '34.77'
+    'Actual Handly': '0.00'
+    'Max Handly': '47.08'
+    'Min Nitro': '35.90'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '57.03'
+    'Min Average': '109.22'
+    'Actual Average': '0.00'
+    'Max Average': '123.05'
+Upgrade:
+    Speed: { Garage: 12, Level: 12, Difference: 0, Setting: 12 }
+    Acceleration: { Garage: 12, Level: 12, Difference: 0, Setting: 12 }
+    Handling: { Garage: 12, Level: 12, Difference: 0, Setting: 12 }
+    Nitro: { Garage: 12, Level: 12, Difference: 0, Setting: 12 }
+    Common: { Garage: 36, Setting: 36, Difference: 0 }
+    Rare: { Garage: 16, Setting: 16, Difference: 0 }
+    Epic: { Garage: 2, Setting: 8, Difference: 0 }
+Price:
+    'Unit Price': { 'Level 01': 6440, 'Level 02': 10500, 'Level 03': 16800, 'Level 04': 25200, 'Level 05': 36400, 'Level 06': 51000, 'Level 07': 71500, 'Level 08': 100000, 'Level 09': 140000, 'Level 10': 196000, 'Level 11': 274000, 'Level 12': 384000, 'Level 13': 0, 'Level Common': 15000, 'Level Rare': 30000, 'Level Epic': 90000 }
+    'Price Real Upgrades': { Speed: 1311840, Acceleration: 1311840, Handling: 1311840, Nitro: 1311840 }
+    'Price Total Upgrades': { Speed: 1311840, Acceleration: 1311840, Handling: 1311840, Nitro: 1311840 }
+    'Price Real Imports': { Common: 540000, Rare: 480000, Epic: 180000 }
+    'Price Total Imports': { Common: 540000, Rare: 480000, Epic: 720000 }
+    'Price Gold': 6987360

@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Techrules AT96 track version'
+    Slug: techrules-at96-track-version
+    Brand: Techrules
+    Model: 'AT96 track version'
+    Class: A
+    'Median Class': 150
+    'Game Update': 9
+    Stars: 6
+    Progression: { Level: 13, 'Full Level': 13, Epic: 16, 'Full Epic': 16 }
+    Orders: { Car: 50, Stat: 23, 'Total Car': 63 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: Key, Setting: Key, Difference: 0 }
+    'Star 2': { Garage: 30, Setting: 30, Difference: 0 }
+    'Star 3': { Garage: 40, Setting: 40, Difference: 0 }
+    'Star 4': { Garage: 50, Setting: 50, Difference: 0 }
+    'Star 5': { Garage: 65, Setting: 65, Difference: 0 }
+    'Star 6': { Garage: 80, Setting: 80, Difference: 0 }
+    Full: { Garage: 265, Setting: 265, Difference: 0 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 3122
+    'Star 1': 3298
+    'Star 2': 3506
+    'Star 3': 3698
+    'Star 4': 3950
+    'Star 5': 4202
+    'Star 6': 4444
+Status:
+    Unblock: { isUnblock: true, toUnblock: false }
+    Gold: { isGold: false, toGold: true }
+    'To Upgrade': { isFull: true, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': true, 'Star 6': true }
+    'Full Upgrade': { Speed: true, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: false, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '350.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '364.60'
+    'Min Acceleration': '77.50'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '85.53'
+    'Min Handly': '52.98'
+    'Actual Handly': '0.00'
+    'Max Handly': '75.74'
+    'Min Nitro': '46.61'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '69.65'
+    'Min Average': '131.77'
+    'Actual Average': '0.00'
+    'Max Average': '148.88'
+Upgrade:
+    Speed: { Garage: 13, Level: 13, Difference: 0, Setting: 13 }
+    Acceleration: { Garage: 12, Level: 13, Difference: 1, Setting: 13 }
+    Handling: { Garage: 11, Level: 13, Difference: 2, Setting: 13 }
+    Nitro: { Garage: 11, Level: 13, Difference: 2, Setting: 13 }
+    Common: { Garage: 21, Setting: 24, Difference: 3 }
+    Rare: { Garage: 17, Setting: 20, Difference: 3 }
+    Epic: { Garage: 8, Setting: 16, Difference: 8 }
+Price:
+    'Unit Price': { 'Level 01': 16100, 'Level 02': 26300, 'Level 03': 42000, 'Level 04': 63000, 'Level 05': 91000, 'Level 06': 127500, 'Level 07': 178500, 'Level 08': 249500, 'Level 09': 349500, 'Level 10': 489500, 'Level 11': 685000, 'Level 12': 959000, 'Level 13': 1575000, 'Level Common': 80000, 'Level Rare': 160000, 'Level Epic': 480000 }
+    'Price Real Upgrades': { Speed: 4851900, Acceleration: 3276900, Handling: 2317900, Nitro: 2317900 }
+    'Price Total Upgrades': { Speed: 4851900, Acceleration: 4851900, Handling: 4851900, Nitro: 4851900 }
+    'Price Real Imports': { Common: 1680000, Rare: 2720000, Epic: 3840000 }
+    'Price Total Imports': { Common: 1920000, Rare: 3200000, Epic: 7680000 }
+    'Price Gold': 32207600

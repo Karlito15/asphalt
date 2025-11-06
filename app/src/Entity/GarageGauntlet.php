@@ -71,6 +71,7 @@ class GarageGauntlet
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
+    #[Gedmo\Versioned]
     private ?int $division = null;
 
     #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'gauntlet')]

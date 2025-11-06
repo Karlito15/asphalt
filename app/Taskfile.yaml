@@ -161,6 +161,16 @@ tasks:
             - task dc
             - task dmm
             - "{{.SYMFONY_CONSOLE}} asphalt:database:migration import"
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:garage"
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:order-car update"
+            - "{{.SYMFONY_CONSOLE}} asphalt:asphalt:cron:setting-brand"
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:setting-class S"
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:setting-class A"
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:setting-class B"
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:setting-class C"
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:setting-class D"
+            - "{{.SYMFONY_CONSOLE}} asphalt:sheet:garage"
+            - "{{.SYMFONY_CONSOLE}} asphalt:database:migration export"
         ignore_error: true
         platforms: [windows/amd64]
     scripts:

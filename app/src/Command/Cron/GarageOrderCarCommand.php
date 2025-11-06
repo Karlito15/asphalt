@@ -8,6 +8,7 @@ use App\Entity\GarageApp;
 use App\Entity\SettingClass;
 use App\Trait\Command\ConfigureTrait;
 use App\Trait\Command\InitializeTrait;
+use App\Trait\Command\ResumeTrait;
 use App\Trait\Service\Database\GarageServiceTrait;
 use App\Trait\Service\File\CSVTrait;
 use App\Trait\Service\File\DirectoryTrait;
@@ -33,6 +34,7 @@ class GarageOrderCarCommand extends Command
 {
     use ConfigureTrait;
     use InitializeTrait;
+    use ResumeTrait;
     use DirectoryTrait;
     use CSVTrait;
     use GarageServiceTrait;
@@ -64,12 +66,14 @@ class GarageOrderCarCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         // Init variables
-        $io     = new SymfonyStyle($input, $output);
-        $choice = $input->getArgument('choice');
+        $io        = new SymfonyStyle($input, $output);
+        $choice    = $input->getArgument('choice');
+        $stopwatch = $this->stopwatch;
 
         // Start
         $io->title(self::$title);
         $io->section($this->getDescription());
+        $output->writeln(shell_exec('clear'));
 
         // Question
         if (is_null($choice)) {
@@ -77,6 +81,9 @@ class GarageOrderCarCommand extends Command
             $question = new ChoiceQuestion('Do you want to export or update datas ?', ['export', 'update'], 'export');
             $choice = $helper->ask($input, $output, $question);
         }
+
+        // Execution time : start
+        $stopwatch->start(self::$title);
 
         // Services Datas
         if ($choice === 'update') {
@@ -91,6 +98,13 @@ class GarageOrderCarCommand extends Command
             $io->error('Houston we have a problem !');
             $result = false;
         }
+
+        // Execution time : stop
+        $event      = $stopwatch->stop(self::$title);
+        $duration   = $event->getDuration() / 1000;
+
+        // Resume
+        self::resume($this->io, $duration);
 
         return ($result) ? Command::SUCCESS : Command::FAILURE;
     }
