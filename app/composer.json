@@ -105,7 +105,7 @@
         },
         "sort-packages": true,
         "vendor-dir": "vendor/",
-        "process-timeout": 900
+        "process-timeout": 300
     },
     "conflict": {
         "symfony/symfony": "*"
