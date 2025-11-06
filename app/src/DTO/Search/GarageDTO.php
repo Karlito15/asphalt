@@ -6,77 +6,74 @@ namespace App\DTO\Search;
 
 use App\Entity\GarageApp;
 use App\Entity\SettingBrand;
+use App\Entity\SettingClass;
 
 class GarageDTO
 {
     /** @var GarageApp|null */
-    public ?GarageApp $garage = null;
+    public ?GarageApp $gameUpdate = null;
 
     /** @var SettingBrand|null */
     public ?SettingBrand $brand = null;
 
-    /**  @var string|null */
-    public ?string $classLetter = null;
+    /**  @var SettingClass|null */
+    public ?SettingClass $classLetter = null;
 
     /** @var bool|null */
-    public ?bool $unlocked = null;
+    public ?bool $unblock = null;
 
     /** @var bool|null */
     public ?bool $gold = null;
 
-    /** @var string|null */
-    public ?string $order = null;
-
+    /**
+     * @return GarageApp|null
+     */
     public function getGameUpdate(): ?GarageApp
     {
-        if ($this->garage instanceof GarageApp) {
-            return $this->garage;
+        if ($this->gameUpdate instanceof GarageApp) {
+            return $this->gameUpdate;
         }
 
         return null;
     }
 
-    public function setGameUpdate(GarageApp $garage): GarageDTO
-    {
-        $this->garage = $garage;
-
-        return $this;
-    }
-
+    /**
+     * @return SettingBrand|null
+     */
     public function getBrand(): ?SettingBrand
     {
-        return $this->brand;
+        if ($this->brand instanceof SettingBrand) {
+            return $this->brand;
+        }
+
+        return null;
     }
 
-    public function setBrand(?SettingBrand $brand): GarageDTO
+    /**
+     * @return SettingClass|null
+     */
+    public function getClassLetter(): ?SettingClass
     {
-        $this->brand = $brand;
+        if ($this->classLetter instanceof SettingClass) {
+            return $this->classLetter;
+        }
 
-        return $this;
+        return null;
     }
 
-    public function getClassLetter(): ?string
+    /**
+     * @return bool|null
+     */
+    public function isUnbLock(): ?bool
     {
-        return $this->classLetter;
+        return $this->unblock;
     }
 
-    public function isLocked(): ?bool
-    {
-        return $this->unlocked;
-    }
-
+    /**
+     * @return bool|null
+     */
     public function isGold(): ?bool
     {
         return $this->gold;
-    }
-
-    public function getOrder(): ?string
-    {
-        return $this->order;
-    }
-
-    public function setOrder(?string $order): void
-    {
-        $this->order = $order;
     }
 }

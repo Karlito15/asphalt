@@ -7,6 +7,7 @@ namespace App\Form\Front\Search;
 use App\DTO\Search\GarageDTO;
 use App\Entity\GarageApp;
 use App\Entity\SettingBrand;
+use App\Entity\SettingClass;
 use App\Trait\Form\FormTrait;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
@@ -24,92 +25,75 @@ class GarageType extends AbstractType
     {
         $builder
             ->add('gameUpdate', EntityType::class, [
-//                'attr'        => [
-//                    'class' => 'form-control-lg',
-//                ],
-                'class'        => GarageApp::class,
-                'choice_label' => 'gameUpdate',
-                'empty_data'   => null,
-                'label'        => false,
-                'placeholder'  => 'form.placeholder.update',
+                'attr'          => [
+                    'class' => self::attrClass(),
+                ],
+                'class'         => GarageApp::class,
+                'choice_label'  => 'gameUpdate',
+                'empty_data'    => null,
+                'label'         => false,
+                'placeholder'   => 'form.placeholder.update',
                 'query_builder' => function (EntityRepository $er): QueryBuilder {
                     return $er->createQueryBuilder('g')->groupBy('g.gameUpdate')->orderBy('g.gameUpdate', 'DESC');
                 },
-                'required'     => false,
-                'trim'         => true,
-            ])
-            ->add('brand', EntityType::class, [
-//                'attr'        => [
-//                    'class' => 'form-control-lg',
-//                ],
-                'class'        => SettingBrand::class,
-                'choice_label' => 'name',
-                'empty_data'   => null,
-                'label'        => false,
-                'placeholder'  => 'form.placeholder.brand',
-                'query_builder' => function (EntityRepository $er): QueryBuilder {
-                    return $er->createQueryBuilder('b')->orderBy('b.name', 'ASC');
-                },
-                'required'     => false,
-                'trim'         => false,
-            ])
-            ->add('classLetter', ChoiceType::class, [
-//                'attr'        => [
-//                    'class' => 'form-control-lg',
-//                ],
-                'choices'       => [
-                    'Class S' => 'S',
-                    'Class A' => 'A',
-                    'Class B' => 'B',
-                    'Class C' => 'C',
-                    'Class D' => 'D',
-                ],
-                'empty_data'    => null,
-                'label'         => false,
-                'placeholder'   => 'form.placeholder.class',
                 'required'      => false,
                 'trim'          => true,
             ])
-            ->add('unlocked', ChoiceType ::class, [
-//                'attr'        => [
-//                    'class' => 'form-control-lg',
-//                ],
+            ->add('brand', EntityType::class, [
+                'attr'          => [
+                    'class' => self::attrClass(),
+                ],
+                'class'         => SettingBrand::class,
+                'choice_label'  => 'name',
+                'empty_data'    => null,
+                'label'         => false,
+                'placeholder'   => 'form.placeholder.brand',
+                'query_builder' => function (EntityRepository $er): QueryBuilder {
+                    return $er->createQueryBuilder('b')->orderBy('b.name', 'ASC');
+                },
+                'required'      => false,
+                'trim'          => true,
+            ])
+            ->add('classLetter', EntityType::class, [
+                'attr'          => [
+                    'class' => self::attrClass(),
+                ],
+                'class'         => SettingClass::class,
+                'choice_label'  => 'value',
+                'empty_data'    => null,
+                'label'         => false,
+                'placeholder'   => 'form.placeholder.class',
+                'query_builder' => function (EntityRepository $er): QueryBuilder {
+                    return $er->createQueryBuilder('b')->orderBy('b.value', 'ASC');
+                },
+                'required'      => false,
+                'trim'          => true,
+            ])
+            ->add('unblock', ChoiceType ::class, [
+                'attr'          => [
+                    'class' => self::attrClass(),
+                ],
                 'choices'       => [
-                    'No' => false,
-                    'Yes' => true,
+                    'form.no' => false,
+                    'form.yes' => true,
                 ],
                 'empty_data'    => null,
-                'label'         => false, //'form.placeholder.unlocked',
-                'placeholder'   => 'form.placeholder.unlocked',
+                'label'         => false, //'form.placeholder.unblock',
+                'placeholder'   => 'form.placeholder.unblock',
                 'required'      => false,
                 'trim'          => true,
             ])
             ->add('gold', ChoiceType ::class, [
-//                'attr'        => [
-//                    'class' => 'form-control-lg',
-//                ],
+                'attr'          => [
+                    'class' => self::attrClass(),
+                ],
                 'choices'       => [
-                    'No' => false,
-                    'Yes' => true,
+                    'form.no' => false,
+                    'form.yes' => true,
                 ],
                 'empty_data'    => null,
                 'label'         => false, //'form.placeholder.gold',
                 'placeholder'   => 'form.placeholder.gold',
-                'required'      => false,
-                'trim'          => true,
-            ])
-            ->add('order', ChoiceType ::class, [
-                'attr'        => [
-//                    'class' => 'form-control-lg',
-                    'disabled' => 'on',
-                ],
-                'choices'       => [
-                    'Class' => 'carOrder',
-                    'Stat' => 'statOrder',
-                ],
-                'empty_data'    => null,
-                'label'         => false, //'form.placeholder.order',
-                'placeholder'   => 'form.placeholder.order',
                 'required'      => false,
                 'trim'          => true,
             ])
@@ -120,11 +104,16 @@ class GarageType extends AbstractType
     {
         $resolver->setDefaults([
             'allow_extra_fields' => false,
-            'data_class' => GarageDTO::class,
-            'method' => 'GET',
+            'data_class'         => GarageDTO::class,
+            'method'             => 'GET',
             'translation_domain' => 'forms',
             // enable/disable CSRF protection for this form
-            'csrf_protection' => false,
+            'csrf_protection'    => false,
         ]);
+    }
+
+    private static function attrClass(): string
+    {
+        return 'fw-bolder';
     }
 }

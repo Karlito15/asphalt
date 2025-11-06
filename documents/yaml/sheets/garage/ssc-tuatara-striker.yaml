@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'SSC Tuatara Striker'
+    Slug: ssc-tuatara-striker
+    Brand: SSC
+    Model: 'Tuatara Striker'
+    Class: S
+    'Median Class': 159
+    'Game Update': 42
+    Stars: 6
+    Progression: { Level: 6, 'Full Level': 13, Epic: 0, 'Full Epic': 16 }
+    Orders: { Car: 61, Stat: 29, 'Total Car': 76 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: '', Setting: Key, Difference: 1 }
+    'Star 2': { Garage: 40, Setting: 40, Difference: 0 }
+    'Star 3': { Garage: 4, Setting: 45, Difference: 41 }
+    'Star 4': { Garage: 0, Setting: 60, Difference: 60 }
+    'Star 5': { Garage: 0, Setting: 70, Difference: 70 }
+    'Star 6': { Garage: 0, Setting: 85, Difference: 85 }
+    Full: { Garage: 44, Setting: 300, Difference: 256 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 3838
+    'Star 1': 4000
+    'Star 2': 0
+    'Star 3': 0
+    'Star 4': 0
+    'Star 5': 0
+    'Star 6': 5070
+Status:
+    Unblock: { isUnblock: false, toUnblock: false }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': false, 'Star 2': true, 'Star 3': false, 'Star 4': false, 'Star 5': false, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '435.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '447.10'
+    'Min Acceleration': '76.42'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '78.55'
+    'Min Handly': '52.87'
+    'Actual Handly': '0.00'
+    'Max Handly': '55.72'
+    'Min Nitro': '32.96'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '45.68'
+    'Min Average': '149.31'
+    'Actual Average': '0.00'
+    'Max Average': '156.76'
+Upgrade:
+    Speed: { Garage: 4, Level: 6, Difference: 2, Setting: 13 }
+    Acceleration: { Garage: 4, Level: 6, Difference: 2, Setting: 13 }
+    Handling: { Garage: 4, Level: 6, Difference: 2, Setting: 13 }
+    Nitro: { Garage: 4, Level: 6, Difference: 2, Setting: 13 }
+    Common: { Garage: 12, Setting: 28, Difference: 16 }
+    Rare: { Garage: 0, Setting: 20, Difference: 20 }
+    Epic: { Garage: 0, Setting: 16, Difference: 0 }
+Price:
+    'Unit Price': { 'Level 01': 23000, 'Level 02': 37500, 'Level 03': 60000, 'Level 04': 90000, 'Level 05': 130000, 'Level 06': 182000, 'Level 07': 255000, 'Level 08': 356500, 'Level 09': 499500, 'Level 10': 699000, 'Level 11': 979000, 'Level 12': 1370000, 'Level 13': 2250000, 'Level Common': 90000, 'Level Rare': 180000, 'Level Epic': 540000 }
+    'Price Real Upgrades': { Speed: 210500, Acceleration: 210500, Handling: 210500, Nitro: 210500 }
+    'Price Total Upgrades': { Speed: 6931500, Acceleration: 6931500, Handling: 6931500, Nitro: 6931500 }
+    'Price Real Imports': { Common: 1080000, Rare: 0, Epic: 0 }
+    'Price Total Imports': { Common: 2520000, Rare: 3600000, Epic: 8640000 }
+    'Price Gold': 42486000

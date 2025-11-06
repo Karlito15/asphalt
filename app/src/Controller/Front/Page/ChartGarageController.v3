@@ -32,7 +32,7 @@ class GarageController extends AbstractController
 		// Charts
 		$chart  = $chartBuilder->createChart(Chart::TYPE_PIE);
 		$lock   = $chartBuilder->createChart(Chart::TYPE_PIE);
-		$unlock = $chartBuilder->createChart(Chart::TYPE_PIE);
+		$unblock = $chartBuilder->createChart(Chart::TYPE_PIE);
 		$gold   = $chartBuilder->createChart(Chart::TYPE_PIE);
 
 		// Options
@@ -46,7 +46,7 @@ class GarageController extends AbstractController
 				'title' => ['display' => true, 'text' => 'Locks', 'padding' => ['top' => 0, 'bottom' => 0]],
 			],
 		]);
-		$unlock->setOptions([
+		$unblock->setOptions([
 			'plugins' => [
 				'title' => ['display' => true, 'text' => 'Unlocks', 'padding' => ['top' => 0, 'bottom' => 0]],
 			],
@@ -100,7 +100,7 @@ class GarageController extends AbstractController
 				],
 			],
 		]);
-		$unlock->setData([
+		$unblock->setData([
 			'labels' => ['Class D', 'Class C', 'Class B', 'Class A', 'Class S'],
 			'datasets' => [
 				[
@@ -158,7 +158,7 @@ class GarageController extends AbstractController
 			'epic'            => ['label' => $entity[4]->getLabel(), 'value' => json_decode($entity[4]->getValue())],
 			'chart'           => $chart,
 			'lock'            => $lock,
-			'unlock'          => $unlock,
+			'unblock'          => $unblock,
 			'gold'            => $gold,
 		]);
     }

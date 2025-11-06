@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Automobili Pininfarina Battista Edizione Nino Farina'
+    Slug: automobili-pininfarina-battista-edizione-nino-farina
+    Brand: 'Automobili Pininfarina'
+    Model: 'Battista Edizione Nino Farina'
+    Class: A
+    'Median Class': 150
+    'Game Update': 39
+    Stars: 6
+    Progression: { Level: 13, 'Full Level': 13, Epic: 16, 'Full Epic': 16 }
+    Orders: { Car: 28, Stat: 57, 'Total Car': 63 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: 70, Setting: 70, Difference: 0 }
+    'Star 2': { Garage: 23, Setting: 23, Difference: 0 }
+    'Star 3': { Garage: 27, Setting: 27, Difference: 0 }
+    'Star 4': { Garage: 36, Setting: 36, Difference: 0 }
+    'Star 5': { Garage: 52, Setting: 52, Difference: 0 }
+    'Star 6': { Garage: 59, Setting: 59, Difference: 0 }
+    Full: { Garage: 267, Setting: 267, Difference: 0 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 2845
+    'Star 1': 3012
+    'Star 2': 3213
+    'Star 3': 3397
+    'Star 4': 3643
+    'Star 5': 3889
+    'Star 6': 4125
+Status:
+    Unblock: { isUnblock: true, toUnblock: false }
+    Gold: { isGold: false, toGold: true }
+    'To Upgrade': { isFull: true, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': true, 'Star 6': true }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '350.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '362.60'
+    'Min Acceleration': '83.26'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '88.29'
+    'Min Handly': '45.33'
+    'Actual Handly': '0.00'
+    'Max Handly': '61.00'
+    'Min Nitro': '26.22'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '42.38'
+    'Min Average': '126.20'
+    'Actual Average': '0.00'
+    'Max Average': '138.57'
+Upgrade:
+    Speed: { Garage: 8, Level: 13, Difference: 5, Setting: 13 }
+    Acceleration: { Garage: 9, Level: 13, Difference: 4, Setting: 13 }
+    Handling: { Garage: 8, Level: 13, Difference: 5, Setting: 13 }
+    Nitro: { Garage: 8, Level: 13, Difference: 5, Setting: 13 }
+    Common: { Garage: 17, Setting: 24, Difference: 7 }
+    Rare: { Garage: 8, Setting: 20, Difference: 12 }
+    Epic: { Garage: 0, Setting: 16, Difference: 16 }
+Price:
+    'Unit Price': { 'Level 01': 16100, 'Level 02': 26300, 'Level 03': 42000, 'Level 04': 63000, 'Level 05': 91000, 'Level 06': 127500, 'Level 07': 178500, 'Level 08': 249500, 'Level 09': 349500, 'Level 10': 489500, 'Level 11': 685000, 'Level 12': 959000, 'Level 13': 1575000, 'Level Common': 80000, 'Level Rare': 160000, 'Level Epic': 480000 }
+    'Price Real Upgrades': { Speed: 793900, Acceleration: 1143400, Handling: 793900, Nitro: 793900 }
+    'Price Total Upgrades': { Speed: 4851900, Acceleration: 4851900, Handling: 4851900, Nitro: 4851900 }
+    'Price Real Imports': { Common: 1360000, Rare: 1280000, Epic: 0 }
+    'Price Total Imports': { Common: 1920000, Rare: 3200000, Epic: 7680000 }
+    'Price Gold': 32207600

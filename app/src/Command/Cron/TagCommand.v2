@@ -151,7 +151,7 @@ class TagCommand extends Command
             $median = $garage->getSettingClass()->getMedian();
             if ($statMax >= $median) {
                 // Add Tag 'To Unlock'
-                $tag = $manager->getRepository(SettingTag::class)->findOneBy(['slug' => 'to-unlock']);
+                $tag = $manager->getRepository(SettingTag::class)->findOneBy(['slug' => 'to-unblock']);
                 $garage->addSettingTag($tag);
             }
 

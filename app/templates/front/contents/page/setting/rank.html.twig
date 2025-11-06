@@ -4,7 +4,9 @@
         <tr>
             <td class="{{ classes.td }} text-center">{{ loop.index }}</td>
             <td class="{{ classes.td }} text-start">
-                <a class="text-decoration-none" href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank">{{ item.brand }} {{ item.model }}</a>
+                <a class="text-decoration-none" href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank">
+                    {{ item.brand }} {{ item.model }}
+                </a>
             </td>
             <td class="{{ classes.td }} text-center">{{ item.rank_star0|number_format(0, '.', ' ') }}</td>
             <td class="{{ classes.td }} text-center">{{ item.rank_star1|number_format(0, '.', ' ') }}</td>

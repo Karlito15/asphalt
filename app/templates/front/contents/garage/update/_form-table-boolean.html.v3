@@ -4,20 +4,20 @@
     {% set form_background, color = 'bg-warning text-warning', 'warning' %}
 {% elseif garage.boolean.0.toUpgrade == 1 %}
     {% set form_background, color = 'bg-info text-info', 'info' %}
-{% elseif garage.boolean.0.locked == 0 and garage.boolean.0.gold == 0 %}
+{% elseif garage.boolean.0.block == 0 and garage.boolean.0.gold == 0 %}
     {% set form_background, color = 'bg-success text-success', 'success' %}
 {% endif %}
 {% set checkbox = 'btn btn-outline-' ~ color ~ '' %}
 
 {% set first = {
-  'locked': form.boolean.0.locked,
+  'block': form.boolean.0.block,
   'fullBlueprint': form.boolean.0.fullBlueprint,
   'gold': form.boolean.0.gold
 }
 %}
 
 {% set second = {
-  'unlock': form.boolean.0.to_unlock,
+  'unblock': form.boolean.0.to_unblock,
   'upgrade': form.boolean.0.to_upgrade,
   'gol': form.boolean.0.to_gold
 }

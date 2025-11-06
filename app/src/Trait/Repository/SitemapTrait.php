@@ -13,6 +13,12 @@ trait SitemapTrait
      */
     public function sitemapDatas(): array
     {
-        return $this->createQueryBuilder('g')->select('g.id')->orderBy('g.id', 'ASC')->getQuery()->getArrayResult();
+        return
+            $this->createQueryBuilder('g')
+                ->select('g.id')
+                ->orderBy('g.id', 'ASC')
+                ->getQuery()
+                ->getArrayResult()
+            ;
     }
 }

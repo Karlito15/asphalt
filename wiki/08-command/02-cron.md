@@ -2,7 +2,7 @@
 
 
 ``` shell
-php bin/console asphalt:cron:status
+php bin/console asphalt:cron:garage
 ```
 ``` shell
 php bin/console asphalt:cron:order-car

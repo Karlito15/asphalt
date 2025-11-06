@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Pagani Huayra R'
+    Slug: pagani-huayra-r
+    Brand: Pagani
+    Model: 'Huayra R'
+    Class: B
+    'Median Class': 146
+    'Game Update': 26
+    Stars: 6
+    Progression: { Level: 13, 'Full Level': 13, Epic: 2, 'Full Epic': 12 }
+    Orders: { Car: 69, Stat: 12, 'Total Car': 71 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: 55, Setting: 55, Difference: 0 }
+    'Star 2': { Garage: 18, Setting: 18, Difference: 0 }
+    'Star 3': { Garage: 24, Setting: 24, Difference: 0 }
+    'Star 4': { Garage: 32, Setting: 32, Difference: 0 }
+    'Star 5': { Garage: 47, Setting: 47, Difference: 0 }
+    'Star 6': { Garage: 50, Setting: 50, Difference: 0 }
+    Full: { Garage: 226, Setting: 226, Difference: 0 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 2356
+    'Star 1': 2600
+    'Star 2': 2883
+    'Star 3': 3173
+    'Star 4': 3566
+    'Star 5': 4030
+    'Star 6': 4363
+Status:
+    Unblock: { isUnblock: true, toUnblock: false }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: true, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': true, 'Star 6': true }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '360.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '376.60'
+    'Min Acceleration': '73.00'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '83.17'
+    'Min Handly': '42.36'
+    'Actual Handly': '0.00'
+    'Max Handly': '58.41'
+    'Min Nitro': '43.41'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '64.38'
+    'Min Average': '129.69'
+    'Actual Average': '0.00'
+    'Max Average': '145.64'
+Upgrade:
+    Speed: { Garage: 6, Level: 13, Difference: 7, Setting: 13 }
+    Acceleration: { Garage: 6, Level: 13, Difference: 7, Setting: 13 }
+    Handling: { Garage: 6, Level: 13, Difference: 7, Setting: 13 }
+    Nitro: { Garage: 6, Level: 13, Difference: 7, Setting: 13 }
+    Common: { Garage: 10, Setting: 32, Difference: 22 }
+    Rare: { Garage: 0, Setting: 20, Difference: 20 }
+    Epic: { Garage: 0, Setting: 12, Difference: 2 }
+Price:
+    'Unit Price': { 'Level 01': 9890, 'Level 02': 16100, 'Level 03': 25800, 'Level 04': 38700, 'Level 05': 55900, 'Level 06': 78500, 'Level 07': 109500, 'Level 08': 153500, 'Level 09': 214500, 'Level 10': 300500, 'Level 11': 421000, 'Level 12': 589000, 'Level 13': 967500, 'Level Common': 70000, 'Level Rare': 140000, 'Level Epic': 420000 }
+    'Price Real Upgrades': { Speed: 224890, Acceleration: 224890, Handling: 224890, Nitro: 224890 }
+    'Price Total Upgrades': { Speed: 2980390, Acceleration: 2980390, Handling: 2980390, Nitro: 2980390 }
+    'Price Real Imports': { Common: 700000, Rare: 0, Epic: 0 }
+    'Price Total Imports': { Common: 2240000, Rare: 2800000, Epic: 5040000 }
+    'Price Gold': 22001560

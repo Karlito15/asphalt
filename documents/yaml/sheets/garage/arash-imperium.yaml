@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Arash Imperium'
+    Slug: arash-imperium
+    Brand: Arash
+    Model: Imperium
+    Class: S
+    'Median Class': 159
+    'Game Update': 44
+    Stars: 6
+    Progression: { Level: 0, 'Full Level': 99, Epic: 0, 'Full Epic': 99 }
+    Orders: { Car: 73, Stat: 4, 'Total Car': 76 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: 0, Setting: 99, Difference: 99 }
+    'Star 2': { Garage: 0, Setting: 99, Difference: 99 }
+    'Star 3': { Garage: 0, Setting: 99, Difference: 99 }
+    'Star 4': { Garage: 0, Setting: 99, Difference: 99 }
+    'Star 5': { Garage: 0, Setting: 99, Difference: 99 }
+    'Star 6': { Garage: 0, Setting: 99, Difference: 99 }
+    Full: { Garage: 0, Setting: 594, Difference: 594 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 4122
+    'Star 1': 0
+    'Star 2': 0
+    'Star 3': 0
+    'Star 4': 0
+    'Star 5': 0
+    'Star 6': 5315
+Status:
+    Unblock: { isUnblock: false, toUnblock: true }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': false, 'Star 2': false, 'Star 3': false, 'Star 4': false, 'Star 5': false, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '520.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '535.30'
+    'Min Acceleration': '87.40'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '89.83'
+    'Min Handly': '43.71'
+    'Actual Handly': '0.00'
+    'Max Handly': '55.36'
+    'Min Nitro': '12.78'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '33.57'
+    'Min Average': '165.97'
+    'Actual Average': '0.00'
+    'Max Average': '178.52'
+Upgrade:
+    Speed: { Garage: 3, Level: 0, Difference: -3, Setting: 99 }
+    Acceleration: { Garage: 3, Level: 0, Difference: -3, Setting: 99 }
+    Handling: { Garage: 3, Level: 0, Difference: -3, Setting: 99 }
+    Nitro: { Garage: 3, Level: 0, Difference: -3, Setting: 99 }
+    Common: { Garage: 8, Setting: 99, Difference: 91 }
+    Rare: { Garage: 0, Setting: 99, Difference: 99 }
+    Epic: { Garage: 0, Setting: 99, Difference: 0 }
+Price:
+    'Unit Price': { 'Level 01': 99999, 'Level 02': 99999, 'Level 03': 99999, 'Level 04': 99999, 'Level 05': 99999, 'Level 06': 99999, 'Level 07': 99999, 'Level 08': 99999, 'Level 09': 99999, 'Level 10': 999999, 'Level 11': 999999, 'Level 12': 999999, 'Level 13': 999999, 'Level Common': 99999, 'Level Rare': 999999, 'Level Epic': 999999 }
+    'Price Real Upgrades': { Speed: 299997, Acceleration: 299997, Handling: 299997, Nitro: 299997 }
+    'Price Total Upgrades': { Speed: 4899987, Acceleration: 4899987, Handling: 4899987, Nitro: 4899987 }
+    'Price Real Imports': { Common: 799992, Rare: 0, Epic: 0 }
+    'Price Total Imports': { Common: 9899901, Rare: 98999901, Epic: 98999901 }
+    'Price Gold': 227499651

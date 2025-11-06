@@ -28,23 +28,21 @@ final class ReadController extends AbstractController
 
     /**
      * @param Request $request
+     * @param GarageApp $garage
      * @param EntityManagerInterface $manager
      * @param TranslatorInterface $translator
-     * @param int $id
-     * @param string $slug
      * @return Response
      */
     #[Route('/read/{slug}-{id}.php', name: 'read', requirements: ['id' => Requirement::DIGITS, 'slug' => Requirement::ASCII_SLUG], methods: ['GET'])]
     public function read(
         Request $request,
+        GarageApp $garage,
         EntityManagerInterface $manager,
         TranslatorInterface $translator,
-        int $id,
-        string $slug
     ): Response
     {
         // Entity
-        $entity = $manager->getRepository(GarageApp::class)->getGarageOne($id, $slug);
+        $entity = $manager->getRepository(GarageApp::class)->getGarageOne($garage->getId(), $garage->getSlug());
 
         // Variables
         $title = $entity['brand'] . ' ' . $entity['model'];

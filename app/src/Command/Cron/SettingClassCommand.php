@@ -7,6 +7,7 @@ use App\Entity\SettingClass;
 use App\Event\Setting\ClassEvent;
 use App\Trait\Command\ConfigureTrait;
 use App\Trait\Command\InitializeTrait;
+use App\Trait\Command\ResumeTrait;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -27,6 +28,7 @@ class SettingClassCommand extends Command
 {
     use ConfigureTrait;
     use InitializeTrait;
+    use ResumeTrait;
 
     protected static string $title = '::::: Counter Class :::::';
 
@@ -47,12 +49,14 @@ class SettingClassCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         // Init Variables
-        $io = new SymfonyStyle($input, $output);
-        $choice = $input->getArgument('choice');
+        $io        = new SymfonyStyle($input, $output);
+        $choice    = $input->getArgument('choice');
+        $stopwatch = $this->stopwatch;
 
         // Start
         $io->title(self::$title);
         $io->section($this->getDescription());
+        $output->writeln(shell_exec('clear'));
 
         // Question
         if (is_null($choice)) {
@@ -60,6 +64,9 @@ class SettingClassCommand extends Command
             $question = new ChoiceQuestion('Do you want to update a Class ?', ['D', 'C', 'B', 'A', 'S'], 'S');
             $choice = $helper->ask($input, $output, $question);
         }
+
+        // Execution time : start
+        $stopwatch->start(self::$title);
 
         // Update Setting Class
         switch ($choice) :
@@ -104,6 +111,13 @@ class SettingClassCommand extends Command
                 $io->error('Houston we have a problem !');
                 break;
         endswitch;
+
+        // Execution time : stop
+        $event      = $stopwatch->stop(self::$title);
+        $duration   = $event->getDuration() / 1000;
+
+        // Resume
+        self::resume($this->io, $duration);
 
         return ($result) ? Command::SUCCESS : Command::FAILURE;
     }

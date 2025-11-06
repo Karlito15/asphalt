@@ -37,16 +37,16 @@ final class ChartController extends AbstractController
     {
         /** Conditions */
         $total     = [];
-        $unlock    = ['locked' => false];
-        $locked    = ['where' => 'locked', 'value' => true];
-        $gold      = ['locked' => false, 'gold'      => true];
-        $tounlock  = ['locked' => false, 'toUnlock'  => true];
-        $toupgrade = ['locked' => false, 'toUpgrade' => true];
-        $togold    = ['locked' => true, 'toGold'     => true];
+        $unblock    = ['block' => false];
+        $block    = ['where' => 'block', 'value' => true];
+        $gold      = ['block' => false, 'gold'      => true];
+        $tounblock  = ['block' => false, 'toUnlock'  => true];
+        $toupgrade = ['block' => false, 'toUpgrade' => true];
+        $togold    = ['block' => true, 'toGold'     => true];
 
         /** Query */
-//        $booleans = $this->booleans->findBy($locked, [], 10);
-        $booleans = $this->booleans->getCarsByClass('B', $locked);
+//        $booleans = $this->booleans->findBy($block, [], 10);
+        $booleans = $this->booleans->getCarsByClass('B', $block);
         dd($booleans);
     }
 

@@ -48,11 +48,11 @@ class StatisticService implements CacheServiceInterface
             $totalA          = $this->getGarageByClass('A');
             $totalS          = $this->getGarageByClass('S');
 
-            $unlockedD       = $this->getStatusByClass('D', 'unblock', true);
-            $unlockedC       = $this->getStatusByClass('C', 'unblock', true);
-            $unlockedB       = $this->getStatusByClass('B', 'unblock', true);
-            $unlockedA       = $this->getStatusByClass('A', 'unblock', true);
-            $unlockedS       = $this->getStatusByClass('S', 'unblock', true);
+            $unblockedD       = $this->getStatusByClass('D', 'unblock', true);
+            $unblockedC       = $this->getStatusByClass('C', 'unblock', true);
+            $unblockedB       = $this->getStatusByClass('B', 'unblock', true);
+            $unblockedA       = $this->getStatusByClass('A', 'unblock', true);
+            $unblockedS       = $this->getStatusByClass('S', 'unblock', true);
 
             $lockedD         = $this->getStatusByClass('D', 'unblock', false);
             $lockedC         = $this->getStatusByClass('C', 'unblock', false);
@@ -94,12 +94,12 @@ class StatisticService implements CacheServiceInterface
                     'Total' => $totalD + $totalC + $totalB + $totalA + $totalS
                 ],
                 'unblock'        => [
-                    'D' => $unlockedD,
-                    'C' => $unlockedC,
-                    'B' => $unlockedB,
-                    'A' => $unlockedA,
-                    'S' => $unlockedS,
-                    'Total' => $unlockedD + $unlockedC + $unlockedB + $unlockedA + $unlockedS
+                    'D' => $unblockedD,
+                    'C' => $unblockedC,
+                    'B' => $unblockedB,
+                    'A' => $unblockedA,
+                    'S' => $unblockedS,
+                    'Total' => $unblockedD + $unblockedC + $unblockedB + $unblockedA + $unblockedS
                 ],
                 'block'          => [
                     'D' => $lockedD,

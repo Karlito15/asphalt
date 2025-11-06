@@ -4,6 +4,7 @@
     {% for item in entities %}
         <tr>
             <td class="{{ classes.td }}">{{ component('ValueInteger', {value: item.id}) }}</td>
+            <td class="{{ classes.td }}">{{ item.region.name }}</td>
             <td class="{{ classes.td }}">{{ item.nameEnglish }}</td>
             <td class="{{ classes.td }}">{{ item.nameFrench }}</td>
             <td class="{{ classes.td }}">{{ item.slug }}</td>
@@ -25,6 +26,7 @@
 {% macro legend() %}
     <tr>
         <th>{{ 'text.id'|trans }}</th>
+        <th>{{ 'text.region'|trans }}</th>
         <th>{{ 'text.name-english'|trans|raw }}</th>
         <th>{{ 'text.name-french'|trans|raw }}</th>
         <th>{{ 'text.slug'|trans }}</th>

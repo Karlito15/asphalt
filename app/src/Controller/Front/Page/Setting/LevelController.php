@@ -3,6 +3,7 @@
 namespace App\Controller\Front\Page\Setting;
 
 use App\Repository\GarageAppRepository;
+use App\Trait\Controller\WebTrait;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -10,24 +11,38 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-#[Route('{_locale<%app.supported_locales%>}/pages/setting/', name: 'app.page.setting.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+#[Route(
+    '{_locale<%app.supported_locales%>}/pages/setting/',
+    name: 'app.page.setting.',
+    requirements: ['letter' => Requirement::ASCII_SLUG],
+    options: ['expose' => false],
+    defaults: ['letter' => 'S'],
+    methods: ['GET'],
+    schemes: ['http', 'https'],
+    format: 'html',
+    utf8: true
+)]
 final class LevelController extends AbstractController
 {
-    #[Route('level/class-{letter}.php', name: 'level', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
-    public function level(Request $request, GarageAppRepository $garage, TranslatorInterface $translator): Response
+    use WebTrait;
+
+    #[Route('level/class-{letter}.php', name: 'level')]
+    public function level(Request $request, GarageAppRepository $repository, TranslatorInterface $translator): Response
     {
         // Variables
         $title   = $translator->trans('text.level');
-        $letter  = strtoupper($request->attributes->get('letter'));
-        $matchLetter = match ($letter) {
-            'A' => true,
-            'B' => true,
-            'C' => true,
-            'D' => true,
-            'S' => true,
-            default => false,
-        };
+        $letter      = self::getLetter($request->attributes->get('letter'));
+        $matchLetter = self::getControlLetter($letter);
+        $entities    = $repository->getGaragePageFilter([
+            'status.unblock' => true,
+            'status.fullUpgradeSpeed' => false,
+            'status.fullUpgradeAcceleration' => false,
+            'status.fullUpgradeHandling' => false,
+            'status.fullUpgradeNitro' => false,
+            'settingClass.value' => $letter,
+        ]);
 
+        // Letter Not Match
         if (!$matchLetter) {
             throw $this->createNotFoundException('Class Not Found');
         }
@@ -37,7 +52,7 @@ final class LevelController extends AbstractController
             'current_page'    => $request->attributes->get('_route'),
             'container'       => 'container',
             'breadcrumb'      => ['level1' => $translator->trans('text.filter'), 'level2' => $title],
-            'entities'        => $garage->getGaragePageSetting($letter),
+            'entities'        => $entities,
         ]);
     }
 }

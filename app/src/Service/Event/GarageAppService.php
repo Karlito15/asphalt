@@ -70,7 +70,7 @@ class GarageAppService
          * @var GarageStatus $status
          */
         $garage = $event->garage;
-        $status = $garage->getStatus()->getValues()[0];
+        $status = $event->getStatus();
 
         if ($garage instanceof GarageApp) {
             /** Car 3 Stars */

@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Hyundai N Vision 74 Concept'
+    Slug: hyundai-n-vision-74-concept
+    Brand: Hyundai
+    Model: 'N Vision 74 Concept'
+    Class: S
+    'Median Class': 159
+    'Game Update': 42
+    Stars: 6
+    Progression: { Level: 0, 'Full Level': 13, Epic: 0, 'Full Epic': 16 }
+    Orders: { Car: 11, Stat: 76, 'Total Car': 76 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: '', Setting: Key, Difference: 1 }
+    'Star 2': { Garage: 23, Setting: 40, Difference: 17 }
+    'Star 3': { Garage: 0, Setting: 45, Difference: 45 }
+    'Star 4': { Garage: 0, Setting: 60, Difference: 60 }
+    'Star 5': { Garage: 0, Setting: 70, Difference: 70 }
+    'Star 6': { Garage: 0, Setting: 85, Difference: 85 }
+    Full: { Garage: 23, Setting: 300, Difference: 277 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 3143
+    'Star 1': 3287
+    'Star 2': 3455
+    'Star 3': 3634
+    'Star 4': 3820
+    'Star 5': 4034
+    'Star 6': 4239
+Status:
+    Unblock: { isUnblock: false, toUnblock: false }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': false, 'Star 2': false, 'Star 3': false, 'Star 4': false, 'Star 5': false, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '390.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '397.50'
+    'Min Acceleration': '70.30'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '72.72'
+    'Min Handly': '40.79'
+    'Actual Handly': '0.00'
+    'Max Handly': '46.36'
+    'Min Nitro': '35.00'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '44.72'
+    'Min Average': '134.02'
+    'Actual Average': '0.00'
+    'Max Average': '140.33'
+Upgrade:
+    Speed: { Garage: 0, Level: 0, Difference: 0, Setting: 13 }
+    Acceleration: { Garage: 0, Level: 0, Difference: 0, Setting: 13 }
+    Handling: { Garage: 0, Level: 0, Difference: 0, Setting: 13 }
+    Nitro: { Garage: 0, Level: 0, Difference: 0, Setting: 13 }
+    Common: { Garage: 0, Setting: 28, Difference: 28 }
+    Rare: { Garage: 0, Setting: 20, Difference: 20 }
+    Epic: { Garage: 0, Setting: 16, Difference: 0 }
+Price:
+    'Unit Price': { 'Level 01': 23000, 'Level 02': 37500, 'Level 03': 60000, 'Level 04': 90000, 'Level 05': 130000, 'Level 06': 182000, 'Level 07': 255000, 'Level 08': 356500, 'Level 09': 499500, 'Level 10': 699000, 'Level 11': 979000, 'Level 12': 1370000, 'Level 13': 2250000, 'Level Common': 90000, 'Level Rare': 180000, 'Level Epic': 540000 }
+    'Price Real Upgrades': { Speed: 0, Acceleration: 0, Handling: 0, Nitro: 0 }
+    'Price Total Upgrades': { Speed: 6931500, Acceleration: 6931500, Handling: 6931500, Nitro: 6931500 }
+    'Price Real Imports': { Common: 0, Rare: 0, Epic: 0 }
+    'Price Total Imports': { Common: 2520000, Rare: 3600000, Epic: 8640000 }
+    'Price Gold': 42486000

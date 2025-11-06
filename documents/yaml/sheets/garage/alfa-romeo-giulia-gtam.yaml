@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Alfa Romeo Giulia GTAm'
+    Slug: alfa-romeo-giulia-gtam
+    Brand: 'Alfa Romeo'
+    Model: 'Giulia GTAm'
+    Class: D
+    'Median Class': 125
+    'Game Update': 35
+    Stars: 5
+    Progression: { Level: 8, 'Full Level': 12, Epic: 3, 'Full Epic': 12 }
+    Orders: { Car: 34, Stat: 30, 'Total Car': 43 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: '0', Setting: Key, Difference: 1 }
+    'Star 2': { Garage: 22, Setting: 22, Difference: 0 }
+    'Star 3': { Garage: 30, Setting: 30, Difference: 0 }
+    'Star 4': { Garage: 15, Setting: 35, Difference: 20 }
+    'Star 5': { Garage: 0, Setting: 38, Difference: 38 }
+    'Star 6': { Garage: 0, Setting: 0, Difference: 0 }
+    Full: { Garage: 67, Setting: 125, Difference: 58 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 1406
+    'Star 1': 1601
+    'Star 2': 1828
+    'Star 3': 2076
+    'Star 4': 2393
+    'Star 5': 2895
+    'Star 6': 0
+Status:
+    Unblock: { isUnblock: false, toUnblock: false }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': false, 'Star 2': true, 'Star 3': true, 'Star 4': false, 'Star 5': false, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '300.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '312.20'
+    'Min Acceleration': '67.60'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '77.28'
+    'Min Handly': '30.37'
+    'Actual Handly': '0.00'
+    'Max Handly': '45.17'
+    'Min Nitro': '16.20'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '47.09'
+    'Min Average': '103.54'
+    'Actual Average': '0.00'
+    'Max Average': '120.44'
+Upgrade:
+    Speed: { Garage: 6, Level: 8, Difference: 2, Setting: 12 }
+    Acceleration: { Garage: 6, Level: 8, Difference: 2, Setting: 12 }
+    Handling: { Garage: 6, Level: 8, Difference: 2, Setting: 12 }
+    Nitro: { Garage: 6, Level: 8, Difference: 2, Setting: 12 }
+    Common: { Garage: 12, Setting: 28, Difference: 16 }
+    Rare: { Garage: 0, Setting: 20, Difference: 20 }
+    Epic: { Garage: 0, Setting: 12, Difference: 3 }
+Price:
+    'Unit Price': { 'Level 01': 23000, 'Level 02': 37500, 'Level 03': 60000, 'Level 04': 90000, 'Level 05': 130000, 'Level 06': 182000, 'Level 07': 255000, 'Level 08': 356500, 'Level 09': 499500, 'Level 10': 699000, 'Level 11': 979000, 'Level 12': 1370000, 'Level 13': 2250000, 'Level Common': 90000, 'Level Rare': 180000, 'Level Epic': 540000 }
+    'Price Real Upgrades': { Speed: 522500, Acceleration: 522500, Handling: 522500, Nitro: 522500 }
+    'Price Total Upgrades': { Speed: 4681500, Acceleration: 4681500, Handling: 4681500, Nitro: 4681500 }
+    'Price Real Imports': { Common: 1080000, Rare: 0, Epic: 0 }
+    'Price Total Imports': { Common: 2520000, Rare: 3600000, Epic: 6480000 }
+    'Price Gold': 31326000

@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Jaguar XJ220S TWR'
+    Slug: jaguar-xj220s-twr
+    Brand: Jaguar
+    Model: 'XJ220S TWR'
+    Class: S
+    'Median Class': 159
+    'Game Update': 28
+    Stars: 6
+    Progression: { Level: 8, 'Full Level': 13, Epic: 8, 'Full Epic': 16 }
+    Orders: { Car: 9, Stat: 62, 'Total Car': 76 }
+    'Updated At': '2025/11/06 18:20'
+Blueprint:
+    'Star 1': { Garage: '0', Setting: Key, Difference: 1 }
+    'Star 2': { Garage: 40, Setting: 40, Difference: 0 }
+    'Star 3': { Garage: 45, Setting: 45, Difference: 0 }
+    'Star 4': { Garage: 22, Setting: 60, Difference: 38 }
+    'Star 5': { Garage: 0, Setting: 70, Difference: 70 }
+    'Star 6': { Garage: 0, Setting: 85, Difference: 85 }
+    Full: { Garage: 107, Setting: 300, Difference: 193 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 3089
+    'Star 1': 3229
+    'Star 2': 3396
+    'Star 3': 3573
+    'Star 4': 3758
+    'Star 5': 3973
+    'Star 6': 4173
+Status:
+    Unblock: { isUnblock: false, toUnblock: false }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': false, 'Star 2': true, 'Star 3': true, 'Star 4': false, 'Star 5': false, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '368.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '383.20'
+    'Min Acceleration': '70.30'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '75.17'
+    'Min Handly': '50.19'
+    'Actual Handly': '0.00'
+    'Max Handly': '60.57'
+    'Min Nitro': '67.37'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '82.21'
+    'Min Average': '138.97'
+    'Actual Average': '0.00'
+    'Max Average': '150.29'
+Upgrade:
+    Speed: { Garage: 0, Level: 8, Difference: 8, Setting: 13 }
+    Acceleration: { Garage: 0, Level: 8, Difference: 8, Setting: 13 }
+    Handling: { Garage: 0, Level: 8, Difference: 8, Setting: 13 }
+    Nitro: { Garage: 0, Level: 8, Difference: 8, Setting: 13 }
+    Common: { Garage: 0, Setting: 28, Difference: 28 }
+    Rare: { Garage: 0, Setting: 20, Difference: 20 }
+    Epic: { Garage: 0, Setting: 16, Difference: 8 }
+Price:
+    'Unit Price': { 'Level 01': 23000, 'Level 02': 37500, 'Level 03': 60000, 'Level 04': 90000, 'Level 05': 130000, 'Level 06': 182000, 'Level 07': 255000, 'Level 08': 356500, 'Level 09': 499500, 'Level 10': 699000, 'Level 11': 979000, 'Level 12': 1370000, 'Level 13': 2250000, 'Level Common': 90000, 'Level Rare': 180000, 'Level Epic': 540000 }
+    'Price Real Upgrades': { Speed: 0, Acceleration: 0, Handling: 0, Nitro: 0 }
+    'Price Total Upgrades': { Speed: 6931500, Acceleration: 6931500, Handling: 6931500, Nitro: 6931500 }
+    'Price Real Imports': { Common: 0, Rare: 0, Epic: 0 }
+    'Price Total Imports': { Common: 2520000, Rare: 3600000, Epic: 8640000 }
+    'Price Gold': 42486000

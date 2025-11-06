@@ -1,12 +1,11 @@
 {% block table %}
     <tbody>
     {% for item in entities %}
-        {% set garage = item.settingBrand.name~' '~item.model %}
         <tr>
             <td class="{{ classes.td }} text-center">{{ loop.index }}</td>
             <td class="{{ classes.td }} text-start">
                 <a class="text-decoration-none" href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank">
-                    {{ garage }}
+                    {{ item.brand }} {{ item.model }}
                 </a>
             </td>
             <td class="{{ classes.td }} text-center">{{ item.gameUpdate }}</td>

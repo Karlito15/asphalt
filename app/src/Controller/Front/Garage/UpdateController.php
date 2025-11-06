@@ -87,6 +87,28 @@ final class UpdateController extends AbstractController
              return $this->redirectToRoute('app.garage.update', ['slug' => $entity->getSlug(), 'id' => $entity->getId()]);
         }
 
+        // Logs
+//        $logApp         = $manager->getRepository(LogEntry::class)->getLogEntries($entity);
+//        $logBlue        = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getBlueprint()->getValues()[0]);
+//        $logGauntlet    = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getGauntlet()->getValues()[0]);
+//        $logRank        = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getRank()->getValues()[0]);
+//        $logStatus      = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getStatus()->getValues()[0]);
+//        $logActual      = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getStatActual()->getValues()[0]);
+//        $logMax         = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getStatMax()->getValues()[0]);
+//        $logMin         = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getStatMin()->getValues()[0]);
+//        $logUpgrades    = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getUpgrade()->getValues()[0]);
+//        $logBlueprint   = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getSettingBlueprint());
+//        $logBrand       = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getSettingBrand());
+//        $logClass       = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getSettingClass());
+//        $logLevel       = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getSettingLevel());
+//        $logPrice       = $manager->getRepository(LogEntry::class)->getLogEntries($entity->getSettingUnitPrice());
+//        $logs           = array_merge($logApp,
+//            $logBlue, $logGauntlet, $logRank, $logStatus, $logActual, $logMax, $logMin, $logUpgrades,
+//            $logBlueprint, $logBrand, $logClass, $logLevel, $logPrice
+//        );
+//        /** @var LogEntry $logs */
+//        dd($logs[0]->getLoggedAt()->format('Y-m-d H:i'));
+
         return $this->render('@App/front/contents/garage/update.html.twig', [
             'controller_name' => $car,
             'current_page'    => $request->attributes->get('_route'),

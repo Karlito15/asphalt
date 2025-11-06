@@ -6,8 +6,14 @@ namespace App\Interface;
 
 interface CacheServiceInterface
 {
+    /**
+     * @return array
+     */
     public function cacheCreate(): array;
 
+    /**
+     * @return void
+     */
     public function cacheDelete(): void;
 
 }

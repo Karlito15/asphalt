@@ -4,7 +4,9 @@
         <tr>
             <td class="text-center">{{ loop.index }}</td>
             <td class="text-start">
-                <a class="text-decoration-none" href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank">{{ item.brand }} {{ item.model }}</a>
+                <a class="text-decoration-none" href="{{ path('app.garage.update', {'id': item.id, 'slug': item.slug}) }}" target="_blank">
+                    {{ item.brand }} {{ item.model }}
+                </a>
             </td>
             <td class="text-center">{{ item.garage_star1 }}</td>
             <td class="text-center">{{ item.blueprint_star1 }}</td>

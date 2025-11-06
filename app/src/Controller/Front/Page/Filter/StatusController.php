@@ -11,7 +11,17 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-#[Route('{_locale<%app.supported_locales%>}/pages/filter-by-', name: 'app.page.filter.', options: ['expose' => false], schemes: ['http', 'https'], format: 'html', utf8: true)]
+#[Route(
+    '{_locale<%app.supported_locales%>}/pages/filter-by-',
+    name: 'app.page.filter.',
+    requirements: ['letter' => Requirement::ASCII_SLUG],
+    options: ['expose' => false],
+    defaults: ['letter' => 'S'],
+    methods: ['GET'],
+    schemes: ['http', 'https'],
+    format: 'html',
+    utf8: true
+)]
 final class StatusController extends AbstractController
 {
     use WebTrait;
@@ -21,20 +31,17 @@ final class StatusController extends AbstractController
         private readonly TranslatorInterface $translator,
     ) {}
 
-    #[Route('locked/class-{letter}.php', name: 'locked', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
-    public function locked(Request $request): Response
+    #[Route('unblock/class-{letter}.php', name: 'unblock')]
+    public function unblock(Request $request): Response
     {
         // Variables
-        $title  = $this->translator->trans('text.locked');
-        $letter = strtoupper($request->attributes->get('letter'));
-        $matchLetter = match ($letter) {
-            'A' => true,
-            'B' => true,
-            'C' => true,
-            'D' => true,
-            'S' => true,
-            default => false,
-        };
+        $title       = $this->translator->trans('text.unblock');
+        $letter      = self::getLetter($request->attributes->get('letter'));
+        $matchLetter = self::getControlLetter($letter);
+        $entities    = $this->repository->getGaragePageFilter([
+            'status.unblock' => true,
+            'settingClass.value' => $letter,
+        ]);
 
         // Letter Not Match
         $this->return404($matchLetter);
@@ -44,24 +51,21 @@ final class StatusController extends AbstractController
             'current_page'    => $request->attributes->get('_route'),
             'container'       => 'container',
             'breadcrumb'      => ['level1' => $this->translator->trans('text.filter'), 'level2' => $title],
-            'entities'        => $this->repository->getUnlockedCarsByClass($letter, false),
+            'entities'        => $entities,
         ]);
     }
 
-    #[Route('unlock/class-{letter}.php', name: 'unlock', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
-    public function unlock(Request $request): Response
+    #[Route('block/class-{letter}.php', name: 'block')]
+    public function block(Request $request): Response
     {
         // Variables
-        $title  = $this->translator->trans('text.unblock');
-        $letter = strtoupper($request->attributes->get('letter'));
-        $matchLetter = match ($letter) {
-            'A' => true,
-            'B' => true,
-            'C' => true,
-            'D' => true,
-            'S' => true,
-            default => false,
-        };
+        $title       = $this->translator->trans('text.block');
+        $letter      = self::getLetter($request->attributes->get('letter'));
+        $matchLetter = self::getControlLetter($letter);
+        $entities    = $this->repository->getGaragePageFilter([
+            'status.unblock' => false,
+            'settingClass.value' => $letter,
+        ]);
 
         // Letter Not Match
         $this->return404($matchLetter);
@@ -71,24 +75,47 @@ final class StatusController extends AbstractController
             'current_page'    => $request->attributes->get('_route'),
             'container'       => 'container',
             'breadcrumb'      => ['level1' => $this->translator->trans('text.filter'), 'level2' => $title],
-            'entities'        => $this->repository->getUnlockedCarsByClass($letter, true),
+            'entities'        => $entities,
         ]);
     }
 
-    #[Route('gold/class-{letter}.php', name: 'gold', requirements: ['letter' => Requirement::ASCII_SLUG], defaults: ['letter' => 'S'], methods: ['GET'])]
+    #[Route('to-unblock/class-{letter}.php', name: 'to.unblock')]
+    public function toUnblock(Request $request): Response
+    {
+        // Variables
+        $title       = $this->translator->trans('text.to.unblock');
+        $letter      = self::getLetter($request->attributes->get('letter'));
+        $matchLetter = self::getControlLetter($letter);
+        $entities    = $this->repository->getGaragePageFilter([
+            'status.unblock' => false,
+            'status.toUnblock' => true,
+            'settingClass.value' => $letter,
+        ]);
+
+        // Letter Not Match
+        $this->return404($matchLetter);
+
+        return $this->render('@App/front/contents/page/filter.html.twig', [
+            'controller_name' => $title,
+            'current_page'    => $request->attributes->get('_route'),
+            'container'       => 'container',
+            'breadcrumb'      => ['level1' => $this->translator->trans('text.filter'), 'level2' => $title],
+            'entities'        => $entities,
+        ]);
+    }
+
+    #[Route('gold/class-{letter}.php', name: 'gold')]
     public function gold(Request $request): Response
     {
         // Variables
-        $title  = $this->translator->trans('text.gold');
-        $letter = strtoupper($request->attributes->get('letter'));
-        $matchLetter = match ($letter) {
-            'A' => true,
-            'B' => true,
-            'C' => true,
-            'D' => true,
-            'S' => true,
-            default => false,
-        };
+        $title       = $this->translator->trans('text.gold');
+        $letter      = self::getLetter($request->attributes->get('letter'));
+        $matchLetter = self::getControlLetter($letter);
+        $entities    = $this->repository->getGaragePageFilter([
+            'status.unblock' => true,
+            'status.gold' => true,
+            'settingClass.value' => $letter,
+        ]);
 
         // Letter Not Match
         $this->return404($matchLetter);
@@ -98,8 +125,57 @@ final class StatusController extends AbstractController
             'current_page'    => $request->attributes->get('_route'),
             'container'       => 'container',
             'breadcrumb'      => ['level1' => $this->translator->trans('text.filter'), 'level2' => $title],
-            'entities'        => $this->repository->getGoldedCarsByClass($letter, true),
-//            'entities'           => $this->repository->getGarageCondition(['g.gold' => 1], ['g.gameUpdate' => 'ASC']),
+            'entities'        => $entities,
+        ]);
+    }
+
+    #[Route('to-gold/class-{letter}.php', name: 'to.gold')]
+    public function toGold(Request $request): Response
+    {
+        // Variables
+        $title       = $this->translator->trans('text.to.gold');
+        $letter      = self::getLetter($request->attributes->get('letter'));
+        $matchLetter = self::getControlLetter($letter);
+        $entities    = $this->repository->getGaragePageFilter([
+            'status.unblock' => true,
+            'status.toGold' => true,
+            'settingClass.value' => $letter,
+        ]);
+
+        // Letter Not Match
+        $this->return404($matchLetter);
+
+        return $this->render('@App/front/contents/page/filter.html.twig', [
+            'controller_name' => $title,
+            'current_page'    => $request->attributes->get('_route'),
+            'container'       => 'container',
+            'breadcrumb'      => ['level1' => $this->translator->trans('text.filter'), 'level2' => $title],
+            'entities'        => $entities,
+        ]);
+    }
+
+    #[Route('to-upgrade/class-{letter}.php', name: 'to.upgrade')]
+    public function toUpgrade(Request $request): Response
+    {
+        // Variables
+        $title       = $this->translator->trans('text.to.upgrade');
+        $letter      = self::getLetter($request->attributes->get('letter'));
+        $matchLetter = self::getControlLetter($letter);
+        $entities    = $this->repository->getGaragePageFilter([
+            'status.unblock' => true,
+            'status.toUpgradeLevel' => true,
+            'settingClass.value' => $letter,
+        ]);
+
+        // Letter Not Match
+        $this->return404($matchLetter);
+
+        return $this->render('@App/front/contents/page/filter.html.twig', [
+            'controller_name' => $title,
+            'current_page'    => $request->attributes->get('_route'),
+            'container'       => 'container',
+            'breadcrumb'      => ['level1' => $this->translator->trans('text.filter'), 'level2' => $title],
+            'entities'        => $entities,
         ]);
     }
 }
