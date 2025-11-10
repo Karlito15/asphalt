@@ -47,7 +47,7 @@ final class ChartController extends AbstractController
         /** Query */
 //        $booleans = $this->booleans->findBy($block, [], 10);
         $booleans = $this->booleans->getCarsByClass('B', $block);
-        dd($booleans);
+//        dd($booleans);
     }
 
 

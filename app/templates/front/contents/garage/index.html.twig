@@ -40,12 +40,12 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link href="{{ asset('libraries/bootstrap-table/1.25.0/dist/bootstrap-table.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('libraries/bootstrap-table/1.25/dist/bootstrap-table.min.css') }}" rel="stylesheet">
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="{{ asset('libraries/bootstrap-table/1.25.0/dist/bootstrap-table.min.js') }}"></script>
+    <script src="{{ asset('libraries/bootstrap-table/1.25/dist/bootstrap-table.min.js') }}"></script>
     {% include '@App/front/contents/garage/_script-datatable-garage.html.twig' %}
 {% endblock %}
 
@@ -54,8 +54,8 @@
         <th class="col-xxl-auto text-center">&nbsp;</th>
         <th class="col-xxl-1 text-center" data-sortable="true">{{ 'text.game.update'|trans }}</th>
         <th class="col-xxl-1 text-center">{{ 'text.class'|trans }}</th>
-        <th class="col-xxl-1 text-center">{{ 'text.unblock'|trans }}</th>
-        <th class="col-xxl-1 text-center">{{ 'text.gold'|trans }}</th>
+        <th class="col-xxl-1 text-center text-success">{{ 'text.unblock'|trans }}</th>
+        <th class="col-xxl-1 text-center text-warning">{{ 'text.gold'|trans }}</th>
         <th class="col-xxl-auto text-start" data-sortable="true">{{ 'text.brand'|trans }}</th>
         <th class="col-xxl-auto text-start" data-sortable="true">{{ 'text.model'|trans }}</th>
         <th class="col-xxl-auto text-end">{{ 'text.action'|trans }}</th>

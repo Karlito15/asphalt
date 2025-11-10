@@ -1,0 +1,4 @@
+http://frontendfreecode.com/bootstrap-switchable-grid-view-and-list-view
+https://www.w3schools.com/howto/howto_js_list_grid_view.asp
+https://codepen.io/AElkhodary/pen/wyvBZW
+https://www.codehim.com/others/bootstrap-list-grid-view-switcher-with-jquery/

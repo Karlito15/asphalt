@@ -1,7 +1,6 @@
 {#<div{{ attributes }}>#}
 {#    <!-- component HTML -->#}
 {#</div>#}
-
 {% if form.vars.block_prefixes.1 == 'integer' %}
     {% set typeField = 'number' %}
 {% else %}
@@ -10,8 +9,8 @@
 
 {{ form_label(form) }}
 <div class="input-group">{# input-group-sm #}
-    {{ form_widget(form) }}
-    <span class="input-group-text" id="visible-addon">{{ entity }}</span>
+    {{ form_widget(form, {'attr': {'max': entity}}) }}
+    <span class="input-group-text">{{ entity }}</span>
 </div>
 {{ form_help(form) }}
 {{ form_errors(form) }}

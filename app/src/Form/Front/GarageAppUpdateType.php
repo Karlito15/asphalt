@@ -188,10 +188,10 @@ class GarageAppUpdateType extends AbstractType
                 'allow_add'     => true,
                 'entry_type'    => GarageStatMinType::class,
             ])
-//            ->add('status', CollectionType::class, [
-//                'allow_add'     => true,
-//                'entry_type'    => GarageStatusType::class,
-//            ])
+            ->add('status', CollectionType::class, [
+                'allow_add'     => true,
+                'entry_type'    => GarageStatusType::class,
+            ])
             ->add('upgrade', CollectionType::class, [
                 'allow_add'     => true,
                 'entry_type'    => GarageUpgradeType::class,

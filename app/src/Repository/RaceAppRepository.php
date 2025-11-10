@@ -29,7 +29,7 @@ class RaceAppRepository extends ServiceEntityRepository
      */
     public function getRaces(): array
     {
-        return $this->query()->getQuery()->getArrayResult();
+        return $this->queryRace()->getQuery()->getArrayResult();
     }
 
     /**
@@ -82,7 +82,7 @@ class RaceAppRepository extends ServiceEntityRepository
      */
     public function search(?RaceDTO $search): array
     {
-        $qb = $this->query();
+        $qb = $this->queryRace();
         // WHERE
         if ($search->mode instanceof RaceMode) {
             $qb->andWhere('RaceMode.name IN (:mode)')->setParameter('mode', $search->mode->getName());
@@ -138,7 +138,7 @@ class RaceAppRepository extends ServiceEntityRepository
     /**
      * @return QueryBuilder
      */
-    private function query(): QueryBuilder
+    private function queryRace(): QueryBuilder
     {
         $q  = "r.id as id, r.raceOrder as Order, r.finished AS Finished, r.slug";
         $qb = $this->createQueryBuilder('r')->select($q);
@@ -150,11 +150,13 @@ class RaceAppRepository extends ServiceEntityRepository
             ->addselect('RaceTime.name AS Time')
             ->addselect('RaceTrack.nameEnglish AS English')
             ->addselect('RaceTrack.nameFrench AS French')
+            ->addselect('RaceRegion.name AS Region')
             // JOIN
             ->innerJoin('r.mode', 'RaceMode')
             ->innerJoin('r.season', 'RaceSeason')
             ->innerJoin('r.time', 'RaceTime')
             ->innerJoin('r.track', 'RaceTrack')
+            ->innerJoin('RaceTrack.region', 'RaceRegion')
             // ORDER BY
             ->addOrderBy('Chapter', 'ASC')
             ->addOrderBy('Season', 'ASC')
