@@ -4,15 +4,11 @@ root = true
 
 [*]
 charset = utf-8
-end_of_line = CRLF
+end_of_line = lf
 indent_size = 4
 indent_style = space
 insert_final_newline = true
-max_line_length = 180
 trim_trailing_whitespace = true
-
-[*{css,less,scss}]
-insert_final_newline = false
 
 [{compose.yaml,compose.*.yaml}]
 indent_size = 2

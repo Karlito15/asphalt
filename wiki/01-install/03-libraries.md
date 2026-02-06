@@ -1,6 +1,4 @@
-# Install
-
-## Libraries
+# Libraries
 
 #### Production
 
@@ -12,10 +10,13 @@ composer remove --no-scripts symfony/ux-turbo
 composer require --no-scripts composer/package-versions-deprecated
 ```
 ``` shell
-composer require --no-scripts karlito-web/toolbox-php-file
+composer require --no-scripts damienharper/auditor-bundle
 ```
 ``` shell
-composer require --no-scripts karlito-web/toolbox-php-yaml
+composer require --no-scripts easycorp/easyadmin-bundle
+```
+``` shell
+composer require --no-scripts karlito-web/my-toolbox
 ```
 ``` shell
 composer require --no-scripts league/csv
@@ -43,23 +44,6 @@ composer require --no-scripts twig/intl-extra
 ```
 ``` shell
 composer require --no-scripts twig/string-extra
-```
-
-
-``` shell
-composer require --no-scripts symfonycasts/verify-email-bundle
-```
-``` shell
-composer require --no-scripts twbs/bootstrap
-```
-``` shell
-composer require --no-scripts symfony/ux-autocomplete
-```
-``` shell
-composer require --no-scripts symfony/ux-chartjs
-```
-``` shell
-composer require --no-scripts twig/markdown-extra
 ```
 
 #### Development
@@ -101,6 +85,25 @@ php bin/console importmap:require htmx.org
 ``` shell
 php bin/console importmap:require sweetalert
 ```
+
+#### Compile
 ``` shell
 php bin/console asset-map:compile
+```
+
+#### Front
+``` shell
+composer require --no-scripts symfonycasts/verify-email-bundle
+```
+``` shell
+composer require --no-scripts twbs/bootstrap
+```
+``` shell
+composer require --no-scripts symfony/ux-autocomplete
+```
+``` shell
+composer require --no-scripts symfony/ux-chartjs
+```
+``` shell
+composer require --no-scripts twig/markdown-extra
 ```

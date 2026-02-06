@@ -8,7 +8,7 @@ Garage:
     'Game Update': 14
     Stars: 6
     Progression: { Level: 13, 'Full Level': 13, Epic: 16, 'Full Epic': 16 }
-    Orders: { Car: 29, Stat: 27, 'Total Car': 76 }
+    Orders: { Car: 29, Stat: 27, 'Total Car': 78 }
     'Updated At': '2025/11/06 18:20'
 Blueprint:
     'Star 1': { Garage: 85, Setting: 85, Difference: 0 }

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit GarageEvo{% endblock %}
+
+{% block body %}
+    <h1>Edit GarageEvo</h1>
+
+    {{ include('garage_evo/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_garage_evo_index') }}">back to list</a>
+
+    {{ include('garage_evo/_delete_form.html.twig') }}
+{% endblock %}

@@ -10,15 +10,17 @@ interface DatabaseServiceInterface
 {
     /**
      * @param SymfonyStyle $io
-     * @return bool
+     * @param string $directory
+     * @return void
      */
-    public function import(SymfonyStyle $io): bool;
+    public function import(SymfonyStyle $io, string $directory): void;
 
     /**
      * @param SymfonyStyle $io
+     * @param string $directory
      * @return void
      */
-    public function export(SymfonyStyle $io): void;
+    public function export(SymfonyStyle $io, string $directory): void;
 
     /**
      * @param array $datas

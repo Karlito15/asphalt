@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RaceMode index{% endblock %}
+
+{% block body %}
+    <h1>RaceMode index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Slug</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>DeletedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for race_mode in race_modes %}
+            <tr>
+                <td>{{ race_mode.id }}</td>
+                <td>{{ race_mode.name }}</td>
+                <td>{{ race_mode.slug }}</td>
+                <td>{{ race_mode.createdAt ? race_mode.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ race_mode.updatedAt ? race_mode.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ race_mode.deletedAt ? race_mode.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_race_mode_show', {'id': race_mode.id}) }}">show</a>
+                    <a href="{{ path('app_race_mode_edit', {'id': race_mode.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_race_mode_new') }}">Create new</a>
+{% endblock %}

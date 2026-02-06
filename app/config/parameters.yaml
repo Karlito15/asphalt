@@ -12,17 +12,50 @@ parameters:
         input:              'text-center fw-bolder form-control-sm form-control'
 #        input:              'text-center fw-bolder form-control-plaintext form-control-sm'
     games:
-        pack:               6
+        pack_blueprint:     6
         pack_price:         900
     images:
-        avatar:             'images/sako-01.jpg'
+        avatar: 'images/sako-01.jpg'
+    folders.cache: '%kernel.project_dir%/public/cache/'
+    folders.csv: '%kernel.project_dir%/../documents/csv/'
+    folders.cron: '%kernel.project_dir%/../documents/csv/cron/'
+    folders.database: '%kernel.project_dir%/../documents/csv/database/'
+    folders.yaml: '%kernel.project_dir%/../documents/yaml/'
+    folders.sheet: '%kernel.project_dir%/../documents/yaml/sheet/'
+    csv.header.garage.app:                ['Brand', 'Model', 'Stars', 'GameUpdate', 'CarOrder', 'StatOrder', 'Level', 'Epic', 'SettingClassValue']
+    csv.header.garage.blueprint:          ['Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6', 'Brand', 'Model']
+    csv.header.garage.evo:                ['Number']
+    csv.header.garage.gauntlet:           ['Speed', 'Acceleration', 'Handling', 'Nitro', 'Mark', 'Division', 'Brand', 'Model']
+    csv.header.garage.rank:               ['Star0', 'Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6', 'Brand', 'Model']
+    csv.header.garage.stats:              ['Speed', 'Acceleration', 'Handling', 'Nitro', 'Average', 'Brand', 'Model']
+    csv.header.garage.status:             ['Evo', 'Unblock', 'ToUnblock', 'Gold', 'ToGold', 'FullUpgradeLevel', 'ToUpgradeLevel', 'FullBlueprintStar1', 'FullBlueprintStar2', 'FullBlueprintStar3', 'FullBlueprintStar4', 'FullBlueprintStar5', 'FullBlueprintStar6', 'FullUpgradeSpeed', 'ToInstallUpgradeSpeed', 'FullUpgradeAcceleration', 'ToInstallUpgradeAcceleration', 'FullUpgradeHandling', 'ToInstallUpgradeHandling', 'FullUpgradeNitro', 'ToInstallUpgradeNitro', 'FullUpgradeCommon', 'ToInstallUpgradeCommon', 'FullUpgradeRare', 'ToInstallUpgradeRare', 'FullUpgradeEpic', 'ToInstallUpgradeEpic', 'Brand', 'Model']
+    csv.header.garage.upgrade:            ['Speed', 'Acceleration', 'Handling', 'Nitro', 'Common', 'Rare', 'Epic', 'Brand', 'Model']
+    csv.header.garage.setting.blueprint:  ['Brand', 'Model', 'SettingBlueprint']
+    csv.header.garage.setting.level:      ['Brand', 'Model', 'SettingLevel']
+    csv.header.garage.setting.tag:        ['Brand', 'Model', 'SettingTag']
+    csv.header.garage.setting.unit-price: ['Brand', 'Model', 'SettingPrice']
+    csv.header.mission.app:               ['Week', 'Region', 'Track', 'Class', 'Brand', 'Description', 'Success', 'Target', 'Task', 'Type']
+    csv.header.mission.commons:           ['Value', 'Slug']
+    csv.header.inventory:                 ['Category', 'Label', 'Value', 'Filter', 'Position', 'Active']
+    csv.header.race.app:                  ['Season', 'RaceOrder', 'Mode', 'Time', 'English']
+    csv.header.race.mode:                 ['Name', 'Slug']
+    csv.header.race.region:               ['Name', 'Slug']
+    csv.header.race.season:               ['Chapter', 'Name', 'Slug']
+    csv.header.race.time:                 ['Name']
+    csv.header.race.track:                ['English', 'French', 'Slug', 'Region']
+    csv.header.setting.blueprint:         ['Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6', 'Total', 'Slug']
+    csv.header.setting.brand:             ['Name', 'Number', 'Slug']
+    csv.header.setting.class:             ['Label', 'Value', 'Order', 'Number', 'Median', 'Slug']
+    csv.header.setting.level:             ['Level', 'Common', 'Rare', 'Epic', 'Slug']
+    csv.header.setting.tag:               ['Value', 'Number', 'Slug']
+    csv.header.setting.unit-price:        ['Level01', 'Level02', 'Level03', 'Level04', 'Level05', 'Level06', 'Level07', 'Level08', 'Level09', 'Level10', 'Level11', 'Level12', 'Level13', 'Common', 'Rare', 'Epic', 'Slug']
 when@dev:
     parameters:
         cache_lifetime:
-            dashboards:     60  # 1 min
-            garages:        60  # 1 min
-            missions:       60  # 1 min
-            races:          60  # 1 min
+            dashboards:     60   # 1 min
+            garages:        60   # 1 min
+            missions:       60   # 1 min
+            races:          60   # 1 min
             sitemaps:       300  # 5 mins
             statistics:     300  # 5 mins
         images:

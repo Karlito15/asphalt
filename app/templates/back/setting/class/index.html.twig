@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SettingClass index{% endblock %}
+
+{% block body %}
+    <h1>SettingClass index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Label</th>
+                <th>Value</th>
+                <th>ClassOrder</th>
+                <th>CarsNumber</th>
+                <th>Median</th>
+                <th>Slug</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>DeletedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for setting_class in setting_classes %}
+            <tr>
+                <td>{{ setting_class.id }}</td>
+                <td>{{ setting_class.label }}</td>
+                <td>{{ setting_class.value }}</td>
+                <td>{{ setting_class.classOrder }}</td>
+                <td>{{ setting_class.carsNumber }}</td>
+                <td>{{ setting_class.median }}</td>
+                <td>{{ setting_class.slug }}</td>
+                <td>{{ setting_class.createdAt ? setting_class.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ setting_class.updatedAt ? setting_class.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ setting_class.deletedAt ? setting_class.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_setting_class_show', {'id': setting_class.id}) }}">show</a>
+                    <a href="{{ path('app_setting_class_edit', {'id': setting_class.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_setting_class_new') }}">Create new</a>
+{% endblock %}

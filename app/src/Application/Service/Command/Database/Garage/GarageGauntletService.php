@@ -1,0 +1,84 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Application\Service\Command\Database\Garage;
+
+use App\Application\Service\Command\MigrationService;
+use App\Infrastructure\Persistence\Entity\GarageGauntlet;
+use App\Infrastructure\Persistence\Repository\GarageGauntletRepository;
+use App\Interface\DatabaseServiceInterface;
+use Doctrine\DBAL\Exception;
+use Doctrine\ORM\EntityManagerInterface;
+use Psr\Log\LoggerInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
+
+class GarageGauntletService implements DatabaseServiceInterface
+{
+    use MigrationService;
+
+    private static string $folder = 'garages';
+
+    private static string $file = 'garage-gauntlet.csv';
+
+    public function __construct(
+        private readonly EntityManagerInterface   $entityManager,
+        private readonly LoggerInterface          $logger,
+        private readonly ParameterBagInterface    $parameter,
+        private readonly GarageGauntletRepository $repository,
+    )
+    {}
+
+    /**
+     * @param SymfonyStyle $io
+     * @param string $directory
+     * @return void
+     * @throws Exception
+     */
+    public function import(SymfonyStyle $io, string $directory): void
+    {
+        $io->text('From CSV : Garage Gauntlet');
+        $this->makeAnImport($io, $directory . self::$folder . DIRECTORY_SEPARATOR . self::$file);
+    }
+
+    /**
+     * @param SymfonyStyle $io
+     * @param string $directory
+     * @return void
+     */
+    public function export(SymfonyStyle $io, string $directory): void
+    {
+        $io->text('From Database : Garage Gauntlet');
+        $this->makeAnExport($directory);
+    }
+
+    /**
+     * @param array $datas
+     * @return GarageGauntlet
+     */
+    public function createEntity(array $datas): GarageGauntlet
+    {
+        $garage = $this->findGarage($datas['Brand'], $datas['Model']);
+
+        $entity = new GarageGauntlet();
+        $entity->setSpeed((int) $datas['Speed']);
+        $entity->setAcceleration((int) $datas['Acceleration']);
+        $entity->setHandling((int) $datas['Handling']);
+        $entity->setNitro((int) $datas['Nitro']);
+        $entity->setMark((int) $datas['Mark']);
+        $entity->setDivision((int) $datas['Division']);
+//        $entity->setDivision($this->convertStringToInteger($datas['Division']));
+        $entity->setGarage($garage);
+
+        return $entity;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getHeader(): array
+    {
+        return $this->parameter->get('csv.header.garage.gauntlet');
+    }
+}

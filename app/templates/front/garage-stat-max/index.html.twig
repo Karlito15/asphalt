@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GarageStatMax index{% endblock %}
+
+{% block body %}
+    <h1>GarageStatMax index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for garage_stat_max in garage_stat_maxes %}
+            <tr>
+                <td>{{ garage_stat_max.id }}</td>
+                <td>
+                    <a href="{{ path('app_garage_stat_max_show', {'id': garage_stat_max.id}) }}">show</a>
+                    <a href="{{ path('app_garage_stat_max_edit', {'id': garage_stat_max.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_garage_stat_max_new') }}">Create new</a>
+{% endblock %}

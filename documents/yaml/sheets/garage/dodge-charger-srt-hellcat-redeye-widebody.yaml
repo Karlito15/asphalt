@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Dodge Charger SRT Hellcat Redeye Widebody'
+    Slug: dodge-charger-srt-hellcat-redeye-widebody
+    Brand: Dodge
+    Model: 'Charger SRT Hellcat Redeye Widebody'
+    Class: C
+    'Median Class': 139
+    'Game Update': 46
+    Stars: 5
+    Progression: { Level: 6, 'Full Level': 12, Epic: 0, 'Full Epic': 8 }
+    Orders: { Car: 57, Stat: 99, 'Total Car': 57 }
+    'Updated At': '2025/12/18 01:24'
+Blueprint:
+    'Star 1': { Garage: 20, Setting: 20, Difference: 0 }
+    'Star 2': { Garage: 25, Setting: 25, Difference: 0 }
+    'Star 3': { Garage: null, Setting: 30, Difference: 30 }
+    'Star 4': { Garage: null, Setting: 35, Difference: 35 }
+    'Star 5': { Garage: null, Setting: 40, Difference: 40 }
+    'Star 6': { Garage: null, Setting: 0, Difference: 0 }
+    Full: { Garage: 45, Setting: 150, Difference: 105 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 2037
+    'Star 1': 2226
+    'Star 2': 2495
+    'Star 3': 0
+    'Star 4': 0
+    'Star 5': 3518
+    'Star 6': 0
+Status:
+    Unblock: { isUnblock: true, toUnblock: false }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': false, 'Star 4': false, 'Star 5': false, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '327.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '342.60'
+    'Min Acceleration': '64.90'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '76.31'
+    'Min Handly': '39.54'
+    'Actual Handly': '0.00'
+    'Max Handly': '51.13'
+    'Min Nitro': '34.68'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '58.64'
+    'Min Average': '116.53'
+    'Actual Average': '0.00'
+    'Max Average': '132.17'
+Upgrade:
+    Speed: { Garage: 6, Level: 6, Difference: 0, Setting: 12 }
+    Acceleration: { Garage: 6, Level: 6, Difference: 0, Setting: 12 }
+    Handling: { Garage: 6, Level: 6, Difference: 0, Setting: 12 }
+    Nitro: { Garage: 6, Level: 6, Difference: 0, Setting: 12 }
+    Common: { Garage: 18, Setting: 32, Difference: 14 }
+    Rare: { Garage: 0, Setting: 20, Difference: 20 }
+    Epic: { Garage: 0, Setting: 8, Difference: 0 }
+Price:
+    'Unit Price': { 'Level 01': 7130, 'Level 02': 11600, 'Level 03': 18600, 'Level 04': 27900, 'Level 05': 40300, 'Level 06': 56500, 'Level 07': 79000, 'Level 08': 110500, 'Level 09': 155000, 'Level 10': 216500, 'Level 11': 303000, 'Level 12': 425000, 'Level 13': 0, 'Level Common': 40000, 'Level Rare': 80000, 'Level Epic': 240000 }
+    'Price Real Upgrades': { Speed: 162030, Acceleration: 162030, Handling: 162030, Nitro: 162030 }
+    'Price Total Upgrades': { Speed: 1451030, Acceleration: 1451030, Handling: 1451030, Nitro: 1451030 }
+    'Price Real Imports': { Common: 720000, Rare: 0, Epic: 0 }
+    'Price Total Imports': { Common: 1280000, Rare: 1600000, Epic: 1920000 }
+    'Price Gold': 10604120

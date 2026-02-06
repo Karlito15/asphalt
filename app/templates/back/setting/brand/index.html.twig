@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SettingBrand index{% endblock %}
+
+{% block body %}
+    <h1>SettingBrand index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Cars_number</th>
+                <th>Slug</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>DeletedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for setting_brand in setting_brands %}
+            <tr>
+                <td>{{ setting_brand.id }}</td>
+                <td>{{ setting_brand.name }}</td>
+                <td>{{ setting_brand.carsNumber }}</td>
+                <td>{{ setting_brand.slug }}</td>
+                <td>{{ setting_brand.createdAt ? setting_brand.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ setting_brand.updatedAt ? setting_brand.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ setting_brand.deletedAt ? setting_brand.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_setting_brand_show', {'id': setting_brand.id}) }}">show</a>
+                    <a href="{{ path('app_setting_brand_edit', {'id': setting_brand.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_setting_brand_new') }}">Create new</a>
+{% endblock %}

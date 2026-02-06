@@ -12,12 +12,12 @@ Garage:
     'Updated At': '2025/11/06 18:20'
 Blueprint:
     'Star 1': { Garage: 30, Setting: 30, Difference: 0 }
-    'Star 2': { Garage: 17, Setting: 35, Difference: 18 }
+    'Star 2': { Garage: 23, Setting: 35, Difference: 12 }
     'Star 3': { Garage: 0, Setting: 40, Difference: 40 }
     'Star 4': { Garage: 0, Setting: 45, Difference: 45 }
     'Star 5': { Garage: 0, Setting: 55, Difference: 55 }
     'Star 6': { Garage: 0, Setting: 65, Difference: 65 }
-    Full: { Garage: 47, Setting: 270, Difference: 223 }
+    Full: { Garage: 53, Setting: 270, Difference: 217 }
 Gauntlet:
     Division: 0
 Rank:

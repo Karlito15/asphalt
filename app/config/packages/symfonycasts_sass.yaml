@@ -1,43 +1,30 @@
 symfonycasts_sass:
-    # Path to your Sass root file
     root_sass:
-        # Default:
-#        - '%kernel.project_dir%/assets/styles/bootstrap/5.3.8/bootstrap.scss'
-        - '%kernel.project_dir%/assets/styles/app.scss'
+        - 'assets/styles/app.scss'     # %kernel.project_dir%/
+        - 'assets/scss/bootstrap.scss' # %kernel.project_dir%/
 
 #    # The Sass binary to use
     binary: null
     sass_options:
-#
-#        # The style of the generated CSS: compressed or expanded.
+        # The style of the generated CSS: compressed or expanded.
         style:                expanded # One of "compressed"; "expanded"
-#
-#        # Whether to include the charset declaration in the generated Sass.
+        # Whether to include the charset declaration in the generated Sass.
         charset:              true
-#
-#        # Emit a CSS file when an error occurs.
+        # Emit a CSS file when an error occurs.
         error_css:            true
-#
-#        # Whether to generate source maps.
+        # Whether to generate source maps.
         source_map:           true
-#
-#        # Embed source file contents in source maps.
+        # Embed source file contents in source maps.
 #        embed_sources:        ~
-#
-#        # Embed source map contents in CSS.
+        # Embed source map contents in CSS.
         embed_source_map: '%kernel.debug%'
-#
-#        # Additional load paths
+        # Additional load paths
 #        load_path:            []
-#
-#        # Don't print warnings.
+        # Don't print warnings.
 #        quiet:                ~
-#
-#        #  Don't print compiler warnings from dependencies.
+        #  Don't print compiler warnings from dependencies.
 #        quiet_deps:           ~
-#
-#        # Don't compile more files once an error is encountered.
+        # Don't compile more files once an error is encountered.
 #        stop_on_error:        ~
-#
-#        # Print full Dart stack traces for exceptions.
+        # Print full Dart stack traces for exceptions.
 #        trace:                ~

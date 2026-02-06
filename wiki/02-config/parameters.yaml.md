@@ -1,6 +1,7 @@
 # parameters.yaml
 
 ``` yaml
+parameters:
     metas:
         title:              'Asphalt Legends Unite'
         author:             'Giancarlo PALUMBO'
@@ -13,20 +14,23 @@
         btn:                'btn btn-sm btn-outline-info rounded-3 py-1 m-0'
         input:              'text-center fw-bolder form-control-sm form-control'
 #        input:              'text-center fw-bolder form-control-plaintext form-control-sm'
+    images:
+        avatar:             'images/sako-01.jpg'
+    folders:
+        csv:                '%kernel.project_dir%/../documents/csv/'
+        yaml:               '%kernel.project_dir%/../documents/yaml/'
     games:
         pack:               6
         pack_price:         900
-    images:
-        avatar:             'images/sako-01.jpg'
 when@dev:
     parameters:
         cache_lifetime:
-            dashboards:     2  # 10 min
-            garages:        600  # 10 min
-            missions:       600  # 10 min
-            races:          600  # 10 min
-            sitemaps:       600  # 10 min
-            statistics:     3600 # 60 min
+            dashboards:     60  # 1 min
+            garages:        60  # 1 min
+            missions:       60  # 1 min
+            races:          60  # 1 min
+            sitemaps:       300  # 5 mins
+            statistics:     300  # 5 mins
         images:
             logo:           'images/logo-green.png'
 when@prod:

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New RaceTime{% endblock %}
+
+{% block body %}
+    <h1>Create new RaceTime</h1>
+
+    {{ include('race_time/_form.html.twig') }}
+
+    <a href="{{ path('app_race_time_index') }}">back to list</a>
+{% endblock %}

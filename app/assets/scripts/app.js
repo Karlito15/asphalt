@@ -15,6 +15,7 @@ import './bootstrap.js';
 // CSS
 console.info('CSS');
 import '../styles/app.css';
+import '../styles/bootstrap.css';
 import '../styles/fonts.css';
 import '../styles/scrollbar.css';
 import '../styles/theme-karlito-web.css';

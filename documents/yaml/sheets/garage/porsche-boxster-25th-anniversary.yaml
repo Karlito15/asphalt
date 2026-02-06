@@ -7,9 +7,9 @@ Garage:
     'Median Class': 139
     'Game Update': 28
     Stars: 3
-    Progression: { Level: 10, 'Full Level': 11, Epic: 2, 'Full Epic': 4 }
-    Orders: { Car: 3, Stat: 55, 'Total Car': 56 }
-    'Updated At': '2025/11/06 18:20'
+    Progression: { Level: 10, 'Full Level': 10, Epic: 2, 'Full Epic': 4 }
+    Orders: { Car: 3, Stat: 55, 'Total Car': 57 }
+    'Updated At': '2025/11/07 00:06'
 Blueprint:
     'Star 1': { Garage: 55, Setting: 55, Difference: 0 }
     'Star 2': { Garage: 38, Setting: 38, Difference: 0 }
@@ -52,17 +52,17 @@ Stat:
     'Actual Average': '0.00'
     'Max Average': '117.53'
 Upgrade:
-    Speed: { Garage: 2, Level: 10, Difference: 8, Setting: 11 }
-    Acceleration: { Garage: 2, Level: 10, Difference: 8, Setting: 11 }
-    Handling: { Garage: 2, Level: 10, Difference: 8, Setting: 11 }
-    Nitro: { Garage: 2, Level: 10, Difference: 8, Setting: 11 }
-    Common: { Garage: 0, Setting: 28, Difference: 28 }
-    Rare: { Garage: 0, Setting: 8, Difference: 8 }
+    Speed: { Garage: 2, Level: 10, Difference: 8, Setting: 10 }
+    Acceleration: { Garage: 2, Level: 10, Difference: 8, Setting: 10 }
+    Handling: { Garage: 2, Level: 10, Difference: 8, Setting: 10 }
+    Nitro: { Garage: 2, Level: 10, Difference: 8, Setting: 10 }
+    Common: { Garage: 0, Setting: 16, Difference: 16 }
+    Rare: { Garage: 0, Setting: 4, Difference: 4 }
     Epic: { Garage: 0, Setting: 4, Difference: 2 }
 Price:
     'Unit Price': { 'Level 01': 1500, 'Level 02': 2400, 'Level 03': 3900, 'Level 04': 5900, 'Level 05': 8500, 'Level 06': 12000, 'Level 07': 16500, 'Level 08': 23000, 'Level 09': 32500, 'Level 10': 45500, 'Level 11': 0, 'Level 12': 0, 'Level 13': 0, 'Level Common': 10000, 'Level Rare': 20000, 'Level Epic': 60000 }
     'Price Real Upgrades': { Speed: 3900, Acceleration: 3900, Handling: 3900, Nitro: 3900 }
     'Price Total Upgrades': { Speed: 151700, Acceleration: 151700, Handling: 151700, Nitro: 151700 }
     'Price Real Imports': { Common: 0, Rare: 0, Epic: 0 }
-    'Price Total Imports': { Common: 280000, Rare: 160000, Epic: 240000 }
-    'Price Gold': 1286800
+    'Price Total Imports': { Common: 160000, Rare: 80000, Epic: 240000 }
+    'Price Gold': 1086800

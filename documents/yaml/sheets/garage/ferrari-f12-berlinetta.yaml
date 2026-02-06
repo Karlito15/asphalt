@@ -9,15 +9,15 @@ Garage:
     Stars: 5
     Progression: { Level: 6, 'Full Level': 12, Epic: 0, 'Full Epic': 8 }
     Orders: { Car: 38, Stat: 34, 'Total Car': 71 }
-    'Updated At': '2025/11/06 18:20'
+    'Updated At': '2025/12/09 13:32'
 Blueprint:
     'Star 1': { Garage: 25, Setting: 25, Difference: 0 }
     'Star 2': { Garage: 30, Setting: 30, Difference: 0 }
-    'Star 3': { Garage: 10, Setting: 35, Difference: 25 }
+    'Star 3': { Garage: 14, Setting: 35, Difference: 21 }
     'Star 4': { Garage: 0, Setting: 40, Difference: 40 }
     'Star 5': { Garage: 0, Setting: 50, Difference: 50 }
     'Star 6': { Garage: 0, Setting: 60, Difference: 60 }
-    Full: { Garage: 65, Setting: 240, Difference: 175 }
+    Full: { Garage: 69, Setting: 240, Difference: 171 }
 Gauntlet:
     Division: 0
 Rank:
@@ -31,7 +31,7 @@ Rank:
 Status:
     Unblock: { isUnblock: true, toUnblock: false }
     Gold: { isGold: false, toGold: false }
-    'To Upgrade': { isFull: false, toUpgrade: false }
+    'To Upgrade': { isFull: false, toUpgrade: true }
     Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': false, 'Star 4': false, 'Star 5': false, 'Star 6': false }
     'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
     'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }

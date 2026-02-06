@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RaceRegion{% endblock %}
+
+{% block body %}
+    <h1>RaceRegion</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ race_region.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ race_region.name }}</td>
+            </tr>
+            <tr>
+                <th>Slug</th>
+                <td>{{ race_region.slug }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ race_region.createdAt ? race_region.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ race_region.updatedAt ? race_region.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DeletedAt</th>
+                <td>{{ race_region.deletedAt ? race_region.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_race_region_index') }}">back to list</a>
+
+    <a href="{{ path('app_race_region_edit', {'id': race_region.id}) }}">edit</a>
+
+    {{ include('race_region/_delete_form.html.twig') }}
+{% endblock %}

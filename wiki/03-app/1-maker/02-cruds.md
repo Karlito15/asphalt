@@ -8,10 +8,16 @@ php bin/console make:crud GarageApp
 php bin/console make:crud GarageBlueprint
 ```
 ``` shell
+php bin/console make:crud GarageEvo
+```
+``` shell
 php bin/console make:crud GarageGauntlet
 ```
 ``` shell
 php bin/console make:crud GarageRank
+```
+``` shell
+php bin/console make:crud GarageStatActual
 ```
 ``` shell
 php bin/console make:crud GarageStatMax

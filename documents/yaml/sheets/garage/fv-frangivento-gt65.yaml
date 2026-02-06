@@ -14,10 +14,10 @@ Blueprint:
     'Star 1': { Garage: '', Setting: Key, Difference: 1 }
     'Star 2': { Garage: 26, Setting: 26, Difference: 0 }
     'Star 3': { Garage: 34, Setting: 34, Difference: 0 }
-    'Star 4': { Garage: 26, Setting: 40, Difference: 14 }
+    'Star 4': { Garage: 30, Setting: 40, Difference: 10 }
     'Star 5': { Garage: 0, Setting: 62, Difference: 62 }
     'Star 6': { Garage: 0, Setting: 0, Difference: 0 }
-    Full: { Garage: 86, Setting: 162, Difference: 76 }
+    Full: { Garage: 90, Setting: 162, Difference: 72 }
 Gauntlet:
     Division: 0
 Rank:

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GarageRank index{% endblock %}
+
+{% block body %}
+    <h1>GarageRank index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for garage_rank in garage_ranks %}
+            <tr>
+                <td>{{ garage_rank.id }}</td>
+                <td>
+                    <a href="{{ path('app_garage_rank_show', {'id': garage_rank.id}) }}">show</a>
+                    <a href="{{ path('app_garage_rank_edit', {'id': garage_rank.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_garage_rank_new') }}">Create new</a>
+{% endblock %}

@@ -7,17 +7,17 @@ Garage:
     'Median Class': 159
     'Game Update': 43
     Stars: 6
-    Progression: { Level: 6, 'Full Level': 13, Epic: 6, 'Full Epic': 16 }
-    Orders: { Car: 43, Stat: 38, 'Total Car': 76 }
-    'Updated At': '2025/11/06 18:20'
+    Progression: { Level: 8, 'Full Level': 13, Epic: 6, 'Full Epic': 16 }
+    Orders: { Car: 43, Stat: 38, 'Total Car': 78 }
+    'Updated At': '2025/11/10 13:23'
 Blueprint:
     'Star 1': { Garage: 35, Setting: 35, Difference: 0 }
     'Star 2': { Garage: 40, Setting: 40, Difference: 0 }
-    'Star 3': { Garage: 14, Setting: 45, Difference: 31 }
-    'Star 4': { Garage: 0, Setting: 50, Difference: 50 }
+    'Star 3': { Garage: 45, Setting: 45, Difference: 0 }
+    'Star 4': { Garage: 4, Setting: 50, Difference: 46 }
     'Star 5': { Garage: 0, Setting: 60, Difference: 60 }
-    'Star 6': { Garage: 0, Setting: 99, Difference: 99 }
-    Full: { Garage: 89, Setting: 329, Difference: 240 }
+    'Star 6': { Garage: 0, Setting: 70, Difference: 70 }
+    Full: { Garage: 124, Setting: 300, Difference: 176 }
 Gauntlet:
     Division: 0
 Rank:
@@ -32,7 +32,7 @@ Status:
     Unblock: { isUnblock: true, toUnblock: false }
     Gold: { isGold: false, toGold: false }
     'To Upgrade': { isFull: false, toUpgrade: false }
-    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': false, 'Star 4': false, 'Star 5': false, 'Star 6': false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': false, 'Star 5': false, 'Star 6': false }
     'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
     'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
 Stat:
@@ -52,10 +52,10 @@ Stat:
     'Actual Average': '0.00'
     'Max Average': '155.15'
 Upgrade:
-    Speed: { Garage: 2, Level: 6, Difference: 4, Setting: 13 }
-    Acceleration: { Garage: 2, Level: 6, Difference: 4, Setting: 13 }
-    Handling: { Garage: 2, Level: 6, Difference: 4, Setting: 13 }
-    Nitro: { Garage: 2, Level: 6, Difference: 4, Setting: 13 }
+    Speed: { Garage: 2, Level: 8, Difference: 6, Setting: 13 }
+    Acceleration: { Garage: 2, Level: 8, Difference: 6, Setting: 13 }
+    Handling: { Garage: 2, Level: 8, Difference: 6, Setting: 13 }
+    Nitro: { Garage: 2, Level: 8, Difference: 6, Setting: 13 }
     Common: { Garage: 0, Setting: 24, Difference: 24 }
     Rare: { Garage: 0, Setting: 20, Difference: 20 }
     Epic: { Garage: 0, Setting: 16, Difference: 6 }

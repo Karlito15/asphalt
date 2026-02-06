@@ -1,0 +1,47 @@
+version: '3'
+
+silent: true
+
+vars:
+    COMPOSER: composer
+
+tasks:
+    default:
+        cmds:
+            - task: help
+
+    help:
+        desc: Display this help
+        cmds:
+            - echo "{{.GREETING}}"
+            - task --list
+
+    ### COMPOSER
+    cc:
+        desc: "Clears composer's internal package cache"
+        cmds:
+            - "{{.COMPOSER}} clear-cache"
+    ci:
+        desc: "Install composer dependencies"
+        cmds:
+            - "{{.COMPOSER}} install"
+    csu:
+        desc: "Install composer dependencies"
+        cmds:
+            - "{{.COMPOSER}} self-update"
+    cu:
+        desc: "Update composer dependencies"
+        cmds:
+            - "{{.COMPOSER}} update"
+    cri:
+        desc: "Uninstalls and reinstalls the given package names"
+        cmds:
+            - "{{.COMPOSER}} reinstall"
+    cv:
+        desc: Validate composer.json file.
+        cmds:
+            - "{{.COMPOSER}} validate"
+    cvd:
+        desc: Validate composer.json and composer.lock files in strict mode.
+        cmds:
+            - "{{.COMPOSER}} validate --strict --check-lock"

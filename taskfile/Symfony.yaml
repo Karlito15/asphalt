@@ -1,0 +1,129 @@
+version: '3'
+
+silent: true
+
+vars:
+    SYMFONY: symfony
+    SYMFONY_CONSOLE: "{{.SYMFONY}} console"
+
+tasks:
+    default:
+        cmds:
+            - task: help
+
+    help:
+        desc: Display this help
+        cmds:
+            - echo "{{.GREETING}}"
+            - task --list
+
+    ### SYMFONY
+    check-requirements:
+        desc: "Check symfony requirements"
+        cmds:
+            - "{{.SYMFONY}} check:requirements"
+    # CONSOLE
+    scc:
+        desc: "Clear symfony cache"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} cache:clear"
+    # Database & Doctrine
+    dc:
+        desc: "Create symfony database"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:database:create" # --if-not-exists
+    dd:
+        desc: "Drop symfony database"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:database:drop --force" # --if-exists
+    du:
+        desc: "Update symfony schema database"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:schema:update --force"  
+    dmd:
+        desc: "Generate a migration by comparing your current database to your mapping information."
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:migrations:diff --no-interaction"
+    dmm:
+        desc: "Execute a migration to the latest available version."
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:migrations:migrate --no-interaction"
+    dmmp:
+        desc: "Execute a migration to a specified version."
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:migrations:migrate prev --no-interaction"
+    fixtures:
+        desc: "Load fixtures"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:fixtures:load --no-interaction"
+    # Maker
+    mm:
+        desc: "Make symfony migration"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:migration"
+    me:
+        desc: "Make entity"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:entity"  
+    mcmd:
+        desc: "Make command"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:command"  
+    mc:
+        desc: "Make controller"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:controller"  
+    mf:
+        desc: "Make form"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:form"  
+    mfix:
+        desc: "Make fixtures"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:fixtures"  
+    mtc:
+        desc: "Make twig-component"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} make:twig-component"  
+    # Debug
+    dump-env:
+        desc: "Dump env"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} debug:dotenv"
+    dump-env-container:
+        desc: "Dump env container"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} debug:container --env-vars"
+    dump-router:
+        desc: "Dump routes"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} debug:router"
+    # SERVER
+    start:
+        desc: "Server Symfony Start"
+        cmds:
+            - "{{.SYMFONY}} local:server:start -d --allow-http"
+    stop:
+        desc: "Server Symfony Stop"
+        cmds:
+            - "{{.SYMFONY}} local:server:stop"
+    status:
+        desc: "Server Symfony Status"
+        cmds:
+            - "{{.SYMFONY}} local:server:status"
+    log:
+        desc: "Display symfony logs"
+        cmds:
+            - "{{.SYMFONY}} local:server:log"
+    open:
+        desc: "Server Symfony Open"
+        cmds:
+            - "{{.SYMFONY}} open:local"
+    open-webmail:
+        desc: "Server Symfony Open Webmail"
+        cmds:
+            - "{{.SYMFONY}} open:local:webmail"
+    secure:
+        desc: "Server Certificate Authority for serving HTTPS"
+        cmds: 
+            - "{{.SYMFONY}} local:server:ca:install"

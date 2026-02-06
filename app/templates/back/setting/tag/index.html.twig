@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SettingTag index{% endblock %}
+
+{% block body %}
+    <h1>SettingTag index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Value</th>
+                <th>CarsNumber</th>
+                <th>Slug</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>DeletedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for setting_tag in setting_tags %}
+            <tr>
+                <td>{{ setting_tag.id }}</td>
+                <td>{{ setting_tag.value }}</td>
+                <td>{{ setting_tag.carsNumber }}</td>
+                <td>{{ setting_tag.slug }}</td>
+                <td>{{ setting_tag.createdAt ? setting_tag.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ setting_tag.updatedAt ? setting_tag.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ setting_tag.deletedAt ? setting_tag.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_setting_tag_show', {'id': setting_tag.id}) }}">show</a>
+                    <a href="{{ path('app_setting_tag_edit', {'id': setting_tag.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_setting_tag_new') }}">Create new</a>
+{% endblock %}

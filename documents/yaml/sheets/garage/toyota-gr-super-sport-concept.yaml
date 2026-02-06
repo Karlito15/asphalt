@@ -13,11 +13,11 @@ Garage:
 Blueprint:
     'Star 1': { Garage: '', Setting: Key, Difference: 1 }
     'Star 2': { Garage: 26, Setting: 26, Difference: 0 }
-    'Star 3': { Garage: 3, Setting: 34, Difference: 31 }
+    'Star 3': { Garage: 13, Setting: 34, Difference: 21 }
     'Star 4': { Garage: 0, Setting: 40, Difference: 40 }
     'Star 5': { Garage: 0, Setting: 62, Difference: 62 }
     'Star 6': { Garage: 0, Setting: 0, Difference: 0 }
-    Full: { Garage: 29, Setting: 162, Difference: 133 }
+    Full: { Garage: 39, Setting: 162, Difference: 123 }
 Gauntlet:
     Division: 0
 Rank:
@@ -31,7 +31,7 @@ Rank:
 Status:
     Unblock: { isUnblock: false, toUnblock: false }
     Gold: { isGold: false, toGold: false }
-    'To Upgrade': { isFull: false, toUpgrade: false }
+    'To Upgrade': { isFull: false, toUpgrade: true }
     Blueprint: { 'Star 1': false, 'Star 2': true, 'Star 3': false, 'Star 4': false, 'Star 5': false, 'Star 6': false }
     'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
     'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }

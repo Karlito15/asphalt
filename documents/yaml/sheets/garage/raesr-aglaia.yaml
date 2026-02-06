@@ -8,16 +8,16 @@ Garage:
     'Game Update': 45
     Stars: 6
     Progression: { Level: 3, 'Full Level': 13, Epic: 0, 'Full Epic': 16 }
-    Orders: { Car: 52, Stat: 40, 'Total Car': 76 }
+    Orders: { Car: 52, Stat: 40, 'Total Car': 78 }
     'Updated At': '2025/11/06 18:20'
 Blueprint:
     'Star 1': { Garage: 35, Setting: 35, Difference: 0 }
-    'Star 2': { Garage: 15, Setting: 40, Difference: 25 }
+    'Star 2': { Garage: 17, Setting: 40, Difference: 23 }
     'Star 3': { Garage: 0, Setting: 45, Difference: 45 }
     'Star 4': { Garage: 0, Setting: 50, Difference: 50 }
     'Star 5': { Garage: 0, Setting: 60, Difference: 60 }
-    'Star 6': { Garage: 0, Setting: 99, Difference: 99 }
-    Full: { Garage: 50, Setting: 329, Difference: 279 }
+    'Star 6': { Garage: 0, Setting: 70, Difference: 70 }
+    Full: { Garage: 52, Setting: 300, Difference: 248 }
 Gauntlet:
     Division: 0
 Rank:

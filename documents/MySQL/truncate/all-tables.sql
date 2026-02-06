@@ -1,8 +1,11 @@
 SET FOREIGN_KEY_CHECKS=0;
-TRUNCATE `ext_log_entries`;
 TRUNCATE `garage_app`;
 TRUNCATE `garage_blueprint`;
+TRUNCATE `garage_evo`;
+TRUNCATE `garage_gauntlet`;
 TRUNCATE `garage_rank`;
+TRUNCATE `garage_status`;
+TRUNCATE `garage_stat_actual`;
 TRUNCATE `garage_stat_max`;
 TRUNCATE `garage_stat_min`;
 TRUNCATE `garage_upgrade`;

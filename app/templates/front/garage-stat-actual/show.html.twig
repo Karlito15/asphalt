@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GarageStatActual{% endblock %}
+
+{% block body %}
+    <h1>GarageStatActual</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ garage_stat_actual.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_garage_stat_actual_index') }}">back to list</a>
+
+    <a href="{{ path('app_garage_stat_actual_edit', {'id': garage_stat_actual.id}) }}">edit</a>
+
+    {{ include('garage_stat_actual/_delete_form.html.twig') }}
+{% endblock %}

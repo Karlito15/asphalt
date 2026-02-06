@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New SettingUnitPrice{% endblock %}
+
+{% block body %}
+    <h1>Create new SettingUnitPrice</h1>
+
+    {{ include('setting_unit_price/_form.html.twig') }}
+
+    <a href="{{ path('app_setting_unit_price_index') }}">back to list</a>
+{% endblock %}

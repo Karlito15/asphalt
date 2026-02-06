@@ -1,0 +1,15 @@
+# Full configuration reference available at:
+# https://damienharper.github.io/auditor-docs/docs/auditor-bundle/configuration/reference.html
+dh_auditor:
+    enabled: true
+    providers:
+        doctrine:
+            table_prefix: 'log_'
+            table_suffix: ~ # '_audit'
+            # columns ignored from auditing
+            ignored_columns:
+                - 'createdAt'
+                - 'updatedAt'
+            viewer: true
+
+    timezone: 'Europe/Paris'

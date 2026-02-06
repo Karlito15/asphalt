@@ -6,9 +6,6 @@ framework:
             # https://symfony.com/doc/current/messenger.html#transport-configuration
             async:
                 dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
-                options:
-                    use_notify: true
-                    check_delayed_interval: 60000
                 retry_strategy:
                     max_retries: 3
                     multiplier: 2
@@ -22,10 +19,10 @@ framework:
 
         routing:
             Symfony\Component\Mailer\Messenger\SendEmailMessage: async
-#            Symfony\Component\Mailer\Messenger\SendEmailMessage: sync
             Symfony\Component\Notifier\Message\ChatMessage: async
-#            Symfony\Component\Notifier\Message\ChatMessage: sync
             Symfony\Component\Notifier\Message\SmsMessage: async
+#            Symfony\Component\Mailer\Messenger\SendEmailMessage: sync
+#            Symfony\Component\Notifier\Message\ChatMessage: sync
 #            Symfony\Component\Notifier\Message\SmsMessage: sync
 
             # Route your messages to the transports

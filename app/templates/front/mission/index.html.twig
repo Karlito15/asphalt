@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MissionApp index{% endblock %}
+
+{% block body %}
+    <h1>MissionApp index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for mission_app in mission_apps %}
+            <tr>
+                <td>{{ mission_app.id }}</td>
+                <td>
+                    <a href="{{ path('app_mission_app_show', {'id': mission_app.id}) }}">show</a>
+                    <a href="{{ path('app_mission_app_edit', {'id': mission_app.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_mission_app_new') }}">Create new</a>
+{% endblock %}

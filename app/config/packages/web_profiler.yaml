@@ -1,6 +1,5 @@
 when@dev:
     web_profiler:
-        intercept_redirects: false
         toolbar: true
 
     framework:

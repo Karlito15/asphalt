@@ -7,9 +7,9 @@ Garage:
     'Median Class': 146
     'Game Update': 33
     Stars: 4
-    Progression: { Level: 11, 'Full Level': 11, Epic: 4, 'Full Epic': 8 }
+    Progression: { Level: 11, 'Full Level': 11, Epic: 6, 'Full Epic': 8 }
     Orders: { Car: 18, Stat: 57, 'Total Car': 71 }
-    'Updated At': '2025/11/06 18:20'
+    'Updated At': '2026/01/16 12:36'
 Blueprint:
     'Star 1': { Garage: 55, Setting: 55, Difference: 0 }
     'Star 2': { Garage: 35, Setting: 35, Difference: 0 }
@@ -52,16 +52,16 @@ Stat:
     'Actual Average': '0.00'
     'Max Average': '133.61'
 Upgrade:
-    Speed: { Garage: 2, Level: 11, Difference: 9, Setting: 11 }
-    Acceleration: { Garage: 2, Level: 11, Difference: 9, Setting: 11 }
-    Handling: { Garage: 2, Level: 11, Difference: 9, Setting: 11 }
-    Nitro: { Garage: 2, Level: 11, Difference: 9, Setting: 11 }
+    Speed: { Garage: 3, Level: 11, Difference: 8, Setting: 11 }
+    Acceleration: { Garage: 3, Level: 11, Difference: 8, Setting: 11 }
+    Handling: { Garage: 3, Level: 11, Difference: 8, Setting: 11 }
+    Nitro: { Garage: 3, Level: 11, Difference: 8, Setting: 11 }
     Common: { Garage: 0, Setting: 24, Difference: 24 }
     Rare: { Garage: 0, Setting: 16, Difference: 16 }
-    Epic: { Garage: 0, Setting: 8, Difference: 4 }
+    Epic: { Garage: 0, Setting: 8, Difference: 6 }
 Price:
     'Unit Price': { 'Level 01': 5750, 'Level 02': 9400, 'Level 03': 15000, 'Level 04': 22500, 'Level 05': 32500, 'Level 06': 45500, 'Level 07': 63500, 'Level 08': 89000, 'Level 09': 125000, 'Level 10': 175000, 'Level 11': 245000, 'Level 12': 0, 'Level 13': 0, 'Level Common': 40000, 'Level Rare': 80000, 'Level Epic': 240000 }
-    'Price Real Upgrades': { Speed: 15150, Acceleration: 15150, Handling: 15150, Nitro: 15150 }
+    'Price Real Upgrades': { Speed: 30150, Acceleration: 30150, Handling: 30150, Nitro: 30150 }
     'Price Total Upgrades': { Speed: 828150, Acceleration: 828150, Handling: 828150, Nitro: 828150 }
     'Price Real Imports': { Common: 0, Rare: 0, Epic: 0 }
     'Price Total Imports': { Common: 960000, Rare: 1280000, Epic: 1920000 }

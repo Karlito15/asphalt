@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GarageStatActual index{% endblock %}
+
+{% block body %}
+    <h1>GarageStatActual index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for garage_stat_actual in garage_stat_actuals %}
+            <tr>
+                <td>{{ garage_stat_actual.id }}</td>
+                <td>
+                    <a href="{{ path('app_garage_stat_actual_show', {'id': garage_stat_actual.id}) }}">show</a>
+                    <a href="{{ path('app_garage_stat_actual_edit', {'id': garage_stat_actual.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_garage_stat_actual_new') }}">Create new</a>
+{% endblock %}

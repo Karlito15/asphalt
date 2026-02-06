@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit GarageStatMin{% endblock %}
+
+{% block body %}
+    <h1>Edit GarageStatMin</h1>
+
+    {{ include('garage_stat_min/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_garage_stat_min_index') }}">back to list</a>
+
+    {{ include('garage_stat_min/_delete_form.html.twig') }}
+{% endblock %}

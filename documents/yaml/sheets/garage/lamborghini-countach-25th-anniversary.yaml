@@ -31,7 +31,7 @@ Rank:
 Status:
     Unblock: { isUnblock: true, toUnblock: false }
     Gold: { isGold: false, toGold: true }
-    'To Upgrade': { isFull: false, toUpgrade: false }
+    'To Upgrade': { isFull: false, toUpgrade: true }
     Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': false, 'Star 6': false }
     'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
     'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }

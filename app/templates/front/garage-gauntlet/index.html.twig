@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GarageGauntlet index{% endblock %}
+
+{% block body %}
+    <h1>GarageGauntlet index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for garage_gauntlet in garage_gauntlets %}
+            <tr>
+                <td>{{ garage_gauntlet.id }}</td>
+                <td>
+                    <a href="{{ path('app_garage_gauntlet_show', {'id': garage_gauntlet.id}) }}">show</a>
+                    <a href="{{ path('app_garage_gauntlet_edit', {'id': garage_gauntlet.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_garage_gauntlet_new') }}">Create new</a>
+{% endblock %}

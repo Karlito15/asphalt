@@ -16,37 +16,48 @@ return [
         'path' => './assets/scripts/app.js',
         'entrypoint' => true,
     ],
-    '@symfony/stimulus-bundle' => [
-        'path' => './vendor/symfony/stimulus-bundle/assets/dist/loader.js',
+    '@hotwired/turbo' => [
+        'version' => '7.3.0',
     ],
     '@hotwired/stimulus' => [
         'version' => '3.2.2',
     ],
-    '@popperjs/core' => [
-        'version' => '2.11.8',
+    '@symfony/stimulus-bundle' => [
+        'path' => './vendor/symfony/stimulus-bundle/assets/dist/loader.js',
+    ],
+    'tom-select/dist/css/tom-select.default.css' => [
+        'version' => '2.4.4',
+        'type' => 'css',
+    ],
+    'tom-select/dist/css/tom-select.bootstrap5.css' => [
+        'version' => '2.4.4',
+        'type' => 'css',
+    ],
+    'jquery' => [
+        'version' => '3.7.1',
     ],
     'bootstrap' => [
         'version' => '5.3.8',
+    ],
+    '@popperjs/core' => [
+        'version' => '2.11.8',
     ],
     'bootstrap/dist/css/bootstrap.min.css' => [
         'version' => '5.3.8',
         'type' => 'css',
     ],
     'bootstrap-table' => [
-        'version' => '1.24.2',
+        'version' => '1.26.0',
     ],
     'bootstrap-table/dist/bootstrap-table.min.css' => [
-        'version' => '1.24.2',
+        'version' => '1.26.0',
         'type' => 'css',
     ],
     'fontawesome' => [
         'version' => '5.6.3',
     ],
     'htmx.org' => [
-        'version' => '2.0.7',
-    ],
-    'jquery' => [
-        'version' => '3.7.1',
+        'version' => '2.0.8',
     ],
     'sweetalert' => [
         'version' => '2.1.2',

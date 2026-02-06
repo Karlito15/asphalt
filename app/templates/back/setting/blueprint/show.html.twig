@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SettingBlueprint{% endblock %}
+
+{% block body %}
+    <h1>SettingBlueprint</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ setting_blueprint.id }}</td>
+            </tr>
+            <tr>
+                <th>Star1</th>
+                <td>{{ setting_blueprint.star1 }}</td>
+            </tr>
+            <tr>
+                <th>Star2</th>
+                <td>{{ setting_blueprint.star2 }}</td>
+            </tr>
+            <tr>
+                <th>Star3</th>
+                <td>{{ setting_blueprint.star3 }}</td>
+            </tr>
+            <tr>
+                <th>Star4</th>
+                <td>{{ setting_blueprint.star4 }}</td>
+            </tr>
+            <tr>
+                <th>Star5</th>
+                <td>{{ setting_blueprint.star5 }}</td>
+            </tr>
+            <tr>
+                <th>Star6</th>
+                <td>{{ setting_blueprint.star6 }}</td>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <td>{{ setting_blueprint.total }}</td>
+            </tr>
+            <tr>
+                <th>Slug</th>
+                <td>{{ setting_blueprint.slug }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ setting_blueprint.createdAt ? setting_blueprint.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ setting_blueprint.updatedAt ? setting_blueprint.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DeletedAt</th>
+                <td>{{ setting_blueprint.deletedAt ? setting_blueprint.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_setting_blueprint_index') }}">back to list</a>
+
+    <a href="{{ path('app_setting_blueprint_edit', {'id': setting_blueprint.id}) }}">edit</a>
+
+    {{ include('setting_blueprint/_delete_form.html.twig') }}
+{% endblock %}

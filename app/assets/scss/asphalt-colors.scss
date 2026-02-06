@@ -1,0 +1,23 @@
+// Color system
+
+// scss-docs-start color-variables
+$credit:    #FFC600 !default;
+$token:     #0090FF !default;
+$epic:      #FF0054 !default;
+$overlock:  #FC5B00 !default;
+$gauntlet:  #30EDFB !default;
+$style:     #71B9B9 !default;
+$vip:       #F3C244 !default;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$asphalt-colors: (
+  "credit":   $credit,
+  "token":    $token,
+  "epic":     $epic,
+  "overlock": $overlock,
+  "gauntlet": $gauntlet,
+  "style":    $style,
+  "vip":      $vip,
+) !default;
+// scss-docs-end colors-map

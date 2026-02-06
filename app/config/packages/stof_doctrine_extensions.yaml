@@ -7,23 +7,23 @@ stof_doctrine_extensions:
     skip_translation_on_load:       true
     orm:
         default:
-            loggable:               true
+            blameable:              false
+            ip_traceable:           false
+            loggable:               false
+            reference_integrity:    false
             sluggable:              true
             softdeleteable:         true
+            sortable:               false
             timestampable:          true
             translatable:           false
-            blameable:              false
             tree:                   false
-            ip_traceable:           false
-            sortable:               false
             uploadable:             false
-            reference_integrity:    false
     class:
-        loggable: Gedmo\Loggable\LoggableListener
         timestampable: Gedmo\Timestampable\TimestampableListener
         sluggable: Gedmo\Sluggable\SluggableListener
         softdeleteable: Gedmo\SoftDeleteable\SoftDeleteableListener
 #        blameable: Gedmo\Blameable\BlameableListener
+#        loggable: Gedmo\Loggable\LoggableListener
 #        reference_integrity: Gedmo\ReferenceIntegrity\ReferenceIntegrityListener
 #        sortable: Gedmo\Sortable\SortableListener
 #        translatable: Gedmo\Translatable\TranslatableListener

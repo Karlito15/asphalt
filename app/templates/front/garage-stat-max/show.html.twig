@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GarageStatMax{% endblock %}
+
+{% block body %}
+    <h1>GarageStatMax</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ garage_stat_max.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_garage_stat_max_index') }}">back to list</a>
+
+    <a href="{{ path('app_garage_stat_max_edit', {'id': garage_stat_max.id}) }}">edit</a>
+
+    {{ include('garage_stat_max/_delete_form.html.twig') }}
+{% endblock %}

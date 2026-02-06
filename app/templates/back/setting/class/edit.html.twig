@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit SettingClass{% endblock %}
+
+{% block body %}
+    <h1>Edit SettingClass</h1>
+
+    {{ include('setting_class/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_setting_class_index') }}">back to list</a>
+
+    {{ include('setting_class/_delete_form.html.twig') }}
+{% endblock %}

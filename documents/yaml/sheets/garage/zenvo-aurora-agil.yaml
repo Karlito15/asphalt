@@ -1,0 +1,68 @@
+Garage:
+    'Car Name': 'Zenvo Aurora Agil'
+    Slug: zenvo-aurora-agil
+    Brand: Zenvo
+    Model: 'Aurora Agil'
+    Class: A
+    'Median Class': 150
+    'Game Update': 46
+    Stars: 6
+    Progression: { Level: 6, 'Full Level': 13, Epic: 0, 'Full Epic': 16 }
+    Orders: { Car: 63, Stat: 99, 'Total Car': 63 }
+    'Updated At': '2026/01/07 19:59'
+Blueprint:
+    'Star 1': { Garage: 30, Setting: 30, Difference: 0 }
+    'Star 2': { Garage: 35, Setting: 35, Difference: 0 }
+    'Star 3': { Garage: 4, Setting: 40, Difference: 36 }
+    'Star 4': { Garage: null, Setting: 45, Difference: 45 }
+    'Star 5': { Garage: null, Setting: 55, Difference: 55 }
+    'Star 6': { Garage: null, Setting: 65, Difference: 65 }
+    Full: { Garage: 69, Setting: 270, Difference: 201 }
+Gauntlet:
+    Division: 0
+Rank:
+    Start: 3243
+    'Star 1': 3418
+    'Star 2': 0
+    'Star 3': 0
+    'Star 4': 0
+    'Star 5': 0
+    'Star 6': 4531
+Status:
+    Unblock: { isUnblock: true, toUnblock: false }
+    Gold: { isGold: false, toGold: false }
+    'To Upgrade': { isFull: false, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': false, 'Star 4': false, 'Star 5': false, 'Star 6': false }
+    'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
+    'To Install': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: true, Rare: true, Epic: true }
+Stat:
+    'Min Speed': '365.00'
+    'Actual Speed': '0.00'
+    'Max Speed': '379.50'
+    'Min Acceleration': '77.50'
+    'Actual Acceleration': '0.00'
+    'Max Acceleration': '83.12'
+    'Min Handly': '50.67'
+    'Actual Handly': '0.00'
+    'Max Handly': '70.29'
+    'Min Nitro': '41.74'
+    'Actual Nitro': '0.00'
+    'Max Nitro': '64.25'
+    'Min Average': '133.73'
+    'Actual Average': '0.00'
+    'Max Average': '149.29'
+Upgrade:
+    Speed: { Garage: 6, Level: 6, Difference: 0, Setting: 13 }
+    Acceleration: { Garage: 6, Level: 6, Difference: 0, Setting: 13 }
+    Handling: { Garage: 6, Level: 6, Difference: 0, Setting: 13 }
+    Nitro: { Garage: 6, Level: 6, Difference: 0, Setting: 13 }
+    Common: { Garage: 16, Setting: 28, Difference: 12 }
+    Rare: { Garage: 4, Setting: 20, Difference: 16 }
+    Epic: { Garage: 0, Setting: 16, Difference: 0 }
+Price:
+    'Unit Price': { 'Level 01': 16100, 'Level 02': 26300, 'Level 03': 42000, 'Level 04': 63000, 'Level 05': 91000, 'Level 06': 127500, 'Level 07': 178500, 'Level 08': 249500, 'Level 09': 349500, 'Level 10': 489500, 'Level 11': 685000, 'Level 12': 959000, 'Level 13': 1575000, 'Level Common': 80000, 'Level Rare': 160000, 'Level Epic': 480000 }
+    'Price Real Upgrades': { Speed: 365900, Acceleration: 365900, Handling: 365900, Nitro: 365900 }
+    'Price Total Upgrades': { Speed: 4851900, Acceleration: 4851900, Handling: 4851900, Nitro: 4851900 }
+    'Price Real Imports': { Common: 1280000, Rare: 640000, Epic: 0 }
+    'Price Total Imports': { Common: 2240000, Rare: 3200000, Epic: 7680000 }
+    'Price Gold': 32527600

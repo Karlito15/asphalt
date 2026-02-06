@@ -19,68 +19,68 @@
         "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "composer/package-versions-deprecated": "^1.11.99.5",
-        "doctrine/dbal": "^3.10.3",
-        "doctrine/doctrine-bundle": "^2.18.0",
-        "doctrine/doctrine-migrations-bundle": "^3.5.0",
-        "doctrine/orm": "^3.5.3",
-        "easycorp/easyadmin-bundle": "^4.26.5",
-        "league/csv": "^9.27.1",
-        "phpdocumentor/reflection-docblock": "^5.6.3",
+        "composer/package-versions-deprecated": "^1.11",
+        "damienharper/auditor-bundle": "^6.2",
+        "doctrine/doctrine-bundle": "^2.18",
+        "doctrine/doctrine-migrations-bundle": "^3.7",
+        "doctrine/orm": "^3.6",
+        "easycorp/easyadmin-bundle": "^4.28",
+        "karlito-web/my-toolbox": "^1.0",
+        "league/csv": "^9.28",
+        "phpdocumentor/reflection-docblock": "^5.6",
         "phpstan/phpdoc-parser": "^2.3",
-        "stof/doctrine-extensions-bundle": "^1.14",
-        "symfony/apache-pack": "v1.0.1",
-        "symfony/asset": "7.3.*",
-        "symfony/asset-mapper": "7.3.*",
-        "symfony/console": "7.3.*",
-        "symfony/doctrine-messenger": "7.3.*",
-        "symfony/dotenv": "7.3.*",
-        "symfony/event-dispatcher": "7.3.*",
-        "symfony/expression-language": "7.3.*",
-        "symfony/flex": "^2.9.0",
-        "symfony/form": "7.3.*",
-        "symfony/framework-bundle": "7.3.*",
-        "symfony/http-client": "7.3.*",
-        "symfony/intl": "7.3.*",
-        "symfony/mailer": "7.3.*",
-        "symfony/mime": "7.3.*",
-        "symfony/monolog-bundle": "^3.10",
-        "symfony/notifier": "7.3.*",
-        "symfony/process": "7.3.*",
-        "symfony/property-access": "7.3.*",
-        "symfony/property-info": "7.3.*",
-        "symfony/runtime": "7.3.*",
-        "symfony/security-bundle": "7.3.*",
-        "symfony/serializer": "7.3.*",
-        "symfony/stimulus-bundle": "^2.31",
-        "symfony/string": "7.3.*",
-        "symfony/translation": "7.3.*",
-        "symfony/twig-bundle": "7.3.*",
-        "symfony/ux-twig-component": "^2.31",
-        "symfony/validator": "7.3.*",
-        "symfony/web-link": "7.3.*",
-        "symfony/yaml": "7.3.*",
-        "symfonycasts/sass-bundle": "^0.8.3",
-        "twbs/bootstrap": "^5.3.8",
-        "twig/cache-extra": "^3.22",
-        "twig/extra-bundle": "^2.12|^3.22",
-        "twig/intl-extra": "^3.22",
-        "twig/string-extra": "^3.22",
-        "twig/twig": "^2.12|^3.22.0"
+        "stof/doctrine-extensions-bundle": "^1.15",
+        "symfony/apache-pack": "*",
+        "symfony/asset": "7.4.*",
+        "symfony/asset-mapper": "7.4.*",
+        "symfony/console": "7.4.*",
+        "symfony/doctrine-messenger": "7.4.*",
+        "symfony/dotenv": "7.4.*",
+        "symfony/event-dispatcher": "7.4.*",
+        "symfony/expression-language": "7.4.*",
+        "symfony/flex": "^2",
+        "symfony/form": "7.4.*",
+        "symfony/framework-bundle": "7.4.*",
+        "symfony/http-client": "7.4.*",
+        "symfony/intl": "7.4.*",
+        "symfony/mailer": "7.4.*",
+        "symfony/mime": "7.4.*",
+        "symfony/monolog-bundle": "^3.0|^4.0",
+        "symfony/notifier": "7.4.*",
+        "symfony/process": "7.4.*",
+        "symfony/property-access": "7.4.*",
+        "symfony/property-info": "7.4.*",
+        "symfony/runtime": "7.4.*",
+        "symfony/security-bundle": "7.4.*",
+        "symfony/serializer": "7.4.*",
+        "symfony/stimulus-bundle": "^2.32",
+        "symfony/string": "7.4.*",
+        "symfony/translation": "7.4.*",
+        "symfony/twig-bundle": "7.4.*",
+        "symfony/ux-twig-component": "^2.32",
+        "symfony/validator": "7.4.*",
+        "symfony/web-link": "7.4.*",
+        "symfony/yaml": "7.4.*",
+        "symfonycasts/sass-bundle": "^0.9.0",
+        "twig/cache-extra": "^3.23",
+        "twig/extra-bundle": "^2.12|^3.0",
+        "twig/intl-extra": "^3.23",
+        "twig/string-extra": "^3.23",
+        "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^4.3",
-        "fakerphp/faker": "^1.24.1",
-        "phpstan/phpstan-symfony": "^2.0.8",
-        "phpunit/phpunit": "^11.5.43",
+        "fakerphp/faker": "^1.24",
+        "phpstan/phpstan-symfony": "^2.0",
+        "phpunit/phpunit": "^11.5",
         "roave/security-advisories": "dev-latest",
-        "symfony/browser-kit": "7.3.*",
-        "symfony/css-selector": "7.3.*",
-        "symfony/debug-bundle": "7.3.*",
-        "symfony/maker-bundle": "^1.64",
-        "symfony/phpunit-bridge": "^7.3.4",
-        "symfony/stopwatch": "7.3.*",
-        "symfony/web-profiler-bundle": "7.3.*"
+        "symfony/browser-kit": "7.4.*",
+        "symfony/css-selector": "7.4.*",
+        "symfony/debug-bundle": "7.4.*",
+        "symfony/maker-bundle": "^1.0",
+        "symfony/phpunit-bridge": "^8.0",
+        "symfony/stopwatch": "7.4.*",
+        "symfony/web-profiler-bundle": "7.4.*"
     },
     "autoload": {
         "psr-4": {
@@ -105,10 +105,17 @@
         },
         "sort-packages": true,
         "vendor-dir": "vendor/",
-        "process-timeout": 300
+        "process-timeout": 600
     },
     "conflict": {
         "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": true,
+            "require": "7.4.*",
+            "docker": true
+        }
     },
     "replace": {
         "symfony/polyfill-ctype": "*",
@@ -124,9 +131,7 @@
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "importmap:install": "symfony-cmd",
-            "sass:build": "symfony-cmd",
-            "asset-map:compile": "symfony-cmd"
+            "importmap:install": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
@@ -134,12 +139,5 @@
         "post-update-cmd": [
             "@auto-scripts"
         ]
-    },
-    "extra": {
-        "symfony": {
-            "allow-contrib": true,
-            "require": "7.3.*",
-            "docker": true
-        }
     }
 }

@@ -7,11 +7,11 @@ Garage:
     'Median Class': 159
     'Game Update': 9
     Stars: 6
-    Progression: { Level: 13, 'Full Level': 13, Epic: 7, 'Full Epic': 16 }
-    Orders: { Car: 53, Stat: 43, 'Total Car': 76 }
-    'Updated At': '2025/11/06 18:20'
+    Progression: { Level: 13, 'Full Level': 13, Epic: 11, 'Full Epic': 16 }
+    Orders: { Car: 53, Stat: 43, 'Total Car': 78 }
+    'Updated At': '2025/12/06 11:51'
 Blueprint:
-    'Star 1': { Garage: '0', Setting: Key, Difference: 1 }
+    'Star 1': { Garage: Key, Setting: Key, Difference: 0 }
     'Star 2': { Garage: 40, Setting: 40, Difference: 0 }
     'Star 3': { Garage: 45, Setting: 45, Difference: 0 }
     'Star 4': { Garage: 60, Setting: 60, Difference: 0 }
@@ -29,10 +29,10 @@ Rank:
     'Star 5': 4677
     'Star 6': 4897
 Status:
-    Unblock: { isUnblock: false, toUnblock: false }
+    Unblock: { isUnblock: true, toUnblock: false }
     Gold: { isGold: false, toGold: false }
-    'To Upgrade': { isFull: false, toUpgrade: false }
-    Blueprint: { 'Star 1': false, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': true, 'Star 6': true }
+    'To Upgrade': { isFull: true, toUpgrade: false }
+    Blueprint: { 'Star 1': true, 'Star 2': true, 'Star 3': true, 'Star 4': true, 'Star 5': true, 'Star 6': true }
     'Full Upgrade': { Speed: false, Acceleration: false, Handling: false, Nitro: false, Common: false, Rare: false, Epic: false }
     'To Install': { Speed: true, Acceleration: true, Handling: true, Nitro: true, Common: true, Rare: true, Epic: true }
 Stat:
@@ -58,7 +58,7 @@ Upgrade:
     Nitro: { Garage: 6, Level: 13, Difference: 7, Setting: 13 }
     Common: { Garage: 16, Setting: 28, Difference: 12 }
     Rare: { Garage: 4, Setting: 20, Difference: 16 }
-    Epic: { Garage: 0, Setting: 16, Difference: 7 }
+    Epic: { Garage: 0, Setting: 16, Difference: 11 }
 Price:
     'Unit Price': { 'Level 01': 23000, 'Level 02': 37500, 'Level 03': 60000, 'Level 04': 90000, 'Level 05': 130000, 'Level 06': 182000, 'Level 07': 255000, 'Level 08': 356500, 'Level 09': 499500, 'Level 10': 699000, 'Level 11': 979000, 'Level 12': 1370000, 'Level 13': 2250000, 'Level Common': 90000, 'Level Rare': 180000, 'Level Epic': 540000 }
     'Price Real Upgrades': { Speed: 522500, Acceleration: 522500, Handling: 522500, Nitro: 522500 }

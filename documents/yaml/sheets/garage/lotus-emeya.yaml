@@ -11,18 +11,18 @@ Garage:
     Orders: { Car: 18, Stat: 8, 'Total Car': 43 }
     'Updated At': '2025/11/06 18:20'
 Blueprint:
-    'Star 1': { Garage: 0, Setting: 99, Difference: 99 }
+    'Star 1': { Garage: 8, Setting: 99, Difference: 91 }
     'Star 2': { Garage: 0, Setting: 99, Difference: 99 }
     'Star 3': { Garage: 0, Setting: 99, Difference: 99 }
     'Star 4': { Garage: 0, Setting: 99, Difference: 99 }
     'Star 5': { Garage: 0, Setting: 99, Difference: 99 }
     'Star 6': { Garage: 0, Setting: 99, Difference: 99 }
-    Full: { Garage: 0, Setting: 594, Difference: 594 }
+    Full: { Garage: 8, Setting: 594, Difference: 586 }
 Gauntlet:
     Division: 0
 Rank:
-    Start: 0
-    'Star 1': 0
+    Start: 899
+    'Star 1': 1250
     'Star 2': 0
     'Star 3': 0
     'Star 4': 0

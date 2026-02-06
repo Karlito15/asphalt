@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New GarageUpgrade{% endblock %}
+
+{% block body %}
+    <h1>Create new GarageUpgrade</h1>
+
+    {{ include('garage_upgrade/_form.html.twig') }}
+
+    <a href="{{ path('app_garage_upgrade_index') }}">back to list</a>
+{% endblock %}

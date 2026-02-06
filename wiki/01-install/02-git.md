@@ -3,6 +3,6 @@
 ## Clone Repo
 
 ``` shell
-git clone https://Karlito15@bitbucket.org/karlito-web/asphalt9.git
+git clone https://github.com/Karlito15/asphalt.git
 ```
 

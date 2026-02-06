@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New RaceMode{% endblock %}
+
+{% block body %}
+    <h1>Create new RaceMode</h1>
+
+    {{ include('race_mode/_form.html.twig') }}
+
+    <a href="{{ path('app_race_mode_index') }}">back to list</a>
+{% endblock %}

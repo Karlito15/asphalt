@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New GarageStatActual{% endblock %}
+
+{% block body %}
+    <h1>Create new GarageStatActual</h1>
+
+    {{ include('garage_stat_actual/_form.html.twig') }}
+
+    <a href="{{ path('app_garage_stat_actual_index') }}">back to list</a>
+{% endblock %}

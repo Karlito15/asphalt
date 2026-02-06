@@ -1,0 +1,19 @@
+version: '3'
+
+silent: true
+
+vars:
+    PHPUNIT: "APP_ENV=test {{.SYMFONY}} php bin/phpunit"
+
+tasks:
+    default:
+        cmds:
+            - task: help
+
+    help:
+        desc: Display this help
+        cmds:
+            - echo "{{.GREETING}}"
+            - task --list
+
+    ### PHP UNIT
