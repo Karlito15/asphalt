@@ -1,0 +1,84 @@
+-
+    id: 1
+    name: Auckland
+    slug: auckland
+-
+    id: 2
+    name: 'Buenos Aires'
+    slug: buenos-aires
+-
+    id: 3
+    name: Chicago
+    slug: chicago
+-
+    id: 4
+    name: Écosse
+    slug: ecosse
+-
+    id: 5
+    name: Groenland
+    slug: groenland
+-
+    id: 6
+    name: Himalaya
+    slug: himalaya
+-
+    id: 7
+    name: India
+    slug: india
+-
+    id: 8
+    name: 'Le Caire'
+    slug: le-caire
+-
+    id: 9
+    name: 'Les Caraïbes'
+    slug: les-caraibes
+-
+    id: 10
+    name: Nevada
+    slug: nevada
+-
+    id: 11
+    name: 'New York'
+    slug: new-york
+-
+    id: 12
+    name: Norvège
+    slug: norvege
+-
+    id: 13
+    name: Osaka
+    slug: osaka
+-
+    id: 14
+    name: Paris
+    slug: paris
+-
+    id: 15
+    name: Rome
+    slug: rome
+-
+    id: 16
+    name: 'San Diego'
+    slug: san-diego
+-
+    id: 17
+    name: 'San Francisco'
+    slug: san-francisco
+-
+    id: 18
+    name: Shanghai
+    slug: shanghai
+-
+    id: 19
+    name: Singapour
+    slug: singapour
+-
+    id: 20
+    name: Toscane
+    slug: toscane
+-
+    id: 21
+    name: 'US Midwest'
+    slug: us-midwest

@@ -18,10 +18,11 @@ parameters:
         avatar: 'images/sako-01.jpg'
     folders.cache: '%kernel.project_dir%/public/cache/'
     folders.csv: '%kernel.project_dir%/../documents/csv/'
-    folders.cron: '%kernel.project_dir%/../documents/csv/cron/'
-    folders.database: '%kernel.project_dir%/../documents/csv/database/'
+    folders.csv.cron: '%kernel.project_dir%/../documents/csv/cron/'
+    folders.csv.database: '%kernel.project_dir%/../documents/csv/database/'
     folders.yaml: '%kernel.project_dir%/../documents/yaml/'
-    folders.sheet: '%kernel.project_dir%/../documents/yaml/sheet/'
+    folders.yaml.extractor: '%kernel.project_dir%/../documents/yaml/extractor/'
+    folders.yaml.sheet: '%kernel.project_dir%/../documents/yaml/sheet/'
     csv.header.garage.app:                ['Brand', 'Model', 'Stars', 'GameUpdate', 'CarOrder', 'StatOrder', 'Level', 'Epic', 'SettingClassValue']
     csv.header.garage.blueprint:          ['Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6', 'Brand', 'Model']
     csv.header.garage.evo:                ['Number']

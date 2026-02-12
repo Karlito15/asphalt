@@ -1,0 +1,495 @@
+-
+    id: 1
+    name: 'ATS Automobili'
+    cars_number: 2
+    slug: ats-automobili
+-
+    id: 2
+    name: Acura
+    cars_number: 2
+    slug: acura
+-
+    id: 3
+    name: Ajlani
+    cars_number: 1
+    slug: ajlani
+-
+    id: 4
+    name: 'Alfa Romeo'
+    cars_number: 1
+    slug: alfa-romeo
+-
+    id: 5
+    name: Apex
+    cars_number: 1
+    slug: apex
+-
+    id: 6
+    name: Apollo
+    cars_number: 3
+    slug: apollo
+-
+    id: 7
+    name: Arash
+    cars_number: 3
+    slug: arash
+-
+    id: 8
+    name: Ares
+    cars_number: 1
+    slug: ares
+-
+    id: 9
+    name: Arrinera
+    cars_number: 1
+    slug: arrinera
+-
+    id: 10
+    name: Artega
+    cars_number: 1
+    slug: artega
+-
+    id: 11
+    name: Aspark
+    cars_number: 1
+    slug: aspark
+-
+    id: 12
+    name: 'Aston Martin'
+    cars_number: 14
+    slug: aston-martin
+-
+    id: 13
+    name: 'Automobili Pininfarina'
+    cars_number: 3
+    slug: automobili-pininfarina
+-
+    id: 14
+    name: BMW
+    cars_number: 6
+    slug: bmw
+-
+    id: 15
+    name: BXR
+    cars_number: 1
+    slug: bxr
+-
+    id: 16
+    name: Bentley
+    cars_number: 3
+    slug: bentley
+-
+    id: 17
+    name: Bolwell
+    cars_number: 1
+    slug: bolwell
+-
+    id: 18
+    name: Brabham
+    cars_number: 1
+    slug: brabham
+-
+    id: 19
+    name: Bugatti
+    cars_number: 10
+    slug: bugatti
+-
+    id: 20
+    name: Cadillac
+    cars_number: 1
+    slug: cadillac
+-
+    id: 21
+    name: Chevrolet
+    cars_number: 6
+    slug: chevrolet
+-
+    id: 22
+    name: Chrysler
+    cars_number: 1
+    slug: chrysler
+-
+    id: 23
+    name: Citroën
+    cars_number: 2
+    slug: citroen
+-
+    id: 24
+    name: Czinger
+    cars_number: 1
+    slug: czinger
+-
+    id: 25
+    name: 'DS Automobiles'
+    cars_number: 2
+    slug: ds-automobiles
+-
+    id: 26
+    name: 'De Tomaso'
+    cars_number: 2
+    slug: de-tomaso
+-
+    id: 27
+    name: Deus
+    cars_number: 1
+    slug: deus
+-
+    id: 28
+    name: Devel
+    cars_number: 1
+    slug: devel
+-
+    id: 29
+    name: Dodge
+    cars_number: 5
+    slug: dodge
+-
+    id: 30
+    name: Donkervoort
+    cars_number: 1
+    slug: donkervoort
+-
+    id: 31
+    name: Drako
+    cars_number: 1
+    slug: drako
+-
+    id: 32
+    name: 'Exotic Rides'
+    cars_number: 1
+    slug: exotic-rides
+-
+    id: 33
+    name: 'FV Frangivento'
+    cars_number: 3
+    slug: fv-frangivento
+-
+    id: 34
+    name: 'Faraday Future'
+    cars_number: 1
+    slug: faraday-future
+-
+    id: 35
+    name: Ferrari
+    cars_number: 21
+    slug: ferrari
+-
+    id: 36
+    name: Ford
+    cars_number: 11
+    slug: ford
+-
+    id: 37
+    name: 'Formule E'
+    cars_number: 2
+    slug: formule-e
+-
+    id: 38
+    name: Genty
+    cars_number: 1
+    slug: genty
+-
+    id: 39
+    name: Ginetta
+    cars_number: 1
+    slug: ginetta
+-
+    id: 40
+    name: Glickenhaus
+    cars_number: 3
+    slug: glickenhaus
+-
+    id: 41
+    name: HTT
+    cars_number: 1
+    slug: htt
+-
+    id: 42
+    name: Hennessey
+    cars_number: 1
+    slug: hennessey
+-
+    id: 43
+    name: Honda
+    cars_number: 1
+    slug: honda
+-
+    id: 44
+    name: Hyundai
+    cars_number: 2
+    slug: hyundai
+-
+    id: 45
+    name: Icona
+    cars_number: 1
+    slug: icona
+-
+    id: 46
+    name: 'Inferno Automobili'
+    cars_number: 1
+    slug: inferno-automobili
+-
+    id: 47
+    name: Infiniti
+    cars_number: 1
+    slug: infiniti
+-
+    id: 48
+    name: Italdesign
+    cars_number: 2
+    slug: italdesign
+-
+    id: 49
+    name: Jaguar
+    cars_number: 7
+    slug: jaguar
+-
+    id: 50
+    name: KTM
+    cars_number: 1
+    slug: ktm
+-
+    id: 51
+    name: Kepler
+    cars_number: 1
+    slug: kepler
+-
+    id: 52
+    name: Kimera
+    cars_number: 1
+    slug: kimera
+-
+    id: 53
+    name: Koenigsegg
+    cars_number: 9
+    slug: koenigsegg
+-
+    id: 54
+    name: Lamborghini
+    cars_number: 28
+    slug: lamborghini
+-
+    id: 55
+    name: 'Lego Technic'
+    cars_number: 6
+    slug: lego-technic
+-
+    id: 56
+    name: Lexus
+    cars_number: 1
+    slug: lexus
+-
+    id: 57
+    name: Lotus
+    cars_number: 6
+    slug: lotus
+-
+    id: 58
+    name: Maserati
+    cars_number: 4
+    slug: maserati
+-
+    id: 59
+    name: Mazda
+    cars_number: 1
+    slug: mazda
+-
+    id: 60
+    name: Mazzanti
+    cars_number: 1
+    slug: mazzanti
+-
+    id: 61
+    name: McLaren
+    cars_number: 15
+    slug: mclaren
+-
+    id: 62
+    name: McMurtry
+    cars_number: 1
+    slug: mcmurtry
+-
+    id: 63
+    name: Mercedes-Benz
+    cars_number: 9
+    slug: mercedes-benz
+-
+    id: 64
+    name: Mitsubishi
+    cars_number: 1
+    slug: mitsubishi
+-
+    id: 65
+    name: Mosler
+    cars_number: 1
+    slug: mosler
+-
+    id: 66
+    name: Naran
+    cars_number: 1
+    slug: naran
+-
+    id: 67
+    name: Nilu27
+    cars_number: 0
+    slug: nilu27
+-
+    id: 68
+    name: Nio
+    cars_number: 1
+    slug: nio
+-
+    id: 69
+    name: Nissan
+    cars_number: 8
+    slug: nissan
+-
+    id: 70
+    name: Noble
+    cars_number: 1
+    slug: noble
+-
+    id: 71
+    name: Pagani
+    cars_number: 7
+    slug: pagani
+-
+    id: 72
+    name: Peugeot
+    cars_number: 3
+    slug: peugeot
+-
+    id: 73
+    name: Pininfarina
+    cars_number: 2
+    slug: pininfarina
+-
+    id: 74
+    name: Porsche
+    cars_number: 17
+    slug: porsche
+-
+    id: 75
+    name: Praga
+    cars_number: 2
+    slug: praga
+-
+    id: 76
+    name: Puritalia
+    cars_number: 1
+    slug: puritalia
+-
+    id: 77
+    name: Raesr
+    cars_number: 3
+    slug: raesr
+-
+    id: 78
+    name: Renault
+    cars_number: 3
+    slug: renault
+-
+    id: 79
+    name: Rezvani
+    cars_number: 1
+    slug: rezvani
+-
+    id: 80
+    name: Rimac
+    cars_number: 4
+    slug: rimac
+-
+    id: 81
+    name: SSC
+    cars_number: 3
+    slug: ssc
+-
+    id: 82
+    name: Saleen
+    cars_number: 2
+    slug: saleen
+-
+    id: 83
+    name: Sin
+    cars_number: 1
+    slug: sin
+-
+    id: 84
+    name: 'Spania GTA'
+    cars_number: 1
+    slug: spania-gta
+-
+    id: 85
+    name: TVR
+    cars_number: 2
+    slug: tvr
+-
+    id: 86
+    name: Techrules
+    cars_number: 1
+    slug: techrules
+-
+    id: 87
+    name: 'Torino Design'
+    cars_number: 1
+    slug: torino-design
+-
+    id: 88
+    name: Toroidion
+    cars_number: 1
+    slug: toroidion
+-
+    id: 89
+    name: Toyota
+    cars_number: 3
+    slug: toyota
+-
+    id: 90
+    name: Trion
+    cars_number: 1
+    slug: trion
+-
+    id: 91
+    name: Tushek
+    cars_number: 2
+    slug: tushek
+-
+    id: 92
+    name: Ultima
+    cars_number: 1
+    slug: ultima
+-
+    id: 93
+    name: VLF
+    cars_number: 1
+    slug: vlf
+-
+    id: 94
+    name: 'Vanda Electrics'
+    cars_number: 1
+    slug: vanda-electrics
+-
+    id: 95
+    name: Vencer
+    cars_number: 1
+    slug: vencer
+-
+    id: 96
+    name: Vision
+    cars_number: 1
+    slug: vision
+-
+    id: 97
+    name: Volkswagen
+    cars_number: 3
+    slug: volkswagen
+-
+    id: 98
+    name: 'W Motors'
+    cars_number: 3
+    slug: w-motors
+-
+    id: 99
+    name: Zenvo
+    cars_number: 4
+    slug: zenvo

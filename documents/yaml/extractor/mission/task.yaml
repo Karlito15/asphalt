@@ -1,0 +1,92 @@
+-
+    id: 1
+    value: '360'
+    slug: '360'
+-
+    id: 2
+    value: Air
+    slug: air
+-
+    id: 3
+    value: Bouteilles
+    slug: bouteilles
+-
+    id: 4
+    value: Cascades
+    slug: cascades
+-
+    id: 5
+    value: Dérape
+    slug: derape
+-
+    id: 6
+    value: Destructions
+    slug: destructions
+-
+    id: 7
+    value: Éjections
+    slug: ejections
+-
+    id: 8
+    value: Étoile
+    slug: etoile
+-
+    id: 9
+    value: Finish
+    slug: finish
+-
+    id: 10
+    value: Imports
+    slug: imports
+-
+    id: 11
+    value: Items
+    slug: items
+-
+    id: 12
+    value: Nitros
+    slug: nitros
+-
+    id: 13
+    value: 'Nitros Parfaits'
+    slug: nitros-parfaits
+-
+    id: 14
+    value: Objets
+    slug: objets
+-
+    id: 15
+    value: 'Ondes de Choc'
+    slug: ondes-de-choc
+-
+    id: 16
+    value: Packs
+    slug: packs
+-
+    id: 17
+    value: Réputations
+    slug: reputations
+-
+    id: 18
+    value: Sauts
+    slug: sauts
+-
+    id: 19
+    value: 'Séquences Parfaites'
+    slug: sequences-parfaites
+-
+    id: 20
+    value: Time
+    slug: time
+-
+    id: 21
+    value: Tonneaux
+    slug: tonneaux
+-
+    id: 22
+    value: 'Top 1'
+    slug: top-1
+-
+    id: 23
+    value: 'Top 3'
+    slug: top-3

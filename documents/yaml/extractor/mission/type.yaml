@@ -1,0 +1,32 @@
+-
+    id: 1
+    value: '---'
+    slug: ''
+-
+    id: 2
+    value: Boutique
+    slug: boutique
+-
+    id: 3
+    value: Carrière
+    slug: carriere
+-
+    id: 4
+    value: Garage
+    slug: garage
+-
+    id: 5
+    value: Multi
+    slug: multi
+-
+    id: 6
+    value: Quotidien
+    slug: quotidien
+-
+    id: 7
+    value: Spécial
+    slug: special
+-
+    id: 8
+    value: Traque
+    slug: traque

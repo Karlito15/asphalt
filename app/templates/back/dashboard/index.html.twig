@@ -1,6 +1,6 @@
-{% extends 'base.html.twig' %}
+{% extends '@App/base.html.twig' %}
 
-{% block title %}Hello DashboardController!{% endblock %}
+{% block title %}Hello {{ controller_name }}!{% endblock %}
 
 {% block body %}
 <style>
@@ -11,10 +11,24 @@
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
+    Admin:
     <ul>
-        <li>Your controller at <code>E:/Symfony/Asphalt/app/src/Controller/Back/DashboardController.php</code></li>
-        <li>Your template at <code>E:/Symfony/Asphalt/app/templates/back/dashboard/index.html.twig</code></li>
+        <li><a target="_blank" href="{{ path('admin.inventory.index') }}">Inventory App</a></li>
+        <li><a target="_blank" href="{{ path('admin.mission.index') }}">Mission App</a></li>
+        <li><a target="_blank" href="{{ path('admin.mission.task.index') }}">Mission Task</a></li>
+        <li><a target="_blank" href="{{ path('admin.mission.type.index') }}">Mission Type</a></li>
+        <li><a target="_blank" href="{{ path('admin.race.index') }}">Race App</a></li>
+        <li><a target="_blank" href="{{ path('admin.race.mode.index') }}">Race Mode</a></li>
+        <li><a target="_blank" href="{{ path('admin.race.region.index') }}">Race Region</a></li>
+        <li><a target="_blank" href="{{ path('admin.race.season.index') }}">Race Season</a></li>
+        <li><a target="_blank" href="{{ path('admin.race.time.index') }}">Race Time</a></li>
+        <li><a target="_blank" href="{{ path('admin.race.track.index') }}">Race Track</a></li>
+        <li><a target="_blank" href="{{ path('admin.setting.blueprint.index') }}">Setting Blueprint</a></li>
+        <li><a target="_blank" href="{{ path('admin.setting.brand.index') }}">Setting Brand</a></li>
+        <li><a target="_blank" href="{{ path('admin.setting.class.index') }}">Setting Class</a></li>
+        <li><a target="_blank" href="{{ path('admin.setting.level.index') }}">Setting Level</a></li>
+        <li><a target="_blank" href="{{ path('admin.setting.tag.index') }}">Setting Tag</a></li>
+        <li><a target="_blank" href="{{ path('admin.setting.unit-price.index') }}">Setting Unit-Price</a></li>
     </ul>
 </div>
 {% endblock %}

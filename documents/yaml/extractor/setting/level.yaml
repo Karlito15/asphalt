@@ -1,0 +1,133 @@
+-
+    id: 1
+    level: 99
+    common: 99
+    rare: 99
+    epic: 99
+    slug: 99|99-99-99
+-
+    id: 2
+    level: 10
+    common: 16
+    rare: 4
+    epic: 4
+    slug: 10|16-04-04
+-
+    id: 3
+    level: 10
+    common: 20
+    rare: 4
+    epic: 0
+    slug: 10|20-04-00
+-
+    id: 4
+    level: 10
+    common: 24
+    rare: 4
+    epic: 4
+    slug: 10|24-04-04
+-
+    id: 5
+    level: 10
+    common: 24
+    rare: 4
+    epic: 8
+    slug: 10|24-04-08
+-
+    id: 6
+    level: 11
+    common: 20
+    rare: 20
+    epic: 8
+    slug: 11|20-20-08
+-
+    id: 7
+    level: 11
+    common: 24
+    rare: 12
+    epic: 4
+    slug: 11|24-12-04
+-
+    id: 8
+    level: 11
+    common: 24
+    rare: 16
+    epic: 4
+    slug: 11|24-16-04
+-
+    id: 9
+    level: 11
+    common: 24
+    rare: 16
+    epic: 8
+    slug: 11|24-16-08
+-
+    id: 10
+    level: 11
+    common: 28
+    rare: 8
+    epic: 4
+    slug: 11|28-08-04
+-
+    id: 11
+    level: 12
+    common: 24
+    rare: 20
+    epic: 12
+    slug: 12|24-20-12
+-
+    id: 12
+    level: 12
+    common: 28
+    rare: 12
+    epic: 8
+    slug: 12|28-12-08
+-
+    id: 13
+    level: 12
+    common: 28
+    rare: 20
+    epic: 12
+    slug: 12|28-20-12
+-
+    id: 14
+    level: 12
+    common: 32
+    rare: 16
+    epic: 8
+    slug: 12|32-16-08
+-
+    id: 15
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+    slug: 12|32-20-08
+-
+    id: 16
+    level: 12
+    common: 36
+    rare: 16
+    epic: 8
+    slug: 12|36-16-08
+-
+    id: 17
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+    slug: 13|24-20-16
+-
+    id: 18
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+    slug: 13|28-20-16
+-
+    id: 19
+    level: 13
+    common: 32
+    rare: 20
+    epic: 12
+    slug: 13|32-20-12
