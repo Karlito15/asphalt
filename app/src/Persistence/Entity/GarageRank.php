@@ -1,9 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\GarageRankRepository;
-use App\Persistence\Trait\Entity\GarageAppableEntity;
+use App\Toolbox\Trait\Entity\GarageEntity;
+use App\Toolbox\Trait\Entity\IdEntity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -24,75 +27,64 @@ class GarageRank
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use GarageAppableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    private ?int $id = null;
+    use IdEntity, GarageEntity;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
-    private int $star0 = 0;
+    protected int $star0 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
-    private int $star1 = 0;
+    protected int $star1 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
-    private int $star2 = 0;
+    protected int $star2 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
-    private int $star3 = 0;
+    protected int $star3 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
-    private int $star4 = 0;
+    protected int $star4 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
-    private int $star5 = 0;
+    protected int $star5 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
-    private int $star6 = 0;
+    protected int $star6 = 0;
 
-    #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'rank')]
+    #[ORM\OneToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'rank')]
     #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
-    private GarageApp $garage;
+    protected GarageApp $garage;
 
     public function __toString() : string
     {
-        return $this->getGarage();
-    }
-
-    public function getId(): ?int
-    {
-        return $this->id;
+        return ''; // $this->getGarage()
     }
 
     public function getStar0(): ?int

@@ -1,11 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\SettingTagRepository;
-use App\Persistence\Trait\Entity\SlugableEntity;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Toolbox\Trait\Entity\IdEntity;
+use App\Toolbox\Trait\Entity\SlugEntity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -29,14 +30,7 @@ class SettingTag
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use SlugableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?int $id = null;
+    use IdEntity, SlugEntity;
 
     #[ORM\Column(type: Types::STRING, length: 64, nullable: false)]
     #[Assert\Length(min: 1, max: 64)]
@@ -44,7 +38,7 @@ class SettingTag
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private string $value;
+    protected string $value;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
@@ -53,7 +47,7 @@ class SettingTag
     #[Assert\Range(min: 0, max: 999)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private int $carsNumber = 0;
+    protected int $carsNumber = 0;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique: true, nullable: false)]
     #[Assert\Length(min: 3, max: 64)]
@@ -63,24 +57,11 @@ class SettingTag
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['value'], separator: '-')]
     #[Groups(['index'])]
-    private string $slug;
-
-    #[ORM\ManyToMany(targetEntity: GarageApp::class, inversedBy: 'settingTag')]
-    protected Collection $garage;
-
-    public function __construct()
-    {
-        $this->garage = new ArrayCollection();
-    }
+    protected string $slug;
 
     public function __toString(): string
     {
         return $this->getValue();
-    }
-
-    public function getId(): ?int
-    {
-        return $this->id;
     }
 
     public function getValue(): ?string
@@ -103,30 +84,6 @@ class SettingTag
     public function setCarsNumber(int $carsNumber): static
     {
         $this->carsNumber = $carsNumber;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, GarageApp>
-     */
-    public function getGarage(): Collection
-    {
-        return $this->garage;
-    }
-
-    public function addGarage(GarageApp $garage): static
-    {
-        if (!$this->garage->contains($garage)) {
-            $this->garage->add($garage);
-        }
-
-        return $this;
-    }
-
-    public function removeGarage(GarageApp $garage): static
-    {
-        $this->garage->removeElement($garage);
 
         return $this;
     }

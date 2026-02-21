@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\GarageStatMax;
@@ -15,6 +17,8 @@ class GarageStatMaxRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, GarageStatMax::class);
     }
+
+    // EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -38,6 +42,8 @@ class GarageStatMaxRepository extends ServiceEntityRepository
 
         return $datas;
     }
+
+    // EVENTS
 
     /**
      * @param GarageStatMax $entity

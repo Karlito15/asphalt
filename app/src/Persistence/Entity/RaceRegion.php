@@ -1,8 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\RaceRegionRepository;
+use App\Toolbox\Trait\Entity\IdEntity;
+use App\Toolbox\Trait\Entity\SlugEntity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -28,21 +32,15 @@ class RaceRegion
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?int $id = null;
+    use IdEntity, SlugEntity;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique:true, nullable:false)]
     #[Assert\Length(min: 1, max: 64)]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private string $name;
+    #[Groups(['index', 'race'])]
+    protected string $name;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique: true, nullable:false)]
     #[Assert\Length(min: 3, max: 64)]
@@ -52,7 +50,7 @@ class RaceRegion
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['name'], separator: '-')]
     #[Groups(['index'])]
-    private string $slug;
+    protected string $slug;
 
     #[ORM\OneToMany(targetEntity: RaceTrack::class, mappedBy: 'region')]
     protected Collection $track;
@@ -67,11 +65,6 @@ class RaceRegion
         return $this->getName();
     }
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
     public function getName(): ?string
     {
         return $this->name;
@@ -80,18 +73,6 @@ class RaceRegion
     public function setName(string $name): static
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getSlug(): ?string
-    {
-        return $this->slug;
-    }
-
-    public function setSlug(string $slug): static
-    {
-        $this->slug = $slug;
 
         return $this;
     }

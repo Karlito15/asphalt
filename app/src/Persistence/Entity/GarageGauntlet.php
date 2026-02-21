@@ -1,11 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\GarageGauntletRepository;
-use App\Persistence\Trait\Entity\GarageAppableEntity;
+use App\Toolbox\Trait\Entity\GarageEntity;
+use App\Toolbox\Trait\Entity\IdEntity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
@@ -24,52 +28,41 @@ class GarageGauntlet
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use GarageAppableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    private ?int $id = null;
+    use IdEntity, GarageEntity;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
-    private ?int $speed = null;
+    protected ?int $speed = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
-    private ?int $acceleration = null;
+    protected ?int $acceleration = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
-    private ?int $handling = null;
+    protected ?int $handling = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
-    private ?int $nitro = null;
+    protected ?int $nitro = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
-    private ?int $mark = null;
+    protected ?int $mark = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
-    private ?int $division = null;
+    protected ?int $division = null;
 
-    #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'gauntlet')]
+    #[ORM\OneToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'gauntlet')]
     #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
-    private GarageApp $garage;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    protected GarageApp $garage;
 
     public function getSpeed(): ?int
     {
@@ -141,5 +134,73 @@ class GarageGauntlet
         $this->division = $division;
 
         return $this;
+    }
+    #[ORM\PrePersist]
+    public function prePersist(LifecycleEventArgs $args): void
+    {
+        $object = $args->getObject();
+        if ($object instanceof GarageGauntlet) {
+            // Set Mark
+            $speed        = $object->getGarage()->getStatMax()->getValues()['speed'];
+            $acceleration = $object->getGarage()->getStatMax()->getValues()['acceleration'];
+            $handling     = $object->getGarage()->getStatMax()->getValues()['handling'];
+            $nitro        = $object->getGarage()->getStatMax()->getValues()['nitro'];
+        }
+    }
+
+    #[ORM\PostUpdate]
+    public function postUpdate(LifecycleEventArgs $args): void
+    {
+        $object = $args->getObject();
+        if ($object instanceof GarageGauntlet) {
+            // Set Mark
+        }
+    }
+
+    protected function calculateSpeed(float $value): int
+    {
+        return match (true) {
+            $value <= 300 => 9,
+            (300 > $value AND $value <= 350) => 3,
+            (350 > $value AND $value <= 400) => 2,
+            $value > 400 => 1,
+        };
+    }
+
+    protected function calculateAcceleration(float $value): int
+    {
+        return match (true) {
+            $value <= 80 => 9,
+            (80 > $value AND $value <= 83) => 3,
+            (83 > $value AND $value <= 86) => 2,
+            $value > 86 => 1,
+        };
+    }
+
+    protected function calculateHandling(float $value): int
+    {
+        return match (true) {
+            $value <= 40 => 9,
+            (40 > $value AND $value <= 60) => 3,
+            (60 > $value AND $value <= 80) => 2,
+            $value > 80 => 1,
+        };
+    }
+
+    protected function calculateNitro(float $value): int
+    {
+        return match (true) {
+            $value <= 45 => 9,
+            (45 > $value AND $value <= 60) => 3,
+            (60 > $value AND $value <= 75) => 2,
+            $value > 75 => 1,
+        };
+    }
+
+    protected function calculateAverage(int $speed, int $acceleration, int $handling, int $nitro): float
+    {
+        $average = ($speed + $acceleration + $handling + $nitro / 4);
+
+        return floor($average);
     }
 }

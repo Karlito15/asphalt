@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\InventoryApp;
-use App\Persistence\Trait\Repository\SitemapRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -12,22 +13,12 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class InventoryAppRepository extends ServiceEntityRepository
 {
-    use SitemapRepository;
-
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, InventoryApp::class);
     }
 
-    /**
-     * @param string $query
-     * @return InventoryApp[]
-     * @example SELECT * FROM app_inventory WHERE nom LIKE 'abc%';
-     */
-    public function findInventoriesByCategory(string $query): array
-    {
-        return $this->findBy(['category' => $query]);
-    }
+    // EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -36,14 +27,22 @@ class InventoryAppRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $q  = "q.category AS Category, q.label AS Label, q.value AS Value, q.filter AS Filter, q.position AS Position, q.active AS Active, q.slug AS Slug";
         $qb = $this->createQueryBuilder('q');
-        $qb->select($q);
+        $qb->select([
+            'q.category AS Category',
+            'q.label AS Label',
+            'q.value AS Value',
+            'q.filter AS Filter',
+            'q.position AS Position',
+            'q.active AS Active',
+        ]);
         $qb->where('q.deletedAt IS NULL');
         $qb->orderBy('q.id', 'ASC');
 
         return $qb->getQuery()->getArrayResult();
     }
+
+    // EVENTS
 
     /**
      * @param InventoryApp $entity

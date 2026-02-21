@@ -1,14 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\GarageEvoRepository;
-use App\Persistence\Trait\Entity\GarageAppableEntity;
+use App\Toolbox\Trait\Entity\GarageEntity;
+use App\Toolbox\Trait\Entity\IdEntity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
+use Symfony\Component\Serializer\Attribute\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: GarageEvoRepository::class)]
@@ -24,28 +28,18 @@ class GarageEvo
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use GarageAppableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    private ?int $id = null;
+    use IdEntity, GarageEntity;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
+    #[Assert\Range(min: 0, max: 24)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private int $number = 0;
+    protected int $number = 0;
 
-    #[ORM\ManyToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'evo')]
+    #[ORM\OneToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'evo')]
     #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
-    private GarageApp $garage;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    protected GarageApp $garage;
 
     public function getNumber(): int
     {

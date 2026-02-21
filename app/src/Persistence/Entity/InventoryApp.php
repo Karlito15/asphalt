@@ -1,9 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\InventoryAppRepository;
-use App\Persistence\Trait\Entity\SlugableEntity;
+use App\Toolbox\Trait\Entity\IdEntity;
+use App\Toolbox\Trait\Entity\SlugEntity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -28,59 +31,52 @@ class InventoryApp
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use SlugableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?int $id = null;
+    use IdEntity, SlugEntity;
 
     #[ORM\Column(type: Types::STRING, length: 16, nullable: false)]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Length(min: 3, max: 16)]
     #[Groups(['index'])]
-    private string $category;
+    protected string $category;
 
     #[ORM\Column(type: Types::STRING, length: 32, nullable: false)]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Length(min: 3, max: 32)]
     #[Groups(['index'])]
-    private string $label;
+    protected string $label;
 
     #[ORM\Column(nullable: false, options: ["default" => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Groups(['index'])]
-    private int $value = 0;
+    protected int $value = 0;
 
     #[ORM\Column(type: Types::STRING, length: 32, nullable: false, options: ["default" => '---'])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Length(min: 1, max: 32)]
     #[Groups(['index'])]
-    private string $filter = '---';
+    protected string $filter = '---';
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true)]
     #[Groups(['index'])]
-    private ?int $position = null;
+    protected ?int $position = null;
 
     #[ORM\Column]
-    private ?bool $active = null;
+    protected ?bool $active = null;
 
-    #[ORM\Column(type: Types::STRING, length: 128, unique: true)]
+    #[ORM\Column(type: Types::STRING, length: 128, unique: true, nullable: true)]
+    #[Assert\Length(min: 3, max: 128)]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
+    #[Assert\NoSuspiciousCharacters]
+    #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['label', 'filter'], separator: '-')]
     #[Groups(['index'])]
-    private ?string $slug = null;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    protected ?string $slug = null;
 
     public function getCategory(): ?string
     {

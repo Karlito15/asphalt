@@ -1,9 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\RaceTrackRepository;
-use App\Persistence\Trait\Entity\SlugableEntity;
+use App\Toolbox\Trait\Entity\IdEntity;
+use App\Toolbox\Trait\Entity\SlugEntity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -29,28 +32,21 @@ class RaceTrack
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use SlugableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?int $id = null;
+    use IdEntity, SlugEntity;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique:true, nullable:false)]
     #[Assert\Length(min: 1, max: 64)]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private string $nameEnglish;
+    #[Groups(['index', 'race'])]
+    protected string $nameEnglish;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique:false, nullable:true)]
     #[Assert\Length(max: 64)]
     #[Assert\Type(type: ['null', 'string'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?string $nameFrench = null;
+    #[Groups(['index', 'race'])]
+    protected ?string $nameFrench = null;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique:true, nullable:false)]
     #[Assert\Length(min: 3, max: 64)]
@@ -60,14 +56,15 @@ class RaceTrack
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['nameEnglish'], separator: '-')]
     #[Groups(['index'])]
-    private string $slug;
+    protected string $slug;
 
     #[ORM\ManyToOne(targetEntity: RaceRegion::class, cascade: ['persist'], inversedBy: 'track')]
     #[Assert\Type(RaceRegion::class)]
-    private ?RaceRegion $region = null;
+    #[Groups(['race'])]
+    protected ?RaceRegion $region = null;
 
     #[ORM\OneToMany(targetEntity: RaceApp::class, mappedBy: 'track', orphanRemoval: true)]
-    private Collection $race;
+    protected Collection $race;
 
     public function __construct()
     {
@@ -77,11 +74,6 @@ class RaceTrack
     public function __toString(): string
     {
         return $this->getNameEnglish();
-    }
-
-    public function getId(): ?int
-    {
-        return $this->id;
     }
 
     public function getNameEnglish(): ?string

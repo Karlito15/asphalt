@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\GarageGauntlet;
@@ -16,6 +18,8 @@ class GarageGauntletRepository extends ServiceEntityRepository
         parent::__construct($registry, GarageGauntlet::class);
     }
 
+    // EXPORTS
+
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
      *
@@ -23,39 +27,43 @@ class GarageGauntletRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $datas = [];
-        foreach ($this->findAll() as $garage) {
-            $datas[] = [
-                'Speed'         => $garage->getSpeed(),
-                'Acceleration'  => $garage->getAcceleration(),
-                'Handling'      => $garage->getHandling(),
-                'Nitro'         => $garage->getNitro(),
-                'Mark'          => $garage->getMark(),
-                'Division'      => $garage->getDivision(),
-                'Brand'         => $garage->getGarage()->getSettingBrand()->getName(),
-                'Model'         => $garage->getGarage()->getModel(),
-            ];
-        }
+        $qb = $this->createQueryBuilder('gg')
+            ->select([
+                'b.name AS Brand',
+                'g.model AS Model',
+                'gg.speed AS Speed',
+                'gg.acceleration AS Acceleration',
+                'gg.handling AS Handling',
+                'gg.nitro AS Nitro',
+                'gg.mark AS Mark',
+                'gg.division AS Division',
+            ])
+            ->join('g.settingBrand', 'b')
+            ->join('gg.garage', 'g')
+            ->orderBy('g.gameUpdate', 'ASC')
+            ->addOrderBy('b.name', 'ASC')
+        ;
 
-        return $datas;
-
-//        $qb = $this->createQueryBuilder('g')
-//            ->select([
-//                'g.speed AS Speed',
-//                'g.acceleration AS Acceleration',
-//                'g.handling AS Handling',
-//                'g.nitro AS Mark',
-//                'g.division AS Division',
-//                'b.name AS Brand',
-//                'garage.model AS Model',
-//            ])
-//            ->join('g.settingBrand', 'b')
-//            ->join('g.garage', 'garage')
-//            ->orderBy('g.gameUpdate', 'ASC')
-//        ;
+        return $qb->getQuery()->getArrayResult();
 //
-//        return $qb->getQuery()->getArrayResult();
+//        $datas = [];
+//        foreach ($this->findAll() as $garage) {
+//            $datas[] = [
+//                'Speed'         => $garage->getSpeed(),
+//                'Acceleration'  => $garage->getAcceleration(),
+//                'Handling'      => $garage->getHandling(),
+//                'Nitro'         => $garage->getNitro(),
+//                'Mark'          => $garage->getMark(),
+//                'Division'      => $garage->getDivision(),
+//                'Brand'         => $garage->getGarage()->getSettingBrand()->getName(),
+//                'Model'         => $garage->getGarage()->getModel(),
+//            ];
+//        }
+//
+//        return $datas;
     }
+
+    // EVENTS
 
     /**
      * @param GarageGauntlet $entity

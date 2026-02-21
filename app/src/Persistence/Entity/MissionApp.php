@@ -1,8 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\MissionAppRepository;
+use App\Toolbox\Trait\Entity\IdEntity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -24,13 +27,7 @@ class MissionApp
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?int $id = null;
+    use IdEntity;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['unsigned' => true, 'default' => 1])]
     #[Assert\NotBlank]
@@ -38,63 +35,58 @@ class MissionApp
     #[Assert\Positive]
     #[Assert\Range(min: 1, max: 4,)]
     #[Groups(['index'])]
-    private int $week = 1;
+    protected int $week = 1;
 
     #[ORM\Column(type: Types::STRING, length: 64, nullable:true)]
     #[Assert\Length(min: 0, max: 64)]
     #[Groups(['index'])]
-    private ?string $region = null;
+    protected ?string $region = null;
 
     #[ORM\Column(type: Types::STRING, length: 64, nullable:true)]
     #[Assert\Length(min: 0, max: 64)]
     #[Groups(['index'])]
-    private ?string $track = null;
+    protected ?string $track = null;
 
     #[ORM\Column(type: Types::STRING, length: 16, nullable:true)]
     #[Assert\Length(min: 0, max: 16)]
     #[Groups(['index'])]
-    private ?string $class = null;
+    protected ?string $class = null;
 
     #[ORM\Column(type: Types::STRING, length: 64, nullable:true)]
     #[Assert\Length(min: 0, max: 64)]
     #[Groups(['index'])]
-    private ?string $brand = null;
+    protected ?string $brand = null;
 
     #[ORM\Column(type: Types::STRING, length: 32, nullable:true)]
     #[Assert\Length(min: 0, max: 32)]
     #[Groups(['index'])]
-    private ?string $description = null;
+    protected ?string $description = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Groups(['index'])]
-    private int $success = 0;
+    protected int $success = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 1, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Groups(['index'])]
-    private int $target = 1;
+    protected int $target = 1;
 
     #[ORM\ManyToOne(fetch: 'EAGER', inversedBy: 'mission')]
     #[ORM\JoinColumn(name: "task_id", referencedColumnName: "id", unique: false, nullable: false)]
     #[Assert\NotNull]
     #[Assert\Type(MissionTask::class)]
-    private MissionTask $task;
+    protected MissionTask $task;
 
     #[ORM\ManyToOne(fetch: 'EAGER', inversedBy: 'mission')]
     #[ORM\JoinColumn(name: "type_id", referencedColumnName: "id", unique: false, nullable: false)]
     #[Assert\NotNull]
     #[Assert\Type(MissionType::class)]
-    private MissionType $type;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    protected MissionType $type;
 
     public function getWeek(): ?int
     {

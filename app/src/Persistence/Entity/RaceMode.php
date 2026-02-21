@@ -1,8 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\RaceModeRepository;
+use App\Toolbox\Trait\Entity\IdEntity;
+use App\Toolbox\Trait\Entity\SlugEntity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -13,6 +17,7 @@ use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Serializer\Attribute\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
+
 
 #[ORM\Entity(repositoryClass: RaceModeRepository::class)]
 #[ORM\Table(name: 'race_mode')]
@@ -28,21 +33,15 @@ class RaceMode
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?int $id = null;
+    use IdEntity, SlugEntity;
 
     #[ORM\Column(type: Types::STRING, length: 32, unique:true, nullable:false)]
     #[Assert\Length(min: 1, max: 32)]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private string $name;
+    #[Groups(['index', 'race'])]
+    protected string $name;
 
     #[ORM\Column(type: Types::STRING, length: 32, unique: true, nullable:false)]
     #[Assert\Length(min: 3, max: 32)]
@@ -52,7 +51,7 @@ class RaceMode
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['name'], separator: '-')]
     #[Groups(['index'])]
-    private string $slug;
+    protected string $slug;
 
     #[ORM\OneToMany(targetEntity: RaceApp::class, mappedBy: 'mode', orphanRemoval: true)]
     protected Collection $race;
@@ -61,15 +60,9 @@ class RaceMode
     {
         $this->race = new ArrayCollection();
     }
-
     public function __toString(): string
     {
         return $this->getName();
-    }
-
-    public function getId(): ?int
-    {
-        return $this->id;
     }
 
     public function getName(): ?string
@@ -80,18 +73,6 @@ class RaceMode
     public function setName(string $name): static
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getSlug(): ?string
-    {
-        return $this->slug;
-    }
-
-    public function setSlug(string $slug): static
-    {
-        $this->slug = $slug;
 
         return $this;
     }

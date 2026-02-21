@@ -1,9 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\SettingBlueprintRepository;
-use App\Persistence\Trait\Entity\BlueprintableEntity;
+use App\Toolbox\Abstract\BlueprintAbstract;
+use App\Toolbox\Trait\Entity\IdEntity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -22,7 +25,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
 #[UniqueEntity(fields: ['star1', 'star2', 'star3', 'star4', 'star5', 'star6', 'total'])]
 #[UniqueEntity(fields: ['slug'])]
-class SettingBlueprint
+class SettingBlueprint extends BlueprintAbstract
 {
     /**
      * Hook Timestamp behavior updates createdAt, updatedAt fields
@@ -30,62 +33,7 @@ class SettingBlueprint
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use BlueprintableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?int $id = null;
-
-    #[ORM\Column(type: Types::STRING, length: 3, nullable: false)]
-    #[Assert\Length(min: 1, max: 3)]
-    #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private string $star1;
-
-    #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
-    #[Assert\PositiveOrZero]
-    #[Assert\Range(min: 0, max: 99)]
-    #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private int $star2 = 0;
-
-    #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
-    #[Assert\PositiveOrZero]
-    #[Assert\Range(min: 0, max: 99)]
-    #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private int $star3 = 0;
-
-    #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
-    #[Assert\PositiveOrZero]
-    #[Assert\Range(min: 0, max: 99)]
-    #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private int $star4 = 0;
-
-    #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
-    #[Assert\PositiveOrZero]
-    #[Assert\Range(min: 0, max: 99)]
-    #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private int $star5 = 0;
-
-    #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
-    #[Assert\PositiveOrZero]
-    #[Assert\Range(min: 0, max: 99)]
-    #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private int $star6 = 0;
-
-    #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
-    #[Assert\PositiveOrZero]
-    #[Assert\Range(min: 0, max: 999)]
-    #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private int $total = 0;
+    use IdEntity;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique: true, nullable: false)]
     #[Assert\Length(min: 3, max: 64)]
@@ -94,7 +42,7 @@ class SettingBlueprint
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private string $slug;
+    protected string $slug;
 
     #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingBlueprint')]
     protected Collection $garage;
@@ -104,91 +52,24 @@ class SettingBlueprint
         $this->garage = new ArrayCollection();
     }
 
-    public function __toString(): string
-    {
-        return $this->getSlug();
-    }
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    public function getStar1(): ?string
-    {
-        return $this->star1;
-    }
-
-    public function setStar1(string $star1): static
-    {
-        $this->star1 = $star1;
-
-        return $this;
-    }
-
-    public function getStar2(): ?int
-    {
-        return $this->star2;
-    }
-
-    public function setStar2(int $star2): static
-    {
-        $this->star2 = $star2;
-
-        return $this;
-    }
-
-    public function getStar3(): ?int
-    {
-        return $this->star3;
-    }
-
-    public function setStar3(int $star3): static
-    {
-        $this->star3 = $star3;
-
-        return $this;
-    }
-
-    public function getStar4(): ?int
-    {
-        return $this->star4;
-    }
-
-    public function setStar4(int $star4): static
-    {
-        $this->star4 = $star4;
-
-        return $this;
-    }
-
-    public function getStar5(): ?int
-    {
-        return $this->star5;
-    }
-
-    public function setStar5(int $star5): static
-    {
-        $this->star5 = $star5;
-
-        return $this;
-    }
-
-    public function getStar6(): ?int
-    {
-        return $this->star6;
-    }
-
-    public function setStar6(int $star6): static
-    {
-        $this->star6 = $star6;
-
-        return $this;
-    }
-
     public function getSlug(): ?string
     {
         return $this->slug;
+    }
+
+    public function setSlug(): static
+    {
+        $this->slug =
+            strtolower(str_pad($this->getStar1(), 3, '0', STR_PAD_LEFT)).'-'.
+            str_pad((string) $this->getStar2(), 2, '0', STR_PAD_LEFT).'-'.
+            str_pad((string) $this->getStar3(), 2, '0', STR_PAD_LEFT).'-'.
+            str_pad((string) $this->getStar4(), 2, '0', STR_PAD_LEFT).'-'.
+            str_pad((string) $this->getStar5(), 2, '0', STR_PAD_LEFT).'-'.
+            str_pad((string) $this->getStar6(), 2, '0', STR_PAD_LEFT).'|'.
+            strtolower(str_pad((string) $this->getTotal(), 3, '0', STR_PAD_LEFT))
+        ;
+
+        return $this;
     }
 
     /**

@@ -4,8 +4,10 @@ dh_auditor:
     enabled: true
     providers:
         doctrine:
-            table_prefix: 'log_'
-            table_suffix: ~ # '_audit'
+            # table_prefix: null
+            table_prefix: 'audit-log-'
+            # table_suffix: '_audit'
+            table_suffix: ~
             # columns ignored from auditing
             ignored_columns:
                 - 'createdAt'

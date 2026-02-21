@@ -1,10 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\MissionTaskRepository;
-use App\Persistence\Trait\Entity\MissionableEntity;
+use App\Toolbox\Abstract\MissionAbstract;
+use App\Toolbox\Trait\Entity\IdEntity;
+use App\Toolbox\Trait\Entity\SlugEntity;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
@@ -19,7 +25,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 #[ORM\HasLifecycleCallbacks]
 #[Gedmo\SoftDeleteable(fieldName: 'deletedAt', timeAware: false, hardDelete: true)]
 #[UniqueEntity(fields: ['value'])]
-class MissionTask
+class MissionTask extends MissionAbstract
 {
     /**
      * Hook Timestamp behavior updates createdAt, updatedAt fields
@@ -27,21 +33,24 @@ class MissionTask
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use MissionableEntity;
+    use IdEntity, SlugEntity;
 
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
+    #[ORM\Column(type: Types::STRING, length: 64, unique: true, nullable:false)]
+    #[Assert\Length(min: 3, max: 64)]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
+    #[Assert\NoSuspiciousCharacters]
+    #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
+    #[Gedmo\Slug(fields: ['value'], separator: '-')]
     #[Groups(['index'])]
-    private ?int $id = null;
+    protected string $slug;
 
     #[ORM\OneToMany(targetEntity: MissionApp::class, mappedBy: 'task', orphanRemoval: true)]
-    private Collection $mission;
+    protected Collection $mission;
 
-    public function getId(): ?int
+    public function __construct()
     {
-        return $this->id;
+        $this->mission = new ArrayCollection();
     }
 
     public function addMission(MissionApp $mission): static

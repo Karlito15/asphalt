@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\GarageStatMin;
@@ -15,6 +17,8 @@ class GarageStatMinRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, GarageStatMin::class);
     }
+
+    // EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -38,6 +42,8 @@ class GarageStatMinRepository extends ServiceEntityRepository
 
         return $datas;
     }
+
+    // EVENTS
 
     /**
      * @param GarageStatMin $entity

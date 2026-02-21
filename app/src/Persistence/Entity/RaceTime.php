@@ -1,8 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\RaceTimeRepository;
+use App\Toolbox\Trait\Entity\IdEntity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -28,21 +31,15 @@ class RaceTime
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?int $id = null;
+    use IdEntity;
 
     #[ORM\Column(type: Types::SMALLINT, unique:true, nullable:false, options: ['unsigned' => true])]
     #[Assert\Length(min: 1)]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private int $name;
+    #[Groups(['index', 'race'])]
+    protected int $name;
 
     #[ORM\OneToMany(targetEntity: RaceApp::class, mappedBy: 'time', orphanRemoval: true)]
     protected Collection $race;
@@ -55,11 +52,6 @@ class RaceTime
     public function __toString(): string
     {
         return (string) $this->getName();
-    }
-
-    public function getId(): ?int
-    {
-        return $this->id;
     }
 
     public function getName(): ?int

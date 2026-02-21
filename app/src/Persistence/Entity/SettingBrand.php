@@ -1,8 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\SettingBrandRepository;
+use App\Toolbox\Trait\Entity\IdEntity;
+use App\Toolbox\Trait\Entity\SlugEntity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -28,13 +32,7 @@ class SettingBrand
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?int $id = null;
+    use IdEntity, SlugEntity;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique:true, nullable:false)]
     #[Assert\Length(min: 1, max: 64)]
@@ -42,13 +40,13 @@ class SettingBrand
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index', 'garage'])]
-    private string $name;
+    protected string $name;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private int $cars_number = 0;
+    protected int $cars_number = 0;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique: true, nullable: false)]
     #[Assert\Length(min: 3, max: 64)]
@@ -58,7 +56,7 @@ class SettingBrand
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['name'], separator: '-')]
     #[Groups(['index'])]
-    private string $slug;
+    protected string $slug;
 
     #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingBrand')]
     protected Collection $garage;
@@ -71,11 +69,6 @@ class SettingBrand
     public function __toString(): string
     {
         return $this->getName();
-    }
-
-    public function getId(): ?int
-    {
-        return $this->id;
     }
 
     public function getName(): ?string
@@ -98,18 +91,6 @@ class SettingBrand
     public function setCarsNumber(int $cars_number): static
     {
         $this->cars_number = $cars_number;
-
-        return $this;
-    }
-
-    public function getSlug(): ?string
-    {
-        return $this->slug;
-    }
-
-    public function setSlug(string $slug): static
-    {
-        $this->slug = $slug;
 
         return $this;
     }

@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\SettingLevel;
-use App\Persistence\Trait\Repository\SitemapRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -12,14 +13,18 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class SettingLevelRepository extends ServiceEntityRepository
 {
-    use SitemapRepository;
-
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, SettingLevel::class);
     }
 
-    /** @return array */
+    // EXPORTS
+
+    /**
+     * Retourne les informations pour les extraire dans un fichier CSV
+     *
+     * @return array
+     */
     public function export(): array
     {
         $q  = "q.level AS Level, q.common AS Common, q.rare AS Rare, q.epic AS Epic, q.slug AS Slug";
@@ -30,6 +35,8 @@ class SettingLevelRepository extends ServiceEntityRepository
 
         return $qb->getQuery()->getArrayResult();
     }
+
+    // EVENTS
 
     /**
      * @param SettingLevel $entity

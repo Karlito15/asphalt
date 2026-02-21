@@ -1,0 +1,47 @@
+{% block table %}
+        <tbody>
+        {% for item in entities %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.week }}</td>
+                <td>{{ item.region }}</td>
+                <td>{{ item.track }}</td>
+                <td>{{ item.class }}</td>
+                <td>{{ item.brand }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.success }}</td>
+                <td>{{ item.target }}</td>
+                <td>
+                    <a href="javascript:void(0);">update</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        <thead>
+            {{ _self.legend() }}
+        </thead>
+        <tfoot>
+            {{ _self.legend() }}
+        </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+            <tr>
+                <th>Id</th>
+                <th>{{ 'text.week'|trans }}</th>
+                <th>{{ 'text.region'|trans }}</th>
+                <th>{{ 'text.track'|trans }}</th>
+                <th>{{ 'text.class'|trans }}</th>
+                <th>{{ 'text.brand'|trans }}</th>
+                <th>{{ 'text.description'|trans }}</th>
+                <th>{{ 'text.success'|trans }}</th>
+                <th>{{ 'text.target'|trans }}</th>
+                <th>Action</th>
+            </tr>
+{% endmacro %}
+
+{% extends '@App/usuals/index.html.twig' %}

@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\SettingBlueprint;
-use App\Persistence\Trait\Repository\SitemapRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -12,12 +13,12 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class SettingBlueprintRepository extends ServiceEntityRepository
 {
-    use SitemapRepository;
-
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, SettingBlueprint::class);
     }
+
+    // EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -34,6 +35,8 @@ class SettingBlueprintRepository extends ServiceEntityRepository
 
         return $qb->getQuery()->getArrayResult();
     }
+
+    // EVENTS
 
     /**
      * @param SettingBlueprint $entity

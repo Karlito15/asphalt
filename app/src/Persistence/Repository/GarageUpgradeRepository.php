@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\GarageUpgrade;
@@ -15,6 +17,8 @@ class GarageUpgradeRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, GarageUpgrade::class);
     }
+
+    // EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -40,6 +44,8 @@ class GarageUpgradeRepository extends ServiceEntityRepository
 
         return $datas;
     }
+
+    // EVENTS
 
     /**
      * @param GarageUpgrade $entity

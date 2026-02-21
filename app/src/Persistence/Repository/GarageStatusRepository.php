@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\GarageStatus;
@@ -15,6 +17,8 @@ class GarageStatusRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, GarageStatus::class);
     }
+
+    // EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -59,6 +63,36 @@ class GarageStatusRepository extends ServiceEntityRepository
         }
 
         return $datas;
+    }
+
+    // EVENTS
+
+    /**
+     * @param GarageStatus $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function save(GarageStatus $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
+     * @param GarageStatus $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function remove(GarageStatus $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
     }
 
     //    /**

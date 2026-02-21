@@ -47,7 +47,9 @@ Thumbs.db
 
 *.lock
 
-/- notes -/
-/- olds -/
-/documents/csv/
+/appv5/
+/appv6/
+/appv7/
+/notes/
 /vars/
+/zip/

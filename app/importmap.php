@@ -16,25 +16,25 @@ return [
         'path' => './assets/scripts/app.js',
         'entrypoint' => true,
     ],
-    '@hotwired/turbo' => [
-        'version' => '7.3.0',
-    ],
     '@hotwired/stimulus' => [
         'version' => '3.2.2',
     ],
     '@symfony/stimulus-bundle' => [
         'path' => './vendor/symfony/stimulus-bundle/assets/dist/loader.js',
     ],
+    '@hotwired/turbo' => [
+        'version' => '7.3.0',
+    ],
     'tom-select/dist/css/tom-select.default.css' => [
-        'version' => '2.4.4',
+        'version' => '2.5.1',
         'type' => 'css',
     ],
     'tom-select/dist/css/tom-select.bootstrap5.css' => [
-        'version' => '2.4.4',
+        'version' => '2.5.1',
         'type' => 'css',
     ],
     'jquery' => [
-        'version' => '3.7.1',
+        'version' => '4.0.0',
     ],
     'bootstrap' => [
         'version' => '5.3.8',
@@ -47,10 +47,10 @@ return [
         'type' => 'css',
     ],
     'bootstrap-table' => [
-        'version' => '1.26.0',
+        'version' => '1.27.0',
     ],
     'bootstrap-table/dist/bootstrap-table.min.css' => [
-        'version' => '1.26.0',
+        'version' => '1.27.0',
         'type' => 'css',
     ],
     'fontawesome' => [

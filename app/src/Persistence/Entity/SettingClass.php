@@ -1,9 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\SettingClassRepository;
-use App\Persistence\Trait\Entity\SlugableEntity;
+use App\Toolbox\Trait\Entity\IdEntity;
+use App\Toolbox\Trait\Entity\SlugEntity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -29,14 +32,7 @@ class SettingClass
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use SlugableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?int $id = null;
+    use IdEntity, SlugEntity;
 
     #[ORM\Column(type: Types::STRING, length: 8, nullable:false)]
     #[Assert\Length(min: 1, max: 8)]
@@ -44,7 +40,7 @@ class SettingClass
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private string $label;
+    protected string $label;
 
     #[ORM\Column(type: Types::STRING, length: 8, nullable: false)]
     #[Assert\Length(min: 1, max: 8)]
@@ -52,7 +48,7 @@ class SettingClass
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index', 'garage'])]
-    private string $value;
+    protected string $value;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 1, 'unsigned' => true])]
     #[Assert\NotBlank]
@@ -61,13 +57,13 @@ class SettingClass
     #[Assert\Range(min: 1, max: 5)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private int $classOrder = 1;
+    protected int $classOrder = 1;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private int $carsNumber = 0;
+    protected int $carsNumber = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
@@ -76,7 +72,7 @@ class SettingClass
     #[Assert\Range(min: 125, max: 159)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private int $median = 125;
+    protected int $median = 125;
 
     #[ORM\Column(type: Types::STRING, length: 32, unique: true, nullable: false)]
     #[Assert\Length(min: 3, max: 32)]
@@ -86,7 +82,7 @@ class SettingClass
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['label', 'value'], separator: '-')]
     #[Groups(['index'])]
-    private string $slug;
+    protected string $slug;
 
     #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingClass')]
     protected Collection $garage;

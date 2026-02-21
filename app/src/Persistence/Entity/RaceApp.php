@@ -1,16 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\RaceAppRepository;
-use App\Persistence\Trait\Entity\RaceAppableEntity;
+use App\Toolbox\Trait\Entity\IdEntity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Serializer\Attribute\Groups;
+use Symfony\Component\String\Slugger\AsciiSlugger;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: RaceAppRepository::class)]
@@ -27,56 +31,48 @@ class RaceApp
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use RaceAppableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?int $id = null;
+    use IdEntity;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
-    #[Groups(['index'])]
-    private ?int $raceOrder = null;
+    #[Groups(['index', 'race'])]
+    protected ?int $raceOrder = null;
 
     #[ORM\Column(nullable: false, options: ['default' => false])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
-    #[Groups(['index'])]
-    private bool $finished = false;
+    #[Groups(['index', 'race'])]
+    protected bool $finished = false;
 
     #[ORM\Column(length: 255, unique: true, nullable: false)]
     #[Assert\Length(min: 1, max: 255)]
     #[Assert\NotBlank]
     #[Assert\NotNull]
-    private string $slug;
+    protected string $slug;
 
     #[ORM\ManyToOne(fetch: 'EAGER', inversedBy: 'race')]
     #[ORM\JoinColumn(name: "mode_id", referencedColumnName: "id", unique: false, nullable: false)]
     #[Assert\Type(RaceMode::class)]
-    private RaceMode $mode;
+    #[Groups(['race'])]
+    protected RaceMode $mode;
 
     #[ORM\ManyToOne(fetch: 'EAGER', inversedBy: 'race')]
     #[ORM\JoinColumn(name: "season_id", referencedColumnName: "id", unique: false, nullable: false)]
     #[Assert\Type(RaceSeason::class)]
-    private RaceSeason $season;
+    #[Groups(['race'])]
+    protected RaceSeason $season;
 
     #[ORM\ManyToOne(fetch: 'EAGER', inversedBy: 'race')]
     #[ORM\JoinColumn(name: "time_id", referencedColumnName: "id", unique: false, nullable: false)]
     #[Assert\Type(RaceTime::class)]
-    private RaceTime $time;
+    #[Groups(['race'])]
+    protected RaceTime $time;
 
     #[ORM\ManyToOne(fetch: 'EAGER', inversedBy: 'race')]
     #[ORM\JoinColumn(name: "track_id", referencedColumnName: "id", unique: false, nullable: false)]
     #[Assert\Type(RaceTrack::class)]
-    private RaceTrack $track;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    #[Groups(['race'])]
+    protected RaceTrack $track;
 
     public function getRaceOrder(): ?int
     {
@@ -105,6 +101,20 @@ class RaceApp
     public function getSlug(): string
     {
         return $this->slug;
+    }
+
+    public function setSlug(): static
+    {
+        $slugger = new AsciiSlugger();
+
+        /** @var RaceApp $this  */
+        $this->slug = $slugger->slug(
+            (string) $this->getSeason())->lower() . '-' .
+            $slugger->slug((string) $this->getRaceOrder())->lower() . '-' .
+            $slugger->slug((string) $this->getTrack())->lower()
+        ;
+
+        return $this;
     }
 
     public function getMode(): ?RaceMode
@@ -153,5 +163,33 @@ class RaceApp
         $this->track = $track;
 
         return $this;
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    #[ORM\PrePersist]
+    public function prePersist(LifecycleEventArgs $args): void
+    {
+        /* @var RaceApp $object */
+        $object = $args->getObject();
+        if ($object instanceof RaceApp) {
+            $object->setSlug();
+        }
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    #[ORM\PreUpdate]
+    public function preUpdate(LifecycleEventArgs $args): void
+    {
+        /* @var RaceApp $object */
+        $object = $args->getObject();
+        if ($object instanceof RaceApp) {
+            $object->setSlug();
+        }
     }
 }

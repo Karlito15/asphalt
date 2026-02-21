@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\RaceSeason;
-use App\Persistence\Trait\Repository\SitemapRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -14,12 +13,12 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class RaceSeasonRepository extends ServiceEntityRepository
 {
-    use SitemapRepository;
-
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, RaceSeason::class);
     }
+
+    // EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -36,6 +35,8 @@ class RaceSeasonRepository extends ServiceEntityRepository
 
         return $qb->getQuery()->getArrayResult();
     }
+
+    // EVENTS
 
     /**
      * @param RaceSeason $entity

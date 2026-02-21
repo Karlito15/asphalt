@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Service\Command;
 
-use KarlitoWeb\Toolbox\System\Path;
+use App\Toolbox\System\Path;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;

@@ -1,0 +1,50 @@
+{% extends '@App/bases/back/full.html.twig' %}
+
+{% block bodyClass %} class="bg-dark"{% endblock %}
+    {% block body %}
+<div class="d-block p-2 row">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+    <dl class="col-4">
+        <dt>Easy Admin</dt>
+        <dd><a target="_blank" href="{{ path('admin_inventory_app_index') }}">Inventory App</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_mission_app_index') }}">Mission App</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_mission_task_index') }}">Mission Task</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_mission_type_index') }}">Mission Type</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_race_app_index') }}">Race App</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_race_mode_index') }}">Race Mode</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_race_region_index') }}">Race Region</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_race_season_index') }}">Race Season</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_race_time_index') }}">Race Time</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_race_track_index') }}">Race Track</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_setting_blueprint_index') }}">Setting Blueprint</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_setting_brand_index') }}">Setting Brand</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_setting_class_index') }}">Setting Class</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_setting_level_index') }}">Setting Level</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_setting_tag_index') }}">Setting Tag</a></dd>
+        <dd><a target="_blank" href="{{ path('admin_setting_unit_price_index') }}">Setting Unit-Price</a></dd>
+    </dl>
+    <dl class="col-4">
+        <dt>Back Office</dt>
+        <dd><a target="_blank" href="{{ path('admin.inventory.index') }}">Inventory App</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.mission.index') }}">Mission App</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.mission.task.index') }}">Mission Task</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.mission.type.index') }}">Mission Type</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.race.index') }}">Race App</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.race.mode.index') }}">Race Mode</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.race.region.index') }}">Race Region</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.race.season.index') }}">Race Season</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.race.time.index') }}">Race Time</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.race.track.index') }}">Race Track</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.setting.blueprint.index') }}">Setting Blueprint</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.setting.brand.index') }}">Setting Brand</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.setting.class.index') }}">Setting Class</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.setting.level.index') }}">Setting Level</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.setting.tag.index') }}">Setting Tag</a></dd>
+        <dd><a target="_blank" href="{{ path('admin.setting.unit-price.index') }}">Setting Unit-Price</a></dd>
+    </dl>
+    <dl class="col-4">
+        <dt>Front Office</dt>
+        <dd><a target="_blank" href="{{ path('app.dashboard.index') }}">Front Office</a></dd>
+    </dl>
+</div>
+{% endblock %}

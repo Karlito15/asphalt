@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\SettingTag;
-use App\Persistence\Trait\Repository\SitemapRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -12,14 +13,18 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class SettingTagRepository extends ServiceEntityRepository
 {
-    use SitemapRepository;
-
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, SettingTag::class);
     }
 
-    /** @return array */
+    // EXPORTS
+
+    /**
+     * Retourne les informations pour les extraire dans un fichier CSV
+     *
+     * @return array
+     */
     public function export(): array
     {
         $q  = "q.value AS Value, q.carsNumber AS Number, q.slug AS Slug";
@@ -30,6 +35,8 @@ class SettingTagRepository extends ServiceEntityRepository
 
         return $qb->getQuery()->getArrayResult();
     }
+
+    // EVENTS
 
     /**
      * @param SettingTag $entity

@@ -1,0 +1,35 @@
+{% extends '@App/bases/front/full.html.twig' %}
+
+{% block body %}
+<div class="d-block p-2 bg-dark text-white">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+    <dl class="col-4">
+        <dt>Easy Admin</dt>
+        <dd><a target="_blank" href="{{ path('admin') }}">Easy Admin</a></dd>
+    </dl>
+    <dl class="col-4">
+        <dt>Back Office</dt>
+        <dd><a target="_blank" href="{{ path('admin.dashboard.index') }}">Back Office</a></dd>
+    </dl>
+    <dl class="col-4">
+        <dt>Front Office</dt>
+        <dd><a target="_blank" href="{{ path('app.garage.index') }}">Garage App</a></dd>
+        <dd><a target="_blank" href="{{ path('app.mission.index') }}">Mission App</a></dd>
+        <dd><a target="_blank" href="{{ path('app.race.index') }}">Race App</a></dd>
+        <dd><a target="_blank" href="{{ path('app.page.filter.gold') }}">Page Filter By : Gold</a></dd>
+        <dd><a target="_blank" href="{{ path('app.page.filter.locked') }}">Page Filter By : Lock</a></dd>
+        <dd><a target="_blank" href="{{ path('app.page.filter.to.gold') }}">Page Filter By : To Gold</a></dd>
+        <dd><a target="_blank" href="{{ path('app.page.filter.to.unlock') }}">Page Filter By : To Unlock</a></dd>
+        <dd><a target="_blank" href="{{ path('app.page.filter.to.upgrade') }}">Page Filter By : To Upgrade</a></dd>
+        <dd><a target="_blank" href="{{ path('app.page.filter.unlock') }}">Page Filter By : Unlock</a></dd>
+        <dd><a target="_blank" href="{{ path('app.page.order.class') }}">Page Order By : Class</a></dd>
+        <dd><a target="_blank" href="{{ path('app.page.order.event') }}">Page Order By : Event</a></dd>
+        <dd><a target="_blank" href="{{ path('app.page.order.stat') }}">Page Order By : Stat</a></dd>
+        <dd><a target="_blank" href="{{ path('app.page.search.garage') }}">Page Search : Garage</a></dd>
+        <dd><a target="_blank" href="{{ path('app.page.search.race') }}">Page Search : Race</a></dd>
+{#        <dd><a target="_blank" href="{{ path('app.page.setting.blueprint') }}">XXXXXXXXXXX</a></dd>#}
+{#        <dd><a target="_blank" href="{{ path('app.page.setting.level') }}">XXXXXXXXXXX</a></dd>#}
+{#        <dd><a target="_blank" href="{{ path('app.page.setting.rank') }}">XXXXXXXXXXX</a></dd>#}
+    </dl>
+</div>
+{% endblock %}

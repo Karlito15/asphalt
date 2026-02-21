@@ -1,0 +1,37 @@
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+class Flash extends HTMLElement {
+    async connectedCallback() {
+        const type = this.getAttribute('type')
+        const title = this.getAttribute('title')
+        const message = this.getAttribute('message')
+
+        await Swal.fire({
+            animation: true,
+            // draggable: false,
+            // heightAuto: true,
+            icon: type,
+            position: "top-end",
+            showCancelButton: false,
+            showCloseButton: false,
+            showConfirmButton: false,
+            showDenyButton: false,
+            text: message,
+            theme: 'dark',
+            timer: 3000,
+            timerProgressBar: true,
+            title: title,
+            toast: true,
+            topLayer: true,
+            width: '33%',
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+        });
+    }
+}
+
+customElements.define('app-notification', Flash);
+</script>

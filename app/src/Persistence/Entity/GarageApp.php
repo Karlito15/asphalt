@@ -1,18 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\GarageAppRepository;
-use App\Persistence\Trait\Entity\GarageAppableEntity;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Serializer\Attribute\Groups;
+use Symfony\Component\String\Slugger\AsciiSlugger;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: GarageAppRepository::class)]
@@ -29,14 +30,13 @@ class GarageApp
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use GarageAppableEntity;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(nullable: true, options: ['unsigned' => true])]
     #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['garage'])]
-    private ?int $id = null;
+    protected ?int $id = null;
 
     #[ORM\Column(type: Types::SMALLINT, length: 1, nullable: false, options: ['default' => 3, 'unsigned' => true])]
     #[Assert\NotBlank]
@@ -44,7 +44,7 @@ class GarageApp
     #[Assert\Positive]
     #[Assert\Range(min: 3, max: 6)]
     #[Groups(['other'])]
-    private int $stars = 3;
+    protected int $stars = 3;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
@@ -52,7 +52,7 @@ class GarageApp
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 99)]
     #[Groups(['garage'])]
-    private int $gameUpdate = 0;
+    protected int $gameUpdate = 0;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: false, options: ['default' => 99, 'unsigned' => true])]
     #[Assert\NotBlank]
@@ -60,7 +60,7 @@ class GarageApp
     #[Assert\Positive]
     #[Assert\Range(min: 1, max: 99)]
     #[Groups(['other'])]
-    private int $carOrder = 99;
+    protected int $carOrder = 99;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: false, options: ['default' => 99, 'unsigned' => true])]
     #[Assert\NotBlank]
@@ -68,7 +68,7 @@ class GarageApp
     #[Assert\Positive]
     #[Assert\Range(min: 1, max: 99)]
     #[Groups(['other'])]
-    private int $statOrder = 99;
+    protected int $statOrder = 99;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
@@ -76,7 +76,7 @@ class GarageApp
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 13)]
     #[Groups(['other'])]
-    private int $level = 0;
+    protected int $level = 0;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
@@ -84,86 +84,82 @@ class GarageApp
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 16,)]
     #[Groups(['other'])]
-    private int $epic = 0;
+    protected int $epic = 0;
 
     #[ORM\Column(type: Types::STRING, length: 128, nullable: false)]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Length(min: 1, max: 128)]
     #[Groups(['garage'])]
-    private string $model;
+    protected string $model;
 
     #[ORM\Column(type: Types::STRING, length: 255, unique: true, nullable: false)]
     #[Assert\Length(min: 1, max: 255)]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
+    #[Assert\NoSuspiciousCharacters]
+    #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['garage'])]
-    private string $slug;
+    protected string $slug;
 
-    #[ORM\OneToMany(targetEntity: GarageBlueprint::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    private Collection $blueprint;
+    #[ORM\OneToOne(targetEntity: GarageBlueprint::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    protected GarageBlueprint $blueprint;
 
-    #[ORM\OneToMany(targetEntity: GarageEvo::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    private Collection $evo;
+    #[ORM\OneToOne(targetEntity: GarageBlueprintState::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    protected GarageBlueprintState $blueprintState;
 
-    #[ORM\OneToMany(targetEntity: GarageGauntlet::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    private Collection $gauntlet;
+    #[ORM\OneToOne(targetEntity: GarageEvo::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    protected GarageEvo $evo;
 
-    #[ORM\OneToMany(targetEntity: GarageRank::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    private Collection $rank;
+    #[ORM\OneToOne(targetEntity: GarageEvoState::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    protected GarageEvoState $evoState;
 
-    #[ORM\OneToMany(targetEntity: GarageStatActual::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    private Collection $statActual;
+    #[ORM\OneToOne(targetEntity: GarageGauntlet::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    protected GarageGauntlet $gauntlet;
 
-    #[ORM\OneToMany(targetEntity: GarageStatMax::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    private Collection $statMax;
+    #[ORM\OneToOne(targetEntity: GarageRank::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    protected GarageRank $rank;
 
-    #[ORM\OneToMany(targetEntity: GarageStatMin::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    private Collection $statMin;
+    #[ORM\OneToOne(targetEntity: GarageStatActual::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    protected GarageStatActual $statActual;
 
-    #[ORM\OneToMany(targetEntity: GarageStatus::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    #[ORM\OneToOne(targetEntity: GarageStatMax::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    protected GarageStatMax $statMax;
+
+    #[ORM\OneToOne(targetEntity: GarageStatMin::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    protected GarageStatMin $statMin;
+
+    #[ORM\OneToOne(targetEntity: GarageStatus::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
     #[Groups(['garage'])]
-    private Collection $status;
+    protected GarageStatus $status;
 
-    #[ORM\OneToMany(targetEntity: GarageUpgrade::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    private Collection $upgrade;
+    #[ORM\OneToOne(targetEntity: GarageUpgrade::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    protected GarageUpgrade $upgrade;
+
+    #[ORM\OneToOne(targetEntity: GarageUpgradeState::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    protected GarageUpgradeState $upgradeState;
 
     #[ORM\ManyToOne(targetEntity: SettingBlueprint::class, cascade: ['persist'], inversedBy: 'garage')]
     #[Assert\Type(SettingBlueprint::class)]
-    private ?SettingBlueprint $settingBlueprint = null;
+    protected ?SettingBlueprint $settingBlueprint = null;
 
     #[ORM\ManyToOne(targetEntity: SettingBrand::class, cascade: ['persist'], inversedBy: 'garage')]
     #[Assert\Type(SettingBrand::class)]
     #[Groups(['garage'])]
-    private ?SettingBrand $settingBrand = null;
+    protected ?SettingBrand $settingBrand = null;
 
     #[ORM\ManyToOne(targetEntity: SettingClass::class, cascade: ['persist'], inversedBy: 'garage')]
     #[Assert\Type(SettingClass::class)]
     #[Groups(['garage'])]
-    private ?SettingClass $settingClass = null;
+    protected ?SettingClass $settingClass = null;
 
     #[ORM\ManyToOne(targetEntity: SettingLevel::class, cascade: ['persist'], inversedBy: 'garage')]
     #[Assert\Type(SettingLevel::class)]
-    private ?SettingLevel $settingLevel = null;
-
-    #[ORM\ManyToMany(targetEntity: SettingTag::class, mappedBy: 'garage')]
-    private ?Collection $settingTag;
+    protected ?SettingLevel $settingLevel = null;
 
     #[ORM\ManyToOne(targetEntity: SettingUnitPrice::class, cascade: ['persist'], inversedBy: 'garage')]
     #[Assert\Type(SettingUnitPrice::class)]
-    private ?SettingUnitPrice $settingUnitPrice = null;
-
-    public function __construct()
-    {
-        $this->blueprint    = new ArrayCollection();
-        $this->evo          = new ArrayCollection();
-        $this->gauntlet     = new ArrayCollection();
-        $this->rank         = new ArrayCollection();
-        $this->statActual   = new ArrayCollection();
-        $this->statMax      = new ArrayCollection();
-        $this->statMin      = new ArrayCollection();
-        $this->status       = new ArrayCollection();
-        $this->upgrade      = new ArrayCollection();
-        $this->settingTag   = new ArrayCollection();
-    }
+    protected ?SettingUnitPrice $settingUnitPrice = null;
 
     public function __toString(): string
     {
@@ -258,273 +254,219 @@ class GarageApp
 
         return $this;
     }
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
 
     /**
-     * @return Collection<int, GarageBlueprint>
+     * Set the slug for Garage
+     *
+     * @return $this
      */
-    public function getBlueprint(): Collection
+    public function setSlug(): static
+    {
+        $slugger    = new AsciiSlugger();
+        $this->slug = $slugger->slug($this->getSettingBrand()->getName())->lower() .
+            '-' . $slugger->slug($this->getModel())->lower();
+
+        return $this;
+    }
+
+    public function getBlueprint(): ?GarageBlueprint
     {
         return $this->blueprint;
     }
 
-    public function addBlueprint(GarageBlueprint $blueprint): static
+    public function setBlueprint(?GarageBlueprint $blueprint): static
     {
-        if (!$this->blueprint->contains($blueprint)) {
-            $this->blueprint->add($blueprint);
+        // unset the owning side of the relation if necessary
+        if ($blueprint === null && $this->blueprint !== null) {
+            $this->blueprint->setGarage(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($blueprint !== null && $blueprint->getGarage() !== $this) {
             $blueprint->setGarage($this);
         }
 
-        return $this;
-    }
-
-    public function removeBlueprint(GarageBlueprint $blueprint): static
-    {
-        if ($this->blueprint->removeElement($blueprint)) {
-            // set the owning side to null (unless already changed)
-            if ($blueprint->getGarage() === $this) {
-                $blueprint->setGarage(null);
-            }
-        }
+        $this->blueprint = $blueprint;
 
         return $this;
     }
 
-    /**
-     * @return Collection<int, GarageEvo>
-     */
-    public function getEvo(): Collection
+    public function getEvo(): ?GarageEvo
     {
         return $this->evo;
     }
 
-    public function addEvo(GarageEvo $evo): static
+    public function setEvo(?GarageEvo $evo): static
     {
-        if (!$this->evo->contains($evo)) {
-            $this->evo->add($evo);
+        // unset the owning side of the relation if necessary
+        if ($evo === null && $this->evo !== null) {
+            $this->evo->setGarage(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($evo !== null && $evo->getGarage() !== $this) {
             $evo->setGarage($this);
         }
 
-        return $this;
-    }
-
-    public function removeEvo(GarageEvo $evo): static
-    {
-        if ($this->evo->removeElement($evo)) {
-            // set the owning side to null (unless already changed)
-            if ($evo->getGarage() === $this) {
-                $evo->setGarage(null);
-            }
-        }
+        $this->evo = $evo;
 
         return $this;
     }
 
-    /**
-     * @return Collection<int, GarageGauntlet>
-     */
-    public function getGauntlet(): Collection
+    public function getGauntlet(): ?GarageGauntlet
     {
         return $this->gauntlet;
     }
 
-    public function addGauntlet(GarageGauntlet $gauntlet): static
+    public function setGauntlet(?GarageGauntlet $gauntlet): static
     {
-        if (!$this->gauntlet->contains($gauntlet)) {
-            $this->gauntlet->add($gauntlet);
+        // unset the owning side of the relation if necessary
+        if ($gauntlet === null && $this->gauntlet !== null) {
+            $this->gauntlet->setGarage(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($gauntlet !== null && $gauntlet->getGarage() !== $this) {
             $gauntlet->setGarage($this);
         }
 
-        return $this;
-    }
-
-    public function removeGauntlet(GarageGauntlet $gauntlet): static
-    {
-        if ($this->gauntlet->removeElement($gauntlet)) {
-            // set the owning side to null (unless already changed)
-            if ($gauntlet->getGarage() === $this) {
-                $gauntlet->setGarage(null);
-            }
-        }
+        $this->gauntlet = $gauntlet;
 
         return $this;
     }
 
-    /**
-     * @return Collection<int, GarageRank>
-     */
-    public function getRank(): Collection
+    public function getRank(): ?GarageRank
     {
         return $this->rank;
     }
 
-    public function addRank(GarageRank $rank): static
+    public function setRank(?GarageRank $rank): static
     {
-        if (!$this->rank->contains($rank)) {
-            $this->rank->add($rank);
+        // unset the owning side of the relation if necessary
+        if ($rank === null && $this->rank !== null) {
+            $this->rank->setGarage(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($rank !== null && $rank->getGarage() !== $this) {
             $rank->setGarage($this);
         }
 
-        return $this;
-    }
-
-    public function removeRank(GarageRank $rank): static
-    {
-        if ($this->rank->removeElement($rank)) {
-            // set the owning side to null (unless already changed)
-            if ($rank->getGarage() === $this) {
-                $rank->setGarage(null);
-            }
-        }
+        $this->rank = $rank;
 
         return $this;
     }
 
-    /**
-     * @return Collection<int, GarageStatActual>
-     */
-    public function getStatActual(): Collection
+    public function getStatActual(): ?GarageStatActual
     {
         return $this->statActual;
     }
 
-    public function addStatActual(GarageStatActual $statActual): static
+    public function setStatActual(?GarageStatActual $statActual): static
     {
-        if (!$this->statActual->contains($statActual)) {
-            $this->statActual->add($statActual);
+        // unset the owning side of the relation if necessary
+        if ($statActual === null && $this->statActual !== null) {
+            $this->statActual->setGarage(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($statActual !== null && $statActual->getGarage() !== $this) {
             $statActual->setGarage($this);
         }
 
-        return $this;
-    }
-
-    public function removeStatActual(GarageStatActual $statActual): static
-    {
-        if ($this->statActual->removeElement($statActual)) {
-            // set the owning side to null (unless already changed)
-            if ($statActual->getGarage() === $this) {
-                $statActual->setGarage(null);
-            }
-        }
+        $this->statActual = $statActual;
 
         return $this;
     }
 
-    /**
-     * @return Collection<int, GarageStatMax>
-     */
-    public function getStatMax(): Collection
+    public function getStatMax(): ?GarageStatMax
     {
         return $this->statMax;
     }
 
-    public function addStatMax(GarageStatMax $statMax): static
+    public function setStatMax(?GarageStatMax $statMax): static
     {
-        if (!$this->statMax->contains($statMax)) {
-            $this->statMax->add($statMax);
+        // unset the owning side of the relation if necessary
+        if ($statMax === null && $this->statMax !== null) {
+            $this->statMax->setGarage(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($statMax !== null && $statMax->getGarage() !== $this) {
             $statMax->setGarage($this);
         }
 
-        return $this;
-    }
-
-    public function removeStatMax(GarageStatMax $statMax): static
-    {
-        if ($this->statMax->removeElement($statMax)) {
-            // set the owning side to null (unless already changed)
-            if ($statMax->getGarage() === $this) {
-                $statMax->setGarage(null);
-            }
-        }
+        $this->statMax = $statMax;
 
         return $this;
     }
 
-    /**
-     * @return Collection<int, GarageStatMin>
-     */
-    public function getStatMin(): Collection
+    public function getStatMin(): ?GarageStatMin
     {
         return $this->statMin;
     }
 
-    public function addStatMin(GarageStatMin $statMin): static
+    public function setStatMin(?GarageStatMin $statMin): static
     {
-        if (!$this->statMin->contains($statMin)) {
-            $this->statMin->add($statMin);
+        // unset the owning side of the relation if necessary
+        if ($statMin === null && $this->statMin !== null) {
+            $this->statMin->setGarage(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($statMin !== null && $statMin->getGarage() !== $this) {
             $statMin->setGarage($this);
         }
 
-        return $this;
-    }
-
-    public function removeStatMin(GarageStatMin $statMin): static
-    {
-        if ($this->statMin->removeElement($statMin)) {
-            // set the owning side to null (unless already changed)
-            if ($statMin->getGarage() === $this) {
-                $statMin->setGarage(null);
-            }
-        }
+        $this->statMin = $statMin;
 
         return $this;
     }
 
-    /**
-     * @return Collection<int, GarageStatus>
-     */
-    public function getStatus(): Collection
+    public function getStatus(): ?GarageStatus
     {
         return $this->status;
     }
 
-    public function addStatus(GarageStatus $status): static
+    public function setStatus(?GarageStatus $status): static
     {
-        if (!$this->status->contains($status)) {
-            $this->status->add($status);
+        // unset the owning side of the relation if necessary
+        if ($status === null && $this->status !== null) {
+            $this->status->setGarage(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($status !== null && $status->getGarage() !== $this) {
             $status->setGarage($this);
         }
 
-        return $this;
-    }
-
-    public function removeStatus(GarageStatus $status): static
-    {
-        if ($this->status->removeElement($status)) {
-            // set the owning side to null (unless already changed)
-            if ($status->getGarage() === $this) {
-                $status->setGarage(null);
-            }
-        }
+        $this->status = $status;
 
         return $this;
     }
 
-    /**
-     * @return Collection<int, GarageUpgrade>
-     */
-    public function getUpgrade(): Collection
+    public function getUpgrade(): ?GarageUpgrade
     {
         return $this->upgrade;
     }
 
-    public function addUpgrade(GarageUpgrade $upgrade): static
+    public function setUpgrade(?GarageUpgrade $upgrade): static
     {
-        if (!$this->upgrade->contains($upgrade)) {
-            $this->upgrade->add($upgrade);
+        // unset the owning side of the relation if necessary
+        if ($upgrade === null && $this->upgrade !== null) {
+            $this->upgrade->setGarage(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($upgrade !== null && $upgrade->getGarage() !== $this) {
             $upgrade->setGarage($this);
         }
 
-        return $this;
-    }
-
-    public function removeUpgrade(GarageUpgrade $upgrade): static
-    {
-        if ($this->upgrade->removeElement($upgrade)) {
-            // set the owning side to null (unless already changed)
-            if ($upgrade->getGarage() === $this) {
-                $upgrade->setGarage(null);
-            }
-        }
+        $this->upgrade = $upgrade;
 
         return $this;
     }
@@ -577,33 +519,6 @@ class GarageApp
         return $this;
     }
 
-    /**
-     * @return Collection<int, SettingTag>
-     */
-    public function getSettingTag(): Collection
-    {
-        return $this->settingTag;
-    }
-
-    public function addSettingTag(SettingTag $settingTag): static
-    {
-        if (!$this->settingTag->contains($settingTag)) {
-            $this->settingTag->add($settingTag);
-            $settingTag->addGarage($this);
-        }
-
-        return $this;
-    }
-
-    public function removeSettingTag(SettingTag $settingTag): static
-    {
-        if ($this->settingTag->removeElement($settingTag)) {
-            $settingTag->removeGarage($this);
-        }
-
-        return $this;
-    }
-
     public function getSettingUnitPrice(): ?SettingUnitPrice
     {
         return $this->settingUnitPrice;
@@ -614,5 +529,37 @@ class GarageApp
         $this->settingUnitPrice = $settingUnitPrice;
 
         return $this;
+    }
+
+    /**
+     * Crée le slug lors de la création de l'entité
+     *
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    #[ORM\PrePersist]
+    public function prePersist(LifecycleEventArgs $args): void
+    {
+        /* @var GarageApp $object */
+        $object = $args->getObject();
+        if ($object instanceof GarageApp) {
+            $object->setSlug();
+        }
+    }
+
+    /**
+     * Met à jour le slug si le model change
+     *
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    #[ORM\PreUpdate]
+    public function preUpdate(LifecycleEventArgs $args): void
+    {
+        /* @var GarageApp $object */
+        $object = $args->getObject();
+        if ($object instanceof GarageApp) {
+            $object->setSlug();
+        }
     }
 }

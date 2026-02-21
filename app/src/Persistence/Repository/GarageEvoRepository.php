@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\GarageEvo;
@@ -16,6 +18,8 @@ class GarageEvoRepository extends ServiceEntityRepository
         parent::__construct($registry, GarageEvo::class);
     }
 
+    // EXPORTS
+
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
      *
@@ -23,14 +27,33 @@ class GarageEvoRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $datas = [];
-        foreach ($this->findAll() as $garage) {
-            $datas[] = [
-            ];
-        }
+        $qb = $this->createQueryBuilder('ge')
+            ->select([
+                'b.name AS Brand',
+                'g.model AS Model',
+                'ge.number AS Number',
+            ])
+            ->join('ge.garage', 'g')
+            ->join('g.settingBrand', 'b')
+            ->orderBy('g.gameUpdate', 'ASC')
+            ->addOrderBy('b.name', 'ASC')
+        ;
 
-        return $datas;
+        return $qb->getQuery()->getArrayResult();
+//
+//        $datas = [];
+//        foreach ($this->findAll() as $garage) {
+//            $datas[] = [
+//                'Number' => $garage->getNumber(),
+//                'Brand'  => $garage->getGarage()->getSettingBrand()->getName(),
+//                'Model'  => $garage->getGarage()->getModel(),
+//            ];
+//        }
+//
+//        return $datas;
     }
+
+    // EVENTS
 
     /**
      * @param GarageEvo $entity

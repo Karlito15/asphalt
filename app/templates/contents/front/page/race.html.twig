@@ -1,0 +1,49 @@
+{% block table %}
+        <tbody>
+        {% for item in entities %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.mode.name }}</td>
+                <td>{{ item.season.chapter }}</td>
+                <td>{{ item.raceOrder }}</td>
+                <td>{{ item.season.name }}</td>
+                <td>{{ item.track.region.name }}</td>
+                <td>{{ item.track.nameEnglish }}</td>
+                <td>{{ item.track.nameFrench }}</td>
+                <td>{{ item.time.name }}</td>
+                <td>{{ item.finished }}</td>
+                <td>
+                    <a href="javascript:void(0);">update</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        <thead>
+            {{ _self.legend() }}
+        </thead>
+        <tfoot>
+            {{ _self.legend() }}
+        </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+            <tr>
+                <th>Id</th>
+                <th>{{ 'text.mode'|trans }}</th>
+                <th>{{ 'text.chapter'|trans }}</th>
+                <th>{{ 'text.order.race'|trans|raw }}</th>
+                <th>{{ 'text.season'|trans }}</th>
+                <th>{{ 'text.region'|trans }}</th>
+                <th>{{ 'text.name-english'|trans|raw }}</th>
+                <th>{{ 'text.name-french'|trans|raw }}</th>
+                <th>{{ 'text.time'|trans }}</th>
+                <th>{{ 'text.finished'|trans }}</th>
+                <th>Action</th>
+            </tr>
+{% endmacro %}
+
+{% extends '@App/usuals/index.html.twig' %}

@@ -1,0 +1,47 @@
+{% block body %}
+    <h1>{{ controller_name }}</h1>
+
+    {{ dump(current_page) }}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Game Update</th>
+                <th>Class</th>
+                <th>Unblock</th>
+                <th>Gold</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Slug</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in entities %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.gameUpdate }}</td>
+                <td>{{ item.settingClass.value }}</td>
+                <td>{{ item.status.0.unblock }}</td>
+                <td>{{ item.status.0.gold }}</td>
+                <td>{{ item.settingBrand.name }}</td>
+                <td>{{ item.model }}</td>
+                <td>{{ item.slug }}</td>
+                <td>
+                    <a href="{{ path('app.garage.read', {'id': item.id}) }}">read</a>
+                    <a href="{{ path('app.garage.update', {'id': item.id}) }}">update</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app.garage.create') }}">Create new</a>
+{% endblock %}
+
+{% extends '@App/bases/front/full.html.twig' %}

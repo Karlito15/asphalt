@@ -19,9 +19,6 @@ composer require --no-scripts easycorp/easyadmin-bundle
 composer require --no-scripts karlito-web/my-toolbox
 ```
 ``` shell
-composer require --no-scripts league/csv
-```
-``` shell
 composer require --no-scripts stof/doctrine-extensions-bundle
 ```
 ``` shell

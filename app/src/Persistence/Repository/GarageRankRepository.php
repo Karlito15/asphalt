@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\GarageRank;
@@ -16,6 +18,8 @@ class GarageRankRepository extends ServiceEntityRepository
         parent::__construct($registry, GarageRank::class);
     }
 
+    // EXPORTS
+
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
      *
@@ -23,23 +27,45 @@ class GarageRankRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $datas = [];
-        foreach ($this->findAll() as $garage) {
-            $datas[] = [
-                'Star0' => $garage->getStar0(),
-                'Star1' => $garage->getStar1(),
-                'Star2' => $garage->getStar2(),
-                'Star3' => $garage->getStar3(),
-                'Star4' => $garage->getStar4(),
-                'Star5' => $garage->getStar5(),
-                'Star6' => $garage->getStar6(),
-                'Brand' => $garage->getGarage()->getSettingBrand()->getName(),
-                'Model' => $garage->getGarage()->getModel(),
-            ];
-        }
+        $qb = $this->createQueryBuilder('gr')
+            ->select([
+                'b.name AS Brand',
+                'g.model AS Model',
+                'gr.star0 AS Star0',
+                'gr.star1 AS Star1',
+                'gr.star2 AS Star2',
+                'gr.star3 AS Star3',
+                'gr.star4 AS Star4',
+                'gr.star5 AS Star5',
+                'gr.star6 AS Star6',
+            ])
+            ->join('g.settingBrand', 'b')
+            ->join('gr.garage', 'g')
+            ->orderBy('g.gameUpdate', 'ASC')
+            ->addOrderBy('b.name', 'ASC')
+        ;
 
-        return $datas;
+        return $qb->getQuery()->getArrayResult();
+//
+//        $datas = [];
+//        foreach ($this->findAll() as $garage) {
+//            $datas[] = [
+//                'Star0' => $garage->getStar0(),
+//                'Star1' => $garage->getStar1(),
+//                'Star2' => $garage->getStar2(),
+//                'Star3' => $garage->getStar3(),
+//                'Star4' => $garage->getStar4(),
+//                'Star5' => $garage->getStar5(),
+//                'Star6' => $garage->getStar6(),
+//                'Brand' => $garage->getGarage()->getSettingBrand()->getName(),
+//                'Model' => $garage->getGarage()->getModel(),
+//            ];
+//        }
+//
+//        return $datas;
     }
+
+    // EVENTS
 
     /**
      * @param GarageRank $entity

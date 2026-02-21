@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\GarageBlueprint;
@@ -23,22 +25,43 @@ class GarageBlueprintRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $datas = [];
-        foreach ($this->findAll() as $garage) {
-            $datas[] = [
-                'Star1' => $garage->getStar1(),
-                'Star2' => $garage->getStar2(),
-                'Star3' => $garage->getStar3(),
-                'Star4' => $garage->getStar4(),
-                'Star5' => $garage->getStar5(),
-                'Star6' => $garage->getStar6(),
-                'Brand' => $garage->getGarage()->getSettingBrand()->getName(),
-                'Model' => $garage->getGarage()->getModel(),
-            ];
-        }
+        $qb = $this->createQueryBuilder('gb')
+            ->select([
+                'b.name AS Brand',
+                'g.model AS Model',
+                'gb.star1 AS Star1',
+                'gb.star2 AS Star2',
+                'gb.star3 AS Star3',
+                'gb.star4 AS Star4',
+                'gb.star5 AS Star5',
+                'gb.star6 AS Star6',
+            ])
+            ->join('gb.garage', 'g')
+            ->join('g.settingBrand', 'b')
+            ->orderBy('g.gameUpdate', 'ASC')
+            ->addOrderBy('b.name', 'ASC')
+        ;
 
-        return $datas;
+        return $qb->getQuery()->getArrayResult();
+//
+//        $datas = [];
+//        foreach ($this->findAll() as $garage) {
+//            $datas[] = [
+//                'Star1' => $garage->getStar1(),
+//                'Star2' => $garage->getStar2(),
+//                'Star3' => $garage->getStar3(),
+//                'Star4' => $garage->getStar4(),
+//                'Star5' => $garage->getStar5(),
+//                'Star6' => $garage->getStar6(),
+//                'Brand' => $garage->getGarage()->getSettingBrand()->getName(),
+//                'Model' => $garage->getGarage()->getModel(),
+//            ];
+//        }
+//
+//        return $datas;
     }
+
+    // EVENTS
 
     /**
      * @param GarageBlueprint $entity

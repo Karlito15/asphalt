@@ -6,7 +6,9 @@ namespace App\Command\Database;
 
 use App\Persistence\Entity\GarageApp;
 use App\Persistence\Entity\GarageBlueprint;
+use App\Persistence\Entity\GarageBlueprintState;
 use App\Persistence\Entity\GarageEvo;
+use App\Persistence\Entity\GarageEvoState;
 use App\Persistence\Entity\GarageGauntlet;
 use App\Persistence\Entity\GarageRank;
 use App\Persistence\Entity\GarageStatActual;
@@ -14,6 +16,7 @@ use App\Persistence\Entity\GarageStatMax;
 use App\Persistence\Entity\GarageStatMin;
 use App\Persistence\Entity\GarageStatus;
 use App\Persistence\Entity\GarageUpgrade;
+use App\Persistence\Entity\GarageUpgradeState;
 use App\Persistence\Entity\InventoryApp;
 use App\Persistence\Entity\MissionApp;
 use App\Persistence\Entity\MissionTask;
@@ -30,17 +33,14 @@ use App\Persistence\Entity\SettingClass;
 use App\Persistence\Entity\SettingLevel;
 use App\Persistence\Entity\SettingTag;
 use App\Persistence\Entity\SettingUnitPrice;
+use App\Toolbox\Trait\Command\AllCommand;
 use Doctrine\DBAL\Exception;
 use Doctrine\ORM\EntityManagerInterface;
-use KarlitoWeb\Toolbox\Trait\Command\ConfigureTrait;
-use KarlitoWeb\Toolbox\Trait\Command\InitializeTrait;
-use KarlitoWeb\Toolbox\Trait\Command\ResumeTrait;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 #[AsCommand(
     name: 'asphalt:database:truncate',
@@ -50,20 +50,13 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 )]
 class TruncateCommand extends Command
 {
-    use ConfigureTrait;
-    use InitializeTrait;
-    use ResumeTrait;
+    use AllCommand;
 
     protected static string $title = '::::: Truncate Tables :::::';
 
     protected static string $help  = 'Vider la base de données';
 
-    /**
-     * @param ContainerInterface $container
-     * @param EntityManagerInterface $entityManager
-     */
     public function __construct(
-        private readonly ContainerInterface $container,
         private readonly EntityManagerInterface $entityManager
     )
     {
@@ -71,9 +64,6 @@ class TruncateCommand extends Command
     }
 
     /**
-     * @param InputInterface $input
-     * @param OutputInterface $output
-     * @return int
      * @throws Exception
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -88,11 +78,11 @@ class TruncateCommand extends Command
 
         // Truncate
         $connection->executeQuery('SET FOREIGN_KEY_CHECKS = 0');
-        // $connection->executeQuery('TRUNCATE ext_log_entries');
-        // $io->write('- Table vidé : ext_log_entries', true);
         self::truncateTable(GarageApp::class, $em, $io);
         self::truncateTable(GarageBlueprint::class, $em, $io);
+        self::truncateTable(GarageBlueprintState::class, $em, $io);
         self::truncateTable(GarageEvo::class, $em, $io);
+        self::truncateTable(GarageEvoState::class, $em, $io);
         self::truncateTable(GarageGauntlet::class, $em, $io);
         self::truncateTable(GarageRank::class, $em, $io);
         self::truncateTable(GarageStatActual::class, $em, $io);
@@ -100,6 +90,7 @@ class TruncateCommand extends Command
         self::truncateTable(GarageStatMin::class, $em, $io);
         self::truncateTable(GarageStatus::class, $em, $io);
         self::truncateTable(GarageUpgrade::class, $em, $io);
+        self::truncateTable(GarageUpgradeState::class, $em, $io);
         self::truncateTable(InventoryApp::class, $em, $io);
         self::truncateTable(MissionApp::class, $em, $io);
         self::truncateTable(MissionTask::class, $em, $io);
@@ -123,9 +114,10 @@ class TruncateCommand extends Command
         $duration   = $event->getDuration() / 1000;
 
         // Resume
-        // self::resume($this->io, $duration);
+        self::resume($this->io, $duration);
 
         // Conclusion
+        $io->warning('Execution Time : ' . $duration);
         $io->success('La base de données est vide');
 
         return Command::SUCCESS;

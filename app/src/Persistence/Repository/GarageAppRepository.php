@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\GarageApp;
@@ -15,6 +17,8 @@ class GarageAppRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, GarageApp::class);
     }
+
+    // CREATE
 
     /**
      * Retourne la valeur de la dernière mise à jour
@@ -35,23 +39,6 @@ class GarageAppRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-//        $datas = [];
-//        foreach ($this->findBy([], ['gameUpdate' => 'ASC']) as $garage) {
-//            $datas[] = [
-//                'Brand' => $garage->getSettingBrand()->getName(),
-//                'Model' => $garage->getModel(),
-//                'Stars' => $garage->getStars(),
-//                'GameUpdate' => $garage->getGameUpdate(),
-//                'CarOrder' => $garage->getCarOrder(),
-//                'StatOrder' => $garage->getStatOrder(),
-//                'Level' => $garage->getLevel(),
-//                'Epic' => $garage->getEpic(),
-//                'SettingClassValue' => $garage->getSettingClass()->getValue(),
-//            ];
-//        }
-//
-//        return $datas;
-
         $qb = $this->createQueryBuilder('g')
             ->select([
                 'b.name AS Brand',
@@ -72,6 +59,8 @@ class GarageAppRepository extends ServiceEntityRepository
 
         return $qb->getQuery()->getArrayResult();
     }
+
+    // EVENTS
 
     /**
      * @param GarageApp $entity
@@ -99,25 +88,6 @@ class GarageAppRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
-    }
-
-    // SITEMAP
-
-    /**
-     * Retourne les informations pour le sitemap
-     *
-     * @return array
-     */
-    public function sitemap(): array
-    {
-        return
-            $this->createQueryBuilder('g')
-                ->select(['g.id', 'g.slug'])
-                ->orderBy('g.gameUpdate', 'ASC')
-                ->addOrderBy('g.id', 'ASC')
-                ->getQuery()
-                ->getArrayResult()
-        ;
     }
 
     //    /**

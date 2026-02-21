@@ -1,11 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\SettingLevelRepository;
-use App\Persistence\Trait\Entity\SettingLevelableEntity;
+use App\Toolbox\Trait\Entity\IdEntity;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
@@ -27,42 +32,35 @@ class SettingLevel
      */
     use TimestampableEntity;
     use SoftDeleteableEntity;
-    use SettingLevelableEntity;
-
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    private ?int $id = null;
+    use IdEntity;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 10, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 10, max: 13)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private int $level = 10;
+    protected int $level = 10;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 36)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private int $common = 0;
+    protected int $common = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 20)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private int $rare = 0;
+    protected int $rare = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 16)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private int $epic = 0;
+    protected int $epic = 0;
 
     #[ORM\Column(type: Types::STRING, length: 128, unique: true, nullable: false)]
     #[Assert\Length(min: 3, max: 128)]
@@ -71,16 +69,19 @@ class SettingLevel
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Groups(['index'])]
-    private string $slug;
+    protected string $slug;
+
+    #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingLevel')]
+    protected Collection $garage;
+
+    public function __construct()
+    {
+        $this->garage = new ArrayCollection();
+    }
 
     public function __toString(): string
     {
         return $this->getSlug();
-    }
-
-    public function getId(): ?int
-    {
-        return $this->id;
     }
 
     public function getLevel(): ?int
@@ -134,5 +135,62 @@ class SettingLevel
     public function getSlug(): ?string
     {
         return $this->slug;
+    }
+
+    public function setSlug(): static
+    {
+        $this->slug =
+            $this->level . '|' .
+            str_pad((string) $this->common, 2, '0', STR_PAD_LEFT) . '-' .
+            str_pad((string) $this->rare, 2, '0', STR_PAD_LEFT) . '-' .
+            str_pad((string) $this->epic, 2, '0', STR_PAD_LEFT)
+        ;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, GarageApp>
+     */
+    public function getGarage(): Collection
+    {
+        return $this->garage;
+    }
+
+    public function addGarage(GarageApp $garage): static
+    {
+        if (!$this->garage->contains($garage)) {
+            $this->garage->add($garage);
+            $garage->setSettingLevel($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGarage(GarageApp $garage): static
+    {
+        if ($this->garage->removeElement($garage)) {
+            // set the owning side to null (unless already changed)
+            if ($garage->getSettingLevel() === $this) {
+                $garage->setSettingLevel(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    #[ORM\PrePersist]
+    public function prePersist(LifecycleEventArgs $args): void
+    {
+        /* @var SettingLevel $object */
+        $object = $args->getObject();
+        if ($object instanceof SettingLevel) {
+            // Set Slug
+            $object->setSlug();
+        }
     }
 }
