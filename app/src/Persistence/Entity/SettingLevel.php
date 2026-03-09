@@ -38,28 +38,28 @@ class SettingLevel
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 10, max: 13)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration', 'sheet'])]
     protected int $level = 10;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 36)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration', 'sheet'])]
     protected int $common = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 20)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration', 'sheet'])]
     protected int $rare = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 16)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration', 'sheet'])]
     protected int $epic = 0;
 
     #[ORM\Column(type: Types::STRING, length: 128, unique: true, nullable: false)]
@@ -68,7 +68,7 @@ class SettingLevel
     #[Assert\NotNull]
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration'])]
     protected string $slug;
 
     #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingLevel')]
@@ -188,7 +188,7 @@ class SettingLevel
     {
         /* @var SettingLevel $object */
         $object = $args->getObject();
-        if ($object instanceof SettingLevel) {
+        if ($object instanceof self) {
             // Set Slug
             $object->setSlug();
         }

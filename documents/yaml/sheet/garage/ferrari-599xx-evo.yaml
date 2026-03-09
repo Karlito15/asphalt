@@ -1,0 +1,96 @@
+id: 111
+stars: 5
+gameUpdate: 15
+carOrder: 44
+statOrder: 2
+level: 12
+epic: 3
+model: '599XX EVO'
+slug: ferrari-599xx-evo
+blueprint:
+    star1: Key
+    star2: 25
+    star3: 32
+    star4: 36
+    star5: 40
+    star6: 0
+    total: 133
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 3
+    handling: 1
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2202
+    star1: 2412
+    star2: 2716
+    star3: 2982
+    star4: 3290
+    star5: 3843
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 322.0
+    acceleration: 80.98
+    handling: 83.65
+    nitro: 70.81
+    average: 139.36
+statMin:
+    speed: 305.0
+    acceleration: 71.2
+    handling: 58.47
+    nitro: 49.68
+    average: 121.09
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 36
+    rare: 16
+    epic: 1
+settingBlueprint:
+    star1: Key
+    star2: 25
+    star3: 32
+    star4: 36
+    star5: 40
+    star6: 0
+    total: 133
+settingBrand:
+    name: Ferrari
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 12
+    common: 36
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 7130
+    level02: 11600
+    level03: 18600
+    level04: 27900
+    level05: 40300
+    level06: 56500
+    level07: 79000
+    level08: 110500
+    level09: 155000
+    level10: 216500
+    level11: 303000
+    level12: 425000
+    level13: null
+    common: 40000
+    rare: 80000
+    epic: 240000

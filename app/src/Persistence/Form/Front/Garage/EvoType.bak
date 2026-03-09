@@ -1,0 +1,52 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Persistence\Form\Front\Garage;
+
+use App\Persistence\Entity\GarageEvo;
+use App\Toolbox\Trait\Form\DefaultType;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class EvoType extends AbstractType
+{
+    use DefaultType;
+
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        $builder
+            ->add('evo', IntegerType::class, [
+                'attr'       => self::attrClass(),
+                'label'      => 'form.evo',
+                'label_attr' => self::labelClass(),
+                'label_html' => true,
+                'required'   => false,
+            ])
+        ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefaults([
+            'data_class' => GarageEvo::class,
+            'allow_extra_fields' => false,
+            'translation_domain' => 'forms',
+        ]);
+    }
+
+    /**
+     * @return array
+     */
+    private static function attrClass(): array
+    {
+        return [
+            'autocomplete' => 'off',
+            'class'        => 'text-center fw-bolder form-control form-control-sm',
+            'max'          => 99,
+            'min'          => 0,
+        ];
+    }
+}

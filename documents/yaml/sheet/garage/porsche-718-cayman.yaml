@@ -1,0 +1,96 @@
+id: 42
+stars: 4
+gameUpdate: 0
+carOrder: 15
+statOrder: 27
+level: 11
+epic: 4
+model: '718 Cayman'
+slug: porsche-718-cayman
+blueprint:
+    star1: '25'
+    star2: 8
+    star3: 14
+    star4: 28
+    star5: 0
+    star6: 0
+    total: 75
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 9
+    handling: 2
+    nitro: 2
+    mark: 5
+    division: 9
+rank:
+    star0: 1006
+    star1: 1310
+    star2: 1658
+    star3: 2016
+    star4: 2360
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 295.7
+    acceleration: 70.52
+    handling: 61.91
+    nitro: 60.26
+    average: 122.1
+statMin:
+    speed: 275.0
+    acceleration: 55.9
+    handling: 51.9
+    nitro: 39.4
+    average: 105.55
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 28
+    rare: 8
+    epic: 4
+settingBlueprint:
+    star1: '25'
+    star2: 8
+    star3: 14
+    star4: 28
+    star5: 0
+    star6: 0
+    total: 75
+settingBrand:
+    name: Porsche
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 11
+    common: 28
+    rare: 8
+    epic: 4
+settingUnitPrice:
+    level01: 2190
+    level02: 3600
+    level03: 5700
+    level04: 8600
+    level05: 12400
+    level06: 17500
+    level07: 24000
+    level08: 34000
+    level09: 47500
+    level10: 66500
+    level11: 93000
+    level12: null
+    level13: null
+    common: 10000
+    rare: 20000
+    epic: 60000

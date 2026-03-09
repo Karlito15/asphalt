@@ -1,0 +1,96 @@
+id: 311
+stars: 5
+gameUpdate: 46
+carOrder: 57
+statOrder: 99
+level: 3
+epic: 2
+model: 'C 63 AMG DTM'
+slug: mercedes-benz-c-63-amg-dtm
+blueprint:
+    star1: ''
+    star2: 23
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 23
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 3
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2141
+    star1: 2349
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 3773
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 322.1
+    acceleration: 80.81
+    handling: 72.85
+    nitro: 68.98
+    average: 136.19
+statMin:
+    speed: 306.0
+    acceleration: 69.4
+    handling: 48.17
+    nitro: 48.86
+    average: 118.11
+upgrade:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    common: 8
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 30
+    star3: 35
+    star4: 40
+    star5: 99
+    star6: 0
+    total: 204
+settingBrand:
+    name: Mercedes-Benz
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 99
+    common: 99
+    rare: 99
+    epic: 99
+settingUnitPrice:
+    level01: 99999
+    level02: 99999
+    level03: 99999
+    level04: 99999
+    level05: 99999
+    level06: 99999
+    level07: 99999
+    level08: 99999
+    level09: 99999
+    level10: 999999
+    level11: 999999
+    level12: 999999
+    level13: 999999
+    common: 99999
+    rare: 999999
+    epic: 999999

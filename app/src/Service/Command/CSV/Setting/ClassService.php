@@ -63,9 +63,9 @@ class ClassService implements CSVInterface
         $entity
             ->setLabel($datas['Label'])
             ->setValue($datas['Value'])
-            ->setClassOrder((int) $datas['Order'])
-            ->setCarsNumber((int) $datas['Number'])
-            ->setMedian((int) $datas['Median'])
+            ->setClassOrder($this->convertStringToInteger($datas['Order']))
+            ->setCarsNumber($this->convertStringToInteger($datas['Number']))
+            ->setMedian($this->convertStringToInteger($datas['Median']))
         ;
 
         return $entity;

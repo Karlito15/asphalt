@@ -1,0 +1,96 @@
+id: 43
+stars: 5
+gameUpdate: 0
+carOrder: 22
+statOrder: 45
+level: 12
+epic: 12
+model: '918 Spyder'
+slug: porsche-918-spyder
+blueprint:
+    star1: '35'
+    star2: 12
+    star3: 15
+    star4: 24
+    star5: 36
+    star6: 0
+    total: 122
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 2
+    handling: 3
+    nitro: 1
+    mark: 2
+    division: 9
+rank:
+    star0: 2843
+    star1: 2989
+    star2: 3180
+    star3: 3420
+    star4: 3746
+    star5: 4099
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 362.4
+    acceleration: 83.02
+    handling: 51.79
+    nitro: 79.96
+    average: 144.29
+statMin:
+    speed: 345.0
+    acceleration: 76.59
+    handling: 41.83
+    nitro: 66.3
+    average: 132.43
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 24
+    rare: 20
+    epic: 12
+settingBlueprint:
+    star1: '35'
+    star2: 12
+    star3: 15
+    star4: 24
+    star5: 36
+    star6: 0
+    total: 122
+settingBrand:
+    name: Porsche
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 12
+    common: 24
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 4260
+    level02: 6900
+    level03: 11100
+    level04: 16700
+    level05: 24100
+    level06: 33500
+    level07: 47000
+    level08: 66000
+    level09: 92500
+    level10: 129000
+    level11: 181000
+    level12: 254000
+    level13: null
+    common: 30000
+    rare: 60000
+    epic: 180000

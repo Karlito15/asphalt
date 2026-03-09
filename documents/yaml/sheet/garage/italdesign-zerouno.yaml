@@ -1,0 +1,96 @@
+id: 78
+stars: 4
+gameUpdate: 9
+carOrder: 17
+statOrder: 58
+level: 11
+epic: 8
+model: Zerouno
+slug: italdesign-zerouno
+blueprint:
+    star1: '40'
+    star2: 35
+    star3: 44
+    star4: 54
+    star5: 0
+    star6: 0
+    total: 173
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 9
+    handling: 9
+    nitro: 3
+    mark: 5
+    division: 9
+rank:
+    star0: 2004
+    star1: 2234
+    star2: 2588
+    star3: 2937
+    star4: 3245
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 368.0
+    acceleration: 76.55
+    handling: 36.14
+    nitro: 51.1
+    average: 132.95
+statMin:
+    speed: 330.0
+    acceleration: 71.2
+    handling: 47.13
+    nitro: 38.82
+    average: 121.79
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 24
+    rare: 16
+    epic: 8
+settingBlueprint:
+    star1: '40'
+    star2: 35
+    star3: 44
+    star4: 54
+    star5: 0
+    star6: 0
+    total: 173
+settingBrand:
+    name: Italdesign
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 11
+    common: 24
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 5750
+    level02: 9400
+    level03: 15000
+    level04: 22500
+    level05: 32500
+    level06: 45500
+    level07: 63500
+    level08: 89000
+    level09: 125000
+    level10: 175000
+    level11: 245000
+    level12: null
+    level13: null
+    common: 40000
+    rare: 80000
+    epic: 240000

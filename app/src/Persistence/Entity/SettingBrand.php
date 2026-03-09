@@ -39,14 +39,14 @@ class SettingBrand
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index', 'garage'])]
+    #[Groups(['index', 'migration', 'sheet'])]
     protected string $name;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
-    protected int $cars_number = 0;
+    #[Groups(['index', 'migration'])]
+    protected int $carsNumber = 0;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique: true, nullable: false)]
     #[Assert\Length(min: 3, max: 64)]
@@ -55,7 +55,7 @@ class SettingBrand
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['name'], separator: '-')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration'])]
     protected string $slug;
 
     #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingBrand')]
@@ -85,12 +85,12 @@ class SettingBrand
 
     public function getCarsNumber(): ?int
     {
-        return $this->cars_number;
+        return $this->carsNumber;
     }
 
-    public function setCarsNumber(int $cars_number): static
+    public function setCarsNumber(int $carsNumber): static
     {
-        $this->cars_number = $cars_number;
+        $this->carsNumber = $carsNumber;
 
         return $this;
     }

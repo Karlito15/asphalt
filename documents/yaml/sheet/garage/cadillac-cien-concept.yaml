@@ -1,0 +1,96 @@
+id: 8
+stars: 4
+gameUpdate: 0
+carOrder: 13
+statOrder: 51
+level: 11
+epic: 8
+model: 'Cien Concept'
+slug: cadillac-cien-concept
+blueprint:
+    star1: '40'
+    star2: 18
+    star3: 24
+    star4: 36
+    star5: 0
+    star6: 0
+    total: 118
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 9
+    handling: 9
+    nitro: 2
+    mark: 5
+    division: 9
+rank:
+    star0: 1937
+    star1: 2163
+    star2: 2504
+    star3: 2856
+    star4: 3155
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 368.0
+    acceleration: 76.55
+    handling: 36.14
+    nitro: 61.1
+    average: 135.45
+statMin:
+    speed: 350.0
+    acceleration: 68.5
+    handling: 30.04
+    nitro: 50.68
+    average: 124.81
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 24
+    rare: 16
+    epic: 8
+settingBlueprint:
+    star1: '40'
+    star2: 18
+    star3: 24
+    star4: 36
+    star5: 0
+    star6: 0
+    total: 118
+settingBrand:
+    name: Cadillac
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 11
+    common: 24
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 2880
+    level02: 4700
+    level03: 7500
+    level04: 11300
+    level05: 16300
+    level06: 23000
+    level07: 32000
+    level08: 44500
+    level09: 62500
+    level10: 87500
+    level11: 122000
+    level12: null
+    level13: null
+    common: 20000
+    rare: 40000
+    epic: 120000

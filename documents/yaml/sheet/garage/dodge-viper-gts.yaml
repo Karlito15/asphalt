@@ -1,0 +1,96 @@
+id: 14
+stars: 4
+gameUpdate: 0
+carOrder: 5
+statOrder: 59
+level: 11
+epic: 8
+model: 'Viper GTS'
+slug: dodge-viper-gts
+blueprint:
+    star1: '45'
+    star2: 21
+    star3: 28
+    star4: 42
+    star5: 0
+    star6: 0
+    total: 136
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 3
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2200
+    star1: 2453
+    star2: 2709
+    star3: 3008
+    star4: 3306
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 353.5
+    acceleration: 80.33
+    handling: 45.29
+    nitro: 67.55
+    average: 136.67
+statMin:
+    speed: 340.0
+    acceleration: 73.0
+    handling: 40.65
+    nitro: 56.62
+    average: 127.57
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 20
+    rare: 20
+    epic: 8
+settingBlueprint:
+    star1: '45'
+    star2: 21
+    star3: 28
+    star4: 42
+    star5: 0
+    star6: 0
+    total: 136
+settingBrand:
+    name: Dodge
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 11
+    common: 20
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 3220
+    level02: 5300
+    level03: 8400
+    level04: 12600
+    level05: 18200
+    level06: 25500
+    level07: 35500
+    level08: 50000
+    level09: 70000
+    level10: 98000
+    level11: 137000
+    level12: null
+    level13: null
+    common: 25000
+    rare: 50000
+    epic: 150000

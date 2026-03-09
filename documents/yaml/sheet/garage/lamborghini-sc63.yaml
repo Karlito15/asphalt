@@ -1,0 +1,96 @@
+id: 242
+stars: 5
+gameUpdate: 36
+carOrder: 49
+statOrder: 37
+level: 12
+epic: 12
+model: SC63
+slug: lamborghini-sc63
+blueprint:
+    star1: Key
+    star2: 26
+    star3: 34
+    star4: 40
+    star5: 62
+    star6: 0
+    total: 162
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 2
+    handling: 2
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 2319
+    star1: 2556
+    star2: 2898
+    star3: 3206
+    star4: 3643
+    star5: 4062
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 353.8
+    acceleration: 85.38
+    handling: 70.15
+    nitro: 56.43
+    average: 141.44
+statMin:
+    speed: 340.0
+    acceleration: 74.8
+    handling: 44.4
+    nitro: 27.67
+    average: 121.72
+upgrade:
+    speed: 6
+    acceleration: 6
+    handling: 6
+    nitro: 6
+    common: 20
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 26
+    star3: 34
+    star4: 40
+    star5: 62
+    star6: 0
+    total: 162
+settingBrand:
+    name: Lamborghini
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 24
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 7820
+    level02: 12800
+    level03: 20400
+    level04: 30600
+    level05: 44200
+    level06: 62000
+    level07: 86500
+    level08: 121500
+    level09: 170000
+    level10: 237500
+    level11: 333000
+    level12: 466000
+    level13: null
+    common: 50000
+    rare: 100000
+    epic: 300000

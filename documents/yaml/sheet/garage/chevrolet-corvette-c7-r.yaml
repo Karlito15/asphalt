@@ -1,0 +1,96 @@
+id: 97
+stars: 5
+gameUpdate: 13
+carOrder: 36
+statOrder: 21
+level: 12
+epic: 2
+model: 'Corvette C7.R'
+slug: chevrolet-corvette-c7-r
+blueprint:
+    star1: Key
+    star2: 22
+    star3: 30
+    star4: 35
+    star5: 38
+    star6: 0
+    total: 125
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    mark: 3
+    division: 9
+rank:
+    star0: 1440
+    star1: 1637
+    star2: 1868
+    star3: 2122
+    star4: 2433
+    star5: 2948
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 307.6
+    acceleration: 80.48
+    handling: 47.08
+    nitro: 57.03
+    average: 123.05
+statMin:
+    speed: 295.0
+    acceleration: 71.2
+    handling: 34.77
+    nitro: 35.9
+    average: 109.22
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 36
+    rare: 16
+    epic: 2
+settingBlueprint:
+    star1: Key
+    star2: 22
+    star3: 30
+    star4: 35
+    star5: 38
+    star6: 0
+    total: 125
+settingBrand:
+    name: Chevrolet
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 12
+    common: 36
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 6440
+    level02: 10500
+    level03: 16800
+    level04: 25200
+    level05: 36400
+    level06: 51000
+    level07: 71500
+    level08: 100000
+    level09: 140000
+    level10: 196000
+    level11: 274000
+    level12: 384000
+    level13: null
+    common: 15000
+    rare: 30000
+    epic: 90000

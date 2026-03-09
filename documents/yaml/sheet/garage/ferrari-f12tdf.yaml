@@ -1,0 +1,96 @@
+id: 19
+stars: 5
+gameUpdate: 0
+carOrder: 30
+statOrder: 43
+level: 12
+epic: 8
+model: F12TDF
+slug: ferrari-f12tdf
+blueprint:
+    star1: '30'
+    star2: 9
+    star3: 13
+    star4: 21
+    star5: 32
+    star6: 0
+    total: 105
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 9
+    handling: 3
+    nitro: 1
+    mark: 3
+    division: 9
+rank:
+    star0: 2356
+    star1: 2543
+    star2: 2810
+    star3: 3050
+    star4: 3397
+    star5: 3724
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 360.5
+    acceleration: 78.38
+    handling: 40.13
+    nitro: 80.18
+    average: 139.8
+statMin:
+    speed: 340.0
+    acceleration: 73.9
+    handling: 31.67
+    nitro: 69.61
+    average: 128.8
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingBlueprint:
+    star1: '30'
+    star2: 9
+    star3: 13
+    star4: 21
+    star5: 32
+    star6: 0
+    total: 105
+settingBrand:
+    name: Ferrari
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 3910
+    level02: 6400
+    level03: 10200
+    level04: 15300
+    level05: 22100
+    level06: 31000
+    level07: 43500
+    level08: 60500
+    level09: 85000
+    level10: 119000
+    level11: 166000
+    level12: 233000
+    level13: null
+    common: 25000
+    rare: 50000
+    epic: 150000

@@ -18,6 +18,25 @@ class GarageStatusRepository extends ServiceEntityRepository
         parent::__construct($registry, GarageStatus::class);
     }
 
+    // DASHBOARD
+
+    /**
+     * @param string $status
+     * @param bool $value
+     * @return GarageStatus[]
+     * @example SELECT * FROM garage_status WHERE foo LIKE 'bar%';
+     */
+    public function findByStatus(string $status, bool $value): array
+    {
+        return $this->findBy([$status => $value]);
+//        return $this->createQueryBuilder('q')
+//            ->where('q.' . $status . ' = :value')
+//            ->setParameter('value', $value)
+//            ->getQuery()
+//            ->getResult()
+//        ;
+    }
+
     // EXPORTS
 
     /**
@@ -27,42 +46,23 @@ class GarageStatusRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $datas = [];
-        foreach ($this->findAll() as $garage) {
-            $datas[] = [
-                'Evo'                          => $garage->isEvo(),
-                'Unblock'                      => $garage->isUnblock(),
-                'ToUnblock'                    => $garage->isToUnblock(),
-                'Gold'                         => $garage->isGold(),
-                'ToGold'                       => $garage->isToGold(),
-                'fullUpgradeLevel'             => $garage->isFullUpgradeLevel(),
-                'toUpgradeLevel'               => $garage->isToUpgradeLevel(),
-                'fullBlueprintStar1'           => $garage->isFullBlueprintStar1(),
-                'fullBlueprintStar2'           => $garage->isFullBlueprintStar2(),
-                'fullBlueprintStar3'           => $garage->isFullBlueprintStar3(),
-                'fullBlueprintStar4'           => $garage->isFullBlueprintStar4(),
-                'fullBlueprintStar5'           => $garage->isFullBlueprintStar5(),
-                'fullBlueprintStar6'           => $garage->isFullBlueprintStar6(),
-                'fullUpgradeSpeed'             => $garage->isFullUpgradeSpeed(),
-                'toInstallUpgradeSpeed'        => $garage->isToInstallUpgradeSpeed(),
-                'fullUpgradeAcceleration'      => $garage->isFullUpgradeAcceleration(),
-                'toInstallUpgradeAcceleration' => $garage->isToInstallUpgradeAcceleration(),
-                'fullUpgradeHandling'          => $garage->isFullUpgradeHandling(),
-                'toInstallUpgradeHandling'     => $garage->isToInstallUpgradeHandling(),
-                'fullUpgradeNitro'             => $garage->isFullUpgradeNitro(),
-                'toInstallUpgradeNitro'        => $garage->isToInstallUpgradeNitro(),
-                'fullUpgradeCommon'            => $garage->isFullUpgradeCommon(),
-                'toInstallUpgradeCommon'       => $garage->isToInstallUpgradeCommon(),
-                'fullUpgradeRare'              => $garage->isFullUpgradeRare(),
-                'toInstallUpgradeRare'         => $garage->isToInstallUpgradeRare(),
-                'fullUpgradeEpic'              => $garage->isFullUpgradeEpic(),
-                'toInstallUpgradeEpic'         => $garage->isToInstallUpgradeEpic(),
-                'Brand'                        => $garage->getGarage()->getSettingBrand()->getName(),
-                'Model'                        => $garage->getGarage()->getModel(),
-            ];
-        }
+        $qb = $this->createQueryBuilder('gs')
+            ->select([
+                'b.name AS Brand',
+                'g.model AS Model',
+                'gs.unblock AS Unblock',
+                'gs.gold AS Gold',
+                'gs.evo AS Evo',
+                'gs.eventClass AS EventClass',
+                'gs.toUpgrade AS ToUpgrade',
+            ])
+            ->join('gs.garage', 'g')
+            ->join('g.settingBrand', 'b')
+            ->orderBy('g.gameUpdate', 'ASC')
+            ->addOrderBy('b.name', 'ASC')
+        ;
 
-        return $datas;
+        return $qb->getQuery()->getArrayResult();
     }
 
     // EVENTS

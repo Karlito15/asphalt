@@ -1,0 +1,96 @@
+id: 171
+stars: 6
+gameUpdate: 25
+carOrder: 57
+statOrder: 3
+level: 10
+epic: 14
+model: 'Countach LPI 800-4'
+slug: lamborghini-countach-lpi-800-4
+blueprint:
+    star1: '0'
+    star2: 30
+    star3: 40
+    star4: 50
+    star5: 46
+    star6: 0
+    total: 166
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 1
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 3266
+    star1: 3439
+    star2: 3641
+    star3: 3828
+    star4: 4077
+    star5: 4325
+    star6: 4559
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 373.4
+    acceleration: 81.23
+    handling: 85.96
+    nitro: 72.4
+    average: 153.25
+statMin:
+    speed: 355.0
+    acceleration: 74.8
+    handling: 55.84
+    nitro: 52.24
+    average: 134.47
+upgrade:
+    speed: 10
+    acceleration: 10
+    handling: 10
+    nitro: 10
+    common: 20
+    rare: 10
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 30
+    star3: 40
+    star4: 50
+    star5: 65
+    star6: 80
+    total: 265
+settingBrand:
+    name: Lamborghini
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

@@ -1,0 +1,96 @@
+id: 87
+stars: 4
+gameUpdate: 11
+carOrder: 6
+statOrder: 64
+level: 11
+epic: 8
+model: '911 GT1 Evolution'
+slug: porsche-911-gt1-evolution
+blueprint:
+    star1: '55'
+    star2: 35
+    star3: 44
+    star4: 54
+    star5: 0
+    star6: 0
+    total: 188
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 3
+    nitro: 2
+    mark: 4
+    division: 9
+rank:
+    star0: 1625
+    star1: 1835
+    star2: 2149
+    star3: 2460
+    star4: 2735
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 329.8
+    acceleration: 75.15
+    handling: 53.7
+    nitro: 68.88
+    average: 131.88
+statMin:
+    speed: 310.0
+    acceleration: 66.7
+    handling: 45.1
+    nitro: 55.86
+    average: 119.42
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 24
+    rare: 12
+    epic: 0
+settingBlueprint:
+    star1: '55'
+    star2: 35
+    star3: 44
+    star4: 54
+    star5: 0
+    star6: 0
+    total: 188
+settingBrand:
+    name: Porsche
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 11
+    common: 24
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 5750
+    level02: 9400
+    level03: 15000
+    level04: 22500
+    level05: 32500
+    level06: 45500
+    level07: 63500
+    level08: 89000
+    level09: 125000
+    level10: 175000
+    level11: 245000
+    level12: null
+    level13: null
+    common: 40000
+    rare: 80000
+    epic: 240000

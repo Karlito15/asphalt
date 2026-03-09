@@ -1,0 +1,96 @@
+id: 92
+stars: 6
+gameUpdate: 12
+carOrder: 7
+statOrder: 66
+level: 13
+epic: 4
+model: Veneno
+slug: lamborghini-veneno
+blueprint:
+    star1: '60'
+    star2: 13
+    star3: 16
+    star4: 25
+    star5: 38
+    star6: 48
+    total: 200
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 2
+    nitro: 1
+    mark: 2
+    division: 9
+rank:
+    star0: 3067
+    star1: 3208
+    star2: 3374
+    star3: 3548
+    star4: 3731
+    star5: 3941
+    star6: 4148
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 370.2
+    acceleration: 81.2
+    handling: 62.39
+    nitro: 78.79
+    average: 148.14
+statMin:
+    speed: 355.0
+    acceleration: 73.9
+    handling: 53.52
+    nitro: 61.51
+    average: 135.98
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 28
+    rare: 20
+    epic: 4
+settingBlueprint:
+    star1: '60'
+    star2: 13
+    star3: 16
+    star4: 25
+    star5: 38
+    star6: 48
+    total: 200
+settingBrand:
+    name: Lamborghini
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

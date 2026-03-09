@@ -62,7 +62,7 @@ class BrandService implements CSVInterface
         $entity = new SettingBrand();
         $entity
             ->setName((string) $datas['Name'])
-            ->setCarsNumber((int) $datas['Number'])
+            ->setCarsNumber($this->convertStringToInteger($datas['Number']))
         ;
 
         return $entity;

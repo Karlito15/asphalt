@@ -1,0 +1,96 @@
+id: 53
+stars: 4
+gameUpdate: 2
+carOrder: 21
+statOrder: 46
+level: 11
+epic: 4
+model: Alfieri
+slug: maserati-alfieri
+blueprint:
+    star1: '35'
+    star2: 15
+    star3: 21
+    star4: 32
+    star5: 0
+    star6: 0
+    total: 103
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 2
+    handling: 2
+    nitro: 2
+    mark: 3
+    division: 9
+rank:
+    star0: 1218
+    star1: 1638
+    star2: 2198
+    star3: 2752
+    star4: 3206
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 299.5
+    acceleration: 84.62
+    handling: 69.2
+    nitro: 63.68
+    average: 129.25
+statMin:
+    speed: 305.0
+    acceleration: 60.4
+    handling: 29.33
+    nitro: 51.53
+    average: 111.57
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 24
+    rare: 12
+    epic: 4
+settingBlueprint:
+    star1: '35'
+    star2: 15
+    star3: 21
+    star4: 32
+    star5: 0
+    star6: 0
+    total: 103
+settingBrand:
+    name: Maserati
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 11
+    common: 24
+    rare: 12
+    epic: 4
+settingUnitPrice:
+    level01: 5060
+    level02: 8300
+    level03: 13200
+    level04: 19800
+    level05: 28600
+    level06: 40000
+    level07: 56000
+    level08: 78500
+    level09: 110000
+    level10: 154000
+    level11: 215000
+    level12: null
+    level13: null
+    common: 30000
+    rare: 60000
+    epic: 180000

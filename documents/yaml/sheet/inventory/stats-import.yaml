@@ -1,0 +1,12 @@
+Commons:
+    - { Total: 9190, 'Class D': 1243, 'Class C': 1834, 'Class B': 2211, 'Class A': 1556, 'Class S': 2346 }
+    - { Garage: 5662, 'Class D': 813, 'Class C': 1240, 'Class B': 1516, 'Class A': 1015, 'Class S': 1078 }
+    - { Deficit: 3528, 'Class D': 430, 'Class C': 594, 'Class B': 695, 'Class A': 541, 'Class S': 1078 }
+Rares:
+    - { Total: 5862, 'Class D': 475, 'Class C': 950, 'Class B': 1399, 'Class A': 1300, 'Class S': 1738 }
+    - { Garage: 2669, 'Class D': 201, 'Class C': 428, 'Class B': 783, 'Class A': 669, 'Class S': 588 }
+    - { Deficit: 3193, 'Class D': 274, 'Class C': 522, 'Class B': 616, 'Class A': 631, 'Class S': 588 }
+Epics:
+    - { Total: 3870, 'Class D': 275, 'Class C': 550, 'Class B': 719, 'Class A': 924, 'Class S': 1402 }
+    - { Garage: 1074, 'Class D': 55, 'Class C': 140, 'Class B': 273, 'Class A': 314, 'Class S': 292 }
+    - { Deficit: 2796, 'Class D': 220, 'Class C': 410, 'Class B': 446, 'Class A': 610, 'Class S': 292 }

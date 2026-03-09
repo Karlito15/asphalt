@@ -59,15 +59,15 @@ class GarageUpgradeService implements CSVInterface
      */
     public function createEntity(array $datas): GarageUpgrade
     {
-        $garage = $this->findGarage($datas['Brand'], $datas['Model']);
+        $garage = $this->findGarage($datas);
         $entity = new GarageUpgrade();
-        $entity->setSpeed((int) $datas['Speed']);
-        $entity->setAcceleration((int) $datas['Acceleration']);
-        $entity->setHandling((int) $datas['Handling']);
-        $entity->setNitro((int) $datas['Nitro']);
-        $entity->setCommon((int) $datas["Common"]);
-        $entity->setRare((int) $datas["Rare"]);
-        $entity->setEpic((int) $datas["Epic"]);
+        $entity->setSpeed($this->convertStringToInteger($datas['Speed']));
+        $entity->setAcceleration($this->convertStringToInteger($datas['Acceleration']));
+        $entity->setHandling($this->convertStringToInteger($datas['Handling']));
+        $entity->setNitro($this->convertStringToInteger($datas['Nitro']));
+        $entity->setCommon($this->convertStringToInteger($datas["Common"]));
+        $entity->setRare($this->convertStringToInteger($datas["Rare"]));
+        $entity->setEpic($this->convertStringToInteger($datas["Epic"]));
         $entity->setGarage($garage);
 
         return $entity;

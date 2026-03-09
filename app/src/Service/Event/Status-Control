@@ -1,0 +1,209 @@
+<?php
+
+    /**
+     * Détermine si tous les imports & les upgrades de la voiture sont installés
+     *
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isGold(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * Détermine si la voiture doit être débloquée
+     *
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isToUnblock(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * Détermine si tous les imports & les upgrades de la voiture sont prêts à être installés
+     *
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isToGold(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * Détermine si toutes les upgrades de la voiture sont installées
+     *
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullUpgradeLevel(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isToUpgradeLevel(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullStar1(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullStar2(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullStar3(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullStar4(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullStar5(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullStar6(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullSpeed(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isToInstallSpeed(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullAcceleration(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isToInstallAcceleration(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullHandling(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isToInstallHandling(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullNitro(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isToInstallNitro(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullCommon(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isToInstallCommon(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullRare(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isToInstallRare(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isFullEpic(LifecycleEventArgs $args): void
+    {
+    }
+
+    /**
+     * @param LifecycleEventArgs $args
+     * @return void
+     */
+    public static function isToInstallEpic(LifecycleEventArgs $args): void
+    {
+    }

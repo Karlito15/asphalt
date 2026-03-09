@@ -1,0 +1,96 @@
+id: 76
+stars: 5
+gameUpdate: 9
+carOrder: 15
+statOrder: 49
+level: 12
+epic: 12
+model: 'Corvette ZR1'
+slug: chevrolet-corvette-zr1
+blueprint:
+    star1: '50'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 51
+    star6: 0
+    total: 187
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 2
+    nitro: 1
+    mark: 2
+    division: 9
+rank:
+    star0: 2672
+    star1: 2811
+    star2: 3000
+    star3: 3232
+    star4: 3540
+    star5: 3876
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 357.8
+    acceleration: 82.03
+    handling: 60.09
+    nitro: 76.33
+    average: 144.06
+statMin:
+    speed: 341.0
+    acceleration: 74.8
+    handling: 48.24
+    nitro: 59.75
+    average: 130.95
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 24
+    rare: 20
+    epic: 12
+settingBlueprint:
+    star1: '50'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 51
+    star6: 0
+    total: 187
+settingBrand:
+    name: Chevrolet
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 12
+    common: 24
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 9550
+    level02: 15600
+    level03: 24900
+    level04: 37400
+    level05: 54000
+    level06: 75500
+    level07: 105000
+    level08: 148000
+    level09: 207500
+    level10: 290000
+    level11: 406000
+    level12: 569000
+    level13: null
+    common: 60000
+    rare: 120000
+    epic: 360000

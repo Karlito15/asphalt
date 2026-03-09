@@ -1,0 +1,39 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Persistence\Form\Back;
+
+use App\Persistence\Entity\MissionType;
+use App\Toolbox\Trait\Form\DefaultType;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class MissionTypeType extends AbstractType
+{
+    use DefaultType;
+
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        $builder
+            ->add('value', TextType::class, [
+                'attr'     => [
+                    'autocomplete' => 'off',
+                ],
+                'label'    => 'form.value',
+                'required' => true,
+            ])
+        ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefaults([
+            'data_class' => MissionType::class,
+            'allow_extra_fields' => false,
+            'translation_domain' => 'forms',
+        ]);
+    }
+}

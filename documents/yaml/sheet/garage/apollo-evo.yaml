@@ -1,0 +1,96 @@
+id: 208
+stars: 6
+gameUpdate: 31
+carOrder: 64
+statOrder: 25
+level: 0
+epic: 5
+model: EVO
+slug: apollo-evo
+blueprint:
+    star1: '40'
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 40
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 2
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2319
+    star1: 2557
+    star2: 2831
+    star3: 3111
+    star4: 3493
+    star5: 3941
+    star6: 4265
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 355.0
+    acceleration: 85.46
+    handling: 70.36
+    nitro: 65.79
+    average: 144.15
+statMin:
+    speed: 335.0
+    acceleration: 75.7
+    handling: 43.93
+    nitro: 45.17
+    average: 124.95
+upgrade:
+    speed: 0
+    acceleration: 0
+    handling: 0
+    nitro: 0
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '55'
+    star2: 18
+    star3: 24
+    star4: 32
+    star5: 47
+    star6: 50
+    total: 226
+settingBrand:
+    name: Apollo
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 13
+    common: 32
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 9890
+    level02: 16100
+    level03: 25800
+    level04: 38700
+    level05: 55900
+    level06: 78500
+    level07: 109500
+    level08: 153500
+    level09: 214500
+    level10: 300500
+    level11: 421000
+    level12: 589000
+    level13: 967500
+    common: 70000
+    rare: 140000
+    epic: 420000

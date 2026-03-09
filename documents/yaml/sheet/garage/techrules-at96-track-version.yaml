@@ -1,0 +1,96 @@
+id: 82
+stars: 6
+gameUpdate: 9
+carOrder: 50
+statOrder: 23
+level: 13
+epic: 16
+model: 'AT96 track version'
+slug: techrules-at96-track-version
+blueprint:
+    star1: Key
+    star2: 30
+    star3: 40
+    star4: 50
+    star5: 65
+    star6: 80
+    total: 265
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 2
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 3122
+    star1: 3298
+    star2: 3506
+    star3: 3698
+    star4: 3950
+    star5: 4202
+    star6: 4444
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 364.6
+    acceleration: 85.53
+    handling: 75.74
+    nitro: 69.65
+    average: 148.88
+statMin:
+    speed: 350.0
+    acceleration: 77.5
+    handling: 52.98
+    nitro: 46.61
+    average: 131.77
+upgrade:
+    speed: 13
+    acceleration: 12
+    handling: 11
+    nitro: 11
+    common: 21
+    rare: 17
+    epic: 8
+settingBlueprint:
+    star1: Key
+    star2: 30
+    star3: 40
+    star4: 50
+    star5: 65
+    star6: 80
+    total: 265
+settingBrand:
+    name: Techrules
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

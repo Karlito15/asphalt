@@ -68,7 +68,7 @@ php82 bin/console doctrine:database:create
 php82 bin/console doctrine:migrations:migrate --no-interaction
 ```
 ``` shell
-php82 bin/console asphalt:database:migration import
+php82 bin/console asphalt:csv:migration import
 ```
 
 ### Public
@@ -92,5 +92,5 @@ php82 bin/console importmap:install
 php82 bin/console asset-map:compile
 ```
 ``` shell
-php82 bin/console asphalt:database:migration export
+php82 bin/console asphalt:csv:migration export
 ```

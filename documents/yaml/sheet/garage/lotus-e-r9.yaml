@@ -1,0 +1,96 @@
+id: 246
+stars: 5
+gameUpdate: 37
+carOrder: 72
+statOrder: 31
+level: 10
+epic: 6
+model: E-R9
+slug: lotus-e-r9
+blueprint:
+    star1: '0'
+    star2: 26
+    star3: 34
+    star4: 46
+    star5: 20
+    star6: 0
+    total: 126
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 1
+    handling: 2
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 2384
+    star1: 2630
+    star2: 2915
+    star3: 3210
+    star4: 3607
+    star5: 4403
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 365.2
+    acceleration: 87.44
+    handling: 68.4
+    nitro: 51.8
+    average: 143.21
+statMin:
+    speed: 353.4
+    acceleration: 79.3
+    handling: 47.96
+    nitro: 26.4
+    average: 126.76
+upgrade:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    common: 10
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 26
+    star3: 34
+    star4: 46
+    star5: 61
+    star6: 78
+    total: 245
+settingBrand:
+    name: Lotus
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 13
+    common: 32
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 9890
+    level02: 16100
+    level03: 25800
+    level04: 38700
+    level05: 55900
+    level06: 78500
+    level07: 109500
+    level08: 153500
+    level09: 214500
+    level10: 300500
+    level11: 421000
+    level12: 589000
+    level13: 967500
+    common: 70000
+    rare: 140000
+    epic: 420000

@@ -1,0 +1,96 @@
+id: 107
+stars: 6
+gameUpdate: 15
+carOrder: 62
+statOrder: 6
+level: 13
+epic: 4
+model: '488 GTB Challenge EVO'
+slug: ferrari-488-gtb-challenge-evo
+blueprint:
+    star1: Key
+    star2: 26
+    star3: 34
+    star4: 46
+    star5: 61
+    star6: 73
+    total: 240
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 2
+    nitro: 1
+    mark: 2
+    division: 9
+rank:
+    star0: 2141
+    star1: 2403
+    star2: 2703
+    star3: 3009
+    star4: 3427
+    star5: 3908
+    star6: 4255
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 351.2
+    acceleration: 82.76
+    handling: 77.11
+    nitro: 76.98
+    average: 147.01
+statMin:
+    speed: 330.0
+    acceleration: 73.0
+    handling: 47.13
+    nitro: 50.55
+    average: 125.17
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 32
+    rare: 20
+    epic: 2
+settingBlueprint:
+    star1: Key
+    star2: 26
+    star3: 34
+    star4: 46
+    star5: 61
+    star6: 73
+    total: 240
+settingBrand:
+    name: Ferrari
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 13
+    common: 32
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 9890
+    level02: 16100
+    level03: 25800
+    level04: 38700
+    level05: 55900
+    level06: 78500
+    level07: 109500
+    level08: 153500
+    level09: 214500
+    level10: 300500
+    level11: 421000
+    level12: 589000
+    level13: 967500
+    common: 70000
+    rare: 140000
+    epic: 420000

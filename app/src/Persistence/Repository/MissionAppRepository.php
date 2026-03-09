@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\MissionApp;
+use App\Toolbox\Trait\Repository\SitemapRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -13,6 +14,8 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class MissionAppRepository extends ServiceEntityRepository
 {
+    use SitemapRepository;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, MissionApp::class);
@@ -27,14 +30,25 @@ class MissionAppRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $q  = "q.week AS Week, q.region AS Region, q.track AS Track, q.class AS Class, q.brand AS Brand, ";
-        $q .= "q.description AS Description, q.success AS Success, q.target AS Target";
-        $qb = $this->createQueryBuilder('q');
-        $qb->select($q);
-        $qb->leftJoin('q.task', 'task')->addselect('task.value AS Task');
-        $qb->leftJoin('q.type', 'type')->addselect('type.value AS Type');
-        $qb->where('q.deletedAt IS NULL');
-        $qb->orderBy('q.id', 'ASC');
+        $qb = $this->createQueryBuilder('q')
+            ->select([
+                'q.week AS Week',
+                'q.region AS Region',
+                'q.track AS Track',
+                'q.class AS Class',
+                'q.brand AS Brand',
+                'q.description AS Description',
+                'q.success AS Success',
+                'q.target AS Target',
+            ])
+            ->where('q.deletedAt IS NULL')
+            ->leftJoin('q.task', 'task')
+            ->addselect('task.value AS Task')
+            ->leftJoin('q.type', 'type')
+            ->addselect('type.value AS Type')
+            ->orderBy('q.week', 'ASC')
+        ;
+
         return $qb->getQuery()->getArrayResult();
     }
 

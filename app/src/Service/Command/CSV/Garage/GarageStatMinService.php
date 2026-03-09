@@ -59,7 +59,7 @@ class GarageStatMinService implements CSVInterface
      */
     public function createEntity(array $datas): GarageStatMin
     {
-        $garage = $this->findGarage($datas['Brand'], $datas['Model']);
+        $garage = $this->findGarage($datas);
         $entity = new GarageStatMin();
         $entity->setSpeed((float) $datas['Speed']);
         $entity->setAcceleration((float) $datas['Acceleration']);

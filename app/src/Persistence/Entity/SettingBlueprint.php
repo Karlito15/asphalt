@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\SettingBlueprintRepository;
-use App\Toolbox\Abstract\BlueprintAbstract;
+use App\Service\Abstract\BlueprintAbstract;
 use App\Toolbox\Trait\Entity\IdEntity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -41,7 +41,7 @@ class SettingBlueprint extends BlueprintAbstract
     #[Assert\NotNull]
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration'])]
     protected string $slug;
 
     #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingBlueprint')]

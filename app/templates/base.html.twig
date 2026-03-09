@@ -11,7 +11,7 @@
         {% endblock %}
 
         {% block stylesheets %}
-    <!-- Stylesheets -->
+            <!-- Stylesheets -->
             <link href="{{ asset('libraries/bootstrap/5.3.8/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
 {#          <link href="{{ asset('styles/bootstrap.css') }}" rel="stylesheet" type="text/css" />#}
         {% endblock %}
@@ -22,6 +22,10 @@
     </head>
     <body{% block bodyClass %}{% endblock %}>
         {% block body %}
+
+            {% block preloader %}
+        {#        {% include '@App/partials/back/loader.html.twig' %}#}
+            {% endblock %}
             {% block notification %}
                 {#{% include '@App/usuals/alert.html.twig' %}#}
                 {% include '@App/usuals/sweet-alert.html.twig' %}

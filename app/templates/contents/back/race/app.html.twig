@@ -1,0 +1,44 @@
+{% block table %}
+
+    <tbody>
+    {% for item in entities %}
+        <tr>
+            <td class="{{ classes.td }}">{{ item.Season.Chapter }}</td>
+            <td class="{{ classes.td }}">{{ item.raceOrder }}</td>
+            <td class="{{ classes.td }} text-truncate">{{ item.Mode }}</td>
+            <td class="{{ classes.td }} text-truncate">{{ item.Season }}</td>
+            <td class="{{ classes.td }} text-truncate">{{ item.Track.nameEnglish }}</td>
+            <td class="{{ classes.td }} text-truncate">{{ item.Track.nameFrench }}</td>
+            <td class="{{ classes.td }} text-center">{{item.Time }}</td>
+            <td class="{{ classes.td }} text-center">{{ component('ValueBoolean', {value: item.Finished}) }}</td>
+            <twig:TableDate entity="{{ item }}" />
+            <twig:TableAction id="{{ item.id }}" link="{{ 'admin.race.app.update' }}" />
+        </tr>
+    {% else %}
+        <twig:TableEmpty value="9" />
+    {% endfor %}
+    </tbody>
+
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr>
+        <th>{{ 'text.chapter'|trans }}</th>
+        <th>{{ 'text.order.race'|trans|raw }}</th>
+        <th>{{ 'text.mode'|trans }}</th>
+        <th>{{ 'text.season'|trans }}</th>
+        <th>{{ 'text.name-english'|trans|raw }}</th>
+        <th>{{ 'text.name-french'|trans|raw }}</th>
+        <th>{{ 'text.time'|trans }}</th>
+        <th>{{ 'text.finished'|trans }}</th>
+        <th>{{ 'text.action'|trans }}</th>
+    </tr>
+{% endmacro %}
+
+{% extends '@App/contents/back/list.html.twig' %}

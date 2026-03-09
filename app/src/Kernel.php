@@ -24,6 +24,11 @@ class Kernel extends BaseKernel
         return $this->getVarsDir() . 'logs';
     }
 
+    public function getShareDir(): ?string
+    {
+        return $this->getVarsDir() . 'shares';
+    }
+
     private function getVarsDir(): string
     {
         return dirname($this->getProjectDir()) . DIRECTORY_SEPARATOR . 'vars' . DIRECTORY_SEPARATOR;

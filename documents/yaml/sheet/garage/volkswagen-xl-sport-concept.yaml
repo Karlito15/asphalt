@@ -1,0 +1,96 @@
+id: 47
+stars: 3
+gameUpdate: 0
+carOrder: 7
+statOrder: 33
+level: 10
+epic: 0
+model: 'XL Sport Concept'
+slug: volkswagen-xl-sport-concept
+blueprint:
+    star1: '20'
+    star2: 12
+    star3: 30
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 62
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 9
+    handling: 2
+    nitro: 2
+    mark: 5
+    division: 9
+rank:
+    star0: 706
+    star1: 1101
+    star2: 1466
+    star3: 1814
+    star4: 0
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 291.2
+    acceleration: 60.31
+    handling: 62.02
+    nitro: 61.94
+    average: 118.87
+statMin:
+    speed: 270.0
+    acceleration: 46.9
+    handling: 49.35
+    nitro: 42.32
+    average: 102.14
+upgrade:
+    speed: 10
+    acceleration: 10
+    handling: 10
+    nitro: 10
+    common: 20
+    rare: 4
+    epic: 0
+settingBlueprint:
+    star1: '20'
+    star2: 12
+    star3: 30
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 62
+settingBrand:
+    name: Volkswagen
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 10
+    common: 20
+    rare: 4
+    epic: 0
+settingUnitPrice:
+    level01: 1150
+    level02: 1900
+    level03: 3000
+    level04: 4500
+    level05: 6500
+    level06: 9000
+    level07: 12500
+    level08: 18000
+    level09: 25000
+    level10: 35000
+    level11: null
+    level12: null
+    level13: null
+    common: 10000
+    rare: 20000
+    epic: 0

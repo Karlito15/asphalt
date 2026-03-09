@@ -95,7 +95,7 @@ class SettingLevelService implements CSVInterface
     public function createEntity(array $datas): GarageApp
     {
         $level  = $this->entityManager->getRepository(SettingLevel::class)->findOneBy(['slug' => $datas['SettingLevel']]);
-        $garage = $this->findGarage($datas['Brand'], $datas['Model']);
+        $garage = $this->findGarage($datas);
         $garage->setSettingLevel($level);
 
         return $garage;

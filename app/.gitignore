@@ -23,6 +23,20 @@
 /public/assets/
 ###< symfonycasts/sass-bundle ###
 
+###> symfony/webpack-encore-bundle ###
+/.yarn/
+/.yarnrc
+/node_modules/
+/public/build/
+/public/cache/*
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
+
 ###> phpstan/phpstan ###
 phpstan.neon
 ###< phpstan/phpstan ###
+
+###> custom ###
+ide-twig.json
+###< custom ###

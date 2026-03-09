@@ -1,0 +1,96 @@
+id: 184
+stars: 6
+gameUpdate: 27
+carOrder: 54
+statOrder: 8
+level: 13
+epic: 7
+model: 'Agera RS'
+slug: koenigsegg-agera-rs
+blueprint:
+    star1: '85'
+    star2: 25
+    star3: 29
+    star4: 38
+    star5: 54
+    star6: 69
+    total: 300
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 9
+    handling: 2
+    nitro: 3
+    mark: 3
+    division: 9
+rank:
+    star0: 3734
+    star1: 3892
+    star2: 4076
+    star3: 4272
+    star4: 4479
+    star5: 4719
+    star6: 4940
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 484.8
+    acceleration: 79.67
+    handling: 60.03
+    nitro: 58.86
+    average: 170.84
+statMin:
+    speed: 447.2
+    acceleration: 74.8
+    handling: 49.16
+    nitro: 43.12
+    average: 153.57
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 28
+    rare: 20
+    epic: 5
+settingBlueprint:
+    star1: '85'
+    star2: 25
+    star3: 29
+    star4: 38
+    star5: 54
+    star6: 69
+    total: 300
+settingBrand:
+    name: Koenigsegg
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

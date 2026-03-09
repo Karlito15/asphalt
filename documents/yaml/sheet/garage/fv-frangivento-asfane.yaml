@@ -1,0 +1,96 @@
+id: 241
+stars: 6
+gameUpdate: 36
+carOrder: 49
+statOrder: 30
+level: 8
+epic: 1
+model: Asfanè
+slug: fv-frangivento-asfane
+blueprint:
+    star1: Key
+    star2: 28
+    star3: 32
+    star4: 15
+    star5: 0
+    star6: 0
+    total: 75
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 3067
+    star1: 3239
+    star2: 3444
+    star3: 3633
+    star4: 3885
+    star5: 4138
+    star6: 4377
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 373.9
+    acceleration: 82.03
+    handling: 69.13
+    nitro: 67.63
+    average: 148.17
+statMin:
+    speed: 360.0
+    acceleration: 74.8
+    handling: 46.27
+    nitro: 43.41
+    average: 131.12
+upgrade:
+    speed: 8
+    acceleration: 8
+    handling: 8
+    nitro: 8
+    common: 20
+    rare: 8
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 28
+    star3: 32
+    star4: 44
+    star5: 83
+    star6: 0
+    total: 187
+settingBrand:
+    name: 'FV Frangivento'
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

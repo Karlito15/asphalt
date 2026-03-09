@@ -1,0 +1,96 @@
+id: 257
+stars: 4
+gameUpdate: 39
+carOrder: 14
+statOrder: 65
+level: 7
+epic: 3
+model: Valour
+slug: aston-martin-valour
+blueprint:
+    star1: '0'
+    star2: 35
+    star3: 21
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 56
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 3
+    nitro: 2
+    mark: 4
+    division: 9
+rank:
+    star0: 1954
+    star1: 2181
+    star2: 2534
+    star3: 2878
+    star4: 3178
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 331.0
+    acceleration: 78.23
+    handling: 56.43
+    nitro: 60.73
+    average: 131.6
+statMin:
+    speed: 322.0
+    acceleration: 73.0
+    handling: 39.83
+    nitro: 28.55
+    average: 115.85
+upgrade:
+    speed: 7
+    acceleration: 7
+    handling: 7
+    nitro: 7
+    common: 20
+    rare: 4
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 35
+    star3: 55
+    star4: 85
+    star5: 0
+    star6: 0
+    total: 175
+settingBrand:
+    name: 'Aston Martin'
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 11
+    common: 24
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 5750
+    level02: 9400
+    level03: 15000
+    level04: 22500
+    level05: 32500
+    level06: 45500
+    level07: 63500
+    level08: 89000
+    level09: 125000
+    level10: 175000
+    level11: 245000
+    level12: null
+    level13: null
+    common: 40000
+    rare: 80000
+    epic: 240000

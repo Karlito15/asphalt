@@ -1,0 +1,96 @@
+id: 36
+stars: 3
+gameUpdate: 0
+carOrder: 1
+statOrder: 42
+level: 10
+epic: 0
+model: 'Lancer Evolution'
+slug: mitsubishi-lancer-evolution
+blueprint:
+    star1: '5'
+    star2: 12
+    star3: 30
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 47
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 9
+    handling: 3
+    nitro: 2
+    mark: 5
+    division: 9
+rank:
+    star0: 467
+    star1: 789
+    star2: 1066
+    star3: 1381
+    star4: 0
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 270.1
+    acceleration: 55.03
+    handling: 53.79
+    nitro: 68.19
+    average: 111.78
+statMin:
+    speed: 250.0
+    acceleration: 42.4
+    handling: 54.8
+    nitro: 54.8
+    average: 100.5
+upgrade:
+    speed: 10
+    acceleration: 10
+    handling: 10
+    nitro: 10
+    common: 20
+    rare: 4
+    epic: 0
+settingBlueprint:
+    star1: '5'
+    star2: 12
+    star3: 30
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 47
+settingBrand:
+    name: Mitsubishi
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 10
+    common: 20
+    rare: 4
+    epic: 0
+settingUnitPrice:
+    level01: 1150
+    level02: 1900
+    level03: 3000
+    level04: 4500
+    level05: 6500
+    level06: 9000
+    level07: 12500
+    level08: 18000
+    level09: 25000
+    level10: 35000
+    level11: null
+    level12: null
+    level13: null
+    common: 10000
+    rare: 20000
+    epic: 0

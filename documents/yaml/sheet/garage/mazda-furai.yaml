@@ -1,0 +1,96 @@
+id: 79
+stars: 4
+gameUpdate: 9
+carOrder: 33
+statOrder: 19
+level: 11
+epic: 4
+model: Furai
+slug: mazda-furai
+blueprint:
+    star1: '30'
+    star2: 23
+    star3: 33
+    star4: 42
+    star5: 0
+    star6: 0
+    total: 128
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    mark: 3
+    division: 9
+rank:
+    star0: 1372
+    star1: 1712
+    star2: 2095
+    star3: 2486
+    star4: 2853
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 305.5
+    acceleration: 80.95
+    handling: 57.23
+    nitro: 49.67
+    average: 123.34
+statMin:
+    speed: 290.0
+    acceleration: 71.2
+    handling: 43.07
+    nitro: 30.12
+    average: 108.6
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 28
+    rare: 8
+    epic: 4
+settingBlueprint:
+    star1: '30'
+    star2: 23
+    star3: 33
+    star4: 42
+    star5: 0
+    star6: 0
+    total: 128
+settingBrand:
+    name: Mazda
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 11
+    common: 28
+    rare: 8
+    epic: 4
+settingUnitPrice:
+    level01: 4370
+    level02: 7100
+    level03: 11400
+    level04: 17100
+    level05: 24700
+    level06: 34500
+    level07: 48500
+    level08: 68000
+    level09: 95000
+    level10: 133000
+    level11: 186000
+    level12: null
+    level13: null
+    common: 20000
+    rare: 40000
+    epic: 120000

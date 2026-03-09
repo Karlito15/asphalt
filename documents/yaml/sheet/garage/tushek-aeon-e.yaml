@@ -1,0 +1,96 @@
+id: 312
+stars: 6
+gameUpdate: 46
+carOrder: 71
+statOrder: 99
+level: 8
+epic: 2
+model: 'Aeon E'
+slug: tushek-aeon-e
+blueprint:
+    star1: '35'
+    star2: 40
+    star3: 45
+    star4: 1
+    star5: 0
+    star6: 0
+    total: 121
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 1
+    handling: 3
+    nitro: 9
+    mark: 3
+    division: 9
+rank:
+    star0: 3876
+    star1: 4032
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 5106
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 491.5
+    acceleration: 86.23
+    handling: 46.03
+    nitro: 25.94
+    average: 162.43
+statMin:
+    speed: 480.0
+    acceleration: 83.8
+    handling: 39.84
+    nitro: 12.2
+    average: 153.96
+upgrade:
+    speed: 0
+    acceleration: 0
+    handling: 0
+    nitro: 0
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '35'
+    star2: 40
+    star3: 45
+    star4: 50
+    star5: 60
+    star6: 70
+    total: 300
+settingBrand:
+    name: Tushek
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

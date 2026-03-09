@@ -1,0 +1,96 @@
+id: 279
+stars: 6
+gameUpdate: 42
+carOrder: 67
+statOrder: 62
+level: 10
+epic: 0
+model: 'GT MK IV'
+slug: ford-gt-mk-iv
+blueprint:
+    star1: '25'
+    star2: 30
+    star3: 35
+    star4: 40
+    star5: 40
+    star6: 0
+    total: 170
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 2328
+    star1: 2570
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 4322
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 358.7
+    acceleration: 82.61
+    handling: 42.01
+    nitro: 46.95
+    average: 132.57
+statMin:
+    speed: 350.0
+    acceleration: 75.5
+    handling: 33.86
+    nitro: 32.33
+    average: 122.92
+upgrade:
+    speed: 2
+    acceleration: 2
+    handling: 2
+    nitro: 2
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '25'
+    star2: 30
+    star3: 35
+    star4: 40
+    star5: 50
+    star6: 60
+    total: 240
+settingBrand:
+    name: Ford
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 13
+    common: 32
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 9890
+    level02: 16100
+    level03: 25800
+    level04: 38700
+    level05: 55900
+    level06: 78500
+    level07: 109500
+    level08: 153500
+    level09: 214500
+    level10: 300500
+    level11: 421000
+    level12: 589000
+    level13: 967500
+    common: 70000
+    rare: 140000
+    epic: 420000

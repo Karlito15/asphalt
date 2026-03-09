@@ -1,0 +1,96 @@
+id: 179
+stars: 5
+gameUpdate: 26
+carOrder: 50
+statOrder: 9
+level: 12
+epic: 2
+model: '600LT Spider'
+slug: mclaren-600lt-spider
+blueprint:
+    star1: '45'
+    star2: 17
+    star3: 23
+    star4: 32
+    star5: 45
+    star6: 0
+    total: 162
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 1
+    handling: 1
+    nitro: 2
+    mark: 1
+    division: 9
+rank:
+    star0: 2393
+    star1: 2624
+    star2: 2953
+    star3: 3247
+    star4: 3669
+    star5: 4075
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 340.5
+    acceleration: 86.11
+    handling: 83.17
+    nitro: 74.54
+    average: 146.08
+statMin:
+    speed: 324.0
+    acceleration: 73.9
+    handling: 49.41
+    nitro: 42.18
+    average: 122.37
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 32
+    rare: 20
+    epic: 2
+settingBlueprint:
+    star1: '45'
+    star2: 17
+    star3: 23
+    star4: 32
+    star5: 45
+    star6: 0
+    total: 162
+settingBrand:
+    name: McLaren
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 7820
+    level02: 12800
+    level03: 20400
+    level04: 30600
+    level05: 44200
+    level06: 62000
+    level07: 86500
+    level08: 121500
+    level09: 170000
+    level10: 237500
+    level11: 333000
+    level12: 466000
+    level13: null
+    common: 50000
+    rare: 100000
+    epic: 300000

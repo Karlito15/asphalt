@@ -62,13 +62,13 @@ class GarageAppService implements CSVInterface
     public function createEntity(array $datas): GarageApp
     {
         $entity = new GarageApp();
-        $entity->setStars((int) $datas['Stars']);
-        $entity->setGameUpdate((int) $datas['GameUpdate']);
-        $entity->setCarOrder((int) $datas['CarOrder']);
-        $entity->setStatOrder((int) $datas['StatOrder']);
+        $entity->setStars($this->convertStringToInteger($datas['Stars']));
+        $entity->setGameUpdate($this->convertStringToInteger($datas['GameUpdate']));
+        $entity->setCarOrder($this->convertStringToInteger($datas['CarOrder']));
+        $entity->setStatOrder($this->convertStringToInteger($datas['StatOrder']));
         $entity->setModel((string) $datas['Model']);
-        $entity->setLevel((int) $datas['Level']);
-        $entity->setEpic((int) $datas['Epic']);
+        $entity->setLevel($this->convertStringToInteger($datas['Level']));
+        $entity->setEpic($this->convertStringToInteger($datas['Epic']));
         // Relation
         if (is_null($datas['Brand']) === false) {
             $brand = $this->entityManager->getRepository(SettingBrand::class)->findOneBy(['name' => $datas['Brand']]);

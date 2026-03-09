@@ -1,22 +1,50 @@
-{% extends 'base.html.twig' %}
+{% block content %}
 
-{% block title %}GarageApp{% endblock %}
+{% set background, text = '', '' %}
 
-{% block body %}
-    <h1>GarageApp</h1>
+{#{% if entity.status.current.unblock is true %}#}
+{#    {% set status = 'unblock' %}#}
+{#{% else %}#}
+{#    {% set status = 'lock' %}#}
+{#{% endif %}#}
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ garage_app.id }}</td>
-            </tr>
-        </tbody>
-    </table>
+{#{% if entity.status.current.gold is true %}#}
+{#    {% set gold = 'gold' %}#}
+{#{% else %}#}
+{#    {% set gold = null %}#}
+{#{% endif %}#}
 
-    <a href="{{ path('app.garage.index') }}">back to list</a>
+<div class="row">
+    <div class="col-xxl-10">
+        <div class="card">
+            <div class="card-header text-center">
+                {% include "@App/contents/front/garage/_title.html.twig" %}
+            </div>
+            <div class="card-body">
+{{ dump(entity) }}
+                {% include '@App/contents/front/garage/read/garage-part-1.html.twig' %}
+                {% include '@App/contents/front/garage/read/garage-part-5.html.twig' %}
+{#                {% include '@App/contents/front/garage/read/blueprint.html.twig' %}#}
+{#                {% include '@App/contents/front/garage/read/rank.html.twig' %}#}
+                {% include '@App/contents/front/garage/read/stat.html.twig' %}
+{#                {% include '@App/contents/front/garage/read/upgrade.html.twig' %}#}
+                {% include '@App/contents/front/garage/read/unit-price.html.twig' %}
+                {% include '@App/contents/front/garage/read/tag.html.twig' %}
+            </div>
+            <div class="card-footer">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-2">
+        <div style="display: block; position: sticky; top: 20px;">
+            <h6 class="h4 text-center">{{ 'text.action'|trans|plural }}</h6>
+            <a href="{{ path(links.index) }}" class="btn btn-outline-warning btn-lg rounded-top-5 rounded-bottom-0 w-100 mb-3">{{ 'btn.back'|trans }}</a>
+            {{ include('@App/contents/front/garage/delete.html.twig') }}
+        </div>
+    </div>
+</div>
 
-    <a href="{{ path('app_garage_app_edit', {'id': garage_app.id}) }}">edit</a>
-
-    {{ include('garage_app/_delete_form.html.twig') }}
 {% endblock %}
+
+{% extends '@App/bases/front/full.html.twig' %}

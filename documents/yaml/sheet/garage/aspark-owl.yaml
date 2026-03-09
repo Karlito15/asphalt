@@ -1,0 +1,96 @@
+id: 120
+stars: 6
+gameUpdate: 17
+carOrder: 51
+statOrder: 55
+level: 6
+epic: 8
+model: Owl
+slug: aspark-owl
+blueprint:
+    star1: '85'
+    star2: 25
+    star3: 19
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 129
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 1
+    handling: 3
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 3668
+    star1: 3824
+    star2: 4006
+    star3: 4201
+    star4: 4405
+    star5: 4645
+    star6: 4863
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 414.7
+    acceleration: 89.4
+    handling: 51.75
+    nitro: 51.27
+    average: 151.78
+statMin:
+    speed: 400.0
+    acceleration: 82.99
+    handling: 45.79
+    nitro: 35.67
+    average: 141.11
+upgrade:
+    speed: 6
+    acceleration: 6
+    handling: 6
+    nitro: 6
+    common: 16
+    rare: 4
+    epic: 0
+settingBlueprint:
+    star1: '85'
+    star2: 25
+    star3: 29
+    star4: 38
+    star5: 54
+    star6: 69
+    total: 300
+settingBrand:
+    name: Aspark
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

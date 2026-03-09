@@ -1,0 +1,96 @@
+id: 109
+stars: 6
+gameUpdate: 15
+carOrder: 44
+statOrder: 4
+level: 13
+epic: 16
+model: 'F8 Tributo'
+slug: ferrari-f8-tributo
+blueprint:
+    star1: '50'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 62
+    total: 250
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 2
+    handling: 1
+    nitro: 2
+    mark: 1
+    division: 9
+rank:
+    star0: 3007
+    star1: 3183
+    star2: 3387
+    star3: 3574
+    star4: 3825
+    star5: 4073
+    star6: 4305
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 360.2
+    acceleration: 83.14
+    handling: 94.22
+    nitro: 69.79
+    average: 151.84
+statMin:
+    speed: 340.0
+    acceleration: 73.9
+    handling: 66.86
+    nitro: 43.65
+    average: 131.1
+upgrade:
+    speed: 8
+    acceleration: 8
+    handling: 8
+    nitro: 8
+    common: 20
+    rare: 8
+    epic: 0
+settingBlueprint:
+    star1: '50'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 62
+    total: 250
+settingBrand:
+    name: Ferrari
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

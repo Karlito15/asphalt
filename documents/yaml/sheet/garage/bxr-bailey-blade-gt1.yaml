@@ -1,0 +1,96 @@
+id: 95
+stars: 6
+gameUpdate: 13
+carOrder: 40
+statOrder: 16
+level: 13
+epic: 16
+model: 'Bailey Blade GT1'
+slug: bxr-bailey-blade-gt1
+blueprint:
+    star1: '85'
+    star2: 25
+    star3: 29
+    star4: 38
+    star5: 54
+    star6: 69
+    total: 300
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 3
+    handling: 3
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 3345
+    star1: 3533
+    star2: 3750
+    star3: 3981
+    star4: 4223
+    star5: 4506
+    star6: 4764
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 449.5
+    acceleration: 80.48
+    handling: 46.87
+    nitro: 70.66
+    average: 161.88
+statMin:
+    speed: 434.0
+    acceleration: 74.8
+    handling: 40.34
+    nitro: 54.29
+    average: 150.86
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingBlueprint:
+    star1: '85'
+    star2: 25
+    star3: 29
+    star4: 38
+    star5: 54
+    star6: 69
+    total: 300
+settingBrand:
+    name: BXR
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

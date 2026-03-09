@@ -1,0 +1,8 @@
+<form
+    method="post"
+    action="{{ path(links.delete, {'id': entity.id}) }}"
+    onsubmit="return confirm('{{ 'text.confirmation'|trans }}');"
+>
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ entity.id) }}">
+    <button class="btn btn-lg btn-outline-danger fw-bolder rounded-top-0 rounded-bottom-5 w-100">{{ 'btn.delete'|trans }}</button>
+</form>

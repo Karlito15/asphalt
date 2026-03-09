@@ -39,7 +39,7 @@ class SettingClass
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration'])]
     protected string $label;
 
     #[ORM\Column(type: Types::STRING, length: 8, nullable: false)]
@@ -47,7 +47,7 @@ class SettingClass
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index', 'garage'])]
+    #[Groups(['index', 'migration', 'sheet'])]
     protected string $value;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 1, 'unsigned' => true])]
@@ -56,13 +56,13 @@ class SettingClass
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 1, max: 5)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration'])]
     protected int $classOrder = 1;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration', 'sheet'])]
     protected int $carsNumber = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -71,7 +71,7 @@ class SettingClass
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 125, max: 159)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration', 'sheet'])]
     protected int $median = 125;
 
     #[ORM\Column(type: Types::STRING, length: 32, unique: true, nullable: false)]
@@ -81,7 +81,7 @@ class SettingClass
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['label', 'value'], separator: '-')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration'])]
     protected string $slug;
 
     #[ORM\OneToMany(targetEntity: GarageApp::class, mappedBy: 'settingClass')]

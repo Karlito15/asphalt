@@ -1,0 +1,96 @@
+id: 238
+stars: 6
+gameUpdate: 35
+carOrder: 49
+statOrder: 26
+level: 6
+epic: 0
+model: 'Lykan Édition Néon'
+slug: w-motors-lykan-edition-neon
+blueprint:
+    star1: '0'
+    star2: 40
+    star3: 36
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 76
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 3
+    handling: 3
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 3035
+    star1: 3272
+    star2: 3550
+    star3: 3846
+    star4: 4151
+    star5: 4498
+    star6: 4845
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 429.3
+    acceleration: 82.91
+    handling: 52.87
+    nitro: 65.41
+    average: 157.62
+statMin:
+    speed: 395.0
+    acceleration: 74.8
+    handling: 37.84
+    nitro: 37.56
+    average: 136.3
+upgrade:
+    speed: 0
+    acceleration: 0
+    handling: 0
+    nitro: 0
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 70
+    star6: 85
+    total: 300
+settingBrand:
+    name: 'W Motors'
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

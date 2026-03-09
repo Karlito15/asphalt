@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\GarageBlueprintRepository;
-use App\Toolbox\Abstract\BlueprintAbstract;
+use App\Service\Abstract\BlueprintAbstract;
 use App\Toolbox\Trait\Entity\GarageEntity;
 use App\Toolbox\Trait\Entity\IdEntity;
 use Doctrine\ORM\Mapping as ORM;
@@ -28,7 +28,7 @@ class GarageBlueprint extends BlueprintAbstract
     use SoftDeleteableEntity;
     use IdEntity, GarageEntity;
 
-    #[ORM\OneToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'blueprint')]
+    #[ORM\OneToOne(targetEntity: GarageApp::class, inversedBy: 'blueprint', cascade: ['persist'])]
     #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
     protected GarageApp $garage;
 }

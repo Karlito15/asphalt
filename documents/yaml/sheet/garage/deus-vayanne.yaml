@@ -1,0 +1,96 @@
+id: 221
+stars: 6
+gameUpdate: 33
+carOrder: 63
+statOrder: 39
+level: 8
+epic: 2
+model: Vayanne
+slug: deus-vayanne
+blueprint:
+    star1: '0'
+    star2: 40
+    star3: 45
+    star4: 16
+    star5: 0
+    star6: 0
+    total: 101
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 1
+    handling: 3
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 3844
+    star1: 4004
+    star2: 4193
+    star3: 4396
+    star4: 4607
+    star5: 4852
+    star6: 5082
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 438.7
+    acceleration: 86.55
+    handling: 47.61
+    nitro: 47.08
+    average: 154.99
+statMin:
+    speed: 420.0
+    acceleration: 82.09
+    handling: 37.0
+    nitro: 20.67
+    average: 139.94
+upgrade:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    common: 12
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 70
+    star6: 85
+    total: 300
+settingBrand:
+    name: Deus
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 32
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

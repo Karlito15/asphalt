@@ -2,88 +2,146 @@
 
 #### Garages
 ``` shell
-php bin/console make:crud GarageApp
+php bin/console make:crud App\Persistence\Entity\GarageApp
 ```
+Back\Garage\AppController
+
 ``` shell
-php bin/console make:crud GarageBlueprint
+php bin/console make:crud App\Persistence\Entity\GarageBlueprint
 ```
+Back\Garage\BlueprintController
 ``` shell
-php bin/console make:crud GarageEvo
+php bin/console make:crud App\Persistence\Entity\GarageEvo
 ```
+Back\Garage\EvoController
 ``` shell
-php bin/console make:crud GarageGauntlet
+php bin/console make:crud App\Persistence\Entity\GarageGauntlet
 ```
+Back\Garage\GauntletController
 ``` shell
-php bin/console make:crud GarageRank
+php bin/console make:crud App\Persistence\Entity\GarageRank
 ```
+Back\Garage\RankController
 ``` shell
-php bin/console make:crud GarageStatActual
+php bin/console make:crud App\Persistence\Entity\GarageStatActual
 ```
+Back\Garage\StatActualController
 ``` shell
-php bin/console make:crud GarageStatMax
+php bin/console make:crud App\Persistence\Entity\GarageStatMax
 ```
+Back\Garage\StatMaxController
 ``` shell
-php bin/console make:crud GarageStatMin
+php bin/console make:crud App\Persistence\Entity\GarageStatMin
 ```
+Back\Garage\StatMinController
 ``` shell
-php bin/console make:crud GarageStatus
+php bin/console make:crud App\Persistence\Entity\GarageStatus
 ```
+Back\Garage\StatusController
 ``` shell
-php bin/console make:crud GarageUpgrade
+php bin/console make:crud App\Persistence\Entity\GarageUpgrade
 ```
+Back\Garage\UpgradeController
 
 #### Inventory
 ``` shell
-php bin/console make:crud InventoryApp
+php bin/console make:crud App\Persistence\Entity\InventoryApp
+```
+``` shell
+Back\InventoryController
 ```
 
 #### Missions
 ``` shell
-php bin/console make:crud MissionApp
+php bin/console make:crud App\Persistence\Entity\MissionApp
 ```
 ``` shell
-php bin/console make:crud MissionTask
+Back\Mission\AppController
 ```
 ``` shell
-php bin/console make:crud MissionType
+php bin/console make:crud App\Persistence\Entity\MissionTask
 ```
-
+``` shell
+Back\Mission\TaskController
+```
+``` shell
+php bin/console make:crud App\Persistence\Entity\MissionType
+```
+``` shell
+Back\Mission\TypeController
+```
 #### Races
 ``` shell
-php bin/console make:crud RaceApp
+php bin/console make:crud App\Persistence\Entity\RaceApp
 ```
 ``` shell
-php bin/console make:crud RaceMode
+Back\Race\AppController
 ```
 ``` shell
-php bin/console make:crud RaceRegion
+php bin/console make:crud App\Persistence\Entity\RaceMode
 ```
 ``` shell
-php bin/console make:crud RaceSeason
+Back\Race\ModeController
 ```
 ``` shell
-php bin/console make:crud RaceTime
+php bin/console make:crud App\Persistence\Entity\RaceRegion
 ```
 ``` shell
-php bin/console make:crud RaceTrack
+Back\Race\RegionController
+```
+``` shell
+php bin/console make:crud App\Persistence\Entity\RaceSeason
+```
+``` shell
+Back\Race\SeasonController
+```
+``` shell
+php bin/console make:crud App\Persistence\Entity\RaceTime
+```
+``` shell
+Back\Race\TimeController
+```
+``` shell
+php bin/console make:crud App\Persistence\Entity\RaceTrack
+```
+``` shell
+Back\Race\TrackController
 ```
 
 #### Settings
 ``` shell
-php bin/console make:crud SettingBlueprint
+php bin/console make:crud App\Persistence\Entity\SettingBlueprint
 ```
 ``` shell
-php bin/console make:crud SettingBrand
+Back\Setting\BlueprintController
 ```
 ``` shell
-php bin/console make:crud SettingClass
+php bin/console make:crud App\Persistence\Entity\SettingBrand
 ```
 ``` shell
-php bin/console make:crud SettingLevel
+Back\Setting\BrandController
 ```
 ``` shell
-php bin/console make:crud SettingTag
+php bin/console make:crud App\Persistence\Entity\SettingClass
 ```
 ``` shell
-php bin/console make:crud SettingUnitPrice
+Back\Setting\ClassController
+```
+``` shell
+php bin/console make:crud App\Persistence\Entity\SettingLevel
+```
+``` shell
+Back\Setting\LevelController
+```
+``` shell
+php bin/console make:crud App\Persistence\Entity\SettingTag
+```
+``` shell
+Back\Setting\TagController
+```
+``` shell
+php bin/console make:crud App\Persistence\Entity\SettingUnitPrice
+```
+``` shell
+Back\Setting\UnitPriceController
 ```

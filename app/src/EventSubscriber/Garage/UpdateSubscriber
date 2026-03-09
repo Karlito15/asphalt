@@ -1,0 +1,79 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\EventSubscriber\Garage;
+
+use App\Event\Garage\ActualEvent;
+use App\Event\Garage\GauntletEvent;
+use App\Event\Garage\UpdateEvent;
+use App\Service\Event\GarageAppService;
+use App\Service\Event\GarageBlueprintService;
+use App\Service\Event\GarageGauntletService;
+use App\Service\Event\GarageStatActualService;
+use App\Service\Event\GarageStatusService;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
+readonly final class UpdateSubscriber implements EventSubscriberInterface
+{
+    public function __construct(
+        private GarageAppService        $garageService,
+        private GarageBlueprintService  $blueprintService,
+        private GarageGauntletService   $gauntletService,
+        private GarageStatActualService $statActualService,
+        private GarageStatusService     $statusService,
+    ) {}
+
+    public static function getSubscribedEvents(): array
+    {
+        return [
+            UpdateEvent::class => [
+                // Status
+                ['status', 1100],
+                // Garage
+                ['garage', 1000],           // Level
+                // Tags
+                // Orders
+//                ['orderByClass', XXXX],
+//                ['orderByStat', XXXX],
+            ],
+            GauntletEvent::class => [
+                ['gauntlet', 500],
+            ],
+            ActualEvent::class => [
+                ['statActual', 400],
+            ],
+        ];
+    }
+
+    public function garage(UpdateEvent $event): void
+    {
+        $this->garageService->levelHandler($event);
+    }
+
+    public function gauntlet(GauntletEvent $event): void
+    {
+        $this->gauntletService->calculScores($event);
+    }
+
+    public function status(UpdateEvent $event): void
+    {
+        $this->statusService->isToUnblock($event);
+        $this->statusService->isToGold($event);
+    }
+
+    public function statActual(ActualEvent $event): void
+    {
+        $this->statActualService->copyStatMaxtoActual($event);
+    }
+
+//    public function orderByClass(UpdateEvent $event): void
+//    {
+//        $this->garageService->orderByClass($event, $this->manager);
+//    }
+
+//    public function orderByStat(UpdateEvent $event): void
+//    {
+//        $this->garageService->orderByStat($event, $this->manager);
+//    }
+}

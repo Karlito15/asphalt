@@ -1,0 +1,96 @@
+id: 287
+stars: 5
+gameUpdate: 43
+carOrder: 17
+statOrder: 40
+level: 6
+epic: 4
+model: 'Aston Martin Valkyrie'
+slug: lego-technic-aston-martin-valkyrie
+blueprint:
+    star1: '30'
+    star2: 35
+    star3: 5
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 70
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 2
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 2663
+    star1: 2805
+    star2: 3001
+    star3: 0
+    star4: 0
+    star5: 3920
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 372.3
+    acceleration: 81.04
+    handling: 65.74
+    nitro: 59.77
+    average: 144.71
+statMin:
+    speed: 360.0
+    acceleration: 73.0
+    handling: 50.17
+    nitro: 43.41
+    average: 131.65
+upgrade:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    common: 6
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '30'
+    star2: 35
+    star3: 40
+    star4: 45
+    star5: 55
+    star6: 0
+    total: 205
+settingBrand:
+    name: 'Lego Technic'
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 12
+    common: 24
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

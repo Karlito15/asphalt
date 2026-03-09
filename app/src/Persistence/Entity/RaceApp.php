@@ -35,43 +35,44 @@ class RaceApp
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
-    #[Groups(['index', 'race'])]
+    #[Groups(['index'])]
     protected ?int $raceOrder = null;
 
     #[ORM\Column(nullable: false, options: ['default' => false])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
-    #[Groups(['index', 'race'])]
+    #[Groups(['index'])]
     protected bool $finished = false;
 
     #[ORM\Column(length: 255, unique: true, nullable: false)]
     #[Assert\Length(min: 1, max: 255)]
     #[Assert\NotBlank]
     #[Assert\NotNull]
+    #[Groups(['index'])]
     protected string $slug;
 
     #[ORM\ManyToOne(fetch: 'EAGER', inversedBy: 'race')]
     #[ORM\JoinColumn(name: "mode_id", referencedColumnName: "id", unique: false, nullable: false)]
     #[Assert\Type(RaceMode::class)]
-    #[Groups(['race'])]
+    #[Groups(['index'])]
     protected RaceMode $mode;
 
     #[ORM\ManyToOne(fetch: 'EAGER', inversedBy: 'race')]
     #[ORM\JoinColumn(name: "season_id", referencedColumnName: "id", unique: false, nullable: false)]
     #[Assert\Type(RaceSeason::class)]
-    #[Groups(['race'])]
+    #[Groups(['index'])]
     protected RaceSeason $season;
 
     #[ORM\ManyToOne(fetch: 'EAGER', inversedBy: 'race')]
     #[ORM\JoinColumn(name: "time_id", referencedColumnName: "id", unique: false, nullable: false)]
     #[Assert\Type(RaceTime::class)]
-    #[Groups(['race'])]
+    #[Groups(['index'])]
     protected RaceTime $time;
 
     #[ORM\ManyToOne(fetch: 'EAGER', inversedBy: 'race')]
     #[ORM\JoinColumn(name: "track_id", referencedColumnName: "id", unique: false, nullable: false)]
     #[Assert\Type(RaceTrack::class)]
-    #[Groups(['race'])]
+    #[Groups(['index'])]
     protected RaceTrack $track;
 
     public function getRaceOrder(): ?int

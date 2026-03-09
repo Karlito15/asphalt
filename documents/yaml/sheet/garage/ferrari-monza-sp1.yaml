@@ -1,0 +1,96 @@
+id: 177
+stars: 4
+gameUpdate: 26
+carOrder: 26
+statOrder: 50
+level: 11
+epic: 4
+model: 'Monza SP1'
+slug: ferrari-monza-sp1
+blueprint:
+    star1: '50'
+    star2: 29
+    star3: 38
+    star4: 48
+    star5: 0
+    star6: 0
+    total: 165
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 9
+    handling: 1
+    nitro: 2
+    mark: 5
+    division: 9
+rank:
+    star0: 1921
+    star1: 2225
+    star2: 2626
+    star3: 3014
+    star4: 3334
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 271.0
+    acceleration: 78.14
+    handling: 83.14
+    nitro: 72.33
+    average: 126.15
+statMin:
+    speed: 300.0
+    acceleration: 73.9
+    handling: 44.86
+    nitro: 51.55
+    average: 117.58
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 24
+    rare: 12
+    epic: 4
+settingBlueprint:
+    star1: '50'
+    star2: 29
+    star3: 38
+    star4: 48
+    star5: 0
+    star6: 0
+    total: 165
+settingBrand:
+    name: Ferrari
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 11
+    common: 24
+    rare: 12
+    epic: 4
+settingUnitPrice:
+    level01: 5060
+    level02: 8300
+    level03: 13200
+    level04: 19800
+    level05: 28600
+    level06: 40000
+    level07: 56000
+    level08: 78500
+    level09: 110000
+    level10: 154000
+    level11: 215000
+    level12: null
+    level13: null
+    common: 30000
+    rare: 60000
+    epic: 180000

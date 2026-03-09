@@ -9,8 +9,16 @@ use App\Persistence\Entity\GarageApp;
 final readonly class BrandEvent
 {
     public function __construct(
-        public GarageApp $garage
+        private GarageApp $garage
     ) {}
+
+    /**
+     * @return GarageApp
+     */
+    public function getGarage(): GarageApp
+    {
+        return $this->garage;
+    }
 
     /**
      * Retourne la Marque de la Voiture

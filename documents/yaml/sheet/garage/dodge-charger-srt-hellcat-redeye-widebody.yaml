@@ -1,0 +1,96 @@
+id: 307
+stars: 5
+gameUpdate: 46
+carOrder: 57
+statOrder: 99
+level: 6
+epic: 0
+model: 'Charger SRT Hellcat Redeye Widebody'
+slug: dodge-charger-srt-hellcat-redeye-widebody
+blueprint:
+    star1: '20'
+    star2: 25
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 45
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 3
+    nitro: 3
+    mark: 4
+    division: 9
+rank:
+    star0: 2037
+    star1: 2226
+    star2: 2495
+    star3: 0
+    star4: 0
+    star5: 3518
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 342.6
+    acceleration: 76.31
+    handling: 51.13
+    nitro: 58.64
+    average: 132.17
+statMin:
+    speed: 327.0
+    acceleration: 64.9
+    handling: 39.54
+    nitro: 34.68
+    average: 116.53
+upgrade:
+    speed: 6
+    acceleration: 6
+    handling: 6
+    nitro: 6
+    common: 18
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '20'
+    star2: 25
+    star3: 30
+    star4: 35
+    star5: 40
+    star6: 0
+    total: 150
+settingBrand:
+    name: Dodge
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 7130
+    level02: 11600
+    level03: 18600
+    level04: 27900
+    level05: 40300
+    level06: 56500
+    level07: 79000
+    level08: 110500
+    level09: 155000
+    level10: 216500
+    level11: 303000
+    level12: 425000
+    level13: null
+    common: 40000
+    rare: 80000
+    epic: 240000

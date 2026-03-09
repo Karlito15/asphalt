@@ -1,0 +1,96 @@
+id: 269
+stars: 6
+gameUpdate: 40
+carOrder: 32
+statOrder: 48
+level: 13
+epic: 7
+model: Sabre
+slug: mclaren-sabre
+blueprint:
+    star1: '70'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 59
+    total: 267
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 1
+    handling: 2
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 2629
+    star1: 2831
+    star2: 3074
+    star3: 3296
+    star4: 3595
+    star5: 3893
+    star6: 4173
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 363.1
+    acceleration: 87.04
+    handling: 68.06
+    nitro: 58.45
+    average: 144.16
+statMin:
+    speed: 351.0
+    acceleration: 76.6
+    handling: 49.26
+    nitro: 40.57
+    average: 129.36
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 24
+    rare: 20
+    epic: 6
+settingBlueprint:
+    star1: '70'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 59
+    total: 267
+settingBrand:
+    name: McLaren
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

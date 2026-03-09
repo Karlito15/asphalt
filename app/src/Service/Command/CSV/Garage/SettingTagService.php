@@ -59,7 +59,7 @@ class SettingTagService implements CSVInterface
      */
     public function createEntity(array $datas): GarageApp
     {
-        return $this->findGarage($datas['Brand'], $datas['Model']);
+        return $this->findGarage($datas);
     }
 
     /**

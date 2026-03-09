@@ -1,0 +1,96 @@
+id: 198
+stars: 5
+gameUpdate: 29
+carOrder: 54
+statOrder: 14
+level: 12
+epic: 8
+model: 'AMG GT Black Series'
+slug: mercedes-benz-amg-gt-black-series
+blueprint:
+    star1: Key
+    star2: 25
+    star3: 32
+    star4: 36
+    star5: 41
+    star6: 0
+    total: 134
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 3
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2347
+    star1: 2565
+    star2: 2867
+    star3: 3143
+    star4: 3481
+    star5: 4048
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 335.7
+    acceleration: 81.79
+    handling: 60.83
+    nitro: 65.62
+    average: 135.99
+statMin:
+    speed: 325.0
+    acceleration: 72.2
+    handling: 43.0
+    nitro: 50.97
+    average: 122.79
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 36
+    rare: 16
+    epic: 8
+settingBlueprint:
+    star1: Key
+    star2: 25
+    star3: 32
+    star4: 36
+    star5: 41
+    star6: 0
+    total: 134
+settingBrand:
+    name: Mercedes-Benz
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 12
+    common: 36
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 7130
+    level02: 11600
+    level03: 18600
+    level04: 27900
+    level05: 40300
+    level06: 56500
+    level07: 79000
+    level08: 110500
+    level09: 155000
+    level10: 216500
+    level11: 303000
+    level12: 425000
+    level13: null
+    common: 40000
+    rare: 80000
+    epic: 240000

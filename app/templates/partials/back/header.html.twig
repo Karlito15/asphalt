@@ -8,17 +8,17 @@
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="{{ path('admin.dashboard.index') }}" class="nav-link active" aria-current="page">{{ 'text.dashboard'|trans }}</a></li>
             <li class="nav-item"><a href="{{ path('admin.dashboard.cache') }}" class="nav-link">{{ 'text.cache'|trans }}</a></li>
-            <li class="nav-item"><a href="{{ path('admin.inventory.index') }}" class="nav-link">{{ 'text.inventory'|trans }}</a></li>
+            <li class="nav-item"><a href="{{ path('admin.inventory.app.index') }}" class="nav-link">{{ 'text.inventory'|trans }}</a></li>
             <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">{{ 'text.mission'|trans }}</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ path('admin.mission.index') }}">{{ 'text.mission'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.mission.app.index') }}">{{ 'text.mission'|trans }}</a></li>
                     <li><a class="dropdown-item" href="{{ path('admin.mission.task.index') }}">{{ 'text.task'|trans }}</a></li>
                     <li><a class="dropdown-item" href="{{ path('admin.mission.type.index') }}">{{ 'text.type'|trans }}</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">{{ 'text.race'|trans }}</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ path('admin.race.index') }}">{{ 'text.race'|trans }}</a></li>
+                    <li><a class="dropdown-item" href="{{ path('admin.race.app.index') }}">{{ 'text.race'|trans }}</a></li>
                     <li><a class="dropdown-item" href="{{ path('admin.race.mode.index') }}">{{ 'text.mode'|trans }}</a></li>
                     <li><a class="dropdown-item" href="{{ path('admin.race.region.index') }}">{{ 'text.region'|trans }}</a></li>
                     <li><a class="dropdown-item" href="{{ path('admin.race.season.index') }}">{{ 'text.season'|trans }}</a></li>
@@ -37,6 +37,7 @@
                 </ul>
             </li>
             <li class="nav-item"><a href="{{ path('app.dashboard.index') }}" class="nav-link">{{ 'text.front-office'|trans }}</a></li>
+            <li class="nav-item"><a href="{{ path('admin') }}" class="nav-link">{{ 'text.easy-admin'|trans }}</a></li>
         </ul>
     </header>
 </div>

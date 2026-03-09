@@ -1,0 +1,96 @@
+id: 200
+stars: 6
+gameUpdate: 29
+carOrder: 38
+statOrder: 31
+level: 8
+epic: 5
+model: 'Super Sport'
+slug: torino-design-super-sport
+blueprint:
+    star1: '0'
+    star2: 40
+    star3: 45
+    star4: 9
+    star5: 0
+    star6: 0
+    total: 94
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 3
+    handling: 2
+    nitro: 1
+    mark: 1
+    division: 9
+rank:
+    star0: 3565
+    star1: 3719
+    star2: 3895
+    star3: 4086
+    star4: 4287
+    star5: 4520
+    star6: 4741
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 405.3
+    acceleration: 82.28
+    handling: 62.3
+    nitro: 75.81
+    average: 156.42
+statMin:
+    speed: 389.0
+    acceleration: 76.6
+    handling: 51.46
+    nitro: 63.57
+    average: 145.16
+upgrade:
+    speed: 8
+    acceleration: 8
+    handling: 8
+    nitro: 8
+    common: 24
+    rare: 8
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 70
+    star6: 85
+    total: 300
+settingBrand:
+    name: 'Torino Design'
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

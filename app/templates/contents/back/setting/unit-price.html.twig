@@ -1,0 +1,66 @@
+{% block table %}
+
+    <tbody>
+    {% for item in entities %}
+        <tr>
+            <td class="{{ classes.td }}">{{ item.id }}</td>
+            <td class="{{ classes.td }} text-end">{{ item.level01 }}</td>
+            <td class="{{ classes.td }} text-end">{{ item.level02 }}</td>
+            <td class="{{ classes.td }} text-end">{{ item.level03 }}</td>
+            <td class="{{ classes.td }} d-none">{{ item.level04 }}</td>
+            <td class="{{ classes.td }} d-none">{{ item.level05 }}</td>
+            <td class="{{ classes.td }} d-none">{{ item.level06 }}</td>
+            <td class="{{ classes.td }} d-none">{{ item.level07 }}</td>
+            <td class="{{ classes.td }} d-none">{{ item.level08 }}</td>
+            <td class="{{ classes.td }} d-none">{{ item.level09 }}</td>
+            <td class="{{ classes.td }} d-none">{{ item.level10 }}</td>
+            <td class="{{ classes.td }} text-end">{{ item.level11 }}</td>
+            <td class="{{ classes.td }} text-end">{{ item.level12 }}</td>
+            <td class="{{ classes.td }} text-end">{{ item.level13 }}</td>
+            <td class="{{ classes.td }} text-end">{{ item.common }}</td>
+            <td class="{{ classes.td }} text-end">{{ item.rare }}</td>
+            <td class="{{ classes.td }} text-end">{{ item.epic }}</td>
+            <td class="{{ classes.td }} text-end">{{ item.slug|u.truncate(10, '...') }}</td>
+            <twig:TableDate entity="{{ item }}" />
+            <twig:TableAction id="{{ item.id }}" link="{{ 'admin.setting.unit-price.update' }}" />
+        </tr>
+    {% else %}
+        <twig:TableEmpty value="21" />
+    {% endfor %}
+    </tbody>
+
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr>
+        <th>{{ 'text.id'|trans }}</th>
+        <th class="text-end">{{ 'text.level01'|trans }}</th>
+        <th class="text-end">{{ 'text.level02'|trans }}</th>
+        <th class="text-end">{{ 'text.level03'|trans }}</th>
+        <th class="d-none">{{ 'text.level04'|trans }}</th>
+        <th class="d-none">{{ 'text.level05'|trans }}</th>
+        <th class="d-none">{{ 'text.level06'|trans }}</th>
+        <th class="d-none">{{ 'text.level07'|trans }}</th>
+        <th class="d-none">{{ 'text.level08'|trans }}</th>
+        <th class="d-none">{{ 'text.level09'|trans }}</th>
+        <th class="d-none">{{ 'text.level10'|trans }}</th>
+        <th class="text-end">{{ 'text.level11'|trans }}</th>
+        <th class="text-end">{{ 'text.level12'|trans }}</th>
+        <th class="text-end">{{ 'text.level13'|trans }}</th>
+        <th class="text-end">{{ 'text.common'|trans }}</th>
+        <th class="text-end">{{ 'text.rare'|trans }}</th>
+        <th class="text-end">{{ 'text.epic'|trans }}</th>
+        <th class="text-end">{{ 'text.slug'|trans }}</th>
+        <th class="text-end">{{ 'text.date.created.at'|trans }}</th>
+        <th class="text-end">{{ 'text.date.updated.at'|trans }}</th>
+        <th class="text-end">{{ 'text.action'|trans }}</th>
+    </tr>
+{% endmacro %}
+
+{% extends '@App/contents/back/list.html.twig' %}

@@ -59,8 +59,7 @@ class GarageBlueprintService implements CSVInterface
      */
     public function createEntity(array $datas): GarageBlueprint
     {
-        $garage = $this->findGarage($datas['Brand'], $datas['Model']);
-
+        $garage = $this->findGarage($datas);
         $entity = new GarageBlueprint();
         $entity->setStar1($datas['Star1']);
         $entity->setStar2($this->convertStringToInteger($datas['Star2']));

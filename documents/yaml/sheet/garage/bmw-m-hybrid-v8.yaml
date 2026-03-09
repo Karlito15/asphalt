@@ -1,0 +1,96 @@
+id: 302
+stars: 5
+gameUpdate: 45
+carOrder: 46
+statOrder: 29
+level: 6
+epic: 6
+model: 'M Hybrid V8'
+slug: bmw-m-hybrid-v8
+blueprint:
+    star1: Key
+    star2: 35
+    star3: 19
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 54
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 0
+    star1: 0
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 355.8
+    acceleration: 81.4
+    handling: 67.1
+    nitro: 69.84
+    average: 143.54
+statMin:
+    speed: 335.0
+    acceleration: 75.7
+    handling: 45.41
+    nitro: 47.14
+    average: 125.81
+upgrade:
+    speed: 6
+    acceleration: 6
+    handling: 6
+    nitro: 6
+    common: 20
+    rare: 2
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 35
+    star3: 40
+    star4: 50
+    star5: 55
+    star6: 0
+    total: 180
+settingBrand:
+    name: BMW
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 7820
+    level02: 12800
+    level03: 20400
+    level04: 30600
+    level05: 44200
+    level06: 62000
+    level07: 86500
+    level08: 121500
+    level09: 170000
+    level10: 237500
+    level11: 333000
+    level12: 466000
+    level13: null
+    common: 50000
+    rare: 100000
+    epic: 300000

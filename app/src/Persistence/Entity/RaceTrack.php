@@ -39,13 +39,13 @@ class RaceTrack
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index', 'race'])]
+    #[Groups(['index'])]
     protected string $nameEnglish;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique:false, nullable:true)]
     #[Assert\Length(max: 64)]
     #[Assert\Type(type: ['null', 'string'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index', 'race'])]
+    #[Groups(['index'])]
     protected ?string $nameFrench = null;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique:true, nullable:false)]
@@ -55,12 +55,11 @@ class RaceTrack
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['nameEnglish'], separator: '-')]
-    #[Groups(['index'])]
     protected string $slug;
 
     #[ORM\ManyToOne(targetEntity: RaceRegion::class, cascade: ['persist'], inversedBy: 'track')]
     #[Assert\Type(RaceRegion::class)]
-    #[Groups(['race'])]
+    #[Groups(['index'])]
     protected ?RaceRegion $region = null;
 
     #[ORM\OneToMany(targetEntity: RaceApp::class, mappedBy: 'track', orphanRemoval: true)]

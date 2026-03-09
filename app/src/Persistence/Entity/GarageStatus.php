@@ -7,6 +7,7 @@ namespace App\Persistence\Entity;
 use App\Persistence\Repository\GarageStatusRepository;
 use App\Toolbox\Trait\Entity\GarageEntity;
 use App\Toolbox\Trait\Entity\IdEntity;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
@@ -29,56 +30,34 @@ class GarageStatus
     use SoftDeleteableEntity;
     use IdEntity, GarageEntity;
 
-    #[ORM\Column(nullable: false, options: ['default' => false])]
+    #[ORM\Column(type: Types::BOOLEAN, nullable: false, options: ['default' => false])]
     #[Assert\Type(type: ['boolean'])]
-    #[Groups(['status'])]
-    protected bool $evo = false;
-
-    #[ORM\Column(nullable: false, options: ['default' => false])]
-    #[Assert\Type(type: ['boolean'])]
-    #[Groups(['garage', 'status'])]
+    #[Groups(['index', 'sheet'])]
     protected bool $unblock = false;
 
-    #[ORM\Column(nullable: false, options: ['default' => false])]
+    #[ORM\Column(type: Types::BOOLEAN, nullable: false, options: ['default' => false])]
     #[Assert\Type(type: ['boolean'])]
-    #[Groups(['garage', 'status'])]
+    #[Groups(['index', 'sheet'])]
     protected bool $gold = false;
 
-    #[ORM\Column(nullable: false, options: ['default' => false])]
+    #[ORM\Column(type: Types::BOOLEAN, nullable: false, options: ['default' => false])]
     #[Assert\Type(type: ['boolean'])]
-    #[Groups(['status'])]
-    protected bool $toUnblock = false;
+    #[Groups(['sheet'])]
+    protected bool $evo = false;
 
-    #[ORM\Column(nullable: false, options: ['default' => false])]
+    #[ORM\Column(type: Types::BOOLEAN, nullable: false, options: ['default' => false])]
     #[Assert\Type(type: ['boolean'])]
-    #[Groups(['status'])]
-    protected bool $toGold = false;
+    #[Groups(['sheet'])]
+    protected bool $eventClass = false;
 
-    #[ORM\Column(nullable: false, options: ['default' => false])]
+    #[ORM\Column(type: Types::BOOLEAN, nullable: false, options: ['default' => false])]
     #[Assert\Type(type: ['boolean'])]
-    #[Groups(['status'])]
-    protected bool $fullUpgradeLevel = false;
+    #[Groups(['sheet'])]
+    protected bool $toUpgrade = false;
 
-    #[ORM\Column(nullable: false, options: ['default' => false])]
-    #[Assert\Type(type: ['boolean'])]
-    #[Groups(['status'])]
-    protected bool $toUpgradeLevel = false;
-
-    #[ORM\OneToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'status')]
+    #[ORM\OneToOne(targetEntity: GarageApp::class, inversedBy: 'status', cascade: ['persist'])]
     #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
     protected GarageApp $garage;
-
-    public function isEvo(): ?bool
-    {
-        return $this->evo;
-    }
-
-    public function setEvo(bool $evo): static
-    {
-        $this->evo = $evo;
-
-        return $this;
-    }
 
     public function isUnblock(): ?bool
     {
@@ -104,50 +83,38 @@ class GarageStatus
         return $this;
     }
 
-    public function isToUnblock(): ?bool
+    public function isEvo(): ?bool
     {
-        return $this->toUnblock;
+        return $this->evo;
     }
 
-    public function setToUnblock(bool $toUnblock): static
+    public function setEvo(bool $evo): static
     {
-        $this->toUnblock = $toUnblock;
+        $this->evo = $evo;
 
         return $this;
     }
 
-    public function isToGold(): ?bool
+    public function isEventClass(): ?bool
     {
-        return $this->toGold;
+        return $this->eventClass;
     }
 
-    public function setToGold(bool $toGold): static
+    public function setEventClass(bool $eventClass): static
     {
-        $this->toGold = $toGold;
+        $this->eventClass = $eventClass;
 
         return $this;
     }
 
-    public function isFullUpgradeLevel(): ?bool
+    public function isToUpgrade(): ?bool
     {
-        return $this->fullUpgradeLevel;
+        return $this->toUpgrade;
     }
 
-    public function setFullUpgradeLevel(bool $fullUpgradeLevel): static
+    public function setToUpgrade(bool $toUpgrade): static
     {
-        $this->fullUpgradeLevel = $fullUpgradeLevel;
-
-        return $this;
-    }
-
-    public function isToUpgradeLevel(): ?bool
-    {
-        return $this->toUpgradeLevel;
-    }
-
-    public function setToUpgradeLevel(bool $toUpgradeLevel): static
-    {
-        $this->toUpgradeLevel = $toUpgradeLevel;
+        $this->toUpgrade = $toUpgrade;
 
         return $this;
     }

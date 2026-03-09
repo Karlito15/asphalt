@@ -1,0 +1,96 @@
+id: 227
+stars: 6
+gameUpdate: 34
+carOrder: 71
+statOrder: 1
+level: 10
+epic: 0
+model: Sixteen
+slug: devel-sixteen
+blueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 15
+    star6: 0
+    total: 160
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 1
+    handling: 3
+    nitro: 9
+    mark: 3
+    division: 9
+rank:
+    star0: 4071
+    star1: 4225
+    star2: 4407
+    star3: 4599
+    star4: 4800
+    star5: 5038
+    star6: 5255
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 567.0
+    acceleration: 86.8
+    handling: 57.32
+    nitro: 37.84
+    average: 187.24
+statMin:
+    speed: 556.2
+    acceleration: 83.8
+    handling: 45.52
+    nitro: 28.39
+    average: 178.48
+upgrade:
+    speed: 10
+    acceleration: 10
+    handling: 10
+    nitro: 10
+    common: 26
+    rare: 10
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 70
+    star6: 85
+    total: 300
+settingBrand:
+    name: Devel
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

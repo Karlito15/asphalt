@@ -1,0 +1,96 @@
+id: 164
+stars: 4
+gameUpdate: 24
+carOrder: 19
+statOrder: 46
+level: 11
+epic: 3
+model: 'AF8 Falcon Édition'
+slug: arash-af8-falcon-edition
+blueprint:
+    star1: Key
+    star2: 35
+    star3: 55
+    star4: 85
+    star5: 0
+    star6: 0
+    total: 175
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 2
+    nitro: 1
+    mark: 3
+    division: 9
+rank:
+    star0: 2037
+    star1: 2265
+    star2: 2620
+    star3: 2970
+    star4: 3289
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 332.6
+    acceleration: 76.74
+    handling: 66.01
+    nitro: 76.94
+    average: 138.07
+statMin:
+    speed: 321.0
+    acceleration: 70.03
+    handling: 53.41
+    nitro: 62.99
+    average: 126.86
+upgrade:
+    speed: 0
+    acceleration: 0
+    handling: 0
+    nitro: 0
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 35
+    star3: 55
+    star4: 85
+    star5: 0
+    star6: 0
+    total: 175
+settingBrand:
+    name: Arash
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 11
+    common: 24
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 5750
+    level02: 9400
+    level03: 15000
+    level04: 22500
+    level05: 32500
+    level06: 45500
+    level07: 63500
+    level08: 89000
+    level09: 125000
+    level10: 175000
+    level11: 245000
+    level12: null
+    level13: null
+    common: 40000
+    rare: 80000
+    epic: 240000

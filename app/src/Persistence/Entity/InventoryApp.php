@@ -37,35 +37,37 @@ class InventoryApp
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Length(min: 3, max: 16)]
-    #[Groups(['index'])]
+    #[Groups(['api'])]
     protected string $category;
 
     #[ORM\Column(type: Types::STRING, length: 32, nullable: false)]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Length(min: 3, max: 32)]
-    #[Groups(['index'])]
+    #[Groups(['api'])]
     protected string $label;
 
     #[ORM\Column(nullable: false, options: ["default" => 0, 'unsigned' => true])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
-    #[Groups(['index'])]
+    #[Groups(['api'])]
     protected int $value = 0;
 
     #[ORM\Column(type: Types::STRING, length: 32, nullable: false, options: ["default" => '---'])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Length(min: 1, max: 32)]
-    #[Groups(['index'])]
+    #[Groups(['api'])]
     protected string $filter = '---';
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true)]
-    #[Groups(['index'])]
+    #[Groups(['api'])]
     protected ?int $position = null;
 
     #[ORM\Column]
+    #[Assert\Type(type: ['boolean'])]
+    #[Groups(['api'])]
     protected ?bool $active = null;
 
     #[ORM\Column(type: Types::STRING, length: 128, unique: true, nullable: true)]
@@ -75,7 +77,7 @@ class InventoryApp
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['label', 'filter'], separator: '-')]
-    #[Groups(['index'])]
+    #[Groups(['api'])]
     protected ?string $slug = null;
 
     public function getCategory(): ?string

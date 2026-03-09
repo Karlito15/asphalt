@@ -76,7 +76,7 @@ class AppService implements CSVInterface
         }
         $entity = new RaceApp();
         $entity
-            ->setRaceOrder((int) $datas['RaceOrder'])
+            ->setRaceOrder($this->convertStringToInteger($datas['RaceOrder']))
             ->setFinished(true)
             ->setMode($mode)
             ->setSeason($season)

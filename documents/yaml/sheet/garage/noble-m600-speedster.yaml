@@ -1,0 +1,96 @@
+id: 218
+stars: 6
+gameUpdate: 32
+carOrder: 51
+statOrder: 44
+level: 13
+epic: 1
+model: 'M600 Speedster'
+slug: noble-m600-speedster
+blueprint:
+    star1: '70'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 59
+    total: 267
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 3
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 3154
+    star1: 3328
+    star2: 3535
+    star3: 3723
+    star4: 3975
+    star5: 4224
+    star6: 4464
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 375.7
+    acceleration: 81.3
+    handling: 58.47
+    nitro: 61.71
+    average: 144.3
+statMin:
+    speed: 361.0
+    acceleration: 73.0
+    handling: 62.0
+    nitro: 30.98
+    average: 131.75
+upgrade:
+    speed: 6
+    acceleration: 6
+    handling: 6
+    nitro: 6
+    common: 12
+    rare: 4
+    epic: 0
+settingBlueprint:
+    star1: '70'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 59
+    total: 267
+settingBrand:
+    name: Noble
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

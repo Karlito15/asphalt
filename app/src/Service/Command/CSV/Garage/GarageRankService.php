@@ -59,15 +59,15 @@ class GarageRankService implements CSVInterface
      */
     public function createEntity(array $datas): GarageRank
     {
-        $garage = $this->findGarage($datas['Brand'], $datas['Model']);
+        $garage = $this->findGarage($datas);
         $entity = new GarageRank();
-        $entity->setStar0((int) $datas['Star0']);
-        $entity->setStar1((int) $datas['Star1']);
-        $entity->setStar2((int) $datas['Star2']);
-        $entity->setStar3((int) $datas['Star3']);
-        $entity->setStar4((int) $datas['Star4']);
-        $entity->setStar5((int) $datas['Star5']);
-        $entity->setStar6((int) $datas['Star6']);
+        $entity->setStar0($this->convertStringToInteger($datas['Star0']));
+        $entity->setStar1($this->convertStringToInteger($datas['Star1']));
+        $entity->setStar2($this->convertStringToInteger($datas['Star2']));
+        $entity->setStar3($this->convertStringToInteger($datas['Star3']));
+        $entity->setStar4($this->convertStringToInteger($datas['Star4']));
+        $entity->setStar5($this->convertStringToInteger($datas['Star5']));
+        $entity->setStar6($this->convertStringToInteger($datas['Star6']));
         $entity->setGarage($garage);
 
         return $entity;

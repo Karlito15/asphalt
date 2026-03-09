@@ -95,7 +95,7 @@ class SettingBlueprintService implements CSVInterface
     public function createEntity(array $datas): GarageApp
     {
         $blueprint = $this->entityManager->getRepository(SettingBlueprint::class)->findOneBy(['slug' => $datas['SettingBlueprint']]);
-        $garage    = $this->findGarage($datas['Brand'], $datas['Model']);
+        $garage    = $this->findGarage($datas);
         $garage->setSettingBlueprint($blueprint);
 
         return $garage;

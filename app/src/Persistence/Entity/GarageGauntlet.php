@@ -13,6 +13,7 @@ use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
+use Symfony\Component\Serializer\Attribute\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: GarageGauntletRepository::class)]
@@ -33,34 +34,40 @@ class GarageGauntlet
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
+    #[Groups(['index', 'sheet'])]
     protected ?int $speed = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
+    #[Groups(['index', 'sheet'])]
     protected ?int $acceleration = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
+    #[Groups(['index', 'sheet'])]
     protected ?int $handling = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
+    #[Groups(['index', 'sheet'])]
     protected ?int $nitro = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
+    #[Groups(['index', 'sheet'])]
     protected ?int $mark = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true, options: ['default' => 9, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 9)]
+    #[Groups(['index', 'sheet'])]
     protected ?int $division = null;
 
-    #[ORM\OneToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'gauntlet')]
+    #[ORM\OneToOne(targetEntity: GarageApp::class, inversedBy: 'gauntlet', cascade: ['persist'])]
     #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
     protected GarageApp $garage;
 
@@ -135,71 +142,86 @@ class GarageGauntlet
 
         return $this;
     }
+
     #[ORM\PrePersist]
     public function prePersist(LifecycleEventArgs $args): void
     {
-        $object = $args->getObject();
-        if ($object instanceof GarageGauntlet) {
-            // Set Mark
-            $speed        = $object->getGarage()->getStatMax()->getValues()['speed'];
-            $acceleration = $object->getGarage()->getStatMax()->getValues()['acceleration'];
-            $handling     = $object->getGarage()->getStatMax()->getValues()['handling'];
-            $nitro        = $object->getGarage()->getStatMax()->getValues()['nitro'];
-        }
+        $this->updateEntity($args);
     }
 
     #[ORM\PostUpdate]
     public function postUpdate(LifecycleEventArgs $args): void
     {
-        $object = $args->getObject();
-        if ($object instanceof GarageGauntlet) {
-            // Set Mark
-        }
+        $this->updateEntity($args);
     }
 
-    protected function calculateSpeed(float $value): int
+    private function updateEntity(LifecycleEventArgs $args): void
+    {
+        $object           = $args->getObject();
+        // Get Stat
+        $speed            = $object->getGarage()->getStatMax()->getSpeed();
+        $acceleration     = $object->getGarage()->getStatMax()->getAcceleration();
+        $handling         = $object->getGarage()->getStatMax()->getHandling();
+        $nitro            = $object->getGarage()->getStatMax()->getNitro();
+
+        // Calculate Mark
+        $speedMark        = $this->calculateSpeed($speed);
+        $accelerationMark = $this->calculateAcceleration($acceleration);
+        $handlingMark     = $this->calculateHandling($handling);
+        $nitroMark        = $this->calculateNitro($nitro);
+        $mark             = $this->calculateAverage($speedMark, $accelerationMark, $handlingMark, $nitroMark);
+
+        // Entity
+        $object->setSpeed($speedMark);
+        $object->setAcceleration($accelerationMark);
+        $object->setHandling($handlingMark);
+        $object->setNitro($nitroMark);
+        $object->setMark((int) $mark);
+    }
+
+    private function calculateSpeed(float $value): int
     {
         return match (true) {
-            $value <= 300 => 9,
-            (300 > $value AND $value <= 350) => 3,
-            (350 > $value AND $value <= 400) => 2,
-            $value > 400 => 1,
+            ($value <= 300) => 9,
+            ($value <= 350) => 3,
+            ($value <= 400) => 2,
+            ($value > 400)  => 1,
         };
     }
 
-    protected function calculateAcceleration(float $value): int
+    private function calculateAcceleration(float $value): int
     {
         return match (true) {
-            $value <= 80 => 9,
-            (80 > $value AND $value <= 83) => 3,
-            (83 > $value AND $value <= 86) => 2,
-            $value > 86 => 1,
+            ($value <= 80) => 9,
+            ($value <= 83) => 3,
+            ($value <= 86) => 2,
+            ($value > 86)  => 1,
         };
     }
 
-    protected function calculateHandling(float $value): int
+    private function calculateHandling(float $value): int
     {
         return match (true) {
-            $value <= 40 => 9,
-            (40 > $value AND $value <= 60) => 3,
-            (60 > $value AND $value <= 80) => 2,
-            $value > 80 => 1,
+            ($value <= 40) => 9,
+            ($value <= 60) => 3,
+            ($value <= 80) => 2,
+            ($value > 80)  => 1,
         };
     }
 
-    protected function calculateNitro(float $value): int
+    private function calculateNitro(float $value): int
     {
         return match (true) {
-            $value <= 45 => 9,
-            (45 > $value AND $value <= 60) => 3,
-            (60 > $value AND $value <= 75) => 2,
-            $value > 75 => 1,
+            ($value <= 45) => 9,
+            ($value <= 60) => 3,
+            ($value <= 75) => 2,
+            ($value > 75)  => 1,
         };
     }
 
-    protected function calculateAverage(int $speed, int $acceleration, int $handling, int $nitro): float
+    private function calculateAverage(int $speed, int $acceleration, int $handling, int $nitro): float
     {
-        $average = ($speed + $acceleration + $handling + $nitro / 4);
+        $average = (($speed + $acceleration + $handling + $nitro) / 4);
 
         return floor($average);
     }

@@ -1,0 +1,96 @@
+id: 38
+stars: 3
+gameUpdate: 0
+carOrder: 5
+statOrder: 29
+level: 10
+epic: 0
+model: '37OZ Nismo'
+slug: nissan-37oz-nismo
+blueprint:
+    star1: '10'
+    star2: 20
+    star3: 30
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 60
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 9
+    handling: 1
+    nitro: 2
+    mark: 5
+    division: 9
+rank:
+    star0: 620
+    star1: 991
+    star2: 1337
+    star3: 1662
+    star4: 0
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 268.5
+    acceleration: 66.61
+    handling: 81.83
+    nitro: 67.07
+    average: 121.0
+statMin:
+    speed: 250.0
+    acceleration: 53.2
+    handling: 52.37
+    nitro: 41.85
+    average: 99.36
+upgrade:
+    speed: 10
+    acceleration: 10
+    handling: 10
+    nitro: 10
+    common: 20
+    rare: 4
+    epic: 0
+settingBlueprint:
+    star1: '10'
+    star2: 20
+    star3: 30
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 60
+settingBrand:
+    name: Nissan
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 10
+    common: 20
+    rare: 4
+    epic: 0
+settingUnitPrice:
+    level01: 1150
+    level02: 1900
+    level03: 3000
+    level04: 4500
+    level05: 6500
+    level06: 9000
+    level07: 12500
+    level08: 18000
+    level09: 25000
+    level10: 35000
+    level11: null
+    level12: null
+    level13: null
+    common: 10000
+    rare: 20000
+    epic: 0

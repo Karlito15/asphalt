@@ -1,0 +1,96 @@
+id: 143
+stars: 5
+gameUpdate: 21
+carOrder: 10
+statOrder: 47
+level: 12
+epic: 2
+model: 'Zonda HP Barchetta'
+slug: pagani-zonda-hp-barchetta
+blueprint:
+    star1: Key
+    star2: 28
+    star3: 32
+    star4: 44
+    star5: 83
+    star6: 0
+    total: 187
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 9
+    handling: 2
+    nitro: 2
+    mark: 3
+    division: 9
+rank:
+    star0: 2506
+    star1: 2638
+    star2: 2820
+    star3: 3051
+    star4: 3349
+    star5: 3678
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 350.1
+    acceleration: 79.43
+    handling: 73.54
+    nitro: 73.67
+    average: 144.19
+statMin:
+    speed: 338.0
+    acceleration: 73.0
+    handling: 51.67
+    nitro: 59.37
+    average: 130.51
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 24
+    rare: 20
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 28
+    star3: 32
+    star4: 44
+    star5: 83
+    star6: 0
+    total: 187
+settingBrand:
+    name: Pagani
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 12
+    common: 24
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 9550
+    level02: 15600
+    level03: 24900
+    level04: 37400
+    level05: 54000
+    level06: 75500
+    level07: 105000
+    level08: 148000
+    level09: 207500
+    level10: 290000
+    level11: 406000
+    level12: 569000
+    level13: null
+    common: 60000
+    rare: 120000
+    epic: 360000

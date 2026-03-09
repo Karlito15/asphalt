@@ -75,6 +75,7 @@ php bin/console importmap:require bootstrap-table
 ```
 ``` shell
 php bin/console importmap:require fontawesome
+php bin/console importmap:require fortawesome/fontawesome-free
 ```
 ``` shell
 php bin/console importmap:require htmx.org

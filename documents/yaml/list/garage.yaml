@@ -1,0 +1,3190 @@
+-
+    id: 314
+    gameUpdate: 47
+    model: 'LFA Nürburgring Package'
+    slug: lexus-lfa-nurburgring-package
+    evo: { number: 0, id: 316 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 2, mark: 4, division: 9, id: 316 }
+    status: { unblock: true, gold: false, id: 314 }
+    settingBrand: { name: Lexus, carsNumber: 1, slug: lexus, id: 56 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 315
+    gameUpdate: 47
+    model: 'BMW M4 GT3 EVO'
+    slug: lego-technic-bmw-m4-gt3-evo
+    evo: { number: 0, id: 315 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 1, nitro: 2, mark: 2, division: 9, id: 315 }
+    status: { unblock: false, gold: false, id: 315 }
+    settingBrand: { name: 'Lego Technic', carsNumber: 6, slug: lego-technic, id: 55 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 316
+    gameUpdate: 47
+    model: '935 Dragonforce Edition'
+    slug: porsche-935-dragonforce-edition
+    evo: { number: 0, id: 318 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 1, mark: 3, division: 9, id: 318 }
+    status: { unblock: false, gold: false, id: 316 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 317
+    gameUpdate: 47
+    model: Nilu
+    slug: nilu27-nilu
+    evo: { number: 0, id: 317 }
+    gauntlet: { speed: 1, acceleration: 9, handling: 3, nitro: 2, mark: 3, division: 9, id: 317 }
+    status: { unblock: true, gold: false, id: 317 }
+    settingBrand: { name: Nilu27, carsNumber: 0, slug: nilu27, id: 99 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 318
+    gameUpdate: 47
+    model: 'Vulcano Spyder'
+    slug: icona-vulcano-spyder
+    evo: { number: 0, id: 314 }
+    gauntlet: { speed: 1, acceleration: 2, handling: 3, nitro: 3, mark: 2, division: 9, id: 314 }
+    status: { unblock: false, gold: false, id: 318 }
+    settingBrand: { name: Icona, carsNumber: 1, slug: icona, id: 45 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 319
+    gameUpdate: 47
+    model: 'Nevera R'
+    slug: rimac-nevera-r
+    evo: { number: 0, id: 319 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 3, nitro: 9, mark: 3, division: 9, id: 319 }
+    status: { unblock: false, gold: false, id: 319 }
+    settingBrand: { name: Rimac, carsNumber: 4, slug: rimac, id: 79 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 307
+    gameUpdate: 46
+    model: 'Charger SRT Hellcat Redeye Widebody'
+    slug: dodge-charger-srt-hellcat-redeye-widebody
+    evo: { number: 0, id: 307 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 307 }
+    status: { unblock: true, gold: false, id: 307 }
+    settingBrand: { name: Dodge, carsNumber: 5, slug: dodge, id: 28 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 308
+    gameUpdate: 46
+    model: 'C 63 AMG DTM'
+    slug: mercedes-benz-c-63-amg-dtm
+    evo: { number: 0, id: 311 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 311 }
+    status: { unblock: false, gold: false, id: 308 }
+    settingBrand: { name: Mercedes-Benz, carsNumber: 9, slug: mercedes-benz, id: 63 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 309
+    gameUpdate: 46
+    model: '750S Coupé'
+    slug: mclaren-750s-coupe
+    evo: { number: 0, id: 310 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 310 }
+    status: { unblock: true, gold: false, id: 309 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 310
+    gameUpdate: 46
+    model: 'Aurora Agil'
+    slug: zenvo-aurora-agil
+    evo: { number: 0, id: 313 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 313 }
+    status: { unblock: true, gold: false, id: 310 }
+    settingBrand: { name: Zenvo, carsNumber: 4, slug: zenvo, id: 98 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 311
+    gameUpdate: 46
+    model: 'Bugatti Chiron Pur Sport'
+    slug: lego-technic-bugatti-chiron-pur-sport
+    evo: { number: 0, id: 309 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 309 }
+    status: { unblock: true, gold: false, id: 311 }
+    settingBrand: { name: 'Lego Technic', carsNumber: 6, slug: lego-technic, id: 55 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 312
+    gameUpdate: 46
+    model: 'Aeon E'
+    slug: tushek-aeon-e
+    evo: { number: 0, id: 312 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 3, nitro: 9, mark: 3, division: 9, id: 312 }
+    status: { unblock: true, gold: false, id: 312 }
+    settingBrand: { name: Tushek, carsNumber: 2, slug: tushek, id: 89 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 313
+    gameUpdate: 46
+    model: Chimera
+    slug: koenigsegg-chimera
+    evo: { number: 0, id: 308 }
+    gauntlet: { speed: 1, acceleration: 2, handling: 2, nitro: 3, mark: 2, division: 9, id: 308 }
+    status: { unblock: false, gold: false, id: 313 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 300
+    gameUpdate: 45
+    model: Emeya
+    slug: lotus-emeya
+    evo: { number: 0, id: 305 }
+    gauntlet: { speed: 9, acceleration: 3, handling: 2, nitro: 2, mark: 4, division: 9, id: 305 }
+    status: { unblock: false, gold: false, id: 300 }
+    settingBrand: { name: Lotus, carsNumber: 6, slug: lotus, id: 57 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 301
+    gameUpdate: 45
+    model: 'DBS 770 Ultimate'
+    slug: aston-martin-dbs-770-ultimate
+    evo: { number: 0, id: 300 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 9, mark: 5, division: 9, id: 300 }
+    status: { unblock: false, gold: false, id: 301 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 302
+    gameUpdate: 45
+    model: 'M Hybrid V8'
+    slug: bmw-m-hybrid-v8
+    evo: { number: 0, id: 302 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 302 }
+    status: { unblock: true, gold: false, id: 302 }
+    settingBrand: { name: BMW, carsNumber: 6, slug: bmw, id: 15 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 303
+    gameUpdate: 45
+    model: B95
+    slug: automobili-pininfarina-b95
+    evo: { number: 0, id: 301 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 3, mark: 2, division: 9, id: 301 }
+    status: { unblock: true, gold: false, id: 303 }
+    settingBrand: { name: 'Automobili Pininfarina', carsNumber: 3, slug: automobili-pininfarina, id: 13 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 304
+    gameUpdate: 45
+    model: 'Mustang RTR Spec 5-FD'
+    slug: ford-mustang-rtr-spec-5-fd
+    evo: { number: 0, id: 303 }
+    gauntlet: { speed: 1, acceleration: 9, handling: 3, nitro: 2, mark: 3, division: 9, id: 303 }
+    status: { unblock: true, gold: false, id: 304 }
+    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 35 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 305
+    gameUpdate: 45
+    model: Aglaia
+    slug: raesr-aglaia
+    evo: { number: 0, id: 306 }
+    gauntlet: { speed: 1, acceleration: 2, handling: 3, nitro: 3, mark: 2, division: 9, id: 306 }
+    status: { unblock: true, gold: false, id: 305 }
+    settingBrand: { name: Raesr, carsNumber: 3, slug: raesr, id: 76 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 306
+    gameUpdate: 45
+    model: 'One:1'
+    slug: koenigsegg-one-1
+    evo: { number: 0, id: 304 }
+    gauntlet: { speed: 1, acceleration: 2, handling: 3, nitro: 9, mark: 3, division: 9, id: 304 }
+    status: { unblock: true, gold: false, id: 306 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 292
+    gameUpdate: 44
+    model: Imperium
+    slug: arash-imperium
+    evo: { number: 0, id: 292 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 3, nitro: 9, mark: 3, division: 9, id: 292 }
+    status: { unblock: false, gold: false, id: 295 }
+    settingBrand: { name: Arash, carsNumber: 3, slug: arash, id: 6 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 293
+    gameUpdate: 44
+    model: 'DS Survolt'
+    slug: citroen-ds-survolt
+    evo: { number: 0, id: 293 }
+    gauntlet: { speed: 9, acceleration: 3, handling: 1, nitro: 2, mark: 3, division: 9, id: 293 }
+    status: { unblock: true, gold: false, id: 299 }
+    settingBrand: { name: Citroën, carsNumber: 2, slug: citroen, id: 23 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 294
+    gameUpdate: 44
+    model: 'F12 Berlinetta'
+    slug: ferrari-f12-berlinetta
+    evo: { number: 0, id: 294 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 294 }
+    status: { unblock: true, gold: false, id: 296 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 295
+    gameUpdate: 44
+    model: 'Ferrari FXX K'
+    slug: lego-technic-ferrari-fxx-k
+    evo: { number: 0, id: 296 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 295 }
+    status: { unblock: true, gold: false, id: 292 }
+    settingBrand: { name: 'Lego Technic', carsNumber: 6, slug: lego-technic, id: 55 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 296
+    gameUpdate: 44
+    model: 'Lamborghini Revuelto'
+    slug: lego-technic-lamborghini-revuelto
+    evo: { number: 0, id: 295 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 3, mark: 2, division: 9, id: 296 }
+    status: { unblock: true, gold: false, id: 293 }
+    settingBrand: { name: 'Lego Technic', carsNumber: 6, slug: lego-technic, id: 55 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 297
+    gameUpdate: 44
+    model: 'Silver Lightning'
+    slug: mercedes-benz-silver-lightning
+    evo: { number: 0, id: 297 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 3, mark: 2, division: 9, id: 297 }
+    status: { unblock: true, gold: false, id: 294 }
+    settingBrand: { name: Mercedes-Benz, carsNumber: 9, slug: mercedes-benz, id: 63 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 298
+    gameUpdate: 44
+    model: 'Super GT'
+    slug: mosler-super-gt
+    evo: { number: 0, id: 298 }
+    gauntlet: { speed: 1, acceleration: 2, handling: 3, nitro: 9, mark: 3, division: 9, id: 298 }
+    status: { unblock: true, gold: false, id: 298 }
+    settingBrand: { name: Mosler, carsNumber: 1, slug: mosler, id: 65 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 299
+    gameUpdate: 44
+    model: 'Zonda Cinque'
+    slug: pagani-zonda-cinque
+    evo: { number: 0, id: 299 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 299 }
+    status: { unblock: true, gold: false, id: 297 }
+    settingBrand: { name: Pagani, carsNumber: 7, slug: pagani, id: 70 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 286
+    gameUpdate: 43
+    model: 'Ultimate Aero TT'
+    slug: ssc-ultimate-aero-tt
+    evo: { number: 0, id: 290 }
+    gauntlet: { speed: 1, acceleration: 9, handling: 3, nitro: 2, mark: 3, division: 9, id: 290 }
+    status: { unblock: true, gold: false, id: 289 }
+    settingBrand: { name: SSC, carsNumber: 3, slug: ssc, id: 83 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 287
+    gameUpdate: 43
+    model: 'GR Supra Racing Concept'
+    slug: toyota-gr-supra-racing-concept
+    evo: { number: 0, id: 291 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 3, mark: 4, division: 9, id: 291 }
+    status: { unblock: true, gold: false, id: 286 }
+    settingBrand: { name: Toyota, carsNumber: 3, slug: toyota, id: 87 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 288
+    gameUpdate: 43
+    model: 'GEN 3 EVO Championship Edition'
+    slug: formule-e-gen-3-evo-championship-edition
+    evo: { number: 0, id: 286 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 2, nitro: 3, mark: 2, division: 9, id: 286 }
+    status: { unblock: true, gold: false, id: 288 }
+    settingBrand: { name: 'Formule E', carsNumber: 2, slug: formule-e, id: 36 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 289
+    gameUpdate: 43
+    model: 'Aston Martin Valkyrie'
+    slug: lego-technic-aston-martin-valkyrie
+    evo: { number: 0, id: 287 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 3, mark: 2, division: 9, id: 287 }
+    status: { unblock: true, gold: false, id: 291 }
+    settingBrand: { name: 'Lego Technic', carsNumber: 6, slug: lego-technic, id: 55 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 290
+    gameUpdate: 43
+    model: 'Mercedes-AMG ONE'
+    slug: mercedes-benz-mercedes-amg-one
+    evo: { number: 0, id: 288 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 1, mark: 2, division: 9, id: 288 }
+    status: { unblock: true, gold: false, id: 290 }
+    settingBrand: { name: Mercedes-Benz, carsNumber: 9, slug: mercedes-benz, id: 63 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 291
+    gameUpdate: 43
+    model: 'Z GT4'
+    slug: nissan-z-gt4
+    evo: { number: 0, id: 289 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 289 }
+    status: { unblock: true, gold: false, id: 287 }
+    settingBrand: { name: Nissan, carsNumber: 8, slug: nissan, id: 68 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 279
+    gameUpdate: 42
+    model: 'Tuatara Striker'
+    slug: ssc-tuatara-striker
+    evo: { number: 0, id: 283 }
+    gauntlet: { speed: 1, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 283 }
+    status: { unblock: true, gold: false, id: 279 }
+    settingBrand: { name: SSC, carsNumber: 3, slug: ssc, id: 83 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 280
+    gameUpdate: 42
+    model: 'GR Super Sport Concept'
+    slug: toyota-gr-super-sport-concept
+    evo: { number: 0, id: 284 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 3, nitro: 3, mark: 2, division: 9, id: 285 }
+    status: { unblock: false, gold: false, id: 282 }
+    settingBrand: { name: Toyota, carsNumber: 3, slug: toyota, id: 87 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 281
+    gameUpdate: 42
+    model: 'GR Supra 2023'
+    slug: toyota-gr-supra-2023
+    evo: { number: 0, id: 285 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 2, nitro: 3, mark: 5, division: 9, id: 284 }
+    status: { unblock: true, gold: false, id: 283 }
+    settingBrand: { name: Toyota, carsNumber: 3, slug: toyota, id: 87 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 282
+    gameUpdate: 42
+    model: 'GT MK IV'
+    slug: ford-gt-mk-iv
+    evo: { number: 0, id: 279 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 3, mark: 2, division: 9, id: 279 }
+    status: { unblock: true, gold: false, id: 280 }
+    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 35 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 283
+    gameUpdate: 42
+    model: 'Ioniq 5 N'
+    slug: hyundai-ioniq-5-n
+    evo: { number: 0, id: 280 }
+    gauntlet: { speed: 9, acceleration: 2, handling: 2, nitro: 3, mark: 4, division: 9, id: 280 }
+    status: { unblock: true, gold: false, id: 281 }
+    settingBrand: { name: Hyundai, carsNumber: 2, slug: hyundai, id: 44 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 284
+    gameUpdate: 42
+    model: 'N Vision 74 Concept'
+    slug: hyundai-n-vision-74-concept
+    evo: { number: 0, id: 281 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 3, nitro: 9, mark: 5, division: 9, id: 281 }
+    status: { unblock: false, gold: false, id: 285 }
+    settingBrand: { name: Hyundai, carsNumber: 2, slug: hyundai, id: 44 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 285
+    gameUpdate: 42
+    model: 'Electrified Sport Concept'
+    slug: lexus-electrified-sport-concept
+    evo: { number: 0, id: 282 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 3, nitro: 9, mark: 4, division: 9, id: 282 }
+    status: { unblock: true, gold: false, id: 284 }
+    settingBrand: { name: Lexus, carsNumber: 1, slug: lexus, id: 56 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 273
+    gameUpdate: 41
+    model: Bohema
+    slug: praga-bohema
+    evo: { number: 0, id: 278 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 1, nitro: 2, mark: 2, division: 9, id: 278 }
+    status: { unblock: true, gold: false, id: 273 }
+    settingBrand: { name: Praga, carsNumber: 2, slug: praga, id: 74 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 274
+    gameUpdate: 41
+    model: GT65
+    slug: fv-frangivento-gt65
+    evo: { number: 0, id: 273 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 3, mark: 2, division: 9, id: 273 }
+    status: { unblock: true, gold: false, id: 277 }
+    settingBrand: { name: 'FV Frangivento', carsNumber: 3, slug: fv-frangivento, id: 37 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 275
+    gameUpdate: 41
+    model: 'Locus Pléthore LC750'
+    slug: htt-locus-plethore-lc750
+    evo: { number: 0, id: 274 }
+    gauntlet: { speed: 1, acceleration: 9, handling: 2, nitro: 1, mark: 3, division: 9, id: 274 }
+    status: { unblock: true, gold: false, id: 276 }
+    settingBrand: { name: HTT, carsNumber: 1, slug: htt, id: 43 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 276
+    gameUpdate: 41
+    model: EVO37
+    slug: kimera-evo37
+    evo: { number: 0, id: 275 }
+    gauntlet: { speed: 9, acceleration: 3, handling: 2, nitro: 3, mark: 4, division: 9, id: 275 }
+    status: { unblock: false, gold: false, id: 275 }
+    settingBrand: { name: Kimera, carsNumber: 1, slug: kimera, id: 51 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 277
+    gameUpdate: 41
+    model: 'Chevrolet Corvette Stingray'
+    slug: lego-technic-chevrolet-corvette-stingray
+    evo: { number: 0, id: 276 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 1, nitro: 2, mark: 2, division: 9, id: 276 }
+    status: { unblock: true, gold: false, id: 278 }
+    settingBrand: { name: 'Lego Technic', carsNumber: 6, slug: lego-technic, id: 55 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 278
+    gameUpdate: 41
+    model: '911 50 Years Porsche Design'
+    slug: porsche-911-50-years-porsche-design
+    evo: { number: 0, id: 277 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 1, nitro: 2, mark: 3, division: 9, id: 277 }
+    status: { unblock: false, gold: false, id: 274 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 265
+    gameUpdate: 40
+    model: Tartarus
+    slug: raesr-tartarus
+    evo: { number: 0, id: 272 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 2, nitro: 9, mark: 3, division: 9, id: 272 }
+    status: { unblock: false, gold: false, id: 238 }
+    settingBrand: { name: Raesr, carsNumber: 3, slug: raesr, id: 76 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 266
+    gameUpdate: 40
+    model: 'E-TENSE Performance'
+    slug: ds-automobiles-e-tense-performance
+    evo: { number: 0, id: 265 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 3, nitro: 3, mark: 2, division: 9, id: 265 }
+    status: { unblock: false, gold: false, id: 74 }
+    settingBrand: { name: 'DS Automobiles', carsNumber: 2, slug: ds-automobiles, id: 31 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 267
+    gameUpdate: 40
+    model: '499P Modificata'
+    slug: ferrari-499p-modificata
+    evo: { number: 0, id: 266 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 1, nitro: 1, mark: 1, division: 9, id: 266 }
+    status: { unblock: true, gold: false, id: 80 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 268
+    gameUpdate: 40
+    model: 'Shelby Super Snake'
+    slug: ford-shelby-super-snake
+    evo: { number: 0, id: 267 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 3, mark: 2, division: 9, id: 267 }
+    status: { unblock: true, gold: false, id: 104 }
+    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 35 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 269
+    gameUpdate: 40
+    model: 'XKR-S GT'
+    slug: jaguar-xkr-s-gt
+    evo: { number: 0, id: 268 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 268 }
+    status: { unblock: true, gold: false, id: 127 }
+    settingBrand: { name: Jaguar, carsNumber: 7, slug: jaguar, id: 49 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 270
+    gameUpdate: 40
+    model: Sabre
+    slug: mclaren-sabre
+    evo: { number: 0, id: 269 }
+    gauntlet: { speed: 2, acceleration: 1, handling: 2, nitro: 3, mark: 2, division: 9, id: 269 }
+    status: { unblock: true, gold: false, id: 185 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 271
+    gameUpdate: 40
+    model: Teorema
+    slug: pininfarina-teorema
+    evo: { number: 0, id: 270 }
+    gauntlet: { speed: 1, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 270 }
+    status: { unblock: false, gold: false, id: 218 }
+    settingBrand: { name: Pininfarina, carsNumber: 2, slug: pininfarina, id: 72 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 272
+    gameUpdate: 40
+    model: '911 Turbo 50 Years'
+    slug: porsche-911-turbo-50-years
+    evo: { number: 0, id: 271 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 3, nitro: 3, mark: 3, division: 9, id: 271 }
+    status: { unblock: true, gold: false, id: 227 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 257
+    gameUpdate: 39
+    model: 'Nevera Time Attack'
+    slug: rimac-nevera-time-attack
+    evo: { number: 0, id: 263 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 2, nitro: 3, mark: 1, division: 9, id: 263 }
+    status: { unblock: true, gold: false, id: 246 }
+    settingBrand: { name: Rimac, carsNumber: 4, slug: rimac, id: 79 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 258
+    gameUpdate: 39
+    model: Valour
+    slug: aston-martin-valour
+    evo: { number: 0, id: 257 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 257 }
+    status: { unblock: false, gold: false, id: 23 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 259
+    gameUpdate: 39
+    model: 'Battista Edizione Nino Farina'
+    slug: automobili-pininfarina-battista-edizione-nino-farina
+    evo: { number: 0, id: 258 }
+    gauntlet: { speed: 2, acceleration: 1, handling: 2, nitro: 9, mark: 3, division: 9, id: 258 }
+    status: { unblock: true, gold: false, id: 31 }
+    settingBrand: { name: 'Automobili Pininfarina', carsNumber: 3, slug: automobili-pininfarina, id: 13 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 260
+    gameUpdate: 39
+    model: Sagaris
+    slug: tvr-sagaris
+    evo: { number: 0, id: 264 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 1, mark: 3, division: 9, id: 264 }
+    status: { unblock: true, gold: false, id: 258 }
+    settingBrand: { name: TVR, carsNumber: 2, slug: tvr, id: 90 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 261
+    gameUpdate: 39
+    model: Mistral
+    slug: bugatti-mistral
+    evo: { number: 0, id: 259 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 3, mark: 2, division: 9, id: 259 }
+    status: { unblock: true, gold: false, id: 50 }
+    settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 262
+    gameUpdate: 39
+    model: 21C
+    slug: czinger-21c
+    evo: { number: 0, id: 260 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 3, nitro: 3, mark: 2, division: 9, id: 260 }
+    status: { unblock: true, gold: false, id: 62 }
+    settingBrand: { name: Czinger, carsNumber: 1, slug: czinger, id: 24 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 263
+    gameUpdate: 39
+    model: Temerario
+    slug: lamborghini-temerario
+    evo: { number: 0, id: 261 }
+    gauntlet: { speed: 2, acceleration: 1, handling: 2, nitro: 2, mark: 1, division: 9, id: 261 }
+    status: { unblock: true, gold: true, id: 162 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 264
+    gameUpdate: 39
+    model: 'Vision One-Eleven'
+    slug: mercedes-benz-vision-one-eleven
+    evo: { number: 0, id: 262 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 1, nitro: 1, mark: 1, division: 9, id: 262 }
+    status: { unblock: true, gold: true, id: 196 }
+    settingBrand: { name: Mercedes-Benz, carsNumber: 9, slug: mercedes-benz, id: 63 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 256
+    gameUpdate: 38
+    model: 'GT Frankie Edition'
+    slug: ford-gt-frankie-edition
+    evo: { number: 0, id: 253 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 252 }
+    status: { unblock: true, gold: false, id: 98 }
+    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 35 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 250
+    gameUpdate: 38
+    model: 'Mustang RTR Spec 5 10th Anniversary'
+    slug: ford-mustang-rtr-spec-5-10th-anniversary
+    evo: { number: 0, id: 252 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 253 }
+    status: { unblock: false, gold: false, id: 101 }
+    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 35 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 251
+    gameUpdate: 38
+    model: 'Jesko Absolut'
+    slug: koenigsegg-jesko-absolut
+    evo: { number: 0, id: 254 }
+    gauntlet: { speed: 1, acceleration: 2, handling: 2, nitro: 9, mark: 3, division: 9, id: 254 }
+    status: { unblock: false, gold: false, id: 134 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 252
+    gameUpdate: 38
+    model: Autentica
+    slug: lamborghini-autentica
+    evo: { number: 0, id: 255 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 255 }
+    status: { unblock: true, gold: false, id: 138 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 253
+    gameUpdate: 38
+    model: 'Mission R'
+    slug: porsche-mission-r
+    evo: { number: 0, id: 256 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 2, nitro: 2, mark: 2, division: 9, id: 256 }
+    status: { unblock: true, gold: false, id: 232 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 254
+    gameUpdate: 38
+    model: 'Chiron Pur Sport'
+    slug: bugatti-chiron-pur-sport
+    evo: { number: 0, id: 250 }
+    gauntlet: { speed: 2, acceleration: 1, handling: 2, nitro: 2, mark: 1, division: 9, id: 250 }
+    status: { unblock: true, gold: true, id: 45 }
+    settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 255
+    gameUpdate: 38
+    model: 'SF90 XX Stradale'
+    slug: ferrari-sf90-xx-stradale
+    evo: { number: 0, id: 251 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 251 }
+    status: { unblock: true, gold: false, id: 96 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 245
+    gameUpdate: 37
+    model: DB12
+    slug: aston-martin-db12
+    evo: { number: 0, id: 245 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 1, mark: 3, division: 9, id: 245 }
+    status: { unblock: true, gold: false, id: 16 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 246
+    gameUpdate: 37
+    model: E-R9
+    slug: lotus-e-r9
+    evo: { number: 0, id: 246 }
+    gauntlet: { speed: 2, acceleration: 1, handling: 2, nitro: 3, mark: 2, division: 9, id: 246 }
+    status: { unblock: false, gold: false, id: 166 }
+    settingBrand: { name: Lotus, carsNumber: 6, slug: lotus, id: 57 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 247
+    gameUpdate: 37
+    model: 'MC20 GT2'
+    slug: maserati-mc20-gt2
+    evo: { number: 0, id: 247 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 2, nitro: 3, mark: 2, division: 9, id: 247 }
+    status: { unblock: false, gold: false, id: 174 }
+    settingBrand: { name: Maserati, carsNumber: 4, slug: maserati, id: 58 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 248
+    gameUpdate: 37
+    model: Spéirling
+    slug: mcmurtry-speirling
+    evo: { number: 0, id: 248 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 1, nitro: 2, mark: 1, division: 9, id: 248 }
+    status: { unblock: true, gold: false, id: 190 }
+    settingBrand: { name: McMurtry, carsNumber: 1, slug: mcmurtry, id: 62 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 249
+    gameUpdate: 37
+    model: 'GT-R Néon Édition'
+    slug: nissan-gt-r-neon-edition
+    evo: { number: 0, id: 249 }
+    gauntlet: { speed: 2, acceleration: 1, handling: 1, nitro: 2, mark: 1, division: 9, id: 249 }
+    status: { unblock: true, gold: false, id: 202 }
+    settingBrand: { name: Nissan, carsNumber: 8, slug: nissan, id: 68 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 239
+    gameUpdate: 36
+    model: 'Vantage V12 2022'
+    slug: aston-martin-vantage-v12-2022
+    evo: { number: 0, id: 239 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 9, nitro: 9, mark: 7, division: 9, id: 239 }
+    status: { unblock: false, gold: false, id: 25 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 240
+    gameUpdate: 36
+    model: 'Aurora Tur'
+    slug: zenvo-aurora-tur
+    evo: { number: 0, id: 244 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 9, mark: 4, division: 9, id: 244 }
+    status: { unblock: true, gold: false, id: 270 }
+    settingBrand: { name: Zenvo, carsNumber: 4, slug: zenvo, id: 98 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 241
+    gameUpdate: 36
+    model: P900
+    slug: de-tomaso-p900
+    evo: { number: 0, id: 240 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 3, mark: 2, division: 9, id: 240 }
+    status: { unblock: true, gold: false, id: 64 }
+    settingBrand: { name: 'De Tomaso', carsNumber: 2, slug: de-tomaso, id: 25 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 242
+    gameUpdate: 36
+    model: Asfanè
+    slug: fv-frangivento-asfane
+    evo: { number: 0, id: 241 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 241 }
+    status: { unblock: true, gold: false, id: 107 }
+    settingBrand: { name: 'FV Frangivento', carsNumber: 3, slug: fv-frangivento, id: 37 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 243
+    gameUpdate: 36
+    model: SC63
+    slug: lamborghini-sc63
+    evo: { number: 0, id: 242 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 3, mark: 2, division: 9, id: 242 }
+    status: { unblock: true, gold: false, id: 159 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 244
+    gameUpdate: 36
+    model: '911 Carrera RS 3.8'
+    slug: porsche-911-carrera-rs-3-8
+    evo: { number: 0, id: 243 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 2, nitro: 9, mark: 7, division: 9, id: 243 }
+    status: { unblock: true, gold: false, id: 221 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 232
+    gameUpdate: 35
+    model: 'Giulia GTAm'
+    slug: alfa-romeo-giulia-gtam
+    evo: { number: 0, id: 232 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 232 }
+    status: { unblock: false, gold: false, id: 4 }
+    settingBrand: { name: 'Alfa Romeo', carsNumber: 1, slug: alfa-romeo, id: 3 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 233
+    gameUpdate: 35
+    model: GT
+    slug: ats-automobili-gt
+    evo: { number: 0, id: 233 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 3, mark: 2, division: 9, id: 233 }
+    status: { unblock: true, gold: false, id: 29 }
+    settingBrand: { name: 'ATS Automobili', carsNumber: 2, slug: ats-automobili, id: 12 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 234
+    gameUpdate: 35
+    model: 'Lykan Édition Néon'
+    slug: w-motors-lykan-edition-neon
+    evo: { number: 0, id: 238 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 238 }
+    status: { unblock: false, gold: false, id: 268 }
+    settingBrand: { name: 'W Motors', carsNumber: 3, slug: w-motors, id: 97 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 235
+    gameUpdate: 35
+    model: 'Daytona SP3'
+    slug: ferrari-daytona-sp3
+    evo: { number: 0, id: 234 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 234 }
+    status: { unblock: true, gold: false, id: 83 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 236
+    gameUpdate: 35
+    model: 'GEN 2 Asphalt Édition'
+    slug: formule-e-gen-2-asphalt-edition
+    evo: { number: 0, id: 235 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 1, nitro: 1, mark: 1, division: 9, id: 235 }
+    status: { unblock: true, gold: true, id: 106 }
+    settingBrand: { name: 'Formule E', carsNumber: 2, slug: formule-e, id: 36 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 237
+    gameUpdate: 35
+    model: 'Huracán STO'
+    slug: lamborghini-huracan-sto
+    evo: { number: 0, id: 236 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 2, nitro: 3, mark: 2, division: 9, id: 236 }
+    status: { unblock: false, gold: false, id: 150 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 238
+    gameUpdate: 35
+    model: 'Utopia Coupé'
+    slug: pagani-utopia-coupe
+    evo: { number: 0, id: 237 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 1, nitro: 1, mark: 1, division: 9, id: 237 }
+    status: { unblock: false, gold: false, id: 211 }
+    settingBrand: { name: Pagani, carsNumber: 7, slug: pagani, id: 70 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 226
+    gameUpdate: 34
+    model: 'DBS GT Zagato'
+    slug: aston-martin-dbs-gt-zagato
+    evo: { number: 0, id: 226 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 1, mark: 2, division: 9, id: 226 }
+    status: { unblock: true, gold: false, id: 17 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 227
+    gameUpdate: 34
+    model: Sixteen
+    slug: devel-sixteen
+    evo: { number: 0, id: 227 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 3, nitro: 9, mark: 3, division: 9, id: 227 }
+    status: { unblock: true, gold: false, id: 66 }
+    settingBrand: { name: Devel, carsNumber: 1, slug: devel, id: 27 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 228
+    gameUpdate: 34
+    model: '296 GTB'
+    slug: ferrari-296-gtb
+    evo: { number: 0, id: 228 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 3, mark: 2, division: 9, id: 228 }
+    status: { unblock: true, gold: true, id: 77 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 229
+    gameUpdate: 34
+    model: 'Team Fordzilla P1'
+    slug: ford-team-fordzilla-p1
+    evo: { number: 0, id: 229 }
+    gauntlet: { speed: 2, acceleration: 1, handling: 3, nitro: 2, mark: 2, division: 9, id: 229 }
+    status: { unblock: true, gold: false, id: 105 }
+    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 35 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 230
+    gameUpdate: 34
+    model: Invencible
+    slug: lamborghini-invencible
+    evo: { number: 0, id: 230 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 2, nitro: 2, mark: 2, division: 9, id: 230 }
+    status: { unblock: true, gold: true, id: 152 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 231
+    gameUpdate: 34
+    model: '2022 Showcar Vision AMG'
+    slug: mercedes-benz-2022-showcar-vision-amg
+    evo: { number: 0, id: 231 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 231 }
+    status: { unblock: true, gold: false, id: 191 }
+    settingBrand: { name: Mercedes-Benz, carsNumber: 9, slug: mercedes-benz, id: 63 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 220
+    gameUpdate: 33
+    model: 'Concept S'
+    slug: rimac-concept-s
+    evo: { number: 0, id: 225 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 225 }
+    status: { unblock: true, gold: false, id: 243 }
+    settingBrand: { name: Rimac, carsNumber: 4, slug: rimac, id: 79 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 221
+    gameUpdate: 33
+    model: 'Chiron Super Sport 300+'
+    slug: bugatti-chiron-super-sport-300
+    evo: { number: 0, id: 220 }
+    gauntlet: { speed: 1, acceleration: 2, handling: 2, nitro: 9, mark: 3, division: 9, id: 220 }
+    status: { unblock: false, gold: false, id: 46 }
+    settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 222
+    gameUpdate: 33
+    model: Vayanne
+    slug: deus-vayanne
+    evo: { number: 0, id: 221 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 3, nitro: 3, mark: 2, division: 9, id: 221 }
+    status: { unblock: false, gold: false, id: 65 }
+    settingBrand: { name: Deus, carsNumber: 1, slug: deus, id: 26 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 223
+    gameUpdate: 33
+    model: 'Mustang Mach-E1400'
+    slug: ford-mustang-mach-e1400
+    evo: { number: 0, id: 222 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 222 }
+    status: { unblock: true, gold: false, id: 100 }
+    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 35 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 224
+    gameUpdate: 33
+    model: MC20
+    slug: maserati-mc20
+    evo: { number: 0, id: 223 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 1, nitro: 1, mark: 2, division: 9, id: 223 }
+    status: { unblock: true, gold: false, id: 173 }
+    settingBrand: { name: Maserati, carsNumber: 4, slug: maserati, id: 58 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 225
+    gameUpdate: 33
+    model: Artura
+    slug: mclaren-artura
+    evo: { number: 0, id: 224 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 3, mark: 2, division: 9, id: 224 }
+    status: { unblock: true, gold: false, id: 180 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 214
+    gameUpdate: 32
+    model: 'S7 Twin Turbo'
+    slug: saleen-s7-twin-turbo
+    evo: { number: 0, id: 219 }
+    gauntlet: { speed: 1, acceleration: 9, handling: 2, nitro: 1, mark: 3, division: 9, id: 219 }
+    status: { unblock: false, gold: false, id: 248 }
+    settingBrand: { name: Saleen, carsNumber: 2, slug: saleen, id: 80 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 215
+    gameUpdate: 32
+    model: XJR-15
+    slug: jaguar-xjr-15
+    evo: { number: 0, id: 214 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 214 }
+    status: { unblock: true, gold: false, id: 125 }
+    settingBrand: { name: Jaguar, carsNumber: 7, slug: jaguar, id: 49 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 216
+    gameUpdate: 32
+    model: CC850
+    slug: koenigsegg-cc850
+    evo: { number: 0, id: 215 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 9, mark: 4, division: 9, id: 215 }
+    status: { unblock: false, gold: false, id: 130 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 217
+    gameUpdate: 32
+    model: 'Solus GT'
+    slug: mclaren-solus-gt
+    evo: { number: 0, id: 216 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 1, nitro: 1, mark: 1, division: 9, id: 216 }
+    status: { unblock: true, gold: false, id: 188 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 218
+    gameUpdate: 32
+    model: '370Z Édition Néon'
+    slug: nissan-370z-edition-neon
+    evo: { number: 0, id: 217 }
+    gauntlet: { speed: 9, acceleration: 2, handling: 1, nitro: 2, mark: 3, division: 9, id: 217 }
+    status: { unblock: true, gold: false, id: 200 }
+    settingBrand: { name: Nissan, carsNumber: 8, slug: nissan, id: 68 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 219
+    gameUpdate: 32
+    model: 'M600 Speedster'
+    slug: noble-m600-speedster
+    evo: { number: 0, id: 218 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 218 }
+    status: { unblock: true, gold: false, id: 207 }
+    settingBrand: { name: Noble, carsNumber: 1, slug: noble, id: 69 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 208
+    gameUpdate: 31
+    model: 'Panamera Turbo S'
+    slug: porsche-panamera-turbo-s
+    evo: { number: 0, id: 212 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 2, nitro: 3, mark: 2, division: 9, id: 213 }
+    status: { unblock: true, gold: false, id: 233 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 209
+    gameUpdate: 31
+    model: EVO
+    slug: apollo-evo
+    evo: { number: 0, id: 208 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 208 }
+    status: { unblock: false, gold: false, id: 6 }
+    settingBrand: { name: Apollo, carsNumber: 3, slug: apollo, id: 5 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 210
+    gameUpdate: 31
+    model: 'M4 GT3'
+    slug: bmw-m4-gt3
+    evo: { number: 0, id: 209 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 209 }
+    status: { unblock: true, gold: false, id: 37 }
+    settingBrand: { name: BMW, carsNumber: 6, slug: bmw, id: 15 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 211
+    gameUpdate: 31
+    model: P72
+    slug: de-tomaso-p72
+    evo: { number: 0, id: 210 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 210 }
+    status: { unblock: false, gold: false, id: 63 }
+    settingBrand: { name: 'De Tomaso', carsNumber: 2, slug: de-tomaso, id: 25 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 212
+    gameUpdate: 31
+    model: CLK-GTR
+    slug: mercedes-benz-clk-gtr
+    evo: { number: 0, id: 211 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 3, mark: 4, division: 9, id: 211 }
+    status: { unblock: true, gold: false, id: 194 }
+    settingBrand: { name: Mercedes-Benz, carsNumber: 9, slug: mercedes-benz, id: 63 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 213
+    gameUpdate: 31
+    model: '935 (2019)'
+    slug: porsche-935-2019
+    evo: { number: 0, id: 213 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 1, nitro: 2, mark: 1, division: 9, id: 212 }
+    status: { unblock: true, gold: true, id: 229 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 201
+    gameUpdate: 30
+    model: 'Sorpasso GT3'
+    slug: fv-frangivento-sorpasso-gt3
+    evo: { number: 0, id: 201 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 3, nitro: 3, mark: 2, division: 9, id: 201 }
+    status: { unblock: false, gold: false, id: 108 }
+    settingBrand: { name: 'FV Frangivento', carsNumber: 3, slug: fv-frangivento, id: 37 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 202
+    gameUpdate: 30
+    model: XJR-9
+    slug: jaguar-xjr-9
+    evo: { number: 0, id: 202 }
+    gauntlet: { speed: 1, acceleration: 9, handling: 3, nitro: 1, mark: 3, division: 9, id: 202 }
+    status: { unblock: false, gold: false, id: 126 }
+    settingBrand: { name: Jaguar, carsNumber: 7, slug: jaguar, id: 49 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 203
+    gameUpdate: 30
+    model: Motion
+    slug: kepler-motion
+    evo: { number: 0, id: 203 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 3, nitro: 2, mark: 2, division: 9, id: 203 }
+    status: { unblock: true, gold: false, id: 128 }
+    settingBrand: { name: Kepler, carsNumber: 1, slug: kepler, id: 50 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 204
+    gameUpdate: 30
+    model: CCXR
+    slug: koenigsegg-ccxr
+    evo: { number: 0, id: 204 }
+    gauntlet: { speed: 1, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 204 }
+    status: { unblock: false, gold: false, id: 131 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 205
+    gameUpdate: 30
+    model: 'X-Bow GTX'
+    slug: ktm-x-bow-gtx
+    evo: { number: 0, id: 205 }
+    gauntlet: { speed: 9, acceleration: 2, handling: 2, nitro: 2, mark: 3, division: 9, id: 205 }
+    status: { unblock: true, gold: true, id: 136 }
+    settingBrand: { name: KTM, carsNumber: 1, slug: ktm, id: 53 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 206
+    gameUpdate: 30
+    model: Revuelto
+    slug: lamborghini-revuelto
+    evo: { number: 0, id: 206 }
+    gauntlet: { speed: 2, acceleration: 1, handling: 2, nitro: 3, mark: 2, division: 9, id: 206 }
+    status: { unblock: true, gold: true, id: 156 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 207
+    gameUpdate: 30
+    model: MC12
+    slug: maserati-mc12
+    evo: { number: 0, id: 207 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 9, mark: 5, division: 9, id: 207 }
+    status: { unblock: false, gold: false, id: 172 }
+    settingBrand: { name: Maserati, carsNumber: 4, slug: maserati, id: 58 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 196
+    gameUpdate: 29
+    model: '2015 GTA Spano'
+    slug: spania-gta-2015-gta-spano
+    evo: { number: 0, id: 199 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 199 }
+    status: { unblock: false, gold: false, id: 250 }
+    settingBrand: { name: 'Spania GTA', carsNumber: 1, slug: spania-gta, id: 82 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 197
+    gameUpdate: 29
+    model: 'Super Sport'
+    slug: torino-design-super-sport
+    evo: { number: 0, id: 200 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 2, nitro: 1, mark: 1, division: 9, id: 200 }
+    status: { unblock: false, gold: false, id: 253 }
+    settingBrand: { name: 'Torino Design', carsNumber: 1, slug: torino-design, id: 85 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 198
+    gameUpdate: 29
+    model: 'D8 GTO'
+    slug: donkervoort-d8-gto
+    evo: { number: 0, id: 196 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 1, nitro: 2, mark: 2, division: 9, id: 196 }
+    status: { unblock: true, gold: false, id: 71 }
+    settingBrand: { name: Donkervoort, carsNumber: 1, slug: donkervoort, id: 29 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 199
+    gameUpdate: 29
+    model: F50
+    slug: ferrari-f50
+    evo: { number: 0, id: 197 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 197 }
+    status: { unblock: true, gold: false, id: 87 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 200
+    gameUpdate: 29
+    model: 'AMG GT Black Series'
+    slug: mercedes-benz-amg-gt-black-series
+    evo: { number: 0, id: 198 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 198 }
+    status: { unblock: true, gold: true, id: 192 }
+    settingBrand: { name: Mercedes-Benz, carsNumber: 9, slug: mercedes-benz, id: 63 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 187
+    gameUpdate: 28
+    model: R1
+    slug: praga-r1
+    evo: { number: 0, id: 195 }
+    gauntlet: { speed: 9, acceleration: 1, handling: 2, nitro: 2, mark: 3, division: 9, id: 195 }
+    status: { unblock: true, gold: false, id: 235 }
+    settingBrand: { name: Praga, carsNumber: 2, slug: praga, id: 74 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 188
+    gameUpdate: 28
+    model: S1
+    slug: ares-s1
+    evo: { number: 0, id: 187 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 2, nitro: 2, mark: 2, division: 9, id: 187 }
+    status: { unblock: true, gold: true, id: 11 }
+    settingBrand: { name: Ares, carsNumber: 1, slug: ares, id: 7 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 189
+    gameUpdate: 28
+    model: Bolide
+    slug: bugatti-bolide
+    evo: { number: 0, id: 188 }
+    gauntlet: { speed: 1, acceleration: 2, handling: 3, nitro: 9, mark: 3, division: 9, id: 188 }
+    status: { unblock: false, gold: false, id: 42 }
+    settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 190
+    gameUpdate: 28
+    model: ME412
+    slug: chrysler-me412
+    evo: { number: 0, id: 189 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 189 }
+    status: { unblock: false, gold: false, id: 60 }
+    settingBrand: { name: Chrysler, carsNumber: 1, slug: chrysler, id: 22 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 191
+    gameUpdate: 28
+    model: FFZero1
+    slug: faraday-future-ffzero1
+    evo: { number: 0, id: 190 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 3, nitro: 3, mark: 2, division: 9, id: 190 }
+    status: { unblock: true, gold: false, id: 76 }
+    settingBrand: { name: 'Faraday Future', carsNumber: 1, slug: faraday-future, id: 33 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 192
+    gameUpdate: 28
+    model: 'XJ220S TWR'
+    slug: jaguar-xj220s-twr
+    evo: { number: 0, id: 191 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 1, mark: 3, division: 9, id: 191 }
+    status: { unblock: false, gold: false, id: 124 }
+    settingBrand: { name: Jaguar, carsNumber: 7, slug: jaguar, id: 49 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 193
+    gameUpdate: 28
+    model: '650S GT3'
+    slug: mclaren-650s-gt3
+    evo: { number: 0, id: 192 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 1, nitro: 1, mark: 1, division: 9, id: 192 }
+    status: { unblock: true, gold: false, id: 178 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 194
+    gameUpdate: 28
+    model: 9X8
+    slug: peugeot-9x8
+    evo: { number: 0, id: 193 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 1, nitro: 2, mark: 1, division: 9, id: 193 }
+    status: { unblock: true, gold: true, id: 214 }
+    settingBrand: { name: Peugeot, carsNumber: 3, slug: peugeot, id: 71 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 195
+    gameUpdate: 28
+    model: 'Boxster 25th Anniversary'
+    slug: porsche-boxster-25th-anniversary
+    evo: { number: 0, id: 194 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 3, nitro: 3, mark: 6, division: 9, id: 194 }
+    status: { unblock: true, gold: false, id: 230 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 182
+    gameUpdate: 27
+    model: Drakuma
+    slug: ajlani-drakuma
+    evo: { number: 0, id: 182 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 182 }
+    status: { unblock: false, gold: false, id: 3 }
+    settingBrand: { name: Ajlani, carsNumber: 1, slug: ajlani, id: 2 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 183
+    gameUpdate: 27
+    model: 'XE SV Project 8'
+    slug: jaguar-xe-sv-project-8
+    evo: { number: 0, id: 183 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 183 }
+    status: { unblock: false, gold: false, id: 123 }
+    settingBrand: { name: Jaguar, carsNumber: 7, slug: jaguar, id: 49 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 184
+    gameUpdate: 27
+    model: 'Agera RS'
+    slug: koenigsegg-agera-rs
+    evo: { number: 0, id: 184 }
+    gauntlet: { speed: 1, acceleration: 9, handling: 2, nitro: 3, mark: 3, division: 9, id: 184 }
+    status: { unblock: true, gold: false, id: 129 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 185
+    gameUpdate: 27
+    model: 'R390 GT1'
+    slug: nissan-r390-gt1
+    evo: { number: 0, id: 185 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 185 }
+    status: { unblock: true, gold: false, id: 206 }
+    settingBrand: { name: Nissan, carsNumber: 8, slug: nissan, id: 68 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 186
+    gameUpdate: 27
+    model: SR1
+    slug: peugeot-sr1
+    evo: { number: 0, id: 186 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 9, mark: 6, division: 9, id: 186 }
+    status: { unblock: true, gold: false, id: 216 }
+    settingBrand: { name: Peugeot, carsNumber: 3, slug: peugeot, id: 71 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 174
+    gameUpdate: 26
+    model: Dezir
+    slug: renault-dezir
+    evo: { number: 0, id: 181 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 2, nitro: 2, mark: 5, division: 9, id: 181 }
+    status: { unblock: true, gold: false, id: 239 }
+    settingBrand: { name: Renault, carsNumber: 3, slug: renault, id: 77 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 175
+    gameUpdate: 26
+    model: 'Continental GT Speed'
+    slug: bentley-continental-gt-speed
+    evo: { number: 0, id: 174 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 3, mark: 4, division: 9, id: 174 }
+    status: { unblock: true, gold: false, id: 32 }
+    settingBrand: { name: Bentley, carsNumber: 3, slug: bentley, id: 14 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 176
+    gameUpdate: 26
+    model: Centodieci
+    slug: bugatti-centodieci
+    evo: { number: 0, id: 175 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 3, nitro: 1, mark: 1, division: 9, id: 175 }
+    status: { unblock: false, gold: false, id: 43 }
+    settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 177
+    gameUpdate: 26
+    model: EB110
+    slug: bugatti-eb110
+    evo: { number: 0, id: 176 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 3, mark: 4, division: 9, id: 176 }
+    status: { unblock: true, gold: false, id: 48 }
+    settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 178
+    gameUpdate: 26
+    model: 'Monza SP1'
+    slug: ferrari-monza-sp1
+    evo: { number: 0, id: 177 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 1, nitro: 2, mark: 5, division: 9, id: 177 }
+    status: { unblock: true, gold: true, id: 93 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 179
+    gameUpdate: 26
+    model: '600LT Spider'
+    slug: mclaren-600lt-spider
+    evo: { number: 0, id: 178 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 1, nitro: 2, mark: 1, division: 9, id: 179 }
+    status: { unblock: true, gold: false, id: 177 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 180
+    gameUpdate: 26
+    model: 765LT
+    slug: mclaren-765lt
+    evo: { number: 0, id: 179 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 178 }
+    status: { unblock: true, gold: false, id: 179 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 181
+    gameUpdate: 26
+    model: 'Huayra R'
+    slug: pagani-huayra-r
+    evo: { number: 0, id: 180 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 3, nitro: 2, mark: 2, division: 9, id: 180 }
+    status: { unblock: true, gold: false, id: 209 }
+    settingBrand: { name: Pagani, carsNumber: 7, slug: pagani, id: 70 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 168
+    gameUpdate: 25
+    model: 'Countach 25th Anniversary'
+    slug: lamborghini-countach-25th-anniversary
+    evo: { number: 0, id: 171 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 9, mark: 6, division: 9, id: 172 }
+    status: { unblock: true, gold: false, id: 143 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 169
+    gameUpdate: 25
+    model: 'Countach LPI 800-4'
+    slug: lamborghini-countach-lpi-800-4
+    evo: { number: 0, id: 170 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 1, nitro: 2, mark: 2, division: 9, id: 173 }
+    status: { unblock: false, gold: false, id: 144 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 170
+    gameUpdate: 25
+    model: 'Diablo GT'
+    slug: lamborghini-diablo-gt
+    evo: { number: 0, id: 172 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 3, mark: 4, division: 9, id: 169 }
+    status: { unblock: true, gold: false, id: 145 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 171
+    gameUpdate: 25
+    model: 'Miura Concept'
+    slug: lamborghini-miura-concept
+    evo: { number: 0, id: 173 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 168 }
+    status: { unblock: true, gold: false, id: 153 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 172
+    gameUpdate: 25
+    model: 'Reventón Roadster'
+    slug: lamborghini-reventon-roadster
+    evo: { number: 0, id: 169 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 170 }
+    status: { unblock: true, gold: false, id: 155 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 173
+    gameUpdate: 25
+    model: 'Sesto Elemento'
+    slug: lamborghini-sesto-elemento
+    evo: { number: 0, id: 168 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 2, nitro: 2, mark: 2, division: 9, id: 171 }
+    status: { unblock: true, gold: false, id: 160 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 164
+    gameUpdate: 24
+    model: 'AF8 Falcon Édition'
+    slug: arash-af8-falcon-edition
+    evo: { number: 0, id: 164 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 1, mark: 3, division: 9, id: 164 }
+    status: { unblock: true, gold: false, id: 10 }
+    settingBrand: { name: Arash, carsNumber: 3, slug: arash, id: 6 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 165
+    gameUpdate: 24
+    model: 'TS 900 Racer Pro'
+    slug: tushek-ts-900-racer-pro
+    evo: { number: 0, id: 167 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 167 }
+    status: { unblock: false, gold: false, id: 256 }
+    settingBrand: { name: Tushek, carsNumber: 2, slug: tushek, id: 89 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 166
+    gameUpdate: 24
+    model: 'MK X Nagari 500'
+    slug: bolwell-mk-x-nagari-500
+    evo: { number: 0, id: 165 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 165 }
+    status: { unblock: true, gold: false, id: 40 }
+    settingBrand: { name: Bolwell, carsNumber: 1, slug: bolwell, id: 16 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 167
+    gameUpdate: 24
+    model: BT62
+    slug: brabham-bt62
+    evo: { number: 0, id: 166 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 2, nitro: 1, mark: 2, division: 9, id: 166 }
+    status: { unblock: true, gold: false, id: 41 }
+    settingBrand: { name: Brabham, carsNumber: 1, slug: brabham, id: 17 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 159
+    gameUpdate: 23
+    model: Berlinetta
+    slug: puritalia-berlinetta
+    evo: { number: 0, id: 161 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 1, nitro: 2, mark: 2, division: 9, id: 161 }
+    status: { unblock: true, gold: true, id: 236 }
+    settingBrand: { name: Puritalia, carsNumber: 1, slug: puritalia, id: 75 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 160
+    gameUpdate: 23
+    model: One77
+    slug: aston-martin-one77
+    evo: { number: 0, id: 159 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 3, mark: 4, division: 9, id: 159 }
+    status: { unblock: true, gold: true, id: 19 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 161
+    gameUpdate: 23
+    model: RS
+    slug: ultima-rs
+    evo: { number: 0, id: 162 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 162 }
+    status: { unblock: true, gold: true, id: 259 }
+    settingBrand: { name: Ultima, carsNumber: 1, slug: ultima, id: 91 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 162
+    gameUpdate: 23
+    model: '1789'
+    slug: vision-1789
+    evo: { number: 0, id: 163 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 163 }
+    status: { unblock: true, gold: false, id: 262 }
+    settingBrand: { name: Vision, carsNumber: 1, slug: vision, id: 94 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 163
+    gameUpdate: 23
+    model: 'Senna GTR'
+    slug: mclaren-senna-gtr
+    evo: { number: 0, id: 160 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 1, mark: 2, division: 9, id: 160 }
+    status: { unblock: true, gold: false, id: 187 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 149
+    gameUpdate: 22
+    model: AF10
+    slug: arash-af10
+    evo: { number: 0, id: 149 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 149 }
+    status: { unblock: true, gold: false, id: 9 }
+    settingBrand: { name: Arash, carsNumber: 3, slug: arash, id: 6 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 150
+    gameUpdate: 22
+    model: S1
+    slug: saleen-s1
+    evo: { number: 0, id: 158 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 1, nitro: 2, mark: 3, division: 9, id: 158 }
+    status: { unblock: true, gold: false, id: 247 }
+    settingBrand: { name: Saleen, carsNumber: 2, slug: saleen, id: 80 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 151
+    gameUpdate: 22
+    model: 004C
+    slug: glickenhaus-004c
+    evo: { number: 0, id: 150 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 150 }
+    status: { unblock: true, gold: true, id: 112 }
+    settingBrand: { name: Glickenhaus, carsNumber: 3, slug: glickenhaus, id: 40 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 152
+    gameUpdate: 22
+    model: 007S
+    slug: glickenhaus-007s
+    evo: { number: 0, id: 151 }
+    gauntlet: { speed: 2, acceleration: 1, handling: 1, nitro: 3, mark: 1, division: 9, id: 151 }
+    status: { unblock: true, gold: true, id: 113 }
+    settingBrand: { name: Glickenhaus, carsNumber: 3, slug: glickenhaus, id: 40 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 153
+    gameUpdate: 22
+    model: Gemera
+    slug: koenigsegg-gemera
+    evo: { number: 0, id: 152 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 2, nitro: 3, mark: 1, division: 9, id: 152 }
+    status: { unblock: true, gold: false, id: 132 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 154
+    gameUpdate: 22
+    model: Emira
+    slug: lotus-emira
+    evo: { number: 0, id: 153 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 153 }
+    status: { unblock: true, gold: true, id: 168 }
+    settingBrand: { name: Lotus, carsNumber: 6, slug: lotus, id: 57 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 155
+    gameUpdate: 22
+    model: GT
+    slug: mclaren-gt
+    evo: { number: 0, id: 154 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 3, mark: 2, division: 9, id: 154 }
+    status: { unblock: true, gold: true, id: 183 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 156
+    gameUpdate: 22
+    model: 'Hyper Coupé'
+    slug: naran-hyper-coupe
+    evo: { number: 0, id: 155 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 155 }
+    status: { unblock: true, gold: false, id: 198 }
+    settingBrand: { name: Naran, carsNumber: 1, slug: naran, id: 66 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 157
+    gameUpdate: 22
+    model: 'GTR-50 Italdesign'
+    slug: nissan-gtr-50-italdesign
+    evo: { number: 0, id: 156 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 2, nitro: 2, mark: 2, division: 9, id: 156 }
+    status: { unblock: true, gold: true, id: 204 }
+    settingBrand: { name: Nissan, carsNumber: 8, slug: nissan, id: 68 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 158
+    gameUpdate: 22
+    model: 'Zonda R'
+    slug: pagani-zonda-r
+    evo: { number: 0, id: 157 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 3, nitro: 2, mark: 2, division: 9, id: 157 }
+    status: { unblock: true, gold: false, id: 213 }
+    settingBrand: { name: Pagani, carsNumber: 7, slug: pagani, id: 70 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 141
+    gameUpdate: 21
+    model: 'Tachyon Speed'
+    slug: raesr-tachyon-speed
+    evo: { number: 0, id: 144 }
+    gauntlet: { speed: 1, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 144 }
+    status: { unblock: false, gold: false, id: 237 }
+    settingBrand: { name: Raesr, carsNumber: 3, slug: raesr, id: 76 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 142
+    gameUpdate: 21
+    model: TreZor
+    slug: renault-trezor
+    evo: { number: 0, id: 145 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 2, nitro: 2, mark: 5, division: 9, id: 145 }
+    status: { unblock: true, gold: false, id: 241 }
+    settingBrand: { name: Renault, carsNumber: 3, slug: renault, id: 77 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 143
+    gameUpdate: 21
+    model: Concept_One
+    slug: rimac-concept-one
+    evo: { number: 0, id: 146 }
+    gauntlet: { speed: 2, acceleration: 1, handling: 1, nitro: 3, mark: 1, division: 9, id: 146 }
+    status: { unblock: true, gold: false, id: 244 }
+    settingBrand: { name: Rimac, carsNumber: 4, slug: rimac, id: 79 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 144
+    gameUpdate: 21
+    model: 1MW
+    slug: toroidion-1mw
+    evo: { number: 0, id: 147 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 2, nitro: 3, mark: 2, division: 9, id: 147 }
+    status: { unblock: false, gold: false, id: 254 }
+    settingBrand: { name: Toroidion, carsNumber: 1, slug: toroidion, id: 86 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 145
+    gameUpdate: 21
+    model: 'Electric R'
+    slug: volkswagen-electric-r
+    evo: { number: 0, id: 148 }
+    gauntlet: { speed: 9, acceleration: 1, handling: 3, nitro: 2, mark: 3, division: 9, id: 148 }
+    status: { unblock: true, gold: false, id: 264 }
+    settingBrand: { name: Volkswagen, carsNumber: 3, slug: volkswagen, id: 96 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 146
+    gameUpdate: 21
+    model: GTE
+    slug: drako-gte
+    evo: { number: 0, id: 141 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 141 }
+    status: { unblock: true, gold: false, id: 72 }
+    settingBrand: { name: Drako, carsNumber: 1, slug: drako, id: 30 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 147
+    gameUpdate: 21
+    model: 'McLaren Senna GTR'
+    slug: lego-technic-mclaren-senna-gtr
+    evo: { number: 0, id: 142 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 142 }
+    status: { unblock: false, gold: false, id: 165 }
+    settingBrand: { name: 'Lego Technic', carsNumber: 6, slug: lego-technic, id: 55 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 148
+    gameUpdate: 21
+    model: 'Zonda HP Barchetta'
+    slug: pagani-zonda-hp-barchetta
+    evo: { number: 0, id: 143 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 143 }
+    status: { unblock: true, gold: false, id: 212 }
+    settingBrand: { name: Pagani, carsNumber: 7, slug: pagani, id: 70 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 135
+    gameUpdate: 20
+    model: 'V12 Speedster'
+    slug: aston-martin-v12-speedster
+    evo: { number: 0, id: 135 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 1, nitro: 2, mark: 3, division: 9, id: 135 }
+    status: { unblock: true, gold: false, id: 20 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 136
+    gameUpdate: 20
+    model: 'Veyron 16.4 Grand Sport Vitesse'
+    slug: bugatti-veyron-16-4-grand-sport-vitesse
+    evo: { number: 0, id: 136 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 3, mark: 2, division: 9, id: 136 }
+    status: { unblock: true, gold: false, id: 51 }
+    settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 137
+    gameUpdate: 20
+    model: 'Venom F5'
+    slug: hennessey-venom-f5
+    evo: { number: 0, id: 137 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 3, mark: 2, division: 9, id: 137 }
+    status: { unblock: true, gold: false, id: 114 }
+    settingBrand: { name: Hennessey, carsNumber: 1, slug: hennessey, id: 41 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 138
+    gameUpdate: 20
+    model: 'Aventador SVJ Roadster'
+    slug: lamborghini-aventador-svj-roadster
+    evo: { number: 0, id: 139 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 138 }
+    status: { unblock: true, gold: false, id: 141 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 139
+    gameUpdate: 20
+    model: SC20
+    slug: lamborghini-sc20
+    evo: { number: 0, id: 138 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 139 }
+    status: { unblock: false, gold: false, id: 158 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 140
+    gameUpdate: 20
+    model: Elva
+    slug: mclaren-elva
+    evo: { number: 0, id: 140 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 140 }
+    status: { unblock: true, gold: false, id: 181 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 130
+    gameUpdate: 19
+    model: 'R.S. 01'
+    slug: renault-r-s-01
+    evo: { number: 0, id: 132 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 132 }
+    status: { unblock: true, gold: true, id: 240 }
+    settingBrand: { name: Renault, carsNumber: 3, slug: renault, id: 77 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 131
+    gameUpdate: 19
+    model: Valkyrie
+    slug: aston-martin-valkyrie
+    evo: { number: 0, id: 130 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 1, mark: 2, division: 9, id: 130 }
+    status: { unblock: true, gold: false, id: 22 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 132
+    gameUpdate: 19
+    model: Victor
+    slug: aston-martin-victor
+    evo: { number: 0, id: 131 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 131 }
+    status: { unblock: true, gold: false, id: 26 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 133
+    gameUpdate: 19
+    model: 'W12 Coupe'
+    slug: volkswagen-w12-coupe
+    evo: { number: 0, id: 133 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 1, nitro: 3, mark: 3, division: 9, id: 133 }
+    status: { unblock: true, gold: true, id: 265 }
+    settingBrand: { name: Volkswagen, carsNumber: 3, slug: volkswagen, id: 96 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 134
+    gameUpdate: 19
+    model: TSR-S
+    slug: zenvo-tsr-s
+    evo: { number: 0, id: 134 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 1, nitro: 2, mark: 2, division: 9, id: 134 }
+    status: { unblock: true, gold: false, id: 272 }
+    settingBrand: { name: Zenvo, carsNumber: 4, slug: zenvo, id: 98 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 124
+    gameUpdate: 18
+    model: 'Corsa RRTurbo'
+    slug: ats-automobili-corsa-rrturbo
+    evo: { number: 0, id: 124 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 3, nitro: 3, mark: 2, division: 9, id: 124 }
+    status: { unblock: true, gold: false, id: 28 }
+    settingBrand: { name: 'ATS Automobili', carsNumber: 2, slug: ats-automobili, id: 12 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 125
+    gameUpdate: 18
+    model: Roma
+    slug: ferrari-roma
+    evo: { number: 0, id: 125 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 2, mark: 4, division: 9, id: 125 }
+    status: { unblock: true, gold: false, id: 94 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 126
+    gameUpdate: 18
+    model: DaVinci
+    slug: italdesign-davinci
+    evo: { number: 0, id: 126 }
+    gauntlet: { speed: 9, acceleration: 2, handling: 2, nitro: 3, mark: 4, division: 9, id: 126 }
+    status: { unblock: true, gold: false, id: 119 }
+    settingBrand: { name: Italdesign, carsNumber: 2, slug: italdesign, id: 48 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 127
+    gameUpdate: 18
+    model: 'Essenza SCV12'
+    slug: lamborghini-essenza-scv12
+    evo: { number: 0, id: 127 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 127 }
+    status: { unblock: true, gold: true, id: 147 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 128
+    gameUpdate: 18
+    model: 'Murcielago LP 640 Roadster'
+    slug: lamborghini-murcielago-lp-640-roadster
+    evo: { number: 0, id: 128 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 128 }
+    status: { unblock: true, gold: true, id: 154 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 129
+    gameUpdate: 18
+    model: Imola
+    slug: pagani-imola
+    evo: { number: 0, id: 129 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 129 }
+    status: { unblock: true, gold: false, id: 210 }
+    settingBrand: { name: Pagani, carsNumber: 7, slug: pagani, id: 70 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 119
+    gameUpdate: 17
+    model: 'NSX GT3 EVO'
+    slug: acura-nsx-gt3-evo
+    evo: { number: 0, id: 119 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 1, nitro: 2, mark: 3, division: 9, id: 119 }
+    status: { unblock: true, gold: false, id: 2 }
+    settingBrand: { name: Acura, carsNumber: 2, slug: acura, id: 1 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 120
+    gameUpdate: 17
+    model: Owl
+    slug: aspark-owl
+    evo: { number: 0, id: 120 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 3, nitro: 3, mark: 2, division: 9, id: 120 }
+    status: { unblock: true, gold: false, id: 14 }
+    settingBrand: { name: Aspark, carsNumber: 1, slug: aspark, id: 10 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 121
+    gameUpdate: 17
+    model: Inferno
+    slug: inferno-automobili-inferno
+    evo: { number: 0, id: 121 }
+    gauntlet: { speed: 1, acceleration: 2, handling: 3, nitro: 1, mark: 1, division: 9, id: 121 }
+    status: { unblock: true, gold: false, id: 117 }
+    settingBrand: { name: 'Inferno Automobili', carsNumber: 1, slug: inferno-automobili, id: 46 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 122
+    gameUpdate: 17
+    model: 'Projet Black S'
+    slug: infiniti-projet-black-s
+    evo: { number: 0, id: 122 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 2, nitro: 2, mark: 5, division: 9, id: 122 }
+    status: { unblock: true, gold: false, id: 118 }
+    settingBrand: { name: Infiniti, carsNumber: 1, slug: infiniti, id: 47 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 123
+    gameUpdate: 17
+    model: EP9
+    slug: nio-ep9
+    evo: { number: 0, id: 123 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 123 }
+    status: { unblock: true, gold: false, id: 199 }
+    settingBrand: { name: Nio, carsNumber: 1, slug: nio, id: 67 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 112
+    gameUpdate: 16
+    model: IE
+    slug: apollo-ie
+    evo: { number: 0, id: 112 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 112 }
+    status: { unblock: true, gold: true, id: 7 }
+    settingBrand: { name: Apollo, carsNumber: 3, slug: apollo, id: 5 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 113
+    gameUpdate: 16
+    model: 'I8 Roadster'
+    slug: bmw-i8-roadster
+    evo: { number: 0, id: 113 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 2, nitro: 2, mark: 5, division: 9, id: 113 }
+    status: { unblock: true, gold: false, id: 36 }
+    settingBrand: { name: BMW, carsNumber: 6, slug: bmw, id: 15 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 114
+    gameUpdate: 16
+    model: Divo
+    slug: bugatti-divo
+    evo: { number: 0, id: 114 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 115 }
+    status: { unblock: true, gold: false, id: 47 }
+    settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 115
+    gameUpdate: 16
+    model: 'La Voiture Noire'
+    slug: bugatti-la-voiture-noire
+    evo: { number: 0, id: 115 }
+    gauntlet: { speed: 1, acceleration: 2, handling: 3, nitro: 2, mark: 2, division: 9, id: 114 }
+    status: { unblock: false, gold: false, id: 49 }
+    settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 116
+    gameUpdate: 16
+    model: 'GT by Citroën'
+    slug: citroen-gt-by-citroen
+    evo: { number: 0, id: 116 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 116 }
+    status: { unblock: true, gold: false, id: 61 }
+    settingBrand: { name: Citroën, carsNumber: 2, slug: citroen, id: 23 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 117
+    gameUpdate: 16
+    model: 'Huracán Super Trofeo Evo'
+    slug: lamborghini-huracan-super-trofeo-evo
+    evo: { number: 0, id: 117 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 3, mark: 2, division: 9, id: 117 }
+    status: { unblock: true, gold: false, id: 151 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 118
+    gameUpdate: 16
+    model: Onyx
+    slug: peugeot-onyx
+    evo: { number: 0, id: 118 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 1, nitro: 3, mark: 2, division: 9, id: 118 }
+    status: { unblock: true, gold: false, id: 215 }
+    settingBrand: { name: Peugeot, carsNumber: 3, slug: peugeot, id: 71 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 106
+    gameUpdate: 15
+    model: '488 GTB Challenge EVO'
+    slug: ferrari-488-gtb-challenge-evo
+    evo: { number: 0, id: 110 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 1, mark: 2, division: 9, id: 109 }
+    status: { unblock: true, gold: false, id: 79 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 107
+    gameUpdate: 15
+    model: '599XX EVO'
+    slug: ferrari-599xx-evo
+    evo: { number: 0, id: 108 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 1, nitro: 2, mark: 2, division: 9, id: 107 }
+    status: { unblock: true, gold: false, id: 81 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 108
+    gameUpdate: 15
+    model: 'Enzo Ferrari'
+    slug: ferrari-enzo-ferrari
+    evo: { number: 0, id: 109 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 106 }
+    status: { unblock: true, gold: true, id: 84 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 109
+    gameUpdate: 15
+    model: F40
+    slug: ferrari-f40
+    evo: { number: 0, id: 111 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 108 }
+    status: { unblock: true, gold: false, id: 86 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 110
+    gameUpdate: 15
+    model: 'F8 Tributo'
+    slug: ferrari-f8-tributo
+    evo: { number: 0, id: 106 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 1, nitro: 2, mark: 1, division: 9, id: 111 }
+    status: { unblock: true, gold: false, id: 88 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 111
+    gameUpdate: 15
+    model: 'SF90 Stradale'
+    slug: ferrari-sf90-stradale
+    evo: { number: 0, id: 107 }
+    gauntlet: { speed: 2, acceleration: 1, handling: 1, nitro: 2, mark: 1, division: 9, id: 110 }
+    status: { unblock: true, gold: true, id: 95 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 100
+    gameUpdate: 14
+    model: AP-0
+    slug: apex-ap-0
+    evo: { number: 0, id: 100 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 1, nitro: 1, mark: 2, division: 9, id: 100 }
+    status: { unblock: true, gold: true, id: 5 }
+    settingBrand: { name: Apex, carsNumber: 1, slug: apex, id: 4 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 101
+    gameUpdate: 14
+    model: 'Valhalla Concept Car'
+    slug: aston-martin-valhalla-concept-car
+    evo: { number: 0, id: 101 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 1, nitro: 3, mark: 2, division: 9, id: 101 }
+    status: { unblock: true, gold: true, id: 21 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 102
+    gameUpdate: 14
+    model: 'Continental GT3'
+    slug: bentley-continental-gt3
+    evo: { number: 0, id: 102 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 3, mark: 4, division: 9, id: 103 }
+    status: { unblock: true, gold: false, id: 33 }
+    settingBrand: { name: Bentley, carsNumber: 3, slug: bentley, id: 14 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 103
+    gameUpdate: 14
+    model: 'Mulliner Bacalar'
+    slug: bentley-mulliner-bacalar
+    evo: { number: 0, id: 103 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 3, mark: 4, division: 9, id: 102 }
+    status: { unblock: true, gold: false, id: 34 }
+    settingBrand: { name: Bentley, carsNumber: 3, slug: bentley, id: 14 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 104
+    gameUpdate: 14
+    model: C-X75
+    slug: jaguar-c-x75
+    evo: { number: 0, id: 104 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 104 }
+    status: { unblock: true, gold: false, id: 121 }
+    settingBrand: { name: Jaguar, carsNumber: 7, slug: jaguar, id: 49 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 105
+    gameUpdate: 14
+    model: Speedtail
+    slug: mclaren-speedtail
+    evo: { number: 0, id: 105 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 105 }
+    status: { unblock: true, gold: false, id: 189 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 95
+    gameUpdate: 13
+    model: Tuatara
+    slug: ssc-tuatara
+    evo: { number: 0, id: 99 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 99 }
+    status: { unblock: true, gold: true, id: 251 }
+    settingBrand: { name: SSC, carsNumber: 3, slug: ssc, id: 83 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 96
+    gameUpdate: 13
+    model: 'Bailey Blade GT1'
+    slug: bxr-bailey-blade-gt1
+    evo: { number: 0, id: 95 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 95 }
+    status: { unblock: true, gold: true, id: 52 }
+    settingBrand: { name: BXR, carsNumber: 1, slug: bxr, id: 19 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 97
+    gameUpdate: 13
+    model: 'Corvette C7.R'
+    slug: chevrolet-corvette-c7-r
+    evo: { number: 0, id: 97 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 3, nitro: 3, mark: 3, division: 9, id: 97 }
+    status: { unblock: true, gold: false, id: 56 }
+    settingBrand: { name: Chevrolet, carsNumber: 6, slug: chevrolet, id: 21 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 98
+    gameUpdate: 13
+    model: 'Corvette Stingray'
+    slug: chevrolet-corvette-stingray
+    evo: { number: 0, id: 96 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 96 }
+    status: { unblock: true, gold: false, id: 58 }
+    settingBrand: { name: Chevrolet, carsNumber: 6, slug: chevrolet, id: 21 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 99
+    gameUpdate: 13
+    model: 'GT MK II'
+    slug: ford-gt-mk-ii
+    evo: { number: 0, id: 98 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 2, nitro: 2, mark: 2, division: 9, id: 98 }
+    status: { unblock: true, gold: false, id: 99 }
+    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 35 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 90
+    gameUpdate: 12
+    model: 'Gallardo LP560-4'
+    slug: lamborghini-gallardo-lp560-4
+    evo: { number: 0, id: 92 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 3, mark: 4, division: 9, id: 92 }
+    status: { unblock: true, gold: false, id: 148 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 91
+    gameUpdate: 12
+    model: SC18
+    slug: lamborghini-sc18
+    evo: { number: 0, id: 93 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 1, mark: 2, division: 9, id: 90 }
+    status: { unblock: true, gold: false, id: 157 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 92
+    gameUpdate: 12
+    model: 'Sián FKP 37'
+    slug: lamborghini-sian-fkp-37
+    evo: { number: 0, id: 90 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 1, nitro: 1, mark: 1, division: 9, id: 91 }
+    status: { unblock: true, gold: false, id: 161 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 93
+    gameUpdate: 12
+    model: Veneno
+    slug: lamborghini-veneno
+    evo: { number: 0, id: 91 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 1, mark: 2, division: 9, id: 93 }
+    status: { unblock: true, gold: false, id: 164 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 94
+    gameUpdate: 12
+    model: 'F1 LM'
+    slug: mclaren-f1-lm
+    evo: { number: 0, id: 94 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 94 }
+    status: { unblock: true, gold: true, id: 182 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 85
+    gameUpdate: 11
+    model: 'Taycan Turbo S'
+    slug: porsche-taycan-turbo-s
+    evo: { number: 0, id: 86 }
+    gauntlet: { speed: 9, acceleration: 2, handling: 2, nitro: 3, mark: 4, division: 9, id: 87 }
+    status: { unblock: true, gold: true, id: 234 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 86
+    gameUpdate: 11
+    model: '718 Cayman GT4 Clubsport'
+    slug: porsche-718-cayman-gt4-clubsport
+    evo: { number: 0, id: 87 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 1, nitro: 2, mark: 3, division: 9, id: 89 }
+    status: { unblock: true, gold: true, id: 220 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 87
+    gameUpdate: 11
+    model: '911 GT1 Evolution'
+    slug: porsche-911-gt1-evolution
+    evo: { number: 0, id: 89 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 85 }
+    status: { unblock: true, gold: false, id: 222 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 88
+    gameUpdate: 11
+    model: '911 GT2 RS Clubsport'
+    slug: porsche-911-gt2-rs-clubsport
+    evo: { number: 0, id: 85 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 1, nitro: 2, mark: 1, division: 9, id: 88 }
+    status: { unblock: true, gold: true, id: 223 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 89
+    gameUpdate: 11
+    model: 'Carrera GT'
+    slug: porsche-carrera-gt
+    evo: { number: 0, id: 88 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 1, nitro: 1, mark: 3, division: 9, id: 86 }
+    status: { unblock: true, gold: false, id: 231 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 83
+    gameUpdate: 10
+    model: 'Civic Type-R'
+    slug: honda-civic-type-r
+    evo: { number: 0, id: 83 }
+    gauntlet: { speed: 9, acceleration: 3, handling: 2, nitro: 2, mark: 4, division: 9, id: 83 }
+    status: { unblock: true, gold: true, id: 115 }
+    settingBrand: { name: Honda, carsNumber: 1, slug: honda, id: 42 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 84
+    gameUpdate: 10
+    model: Evija
+    slug: lotus-evija
+    evo: { number: 0, id: 84 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 84 }
+    status: { unblock: true, gold: false, id: 169 }
+    settingBrand: { name: Lotus, carsNumber: 6, slug: lotus, id: 57 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 76
+    gameUpdate: 9
+    model: Nevera
+    slug: rimac-nevera
+    evo: { number: 0, id: 81 }
+    gauntlet: { speed: 1, acceleration: 1, handling: 3, nitro: 3, mark: 2, division: 9, id: 81 }
+    status: { unblock: true, gold: false, id: 245 }
+    settingBrand: { name: Rimac, carsNumber: 4, slug: rimac, id: 79 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 77
+    gameUpdate: 9
+    model: 'AT96 track version'
+    slug: techrules-at96-track-version
+    evo: { number: 0, id: 82 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 82 }
+    status: { unblock: true, gold: false, id: 252 }
+    settingBrand: { name: Techrules, carsNumber: 1, slug: techrules, id: 84 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 78
+    gameUpdate: 9
+    model: 'Corvette ZR1'
+    slug: chevrolet-corvette-zr1
+    evo: { number: 0, id: 76 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 1, mark: 2, division: 9, id: 76 }
+    status: { unblock: true, gold: true, id: 59 }
+    settingBrand: { name: Chevrolet, carsNumber: 6, slug: chevrolet, id: 21 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 79
+    gameUpdate: 9
+    model: 'Shelby GR-1'
+    slug: ford-shelby-gr-1
+    evo: { number: 0, id: 77 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 2, mark: 4, division: 9, id: 77 }
+    status: { unblock: true, gold: true, id: 102 }
+    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 35 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 80
+    gameUpdate: 9
+    model: Zerouno
+    slug: italdesign-zerouno
+    evo: { number: 0, id: 78 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 9, nitro: 3, mark: 5, division: 9, id: 78 }
+    status: { unblock: true, gold: true, id: 120 }
+    settingBrand: { name: Italdesign, carsNumber: 2, slug: italdesign, id: 48 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 81
+    gameUpdate: 9
+    model: Furai
+    slug: mazda-furai
+    evo: { number: 0, id: 79 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 3, nitro: 3, mark: 3, division: 9, id: 79 }
+    status: { unblock: true, gold: true, id: 175 }
+    settingBrand: { name: Mazda, carsNumber: 1, slug: mazda, id: 59 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 82
+    gameUpdate: 9
+    model: 'Leaf Nismo RC'
+    slug: nissan-leaf-nismo-rc
+    evo: { number: 0, id: 80 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 3, nitro: 2, mark: 5, division: 9, id: 80 }
+    status: { unblock: true, gold: true, id: 205 }
+    settingBrand: { name: Nissan, carsNumber: 8, slug: nissan, id: 68 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 73
+    gameUpdate: 8
+    model: 'DBS Superleggera'
+    slug: aston-martin-dbs-superleggera
+    evo: { number: 0, id: 73 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 73 }
+    status: { unblock: true, gold: true, id: 18 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 74
+    gameUpdate: 8
+    model: Battista
+    slug: automobili-pininfarina-battista
+    evo: { number: 0, id: 74 }
+    gauntlet: { speed: 2, acceleration: 1, handling: 1, nitro: 1, mark: 1, division: 9, id: 74 }
+    status: { unblock: true, gold: true, id: 30 }
+    settingBrand: { name: 'Automobili Pininfarina', carsNumber: 3, slug: automobili-pininfarina, id: 13 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 75
+    gameUpdate: 8
+    model: Dendrobium
+    slug: vanda-electrics-dendrobium
+    evo: { number: 0, id: 75 }
+    gauntlet: { speed: 3, acceleration: 1, handling: 1, nitro: 1, mark: 1, division: 9, id: 75 }
+    status: { unblock: true, gold: true, id: 260 }
+    settingBrand: { name: 'Vanda Electrics', carsNumber: 1, slug: vanda-electrics, id: 92 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 67
+    gameUpdate: 7
+    model: 'Hussarya 33'
+    slug: arrinera-hussarya-33
+    evo: { number: 0, id: 67 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 67 }
+    status: { unblock: true, gold: true, id: 12 }
+    settingBrand: { name: Arrinera, carsNumber: 1, slug: arrinera, id: 8 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 68
+    gameUpdate: 7
+    model: 'Scalo Superelletra'
+    slug: artega-scalo-superelletra
+    evo: { number: 0, id: 68 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 68 }
+    status: { unblock: true, gold: true, id: 13 }
+    settingBrand: { name: Artega, carsNumber: 1, slug: artega, id: 9 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 69
+    gameUpdate: 7
+    model: 'Vantage GT12'
+    slug: aston-martin-vantage-gt12
+    evo: { number: 0, id: 69 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 1, nitro: 1, mark: 3, division: 9, id: 69 }
+    status: { unblock: true, gold: true, id: 24 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 70
+    gameUpdate: 7
+    model: Griffith
+    slug: tvr-griffith
+    evo: { number: 0, id: 72 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 9, mark: 6, division: 9, id: 72 }
+    status: { unblock: true, gold: true, id: 257 }
+    settingBrand: { name: TVR, carsNumber: 2, slug: tvr, id: 90 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 71
+    gameUpdate: 7
+    model: Senna
+    slug: mclaren-senna
+    evo: { number: 0, id: 70 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 1, nitro: 1, mark: 1, division: 9, id: 70 }
+    status: { unblock: true, gold: false, id: 186 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 72
+    gameUpdate: 7
+    model: '911 GT3 RS'
+    slug: porsche-911-gt3-rs
+    evo: { number: 0, id: 71 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 1, nitro: 1, mark: 1, division: 9, id: 71 }
+    status: { unblock: true, gold: true, id: 224 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 62
+    gameUpdate: 6
+    model: '812 Superfast'
+    slug: ferrari-812-superfast
+    evo: { number: 0, id: 62 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 62 }
+    status: { unblock: true, gold: true, id: 82 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 63
+    gameUpdate: 6
+    model: 'LaFerrari Aperta'
+    slug: ferrari-laferrari-aperta
+    evo: { number: 0, id: 63 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 1, nitro: 2, mark: 2, division: 9, id: 63 }
+    status: { unblock: true, gold: true, id: 92 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 64
+    gameUpdate: 6
+    model: G60
+    slug: ginetta-g60
+    evo: { number: 0, id: 64 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 2, nitro: 2, mark: 5, division: 9, id: 64 }
+    status: { unblock: true, gold: true, id: 110 }
+    settingBrand: { name: Ginetta, carsNumber: 1, slug: ginetta, id: 39 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 65
+    gameUpdate: 6
+    model: Jesko
+    slug: koenigsegg-jesko
+    evo: { number: 0, id: 65 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 3, mark: 2, division: 9, id: 65 }
+    status: { unblock: true, gold: false, id: 133 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 66
+    gameUpdate: 6
+    model: '911 Targa 4S'
+    slug: porsche-911-targa-4s
+    evo: { number: 0, id: 66 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 9, mark: 6, division: 9, id: 66 }
+    status: { unblock: true, gold: true, id: 226 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 60
+    gameUpdate: 5
+    model: 'Aventador J'
+    slug: lamborghini-aventador-j
+    evo: { number: 0, id: 60 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 1, mark: 3, division: 9, id: 60 }
+    status: { unblock: true, gold: true, id: 139 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 61
+    gameUpdate: 5
+    model: 'SLR McLaren'
+    slug: mercedes-benz-slr-mclaren
+    evo: { number: 0, id: 61 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 1, mark: 3, division: 9, id: 61 }
+    status: { unblock: true, gold: false, id: 195 }
+    settingBrand: { name: Mercedes-Benz, carsNumber: 9, slug: mercedes-benz, id: 63 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 59
+    gameUpdate: 4
+    model: 'Huracán Evo Spyder'
+    slug: lamborghini-huracan-evo-spyder
+    evo: { number: 0, id: 59 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 2, nitro: 1, mark: 2, division: 9, id: 59 }
+    status: { unblock: true, gold: true, id: 149 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 56
+    gameUpdate: 3
+    model: 'N'
+    slug: apollo-n
+    evo: { number: 0, id: 56 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 56 }
+    status: { unblock: true, gold: true, id: 8 }
+    settingBrand: { name: Apollo, carsNumber: 3, slug: apollo, id: 5 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 57
+    gameUpdate: 3
+    model: Sarthe
+    slug: vencer-sarthe
+    evo: { number: 0, id: 57 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 3, mark: 4, division: 9, id: 57 }
+    status: { unblock: true, gold: true, id: 261 }
+    settingBrand: { name: Vencer, carsNumber: 1, slug: vencer, id: 93 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 58
+    gameUpdate: 3
+    model: 'TS1 GT Anniversary'
+    slug: zenvo-ts1-gt-anniversary
+    evo: { number: 0, id: 58 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 58 }
+    status: { unblock: true, gold: false, id: 271 }
+    settingBrand: { name: Zenvo, carsNumber: 4, slug: zenvo, id: 98 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 52
+    gameUpdate: 2
+    model: 'R1 550'
+    slug: sin-r1-550
+    evo: { number: 0, id: 55 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 3, nitro: 1, mark: 3, division: 9, id: 55 }
+    status: { unblock: true, gold: true, id: 249 }
+    settingBrand: { name: Sin, carsNumber: 1, slug: sin, id: 81 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 53
+    gameUpdate: 2
+    model: Akylone
+    slug: genty-akylone
+    evo: { number: 0, id: 52 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 2, mark: 2, division: 9, id: 52 }
+    status: { unblock: true, gold: true, id: 109 }
+    settingBrand: { name: Genty, carsNumber: 1, slug: genty, id: 38 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 54
+    gameUpdate: 2
+    model: Alfieri
+    slug: maserati-alfieri
+    evo: { number: 0, id: 53 }
+    gauntlet: { speed: 9, acceleration: 2, handling: 2, nitro: 2, mark: 3, division: 9, id: 53 }
+    status: { unblock: true, gold: true, id: 171 }
+    settingBrand: { name: Maserati, carsNumber: 4, slug: maserati, id: 58 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 55
+    gameUpdate: 2
+    model: '570S Spider'
+    slug: mclaren-570s-spider
+    evo: { number: 0, id: 54 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 2, nitro: 2, mark: 3, division: 9, id: 54 }
+    status: { unblock: true, gold: true, id: 176 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 50
+    gameUpdate: 1
+    model: J50
+    slug: ferrari-j50
+    evo: { number: 0, id: 50 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 50 }
+    status: { unblock: true, gold: true, id: 90 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 51
+    gameUpdate: 1
+    model: 'Elise Sprint 220'
+    slug: lotus-elise-sprint-220
+    evo: { number: 0, id: 51 }
+    gauntlet: { speed: 9, acceleration: 3, handling: 1, nitro: 2, mark: 3, division: 9, id: 51 }
+    status: { unblock: true, gold: true, id: 167 }
+    settingBrand: { name: Lotus, carsNumber: 6, slug: lotus, id: 57 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 1
+    gameUpdate: 0
+    model: '2017 NSX'
+    slug: acura-2017-nsx
+    evo: { number: 0, id: 1 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 1 }
+    status: { unblock: true, gold: true, id: 1 }
+    settingBrand: { name: Acura, carsNumber: 2, slug: acura, id: 1 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 2
+    gameUpdate: 0
+    model: 'Beast X'
+    slug: rezvani-beast-x
+    evo: { number: 0, id: 44 }
+    gauntlet: { speed: 9, acceleration: 2, handling: 2, nitro: 2, mark: 3, division: 9, id: 44 }
+    status: { unblock: true, gold: true, id: 242 }
+    settingBrand: { name: Rezvani, carsNumber: 1, slug: rezvani, id: 78 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 3
+    gameUpdate: 0
+    model: DB11
+    slug: aston-martin-db11
+    evo: { number: 0, id: 3 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 3 }
+    status: { unblock: true, gold: true, id: 15 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 4
+    gameUpdate: 0
+    model: Vulcan
+    slug: aston-martin-vulcan
+    evo: { number: 0, id: 2 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 2, mark: 4, division: 9, id: 2 }
+    status: { unblock: true, gold: true, id: 27 }
+    settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 5
+    gameUpdate: 0
+    model: Nemesis
+    slug: trion-nemesis
+    evo: { number: 0, id: 45 }
+    gauntlet: { speed: 1, acceleration: 9, handling: 3, nitro: 9, mark: 5, division: 9, id: 45 }
+    status: { unblock: true, gold: true, id: 255 }
+    settingBrand: { name: Trion, carsNumber: 1, slug: trion, id: 88 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 6
+    gameUpdate: 0
+    model: '3.0 CSL Hommage'
+    slug: bmw-3-0-csl-hommage
+    evo: { number: 24, id: 6 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 3, nitro: 3, mark: 6, division: 9, id: 4 }
+    status: { unblock: true, gold: true, id: 35 }
+    settingBrand: { name: BMW, carsNumber: 6, slug: bmw, id: 15 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 7
+    gameUpdate: 0
+    model: 'Force 1 V10'
+    slug: vlf-force-1-v10
+    evo: { number: 0, id: 46 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 46 }
+    status: { unblock: true, gold: true, id: 263 }
+    settingBrand: { name: VLF, carsNumber: 1, slug: vlf, id: 95 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 8
+    gameUpdate: 0
+    model: 'M4 GTS'
+    slug: bmw-m4-gts
+    evo: { number: 0, id: 5 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 2, nitro: 3, mark: 4, division: 9, id: 6 }
+    status: { unblock: true, gold: true, id: 38 }
+    settingBrand: { name: BMW, carsNumber: 6, slug: bmw, id: 15 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 9
+    gameUpdate: 0
+    model: 'Z4 LCI E89'
+    slug: bmw-z4-lci-e89
+    evo: { number: 0, id: 4 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 3, nitro: 3, mark: 6, division: 9, id: 5 }
+    status: { unblock: true, gold: true, id: 39 }
+    settingBrand: { name: BMW, carsNumber: 6, slug: bmw, id: 15 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 10
+    gameUpdate: 0
+    model: 'XL Sport Concept'
+    slug: volkswagen-xl-sport-concept
+    evo: { number: 0, id: 47 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 2, nitro: 2, mark: 5, division: 9, id: 47 }
+    status: { unblock: true, gold: true, id: 266 }
+    settingBrand: { name: Volkswagen, carsNumber: 3, slug: volkswagen, id: 96 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 11
+    gameUpdate: 0
+    model: 'Fenyr Supersport'
+    slug: w-motors-fenyr-supersport
+    evo: { number: 0, id: 48 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 49 }
+    status: { unblock: true, gold: false, id: 267 }
+    settingBrand: { name: 'W Motors', carsNumber: 3, slug: w-motors, id: 97 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 12
+    gameUpdate: 0
+    model: 'Lykan Hypersport'
+    slug: w-motors-lykan-hypersport
+    evo: { number: 0, id: 49 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 3, mark: 2, division: 9, id: 48 }
+    status: { unblock: true, gold: true, id: 269 }
+    settingBrand: { name: 'W Motors', carsNumber: 3, slug: w-motors, id: 97 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 13
+    gameUpdate: 0
+    model: Chiron
+    slug: bugatti-chiron
+    evo: { number: 0, id: 7 }
+    gauntlet: { speed: 1, acceleration: 2, handling: 3, nitro: 2, mark: 2, division: 9, id: 7 }
+    status: { unblock: true, gold: true, id: 44 }
+    settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 14
+    gameUpdate: 0
+    model: 'Cien Concept'
+    slug: cadillac-cien-concept
+    evo: { number: 0, id: 8 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 9, nitro: 2, mark: 5, division: 9, id: 8 }
+    status: { unblock: true, gold: true, id: 53 }
+    settingBrand: { name: Cadillac, carsNumber: 1, slug: cadillac, id: 20 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 15
+    gameUpdate: 0
+    model: 'Camaro LT'
+    slug: chevrolet-camaro-lt
+    evo: { number: 0, id: 10 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 3, nitro: 2, mark: 5, division: 9, id: 9 }
+    status: { unblock: true, gold: true, id: 54 }
+    settingBrand: { name: Chevrolet, carsNumber: 6, slug: chevrolet, id: 21 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 16
+    gameUpdate: 0
+    model: 'Camaro ZL1 50th Edition'
+    slug: chevrolet-camaro-zl1-50th-edition
+    evo: { number: 0, id: 9 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 1, nitro: 2, mark: 5, division: 9, id: 11 }
+    status: { unblock: true, gold: true, id: 55 }
+    settingBrand: { name: Chevrolet, carsNumber: 6, slug: chevrolet, id: 21 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 17
+    gameUpdate: 0
+    model: 'Corvette Grand Sport'
+    slug: chevrolet-corvette-grand-sport
+    evo: { number: 0, id: 11 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 1, nitro: 1, mark: 3, division: 9, id: 10 }
+    status: { unblock: true, gold: true, id: 57 }
+    settingBrand: { name: Chevrolet, carsNumber: 6, slug: chevrolet, id: 21 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 18
+    gameUpdate: 0
+    model: 'Challenger Pack 392 Hemi Scat'
+    slug: dodge-challenger-pack-392-hemi-scat
+    evo: { number: 0, id: 14 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 3, nitro: 2, mark: 5, division: 9, id: 14 }
+    status: { unblock: true, gold: true, id: 67 }
+    settingBrand: { name: Dodge, carsNumber: 5, slug: dodge, id: 28 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 19
+    gameUpdate: 0
+    model: 'Challenger SRT8'
+    slug: dodge-challenger-srt8
+    evo: { number: 0, id: 15 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 9, nitro: 3, mark: 6, division: 9, id: 12 }
+    status: { unblock: true, gold: true, id: 68 }
+    settingBrand: { name: Dodge, carsNumber: 5, slug: dodge, id: 28 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 20
+    gameUpdate: 0
+    model: 'Viper ACR'
+    slug: dodge-viper-acr
+    evo: { number: 0, id: 13 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 1, nitro: 2, mark: 3, division: 9, id: 15 }
+    status: { unblock: true, gold: true, id: 69 }
+    settingBrand: { name: Dodge, carsNumber: 5, slug: dodge, id: 28 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 21
+    gameUpdate: 0
+    model: 'Viper GTS'
+    slug: dodge-viper-gts
+    evo: { number: 0, id: 12 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 13 }
+    status: { unblock: true, gold: true, id: 70 }
+    settingBrand: { name: Dodge, carsNumber: 5, slug: dodge, id: 28 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 22
+    gameUpdate: 0
+    model: 'DS E-Tense'
+    slug: ds-automobiles-ds-e-tense
+    evo: { number: 0, id: 16 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 1, nitro: 2, mark: 5, division: 9, id: 16 }
+    status: { unblock: true, gold: true, id: 73 }
+    settingBrand: { name: 'DS Automobiles', carsNumber: 2, slug: ds-automobiles, id: 31 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 23
+    gameUpdate: 0
+    model: W70
+    slug: exotic-rides-w70
+    evo: { number: 0, id: 17 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 3, nitro: 3, mark: 3, division: 9, id: 17 }
+    status: { unblock: true, gold: false, id: 75 }
+    settingBrand: { name: 'Exotic Rides', carsNumber: 1, slug: exotic-rides, id: 32 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 24
+    gameUpdate: 0
+    model: '488 GTB'
+    slug: ferrari-488-gtb
+    evo: { number: 0, id: 18 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 21 }
+    status: { unblock: true, gold: true, id: 78 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 25
+    gameUpdate: 0
+    model: F12TDF
+    slug: ferrari-f12tdf
+    evo: { number: 0, id: 21 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 3, nitro: 1, mark: 3, division: 9, id: 19 }
+    status: { unblock: true, gold: true, id: 85 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 26
+    gameUpdate: 0
+    model: 'FXX K'
+    slug: ferrari-fxx-k
+    evo: { number: 0, id: 19 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 3, nitro: 2, mark: 2, division: 9, id: 18 }
+    status: { unblock: true, gold: true, id: 89 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 27
+    gameUpdate: 0
+    model: LaFerrari
+    slug: ferrari-laferrari
+    evo: { number: 0, id: 20 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 20 }
+    status: { unblock: true, gold: true, id: 91 }
+    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 28
+    gameUpdate: 0
+    model: GT
+    slug: ford-gt
+    evo: { number: 0, id: 23 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 9, nitro: 3, mark: 5, division: 9, id: 22 }
+    status: { unblock: true, gold: true, id: 97 }
+    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 35 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 29
+    gameUpdate: 0
+    model: 'Shelby GT350R'
+    slug: ford-shelby-gt350r
+    evo: { number: 24, id: 22 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 3, nitro: 3, mark: 6, division: 9, id: 23 }
+    status: { unblock: true, gold: true, id: 103 }
+    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 35 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 30
+    gameUpdate: 0
+    model: 003S
+    slug: glickenhaus-003s
+    evo: { number: 0, id: 24 }
+    gauntlet: { speed: 2, acceleration: 9, handling: 9, nitro: 2, mark: 5, division: 9, id: 24 }
+    status: { unblock: true, gold: true, id: 111 }
+    settingBrand: { name: Glickenhaus, carsNumber: 3, slug: glickenhaus, id: 40 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 31
+    gameUpdate: 0
+    model: 'Vulcano Titanium'
+    slug: icona-vulcano-titanium
+    evo: { number: 0, id: 25 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 25 }
+    status: { unblock: true, gold: true, id: 116 }
+    settingBrand: { name: Icona, carsNumber: 1, slug: icona, id: 45 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 32
+    gameUpdate: 0
+    model: 'F-Type SVR'
+    slug: jaguar-f-type-svr
+    evo: { number: 0, id: 26 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 26 }
+    status: { unblock: true, gold: false, id: 122 }
+    settingBrand: { name: Jaguar, carsNumber: 7, slug: jaguar, id: 49 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 33
+    gameUpdate: 0
+    model: Regera
+    slug: koenigsegg-regera
+    evo: { number: 0, id: 27 }
+    gauntlet: { speed: 1, acceleration: 3, handling: 3, nitro: 3, mark: 2, division: 9, id: 27 }
+    status: { unblock: true, gold: true, id: 135 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 34
+    gameUpdate: 0
+    model: Asterion
+    slug: lamborghini-asterion
+    evo: { number: 0, id: 29 }
+    gauntlet: { speed: 3, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 29 }
+    status: { unblock: true, gold: false, id: 137 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 35
+    gameUpdate: 0
+    model: 'Aventador SV Coupé'
+    slug: lamborghini-aventador-sv-coupe
+    evo: { number: 0, id: 32 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 30 }
+    status: { unblock: true, gold: true, id: 140 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 36
+    gameUpdate: 0
+    model: Centenario
+    slug: lamborghini-centenario
+    evo: { number: 0, id: 31 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 31 }
+    status: { unblock: true, gold: true, id: 142 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 37
+    gameUpdate: 0
+    model: Egoista
+    slug: lamborghini-egoista
+    evo: { number: 0, id: 28 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 32 }
+    status: { unblock: true, gold: true, id: 146 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 38
+    gameUpdate: 0
+    model: 'Terzo Millennio'
+    slug: lamborghini-terzo-millennio
+    evo: { number: 0, id: 30 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 3, nitro: 2, mark: 2, division: 9, id: 28 }
+    status: { unblock: true, gold: true, id: 163 }
+    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+-
+    id: 39
+    gameUpdate: 0
+    model: 'Evora Sport 410'
+    slug: lotus-evora-sport-410
+    evo: { number: 0, id: 33 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 33 }
+    status: { unblock: true, gold: true, id: 170 }
+    settingBrand: { name: Lotus, carsNumber: 6, slug: lotus, id: 57 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 40
+    gameUpdate: 0
+    model: P1
+    slug: mclaren-p1
+    evo: { number: 0, id: 34 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 3, nitro: 2, mark: 2, division: 9, id: 34 }
+    status: { unblock: true, gold: true, id: 184 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 41
+    gameUpdate: 0
+    model: 'AMG GT S'
+    slug: mercedes-benz-amg-gt-s
+    evo: { number: 0, id: 35 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 1, nitro: 2, mark: 3, division: 9, id: 35 }
+    status: { unblock: true, gold: true, id: 193 }
+    settingBrand: { name: Mercedes-Benz, carsNumber: 9, slug: mercedes-benz, id: 63 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 42
+    gameUpdate: 0
+    model: 'Lancer Evolution'
+    slug: mitsubishi-lancer-evolution
+    evo: { number: 0, id: 36 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 3, nitro: 2, mark: 5, division: 9, id: 36 }
+    status: { unblock: true, gold: true, id: 197 }
+    settingBrand: { name: Mitsubishi, carsNumber: 1, slug: mitsubishi, id: 64 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 43
+    gameUpdate: 0
+    model: '37OZ Nismo'
+    slug: nissan-37oz-nismo
+    evo: { number: 0, id: 37 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 1, nitro: 2, mark: 5, division: 9, id: 38 }
+    status: { unblock: true, gold: true, id: 201 }
+    settingBrand: { name: Nissan, carsNumber: 8, slug: nissan, id: 68 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 44
+    gameUpdate: 0
+    model: 'GT-R Nismo'
+    slug: nissan-gt-r-nismo
+    evo: { number: 0, id: 38 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 2, nitro: 2, mark: 2, division: 9, id: 37 }
+    status: { unblock: true, gold: true, id: 203 }
+    settingBrand: { name: Nissan, carsNumber: 8, slug: nissan, id: 68 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 45
+    gameUpdate: 0
+    model: 'Huayra BC'
+    slug: pagani-huayra-bc
+    evo: { number: 0, id: 39 }
+    gauntlet: { speed: 2, acceleration: 3, handling: 2, nitro: 1, mark: 2, division: 9, id: 39 }
+    status: { unblock: true, gold: true, id: 208 }
+    settingBrand: { name: Pagani, carsNumber: 7, slug: pagani, id: 70 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }
+-
+    id: 46
+    gameUpdate: 0
+    model: 'H2 Speed'
+    slug: pininfarina-h2-speed
+    evo: { number: 0, id: 40 }
+    gauntlet: { speed: 3, acceleration: 2, handling: 3, nitro: 2, mark: 2, division: 9, id: 40 }
+    status: { unblock: true, gold: true, id: 217 }
+    settingBrand: { name: Pininfarina, carsNumber: 2, slug: pininfarina, id: 72 }
+    settingClass: { label: Class, value: C, classOrder: 2, carsNumber: 58, median: 139, slug: class-c, id: 2 }
+-
+    id: 47
+    gameUpdate: 0
+    model: '718 Cayman'
+    slug: porsche-718-cayman
+    evo: { number: 0, id: 43 }
+    gauntlet: { speed: 9, acceleration: 9, handling: 2, nitro: 2, mark: 5, division: 9, id: 43 }
+    status: { unblock: true, gold: true, id: 219 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: D, classOrder: 1, carsNumber: 43, median: 125, slug: class-d, id: 1 }
+-
+    id: 48
+    gameUpdate: 0
+    model: '911 GTS Coupé'
+    slug: porsche-911-gts-coupe
+    evo: { number: 0, id: 42 }
+    gauntlet: { speed: 3, acceleration: 9, handling: 3, nitro: 3, mark: 4, division: 9, id: 42 }
+    status: { unblock: true, gold: true, id: 225 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: B, classOrder: 3, carsNumber: 72, median: 146, slug: class-b, id: 3 }
+-
+    id: 49
+    gameUpdate: 0
+    model: '918 Spyder'
+    slug: porsche-918-spyder
+    evo: { number: 0, id: 41 }
+    gauntlet: { speed: 2, acceleration: 2, handling: 3, nitro: 1, mark: 2, division: 9, id: 41 }
+    status: { unblock: true, gold: true, id: 228 }
+    settingBrand: { name: Porsche, carsNumber: 17, slug: porsche, id: 73 }
+    settingClass: { label: Class, value: A, classOrder: 4, carsNumber: 64, median: 150, slug: class-a, id: 4 }

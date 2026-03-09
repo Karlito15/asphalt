@@ -1,0 +1,175 @@
+-
+    Category: joker
+    Label: 'Joker 1*'
+    Value: 10
+    Filter: D
+    Position: 55
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 1*'
+    Value: 1
+    Filter: C
+    Position: 45
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 1*'
+    Value: 4
+    Filter: B
+    Position: 35
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 1*'
+    Value: 1
+    Filter: A
+    Position: 25
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 1*'
+    Value: 0
+    Filter: S
+    Position: 15
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 2*'
+    Value: 5
+    Filter: D
+    Position: 54
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 2*'
+    Value: 10
+    Filter: C
+    Position: 44
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 2*'
+    Value: 7
+    Filter: B
+    Position: 34
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 2*'
+    Value: 8
+    Filter: A
+    Position: 24
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 2*'
+    Value: 4
+    Filter: S
+    Position: 14
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 3*'
+    Value: 6
+    Filter: D
+    Position: 53
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 3*'
+    Value: 7
+    Filter: C
+    Position: 43
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 3*'
+    Value: 0
+    Filter: B
+    Position: 33
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 3*'
+    Value: 10
+    Filter: A
+    Position: 23
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 3*'
+    Value: 0
+    Filter: S
+    Position: 13
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 4*'
+    Value: 8
+    Filter: D
+    Position: 52
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 4*'
+    Value: 8
+    Filter: C
+    Position: 42
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 4*'
+    Value: 8
+    Filter: B
+    Position: 32
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 4*'
+    Value: 8
+    Filter: A
+    Position: 22
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 4*'
+    Value: 0
+    Filter: S
+    Position: 12
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 5*'
+    Value: 0
+    Filter: D
+    Position: 51
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 5*'
+    Value: 0
+    Filter: C
+    Position: 41
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 5*'
+    Value: 6
+    Filter: B
+    Position: 31
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 5*'
+    Value: 0
+    Filter: A
+    Position: 21
+    Active: true
+-
+    Category: joker
+    Label: 'Joker 5*'
+    Value: 0
+    Filter: S
+    Position: 11
+    Active: true

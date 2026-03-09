@@ -61,23 +61,23 @@ class UnitPriceService implements CSVInterface
     {
         $entity = new SettingUnitPrice();
         $entity
-            ->setLevel01((int) $datas['Level01'])
-            ->setLevel02((int) $datas['Level02'])
-            ->setLevel03((int) $datas['Level03'])
-            ->setLevel04((int) $datas['Level04'])
-            ->setLevel05((int) $datas['Level05'])
-            ->setLevel06((int) $datas['Level06'])
-            ->setLevel07((int) $datas['Level07'])
-            ->setLevel08((int) $datas['Level08'])
-            ->setLevel09((int) $datas['Level09'])
-            ->setLevel10((int) $datas['Level10'])
-            ->setCommon((int) $datas['Common'])
-            ->setRare((int) $datas['Rare'])
+            ->setLevel01($this->convertStringToInteger($datas['Level01']))
+            ->setLevel02($this->convertStringToInteger($datas['Level02']))
+            ->setLevel03($this->convertStringToInteger($datas['Level03']))
+            ->setLevel04($this->convertStringToInteger($datas['Level04']))
+            ->setLevel05($this->convertStringToInteger($datas['Level05']))
+            ->setLevel06($this->convertStringToInteger($datas['Level06']))
+            ->setLevel07($this->convertStringToInteger($datas['Level07']))
+            ->setLevel08($this->convertStringToInteger($datas['Level08']))
+            ->setLevel09($this->convertStringToInteger($datas['Level09']))
+            ->setLevel10($this->convertStringToInteger($datas['Level10']))
+            ->setCommon($this->convertStringToInteger($datas['Common']))
+            ->setRare($this->convertStringToInteger($datas['Rare']))
         ;
-        ($datas['Level11'] === '\0' OR $datas['Level11'] === '') ? $entity->setLevel11(null) : $entity->setLevel11((int) $datas['Level11']);
-        ($datas['Level12'] === '\0' OR $datas['Level12'] === '') ? $entity->setLevel12(null) : $entity->setLevel12((int) $datas['Level12']);
-        ($datas['Level13'] === '\0' OR $datas['Level13'] === '') ? $entity->setLevel13(null) : $entity->setLevel13((int) $datas['Level13']);
-        ($datas['Epic'] === '\0' OR $datas['Epic'] === '') ? $entity->setEpic(null) : $entity->setEpic((int) $datas['Epic']);
+        ($datas['Level11'] === '\0' OR $datas['Level11'] === '') ? $entity->setLevel11(null) : $entity->setLevel11($this->convertStringToInteger($datas['Level11']));
+        ($datas['Level12'] === '\0' OR $datas['Level12'] === '') ? $entity->setLevel12(null) : $entity->setLevel12($this->convertStringToInteger($datas['Level12']));
+        ($datas['Level13'] === '\0' OR $datas['Level13'] === '') ? $entity->setLevel13(null) : $entity->setLevel13($this->convertStringToInteger($datas['Level13']));
+        ($datas['Epic']    === '\0' OR $datas['Epic']    === '') ? $entity->setEpic(null) : $entity->setEpic($this->convertStringToInteger($datas['Epic']));
 
         return $entity;
     }

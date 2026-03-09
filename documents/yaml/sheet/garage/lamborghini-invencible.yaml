@@ -1,0 +1,96 @@
+id: 230
+stars: 5
+gameUpdate: 34
+carOrder: 54
+statOrder: 32
+level: 12
+epic: 8
+model: Invencible
+slug: lamborghini-invencible
+blueprint:
+    star1: '45'
+    star2: 17
+    star3: 23
+    star4: 32
+    star5: 45
+    star6: 0
+    total: 162
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 1
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2319
+    star1: 2564
+    star2: 2913
+    star3: 3216
+    star4: 3662
+    star5: 4091
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 340.4
+    acceleration: 88.49
+    handling: 75.74
+    nitro: 67.64
+    average: 143.07
+statMin:
+    speed: 322.0
+    acceleration: 75.5
+    handling: 49.92
+    nitro: 45.84
+    average: 123.32
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingBlueprint:
+    star1: '45'
+    star2: 17
+    star3: 23
+    star4: 32
+    star5: 45
+    star6: 0
+    total: 162
+settingBrand:
+    name: Lamborghini
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 9890
+    level02: 16100
+    level03: 25800
+    level04: 38700
+    level05: 55900
+    level06: 78500
+    level07: 109500
+    level08: 153500
+    level09: 214500
+    level10: 300500
+    level11: 421000
+    level12: 589000
+    level13: 967500
+    common: 70000
+    rare: 140000
+    epic: 420000

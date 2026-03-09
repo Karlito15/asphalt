@@ -1,0 +1,96 @@
+id: 4
+stars: 3
+gameUpdate: 0
+carOrder: 7
+statOrder: 19
+level: 10
+epic: 4
+model: 'M4 GTS'
+slug: bmw-m4-gts
+blueprint:
+    star1: '40'
+    star2: 20
+    star3: 50
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 110
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 2
+    nitro: 3
+    mark: 4
+    division: 9
+rank:
+    star0: 1309
+    star1: 1667
+    star2: 2112
+    star3: 2447
+    star4: 0
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 340.4
+    acceleration: 77.38
+    handling: 67.26
+    nitro: 55.85
+    average: 135.22
+statMin:
+    speed: 305.0
+    acceleration: 65.8
+    handling: 43.9
+    nitro: 38.58
+    average: 113.32
+upgrade:
+    speed: 10
+    acceleration: 10
+    handling: 10
+    nitro: 10
+    common: 16
+    rare: 4
+    epic: 4
+settingBlueprint:
+    star1: '40'
+    star2: 20
+    star3: 50
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 110
+settingBrand:
+    name: BMW
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 10
+    common: 16
+    rare: 4
+    epic: 4
+settingUnitPrice:
+    level01: 1500
+    level02: 2400
+    level03: 3900
+    level04: 5900
+    level05: 8500
+    level06: 12000
+    level07: 16500
+    level08: 23000
+    level09: 32500
+    level10: 45500
+    level11: null
+    level12: null
+    level13: null
+    common: 10000
+    rare: 20000
+    epic: 60000

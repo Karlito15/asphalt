@@ -1,0 +1,96 @@
+id: 148
+stars: 5
+gameUpdate: 21
+carOrder: 39
+statOrder: 4
+level: 12
+epic: 1
+model: 'Electric R'
+slug: volkswagen-electric-r
+blueprint:
+    star1: Key
+    star2: 22
+    star3: 30
+    star4: 35
+    star5: 38
+    star6: 0
+    total: 125
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 1
+    handling: 3
+    nitro: 2
+    mark: 3
+    division: 9
+rank:
+    star0: 1510
+    star1: 1711
+    star2: 1947
+    star3: 2214
+    star4: 2519
+    star5: 3054
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 290.5
+    acceleration: 88.5
+    handling: 57.91
+    nitro: 67.93
+    average: 126.21
+statMin:
+    speed: 270.0
+    acceleration: 82.45
+    handling: 37.85
+    nitro: 50.84
+    average: 110.29
+upgrade:
+    speed: 6
+    acceleration: 6
+    handling: 6
+    nitro: 6
+    common: 12
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 22
+    star3: 30
+    star4: 35
+    star5: 38
+    star6: 0
+    total: 125
+settingBrand:
+    name: Volkswagen
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 12
+    common: 36
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 6440
+    level02: 10500
+    level03: 16800
+    level04: 25200
+    level05: 36400
+    level06: 51000
+    level07: 71500
+    level08: 100000
+    level09: 140000
+    level10: 196000
+    level11: 274000
+    level12: 384000
+    level13: null
+    common: 15000
+    rare: 30000
+    epic: 90000

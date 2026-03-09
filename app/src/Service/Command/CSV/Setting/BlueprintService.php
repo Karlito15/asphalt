@@ -62,11 +62,11 @@ class BlueprintService implements CSVInterface
         $entity = new SettingBlueprint();
         $entity
             ->setStar1((string) $datas['Star1'])
-            ->setStar2((int) $datas['Star2'])
-            ->setStar3((int) $datas['Star3'])
-            ->setStar4((int) $datas['Star4'])
-            ->setStar5((int) $datas['Star5'])
-            ->setStar6((int) $datas['Star6'])
+            ->setStar2($this->convertStringToInteger($datas['Star2']))
+            ->setStar3($this->convertStringToInteger($datas['Star3']))
+            ->setStar4($this->convertStringToInteger($datas['Star4']))
+            ->setStar5($this->convertStringToInteger($datas['Star5']))
+            ->setStar6($this->convertStringToInteger($datas['Star6']))
         ;
 
         return $entity;

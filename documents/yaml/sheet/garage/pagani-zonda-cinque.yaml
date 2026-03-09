@@ -1,0 +1,96 @@
+id: 299
+stars: 6
+gameUpdate: 44
+carOrder: 24
+statOrder: 18
+level: 3
+epic: 0
+model: 'Zonda Cinque'
+slug: pagani-zonda-cinque
+blueprint:
+    star1: '30'
+    star2: 24
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 54
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 9
+    handling: 2
+    nitro: 2
+    mark: 3
+    division: 9
+rank:
+    star0: 2283
+    star1: 2526
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 4105
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 369.7
+    acceleration: 79.84
+    handling: 74.76
+    nitro: 73.22
+    average: 149.38
+statMin:
+    speed: 351.0
+    acceleration: 69.4
+    handling: 50.02
+    nitro: 46.7
+    average: 129.28
+upgrade:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    common: 12
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '30'
+    star2: 35
+    star3: 40
+    star4: 45
+    star5: 55
+    star6: 65
+    total: 270
+settingBrand:
+    name: Pagani
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

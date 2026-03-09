@@ -1,0 +1,96 @@
+id: 140
+stars: 5
+gameUpdate: 20
+carOrder: 25
+statOrder: 39
+level: 12
+epic: 8
+model: Elva
+slug: mclaren-elva
+blueprint:
+    star1: '45'
+    star2: 17
+    star3: 23
+    star4: 32
+    star5: 45
+    star6: 0
+    total: 162
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 3
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2211
+    star1: 2387
+    star2: 2645
+    star3: 2878
+    star4: 3213
+    star5: 3533
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 339.1
+    acceleration: 81.31
+    handling: 75.51
+    nitro: 65.9
+    average: 140.46
+statMin:
+    speed: 326.0
+    acceleration: 74.8
+    handling: 50.36
+    nitro: 49.15
+    average: 125.08
+upgrade:
+    speed: 9
+    acceleration: 9
+    handling: 9
+    nitro: 9
+    common: 26
+    rare: 12
+    epic: 0
+settingBlueprint:
+    star1: '45'
+    star2: 17
+    star3: 23
+    star4: 32
+    star5: 45
+    star6: 0
+    total: 162
+settingBrand:
+    name: McLaren
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 7820
+    level02: 12800
+    level03: 20400
+    level04: 30600
+    level05: 44200
+    level06: 62000
+    level07: 86500
+    level08: 121500
+    level09: 170000
+    level10: 237500
+    level11: 333000
+    level12: 466000
+    level13: null
+    common: 50000
+    rare: 100000
+    epic: 300000

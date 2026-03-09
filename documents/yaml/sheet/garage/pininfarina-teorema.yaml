@@ -1,0 +1,96 @@
+id: 270
+stars: 6
+gameUpdate: 40
+carOrder: 22
+statOrder: 54
+level: 0
+epic: 2
+model: Teorema
+slug: pininfarina-teorema
+blueprint:
+    star1: '38'
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 38
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 9
+    handling: 3
+    nitro: 3
+    mark: 4
+    division: 9
+rank:
+    star0: 3154
+    star1: 3322
+    star2: 3523
+    star3: 3735
+    star4: 3961
+    star5: 4225
+    star6: 4473
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 422.9
+    acceleration: 77.14
+    handling: 55.74
+    nitro: 51.7
+    average: 151.87
+statMin:
+    speed: 401.5
+    acceleration: 73.9
+    handling: 47.61
+    nitro: 33.51
+    average: 139.13
+upgrade:
+    speed: 0
+    acceleration: 0
+    handling: 0
+    nitro: 0
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '85'
+    star2: 25
+    star3: 29
+    star4: 38
+    star5: 54
+    star6: 69
+    total: 300
+settingBrand:
+    name: Pininfarina
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

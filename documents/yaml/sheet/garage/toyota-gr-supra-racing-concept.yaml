@@ -1,0 +1,96 @@
+id: 291
+stars: 4
+gameUpdate: 43
+carOrder: 35
+statOrder: 13
+level: 9
+epic: 1
+model: 'GR Supra Racing Concept'
+slug: toyota-gr-supra-racing-concept
+blueprint:
+    star1: '15'
+    star2: 20
+    star3: 25
+    star4: 2
+    star5: 0
+    star6: 0
+    total: 62
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 2
+    nitro: 3
+    mark: 4
+    division: 9
+rank:
+    star0: 1454
+    star1: 1649
+    star2: 1875
+    star3: 2115
+    star4: 2434
+    star5: 2930
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 312.0
+    acceleration: 71.98
+    handling: 61.16
+    nitro: 53.66
+    average: 124.7
+statMin:
+    speed: 298.0
+    acceleration: 63.1
+    handling: 43.89
+    nitro: 30.69
+    average: 108.92
+upgrade:
+    speed: 0
+    acceleration: 0
+    handling: 0
+    nitro: 0
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '15'
+    star2: 20
+    star3: 25
+    star4: 30
+    star5: 35
+    star6: 0
+    total: 125
+settingBrand:
+    name: Toyota
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 12
+    common: 36
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 99999
+    level02: 99999
+    level03: 99999
+    level04: 99999
+    level05: 99999
+    level06: 99999
+    level07: 99999
+    level08: 99999
+    level09: 99999
+    level10: 999999
+    level11: 999999
+    level12: 999999
+    level13: 999999
+    common: 99999
+    rare: 999999
+    epic: 999999

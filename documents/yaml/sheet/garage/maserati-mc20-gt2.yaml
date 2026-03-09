@@ -1,0 +1,96 @@
+id: 247
+stars: 5
+gameUpdate: 37
+carOrder: 43
+statOrder: 39
+level: 6
+epic: 5
+model: 'MC20 GT2'
+slug: maserati-mc20-gt2
+blueprint:
+    star1: '0'
+    star2: 25
+    star3: 14
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 39
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 2
+    handling: 2
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 2211
+    star1: 2414
+    star2: 2705
+    star3: 2962
+    star4: 3292
+    star5: 3832
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 336.3
+    acceleration: 83.68
+    handling: 63.95
+    nitro: 46.53
+    average: 132.62
+statMin:
+    speed: 323.0
+    acceleration: 73.9
+    handling: 39.2
+    nitro: 28.61
+    average: 116.18
+upgrade:
+    speed: 6
+    acceleration: 6
+    handling: 6
+    nitro: 6
+    common: 18
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 25
+    star3: 38
+    star4: 52
+    star5: 0
+    star6: 0
+    total: 115
+settingBrand:
+    name: Maserati
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 10
+    common: 24
+    rare: 4
+    epic: 8
+settingUnitPrice:
+    level01: 7130
+    level02: 11600
+    level03: 18600
+    level04: 27900
+    level05: 40300
+    level06: 56500
+    level07: 79000
+    level08: 110500
+    level09: 155000
+    level10: 216500
+    level11: 303000
+    level12: 425000
+    level13: null
+    common: 40000
+    rare: 80000
+    epic: 240000

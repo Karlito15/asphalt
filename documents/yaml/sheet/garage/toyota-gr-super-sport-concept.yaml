@@ -1,0 +1,96 @@
+id: 285
+stars: 5
+gameUpdate: 42
+carOrder: 52
+statOrder: 47
+level: 6
+epic: 1
+model: 'GR Super Sport Concept'
+slug: toyota-gr-super-sport-concept
+blueprint:
+    star1: ''
+    star2: 26
+    star3: 13
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 39
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 2
+    handling: 3
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 2229
+    star1: 2478
+    star2: 2843
+    star3: 3168
+    star4: 3628
+    star5: 4076
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 364.8
+    acceleration: 85.64
+    handling: 56.7
+    nitro: 45.09
+    average: 138.06
+statMin:
+    speed: 350.0
+    acceleration: 77.5
+    handling: 37.69
+    nitro: 16.02
+    average: 120.3
+upgrade:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    common: 10
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 26
+    star3: 34
+    star4: 40
+    star5: 62
+    star6: 0
+    total: 162
+settingBrand:
+    name: Toyota
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 7820
+    level02: 12800
+    level03: 20400
+    level04: 30600
+    level05: 44200
+    level06: 62000
+    level07: 86500
+    level08: 121500
+    level09: 170000
+    level10: 237500
+    level11: 333000
+    level12: 466000
+    level13: null
+    common: 50000
+    rare: 100000
+    epic: 300000

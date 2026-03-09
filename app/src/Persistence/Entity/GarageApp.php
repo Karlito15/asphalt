@@ -35,7 +35,7 @@ class GarageApp
     #[ORM\GeneratedValue]
     #[ORM\Column(nullable: true, options: ['unsigned' => true])]
     #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['garage'])]
+    #[Groups(['index', 'sheet'])]
     protected ?int $id = null;
 
     #[ORM\Column(type: Types::SMALLINT, length: 1, nullable: false, options: ['default' => 3, 'unsigned' => true])]
@@ -43,7 +43,7 @@ class GarageApp
     #[Assert\NotNull]
     #[Assert\Positive]
     #[Assert\Range(min: 3, max: 6)]
-    #[Groups(['other'])]
+    #[Groups(['sheet'])]
     protected int $stars = 3;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -51,7 +51,7 @@ class GarageApp
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 99)]
-    #[Groups(['garage'])]
+    #[Groups(['index', 'sheet'])]
     protected int $gameUpdate = 0;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: false, options: ['default' => 99, 'unsigned' => true])]
@@ -59,7 +59,7 @@ class GarageApp
     #[Assert\NotNull]
     #[Assert\Positive]
     #[Assert\Range(min: 1, max: 99)]
-    #[Groups(['other'])]
+    #[Groups(['sheet'])]
     protected int $carOrder = 99;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: false, options: ['default' => 99, 'unsigned' => true])]
@@ -67,7 +67,7 @@ class GarageApp
     #[Assert\NotNull]
     #[Assert\Positive]
     #[Assert\Range(min: 1, max: 99)]
-    #[Groups(['other'])]
+    #[Groups(['sheet'])]
     protected int $statOrder = 99;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -75,7 +75,7 @@ class GarageApp
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 13)]
-    #[Groups(['other'])]
+    #[Groups(['sheet'])]
     protected int $level = 0;
 
     #[ORM\Column(type: Types::SMALLINT, length: 2, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -83,14 +83,21 @@ class GarageApp
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 16,)]
-    #[Groups(['other'])]
+    #[Groups(['sheet'])]
     protected int $epic = 0;
+
+    #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
+    #[Assert\PositiveOrZero]
+    #[Assert\Range(min: 0, max: 24)]
+    #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
+    #[Groups(['index', 'sheet'])]
+    protected int $evo = 0;
 
     #[ORM\Column(type: Types::STRING, length: 128, nullable: false)]
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Length(min: 1, max: 128)]
-    #[Groups(['garage'])]
+    #[Groups(['index', 'sheet'])]
     protected string $model;
 
     #[ORM\Column(type: Types::STRING, length: 255, unique: true, nullable: false)]
@@ -99,66 +106,68 @@ class GarageApp
     #[Assert\NotNull]
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['garage'])]
+    #[Groups(['index', 'sheet'])]
     protected string $slug;
 
     #[ORM\OneToOne(targetEntity: GarageBlueprint::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    #[Groups(['sheet'])]
     protected GarageBlueprint $blueprint;
 
-    #[ORM\OneToOne(targetEntity: GarageBlueprintState::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    protected GarageBlueprintState $blueprintState;
-
-    #[ORM\OneToOne(targetEntity: GarageEvo::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    protected GarageEvo $evo;
-
-    #[ORM\OneToOne(targetEntity: GarageEvoState::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    protected GarageEvoState $evoState;
-
     #[ORM\OneToOne(targetEntity: GarageGauntlet::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    #[Groups(['index', 'sheet'])]
     protected GarageGauntlet $gauntlet;
 
     #[ORM\OneToOne(targetEntity: GarageRank::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    #[Groups(['sheet'])]
     protected GarageRank $rank;
 
     #[ORM\OneToOne(targetEntity: GarageStatActual::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    #[Groups(['sheet'])]
     protected GarageStatActual $statActual;
 
     #[ORM\OneToOne(targetEntity: GarageStatMax::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    #[Groups(['sheet'])]
     protected GarageStatMax $statMax;
 
     #[ORM\OneToOne(targetEntity: GarageStatMin::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    #[Groups(['sheet'])]
     protected GarageStatMin $statMin;
 
     #[ORM\OneToOne(targetEntity: GarageStatus::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    #[Groups(['garage'])]
+    #[Groups(['index', 'sheet'])]
     protected GarageStatus $status;
 
-    #[ORM\OneToOne(targetEntity: GarageUpgrade::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    protected GarageUpgrade $upgrade;
+    #[ORM\OneToOne(targetEntity: GarageStatusControl::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    #[Groups(['index', 'sheet'])]
+    protected GarageStatusControl $statusControl;
 
-    #[ORM\OneToOne(targetEntity: GarageUpgradeState::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
-    protected GarageUpgradeState $upgradeState;
+    #[ORM\OneToOne(targetEntity: GarageUpgrade::class, mappedBy: 'garage', cascade: ['persist'], orphanRemoval: true)]
+    #[Groups(['sheet'])]
+    protected GarageUpgrade $upgrade;
 
     #[ORM\ManyToOne(targetEntity: SettingBlueprint::class, cascade: ['persist'], inversedBy: 'garage')]
     #[Assert\Type(SettingBlueprint::class)]
+    #[Groups(['sheet'])]
     protected ?SettingBlueprint $settingBlueprint = null;
 
     #[ORM\ManyToOne(targetEntity: SettingBrand::class, cascade: ['persist'], inversedBy: 'garage')]
     #[Assert\Type(SettingBrand::class)]
-    #[Groups(['garage'])]
+    #[Groups(['index', 'sheet'])]
     protected ?SettingBrand $settingBrand = null;
 
     #[ORM\ManyToOne(targetEntity: SettingClass::class, cascade: ['persist'], inversedBy: 'garage')]
     #[Assert\Type(SettingClass::class)]
-    #[Groups(['garage'])]
+    #[Groups(['index', 'sheet'])]
     protected ?SettingClass $settingClass = null;
 
     #[ORM\ManyToOne(targetEntity: SettingLevel::class, cascade: ['persist'], inversedBy: 'garage')]
     #[Assert\Type(SettingLevel::class)]
+    #[Groups(['sheet'])]
     protected ?SettingLevel $settingLevel = null;
 
     #[ORM\ManyToOne(targetEntity: SettingUnitPrice::class, cascade: ['persist'], inversedBy: 'garage')]
     #[Assert\Type(SettingUnitPrice::class)]
+    #[Groups(['sheet'])]
     protected ?SettingUnitPrice $settingUnitPrice = null;
 
     public function __toString(): string
@@ -243,6 +252,18 @@ class GarageApp
         return $this;
     }
 
+    public function getEvo(): int
+    {
+        return $this->evo;
+    }
+
+    public function setEvo(int $evo): static
+    {
+        $this->evo = $evo;
+
+        return $this;
+    }
+
     public function getModel(): ?string
     {
         return $this->model;
@@ -291,28 +312,6 @@ class GarageApp
         }
 
         $this->blueprint = $blueprint;
-
-        return $this;
-    }
-
-    public function getEvo(): ?GarageEvo
-    {
-        return $this->evo;
-    }
-
-    public function setEvo(?GarageEvo $evo): static
-    {
-        // unset the owning side of the relation if necessary
-        if ($evo === null && $this->evo !== null) {
-            $this->evo->setGarage(null);
-        }
-
-        // set the owning side of the relation if necessary
-        if ($evo !== null && $evo->getGarage() !== $this) {
-            $evo->setGarage($this);
-        }
-
-        $this->evo = $evo;
 
         return $this;
     }
@@ -445,6 +444,28 @@ class GarageApp
         }
 
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getStatusControl(): ?GarageStatusControl
+    {
+        return $this->statusControl;
+    }
+
+    public function setStatusControl(?GarageStatusControl $statusControl): static
+    {
+        // unset the owning side of the relation if necessary
+        if ($statusControl === null && $this->statusControl !== null) {
+            $this->statusControl->setGarage(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($statusControl !== null && $statusControl->getGarage() !== $this) {
+            $statusControl->setGarage($this);
+        }
+
+        $this->statusControl = $statusControl;
 
         return $this;
     }

@@ -1,0 +1,96 @@
+id: 30
+stars: 6
+gameUpdate: 0
+carOrder: 10
+statOrder: 69
+level: 13
+epic: 16
+model: Egoista
+slug: lamborghini-egoista
+blueprint:
+    star1: '60'
+    star2: 13
+    star3: 16
+    star4: 25
+    star5: 38
+    star6: 48
+    total: 200
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 2
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 3122
+    star1: 3267
+    star2: 3428
+    star3: 3605
+    star4: 3789
+    star5: 4010
+    star6: 4213
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 366.4
+    acceleration: 84.48
+    handling: 61.54
+    nitro: 72.02
+    average: 146.11
+statMin:
+    speed: 350.0
+    acceleration: 78.4
+    handling: 49.16
+    nitro: 65.97
+    average: 135.88
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingBlueprint:
+    star1: '60'
+    star2: 13
+    star3: 16
+    star4: 25
+    star5: 38
+    star6: 48
+    total: 200
+settingBrand:
+    name: Lamborghini
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

@@ -1,0 +1,96 @@
+id: 73
+stars: 5
+gameUpdate: 8
+carOrder: 47
+statOrder: 16
+level: 12
+epic: 8
+model: 'DBS Superleggera'
+slug: aston-martin-dbs-superleggera
+blueprint:
+    star1: '45'
+    star2: 17
+    star3: 23
+    star4: 32
+    star5: 45
+    star6: 0
+    total: 162
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 9
+    handling: 2
+    nitro: 2
+    mark: 3
+    division: 9
+rank:
+    star0: 2412
+    star1: 2638
+    star2: 2963
+    star3: 3251
+    star4: 3666
+    star5: 4059
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 355.4
+    acceleration: 79.16
+    handling: 70.74
+    nitro: 73.88
+    average: 144.8
+statMin:
+    speed: 339.0
+    acceleration: 69.4
+    handling: 48.04
+    nitro: 51.53
+    average: 126.99
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingBlueprint:
+    star1: '45'
+    star2: 17
+    star3: 23
+    star4: 32
+    star5: 45
+    star6: 0
+    total: 162
+settingBrand:
+    name: 'Aston Martin'
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 7820
+    level02: 12800
+    level03: 20400
+    level04: 30600
+    level05: 44200
+    level06: 62000
+    level07: 86500
+    level08: 121500
+    level09: 170000
+    level10: 237500
+    level11: 333000
+    level12: 466000
+    level13: null
+    common: 50000
+    rare: 100000
+    epic: 300000

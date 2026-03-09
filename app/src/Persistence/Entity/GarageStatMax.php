@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\GarageStatMaxRepository;
-use App\Toolbox\Abstract\StatAbstract;
+use App\Service\Abstract\StatAbstract;
 use App\Toolbox\Trait\Entity\GarageEntity;
 use App\Toolbox\Trait\Entity\IdEntity;
 use Doctrine\ORM\Mapping as ORM;
@@ -28,7 +28,7 @@ class GarageStatMax extends StatAbstract
     use SoftDeleteableEntity;
     use IdEntity, GarageEntity;
 
-    #[ORM\OneToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'statMax')]
+    #[ORM\OneToOne(targetEntity: GarageApp::class, inversedBy: 'statMax', cascade: ['persist'])]
     #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
     protected GarageApp $garage;
 }

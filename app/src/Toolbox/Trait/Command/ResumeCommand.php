@@ -30,7 +30,7 @@ trait ResumeCommand
          * cyan, default, gray, green, magenta, red, white, yellow
          */
         $io->writeln([
-            '<fg=white;bg=bright-green;>  Execution Time      :      '               . $time . '  </>',
+            '<fg=white;bg=bright-green;>  Execution Time      :     '               . $time . '  </>',
             '<fg=black;bg=bright-white;>  The script is using : ' . round($mem_usage / 1048576) . ' MB of memory.  </>',
             '<fg=black;bg=bright-white;>  Peak usage          : ' . round($mem_peak / 1048576) . ' MB of memory.  </>',
         ]);

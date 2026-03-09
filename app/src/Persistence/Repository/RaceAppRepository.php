@@ -13,6 +13,8 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class RaceAppRepository extends ServiceEntityRepository
 {
+//    use SitemapRepository;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, RaceApp::class);
@@ -69,6 +71,32 @@ class RaceAppRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    // SITEMAP
+
+    /**
+     * Retourne les informations pour le sitemap
+     *
+     * @return array
+     */
+    public function sitemap(): array
+    {
+        return $this->createQueryBuilder('r')
+            // SELECT
+            ->select("r.id as id, r.slug AS slug")
+            ->addselect('RaceSeason.chapter AS Chapter')
+            ->addselect('RaceSeason.name AS Season')
+            // JOIN
+            ->innerJoin('r.season', 'RaceSeason')
+            // ORDER BY
+            ->addOrderBy('Chapter', 'ASC')
+            ->addOrderBy('Season', 'ASC')
+            ->addOrderBy('r.raceOrder', 'ASC')
+            // QUERY
+            ->getQuery()
+            ->getArrayResult()
+        ;
     }
 
     //    /**

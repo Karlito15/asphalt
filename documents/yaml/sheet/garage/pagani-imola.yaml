@@ -1,0 +1,96 @@
+id: 129
+stars: 6
+gameUpdate: 18
+carOrder: 54
+statOrder: 11
+level: 13
+epic: 16
+model: Imola
+slug: pagani-imola
+blueprint:
+    star1: '70'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 59
+    total: 267
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 3254
+    star1: 3430
+    star2: 3631
+    star3: 3817
+    star4: 4060
+    star5: 4307
+    star6: 4545
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 378.9
+    acceleration: 80.23
+    handling: 72.17
+    nitro: 71.14
+    average: 150.61
+statMin:
+    speed: 360.0
+    acceleration: 73.0
+    handling: 47.83
+    nitro: 51.73
+    average: 133.14
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 20
+    rare: 18
+    epic: 1
+settingBlueprint:
+    star1: '70'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 59
+    total: 267
+settingBrand:
+    name: Pagani
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

@@ -38,29 +38,13 @@ class GarageGauntletRepository extends ServiceEntityRepository
                 'gg.mark AS Mark',
                 'gg.division AS Division',
             ])
-            ->join('g.settingBrand', 'b')
             ->join('gg.garage', 'g')
+            ->join('g.settingBrand', 'b')
             ->orderBy('g.gameUpdate', 'ASC')
             ->addOrderBy('b.name', 'ASC')
         ;
 
         return $qb->getQuery()->getArrayResult();
-//
-//        $datas = [];
-//        foreach ($this->findAll() as $garage) {
-//            $datas[] = [
-//                'Speed'         => $garage->getSpeed(),
-//                'Acceleration'  => $garage->getAcceleration(),
-//                'Handling'      => $garage->getHandling(),
-//                'Nitro'         => $garage->getNitro(),
-//                'Mark'          => $garage->getMark(),
-//                'Division'      => $garage->getDivision(),
-//                'Brand'         => $garage->getGarage()->getSettingBrand()->getName(),
-//                'Model'         => $garage->getGarage()->getModel(),
-//            ];
-//        }
-//
-//        return $datas;
     }
 
     // EVENTS

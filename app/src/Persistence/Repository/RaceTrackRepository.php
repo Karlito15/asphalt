@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\RaceTrack;
+use App\Toolbox\Trait\Repository\SitemapRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -13,6 +14,8 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class RaceTrackRepository extends ServiceEntityRepository
 {
+    use SitemapRepository;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, RaceTrack::class);
@@ -27,12 +30,17 @@ class RaceTrackRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $q  = "q.nameEnglish AS English, q.nameFrench AS French, q.slug AS Slug";
-        $qb = $this->createQueryBuilder('q');
-        $qb->select($q);
-        $qb->leftJoin('q.region', 'r')->addselect('r.name AS Region');
-        $qb->where('q.deletedAt IS NULL');
-        $qb->orderBy('r.name', 'ASC');
+        $qb = $this->createQueryBuilder('q')
+            ->select([
+                'q.nameEnglish AS English',
+                'q.nameFrench AS French',
+                'q.slug AS Slug',
+            ])
+            ->leftJoin('q.region', 'r')
+            ->addselect('r.name AS Region')
+            ->where('q.deletedAt IS NULL')
+            ->orderBy('r.name', 'ASC')
+        ;
 
         return $qb->getQuery()->getArrayResult();
     }

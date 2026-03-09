@@ -1,0 +1,96 @@
+id: 265
+stars: 5
+gameUpdate: 40
+carOrder: 41
+statOrder: 23
+level: 8
+epic: 1
+model: 'E-TENSE Performance'
+slug: ds-automobiles-e-tense-performance
+blueprint:
+    star1: ''
+    star2: 22
+    star3: 30
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 52
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 1
+    handling: 3
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 1531
+    star1: 1731
+    star2: 1967
+    star3: 2230
+    star4: 2550
+    star5: 3086
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 303.8
+    acceleration: 86.03
+    handling: 46.54
+    nitro: 53.59
+    average: 122.49
+statMin:
+    speed: 290.5
+    acceleration: 82.0
+    handling: 33.06
+    nitro: 23.0
+    average: 107.14
+upgrade:
+    speed: 1
+    acceleration: 1
+    handling: 1
+    nitro: 1
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 22
+    star3: 30
+    star4: 35
+    star5: 38
+    star6: 0
+    total: 125
+settingBrand:
+    name: 'DS Automobiles'
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 12
+    common: 28
+    rare: 12
+    epic: 8
+settingUnitPrice:
+    level01: 6440
+    level02: 10500
+    level03: 16800
+    level04: 25200
+    level05: 36400
+    level06: 51000
+    level07: 71500
+    level08: 100000
+    level09: 140000
+    level10: 196000
+    level11: 274000
+    level12: 384000
+    level13: null
+    common: 15000
+    rare: 30000
+    epic: 90000

@@ -61,7 +61,7 @@ class SeasonService implements CSVInterface
     {
         $entity = new RaceSeason();
         $entity
-            ->setChapter((int) $datas['Chapter'])
+            ->setChapter($this->convertStringToInteger($datas['Chapter']))
             ->setName((string) $datas['Name'])
         ;
 

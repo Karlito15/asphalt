@@ -1,0 +1,96 @@
+id: 84
+stars: 6
+gameUpdate: 10
+carOrder: 65
+statOrder: 22
+level: 13
+epic: 12
+model: Evija
+slug: lotus-evija
+blueprint:
+    star1: '55'
+    star2: 18
+    star3: 24
+    star4: 32
+    star5: 50
+    star6: 61
+    total: 240
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2229
+    star1: 2484
+    star2: 2778
+    star3: 3075
+    star4: 3482
+    star5: 3944
+    star6: 4276
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 368.1
+    acceleration: 81.14
+    handling: 65.02
+    nitro: 63.31
+    average: 144.39
+statMin:
+    speed: 350.0
+    acceleration: 73.0
+    handling: 45.33
+    nitro: 42.53
+    average: 127.72
+upgrade:
+    speed: 8
+    acceleration: 8
+    handling: 8
+    nitro: 8
+    common: 18
+    rare: 6
+    epic: 0
+settingBlueprint:
+    star1: '55'
+    star2: 18
+    star3: 24
+    star4: 32
+    star5: 50
+    star6: 61
+    total: 240
+settingBrand:
+    name: Lotus
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 13
+    common: 32
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 9890
+    level02: 16100
+    level03: 25800
+    level04: 38700
+    level05: 55900
+    level06: 78500
+    level07: 109500
+    level08: 153500
+    level09: 214500
+    level10: 300500
+    level11: 421000
+    level12: 589000
+    level13: 967500
+    common: 70000
+    rare: 140000
+    epic: 420000

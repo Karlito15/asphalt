@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\GarageApp;
+use App\Persistence\Entity\SettingBrand;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -49,6 +50,7 @@ class GarageAppRepository extends ServiceEntityRepository
                 'g.statOrder AS StatOrder',
                 'g.level AS Level',
                 'g.epic AS Epic',
+                'g.evo AS Evo',
                 'c.value AS SettingClassValue',
             ])
             ->join('g.settingBrand', 'b')
@@ -58,6 +60,19 @@ class GarageAppRepository extends ServiceEntityRepository
         ;
 
         return $qb->getQuery()->getArrayResult();
+    }
+
+    /**
+     * @param string $brand
+     * @param string $model
+     * @return GarageApp
+     * @throws \Exception
+     */
+    public function findByBrandAndModel(string $brand, string $model): GarageApp
+    {
+        $brand = $this->getEntityManager()->getRepository(SettingBrand::class)->findByBrand($brand);
+
+        return $this->findoneBy(['settingBrand' => $brand, 'model' => $model]);
     }
 
     // EVENTS
@@ -88,6 +103,23 @@ class GarageAppRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    // SITEMAP
+
+    /**
+     * Retourne les informations pour le sitemap
+     *
+     * @return array
+     */
+    public function sitemap(): array
+    {
+        return $this->createQueryBuilder('g')
+            ->select(['g.id', 'g.slug'])
+            ->orderBy('g.gameUpdate', 'ASC')
+            ->getQuery()
+            ->getArrayResult()
+        ;
     }
 
     //    /**

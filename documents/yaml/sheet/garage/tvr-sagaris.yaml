@@ -1,0 +1,96 @@
+id: 264
+stars: 4
+gameUpdate: 39
+carOrder: 17
+statOrder: 29
+level: 11
+epic: 2
+model: Sagaris
+slug: tvr-sagaris
+blueprint:
+    star1: '50'
+    star2: 29
+    star3: 38
+    star4: 48
+    star5: 0
+    star6: 0
+    total: 165
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 2
+    nitro: 1
+    mark: 3
+    division: 9
+rank:
+    star0: 1708
+    star1: 1999
+    star2: 2378
+    star3: 2741
+    star4: 3046
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 312.8
+    acceleration: 75.52
+    handling: 69.34
+    nitro: 78.28
+    average: 133.98
+statMin:
+    speed: 298.0
+    acceleration: 66.7
+    handling: 49.35
+    nitro: 56.17
+    average: 117.56
+upgrade:
+    speed: 9
+    acceleration: 9
+    handling: 9
+    nitro: 9
+    common: 16
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '50'
+    star2: 29
+    star3: 38
+    star4: 48
+    star5: 0
+    star6: 0
+    total: 165
+settingBrand:
+    name: TVR
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 11
+    common: 24
+    rare: 12
+    epic: 4
+settingUnitPrice:
+    level01: 5060
+    level02: 8300
+    level03: 13200
+    level04: 19800
+    level05: 28600
+    level06: 40000
+    level07: 56000
+    level08: 78500
+    level09: 110000
+    level10: 154000
+    level11: 215000
+    level12: null
+    level13: null
+    common: 30000
+    rare: 60000
+    epic: 180000

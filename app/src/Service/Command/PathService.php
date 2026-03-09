@@ -12,6 +12,8 @@ use Symfony\Component\Finder\SplFileInfo;
 final class PathService
 {
     /**
+     * Retourne le dernier dossier
+     *
      * @param string $folder
      * @return string
      */

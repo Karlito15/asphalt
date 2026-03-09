@@ -1,0 +1,96 @@
+id: 158
+stars: 4
+gameUpdate: 22
+carOrder: 19
+statOrder: 22
+level: 11
+epic: 4
+model: S1
+slug: saleen-s1
+blueprint:
+    star1: '50'
+    star2: 29
+    star3: 38
+    star4: 48
+    star5: 0
+    star6: 0
+    total: 165
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 1
+    nitro: 2
+    mark: 3
+    division: 9
+rank:
+    star0: 1785
+    star1: 2079
+    star2: 2464
+    star3: 2834
+    star4: 3144
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 305.3
+    acceleration: 76.74
+    handling: 82.8
+    nitro: 74.07
+    average: 134.73
+statMin:
+    speed: 290.0
+    acceleration: 67.6
+    handling: 57.15
+    nitro: 58.71
+    average: 118.37
+upgrade:
+    speed: 7
+    acceleration: 7
+    handling: 7
+    nitro: 7
+    common: 20
+    rare: 2
+    epic: 0
+settingBlueprint:
+    star1: '50'
+    star2: 29
+    star3: 38
+    star4: 48
+    star5: 0
+    star6: 0
+    total: 165
+settingBrand:
+    name: Saleen
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 11
+    common: 24
+    rare: 12
+    epic: 4
+settingUnitPrice:
+    level01: 5060
+    level02: 8300
+    level03: 13200
+    level04: 19800
+    level05: 28600
+    level06: 40000
+    level07: 56000
+    level08: 78500
+    level09: 110000
+    level10: 154000
+    level11: 215000
+    level12: null
+    level13: null
+    common: 30000
+    rare: 60000
+    epic: 180000

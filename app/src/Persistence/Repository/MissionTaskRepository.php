@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\MissionTask;
+use App\Toolbox\Trait\Repository\SitemapRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -13,6 +14,8 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class MissionTaskRepository extends ServiceEntityRepository
 {
+    use SitemapRepository;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, MissionTask::class);
@@ -27,11 +30,15 @@ class MissionTaskRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $q  = "q.value AS Value, q.slug AS Slug";
-        $qb = $this->createQueryBuilder('q');
-        $qb->select($q);
-        $qb->where('q.deletedAt IS NULL');
-        $qb->orderBy('q.id', 'ASC');
+        $qb = $this->createQueryBuilder('q')
+            ->select([
+                'q.value AS Value',
+                'q.slug AS Slug',
+            ])
+            ->where('q.deletedAt IS NULL')
+            ->orderBy('q.value', 'ASC')
+        ;
+
         return $qb->getQuery()->getArrayResult();
     }
 

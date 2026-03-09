@@ -1,0 +1,96 @@
+id: 83
+stars: 4
+gameUpdate: 10
+carOrder: 29
+statOrder: 14
+level: 11
+epic: 4
+model: 'Civic Type-R'
+slug: honda-civic-type-r
+blueprint:
+    star1: '30'
+    star2: 23
+    star3: 33
+    star4: 42
+    star5: 0
+    star6: 0
+    total: 128
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 3
+    handling: 2
+    nitro: 2
+    mark: 4
+    division: 9
+rank:
+    star0: 1243
+    star1: 1578
+    star2: 1951
+    star3: 2334
+    star4: 2698
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 285.3
+    acceleration: 82.09
+    handling: 68.41
+    nitro: 62.55
+    average: 124.59
+statMin:
+    speed: 271.0
+    acceleration: 72.1
+    handling: 41.15
+    nitro: 36.45
+    average: 105.18
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 28
+    rare: 8
+    epic: 1
+settingBlueprint:
+    star1: '30'
+    star2: 23
+    star3: 33
+    star4: 42
+    star5: 0
+    star6: 0
+    total: 128
+settingBrand:
+    name: Honda
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 11
+    common: 28
+    rare: 8
+    epic: 4
+settingUnitPrice:
+    level01: 4370
+    level02: 7100
+    level03: 11400
+    level04: 17100
+    level05: 24700
+    level06: 34500
+    level07: 48500
+    level08: 68000
+    level09: 95000
+    level10: 133000
+    level11: 186000
+    level12: null
+    level13: null
+    common: 20000
+    rare: 40000
+    epic: 120000

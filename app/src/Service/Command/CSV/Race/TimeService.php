@@ -59,7 +59,7 @@ class TimeService implements CSVInterface
     public function createEntity(array $datas): RaceTime
     {
         $entity = new RaceTime();
-        $entity->setName((int) $datas['Name']);
+        $entity->setName($this->convertStringToInteger($datas['Name']));
 
         return $entity;
     }

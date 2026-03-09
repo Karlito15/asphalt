@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Persistence\Entity;
 
 use App\Persistence\Repository\MissionTaskRepository;
-use App\Toolbox\Abstract\MissionAbstract;
+use App\Service\Abstract\MissionAbstract;
 use App\Toolbox\Trait\Entity\IdEntity;
 use App\Toolbox\Trait\Entity\SlugEntity;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -42,7 +42,7 @@ class MissionTask extends MissionAbstract
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['value'], separator: '-')]
-    #[Groups(['index'])]
+    #[Groups([''])]
     protected string $slug;
 
     #[ORM\OneToMany(targetEntity: MissionApp::class, mappedBy: 'task', orphanRemoval: true)]

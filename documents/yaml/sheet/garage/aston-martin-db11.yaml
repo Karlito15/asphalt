@@ -1,0 +1,96 @@
+id: 3
+stars: 3
+gameUpdate: 0
+carOrder: 2
+statOrder: 69
+level: 10
+epic: 4
+model: DB11
+slug: aston-martin-db11
+blueprint:
+    star1: '30'
+    star2: 30
+    star3: 70
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 130
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 3
+    nitro: 3
+    mark: 4
+    division: 9
+rank:
+    star0: 1302
+    star1: 1671
+    star2: 2029
+    star3: 2330
+    star4: 0
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 340.6
+    acceleration: 74.2
+    handling: 43.21
+    nitro: 55.4
+    average: 128.35
+statMin:
+    speed: 322.0
+    acceleration: 66.7
+    handling: 38.03
+    nitro: 43.92
+    average: 117.66
+upgrade:
+    speed: 10
+    acceleration: 10
+    handling: 10
+    nitro: 10
+    common: 24
+    rare: 4
+    epic: 4
+settingBlueprint:
+    star1: '30'
+    star2: 30
+    star3: 70
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 130
+settingBrand:
+    name: 'Aston Martin'
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 10
+    common: 24
+    rare: 4
+    epic: 4
+settingUnitPrice:
+    level01: 1840
+    level02: 3000
+    level03: 4800
+    level04: 7200
+    level05: 10400
+    level06: 14500
+    level07: 20500
+    level08: 28500
+    level09: 40000
+    level10: 56000
+    level11: null
+    level12: null
+    level13: null
+    common: 15000
+    rare: 30000
+    epic: 90000

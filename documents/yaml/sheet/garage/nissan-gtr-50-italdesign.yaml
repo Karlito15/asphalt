@@ -1,0 +1,96 @@
+id: 156
+stars: 5
+gameUpdate: 22
+carOrder: 58
+statOrder: 28
+level: 12
+epic: 8
+model: 'GTR-50 Italdesign'
+slug: nissan-gtr-50-italdesign
+blueprint:
+    star1: '45'
+    star2: 17
+    star3: 23
+    star4: 32
+    star5: 45
+    star6: 0
+    total: 162
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 1
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2089
+    star1: 2372
+    star2: 2775
+    star3: 3136
+    star4: 3652
+    star5: 4153
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 349.5
+    acceleration: 86.36
+    handling: 73.86
+    nitro: 64.59
+    average: 143.58
+statMin:
+    speed: 330.0
+    acceleration: 76.6
+    handling: 44.93
+    nitro: 39.8
+    average: 122.83
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingBlueprint:
+    star1: '45'
+    star2: 17
+    star3: 23
+    star4: 32
+    star5: 45
+    star6: 0
+    total: 162
+settingBrand:
+    name: Nissan
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 7820
+    level02: 12800
+    level03: 20400
+    level04: 30600
+    level05: 44200
+    level06: 62000
+    level07: 86500
+    level08: 121500
+    level09: 170000
+    level10: 237500
+    level11: 333000
+    level12: 466000
+    level13: null
+    common: 50000
+    rare: 100000
+    epic: 300000

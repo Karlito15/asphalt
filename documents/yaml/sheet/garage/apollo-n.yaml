@@ -1,0 +1,96 @@
+id: 56
+stars: 5
+gameUpdate: 3
+carOrder: 44
+statOrder: 30
+level: 12
+epic: 8
+model: 'N'
+slug: apollo-n
+blueprint:
+    star1: '30'
+    star2: 9
+    star3: 13
+    star4: 21
+    star5: 32
+    star6: 0
+    total: 105
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 3
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2603
+    star1: 2798
+    star2: 3078
+    star3: 3328
+    star4: 3690
+    star5: 4047
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 374.1
+    acceleration: 80.32
+    handling: 58.13
+    nitro: 60.57
+    average: 143.28
+statMin:
+    speed: 360.0
+    acceleration: 73.0
+    handling: 42.36
+    nitro: 47.57
+    average: 130.73
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingBlueprint:
+    star1: '30'
+    star2: 9
+    star3: 13
+    star4: 21
+    star5: 32
+    star6: 0
+    total: 105
+settingBrand:
+    name: Apollo
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 7820
+    level02: 12800
+    level03: 20400
+    level04: 30600
+    level05: 44200
+    level06: 62000
+    level07: 86500
+    level08: 121500
+    level09: 170000
+    level10: 237500
+    level11: 333000
+    level12: 466000
+    level13: null
+    common: 50000
+    rare: 100000
+    epic: 300000

@@ -1,0 +1,96 @@
+id: 254
+stars: 6
+gameUpdate: 38
+carOrder: 70
+statOrder: 3
+level: 13
+epic: 5
+model: 'Jesko Absolut'
+slug: koenigsegg-jesko-absolut
+blueprint:
+    star1: '0'
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 70
+    star6: 85
+    total: 300
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 2
+    handling: 2
+    nitro: 9
+    mark: 3
+    division: 9
+rank:
+    star0: 4020
+    star1: 4174
+    star2: 4357
+    star3: 4551
+    star4: 4760
+    star5: 5008
+    star6: 5223
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 541.0
+    acceleration: 83.36
+    handling: 61.28
+    nitro: 33.34
+    average: 179.75
+statMin:
+    speed: 530.0
+    acceleration: 79.3
+    handling: 45.21
+    nitro: 20.92
+    average: 168.86
+upgrade:
+    speed: 0
+    acceleration: 0
+    handling: 0
+    nitro: 0
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 70
+    star6: 85
+    total: 300
+settingBrand:
+    name: Koenigsegg
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

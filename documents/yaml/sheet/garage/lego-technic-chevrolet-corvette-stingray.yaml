@@ -1,0 +1,96 @@
+id: 276
+stars: 5
+gameUpdate: 41
+carOrder: 29
+statOrder: 40
+level: 12
+epic: 1
+model: 'Chevrolet Corvette Stingray'
+slug: lego-technic-chevrolet-corvette-stingray
+blueprint:
+    star1: '45'
+    star2: 17
+    star3: 23
+    star4: 32
+    star5: 45
+    star6: 0
+    total: 162
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 3
+    handling: 1
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2200
+    star1: 2402
+    star2: 2687
+    star3: 2939
+    star4: 3301
+    star5: 3647
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 327.7
+    acceleration: 82.76
+    handling: 80.66
+    nitro: 70.4
+    average: 140.38
+statMin:
+    speed: 312.0
+    acceleration: 73.0
+    handling: 52.35
+    nitro: 37.32
+    average: 118.67
+upgrade:
+    speed: 7
+    acceleration: 7
+    handling: 7
+    nitro: 7
+    common: 22
+    rare: 2
+    epic: 0
+settingBlueprint:
+    star1: '45'
+    star2: 17
+    star3: 23
+    star4: 32
+    star5: 45
+    star6: 0
+    total: 162
+settingBrand:
+    name: 'Lego Technic'
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 7820
+    level02: 12800
+    level03: 20400
+    level04: 30600
+    level05: 44200
+    level06: 62000
+    level07: 86500
+    level08: 121500
+    level09: 170000
+    level10: 237500
+    level11: 333000
+    level12: 466000
+    level13: null
+    common: 50000
+    rare: 100000
+    epic: 300000

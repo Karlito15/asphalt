@@ -73,7 +73,7 @@ final class CSV
         string $mode = 'w+'
     ): bool
     {
-        /** Reader */
+        /** Writer */
         try {
             $writer = Writer::from($filepath, $mode);
             $writer->setDelimiter(';');

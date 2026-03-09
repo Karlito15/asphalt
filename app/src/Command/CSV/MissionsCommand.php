@@ -24,9 +24,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
 #[AsCommand(
-    name: 'asphalt:database:mission',
+    name: 'asphalt:csv:mission',
     description: 'Toutes les données pour les Missions',
-    aliases: ['asphalt-database-mission'],
+    aliases: ['asphalt-csv-mission'],
     hidden: false,
 )]
 class MissionsCommand extends Command

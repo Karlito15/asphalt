@@ -1,0 +1,96 @@
+id: 229
+stars: 6
+gameUpdate: 34
+carOrder: 55
+statOrder: 39
+level: 12
+epic: 7
+model: 'Team Fordzilla P1'
+slug: ford-team-fordzilla-p1
+blueprint:
+    star1: '70'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 16
+    total: 224
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 1
+    handling: 3
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 3259
+    star1: 3431
+    star2: 3632
+    star3: 3814
+    star4: 4061
+    star5: 4306
+    star6: 4548
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 382.0
+    acceleration: 87.72
+    handling: 53.75
+    nitro: 60.72
+    average: 146.05
+statMin:
+    speed: 358.0
+    acceleration: 82.9
+    handling: 42.19
+    nitro: 41.16
+    average: 131.06
+upgrade:
+    speed: 4
+    acceleration: 4
+    handling: 4
+    nitro: 4
+    common: 8
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '70'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 59
+    total: 267
+settingBrand:
+    name: Ford
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

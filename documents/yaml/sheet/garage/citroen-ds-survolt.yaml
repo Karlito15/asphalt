@@ -1,0 +1,96 @@
+id: 293
+stars: 4
+gameUpdate: 44
+carOrder: 12
+statOrder: 44
+level: 7
+epic: 0
+model: 'DS Survolt'
+slug: citroen-ds-survolt
+blueprint:
+    star1: '20'
+    star2: 30
+    star3: 10
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 60
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 3
+    handling: 1
+    nitro: 2
+    mark: 3
+    division: 9
+rank:
+    star0: 1538
+    star1: 1816
+    star2: 2170
+    star3: 2508
+    star4: 2796
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 291.4
+    acceleration: 81.82
+    handling: 81.42
+    nitro: 64.56
+    average: 129.8
+statMin:
+    speed: 276.0
+    acceleration: 73.0
+    handling: 61.09
+    nitro: 49.86
+    average: 114.99
+upgrade:
+    speed: 7
+    acceleration: 7
+    handling: 7
+    nitro: 7
+    common: 20
+    rare: 2
+    epic: 0
+settingBlueprint:
+    star1: '20'
+    star2: 30
+    star3: 40
+    star4: 50
+    star5: 0
+    star6: 0
+    total: 140
+settingBrand:
+    name: Citroën
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 11
+    common: 24
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 99999
+    level02: 99999
+    level03: 99999
+    level04: 99999
+    level05: 99999
+    level06: 99999
+    level07: 99999
+    level08: 99999
+    level09: 99999
+    level10: 999999
+    level11: 999999
+    level12: 999999
+    level13: 999999
+    common: 99999
+    rare: 999999
+    epic: 999999

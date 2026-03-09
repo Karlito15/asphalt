@@ -1,0 +1,96 @@
+id: 128
+stars: 5
+gameUpdate: 18
+carOrder: 48
+statOrder: 26
+level: 12
+epic: 8
+model: 'Essenza SCV12'
+slug: lamborghini-essenza-scv12
+blueprint:
+    star1: Key
+    star2: 26
+    star3: 34
+    star4: 40
+    star5: 62
+    star6: 0
+    total: 162
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 2
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2506
+    star1: 2719
+    star2: 3025
+    star3: 3294
+    star4: 3687
+    star5: 4061
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 340.8
+    acceleration: 85.1
+    handling: 75.84
+    nitro: 74.27
+    average: 144.0
+statMin:
+    speed: 318.0
+    acceleration: 76.15
+    handling: 49.51
+    nitro: 47.37
+    average: 122.76
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingBlueprint:
+    star1: Key
+    star2: 26
+    star3: 34
+    star4: 40
+    star5: 62
+    star6: 0
+    total: 162
+settingBrand:
+    name: Lamborghini
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 7820
+    level02: 12800
+    level03: 20400
+    level04: 30600
+    level05: 44200
+    level06: 62000
+    level07: 86500
+    level08: 121500
+    level09: 170000
+    level10: 237500
+    level11: 333000
+    level12: 466000
+    level13: null
+    common: 50000
+    rare: 100000
+    epic: 300000

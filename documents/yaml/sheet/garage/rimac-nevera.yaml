@@ -1,0 +1,96 @@
+id: 81
+stars: 6
+gameUpdate: 9
+carOrder: 53
+statOrder: 43
+level: 13
+epic: 11
+model: Nevera
+slug: rimac-nevera
+blueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 70
+    star6: 85
+    total: 300
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 1
+    handling: 3
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 3697
+    star1: 3852
+    star2: 4035
+    star3: 4231
+    star4: 4435
+    star5: 4677
+    star6: 4897
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 421.6
+    acceleration: 87.71
+    handling: 51.33
+    nitro: 56.51
+    average: 154.29
+statMin:
+    speed: 412.0
+    acceleration: 82.27
+    handling: 41.64
+    nitro: 37.62
+    average: 143.38
+upgrade:
+    speed: 6
+    acceleration: 6
+    handling: 6
+    nitro: 6
+    common: 16
+    rare: 4
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 70
+    star6: 85
+    total: 300
+settingBrand:
+    name: Rimac
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

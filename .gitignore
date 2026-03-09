@@ -47,8 +47,6 @@ Thumbs.db
 
 *.lock
 
-/appv5/
-/appv6/
 /appv7/
 /notes/
 /vars/

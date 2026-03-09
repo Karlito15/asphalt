@@ -38,7 +38,7 @@ class RaceTime
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index', 'race'])]
+    #[Groups(['index'])]
     protected int $name;
 
     #[ORM\OneToMany(targetEntity: RaceApp::class, mappedBy: 'time', orphanRemoval: true)]

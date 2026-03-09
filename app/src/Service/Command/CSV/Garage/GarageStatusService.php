@@ -59,36 +59,14 @@ class GarageStatusService implements CSVInterface
      */
     public function createEntity(array $datas): GarageStatus
     {
-        $garage = $this->findGarage($datas['Brand'], $datas['Model']);
+        $garage = $this->findGarage($datas);
         $entity = new GarageStatus();
         $entity
-//            ->setEvo((bool) $datas['Evo'])
             ->setUnblock((bool) $datas['Unblock'])
-            ->setToUnblock((bool) $datas['ToUnblock'])
             ->setGold((bool) $datas['Gold'])
-            ->setToGold((bool) $datas['ToGold'])
-            ->setFullUpgradeLevel((bool) $datas['FullUpgradeLevel'])
-            ->setToUpgradeLevel((bool) $datas['ToUpgradeLevel'])
-            ->setFullBlueprintStar1((bool) $datas['FullBlueprintStar1'])
-            ->setFullBlueprintStar2((bool) $datas['FullBlueprintStar2'])
-            ->setFullBlueprintStar3((bool) $datas['FullBlueprintStar3'])
-            ->setFullBlueprintStar4((bool) $datas['FullBlueprintStar4'])
-            ->setFullBlueprintStar5((bool) $datas['FullBlueprintStar5'])
-            ->setFullBlueprintStar6((bool) $datas['FullBlueprintStar6'])
-            ->setFullUpgradeSpeed((bool) $datas['FullUpgradeSpeed'])
-            ->setToInstallUpgradeSpeed((bool) $datas['ToInstallUpgradeSpeed'])
-            ->setFullUpgradeAcceleration((bool) $datas['FullUpgradeAcceleration'])
-            ->setToInstallUpgradeAcceleration((bool) $datas['ToInstallUpgradeAcceleration'])
-            ->setFullUpgradeHandling((bool) $datas['FullUpgradeHandling'])
-            ->setToInstallUpgradeHandling((bool) $datas['ToInstallUpgradeHandling'])
-            ->setFullUpgradeNitro((bool) $datas['FullUpgradeNitro'])
-            ->setToInstallUpgradeNitro((bool) $datas['ToInstallUpgradeNitro'])
-            ->setFullUpgradeCommon((bool) $datas['FullUpgradeCommon'])
-            ->setToInstallUpgradeCommon((bool) $datas['ToInstallUpgradeCommon'])
-            ->setFullUpgradeRare((bool) $datas['FullUpgradeRare'])
-            ->setToInstallUpgradeRare((bool) $datas['ToInstallUpgradeRare'])
-            ->setFullUpgradeEpic((bool) $datas['FullUpgradeEpic'])
-            ->setToInstallUpgradeEpic((bool) $datas['ToInstallUpgradeEpic'])
+            ->setEvo((bool) $datas['Evo'])
+            ->setEventClass((bool) $datas['EventClass'])
+            ->setToUpgrade((bool) $datas['ToUpgrade'])
         ;
         $entity->setGarage($garage);
 

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Command\CSV;
 
-use App\Service\Command\CSV\InventoryService;
+use App\Service\Command\CSV\Inventory\AppService;
 use App\Service\Command\PathService;
 use App\Toolbox\Trait\Command\AllCommand;
 use App\Toolbox\Trait\Command\MigrationCommand;
@@ -22,9 +22,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
 #[AsCommand(
-    name: 'asphalt:database:inventory',
+    name: 'asphalt:csv:inventory',
     description: "Toutes les données pour l'Inventaire",
-    aliases: ['asphalt-database-inventory'],
+    aliases: ['asphalt-csv-inventory'],
     hidden: false,
 )]
 class InventoriesCommand extends Command
@@ -40,7 +40,7 @@ class InventoriesCommand extends Command
         private readonly EntityManagerInterface $entityManager,
         private readonly LoggerInterface        $logger,
         private readonly ParameterBagInterface  $parameter,
-        private readonly InventoryService       $inventory,
+        private readonly AppService             $inventory,
     )
     {
         parent::__construct();

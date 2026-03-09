@@ -1,0 +1,96 @@
+id: 11
+stars: 5
+gameUpdate: 0
+carOrder: 35
+statOrder: 13
+level: 12
+epic: 8
+model: 'Corvette Grand Sport'
+slug: chevrolet-corvette-grand-sport
+blueprint:
+    star1: '30'
+    star2: 9
+    star3: 13
+    star4: 21
+    star5: 32
+    star6: 0
+    total: 105
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 1
+    nitro: 1
+    mark: 3
+    division: 9
+rank:
+    star0: 2506
+    star1: 2702
+    star2: 2977
+    star3: 3227
+    star4: 3581
+    star5: 3921
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 331.2
+    acceleration: 76.55
+    handling: 92.99
+    nitro: 80.87
+    average: 145.4
+statMin:
+    speed: 314.0
+    acceleration: 67.6
+    handling: 70.28
+    nitro: 66.74
+    average: 129.66
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingBlueprint:
+    star1: '30'
+    star2: 9
+    star3: 13
+    star4: 21
+    star5: 32
+    star6: 0
+    total: 105
+settingBrand:
+    name: Chevrolet
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 3910
+    level02: 6400
+    level03: 10200
+    level04: 15300
+    level05: 22100
+    level06: 31000
+    level07: 43500
+    level08: 60500
+    level09: 85000
+    level10: 119000
+    level11: 166000
+    level12: 233000
+    level13: null
+    common: 25000
+    rare: 50000
+    epic: 150000

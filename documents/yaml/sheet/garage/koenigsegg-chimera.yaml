@@ -1,0 +1,96 @@
+id: 308
+stars: 6
+gameUpdate: 46
+carOrder: 78
+statOrder: 99
+level: 3
+epic: 0
+model: Chimera
+slug: koenigsegg-chimera
+blueprint:
+    star1: ''
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 0
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 2
+    handling: 2
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 4045
+    star1: 4202
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 5239
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 511.3
+    acceleration: 83.81
+    handling: 66.31
+    nitro: 46.09
+    average: 176.88
+statMin:
+    speed: 490.0
+    acceleration: 75.7
+    handling: 51.76
+    nitro: 32.69
+    average: 162.54
+upgrade:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    common: 8
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '99'
+    star2: 99
+    star3: 99
+    star4: 99
+    star5: 99
+    star6: 99
+    total: 594
+settingBrand:
+    name: Koenigsegg
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

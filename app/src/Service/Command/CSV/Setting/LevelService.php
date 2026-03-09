@@ -61,10 +61,10 @@ class LevelService implements CSVInterface
     {
         $entity = new SettingLevel();
         $entity
-            ->setLevel((int) $datas['Level'])
-            ->setCommon((int) $datas['Common'])
-            ->setRare((int) $datas['Rare'])
-            ->setEpic((int) $datas['Epic'])
+            ->setLevel($this->convertStringToInteger($datas['Level']))
+            ->setCommon($this->convertStringToInteger($datas['Common']))
+            ->setRare($this->convertStringToInteger($datas['Rare']))
+            ->setEpic($this->convertStringToInteger($datas['Epic']))
         ;
 
         return $entity;

@@ -1,0 +1,96 @@
+id: 281
+stars: 6
+gameUpdate: 42
+carOrder: 11
+statOrder: 76
+level: 6
+epic: 0
+model: 'N Vision 74 Concept'
+slug: hyundai-n-vision-74-concept
+blueprint:
+    star1: ''
+    star2: 40
+    star3: 4
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 44
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 9
+    handling: 3
+    nitro: 9
+    mark: 5
+    division: 9
+rank:
+    star0: 3143
+    star1: 3287
+    star2: 3455
+    star3: 3634
+    star4: 3820
+    star5: 4034
+    star6: 4239
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 397.5
+    acceleration: 72.72
+    handling: 46.36
+    nitro: 44.72
+    average: 140.33
+statMin:
+    speed: 390.0
+    acceleration: 70.3
+    handling: 40.79
+    nitro: 35.0
+    average: 134.02
+upgrade:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    common: 12
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 70
+    star6: 85
+    total: 300
+settingBrand:
+    name: Hyundai
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

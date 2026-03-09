@@ -1,0 +1,28 @@
+-
+    Category: common
+    Label: Speed
+    Value: 214
+    Filter: '-'
+    Position: 96
+    Active: true
+-
+    Category: common
+    Label: Acceleration
+    Value: 206
+    Filter: '-'
+    Position: 97
+    Active: true
+-
+    Category: common
+    Label: Handling
+    Value: 192
+    Filter: '-'
+    Position: 99
+    Active: true
+-
+    Category: common
+    Label: Nitro
+    Value: 209
+    Filter: '-'
+    Position: 99
+    Active: true

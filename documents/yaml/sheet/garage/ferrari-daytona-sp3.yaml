@@ -1,0 +1,96 @@
+id: 234
+stars: 5
+gameUpdate: 35
+carOrder: 55
+statOrder: 13
+level: 12
+epic: 2
+model: 'Daytona SP3'
+slug: ferrari-daytona-sp3
+blueprint:
+    star1: Key
+    star2: 25
+    star3: 32
+    star4: 36
+    star5: 40
+    star6: 0
+    total: 133
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2356
+    star1: 2572
+    star2: 2879
+    star3: 3153
+    star4: 3503
+    star5: 4073
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 348.8
+    acceleration: 80.46
+    handling: 54.89
+    nitro: 60.3
+    average: 136.11
+statMin:
+    speed: 340.0
+    acceleration: 74.35
+    handling: 36.91
+    nitro: 35.66
+    average: 121.73
+upgrade:
+    speed: 10
+    acceleration: 10
+    handling: 10
+    nitro: 10
+    common: 24
+    rare: 2
+    epic: 2
+settingBlueprint:
+    star1: Key
+    star2: 25
+    star3: 32
+    star4: 36
+    star5: 40
+    star6: 0
+    total: 133
+settingBrand:
+    name: Ferrari
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

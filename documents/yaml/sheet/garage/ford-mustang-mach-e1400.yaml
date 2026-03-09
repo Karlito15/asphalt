@@ -1,0 +1,96 @@
+id: 222
+stars: 5
+gameUpdate: 33
+carOrder: 42
+statOrder: 9
+level: 12
+epic: 1
+model: 'Mustang Mach-E1400'
+slug: ford-mustang-mach-e1400
+blueprint:
+    star1: Key
+    star2: 22
+    star3: 30
+    star4: 35
+    star5: 38
+    star6: 0
+    total: 125
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 1538
+    star1: 1726
+    star2: 1964
+    star3: 2217
+    star4: 2250
+    star5: 3097
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 301.2
+    acceleration: 82.87
+    handling: 51.83
+    nitro: 64.82
+    average: 125.18
+statMin:
+    speed: 290.0
+    acceleration: 74.8
+    handling: 33.02
+    nitro: 39.05
+    average: 109.22
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 32
+    rare: 20
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 22
+    star3: 30
+    star4: 35
+    star5: 38
+    star6: 0
+    total: 125
+settingBrand:
+    name: Ford
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 6400
+    level02: 10500
+    level03: 16800
+    level04: 25200
+    level05: 36400
+    level06: 51000
+    level07: 71500
+    level08: 100000
+    level09: 140000
+    level10: 196000
+    level11: 274000
+    level12: 384000
+    level13: null
+    common: 30000
+    rare: 60000
+    epic: 180000

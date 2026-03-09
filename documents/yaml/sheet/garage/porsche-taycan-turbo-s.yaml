@@ -1,0 +1,96 @@
+id: 86
+stars: 4
+gameUpdate: 11
+carOrder: 30
+statOrder: 17
+level: 11
+epic: 4
+model: 'Taycan Turbo S'
+slug: porsche-taycan-turbo-s
+blueprint:
+    star1: '30'
+    star2: 23
+    star3: 33
+    star4: 42
+    star5: 0
+    star6: 0
+    total: 128
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 2
+    handling: 2
+    nitro: 3
+    mark: 4
+    division: 9
+rank:
+    star0: 1274
+    star1: 1616
+    star2: 1988
+    star3: 2369
+    star4: 2724
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 279.2
+    acceleration: 83.74
+    handling: 75.77
+    nitro: 57.18
+    average: 123.97
+statMin:
+    speed: 260.0
+    acceleration: 74.8
+    handling: 52.49
+    nitro: 37.96
+    average: 106.31
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 28
+    rare: 8
+    epic: 4
+settingBlueprint:
+    star1: '30'
+    star2: 23
+    star3: 33
+    star4: 42
+    star5: 0
+    star6: 0
+    total: 128
+settingBrand:
+    name: Porsche
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 11
+    common: 28
+    rare: 8
+    epic: 4
+settingUnitPrice:
+    level01: 4370
+    level02: 7100
+    level03: 11400
+    level04: 17100
+    level05: 24700
+    level06: 34500
+    level07: 48500
+    level08: 68000
+    level09: 95000
+    level10: 133000
+    level11: 186000
+    level12: null
+    level13: null
+    common: 20000
+    rare: 40000
+    epic: 120000

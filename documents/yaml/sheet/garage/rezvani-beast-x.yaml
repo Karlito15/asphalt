@@ -1,0 +1,96 @@
+id: 44
+stars: 4
+gameUpdate: 0
+carOrder: 8
+statOrder: 45
+level: 11
+epic: 4
+model: 'Beast X'
+slug: rezvani-beast-x
+blueprint:
+    star1: '35'
+    star2: 15
+    star3: 21
+    star4: 32
+    star5: 0
+    star6: 0
+    total: 103
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 2
+    handling: 2
+    nitro: 2
+    mark: 3
+    division: 9
+rank:
+    star0: 1426
+    star1: 1684
+    star2: 2020
+    star3: 2353
+    star4: 2635
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 299.5
+    acceleration: 84.62
+    handling: 69.2
+    nitro: 63.68
+    average: 129.25
+statMin:
+    speed: 282.0
+    acceleration: 73.0
+    handling: 48.18
+    nitro: 46.21
+    average: 112.35
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 24
+    rare: 12
+    epic: 4
+settingBlueprint:
+    star1: '35'
+    star2: 15
+    star3: 21
+    star4: 32
+    star5: 0
+    star6: 0
+    total: 103
+settingBrand:
+    name: Rezvani
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 11
+    common: 24
+    rare: 12
+    epic: 4
+settingUnitPrice:
+    level01: 2530
+    level02: 4100
+    level03: 6600
+    level04: 9900
+    level05: 14300
+    level06: 20000
+    level07: 28000
+    level08: 39000
+    level09: 55000
+    level10: 77000
+    level11: 108000
+    level12: null
+    level13: null
+    common: 15000
+    rare: 30000
+    epic: 90000

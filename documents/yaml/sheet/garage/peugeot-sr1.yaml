@@ -1,0 +1,96 @@
+id: 186
+stars: 4
+gameUpdate: 27
+carOrder: 13
+statOrder: 37
+level: 11
+epic: 0
+model: SR1
+slug: peugeot-sr1
+blueprint:
+    star1: '30'
+    star2: 23
+    star3: 33
+    star4: 42
+    star5: 0
+    star6: 0
+    total: 128
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 3
+    nitro: 9
+    mark: 6
+    division: 9
+rank:
+    star0: 721
+    star1: 1076
+    star2: 1483
+    star3: 1900
+    star4: 2307
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 310.5
+    acceleration: 71.51
+    handling: 52.39
+    nitro: 31.19
+    average: 116.4
+statMin:
+    speed: 290.0
+    acceleration: 57.7
+    handling: 32.35
+    nitro: 8.68
+    average: 97.18
+upgrade:
+    speed: 6
+    acceleration: 6
+    handling: 6
+    nitro: 6
+    common: 12
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '30'
+    star2: 23
+    star3: 33
+    star4: 42
+    star5: 0
+    star6: 0
+    total: 128
+settingBrand:
+    name: Peugeot
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 11
+    common: 28
+    rare: 8
+    epic: 4
+settingUnitPrice:
+    level01: 4370
+    level02: 7100
+    level03: 11400
+    level04: 17100
+    level05: 24700
+    level06: 34500
+    level07: 48500
+    level08: 68000
+    level09: 95000
+    level10: 133000
+    level11: 186000
+    level12: null
+    level13: null
+    common: 20000
+    rare: 40000
+    epic: 120000

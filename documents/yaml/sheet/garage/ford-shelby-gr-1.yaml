@@ -1,0 +1,96 @@
+id: 77
+stars: 4
+gameUpdate: 9
+carOrder: 15
+statOrder: 35
+level: 11
+epic: 4
+model: 'Shelby GR-1'
+slug: ford-shelby-gr-1
+blueprint:
+    star1: '50'
+    star2: 29
+    star3: 38
+    star4: 48
+    star5: 0
+    star6: 0
+    total: 165
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 2
+    nitro: 2
+    mark: 4
+    division: 9
+rank:
+    star0: 1618
+    star1: 1892
+    star2: 2255
+    star3: 2613
+    star4: 2909
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 321.7
+    acceleration: 75.32
+    handling: 69.6
+    nitro: 66.63
+    average: 133.31
+statMin:
+    speed: 305.0
+    acceleration: 64.9
+    handling: 51.53
+    nitro: 45.98
+    average: 116.85
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 24
+    rare: 12
+    epic: 4
+settingBlueprint:
+    star1: '50'
+    star2: 29
+    star3: 38
+    star4: 48
+    star5: 0
+    star6: 0
+    total: 165
+settingBrand:
+    name: Ford
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 11
+    common: 24
+    rare: 12
+    epic: 4
+settingUnitPrice:
+    level01: 5060
+    level02: 8300
+    level03: 13200
+    level04: 19800
+    level05: 28600
+    level06: 40000
+    level07: 56000
+    level08: 78500
+    level09: 110000
+    level10: 154000
+    level11: 215000
+    level12: null
+    level13: null
+    common: 30000
+    rare: 60000
+    epic: 180000

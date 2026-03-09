@@ -6,9 +6,7 @@ namespace App\Command\Database;
 
 use App\Persistence\Entity\GarageApp;
 use App\Persistence\Entity\GarageBlueprint;
-use App\Persistence\Entity\GarageBlueprintState;
 use App\Persistence\Entity\GarageEvo;
-use App\Persistence\Entity\GarageEvoState;
 use App\Persistence\Entity\GarageGauntlet;
 use App\Persistence\Entity\GarageRank;
 use App\Persistence\Entity\GarageStatActual;
@@ -16,7 +14,6 @@ use App\Persistence\Entity\GarageStatMax;
 use App\Persistence\Entity\GarageStatMin;
 use App\Persistence\Entity\GarageStatus;
 use App\Persistence\Entity\GarageUpgrade;
-use App\Persistence\Entity\GarageUpgradeState;
 use App\Persistence\Entity\InventoryApp;
 use App\Persistence\Entity\MissionApp;
 use App\Persistence\Entity\MissionTask;
@@ -80,9 +77,7 @@ class TruncateCommand extends Command
         $connection->executeQuery('SET FOREIGN_KEY_CHECKS = 0');
         self::truncateTable(GarageApp::class, $em, $io);
         self::truncateTable(GarageBlueprint::class, $em, $io);
-        self::truncateTable(GarageBlueprintState::class, $em, $io);
         self::truncateTable(GarageEvo::class, $em, $io);
-        self::truncateTable(GarageEvoState::class, $em, $io);
         self::truncateTable(GarageGauntlet::class, $em, $io);
         self::truncateTable(GarageRank::class, $em, $io);
         self::truncateTable(GarageStatActual::class, $em, $io);
@@ -90,7 +85,6 @@ class TruncateCommand extends Command
         self::truncateTable(GarageStatMin::class, $em, $io);
         self::truncateTable(GarageStatus::class, $em, $io);
         self::truncateTable(GarageUpgrade::class, $em, $io);
-        self::truncateTable(GarageUpgradeState::class, $em, $io);
         self::truncateTable(InventoryApp::class, $em, $io);
         self::truncateTable(MissionApp::class, $em, $io);
         self::truncateTable(MissionTask::class, $em, $io);

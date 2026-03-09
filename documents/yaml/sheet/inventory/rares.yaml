@@ -1,0 +1,140 @@
+-
+    Category: rare
+    Label: Speed
+    Value: 91
+    Filter: D
+    Position: 64
+    Active: true
+-
+    Category: rare
+    Label: Speed
+    Value: 112
+    Filter: C
+    Position: 63
+    Active: true
+-
+    Category: rare
+    Label: Speed
+    Value: 173
+    Filter: B
+    Position: 62
+    Active: true
+-
+    Category: rare
+    Label: Speed
+    Value: 199
+    Filter: A
+    Position: 61
+    Active: true
+-
+    Category: rare
+    Label: Speed
+    Value: 352
+    Filter: S
+    Position: 65
+    Active: true
+-
+    Category: rare
+    Label: Acceleration
+    Value: 80
+    Filter: D
+    Position: 74
+    Active: true
+-
+    Category: rare
+    Label: Acceleration
+    Value: 102
+    Filter: C
+    Position: 73
+    Active: true
+-
+    Category: rare
+    Label: Acceleration
+    Value: 148
+    Filter: B
+    Position: 72
+    Active: true
+-
+    Category: rare
+    Label: Acceleration
+    Value: 193
+    Filter: A
+    Position: 71
+    Active: true
+-
+    Category: rare
+    Label: Acceleration
+    Value: 356
+    Filter: S
+    Position: 75
+    Active: true
+-
+    Category: rare
+    Label: Handling
+    Value: 89
+    Filter: D
+    Position: 84
+    Active: true
+-
+    Category: rare
+    Label: Handling
+    Value: 135
+    Filter: C
+    Position: 83
+    Active: true
+-
+    Category: rare
+    Label: Handling
+    Value: 154
+    Filter: B
+    Position: 82
+    Active: true
+-
+    Category: rare
+    Label: Handling
+    Value: 185
+    Filter: A
+    Position: 81
+    Active: true
+-
+    Category: rare
+    Label: Handling
+    Value: 342
+    Filter: S
+    Position: 85
+    Active: true
+-
+    Category: rare
+    Label: Nitro
+    Value: 72
+    Filter: D
+    Position: 94
+    Active: true
+-
+    Category: rare
+    Label: Nitro
+    Value: 132
+    Filter: C
+    Position: 93
+    Active: true
+-
+    Category: rare
+    Label: Nitro
+    Value: 140
+    Filter: B
+    Position: 92
+    Active: true
+-
+    Category: rare
+    Label: Nitro
+    Value: 193
+    Filter: A
+    Position: 91
+    Active: true
+-
+    Category: rare
+    Label: Nitro
+    Value: 347
+    Filter: S
+    Position: 95
+    Active: true

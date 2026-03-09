@@ -1,0 +1,96 @@
+id: 32
+stars: 5
+gameUpdate: 0
+carOrder: 1
+statOrder: 74
+level: 12
+epic: 12
+model: Centenario
+slug: lamborghini-centenario
+blueprint:
+    star1: '40'
+    star2: 13
+    star3: 16
+    star4: 25
+    star5: 39
+    star6: 0
+    total: 133
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 3
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2702
+    star1: 2847
+    star2: 3017
+    star3: 3177
+    star4: 3436
+    star5: 3709
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 363.9
+    acceleration: 80.48
+    handling: 47.46
+    nitro: 70.31
+    average: 140.54
+statMin:
+    speed: 350.0
+    acceleration: 74.8
+    handling: 39.22
+    nitro: 61.9
+    average: 131.48
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 28
+    rare: 20
+    epic: 12
+settingBlueprint:
+    star1: '40'
+    star2: 13
+    star3: 16
+    star4: 25
+    star5: 39
+    star6: 0
+    total: 133
+settingBrand:
+    name: Lamborghini
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 12
+    common: 28
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

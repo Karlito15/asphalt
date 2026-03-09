@@ -1,0 +1,96 @@
+id: 235
+stars: 5
+gameUpdate: 35
+carOrder: 28
+statOrder: 5
+level: 12
+epic: 8
+model: 'GEN 2 Asphalt Édition'
+slug: formule-e-gen-2-asphalt-edition
+blueprint:
+    star1: '35'
+    star2: 15
+    star3: 21
+    star4: 28
+    star5: 35
+    star6: 0
+    total: 134
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 1
+    handling: 1
+    nitro: 1
+    mark: 1
+    division: 9
+rank:
+    star0: 1987
+    star1: 2168
+    star2: 2432
+    star3: 2673
+    star4: 2938
+    star5: 3412
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 304.6
+    acceleration: 87.43
+    handling: 83.66
+    nitro: 75.04
+    average: 137.68
+statMin:
+    speed: 280.0
+    acceleration: 74.8
+    handling: 55.15
+    nitro: 48.6
+    average: 114.64
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 36
+    rare: 16
+    epic: 8
+settingBlueprint:
+    star1: '35'
+    star2: 15
+    star3: 21
+    star4: 28
+    star5: 35
+    star6: 0
+    total: 134
+settingBrand:
+    name: 'Formule E'
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 12
+    common: 36
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

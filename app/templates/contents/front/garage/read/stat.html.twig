@@ -1,0 +1,42 @@
+
+<div class="card-title">
+    <h4 class="text-center">{{ 'text.stat'|trans|plural() }}</h4>
+</div>
+<table class="{{ classes.table }}">
+    <thead class="text-center">
+        <tr>
+            <th class="col-2">&nbsp;</th>
+            <th class="col-2">{{ 'text.speed'|trans }}</th>
+            <th class="col-2">{{ 'text.acceleration'|trans }}</th>
+            <th class="col-2">{{ 'text.handling'|trans }}</th>
+            <th class="col-2">{{ 'text.nitro'|trans }}</th>
+            <th class="col-2">{{ 'text.average'|trans }}</th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        <tr>
+            <td class="text-start">{{ 'text.stat.min'|trans }}</td>
+            <td>{{ entity.statMin.speed|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+            <td>{{ entity.statMin.acceleration|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+            <td>{{ entity.statMin.handling|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+            <td>{{ entity.statMin.nitro|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+            <td>{{ entity.statMin.average|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+        </tr>
+        <tr>
+            <td class="text-start">{{ 'text.stat.actual'|trans }}</td>
+            <td>{{ entity.statActual.speed|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+            <td>{{ entity.statActual.acceleration|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+            <td>{{ entity.statActual.handling|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+            <td>{{ entity.statActual.nitro|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+            <td>{{ entity.statActual.average|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+        </tr>
+        <tr>
+            <td class="text-start">{{ 'text.stat.max'|trans }}</td>
+            <td>{{ entity.statMax.speed|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+            <td>{{ entity.statMax.acceleration|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+            <td>{{ entity.statMax.handling|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+            <td>{{ entity.statMax.nitro|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+            <td>{{ entity.statMax.average|format_number({rounding_mode: 'floor', fraction_digit: 2}, locale: 'fr') }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,96 @@
+id: 282
+stars: 6
+gameUpdate: 42
+carOrder: 58
+statOrder: 61
+level: 12
+epic: 7
+model: 'Electrified Sport Concept'
+slug: lexus-electrified-sport-concept
+blueprint:
+    star1: '70'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 11
+    total: 219
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 2
+    handling: 3
+    nitro: 9
+    mark: 4
+    division: 9
+rank:
+    star0: 3271
+    star1: 3443
+    star2: 3646
+    star3: 3834
+    star4: 4082
+    star5: 4327
+    star6: 4565
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 371.5
+    acceleration: 85.33
+    handling: 42.09
+    nitro: 44.84
+    average: 135.94
+statMin:
+    speed: 363.0
+    acceleration: 82.0
+    handling: 33.2
+    nitro: 33.2
+    average: 127.85
+upgrade:
+    speed: 6
+    acceleration: 6
+    handling: 6
+    nitro: 6
+    common: 12
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '70'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 59
+    total: 267
+settingBrand:
+    name: Lexus
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

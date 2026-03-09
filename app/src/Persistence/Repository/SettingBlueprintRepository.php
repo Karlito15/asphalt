@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\SettingBlueprint;
+use App\Toolbox\Trait\Repository\SitemapRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -13,6 +14,8 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class SettingBlueprintRepository extends ServiceEntityRepository
 {
+    use SitemapRepository;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, SettingBlueprint::class);
@@ -27,11 +30,20 @@ class SettingBlueprintRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $q  = "q.star1 AS Star1, q.star2 AS Star2, q.star3 AS Star3, q.star4 AS Star4, q.star5 AS Star5, q.star6 AS Star6, q.total AS Total, q.slug AS Slug";
-        $qb = $this->createQueryBuilder('q');
-        $qb->select($q);
-        $qb->where('q.deletedAt IS NULL');
-        // $qb->orderBy('q.id', 'ASC');
+        $qb = $this->createQueryBuilder('q')
+            ->select([
+                'q.star1 AS Star1',
+                'q.star2 AS Star2',
+                'q.star3 AS Star3',
+                'q.star4 AS Star4',
+                'q.star5 AS Star5',
+                'q.star6 AS Star6',
+                'q.total AS Total',
+                'q.slug AS Slug',
+            ])
+            ->where('q.deletedAt IS NULL')
+            ->orderBy('q.slug', 'ASC')
+        ;
 
         return $qb->getQuery()->getArrayResult();
     }

@@ -1,0 +1,96 @@
+id: 62
+stars: 6
+gameUpdate: 6
+carOrder: 43
+statOrder: 13
+level: 13
+epic: 16
+model: 'LaFerrari Aperta'
+slug: ferrari-laferrari-aperta
+blueprint:
+    star1: '50'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 62
+    total: 250
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 1
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2998
+    star1: 3172
+    star2: 3377
+    star3: 3563
+    star4: 3803
+    star5: 4047
+    star6: 4291
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 366.2
+    acceleration: 81.03
+    handling: 82.48
+    nitro: 70.1
+    average: 149.95
+statMin:
+    speed: 350.0
+    acceleration: 73.0
+    handling: 60.62
+    nitro: 48.65
+    average: 133.07
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingBlueprint:
+    star1: '50'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 62
+    total: 250
+settingBrand:
+    name: Ferrari
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

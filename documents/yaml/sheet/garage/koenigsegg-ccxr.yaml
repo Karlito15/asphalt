@@ -1,0 +1,96 @@
+id: 204
+stars: 6
+gameUpdate: 30
+carOrder: 58
+statOrder: 19
+level: 10
+epic: 2
+model: CCXR
+slug: koenigsegg-ccxr
+blueprint:
+    star1: '0'
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 52
+    star6: 0
+    total: 197
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 9
+    handling: 2
+    nitro: 2
+    mark: 3
+    division: 9
+rank:
+    star0: 3782
+    star1: 3938
+    star2: 4123
+    star3: 4321
+    star4: 4528
+    star5: 4771
+    star6: 4998
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 412.2
+    acceleration: 79.4
+    handling: 79.09
+    nitro: 71.51
+    average: 160.55
+statMin:
+    speed: 400.0
+    acceleration: 72.1
+    handling: 56.75
+    nitro: 53.66
+    average: 145.63
+upgrade:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    common: 12
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 70
+    star6: 85
+    total: 300
+settingBrand:
+    name: Koenigsegg
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

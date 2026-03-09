@@ -1,0 +1,96 @@
+id: 18
+stars: 4
+gameUpdate: 0
+carOrder: 20
+statOrder: 50
+level: 11
+epic: 8
+model: '488 GTB'
+slug: ferrari-488-gtb
+blueprint:
+    star1: '40'
+    star2: 18
+    star3: 24
+    star4: 36
+    star5: 0
+    star6: 0
+    total: 118
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 2071
+    star1: 2303
+    star2: 2664
+    star3: 3011
+    star4: 3334
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 347.6
+    acceleration: 80.24
+    handling: 48.38
+    nitro: 65.84
+    average: 135.52
+statMin:
+    speed: 330.0
+    acceleration: 73.0
+    handling: 41.99
+    nitro: 56.41
+    average: 125.35
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 24
+    rare: 16
+    epic: 8
+settingBlueprint:
+    star1: '40'
+    star2: 18
+    star3: 24
+    star4: 36
+    star5: 0
+    star6: 0
+    total: 118
+settingBrand:
+    name: Ferrari
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 11
+    common: 24
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 2880
+    level02: 4700
+    level03: 7500
+    level04: 11300
+    level05: 16300
+    level06: 23000
+    level07: 32000
+    level08: 44500
+    level09: 62500
+    level10: 87500
+    level11: 122000
+    level12: null
+    level13: null
+    common: 20000
+    rare: 40000
+    epic: 120000

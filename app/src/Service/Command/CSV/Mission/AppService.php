@@ -62,14 +62,14 @@ class AppService implements CSVInterface
     public function createEntity(array $datas): MissionApp
     {
         $entity = new MissionApp();
-        $entity->setWeek((int) $datas['Week']);
+        $entity->setWeek($this->convertStringToInteger($datas['Week']));
         $entity->setRegion(($datas['Region'] != "") ? (string) $datas['Region'] : NULL);
         $entity->setTrack(($datas['Track'] != "") ? (string) $datas['Track'] : NULL);
         $entity->setClass(($datas['Class'] != "") ? (string) $datas['Class'] : NULL);
         $entity->setBrand(($datas['Brand'] != "") ? (string) $datas['Brand'] : NULL);
         $entity->setDescription(($datas['Description'] != "") ? (string) $datas['Description'] : NULL);
-        $entity->setSuccess((int) $datas['Success']);
-        $entity->setTarget((int) $datas['Target']);
+        $entity->setSuccess($this->convertStringToInteger($datas['Success']));
+        $entity->setTarget($this->convertStringToInteger($datas['Target']));
         $entity->setTask($this->entityManager->getRepository(MissionTask::class)->findOneBy(['value' => $datas['Task']]));
         $entity->setType($this->entityManager->getRepository(MissionType::class)->findOneBy(['value' => $datas['Type']]));
 

@@ -7,7 +7,7 @@ parameters:
         generator:          ~
     classes:
         table:              'table table-bordered table-striped text-light'
-        td:                 'my-0 py-0 align-middle'
+        td:                 'my-0 py-1 align-middle'
         btn:                'btn btn-sm btn-outline-info rounded-3 py-1 m-0'
         input:              'text-center fw-bolder form-control-sm form-control'
 #        input:              'text-center fw-bolder form-control-plaintext form-control-sm'
@@ -21,19 +21,16 @@ parameters:
     folders.csv.cron:       '%kernel.project_dir%/../documents/csv/cron/'
     folders.csv.database:   '%kernel.project_dir%/../documents/csv/database/'
     folders.yaml:           '%kernel.project_dir%/../documents/yaml/'
-    folders.yaml.extractor: '%kernel.project_dir%/../documents/yaml/extractor/'
+    folders.yaml.list:      '%kernel.project_dir%/../documents/yaml/list/'
     folders.yaml.sheet:     '%kernel.project_dir%/../documents/yaml/sheet/'
-    csv.header.garage.app:                ['Brand', 'Model', 'Stars', 'GameUpdate', 'CarOrder', 'StatOrder', 'Level', 'Epic', 'SettingClassValue']
-    csv.header.garage.blueprint:          ['Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6', 'Brand', 'Model']
-    csv.header.garage.blueprint.state:    ['Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6', 'FullBlueprintStar1', 'FullBlueprintStar2', 'FullBlueprintStar3', 'FullBlueprintStar4', 'FullBlueprintStar5', 'FullBlueprintStar6', 'Brand', 'Model']
-    csv.header.garage.evo:                ['Number', 'Brand', 'Model']
-    csv.header.garage.evo.state:          ['All', 'Brand', 'Model']
-    csv.header.garage.gauntlet:           ['Speed', 'Acceleration', 'Handling', 'Nitro', 'Mark', 'Division', 'Brand', 'Model']
-    csv.header.garage.rank:               ['Star0', 'Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6', 'Brand', 'Model']
-    csv.header.garage.stats:              ['Speed', 'Acceleration', 'Handling', 'Nitro', 'Average', 'Brand', 'Model']
-    csv.header.garage.status:             ['Evo', 'Unblock', 'Gold', 'ToUnblock', 'ToGold', 'FullUpgradeLevel', 'ToUpgradeLevel', 'Brand', 'Model']
-    csv.header.garage.upgrade:            ['Speed', 'Acceleration', 'Handling', 'Nitro', 'Common', 'Rare', 'Epic', 'Brand', 'Model']
-    csv.header.garage.upgrade.state:      ['FullSpeed', 'ToInstallSpeed', 'FullAcceleration', 'ToInstallAcceleration', 'FullHandling', 'ToInstallHandling', 'FullNitro', 'ToInstallNitro', 'FullCommon', 'ToInstallCommon', 'FullRare', 'ToInstallRare', 'FullEpic', 'ToInstallEpic', 'Brand', 'Model']
+    csv.header.garage.app:                ['Brand', 'Model', 'Stars', 'GameUpdate', 'CarOrder', 'StatOrder', 'Level', 'Epic', 'Evo', 'SettingClassValue']
+    csv.header.garage.blueprint:          ['Brand', 'Model', 'Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6']
+    csv.header.garage.gauntlet:           ['Brand', 'Model', 'Speed', 'Acceleration', 'Handling', 'Nitro', 'Mark', 'Division']
+    csv.header.garage.rank:               ['Brand', 'Model', 'Star0', 'Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6']
+    csv.header.garage.stats:              ['Brand', 'Model', 'Speed', 'Acceleration', 'Handling', 'Nitro', 'Average']
+    csv.header.garage.status:             ['Brand', 'Model', 'Unblock', 'Gold', 'Evo', 'EventClass', 'ToUpgrade']
+    csv.header.garage.status.control:     ['Brand', 'Model', 'FullSpeed', 'FullAcceleration', 'FullHandling', 'FullNitro', 'FullUpgrade', 'FullCommon', 'FullRare', 'FullEpic', 'FullImport', 'FullStar1', 'FullStar2', 'FullStar3', 'FullStar4', 'FullStar5', 'FullStar6', 'FullBlueprint', 'FullEvo', 'ToInstallSpeed', 'ToInstallAcceleration', 'ToInstallHandling', 'ToInstallNitro', 'ToInstallUpgrade', 'ToInstallCommon', 'ToInstallRare', 'ToInstallEpic', 'ToInstallImport', 'ToUnblock', 'ToGold']
+    csv.header.garage.upgrade:            ['Brand', 'Model', 'Speed', 'Acceleration', 'Handling', 'Nitro', 'Common', 'Rare', 'Epic']
     csv.header.garage.setting.blueprint:  ['Brand', 'Model', 'SettingBlueprint']
     csv.header.garage.setting.level:      ['Brand', 'Model', 'SettingLevel']
     csv.header.garage.setting.tag:        ['Brand', 'Model', 'SettingTag']

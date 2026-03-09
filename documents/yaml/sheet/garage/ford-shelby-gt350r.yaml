@@ -1,0 +1,96 @@
+id: 22
+stars: 4
+gameUpdate: 0
+carOrder: 21
+statOrder: 28
+level: 11
+epic: 4
+model: 'Shelby GT350R'
+slug: ford-shelby-gt350r
+blueprint:
+    star1: '20'
+    star2: 12
+    star3: 18
+    star4: 28
+    star5: 0
+    star6: 0
+    total: 78
+evo:
+    number: 22
+gauntlet:
+    speed: 9
+    acceleration: 9
+    handling: 3
+    nitro: 3
+    mark: 6
+    division: 9
+rank:
+    star0: 1121
+    star1: 1437
+    star2: 1810
+    star3: 2179
+    star4: 2548
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 299.9
+    acceleration: 75.06
+    handling: 58.97
+    nitro: 52.93
+    average: 121.71
+statMin:
+    speed: 276.0
+    acceleration: 64.9
+    handling: 47.58
+    nitro: 34.38
+    average: 105.71
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 28
+    rare: 8
+    epic: 4
+settingBlueprint:
+    star1: '20'
+    star2: 12
+    star3: 18
+    star4: 28
+    star5: 0
+    star6: 0
+    total: 78
+settingBrand:
+    name: Ford
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 11
+    common: 28
+    rare: 8
+    epic: 4
+settingUnitPrice:
+    level01: 2190
+    level02: 3600
+    level03: 5700
+    level04: 8600
+    level05: 12400
+    level06: 17500
+    level07: 24000
+    level08: 34000
+    level09: 47500
+    level10: 66500
+    level11: 93000
+    level12: null
+    level13: null
+    common: 10000
+    rare: 20000
+    epic: 60000

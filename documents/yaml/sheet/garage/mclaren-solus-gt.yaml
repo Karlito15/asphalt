@@ -1,0 +1,96 @@
+id: 216
+stars: 5
+gameUpdate: 32
+carOrder: 53
+statOrder: 2
+level: 12
+epic: 2
+model: 'Solus GT'
+slug: mclaren-solus-gt
+blueprint:
+    star1: Key
+    star2: 26
+    star3: 34
+    star4: 40
+    star5: 62
+    star6: 0
+    total: 162
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 1
+    handling: 1
+    nitro: 1
+    mark: 1
+    division: 9
+rank:
+    star0: 2506
+    star1: 2719
+    star2: 3025
+    star3: 3296
+    star4: 3692
+    star5: 3936
+    star6: 4076
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 335.4
+    acceleration: 89.3
+    handling: 83.12
+    nitro: 86.83
+    average: 148.66
+statMin:
+    speed: 322.0
+    acceleration: 77.5
+    handling: 51.36
+    nitro: 37.19
+    average: 122.01
+upgrade:
+    speed: 12
+    acceleration: 12
+    handling: 12
+    nitro: 12
+    common: 32
+    rare: 20
+    epic: 2
+settingBlueprint:
+    star1: Key
+    star2: 26
+    star3: 34
+    star4: 40
+    star5: 62
+    star6: 0
+    total: 162
+settingBrand:
+    name: McLaren
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 12
+    common: 32
+    rare: 20
+    epic: 8
+settingUnitPrice:
+    level01: 7820
+    level02: 12800
+    level03: 20400
+    level04: 30600
+    level05: 44200
+    level06: 62000
+    level07: 86500
+    level08: 121500
+    level09: 170000
+    level10: 237500
+    level11: 333000
+    level12: 466000
+    level13: null
+    common: 50000
+    rare: 100000
+    epic: 300000

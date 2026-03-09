@@ -42,7 +42,7 @@ class RaceSeason
     #[Assert\Range(min: 1, max: 6)]
     #[Assert\PositiveOrZero]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index', 'race'])]
+    #[Groups(['index'])]
     protected int $chapter = 1;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique:true, nullable:false)]
@@ -50,7 +50,7 @@ class RaceSeason
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index', 'race'])]
+    #[Groups(['index'])]
     protected string $name;
 
     #[ORM\Column(type: Types::STRING, length: 128, unique:true, nullable:false)]
@@ -60,7 +60,6 @@ class RaceSeason
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['name'], separator: '-')]
-    #[Groups(['index'])]
     protected string $slug;
 
     #[ORM\OneToMany(targetEntity: RaceApp::class, mappedBy: 'season', orphanRemoval: true)]

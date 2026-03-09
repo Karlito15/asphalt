@@ -1,0 +1,96 @@
+id: 212
+stars: 6
+gameUpdate: 31
+carOrder: 35
+statOrder: 17
+level: 13
+epic: 16
+model: '935 (2019)'
+slug: porsche-935-2019
+blueprint:
+    star1: Key
+    star2: 28
+    star3: 32
+    star4: 44
+    star5: 59
+    star6: 86
+    total: 249
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 2
+    handling: 1
+    nitro: 2
+    mark: 1
+    division: 9
+rank:
+    star0: 2928
+    star1: 3100
+    star2: 3302
+    star3: 3491
+    star4: 3740
+    star5: 3988
+    star6: 4229
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 352.0
+    acceleration: 84.94
+    handling: 87.96
+    nitro: 72.61
+    average: 149.38
+statMin:
+    speed: 340.0
+    acceleration: 75.7
+    handling: 55.63
+    nitro: 55.63
+    average: 131.74
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 24
+    rare: 20
+    epic: 8
+settingBlueprint:
+    star1: Key
+    star2: 28
+    star3: 32
+    star4: 44
+    star5: 59
+    star6: 86
+    total: 249
+settingBrand:
+    name: Porsche
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

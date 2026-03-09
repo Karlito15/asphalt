@@ -2,6 +2,15 @@ php bin/console debug:router
 --------------------------------- ---------- ------------ ------ -----------------------------------------------------
 Name                              Method     Scheme       Host   Path
 --------------------------------- ---------- ------------ ------ -----------------------------------------------------
+admin                                     ANY              ANY          /admin
+admin_garage_app_index                    GET              ANY          /admin/garage-app
+admin_garage_app_new                      GET|POST         ANY          /admin/garage-app/new
+admin_garage_app_batch_delete             POST             ANY          /admin/garage-app/batch-delete
+admin_garage_app_autocomplete             GET              ANY          /admin/garage-app/autocomplete
+admin_garage_app_render_filters           GET              ANY          /admin/garage-app/render-filters
+admin_garage_app_edit                     GET|POST|PATCH   ANY          /admin/garage-app/{entityId}/edit
+admin_garage_app_delete                   POST             ANY          /admin/garage-app/{entityId}/delete
+admin_garage_app_detail                   GET              ANY          /admin/garage-app/{entityId}
 admin_inventory_app_index                 GET              ANY          /admin/inventory-app
 admin_inventory_app_new                   GET|POST         ANY          /admin/inventory-app/new
 admin_inventory_app_batch_delete          POST             ANY          /admin/inventory-app/batch-delete
@@ -129,4 +138,4 @@ admin_setting_unit_price_autocomplete     GET              ANY          /admin/s
 admin_setting_unit_price_render_filters   GET              ANY          /admin/setting-unit-price/render-filters
 admin_setting_unit_price_edit             GET|POST|PATCH   ANY          /admin/setting-unit-price/{entityId}/edit
 admin_setting_unit_price_delete           POST             ANY          /admin/setting-unit-price/{entityId}/delete
-admin_setting_unit_price_detail           GET              ANY          /admin/setting-unit-price/{entityId}--------------------------------- ---------- ------------ ------ -----------------------------------------------------
+admin_setting_unit_price_detail           GET              ANY          /admin/setting-unit-price/{entityId}

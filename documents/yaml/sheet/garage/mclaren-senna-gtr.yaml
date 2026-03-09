@@ -1,0 +1,96 @@
+id: 160
+stars: 5
+gameUpdate: 23
+carOrder: 20
+statOrder: 41
+level: 12
+epic: 12
+model: 'Senna GTR'
+slug: mclaren-senna-gtr
+blueprint:
+    star1: '50'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 51
+    star6: 0
+    total: 187
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 2
+    nitro: 1
+    mark: 2
+    division: 9
+rank:
+    star0: 2783
+    star1: 2925
+    star2: 3122
+    star3: 3353
+    star4: 3674
+    star5: 4025
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 358.0
+    acceleration: 82.03
+    handling: 60.84
+    nitro: 77.62
+    average: 144.62
+statMin:
+    speed: 335.0
+    acceleration: 74.8
+    handling: 51.34
+    nitro: 66.9
+    average: 132.01
+upgrade:
+    speed: 8
+    acceleration: 8
+    handling: 8
+    nitro: 8
+    common: 18
+    rare: 6
+    epic: 0
+settingBlueprint:
+    star1: '50'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 51
+    star6: 0
+    total: 187
+settingBrand:
+    name: McLaren
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 12
+    common: 24
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 9550
+    level02: 15600
+    level03: 24900
+    level04: 37400
+    level05: 54000
+    level06: 75500
+    level07: 105000
+    level08: 148000
+    level09: 207500
+    level10: 290000
+    level11: 406000
+    level12: 569000
+    level13: null
+    common: 60000
+    rare: 120000
+    epic: 360000

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\InventoryApp;
+use App\Toolbox\Trait\Repository\SitemapRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -13,9 +14,23 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class InventoryAppRepository extends ServiceEntityRepository
 {
+    use SitemapRepository;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, InventoryApp::class);
+    }
+
+    // DASHBOARD
+
+    /**
+     * @param string $query
+     * @return InventoryApp[]
+     * @example SELECT * FROM inventory_app WHERE foo LIKE 'bar%';
+     */
+    public function findByCategory(string $query): array
+    {
+        return $this->findBy(['category' => $query]);
     }
 
     // EXPORTS
@@ -37,6 +52,31 @@ class InventoryAppRepository extends ServiceEntityRepository
             'q.active AS Active',
         ]);
         $qb->where('q.deletedAt IS NULL');
+        $qb->orderBy('q.id', 'ASC');
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    /**
+     * Retourne les informations pour les extraire dans un fichier YAML
+     *
+     * @param string $category
+     * @return array
+     */
+    public function sheet(string $category): array
+    {
+        $qb = $this->createQueryBuilder('q');
+        $qb->select([
+            'q.category AS Category',
+            'q.label AS Label',
+            'q.value AS Value',
+            'q.filter AS Filter',
+            'q.position AS Position',
+            'q.active AS Active',
+        ]);
+        $qb->where('q.deletedAt IS NULL');
+        $qb->andWhere('q.category = :category')->setParameter('category', $category);
+        $qb->andWhere('q.active = 1');
         $qb->orderBy('q.id', 'ASC');
 
         return $qb->getQuery()->getArrayResult();

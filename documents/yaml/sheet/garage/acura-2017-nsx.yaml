@@ -1,0 +1,96 @@
+id: 1
+stars: 4
+gameUpdate: 0
+carOrder: 20
+statOrder: 42
+level: 11
+epic: 4
+model: '2017 NSX'
+slug: acura-2017-nsx
+blueprint:
+    star1: '35'
+    star2: 15
+    star3: 21
+    star4: 32
+    star5: 0
+    star6: 0
+    total: 103
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 3
+    nitro: 2
+    mark: 4
+    division: 9
+rank:
+    star0: 1824
+    star1: 2117
+    star2: 2501
+    star3: 2884
+    star4: 3199
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 335.7
+    acceleration: 74.43
+    handling: 41.38
+    nitro: 72.91
+    average: 131.11
+statMin:
+    speed: 305.0
+    acceleration: 75.7
+    handling: 48.17
+    nitro: 36.81
+    average: 116.42
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 24
+    rare: 12
+    epic: 4
+settingBlueprint:
+    star1: '35'
+    star2: 15
+    star3: 21
+    star4: 32
+    star5: 0
+    star6: 0
+    total: 103
+settingBrand:
+    name: Acura
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 11
+    common: 24
+    rare: 12
+    epic: 4
+settingUnitPrice:
+    level01: 2530
+    level02: 4100
+    level03: 6600
+    level04: 9900
+    level05: 14300
+    level06: 20000
+    level07: 28000
+    level08: 39000
+    level09: 55000
+    level10: 77000
+    level11: 108000
+    level12: null
+    level13: null
+    common: 15000
+    rare: 30000
+    epic: 90000

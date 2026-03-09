@@ -1,0 +1,96 @@
+id: 167
+stars: 6
+gameUpdate: 24
+carOrder: 42
+statOrder: 45
+level: 0
+epic: 1
+model: 'TS 900 Racer Pro'
+slug: tushek-ts-900-racer-pro
+blueprint:
+    star1: '10'
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 10
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 2
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 3402
+    star1: 3584
+    star2: 3795
+    star3: 4020
+    star4: 4253
+    star5: 4527
+    star6: 4779
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 395.2
+    acceleration: 86.0
+    handling: 73.71
+    nitro: 61.51
+    average: 154.11
+statMin:
+    speed: 380.0
+    acceleration: 79.3
+    handling: 55.44
+    nitro: 44.08
+    average: 139.71
+upgrade:
+    speed: 0
+    acceleration: 0
+    handling: 0
+    nitro: 0
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '85'
+    star2: 25
+    star3: 29
+    star4: 38
+    star5: 54
+    star6: 69
+    total: 300
+settingBrand:
+    name: Tushek
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

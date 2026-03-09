@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
+use Symfony\Component\Serializer\Attribute\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: GarageRankRepository::class)]
@@ -34,6 +35,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Groups(['index', 'sheet'])]
     protected int $star0 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -41,6 +43,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Groups(['index', 'sheet'])]
     protected int $star1 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -48,6 +51,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Groups(['index', 'sheet'])]
     protected int $star2 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -55,6 +59,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Groups(['index', 'sheet'])]
     protected int $star3 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -62,6 +67,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Groups(['index', 'sheet'])]
     protected int $star4 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -69,6 +75,7 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Groups(['index', 'sheet'])]
     protected int $star5 = 0;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -76,16 +83,12 @@ class GarageRank
     #[Assert\NotNull]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 7000)]
+    #[Groups(['index', 'sheet'])]
     protected int $star6 = 0;
 
-    #[ORM\OneToOne(targetEntity: GarageApp::class, cascade: ['persist'], inversedBy: 'rank')]
+    #[ORM\OneToOne(targetEntity: GarageApp::class, inversedBy: 'rank', cascade: ['persist'])]
     #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
     protected GarageApp $garage;
-
-    public function __toString() : string
-    {
-        return ''; // $this->getGarage()
-    }
 
     public function getStar0(): ?int
     {

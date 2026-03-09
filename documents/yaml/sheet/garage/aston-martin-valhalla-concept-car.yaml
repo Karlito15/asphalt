@@ -1,0 +1,96 @@
+id: 101
+stars: 6
+gameUpdate: 14
+carOrder: 53
+statOrder: 12
+level: 13
+epic: 16
+model: 'Valhalla Concept Car'
+slug: aston-martin-valhalla-concept-car
+blueprint:
+    star1: '50'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 77
+    total: 265
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 1
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 3232
+    star1: 3403
+    star2: 3604
+    star3: 3789
+    star4: 4034
+    star5: 4278
+    star6: 4517
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 377.4
+    acceleration: 82.23
+    handling: 81.76
+    nitro: 59.55
+    average: 150.23
+statMin:
+    speed: 354.0
+    acceleration: 77.41
+    handling: 57.27
+    nitro: 43.91
+    average: 133.15
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingBlueprint:
+    star1: '50'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 77
+    total: 265
+settingBrand:
+    name: 'Aston Martin'
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

@@ -13,5 +13,5 @@ php bin/console doctrine:migrations:migrate --no-interaction
 
 ### Load Datas
 ``` shell
-php bin/console asphalt:database:migration import
+php bin/console asphalt:csv:migration import
 ```

@@ -1,0 +1,96 @@
+id: 74
+stars: 6
+gameUpdate: 8
+carOrder: 27
+statOrder: 47
+level: 13
+epic: 16
+model: Battista
+slug: automobili-pininfarina-battista
+blueprint:
+    star1: '60'
+    star2: 25
+    star3: 35
+    star4: 46
+    star5: 58
+    star6: 76
+    total: 300
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 1
+    handling: 1
+    nitro: 1
+    mark: 1
+    division: 9
+rank:
+    star0: 3122
+    star1: 3308
+    star2: 3527
+    star3: 3761
+    star4: 4002
+    star5: 4280
+    star6: 4550
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 368.5
+    acceleration: 88.49
+    handling: 80.45
+    nitro: 78.26
+    average: 153.93
+statMin:
+    speed: 350.0
+    acceleration: 82.0
+    handling: 56.8
+    nitro: 54.76
+    average: 135.89
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingBlueprint:
+    star1: '60'
+    star2: 25
+    star3: 35
+    star4: 46
+    star5: 58
+    star6: 76
+    total: 300
+settingBrand:
+    name: 'Automobili Pininfarina'
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

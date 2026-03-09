@@ -27,9 +27,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
 #[AsCommand(
-    name: 'asphalt:database:setting',
+    name: 'asphalt:csv:setting',
     description: 'Toutes les données pour les Settings',
-    aliases: ['asphalt-database-setting'],
+    aliases: ['asphalt-csv-setting'],
     hidden: false,
 )]
 class SettingsCommand extends Command

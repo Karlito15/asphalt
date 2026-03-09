@@ -1,0 +1,96 @@
+id: 121
+stars: 6
+gameUpdate: 17
+carOrder: 37
+statOrder: 28
+level: 8
+epic: 6
+model: Inferno
+slug: inferno-automobili-inferno
+blueprint:
+    star1: '85'
+    star2: 25
+    star3: 29
+    star4: 7
+    star5: 0
+    star6: 0
+    total: 146
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 2
+    handling: 3
+    nitro: 1
+    mark: 1
+    division: 9
+rank:
+    star0: 3549
+    star1: 3703
+    star2: 3882
+    star3: 4073
+    star4: 4272
+    star5: 4504
+    star6: 4722
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 412.6
+    acceleration: 83.05
+    handling: 54.88
+    nitro: 76.62
+    average: 156.79
+statMin:
+    speed: 395.0
+    acceleration: 75.7
+    handling: 47.45
+    nitro: 62.07
+    average: 145.06
+upgrade:
+    speed: 8
+    acceleration: 8
+    handling: 8
+    nitro: 8
+    common: 24
+    rare: 8
+    epic: 0
+settingBlueprint:
+    star1: '85'
+    star2: 25
+    star3: 29
+    star4: 38
+    star5: 54
+    star6: 69
+    total: 300
+settingBrand:
+    name: 'Inferno Automobili'
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

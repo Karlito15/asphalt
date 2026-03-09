@@ -44,5 +44,5 @@ php82 bin/console importmap:install
 php82 bin/console asset-map:compile
 ```
 ``` shell
-php82 bin/console asphalt:database:migration export
+php82 bin/console asphalt:csv:migration export
 ```

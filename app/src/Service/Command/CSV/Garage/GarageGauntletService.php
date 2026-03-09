@@ -59,16 +59,14 @@ class GarageGauntletService implements CSVInterface
      */
     public function createEntity(array $datas): GarageGauntlet
     {
-        $garage = $this->findGarage($datas['Brand'], $datas['Model']);
-
+        $garage = $this->findGarage($datas);
         $entity = new GarageGauntlet();
-        $entity->setSpeed((int) $datas['Speed']);
-        $entity->setAcceleration((int) $datas['Acceleration']);
-        $entity->setHandling((int) $datas['Handling']);
-        $entity->setNitro((int) $datas['Nitro']);
-        $entity->setMark((int) $datas['Mark']);
-        $entity->setDivision((int) $datas['Division']);
-//        $entity->setDivision($this->convertStringToInteger($datas['Division']));
+        $entity->setSpeed($this->convertStringToInteger($datas['Speed']));
+        $entity->setAcceleration($this->convertStringToInteger($datas['Acceleration']));
+        $entity->setHandling($this->convertStringToInteger($datas['Handling']));
+        $entity->setNitro($this->convertStringToInteger($datas['Nitro']));
+        $entity->setMark($this->convertStringToInteger($datas['Mark']));
+        $entity->setDivision($this->convertStringToInteger($datas['Division']));
         $entity->setGarage($garage);
 
         return $entity;

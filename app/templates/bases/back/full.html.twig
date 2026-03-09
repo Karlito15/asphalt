@@ -1,25 +1,43 @@
+{% extends '@App/base.html.twig' %}
+
 {% block body %}
 
     {% block preloader %}
-{#        {% include '@App/back/partials/loader.html.twig' %}#}
+{#        {% include '@App/partials/back/loader.html.twig' %}#}
     {% endblock %}
 
     {% block header %}
-        {% include '@App/back/partials/header.html.twig' %}
+        {% include '@App/partials/back/header.html.twig' %}
     {% endblock %}
 
 <main class="{% block mainClass %}{{ container|default('container-fluid') }}{% endblock %} bg-body-secondary h-100">
     {% block breadcrumb %}
-        {% include '@App/back/partials/breadcrumb.html.twig' %}
+        {% include '@App/partials/back/breadcrumb.html.twig' %}
     {% endblock %}
 
     {% block content %}{% endblock %}
 </main>
 
     {% block footer %}
-        {% include '@App/back/partials/footer.html.twig' %}
+        {% include '@App/partials/back/footer.html.twig' %}
     {% endblock %}
 
 {% endblock %}
 
-{% extends '@App/base.html.twig' %}
+
+
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- Stylesheets -->
+    <link href="{{ asset('libraries/fontawesome/7.2.0/css/all.min.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <!-- Scripts -->
+    <script src="{{ asset('libraries/jquery/3.7.1.min.js') }}"></script>
+    <script src="{{ asset('libraries/bootstrap/5.3.8/js/bootstrap.bundle.min.js') }}"></script>
+{% endblock %}
+

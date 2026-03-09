@@ -1,0 +1,96 @@
+id: 284
+stars: 4
+gameUpdate: 42
+carOrder: 19
+statOrder: 40
+level: 11
+epic: 2
+model: 'GR Supra 2023'
+slug: toyota-gr-supra-2023
+blueprint:
+    star1: '15'
+    star2: 25
+    star3: 35
+    star4: 50
+    star5: 0
+    star6: 0
+    total: 125
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 9
+    handling: 2
+    nitro: 3
+    mark: 5
+    division: 9
+rank:
+    star0: 742
+    star1: 1132
+    star2: 1560
+    star3: 1994
+    star4: 2405
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 268.0
+    acceleration: 75.65
+    handling: 64.5
+    nitro: 52.07
+    average: 115.05
+statMin:
+    speed: 250.0
+    acceleration: 64.9
+    handling: 45.09
+    nitro: 32.14
+    average: 98.03
+upgrade:
+    speed: 7
+    acceleration: 7
+    handling: 7
+    nitro: 7
+    common: 16
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '15'
+    star2: 25
+    star3: 35
+    star4: 50
+    star5: 0
+    star6: 0
+    total: 125
+settingBrand:
+    name: Toyota
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 11
+    common: 28
+    rare: 8
+    epic: 4
+settingUnitPrice:
+    level01: 4370
+    level02: 7100
+    level03: 11400
+    level04: 17100
+    level05: 24700
+    level06: 34500
+    level07: 48500
+    level08: 68000
+    level09: 95000
+    level10: 133000
+    level11: 186000
+    level12: null
+    level13: null
+    common: 20000
+    rare: 40000
+    epic: 120000

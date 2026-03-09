@@ -31,11 +31,11 @@ tasks:
     dc:
         desc: "Create symfony database"
         cmds:
-            - "{{.SYMFONY_CONSOLE}} doctrine:database:create" # --if-not-exists
+            - "{{.SYMFONY_CONSOLE}} doctrine:database:create --if-not-exists"
     dd:
         desc: "Drop symfony database"
         cmds:
-            - "{{.SYMFONY_CONSOLE}} doctrine:database:drop --force" # --if-exists
+            - "{{.SYMFONY_CONSOLE}} doctrine:database:drop --force --if-exists"
     du:
         desc: "Update symfony schema database"
         cmds:

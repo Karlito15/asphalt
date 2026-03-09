@@ -27,9 +27,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
 #[AsCommand(
-    name: 'asphalt:database:race',
+    name: 'asphalt:csv:race',
     description: 'Toutes les données pour les Courses',
-    aliases: ['asphalt-database-race'],
+    aliases: ['asphalt-csv-race'],
     hidden: false,
 )]
 class RacesCommand extends Command

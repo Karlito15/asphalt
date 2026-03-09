@@ -37,7 +37,7 @@ class SettingTag
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration'])]
     protected string $value;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -46,7 +46,7 @@ class SettingTag
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 999)]
     #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration'])]
     protected int $carsNumber = 0;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique: true, nullable: false)]
@@ -56,7 +56,7 @@ class SettingTag
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['value'], separator: '-')]
-    #[Groups(['index'])]
+    #[Groups(['index', 'migration'])]
     protected string $slug;
 
     public function __toString(): string

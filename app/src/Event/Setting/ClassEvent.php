@@ -9,8 +9,16 @@ use App\Persistence\Entity\GarageApp;
 final readonly class ClassEvent
 {
     public function __construct(
-        public GarageApp $garage
+        private GarageApp $garage
     ) {}
+
+    /**
+     * @return GarageApp
+     */
+    public function getGarage(): GarageApp
+    {
+        return $this->garage;
+    }
 
     /**
 	 * Retourne la Class de la Voiture
@@ -20,5 +28,15 @@ final readonly class ClassEvent
     public function getClass(): string
     {
         return $this->garage->getSettingClass()->getValue();
+    }
+
+    /**
+	 * Retourne la Médiane de la Voiture
+     *
+     * @return int
+     */
+    public function getMedian(): int
+    {
+        return $this->garage->getSettingClass()->getMedian();
     }
 }

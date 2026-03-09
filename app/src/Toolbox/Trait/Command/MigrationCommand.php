@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Toolbox\Trait\Command;
 
 use App\Persistence\Entity\GarageApp;
-use App\Persistence\Entity\SettingBrand;
 use App\Service\Command\PathService;
 use App\Toolbox\File\CSV;
 use Doctrine\DBAL\Exception;
@@ -101,19 +100,9 @@ trait MigrationCommand
      * @param string $model
      * @return GarageApp
      */
-    public function findGarage(string $brand, string $model): GarageApp
+    public function findGarage(array $datas): GarageApp
     {
-        $settingBrand = $this->entityManager->getRepository(SettingBrand::class)->findOneBy(['name' => $brand]);
-        $garage       = $this->entityManager->getRepository(GarageApp::class)->findOneBy(['model' => $model, 'settingBrand' => $settingBrand]);
-
-        if (is_null($garage)) {
-            echo PHP_EOL . PHP_EOL . PHP_EOL . PHP_EOL . PHP_EOL;
-            $this->logger->error($brand);
-            $this->logger->error($model);
-            exit;
-        }
-
-        return is_null($garage) ? throw new \RuntimeException(sprintf(' /!\ %1$s %2$s /!\ ', $brand, $model)) : $garage;
+        return $this->entityManager->getRepository(GarageApp::class)->findByBrandAndModel($datas['Brand'], $datas['Model']);
     }
 
     /**

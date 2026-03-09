@@ -1,0 +1,96 @@
+id: 290
+stars: 6
+gameUpdate: 43
+carOrder: 43
+statOrder: 38
+level: 8
+epic: 6
+model: 'Ultimate Aero TT'
+slug: ssc-ultimate-aero-tt
+blueprint:
+    star1: '35'
+    star2: 40
+    star3: 45
+    star4: 4
+    star5: 0
+    star6: 0
+    total: 124
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 9
+    handling: 3
+    nitro: 2
+    mark: 3
+    division: 9
+rank:
+    star0: 3577
+    star1: 3734
+    star2: 3919
+    star3: 4116
+    star4: 4321
+    star5: 4559
+    star6: 4781
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 428.0
+    acceleration: 79.69
+    handling: 49.02
+    nitro: 63.89
+    average: 155.15
+statMin:
+    speed: 414.0
+    acceleration: 74.98
+    handling: 40.93
+    nitro: 45.83
+    average: 143.94
+upgrade:
+    speed: 2
+    acceleration: 2
+    handling: 2
+    nitro: 2
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '35'
+    star2: 40
+    star3: 45
+    star4: 50
+    star5: 60
+    star6: 70
+    total: 300
+settingBrand:
+    name: SSC
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

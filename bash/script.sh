@@ -25,4 +25,10 @@ php82 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:setting-brand
 
 # Export
 php82 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:order-car export
-php82 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:database:migration export
+php82 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:csv:migration export
+
+
+# php bin/console doctrine:cache:clear-metadata
+# php bin/console doctrine:cache:clear-query
+# php bin/console doctrine:cache:clear-result
+#

@@ -37,6 +37,10 @@ php bin/console doctrine:mapping:describe GarageStatus
 ```
 
 ``` shell
+php bin/console doctrine:mapping:describe GarageStatusControl
+```
+
+``` shell
 php bin/console doctrine:mapping:describe GarageUpgrade
 ```
 

@@ -7,9 +7,9 @@ framework:
         excluded_patterns:
             - '**/assets/styles/**/_*.scss'
 
-        precompress:
-            # the extensions considered safe (css, js, json, svg, xml, ttf, otf, wasm, etc.)
-            extensions: ['css', 'js', 'json', 'svg', 'xml']
+#        precompress:
+#            # the extensions considered safe (css, js, json, svg, xml, ttf, otf, wasm, etc.)
+#            extensions: ['css', 'js', 'json', 'svg', 'xml']
 
 when@prod:
     framework:

@@ -39,7 +39,7 @@ class RaceRegion
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index', 'race'])]
+    #[Groups(['index'])]
     protected string $name;
 
     #[ORM\Column(type: Types::STRING, length: 64, unique: true, nullable:false)]
@@ -49,7 +49,6 @@ class RaceRegion
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['name'], separator: '-')]
-    #[Groups(['index'])]
     protected string $slug;
 
     #[ORM\OneToMany(targetEntity: RaceTrack::class, mappedBy: 'region')]

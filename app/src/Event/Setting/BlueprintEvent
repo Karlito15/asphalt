@@ -1,0 +1,92 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Event\Setting;
+
+use App\Persistence\Entity\GarageApp;
+
+final readonly class BlueprintEvent
+{
+    public function __construct(
+        private GarageApp $garage
+    ) {}
+
+    /**
+     * @return GarageApp
+     */
+    public function getGarage(): GarageApp
+    {
+        return $this->garage;
+    }
+
+    /**
+     * Retourne la valeur du Garage pour les Blueprints Star 1
+     *
+     * @return int|string
+     */
+    public function getGarageStar1(): int|string
+    {
+        return $this->garage->getBlueprint()->getStar1();
+    }
+
+    /**
+     * Retourne la valeur du Garage pour les Blueprints Star 2
+     *
+     * @return int
+     */
+    public function getGarageStar2(): int
+    {
+        return $this->garage->getBlueprint()->getStar2();
+    }
+
+    /**
+     * Retourne la valeur du Garage pour les Blueprints Star 3
+     *
+     * @return int
+     */
+    public function getGarageStar3(): int
+    {
+        return $this->garage->getBlueprint()->getStar3();
+    }
+
+    /**
+     * Retourne la valeur du Garage pour les Blueprints Star 4
+     *
+     * @return int
+     */
+    public function getGarageStar4(): int
+    {
+        return $this->garage->getBlueprint()->getStar4();
+    }
+
+    /**
+     * Retourne la valeur du Garage pour les Blueprints Star 5
+     *
+     * @return int
+     */
+    public function getGarageStar5(): int
+    {
+        return $this->garage->getBlueprint()->getStar5();
+    }
+
+    /**
+     * Retourne la valeur du Garage pour les Blueprints Star 6
+     *
+     * @return int
+     */
+    public function getGarageStar6(): int
+    {
+        return $this->garage->getBlueprint()->getStar6();
+    }
+
+    /**
+     * Retourne la valeur du Garage pour les Blueprints Total
+     *
+     * @return int
+     */
+    public function getGarageTotal(): int
+    {
+        return $this->garage->getBlueprint()->getTotal();
+    }
+}

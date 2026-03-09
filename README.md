@@ -2,7 +2,7 @@
 
 ## Symfony App for Asphalt Garage Database
  
-#### Base on : Symfony 7.3
+#### Base on : Symfony 8.0
 
 ###### Charset
 ``` text
@@ -36,7 +36,7 @@ php82 bin/console asset-map:compile
 ```
 export DB to CSV
 ``` shell
-php82 bin/console asphalt:database:migration export
+php82 bin/console asphalt:csv:migration export
 ```
 
 ###### NAS - Droits

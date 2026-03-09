@@ -1,0 +1,96 @@
+id: 301
+stars: 6
+gameUpdate: 45
+carOrder: 62
+statOrder: 35
+level: 6
+epic: 5
+model: B95
+slug: automobili-pininfarina-b95
+blueprint:
+    star1: '30'
+    star2: 35
+    star3: 14
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 79
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 2
+    handling: 2
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 0
+    star1: 0
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 395.9
+    acceleration: 85.93
+    handling: 60.35
+    nitro: 45.07
+    average: 146.81
+statMin:
+    speed: 380.0
+    acceleration: 82.99
+    handling: 43.26
+    nitro: 12.68
+    average: 129.73
+upgrade:
+    speed: 2
+    acceleration: 2
+    handling: 2
+    nitro: 2
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '30'
+    star2: 35
+    star3: 40
+    star4: 45
+    star5: 55
+    star6: 65
+    total: 270
+settingBrand:
+    name: 'Automobili Pininfarina'
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

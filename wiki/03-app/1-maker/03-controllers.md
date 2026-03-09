@@ -6,54 +6,6 @@
 ``` shell
 php bin/console make:controller Back\DashboardController
 ```
-``` shell
-php bin/console make:controller Back\InventoryController
-```
-``` shell
-php bin/console make:controller Back\MissionController
-```
-``` shell
-php bin/console make:controller Back\RaceController
-```
-``` shell
-php bin/console make:controller Back\Mission\TaskController
-```
-``` shell
-php bin/console make:controller Back\Mission\TypeController
-```
-``` shell
-php bin/console make:controller Back\Race\ModeController
-```
-``` shell
-php bin/console make:controller Back\Race\RegionController
-```
-``` shell
-php bin/console make:controller Back\Race\SeasonController
-```
-``` shell
-php bin/console make:controller Back\Race\TimeController
-```
-``` shell
-php bin/console make:controller Back\Race\TrackController
-```
-``` shell
-php bin/console make:controller Back\Setting\BlueprintController
-```
-``` shell
-php bin/console make:controller Back\Setting\BrandController
-```
-``` shell
-php bin/console make:controller Back\Setting\ClassController
-```
-``` shell
-php bin/console make:controller Back\Setting\LevelController
-```
-``` shell
-php bin/console make:controller Back\Setting\TagController
-```
-``` shell
-php bin/console make:controller Back\Setting\UnitPriceController
-```
 
 
 #### Front
@@ -99,15 +51,15 @@ php bin/console make:controller Front\Page\Search\GarageController
 ``` shell
 php bin/console make:controller Front\Page\Search\RaceController
 ```
-``` shell
-php bin/console make:controller Front\Page\Setting\BlueprintController
-```
-``` shell
-php bin/console make:controller Front\Page\Setting\LevelController
-```
-``` shell
-php bin/console make:controller Front\Page\Setting\RankController
-```
+    ``` shell
+    php bin/console make:controller Front\Page\Setting\BlueprintController
+    ```
+    ``` shell
+    php bin/console make:controller Front\Page\Setting\LevelController
+    ```
+    ``` shell
+    php bin/console make:controller Front\Page\Setting\RankController
+    ```
 
 
 #### Sitemap
@@ -123,29 +75,29 @@ php bin/console make:controller Sitemap\FrontController
 ``` shell
 php bin/console make:controller --no-template Ajax\DashboardController
 ```
-``` shell
-php bin/console make:controller --no-template Ajax\GarageAppController
-```
+    ``` shell
+    php bin/console make:controller --no-template Ajax\GarageAppController
+    ```
 
 
 #### Api
 ``` shell
-php bin/console make:controller --no-template Api\InventoryAppController
+php bin/console make:controller --no-template Api\Inventory\AppController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\GarageAppController
+php bin/console make:controller --no-template Api\Garage\AppController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\MissionAppController
-```
-``` shell
-php bin/console make:controller --no-template Api\RaceAppController
+php bin/console make:controller --no-template Api\Mission\AppController
 ```
 ``` shell
 php bin/console make:controller --no-template Api\Mission\TaskController
 ```
 ``` shell
 php bin/console make:controller --no-template Api\Mission\TypeController
+```
+``` shell
+php bin/console make:controller --no-template Api\Race\AppController
 ```
 ``` shell
 php bin/console make:controller --no-template Api\Race\ModeController

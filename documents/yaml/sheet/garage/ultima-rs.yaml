@@ -1,0 +1,96 @@
+id: 162
+stars: 6
+gameUpdate: 23
+carOrder: 33
+statOrder: 30
+level: 13
+epic: 16
+model: RS
+slug: ultima-rs
+blueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 70
+    star6: 85
+    total: 300
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 3
+    handling: 2
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 3483
+    star1: 3637
+    star2: 3814
+    star3: 4002
+    star4: 4197
+    star5: 4423
+    star6: 4644
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 418.2
+    acceleration: 81.38
+    handling: 63.54
+    nitro: 63.24
+    average: 156.59
+statMin:
+    speed: 402.0
+    acceleration: 75.7
+    handling: 50.19
+    nitro: 47.09
+    average: 143.75
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingBlueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 60
+    star5: 70
+    star6: 85
+    total: 300
+settingBrand:
+    name: Ultima
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

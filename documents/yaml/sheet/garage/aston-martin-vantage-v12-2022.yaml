@@ -1,0 +1,96 @@
+id: 239
+stars: 5
+gameUpdate: 36
+carOrder: 37
+statOrder: 26
+level: 10
+epic: 1
+model: 'Vantage V12 2022'
+slug: aston-martin-vantage-v12-2022
+blueprint:
+    star1: '0'
+    star2: 22
+    star3: 30
+    star4: 35
+    star5: 19
+    star6: 0
+    total: 106
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 9
+    nitro: 9
+    mark: 7
+    division: 9
+rank:
+    star0: 1454
+    star1: 1649
+    star2: 1880
+    star3: 2125
+    star4: 2453
+    star5: 2968
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 331.1
+    acceleration: 75.84
+    handling: 39.15
+    nitro: 42.5
+    average: 122.15
+statMin:
+    speed: 322.0
+    acceleration: 69.4
+    handling: 31.91
+    nitro: 21.82
+    average: 111.28
+upgrade:
+    speed: 1
+    acceleration: 1
+    handling: 1
+    nitro: 1
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 22
+    star3: 30
+    star4: 35
+    star5: 38
+    star6: 0
+    total: 125
+settingBrand:
+    name: 'Aston Martin'
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 12
+    common: 28
+    rare: 12
+    epic: 8
+settingUnitPrice:
+    level01: 6400
+    level02: 10500
+    level03: 16800
+    level04: 25200
+    level05: 36400
+    level06: 51000
+    level07: 71500
+    level08: 100000
+    level09: 140000
+    level10: 196000
+    level11: 274000
+    level12: 384000
+    level13: null
+    common: 30000
+    rare: 60000
+    epic: 180000

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\SettingClass;
+use App\Toolbox\Trait\Repository\SitemapRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -13,9 +14,22 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class SettingClassRepository extends ServiceEntityRepository
 {
+    use SitemapRepository;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, SettingClass::class);
+    }
+
+    // XXX
+
+    /**
+     * @param string $query
+     * @return SettingClass
+     */
+    public function findByClass(string $query): SettingClass
+    {
+        return $this->findOneBy(['value' => $query]);
     }
 
     // EXPORTS
@@ -27,11 +41,18 @@ class SettingClassRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $q  = "q.label AS Label, q.value AS Value, q.classOrder AS Order, q.carsNumber AS Number, q.median AS Median, q.slug AS Slug";
-        $qb = $this->createQueryBuilder('q');
-        $qb->select($q);
-        $qb->where('q.deletedAt IS NULL');
-        $qb->orderBy('q.classOrder', 'ASC');
+        $qb = $this->createQueryBuilder('q')
+            ->select([
+                'q.label AS Label',
+                'q.value AS Value',
+                'q.classOrder AS Order',
+                'q.carsNumber AS Number',
+                'q.median AS Median',
+                'q.slug AS Slug',
+            ])
+            ->where('q.deletedAt IS NULL')
+            ->orderBy('q.classOrder', 'ASC')
+        ;
 
         return $qb->getQuery()->getArrayResult();
     }

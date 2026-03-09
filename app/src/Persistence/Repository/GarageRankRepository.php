@@ -39,30 +39,13 @@ class GarageRankRepository extends ServiceEntityRepository
                 'gr.star5 AS Star5',
                 'gr.star6 AS Star6',
             ])
-            ->join('g.settingBrand', 'b')
             ->join('gr.garage', 'g')
+            ->join('g.settingBrand', 'b')
             ->orderBy('g.gameUpdate', 'ASC')
             ->addOrderBy('b.name', 'ASC')
         ;
 
         return $qb->getQuery()->getArrayResult();
-//
-//        $datas = [];
-//        foreach ($this->findAll() as $garage) {
-//            $datas[] = [
-//                'Star0' => $garage->getStar0(),
-//                'Star1' => $garage->getStar1(),
-//                'Star2' => $garage->getStar2(),
-//                'Star3' => $garage->getStar3(),
-//                'Star4' => $garage->getStar4(),
-//                'Star5' => $garage->getStar5(),
-//                'Star6' => $garage->getStar6(),
-//                'Brand' => $garage->getGarage()->getSettingBrand()->getName(),
-//                'Model' => $garage->getGarage()->getModel(),
-//            ];
-//        }
-//
-//        return $datas;
     }
 
     // EVENTS

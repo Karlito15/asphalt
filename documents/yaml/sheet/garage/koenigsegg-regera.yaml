@@ -1,0 +1,96 @@
+id: 27
+stars: 6
+gameUpdate: 0
+carOrder: 31
+statOrder: 22
+level: 13
+epic: 16
+model: Regera
+slug: koenigsegg-regera
+blueprint:
+    star1: '60'
+    star2: 13
+    star3: 16
+    star4: 25
+    star5: 38
+    star6: 48
+    total: 200
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 3
+    handling: 3
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 3460
+    star1: 3612
+    star2: 3793
+    star3: 3980
+    star4: 4176
+    star5: 4403
+    star6: 4616
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 457.1
+    acceleration: 80.88
+    handling: 48.75
+    nitro: 52.48
+    average: 159.8
+statMin:
+    speed: 440.0
+    acceleration: 74.8
+    handling: 39.74
+    nitro: 42.73
+    average: 149.32
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingBlueprint:
+    star1: '60'
+    star2: 13
+    star3: 16
+    star4: 25
+    star5: 38
+    star6: 48
+    total: 200
+settingBrand:
+    name: Koenigsegg
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

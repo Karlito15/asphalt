@@ -1,0 +1,96 @@
+id: 314
+stars: 6
+gameUpdate: 47
+carOrder: 78
+statOrder: 99
+level: 0
+epic: 0
+model: 'Vulcano Spyder'
+slug: icona-vulcano-spyder
+blueprint:
+    star1: ''
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 0
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 2
+    handling: 3
+    nitro: 3
+    mark: 2
+    division: 9
+rank:
+    star0: 3673
+    star1: 3826
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 4868
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 430.7
+    acceleration: 83.6
+    handling: 55.64
+    nitro: 51.99
+    average: 155.48
+statMin:
+    speed: 415.0
+    acceleration: 79.3
+    handling: 41.87
+    nitro: 32.04
+    average: 142.05
+upgrade:
+    speed: 0
+    acceleration: 0
+    handling: 0
+    nitro: 0
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '99'
+    star2: 99
+    star3: 99
+    star4: 99
+    star5: 99
+    star6: 99
+    total: 594
+settingBrand:
+    name: Icona
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 99
+    common: 99
+    rare: 99
+    epic: 99
+settingUnitPrice:
+    level01: 99999
+    level02: 99999
+    level03: 99999
+    level04: 99999
+    level05: 99999
+    level06: 99999
+    level07: 99999
+    level08: 99999
+    level09: 99999
+    level10: 999999
+    level11: 999999
+    level12: 999999
+    level13: 999999
+    common: 99999
+    rare: 999999
+    epic: 999999

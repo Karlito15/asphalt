@@ -1,0 +1,96 @@
+id: 75
+stars: 6
+gameUpdate: 8
+carOrder: 23
+statOrder: 5
+level: 13
+epic: 16
+model: Dendrobium
+slug: vanda-electrics-dendrobium
+blueprint:
+    star1: '50'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 62
+    total: 250
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 1
+    handling: 1
+    nitro: 1
+    mark: 1
+    division: 9
+rank:
+    star0: 2229
+    star1: 2483
+    star2: 2776
+    star3: 3044
+    star4: 3387
+    star5: 3743
+    star6: 4099
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 339.9
+    acceleration: 86.24
+    handling: 95.92
+    nitro: 84.9
+    average: 151.74
+statMin:
+    speed: 320.0
+    acceleration: 76.6
+    handling: 53.29
+    nitro: 59.03
+    average: 127.23
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingBlueprint:
+    star1: '50'
+    star2: 23
+    star3: 27
+    star4: 36
+    star5: 52
+    star6: 62
+    total: 250
+settingBrand:
+    name: 'Vanda Electrics'
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

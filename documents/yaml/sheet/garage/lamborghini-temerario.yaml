@@ -1,0 +1,96 @@
+id: 261
+stars: 6
+gameUpdate: 39
+carOrder: 71
+statOrder: 15
+level: 13
+epic: 12
+model: Temerario
+slug: lamborghini-temerario
+blueprint:
+    star1: Key
+    star2: 26
+    star3: 34
+    star4: 46
+    star5: 61
+    star6: 78
+    total: 245
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 1
+    handling: 2
+    nitro: 2
+    mark: 1
+    division: 9
+rank:
+    star0: 2337
+    star1: 2591
+    star2: 2883
+    star3: 3181
+    star4: 3585
+    star5: 4057
+    star6: 4398
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 359.1
+    acceleration: 87.26
+    handling: 71.33
+    nitro: 62.7
+    average: 145.1
+statMin:
+    speed: 343.0
+    acceleration: 77.5
+    handling: 41.66
+    nitro: 27.85
+    average: 122.5
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 32
+    rare: 20
+    epic: 12
+settingBlueprint:
+    star1: Key
+    star2: 26
+    star3: 34
+    star4: 46
+    star5: 61
+    star6: 78
+    total: 245
+settingBrand:
+    name: Lamborghini
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 13
+    common: 32
+    rare: 20
+    epic: 12
+settingUnitPrice:
+    level01: 9890
+    level02: 16100
+    level03: 25800
+    level04: 38700
+    level05: 55900
+    level06: 78500
+    level07: 109500
+    level08: 153500
+    level09: 214500
+    level10: 300500
+    level11: 421000
+    level12: 589000
+    level13: 967500
+    common: 70000
+    rare: 140000
+    epic: 420000

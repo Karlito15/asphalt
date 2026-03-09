@@ -9,6 +9,7 @@ use App\Persistence\Entity\SettingUnitPrice;
 use App\Persistence\Repository\GarageAppRepository;
 use App\Service\Command\PathService;
 use App\Service\Interface\CSVInterface;
+use App\Toolbox\File\CSV;
 use App\Toolbox\Trait\Command\MigrationCommand;
 use Doctrine\DBAL\Exception;
 use Doctrine\ORM\EntityManagerInterface;
@@ -94,7 +95,7 @@ class SettingUnitPriceService implements CSVInterface
     public function createEntity(array $datas): GarageApp
     {
         $priceUnit  = $this->entityManager->getRepository(SettingUnitPrice::class)->findOneBy(['slug' => $datas['SettingPrice']]);
-        $garage     = $this->findGarage($datas['Brand'], $datas['Model']);
+        $garage     = $this->findGarage($datas);
         $garage->setSettingUnitPrice($priceUnit);
 
         return $garage;

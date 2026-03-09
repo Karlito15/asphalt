@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Persistence\Repository;
 
 use App\Persistence\Entity\RaceMode;
+use App\Toolbox\Trait\Repository\SitemapRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -13,6 +14,8 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class RaceModeRepository extends ServiceEntityRepository
 {
+    use SitemapRepository;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, RaceMode::class);
@@ -27,11 +30,14 @@ class RaceModeRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $q  = "q.name AS Name, q.slug AS Slug";
-        $qb = $this->createQueryBuilder('q');
-        $qb->select($q);
-        $qb->where('q.deletedAt IS NULL');
-        $qb->orderBy('q.name', 'ASC');
+        $qb = $this->createQueryBuilder('q')
+            ->select([
+                'q.name AS Name',
+                'q.slug AS Slug',
+            ])
+            ->where('q.deletedAt IS NULL')
+            ->orderBy('q.name', 'ASC')
+        ;
 
         return $qb->getQuery()->getArrayResult();
     }

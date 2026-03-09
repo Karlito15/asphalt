@@ -1,0 +1,96 @@
+id: 35
+stars: 3
+gameUpdate: 0
+carOrder: 6
+statOrder: 16
+level: 10
+epic: 4
+model: 'AMG GT S'
+slug: mercedes-benz-amg-gt-s
+blueprint:
+    star1: '30'
+    star2: 20
+    star3: 50
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 100
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 9
+    handling: 1
+    nitro: 2
+    mark: 3
+    division: 9
+rank:
+    star0: 1193
+    star1: 1536
+    star2: 1959
+    star3: 2281
+    star4: 0
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 317.9
+    acceleration: 78.22
+    handling: 86.5
+    nitro: 60.57
+    average: 135.8
+statMin:
+    speed: 310.0
+    acceleration: 65.8
+    handling: 35.63
+    nitro: 39.96
+    average: 112.85
+upgrade:
+    speed: 10
+    acceleration: 10
+    handling: 10
+    nitro: 10
+    common: 16
+    rare: 4
+    epic: 4
+settingBlueprint:
+    star1: '30'
+    star2: 20
+    star3: 50
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 100
+settingBrand:
+    name: Mercedes-Benz
+settingClass:
+    value: C
+    carsNumber: 58
+    median: 139
+settingLevel:
+    level: 10
+    common: 16
+    rare: 4
+    epic: 4
+settingUnitPrice:
+    level01: 1500
+    level02: 2400
+    level03: 3900
+    level04: 5900
+    level05: 8500
+    level06: 12000
+    level07: 16500
+    level08: 23000
+    level09: 32500
+    level10: 45500
+    level11: null
+    level12: null
+    level13: null
+    common: 10000
+    rare: 20000
+    epic: 60000

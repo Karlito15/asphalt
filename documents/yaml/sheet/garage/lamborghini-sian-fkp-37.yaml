@@ -1,0 +1,96 @@
+id: 93
+stars: 6
+gameUpdate: 12
+carOrder: 34
+statOrder: 35
+level: 12
+epic: 9
+model: 'Sián FKP 37'
+slug: lamborghini-sian-fkp-37
+blueprint:
+    star1: '85'
+    star2: 25
+    star3: 29
+    star4: 38
+    star5: 54
+    star6: 33
+    total: 264
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 1
+    nitro: 1
+    mark: 1
+    division: 9
+rank:
+    star0: 3518
+    star1: 3676
+    star2: 3856
+    star3: 4045
+    star4: 4241
+    star5: 4470
+    star6: 4685
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 368.1
+    acceleration: 82.1
+    handling: 92.35
+    nitro: 81.18
+    average: 155.93
+statMin:
+    speed: 350.0
+    acceleration: 74.8
+    handling: 68.27
+    nitro: 69.04
+    average: 140.53
+upgrade:
+    speed: 10
+    acceleration: 10
+    handling: 10
+    nitro: 10
+    common: 26
+    rare: 10
+    epic: 0
+settingBlueprint:
+    star1: '85'
+    star2: 25
+    star3: 29
+    star4: 38
+    star5: 54
+    star6: 69
+    total: 300
+settingBrand:
+    name: Lamborghini
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

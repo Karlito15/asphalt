@@ -1,0 +1,96 @@
+id: 31
+stars: 4
+gameUpdate: 0
+carOrder: 8
+statOrder: 59
+level: 11
+epic: 5
+model: Asterion
+slug: lamborghini-asterion
+blueprint:
+    star1: '40'
+    star2: 18
+    star3: 24
+    star4: 36
+    star5: 0
+    star6: 0
+    total: 118
+evo:
+    number: 0
+gauntlet:
+    speed: 3
+    acceleration: 3
+    handling: 3
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 1809
+    star1: 2023
+    star2: 2363
+    star3: 2695
+    star4: 2983
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 336.8
+    acceleration: 81.05
+    handling: 45.56
+    nitro: 68.21
+    average: 132.91
+statMin:
+    speed: 320.0
+    acceleration: 73.0
+    handling: 37.51
+    nitro: 58.07
+    average: 122.15
+upgrade:
+    speed: 11
+    acceleration: 11
+    handling: 11
+    nitro: 11
+    common: 24
+    rare: 16
+    epic: 5
+settingBlueprint:
+    star1: '40'
+    star2: 18
+    star3: 24
+    star4: 36
+    star5: 0
+    star6: 0
+    total: 118
+settingBrand:
+    name: Lamborghini
+settingClass:
+    value: B
+    carsNumber: 72
+    median: 146
+settingLevel:
+    level: 11
+    common: 24
+    rare: 16
+    epic: 8
+settingUnitPrice:
+    level01: 2880
+    level02: 4700
+    level03: 7500
+    level04: 11300
+    level05: 16300
+    level06: 23000
+    level07: 32000
+    level08: 44500
+    level09: 62500
+    level10: 87500
+    level11: 122000
+    level12: null
+    level13: null
+    common: 20000
+    rare: 40000
+    epic: 120000

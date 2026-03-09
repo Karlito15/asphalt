@@ -1,0 +1,96 @@
+id: 288
+stars: 5
+gameUpdate: 43
+carOrder: 42
+statOrder: 16
+level: 10
+epic: 3
+model: 'Mercedes-AMG ONE'
+slug: mercedes-benz-mercedes-amg-one
+blueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 50
+    star5: 11
+    star6: 0
+    total: 146
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 2
+    nitro: 1
+    mark: 2
+    division: 9
+rank:
+    star0: 2907
+    star1: 3090
+    star2: 3308
+    star3: 3508
+    star4: 3772
+    star5: 4034
+    star6: 4287
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 362.4
+    acceleration: 81.53
+    handling: 76.78
+    nitro: 77.12
+    average: 149.46
+statMin:
+    speed: 352.0
+    acceleration: 73.9
+    handling: 53.2
+    nitro: 49.87
+    average: 132.24
+upgrade:
+    speed: 10
+    acceleration: 10
+    handling: 10
+    nitro: 10
+    common: 20
+    rare: 16
+    epic: 1
+settingBlueprint:
+    star1: Key
+    star2: 40
+    star3: 45
+    star4: 50
+    star5: 60
+    star6: 75
+    total: 270
+settingBrand:
+    name: Mercedes-Benz
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

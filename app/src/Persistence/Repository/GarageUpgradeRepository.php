@@ -27,22 +27,25 @@ class GarageUpgradeRepository extends ServiceEntityRepository
      */
     public function export(): array
     {
-        $datas = [];
-        foreach ($this->findAll() as $garage) {
-            $datas[] = [
-                'Speed'        => $garage->getSpeed(),
-                'Acceleration' => $garage->getAcceleration(),
-                'Handling'     => $garage->getHandling(),
-                'Nitro'        => $garage->getNitro(),
-                'Common'       => $garage->getCommon(),
-                'Rare'         => $garage->getRare(),
-                'Epic'         => $garage->getEpic(),
-                'Brand'        => $garage->getGarage()->getSettingBrand()->getName(),
-                'Model'        => $garage->getGarage()->getModel(),
-            ];
-        }
+        $qb = $this->createQueryBuilder('gu')
+            ->select([
+                'b.name AS Brand',
+                'g.model AS Model',
+                'gu.speed AS Speed',
+                'gu.acceleration AS Acceleration',
+                'gu.handling AS Handling',
+                'gu.nitro AS Nitro',
+                'gu.common AS Common',
+                'gu.rare AS Rare',
+                'gu.epic AS Epic',
+            ])
+            ->join('gu.garage', 'g')
+            ->join('g.settingBrand', 'b')
+            ->orderBy('g.gameUpdate', 'ASC')
+            ->addOrderBy('b.name', 'ASC')
+        ;
 
-        return $datas;
+        return $qb->getQuery()->getArrayResult();
     }
 
     // EVENTS

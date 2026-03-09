@@ -1,0 +1,96 @@
+id: 58
+stars: 6
+gameUpdate: 3
+carOrder: 25
+statOrder: 52
+level: 13
+epic: 14
+model: 'TS1 GT Anniversary'
+slug: zenvo-ts1-gt-anniversary
+blueprint:
+    star1: '60'
+    star2: 13
+    star3: 16
+    star4: 25
+    star5: 38
+    star6: 48
+    total: 200
+evo:
+    number: 0
+gauntlet:
+    speed: 1
+    acceleration: 3
+    handling: 3
+    nitro: 2
+    mark: 2
+    division: 9
+rank:
+    star0: 3067
+    star1: 3251
+    star2: 3477
+    star3: 3711
+    star4: 3958
+    star5: 4249
+    star6: 4514
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 418.2
+    acceleration: 81.29
+    handling: 46.66
+    nitro: 63.43
+    average: 152.39
+statMin:
+    speed: 402.0
+    acceleration: 74.8
+    handling: 37.49
+    nitro: 47.09
+    average: 140.35
+upgrade:
+    speed: 13
+    acceleration: 13
+    handling: 13
+    nitro: 13
+    common: 28
+    rare: 20
+    epic: 6
+settingBlueprint:
+    star1: '60'
+    star2: 13
+    star3: 16
+    star4: 25
+    star5: 38
+    star6: 48
+    total: 200
+settingBrand:
+    name: Zenvo
+settingClass:
+    value: S
+    carsNumber: 78
+    median: 159
+settingLevel:
+    level: 13
+    common: 28
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 23000
+    level02: 37500
+    level03: 60000
+    level04: 90000
+    level05: 130000
+    level06: 182000
+    level07: 255000
+    level08: 356500
+    level09: 499500
+    level10: 699000
+    level11: 979000
+    level12: 1370000
+    level13: 2250000
+    common: 90000
+    rare: 180000
+    epic: 540000

@@ -1,0 +1,96 @@
+id: 237
+stars: 6
+gameUpdate: 35
+carOrder: 46
+statOrder: 6
+level: 10
+epic: 0
+model: 'Utopia Coupé'
+slug: pagani-utopia-coupe
+blueprint:
+    star1: '0'
+    star2: 28
+    star3: 32
+    star4: 44
+    star5: 38
+    star6: 0
+    total: 142
+evo:
+    number: 0
+gauntlet:
+    speed: 2
+    acceleration: 3
+    handling: 1
+    nitro: 1
+    mark: 1
+    division: 9
+rank:
+    star0: 3011
+    star1: 3183
+    star2: 3386
+    star3: 3574
+    star4: 3819
+    star5: 4066
+    star6: 4308
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 367.9
+    acceleration: 81.03
+    handling: 80.63
+    nitro: 77.19
+    average: 151.69
+statMin:
+    speed: 350.0
+    acceleration: 73.0
+    handling: 60.62
+    nitro: 50.68
+    average: 133.58
+upgrade:
+    speed: 0
+    acceleration: 0
+    handling: 0
+    nitro: 0
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: Key
+    star2: 28
+    star3: 32
+    star4: 44
+    star5: 59
+    star6: 86
+    total: 249
+settingBrand:
+    name: Pagani
+settingClass:
+    value: A
+    carsNumber: 64
+    median: 150
+settingLevel:
+    level: 13
+    common: 24
+    rare: 20
+    epic: 16
+settingUnitPrice:
+    level01: 16100
+    level02: 26300
+    level03: 42000
+    level04: 63000
+    level05: 91000
+    level06: 127500
+    level07: 178500
+    level08: 249500
+    level09: 349500
+    level10: 489500
+    level11: 685000
+    level12: 959000
+    level13: 1575000
+    common: 80000
+    rare: 160000
+    epic: 480000

@@ -1,0 +1,27 @@
+
+<div class="card-title">
+    <h4 class="text-center">{{ 'text.garage'|trans }}</h4>
+</div>
+<table class="{{ classes.table }}">
+    <thead>
+        <tr>
+            <th>{{ 'text.brand'|trans }}</th>
+            <th>{{ 'text.model'|trans }}</th>
+            <th>{{ 'text.class'|trans }}</th>
+            <th>{{ 'text.game.update'|trans }}</th>
+            <th>{{ 'text.stars'|trans }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ entity.settingBrand.name }}</td>
+            <td>{{ entity.model }}</td>
+            <td>{{ entity.settingClass.value }}</td>
+            <td>{{ entity.gameUpdate }}</td>
+            <td>{{ entity.stars }}</td>
+        </tr>
+    </tbody>
+    {% include '@App/contents/front/garage/read/garage-part-2.html.twig' %}
+    {% include '@App/contents/front/garage/read/garage-part-3.html.twig' %}
+    {% include '@App/contents/front/garage/read/garage-part-4.html.twig' %}
+</table>

@@ -1,0 +1,135 @@
+
+<div class="card-title">
+
+</div>
+<table class="{{ classes.table }}">
+    <thead class="text-center">
+        <tr>
+            <th colspan="7"><h4 class="text-center">{{ 'text.blueprint'|trans|plural }}</h4></th>
+        </tr>
+        <tr>
+            <th>{{ 'text.total'|trans }}</th>
+            <th><twig:ValueIcon repeat="{{ 1 }}" icon="fa-solid fa-star" /></th>
+            <th><twig:ValueIcon repeat="{{ 2 }}" icon="fa-solid fa-star" /></th>
+            <th><twig:ValueIcon repeat="{{ 3 }}" icon="fa-solid fa-star" /></th>
+            <th><twig:ValueIcon repeat="{{ 4 }}" icon="fa-solid fa-star" /></th>
+            <th><twig:ValueIcon repeat="{{ 5 }}" icon="fa-solid fa-star" /></th>
+            <th><twig:ValueIcon repeat="{{ 6 }}" icon="fa-solid fa-star" /></th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        <tr>
+            <td>{{ entity.blueprint.total }}</td>
+            <td>{{ entity.blueprint.star1 }}</td>
+            <td>{{ entity.blueprint.star2 }}</td>
+            <td>{{ entity.blueprint.star3 }}</td>
+            <td>{{ entity.blueprint.star4 }}</td>
+            <td>{{ entity.blueprint.star5 }}</td>
+            <td>{{ entity.blueprint.star6 }}</td>
+        </tr>
+        <tr>
+            <td>{{ entity.settingBlueprint.total }}</td>
+            <td>{{ entity.settingBlueprint.star1 }}</td>
+            <td>{{ entity.settingBlueprint.star2 }}</td>
+            <td>{{ entity.settingBlueprint.star3 }}</td>
+            <td>{{ entity.settingBlueprint.star4 }}</td>
+            <td>{{ entity.settingBlueprint.star5 }}</td>
+            <td>{{ entity.settingBlueprint.star6 }}</td>
+        </tr>
+        <tr>
+            <td>{{ _self.calculate(entity.settingBlueprint.total, entity.blueprint.total) }}</td>
+            <td>
+            {% if entity.settingBlueprint.star1 matches '/^\\d+$/' %}
+                {{ _self.calculate(entity.settingBlueprint.star1, entity.blueprint.star1) }}
+            {% else %}
+                {{ _self.calculateKey(entity.settingBlueprint.star1, entity.blueprint.star1) }}
+            {% endif %}
+            </td>
+            <td>{{ _self.calculate(entity.settingBlueprint.star2, entity.blueprint.star2) }}</td>
+            <td>{{ _self.calculate(entity.settingBlueprint.star3, entity.blueprint.star3) }}</td>
+            <td>{{ _self.calculate(entity.settingBlueprint.star4, entity.blueprint.star4) }}</td>
+            <td>{{ _self.calculate(entity.settingBlueprint.star5, entity.blueprint.star5) }}</td>
+            <td>{{ _self.calculate(entity.settingBlueprint.star6, entity.blueprint.star6) }}</td>
+        </tr>
+    </tbody>
+    <thead class="text-center">
+        <tr>
+            <th colspan="7"><h4 class="text-center">{{ 'text.rank'|trans|plural }}</h4></th>
+        </tr>
+        <tr>
+            <th>{{ 'text.start'|trans }}</th>
+            <th><twig:ValueIcon repeat="{{ 1 }}" icon="fa-solid fa-star" /></th>
+            <th><twig:ValueIcon repeat="{{ 2 }}" icon="fa-solid fa-star" /></th>
+            <th><twig:ValueIcon repeat="{{ 3 }}" icon="fa-solid fa-star" /></th>
+            <th><twig:ValueIcon repeat="{{ 4 }}" icon="fa-solid fa-star" /></th>
+            <th><twig:ValueIcon repeat="{{ 5 }}" icon="fa-solid fa-star" /></th>
+            <th><twig:ValueIcon repeat="{{ 6 }}" icon="fa-solid fa-star" /></th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        <tr>
+            <td>
+                {{ entity.rank.star0 }}
+            </td>
+            <td>
+                {{ entity.rank.star1 }}
+            </td>
+            <td>
+                {{ entity.rank.star2 }}
+            </td>
+            <td>
+                {{ entity.rank.star3 }}
+            </td>
+            <td>
+                {{ entity.rank.star4 }}
+            </td>
+            <td>
+                {{ entity.rank.star5 }}
+            </td>
+            <td>
+                {{ entity.rank.star6 }}
+            </td>
+        </tr>
+    </tbody>
+    <thead class="text-center">
+        <tr>
+            <th colspan="7"><h4 class="text-center">{{ 'text.upgrade'|trans|plural }}</h4></th>
+        </tr>
+        <tr>
+            <th>{{ 'text.speed'|trans }}</th>
+            <th>{{ 'text.acceleration'|trans }}</th>
+            <th>{{ 'text.handling'|trans }}</th>
+            <th>{{ 'text.nitro'|trans }}</th>
+            <th>{{ 'text.common'|trans }}</th>
+            <th>{{ 'text.rare'|trans }}</th>
+            <th>{{ 'text.epic'|trans }}</th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        <tr>
+            <td>{{ entity.upgrade.speed ~ ' / ' ~ entity.settingLevel.level }}</td>
+            <td>{{ entity.upgrade.acceleration ~ ' / ' ~ entity.settingLevel.level }}</td>
+            <td>{{ entity.upgrade.handling ~ ' / ' ~ entity.settingLevel.level }}</td>
+            <td>{{ entity.upgrade.nitro ~ ' / ' ~ entity.settingLevel.level }}</td>
+            <td>{{ entity.upgrade.common ~ ' / ' ~ entity.settingLevel.common }}</td>
+            <td>{{ entity.upgrade.rare ~ ' / ' ~ entity.settingLevel.rare }}</td>
+            <td>{{ entity.upgrade.epic ~ ' / ' ~ entity.settingLevel.epic }}</td>
+        </tr>
+    </tbody>
+</table>
+
+{% macro calculate(setting, garage) %}
+    {% if (setting - garage) == 0 %}
+        <span class="text-success">-</span>
+    {% else %}
+        <span class="text-danger">{{ setting - garage }}</span>
+    {% endif %}
+{% endmacro %}
+
+{% macro calculateKey(setting, garage) %}
+    {% if setting == 'Key' and garage == 'Key' %}
+        <span class="text-success">-</span>
+    {% else %}
+        <span class="text-danger">Key</span>
+    {% endif %}
+{% endmacro %}

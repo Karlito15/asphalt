@@ -59,7 +59,7 @@ class GarageStatActualService implements CSVInterface
      */
     public function createEntity(array $datas): GarageStatActual
     {
-        $garage = $this->findGarage($datas['Brand'], $datas['Model']);
+        $garage = $this->findGarage($datas);
         $entity = new GarageStatActual();
         $entity->setSpeed((float) $datas['Speed']);
         $entity->setAcceleration((float) $datas['Acceleration']);

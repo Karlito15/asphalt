@@ -1,0 +1,96 @@
+id: 305
+stars: 4
+gameUpdate: 45
+carOrder: 18
+statOrder: 8
+level: 0
+epic: 0
+model: Emeya
+slug: lotus-emeya
+blueprint:
+    star1: '8'
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 0
+    total: 8
+evo:
+    number: 0
+gauntlet:
+    speed: 9
+    acceleration: 3
+    handling: 2
+    nitro: 2
+    mark: 4
+    division: 9
+rank:
+    star0: 899
+    star1: 1250
+    star2: 0
+    star3: 0
+    star4: 0
+    star5: 0
+    star6: 0
+statActual:
+    speed: 0.0
+    acceleration: 0.0
+    handling: 0.0
+    nitro: 0.0
+    average: 0.0
+statMax:
+    speed: 276.5
+    acceleration: 81.79
+    handling: 75.33
+    nitro: 67.23
+    average: 125.21
+statMin:
+    speed: 250.0
+    acceleration: 63.1
+    handling: 51.15
+    nitro: 46.7
+    average: 102.74
+upgrade:
+    speed: 0
+    acceleration: 0
+    handling: 0
+    nitro: 0
+    common: 0
+    rare: 0
+    epic: 0
+settingBlueprint:
+    star1: '99'
+    star2: 99
+    star3: 99
+    star4: 99
+    star5: 99
+    star6: 99
+    total: 594
+settingBrand:
+    name: Lotus
+settingClass:
+    value: D
+    carsNumber: 43
+    median: 125
+settingLevel:
+    level: 99
+    common: 99
+    rare: 99
+    epic: 99
+settingUnitPrice:
+    level01: 99999
+    level02: 99999
+    level03: 99999
+    level04: 99999
+    level05: 99999
+    level06: 99999
+    level07: 99999
+    level08: 99999
+    level09: 99999
+    level10: 999999
+    level11: 999999
+    level12: 999999
+    level13: 999999
+    common: 99999
+    rare: 999999
+    epic: 999999
