@@ -6,11 +6,11 @@ parameters:
         description:        ~
         generator:          ~
     classes:
-        table:              'table table-bordered table-striped text-light'
-        td:                 'my-0 py-1 align-middle'
-        btn:                'btn btn-sm btn-outline-info rounded-3 py-1 m-0'
-        input:              'text-center fw-bolder form-control-sm form-control'
-#        input:              'text-center fw-bolder form-control-plaintext form-control-sm'
+        table:
+            default:        'table table-bordered table-striped text-light'
+            td:             'my-0 py-0 align-middle'
+        button:
+            table:          'btn btn-sm btn-outline-info rounded-3 py-1 m-0'
     games:
         pack_blueprint:     6
         pack_price:         900

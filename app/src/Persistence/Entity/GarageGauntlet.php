@@ -9,7 +9,6 @@ use App\Toolbox\Trait\Entity\GarageEntity;
 use App\Toolbox\Trait\Entity\IdEntity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
@@ -141,88 +140,5 @@ class GarageGauntlet
         $this->division = $division;
 
         return $this;
-    }
-
-    #[ORM\PrePersist]
-    public function prePersist(LifecycleEventArgs $args): void
-    {
-        $this->updateEntity($args);
-    }
-
-    #[ORM\PostUpdate]
-    public function postUpdate(LifecycleEventArgs $args): void
-    {
-        $this->updateEntity($args);
-    }
-
-    private function updateEntity(LifecycleEventArgs $args): void
-    {
-        $object           = $args->getObject();
-        // Get Stat
-        $speed            = $object->getGarage()->getStatMax()->getSpeed();
-        $acceleration     = $object->getGarage()->getStatMax()->getAcceleration();
-        $handling         = $object->getGarage()->getStatMax()->getHandling();
-        $nitro            = $object->getGarage()->getStatMax()->getNitro();
-
-        // Calculate Mark
-        $speedMark        = $this->calculateSpeed($speed);
-        $accelerationMark = $this->calculateAcceleration($acceleration);
-        $handlingMark     = $this->calculateHandling($handling);
-        $nitroMark        = $this->calculateNitro($nitro);
-        $mark             = $this->calculateAverage($speedMark, $accelerationMark, $handlingMark, $nitroMark);
-
-        // Entity
-        $object->setSpeed($speedMark);
-        $object->setAcceleration($accelerationMark);
-        $object->setHandling($handlingMark);
-        $object->setNitro($nitroMark);
-        $object->setMark((int) $mark);
-    }
-
-    private function calculateSpeed(float $value): int
-    {
-        return match (true) {
-            ($value <= 300) => 9,
-            ($value <= 350) => 3,
-            ($value <= 400) => 2,
-            ($value > 400)  => 1,
-        };
-    }
-
-    private function calculateAcceleration(float $value): int
-    {
-        return match (true) {
-            ($value <= 80) => 9,
-            ($value <= 83) => 3,
-            ($value <= 86) => 2,
-            ($value > 86)  => 1,
-        };
-    }
-
-    private function calculateHandling(float $value): int
-    {
-        return match (true) {
-            ($value <= 40) => 9,
-            ($value <= 60) => 3,
-            ($value <= 80) => 2,
-            ($value > 80)  => 1,
-        };
-    }
-
-    private function calculateNitro(float $value): int
-    {
-        return match (true) {
-            ($value <= 45) => 9,
-            ($value <= 60) => 3,
-            ($value <= 75) => 2,
-            ($value > 75)  => 1,
-        };
-    }
-
-    private function calculateAverage(int $speed, int $acceleration, int $handling, int $nitro): float
-    {
-        $average = (($speed + $acceleration + $handling + $nitro) / 4);
-
-        return floor($average);
     }
 }

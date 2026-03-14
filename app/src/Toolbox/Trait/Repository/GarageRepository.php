@@ -10,7 +10,7 @@ use Doctrine\ORM\QueryBuilder;
 trait GarageRepository
 {
     /**
-     * @uses GarageAppService
+     * @uses AppCreateService
      *
      * @return array
      */

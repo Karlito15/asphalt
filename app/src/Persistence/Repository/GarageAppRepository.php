@@ -105,6 +105,52 @@ class GarageAppRepository extends ServiceEntityRepository
         }
     }
 
+    // LIST
+
+    /**
+     * @param string $class
+     * @param bool $unblock
+     * @param bool $gold
+     * @return array
+     */
+    public function getStatusByClass(string $class, bool $unblock, bool $gold): array
+    {
+        $q = $this->createQueryBuilder('g');
+        $q
+            ->select(['g.id', 'g.model', 'g.gameUpdate', 'g.slug'])
+            ->orderBy('g.gameUpdate', 'DESC')
+            ->groupBy('g.id')
+            ### JOIN Garage Status
+            ->leftJoin('g.status', 'status')
+            ->addSelect('status.unblock AS Unblock')
+            ->addSelect('status.gold AS Gold')
+            ->addSelect('status.evo AS Evo')
+            ->addSelect('status.eventClass AS EventClass')
+            ->addSelect('status.toUpgrade AS ToUpgrade')
+            ### JOIN SettingBrand
+            ->leftJoin('g.settingBrand', 'b')
+            ->addSelect('b.name AS Brand')
+            ### JOIN settingClass
+            ->leftJoin('g.settingClass', 'c')
+            ->addSelect('c.value AS Class')
+            ### WHERE
+            // Class
+            ->andWhere('c.value = :value')
+            ->setParameter('value', $class)
+            // Status
+            ->andWhere(
+                $q->expr()->andX(
+                    $q->expr()->eq('status.unblock', ':unblock'),
+                    $q->expr()->eq('status.gold', ':gold')
+                )
+            )
+            ->setParameter('unblock', $unblock)
+            ->setParameter('gold', $gold)
+        ;
+
+        return $q->getQuery()->getScalarResult();
+    }
+
     // SITEMAP
 
     /**

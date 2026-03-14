@@ -1,0 +1,35 @@
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: true
+    toUpgrade: false
+    garage: { id: 230, gameUpdate: 34, model: Sixteen, slug: devel-sixteen, settingBrand: { name: Devel }, settingClass: { value: S } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: true
+    toUpgrade: false
+    garage: { id: 257, gameUpdate: 38, model: 'Jesko Absolut', slug: koenigsegg-jesko-absolut, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: true
+    toUpgrade: false
+    garage: { id: 275, gameUpdate: 40, model: Tartarus, slug: raesr-tartarus, settingBrand: { name: Raesr }, settingClass: { value: S } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: true
+    toUpgrade: false
+    garage: { id: 295, gameUpdate: 44, model: Imperium, slug: arash-imperium, settingBrand: { name: Arash }, settingClass: { value: S } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: true
+    toUpgrade: false
+    garage: { id: 311, gameUpdate: 46, model: Chimera, slug: koenigsegg-chimera, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }

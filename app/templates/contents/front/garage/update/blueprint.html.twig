@@ -1,28 +1,28 @@
 
 <div class="col-9">
     <h2 class="text-center">{{ 'text.blueprint'|trans|plural }}</h2>
-    <table class="table table-striped table-bordered mb-0">
+    <table class="{{ classes.table.default }}">
         <thead>
             <tr>
-{#                <th class="col-1 text-center">{{ form_label(form.blueprint.0.star1) }}</th>#}
-{#                <th class="col-1 text-center">{{ form_label(form.blueprint.0.star2) }}</th>#}
-{#                <th class="col-1 text-center">{{ form_label(form.blueprint.0.star3) }}</th>#}
-{#                <th class="col-1 text-center">{{ form_label(form.blueprint.0.star4) }}</th>#}
-{#                <th class="col-1 text-center">{{ form_label(form.blueprint.0.star5) }}</th>#}
-{#                <th class="col-1 text-center">{{ form_label(form.blueprint.0.star6) }}</th>#}
+                <th class="col-1 text-center">{{ form_label(form.blueprint.star1) }}</th>
+                <th class="col-1 text-center">{{ form_label(form.blueprint.star2) }}</th>
+                <th class="col-1 text-center">{{ form_label(form.blueprint.star3) }}</th>
+                <th class="col-1 text-center">{{ form_label(form.blueprint.star4) }}</th>
+                <th class="col-1 text-center">{{ form_label(form.blueprint.star5) }}</th>
+                <th class="col-1 text-center">{{ form_label(form.blueprint.star6) }}</th>
                 <th class="col-1 text-center"><label class="fw-light m-0 p-0 form-label">{{ 'text.total'|trans }}</label></th>
             </tr>
         </thead>
-{#        <tbody>#}
-{#            <tr>#}
-{#                <td><twig:FormGroup3Values form="{{ form.blueprint.0.star1 }}" entity="{{ entity.settingBlueprint.star1 }}" color="{{ text }}" /></td>#}
-{#                <td><twig:FormGroup3Values form="{{ form.blueprint.0.star2 }}" entity="{{ entity.settingBlueprint.star2 }}" color="{{ text }}" /></td>#}
-{#                <td><twig:FormGroup3Values form="{{ form.blueprint.0.star3 }}" entity="{{ entity.settingBlueprint.star3 }}" color="{{ text }}" /></td>#}
-{#                <td><twig:FormGroup3Values form="{{ form.blueprint.0.star4 }}" entity="{{ entity.settingBlueprint.star4 }}" color="{{ text }}" /></td>#}
-{#                <td><twig:FormGroup3Values form="{{ form.blueprint.0.star5 }}" entity="{{ entity.settingBlueprint.star5 }}" color="{{ text }}" /></td>#}
-{#                <td><twig:FormGroup3Values form="{{ form.blueprint.0.star6 }}" entity="{{ entity.settingBlueprint.star6 }}" color="{{ text }}" /></td>#}
-{#                <td><twig:FormGroup3Values form="{{ entity.blueprint.0.total }}" entity="{{ entity.settingBlueprint.total }}" color="{{ text }}" conclusion="true" /></td>#}
-{#            </tr>#}
-{#        </tbody>#}
+        <tbody>
+            <tr>
+                <td>{{ form_widget(form.blueprint.star1) }}{# <twig:FormGroup3Values form="{{ form.blueprint.star1 }}" entity="{{ entity.settingBlueprint.star1 }}" color="{{ text }}" /> #}</td>
+                <td>{{ form_widget(form.blueprint.star2) }}{# <twig:FormGroup3Values form="{{ form.blueprint.star2 }}" entity="{{ entity.settingBlueprint.star2 }}" color="{{ text }}" /> #}</td>
+                <td>{{ form_widget(form.blueprint.star3) }}{# <twig:FormGroup3Values form="{{ form.blueprint.star3 }}" entity="{{ entity.settingBlueprint.star3 }}" color="{{ text }}" /> #}</td>
+                <td>{{ form_widget(form.blueprint.star4) }}{# <twig:FormGroup3Values form="{{ form.blueprint.star4 }}" entity="{{ entity.settingBlueprint.star4 }}" color="{{ text }}" /> #}</td>
+                <td>{{ form_widget(form.blueprint.star5) }}{# <twig:FormGroup3Values form="{{ form.blueprint.star5 }}" entity="{{ entity.settingBlueprint.star5 }}" color="{{ text }}" /> #}</td>
+                <td>{{ form_widget(form.blueprint.star6) }}{# <twig:FormGroup3Values form="{{ form.blueprint.star6 }}" entity="{{ entity.settingBlueprint.star6 }}" color="{{ text }}" /> #}</td>
+                <td>&nbsp;{# <twig:FormGroup3Values form="{{ entity.blueprint.total }}" entity="{{ entity.settingBlueprint.total }}" color="{{ text }}" conclusion="true" /> #}</td>
+            </tr>
+        </tbody>
     </table>
 </div>

@@ -2,7 +2,7 @@
 framework:
     # HTTP cache configuration
 #    http_cache:
-#        enabled: false
+#        enabled: true
 #        debug: '%kernel.debug%'
 #        trace-level: full
 #        trace-header: X-Symfony-Cache

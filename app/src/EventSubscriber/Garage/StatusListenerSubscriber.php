@@ -4,28 +4,35 @@ declare(strict_types=1);
 
 namespace App\EventSubscriber\Garage;
 
-use App\Event\Garage\StatusEvent;
-use App\Service\Event\Garage\StatusService;
+use App\Event\Garage\AppUpdateEvent;
+use App\Service\Event\Garage\AppUpdateService;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class StatusListenerSubscriber implements EventSubscriberInterface
 {
     public function __construct(
-        protected StatusService $status,
+        protected AppUpdateService $update,
     )
     {}
 
     public static function getSubscribedEvents(): array
     {
+
         return [
-            StatusEvent::class => [
-                ['isUnblockCar', 2000],
+            AppUpdateEvent::class   => [
+                ['onUpdateStatusUnblock',                   1020],
+                ['onUpdateStatusGold',                      1010],
             ],
         ];
     }
 
-    public function isUnblockCar(StatusEvent $event): void
+    public function onUpdateStatusUnblock(AppUpdateEvent $event): void
     {
-        $this->status::isUnblock($event);
+        $this->update::StatusUnblock($event);
+    }
+
+    public function onUpdateStatusGold(AppUpdateEvent $event): void
+    {
+        $this->update::StatusGold($event);
     }
 }

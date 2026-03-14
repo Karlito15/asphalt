@@ -10,10 +10,6 @@
                 <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                     {{ _self.Nav('app.dashboard.index', 'fa-house', 'text.dashboard'|trans) }}
                     {{ _self.Nav('app.garage.index', 'fa-automobile', 'text.garage'|trans) }}
-                    {{ _self.Nav('app.race.index', 'fa-flag-checkered', 'text.race'|trans) }}
-                    {{ _self.Nav('app.mission.index', 'fa-bullseye', 'text.mission'|trans) }}
-                    {{ _self.Nav('admin.dashboard.index', 'fa-user-tie', 'text.back-office'|trans) }}
-
 					<li class="nav-item dropdown">
                         <a class="nav-link text-center dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-regular fa-file d-block mx-auto mb-1" aria-hidden="true"></i>
@@ -21,20 +17,25 @@
 						</a>
 						<ul class="dropdown-menu" style="z-index: 10000;">
 							<li><hr class="dropdown-divider"></li>
-                            <li class="bg-primary-subtle px-3">{{ 'text.filter'|trans }}</li>
-							<li><a class="dropdown-item" href="{{ path('app.page.filter.unlock', {'letter': 'S'}) }}">{{ 'text.unblock'|trans }}</a></li>
-							<li><a class="dropdown-item" href="{{ path('app.page.filter.locked', {'letter': 'S'}) }}">{{ 'text.block'|trans }}</a></li>
-							<li><a class="dropdown-item" href="{{ path('app.page.filter.to.unlock', {'letter': 'S'}) }}">{{ 'text.to.unblock'|trans }}</a></li>
+                            <li class="bg-primary-subtle text-uppercase fw-bold px-3 pb-1">{{ 'text.filter'|trans }}</li>
+							<li><a class="dropdown-item" href="{{ path('app.page.filter.unblock', {'letter': 'S'}) }}">{{ 'text.unblock'|trans }}</a></li>
+							<li><a class="dropdown-item" href="{{ path('app.page.filter.block', {'letter': 'S'}) }}">{{ 'text.block'|trans }}</a></li>
 							<li><a class="dropdown-item" href="{{ path('app.page.filter.gold', {'letter': 'S'}) }}">{{ 'text.gold'|trans }}</a></li>
-							<li><a class="dropdown-item" href="{{ path('app.page.filter.to.gold', {'letter': 'S'}) }}">{{ 'text.to.gold'|trans }}</a></li>
 							<li><a class="dropdown-item" href="{{ path('app.page.filter.to.upgrade', {'letter': 'S'}) }}">{{ 'text.to.upgrade'|trans }}</a></li>
+							<li><a class="dropdown-item" href="{{ path('app.page.filter.event', {'letter': 'S'}) }}">{{ 'text.event.class'|trans }}</a></li>
 							<li><hr class="dropdown-divider"></li>
-                            <li class="bg-primary-subtle px-3">{{ 'text.order'|trans }}</li>
+							<li><a class="dropdown-item" href="{{ path('app.page.filter.to.unblock', {'letter': 'S'}) }}">{{ 'text.to.unblock'|trans }}</a></li>
+							<li><a class="dropdown-item" href="{{ path('app.page.filter.to.gold', {'letter': 'S'}) }}">{{ 'text.to.gold'|trans }}</a></li>
+							<li><a class="dropdown-item" href="{{ path('app.page.filter.to.install.upgrade', {'letter': 'S'}) }}">{{ 'text.to.install.upgrade'|trans|plural }}</a></li>
+							<li><a class="dropdown-item" href="{{ path('app.page.filter.to.install.import', {'letter': 'S'}) }}">{{ 'text.to.install.import'|trans|plural }}</a></li>
+							<li><a class="dropdown-item" href="{{ path('app.page.filter.full.blueprint', {'letter': 'S'}) }}">{{ 'text.full.blueprint'|trans }}</a></li>
+							<li><a class="dropdown-item" href="{{ path('app.page.filter.full.evo', {'letter': 'S'}) }}">{{ 'text.full.evo'|trans }}</a></li>
+							<li><hr class="dropdown-divider"></li>
+                            <li class="bg-primary-subtle text-uppercase fw-bold px-3 pb-1">{{ 'text.order'|trans }}</li>
 							<li><a class="dropdown-item" href="{{ path('app.page.order.class', {'letter': 'S'}) }}">{{ 'text.order.class'|trans }}</a></li>
-							<li><a class="dropdown-item" href="{{ path('app.page.order.event', {'letter': 'S'}) }}">{{ 'text.order.event'|trans }}</a></li>
 							<li><a class="dropdown-item" href="{{ path('app.page.order.stat', {'letter': 'S'}) }}">{{ 'text.order.stat'|trans }}</a></li>
 							<li><hr class="dropdown-divider"></li>
-                            <li class="bg-primary-subtle px-3">{{ 'text.search'|trans }}</li>
+                            <li class="bg-primary-subtle text-uppercase fw-bold px-3 pb-1">{{ 'text.search'|trans }}</li>
 							<li><a class="dropdown-item" href="{{ path('app.page.search.garage') }}">{{ 'text.garage'|trans }}</a></li>
 							<li><a class="dropdown-item" href="{{ path('app.page.search.race') }}">{{ 'text.race'|trans }}</a></li>
 							<li><hr class="dropdown-divider"></li>
@@ -44,7 +45,9 @@
 {#							<li><a class="dropdown-item" href="{{ path('app.page.setting.rank', {'letter': 'S'}) }}">{{ 'text.rank'|trans }}</a></li>#}
 						</ul>
 					</li>
-
+                    {{ _self.Nav('app.mission.index', 'fa-bullseye', 'text.mission'|trans) }}
+                    {{ _self.Nav('app.race.index', 'fa-flag-checkered', 'text.race'|trans) }}
+                    {{ _self.Nav('admin.dashboard.index', 'fa-user-tie', 'text.back-office'|trans) }}
                 </ul>
             </div>
         </div>

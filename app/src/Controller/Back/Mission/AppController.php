@@ -46,8 +46,8 @@ final class AppController extends AbstractController
         return $this->render('@App/contents/back/mission/app.html.twig', [
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
-            'breadcrumb'      => self::getBreadcrump($home, $title),
-            'links'           => self::getLinksPage(),
+            'breadcrumb'      => self::Breadcrump($home, $title),
+            'links'           => self::LinksPage(),
             'container'       => 'container-fluid',
             'entities'        => $repository->findAll(),
         ]);
@@ -78,8 +78,8 @@ final class AppController extends AbstractController
         return $this->render('@App/contents/back/form.html.twig', [
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
-            'breadcrumb'      => self::getBreadcrump($home, $title),
-            'links'           => self::getLinksPage(),
+            'breadcrumb'      => self::Breadcrump($home, $title),
+            'links'           => self::LinksPage(),
             'container'       => 'container-fluid',
             'entities'        => $entity,
             'form'            => $form,
@@ -109,8 +109,8 @@ final class AppController extends AbstractController
         return $this->render('@App/contents/back/form.html.twig', [
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
-            'breadcrumb'      => self::getBreadcrump($home, $title),
-            'links'           => self::getLinksPage(),
+            'breadcrumb'      => self::Breadcrump($home, $title),
+            'links'           => self::LinksPage(),
             'container'       => 'container-fluid',
             'entities'        => $entities,
             'form'            => $form,

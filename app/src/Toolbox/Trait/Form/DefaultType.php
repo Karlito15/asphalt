@@ -23,4 +23,25 @@ trait DefaultType
             'class' => 'm-0 fw-light',
         ];
     }
+
+    /**
+     * @return string
+     */
+    private static function attrClass(): string
+    {
+        return 'fw-bolder';
+        // text-start fw-bolder m-0 px-3 py-0 form-control-sm
+        // GarageBlueprintType
+        // text-center fw-bolder form-control form-control-sm
+        // GarageGauntletType
+        // text-center fw-bolder form-control form-control-sm
+        // GarageRankType
+        // text-center fw-bolder form-control-plaintext form-control-sm
+        // GarageStatActualType
+        // text-center fw-bolder form-control-plaintext form-control-sm
+        // GarageStatMaxType
+        // text-center fw-bolder form-control-plaintext form-control-sm
+        // GarageStatMinType
+        // text-center fw-bolder form-control-plaintext form-control-sm
+    }
 }

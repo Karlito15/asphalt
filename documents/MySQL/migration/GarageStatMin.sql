@@ -1,15 +1,16 @@
 ## StatMin
-SELECT 
+SELECT
+`setting_brand`.`name` AS `Brand`,
+`garage_app`.`model` AS `Model`,
 `speed` AS `Speed`,
 `acceleration` AS `Acceleration`,
-`handly` AS `Handly`,
+`handling` AS `Handling`,
 `nitro` AS `Nitro`,
-`setting_brand`.`name` AS `Brand`,
-`app_garage`.`model` AS `Model`
+`average` AS `Average`
 FROM `garage_stat_min`
-INNER JOIN `app_garage` ON `garage_stat_min`.`garage_id` = `app_garage`.`id`
-INNER JOIN `setting_brand` ON `setting_brand`.`id` = `app_garage`.`setting_brand_id`
-ORDER BY `setting_brand`.`name` ASC, `app_garage`.`model` ASC
+INNER JOIN `garage_app` ON `garage_stat_min`.`garage_id` = `garage_app`.`id`
+INNER JOIN `setting_brand` ON `setting_brand`.`id` = `garage_app`.`setting_brand_id`
+ORDER BY `setting_brand`.`name` ASC, `garage_app`.`model` ASC
 ;
 
-mysql -u root -p sym-prod-asphalt --batch --raw -e "SELECT `speed` AS `Speed`, `acceleration` AS `Acceleration`, `handly` AS `Handling`, `nitro` AS `Nitro`, `setting_brand`.`name` AS `Brand`, `app_garage`.`model` AS `Model` FROM `garage_stat_min` INNER JOIN `app_garage` ON `garage_stat_min`.`garage_id` = `app_garage`.`id` INNER JOIN `setting_brand` ON `setting_brand`.`id` = `app_garage`.`setting_brand_id` ORDER BY `setting_brand`.`name` ASC, `app_garage`.`model` ASC;" | sed 's/\t/;/g' > E:\Symfony\Asphalt\documents\csv\garages\dev---garage-stat-min.csv
+mysql -u root -p sym-asphalt-v7 --batch --raw -e "SELECT `setting_brand`.`name` AS `Brand`, `garage_app`.`model` AS `Model`, `speed` AS `Speed`, `acceleration` AS `Acceleration`, `handling` AS `Handling`, `nitro` AS `Nitro`, `average` AS `Average` FROM `garage_stat_min` INNER JOIN `garage_app` ON `garage_stat_min`.`garage_id` = `garage_app`.`id` INNER JOIN `setting_brand` ON `setting_brand`.`id` = `garage_app`.`setting_brand_id` ORDER BY `setting_brand`.`name` ASC, `garage_app`.`model` ASC ;" > E:\Symfony\Asphalt\documents\csv\migration\garages\garage-stat-min.csv

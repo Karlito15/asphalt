@@ -1,3 +1,3 @@
-SELECT `value` AS `Value` FROM `mission_task`;
+SELECT `value` AS `Value`, `slug` AS `Slug` FROM `mission_task`;
 
-mysql -u root -p sym-prod-asphalt --batch --raw -e "SELECT `value` AS `Value` FROM `mission_task`;" | sed 's/\t/;/g' > E:\Symfony\Asphalt\documents\csv\missions\dev---task.csv
+mysql -u root -p sym-asphalt-v7 --batch --raw -e "SELECT `value` AS `Value`, `slug` AS `Slug` FROM `mission_task`;" > E:\Symfony\Asphalt\documents\csv\migration\missions\task.csv

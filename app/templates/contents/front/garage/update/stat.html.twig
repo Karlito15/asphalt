@@ -1,14 +1,21 @@
 
-<section class="{{ container|default('container') }} mb-2 px-0">
-    <div class="row row-cols-3 mb-3">
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
+<section class="{{ container|default('container') }}">
+    <div class="row row-cols-4 mb-3">
+        <div class="col">{{ form_widget(form.statMin.speed) }}</div>
+        <div class="col">{{ form_widget(form.statMin.acceleration) }}</div>
+        <div class="col">{{ form_widget(form.statMin.handling) }}</div>
+        <div class="col">{{ form_widget(form.statMin.nitro) }}</div>
+    </div>
+    <div class="row row-cols-4 mb-3">
+        <div class="col">{{ form_widget(form.statActual.speed) }}</div>
+        <div class="col">{{ form_widget(form.statActual.acceleration) }}</div>
+        <div class="col">{{ form_widget(form.statActual.handling) }}</div>
+        <div class="col">{{ form_widget(form.statActual.nitro) }}</div>
     </div>
     <div class="row row-cols-4">
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
+        <div class="col">{{ form_widget(form.statMax.speed) }}</div>
+        <div class="col">{{ form_widget(form.statMax.acceleration) }}</div>
+        <div class="col">{{ form_widget(form.statMax.handling) }}</div>
+        <div class="col">{{ form_widget(form.statMax.nitro) }}</div>
     </div>
 </section>

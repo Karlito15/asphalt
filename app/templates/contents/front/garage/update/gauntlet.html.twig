@@ -1,14 +1,6 @@
 
-<section class="{{ container|default('container') }} mb-2 px-0">
-    <div class="row row-cols-3 mb-3">
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-    </div>
-    <div class="row row-cols-4">
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
+<section class="{{ container|default('container') }}">
+    <div class="row row-cols-1 mb-3">
+        <div class="col">{{ form_row(form.gauntlet) }}</div>
     </div>
 </section>

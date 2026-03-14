@@ -6,13 +6,13 @@ namespace App\Command\Database;
 
 use App\Persistence\Entity\GarageApp;
 use App\Persistence\Entity\GarageBlueprint;
-use App\Persistence\Entity\GarageEvo;
 use App\Persistence\Entity\GarageGauntlet;
 use App\Persistence\Entity\GarageRank;
 use App\Persistence\Entity\GarageStatActual;
 use App\Persistence\Entity\GarageStatMax;
 use App\Persistence\Entity\GarageStatMin;
 use App\Persistence\Entity\GarageStatus;
+use App\Persistence\Entity\GarageStatusControl;
 use App\Persistence\Entity\GarageUpgrade;
 use App\Persistence\Entity\InventoryApp;
 use App\Persistence\Entity\MissionApp;
@@ -54,13 +54,16 @@ class TruncateCommand extends Command
     protected static string $help  = 'Vider la base de données';
 
     public function __construct(
-        private readonly EntityManagerInterface $entityManager
+        private readonly EntityManagerInterface $entityManager,
     )
     {
         parent::__construct();
     }
 
     /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return int
      * @throws Exception
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -75,32 +78,32 @@ class TruncateCommand extends Command
 
         // Truncate
         $connection->executeQuery('SET FOREIGN_KEY_CHECKS = 0');
-        self::truncateTable(GarageApp::class, $em, $io);
-        self::truncateTable(GarageBlueprint::class, $em, $io);
-        self::truncateTable(GarageEvo::class, $em, $io);
-        self::truncateTable(GarageGauntlet::class, $em, $io);
-        self::truncateTable(GarageRank::class, $em, $io);
-        self::truncateTable(GarageStatActual::class, $em, $io);
-        self::truncateTable(GarageStatMax::class, $em, $io);
-        self::truncateTable(GarageStatMin::class, $em, $io);
-        self::truncateTable(GarageStatus::class, $em, $io);
-        self::truncateTable(GarageUpgrade::class, $em, $io);
-        self::truncateTable(InventoryApp::class, $em, $io);
-        self::truncateTable(MissionApp::class, $em, $io);
-        self::truncateTable(MissionTask::class, $em, $io);
-        self::truncateTable(MissionType::class, $em, $io);
-        self::truncateTable(RaceApp::class, $em, $io);
-        self::truncateTable(RaceMode::class, $em, $io);
-        self::truncateTable(RaceRegion::class, $em, $io);
-        self::truncateTable(RaceSeason::class, $em, $io);
-        self::truncateTable(RaceTime::class, $em, $io);
-        self::truncateTable(RaceTrack::class, $em, $io);
-        self::truncateTable(SettingBlueprint::class, $em, $io);
-        self::truncateTable(SettingBrand::class, $em, $io);
-        self::truncateTable(SettingClass::class, $em, $io);
-        self::truncateTable(SettingLevel::class, $em, $io);
-        self::truncateTable(SettingTag::class, $em, $io);
-        self::truncateTable(SettingUnitPrice::class, $em, $io);
+        $this->truncateTable(GarageApp::class, $io);
+        $this->truncateTable(GarageBlueprint::class, $io);
+        $this->truncateTable(GarageGauntlet::class, $io);
+        $this->truncateTable(GarageRank::class, $io);
+        $this->truncateTable(GarageStatActual::class, $io);
+        $this->truncateTable(GarageStatMax::class, $io);
+        $this->truncateTable(GarageStatMin::class, $io);
+        $this->truncateTable(GarageStatus::class, $io);
+        $this->truncateTable(GarageStatusControl::class, $io);
+        $this->truncateTable(GarageUpgrade::class, $io);
+        $this->truncateTable(InventoryApp::class, $io);
+        $this->truncateTable(MissionApp::class, $io);
+        $this->truncateTable(MissionTask::class, $io);
+        $this->truncateTable(MissionType::class, $io);
+        $this->truncateTable(RaceApp::class, $io);
+        $this->truncateTable(RaceMode::class, $io);
+        $this->truncateTable(RaceRegion::class, $io);
+        $this->truncateTable(RaceSeason::class, $io);
+        $this->truncateTable(RaceTime::class, $io);
+        $this->truncateTable(RaceTrack::class, $io);
+        $this->truncateTable(SettingBlueprint::class, $io);
+        $this->truncateTable(SettingBrand::class, $io);
+        $this->truncateTable(SettingClass::class, $io);
+        $this->truncateTable(SettingLevel::class, $io);
+        $this->truncateTable(SettingTag::class, $io);
+        $this->truncateTable(SettingUnitPrice::class, $io);
         $connection->executeQuery('SET FOREIGN_KEY_CHECKS = 1');
 
         // Execution time : stop
@@ -119,22 +122,20 @@ class TruncateCommand extends Command
 
     /**
      * @param string $tableName
-     * @param EntityManagerInterface $em
      * @param SymfonyStyle $io
      * @return void
      * @throws Exception
      */
-    private static function truncateTable(
+    private function truncateTable(
         string $tableName,
-        EntityManagerInterface $em,
         SymfonyStyle $io
     ): void
     {
-        $connection = $em->getConnection();
+        $connection = $this->entityManager->getConnection();
         $dbPlatform = $connection->getDatabasePlatform();
         $connection->executeQuery(
-            $dbPlatform->getTruncateTableSql($em->getClassMetadata($tableName)->getTableName())
+            $dbPlatform->getTruncateTableSql($this->entityManager->getClassMetadata($tableName)->getTableName())
         );
-        $io->write('--- Table vidé : ' . $em->getClassMetadata($tableName)->getTableName(), true);
+        $io->write('--- Table vidé : ' . $this->entityManager->getClassMetadata($tableName)->getTableName(), true);
     }
 }

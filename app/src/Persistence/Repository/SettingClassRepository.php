@@ -21,17 +21,6 @@ class SettingClassRepository extends ServiceEntityRepository
         parent::__construct($registry, SettingClass::class);
     }
 
-    // XXX
-
-    /**
-     * @param string $query
-     * @return SettingClass
-     */
-    public function findByClass(string $query): SettingClass
-    {
-        return $this->findOneBy(['value' => $query]);
-    }
-
     // EXPORTS
 
     /**
@@ -85,6 +74,17 @@ class SettingClassRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    // LIST
+
+    /**
+     * @param string $query
+     * @return SettingClass
+     */
+    public function findByClass(string $query): SettingClass
+    {
+        return $this->findOneBy(['value' => $query]);
     }
 
     //    /**

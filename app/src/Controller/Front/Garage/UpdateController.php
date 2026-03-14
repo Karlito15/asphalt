@@ -6,7 +6,7 @@ namespace App\Controller\Front\Garage;
 
 use App\Event\Garage\AppUpdateEvent;
 use App\Persistence\Entity\GarageApp;
-use App\Persistence\Form\Front\Garage\UpdateType;
+use App\Persistence\Form\Front\Garage\AppUpdateType;
 use App\Toolbox\Trait\Controller\WebController;
 use Doctrine\ORM\EntityManagerInterface;
 use RuntimeException;
@@ -47,29 +47,29 @@ final class UpdateController extends AbstractController
         Request $request,
     ): Response
     {
-        // Variables
+        ### Variables
         $home  = $this->translator->trans('text.garage');
         $title = $entity->getSettingBrand()->getName() . ' ' . $entity->getModel();
 
-        // Création du Formulaire
-        $form = $this->createForm(UpdateType::class, $entity)->handleRequest($request);
+        ### Création du Formulaire
+        $form = $this->createForm(AppUpdateType::class, $entity)->handleRequest($request);
 
-        // Vérification des données du formulaire
+        ### Vérification des données du formulaire
         if ($form->isSubmitted() && $form->isValid()) {
             try {
-                // Event
+                ### Event
                 $dispatcher->dispatch(new AppUpdateEvent($entity));
 
-                // Doctrine
+                ### Doctrine
                 $entityManager->flush();
 
-                // Flash Message
+                ### Flash Message
                 $this->addFlash('success', [
                     'title'   => $this->translator->trans('text.garage'),
                     'message' => sprintf($this->translator->trans('notification.updated'), $title),
                 ]);
             } catch (RuntimeException $e) {
-                // Flash Message
+                ### Flash Message
                 $this->addFlash('danger', [
                     'title'   => $this->translator->trans('text.garage'),
                     'message' => $this->translator->trans('notification.error'),
@@ -78,7 +78,10 @@ final class UpdateController extends AbstractController
                 throw new RuntimeException($e->getMessage(), $e->getCode(), $e);
             }
 
-            // Redirection
+            ### Launch Command To Generate Garage List YAML
+            $this->generateGarageList();
+
+            ### Redirection
             return $this->redirectToRoute(
                 'app.garage.update',
                 [
@@ -93,8 +96,8 @@ final class UpdateController extends AbstractController
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
             'container'       => 'container-fluid', // container-fluid
-            'breadcrumb'      => self::getBreadcrump($home, $this->translator->trans('text.update')),
-            'links'           => self::getLinksPage(),
+            'breadcrumb'      => self::Breadcrump($home, $this->translator->trans('text.update')),
+            'links'           => self::LinksPage(),
             'entity'          => $entity,
             'form'            => $form,
         ]);

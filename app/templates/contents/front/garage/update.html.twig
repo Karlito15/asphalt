@@ -1,21 +1,34 @@
-{% block content %}
 
 {% set background, text = '', '' %}
 
-{#{% if entity.status.current.unblock == false %}#}
-{#    {% set background = 'bg-danger-subtle' %}#}
-{#    {% set text       = 'text-danger' %}#}
-{#{% endif %}#}
+{% if entity.status.unblock == false %}
+    {% set background = 'bg-danger-subtle' %}
+    {% if entity.status.toUpgrade == true %}
+        {% set text   = 'text-info' %}
+    {% else %}
+        {% set text   = 'text-danger' %}
+    {% endif %}
+{% endif %}
 
-{#{% if entity.status.current.unblock == true %}#}
-{#    {% set background = 'bg-success-subtle' %}#}
-{#    {% set text       = 'text-success' %}#}
-{#{% endif %}#}
+{% if entity.status.unblock == true %}
+    {% set background = 'bg-success-subtle' %}
+    {% if entity.status.toUpgrade == true %}
+        {% set text   = 'text-info' %}
+    {% else %}
+        {% set text   = 'text-success' %}
+    {% endif %}
+{% endif %}
 
-{#{% if entity.status.current.unblock == true and entity.status.current.gold == true %}#}
-{#    {% set background = 'bg-warning-subtle' %}#}
-{#    {% set text       = 'text-warning' %}#}
-{#{% endif %}#}
+{% if entity.status.unblock == true and entity.status.gold == true %}
+    {% set background = 'bg-warning-subtle' %}
+    {% if entity.status.toUpgrade == true %}
+        {% set text   = 'text-info' %}
+    {% else %}
+        {% set text   = 'text-warning' %}
+    {% endif %}
+{% endif %}
+
+{% block content %}
 
 <div class="card {{ background }}">
     <div class="card-header {{ background }}">
@@ -23,25 +36,28 @@
     </div>
     <div class="card-body">
         {{ form_start(form) }}
-{#            {% include "@App/contents/front/garage/update/garage-part-1.html.twig" %}#}
+            {% include "@App/contents/front/garage/update/garage-part-1.html.twig" %}
             <div class="row rows-2">
-{#                {% include "@App/contents/front/garage/update/upgrade.html.twig" %}#}
-{#                {% include "@App/contents/front/garage/update/rank.html.twig" %}#}
+                {% include "@App/contents/front/garage/update/upgrade.html.twig" %}
+                {% include "@App/contents/front/garage/update/rank.html.twig" %}
             </div>
             <div class="row rows-2">
-{#                {% include "@App/contents/front/garage/update/blueprint.html.twig" %}#}
-{#                {% include "@App/contents/front/garage/update/stat.html.twig" %}#}
+                {% include "@App/contents/front/garage/update/blueprint.html.twig" %}
+                {% include "@App/contents/front/garage/update/stat.html.twig" %}
             </div>
+            {% include "@App/contents/front/garage/update/gauntlet.html.twig" %}
+            {% include "@App/contents/front/garage/update/status.html.twig" %}
 {#            {% include "@App/contents/front/garage/update/tag.html.twig" %}#}
-{#            {% include "@App/contents/front/garage/update/status.html.twig" %}#}
             {{ form_rest(form) }}
         {% include "@App/contents/front/garage/update/_button.html.twig" %}
         {{ form_end(form) }}
     </div>
     <div class="card-footer">
-        {{ include('@App/contents/front/garage/delete.html.twig') }}
+        {% include '@App/contents/front/garage/delete.html.twig' %}
     </div>
 </div>
+
+
 {% endblock %}
 
 {% extends '@App/bases/front/full.html.twig' %}

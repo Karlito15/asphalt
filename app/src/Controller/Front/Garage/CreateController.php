@@ -8,9 +8,10 @@ use App\Event\Garage\AppCreateEvent;
 use App\Event\Setting\BrandEvent;
 use App\Event\Setting\ClassEvent;
 use App\Persistence\Entity\GarageApp;
-use App\Persistence\Form\Front\Garage\CreateType;
+use App\Persistence\Form\Front\Garage\AppCreateType;
 use App\Toolbox\Trait\Controller\WebController;
 use Doctrine\ORM\EntityManagerInterface;
+use RuntimeException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -46,27 +47,27 @@ final class CreateController extends AbstractController
         Request $request,
     ): Response
     {
-        // Variables
+        ### Variables
         $home  = $this->translator->trans('text.garage');
         $title = $this->translator->trans('text.create.car');
 
-        // Création du formulaire
+        ### Création du formulaire
         $garage = new GarageApp();
-        $form = $this->createForm(CreateType::class, $garage)->handleRequest($request);
+        $form   = $this->createForm(AppCreateType::class, $garage)->handleRequest($request);
 
-        // Vérification des données du formulaire
+        ### Vérification des données du formulaire
         if ($form->isSubmitted() && $form->isValid()) {
             try {
-                // Event
+                ### Events
                 $dispatcher->dispatch(new BrandEvent($garage));
                 $dispatcher->dispatch(new ClassEvent($garage));
-                $dispatcher->dispatch(new AppCreateEvent($garage));
+                $dispatcher->dispatch(new AppCreateEvent($entityManager, $garage));
 
-                // Doctrine
+                ### Doctrine
                 $entityManager->persist($garage);
                 $entityManager->flush();
 
-                // Flash Message
+                ### Flash Message
                 $this->addFlash('success', [
                     'title'   => $this->translator->trans('text.garage'),
                     'message' => sprintf(
@@ -74,17 +75,20 @@ final class CreateController extends AbstractController
                         $garage->getSettingBrand()->getName() . ' ' . $garage->getModel()
                     )
                 ]);
-            } catch (\RuntimeException $e) {
-                // Flash Message
+            } catch (RuntimeException $e) {
+                ### Flash Message
                 $this->addFlash('danger', [
                     'title'   => $this->translator->trans('text.garage'),
                     'message' => $this->translator->trans('notification.error'),
                 ]);
 
-                throw new \RuntimeException($e->getMessage(), $e->getCode(), $e);
+                throw new RuntimeException($e->getMessage(), $e->getCode(), $e);
             }
 
-            // Redirection
+            ### Launch Command To Generate Garage List YAML
+            $this->generateGarageList();
+
+            ### Redirection
             return $this->redirectToIndex();
         }
 
@@ -92,8 +96,8 @@ final class CreateController extends AbstractController
             'controller_name'  => $title,
             'current_page'     => $request->attributes->get('_route'),
             'container'        => 'container',
-            'breadcrumb'       => self::getBreadcrump($home, $title),
-            'links'            => self::getLinksPage(),
+            'breadcrumb'       => self::Breadcrump($home, $title),
+            'links'            => self::LinksPage(),
             'garage'           => $garage,
             'game_update_last' => $entityManager->getRepository(GarageApp::class)->getLastUpdate(),
             'form'             => $form,

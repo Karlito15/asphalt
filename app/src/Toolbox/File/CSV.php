@@ -26,7 +26,7 @@ final class CSV
      */
     public static function FileToArray(
          string $filepath,
-         string $delimiter = ";", // \n
+         string $delimiter = ";", // ; \n \t
          string $enclosure = '"',
          string $escape = '|',
          bool   $header = true

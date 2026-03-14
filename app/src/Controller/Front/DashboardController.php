@@ -29,11 +29,13 @@ final class DashboardController extends AbstractController
         $home  = $this->translator->trans('text.front-office');
         $title = $this->translator->trans('text.dashboard');
 
+        $this->addFlash('secondary', 'This is the Web App !');
+
         return $this->render('@App/contents/front/dashboard/index.html.twig', [
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
             'container'       => 'container-fluid',
-            'breadcrumb'      => self::getBreadcrump($home, $title),
+            'breadcrumb'      => self::Breadcrump($home, $title),
         ]);
     }
 

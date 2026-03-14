@@ -65,7 +65,7 @@ class GarageGauntletService implements CSVInterface
         $entity->setAcceleration($this->convertStringToInteger($datas['Acceleration']));
         $entity->setHandling($this->convertStringToInteger($datas['Handling']));
         $entity->setNitro($this->convertStringToInteger($datas['Nitro']));
-        $entity->setMark($this->convertStringToInteger($datas['Mark']));
+//        $entity->setMark($this->convertStringToInteger($datas['Mark']));
         $entity->setDivision($this->convertStringToInteger($datas['Division']));
         $entity->setGarage($garage);
 

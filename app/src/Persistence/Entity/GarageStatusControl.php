@@ -180,6 +180,7 @@ class GarageStatusControl
 
     #[ORM\OneToOne(targetEntity: GarageApp::class, inversedBy: 'statusControl', cascade: ['persist'])]
     #[ORM\JoinColumn(name: 'garage_id', referencedColumnName: 'id', nullable: true)]
+    #[Groups(['filter'])]
     protected GarageApp $garage;
 
     public function isFullSpeed(): ?bool

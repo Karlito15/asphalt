@@ -16,21 +16,21 @@ return [
         'path' => './assets/scripts/app.js',
         'entrypoint' => true,
     ],
-    '@hotwired/stimulus' => [
-        'version' => '3.2.2',
-    ],
     '@symfony/stimulus-bundle' => [
         'path' => './vendor/symfony/stimulus-bundle/assets/dist/loader.js',
     ],
+    '@hotwired/stimulus' => [
+        'version' => '3.2.2',
+    ],
     '@hotwired/turbo' => [
-        'version' => '7.3.0',
+        'version' => '8.0.23',
     ],
     'tom-select/dist/css/tom-select.default.css' => [
-        'version' => '2.5.1',
+        'version' => '2.5.2',
         'type' => 'css',
     ],
     'tom-select/dist/css/tom-select.bootstrap5.css' => [
-        'version' => '2.5.1',
+        'version' => '2.5.2',
         'type' => 'css',
     ],
     'jquery' => [

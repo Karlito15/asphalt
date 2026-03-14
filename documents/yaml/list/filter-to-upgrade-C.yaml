@@ -1,0 +1,35 @@
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 161, gameUpdate: 22, model: S1, slug: saleen-s1, settingBrand: { name: Saleen }, settingClass: { value: C } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 168, gameUpdate: 24, model: 'MK X Nagari 500', slug: bolwell-mk-x-nagari-500, settingBrand: { name: Bolwell }, settingClass: { value: C } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 217, gameUpdate: 32, model: XJR-15, slug: jaguar-xjr-15, settingBrand: { name: Jaguar }, settingClass: { value: C } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 259, gameUpdate: 38, model: 'Mission R', slug: porsche-mission-r, settingBrand: { name: Porsche }, settingClass: { value: C } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 281, gameUpdate: 41, model: Bohema, slug: praga-bohema, settingBrand: { name: Praga }, settingClass: { value: C } }

@@ -5,15 +5,13 @@ declare(strict_types=1);
 namespace App\EventSubscriber\Garage;
 
 use App\Event\Garage\AppCreateEvent;
-use App\Service\Event\Garage\GarageAppService;
-use Doctrine\ORM\EntityManagerInterface;
+use App\Service\Event\Garage\AppCreateService;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 final readonly class AppCreateListenerSubscriber implements EventSubscriberInterface
 {
     public function __construct(
-        protected EntityManagerInterface $entityManager,
-        protected GarageAppService       $garageService,
+        protected AppCreateService $garageService,
     )
     {}
 
@@ -26,6 +24,6 @@ final readonly class AppCreateListenerSubscriber implements EventSubscriberInter
 
     public function onGarageCreate(AppCreateEvent $event): void
     {
-        $this->garageService->initGarage($event, $this->entityManager);
+        $this->garageService->addRelation($event);
     }
 }

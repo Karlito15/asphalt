@@ -1,0 +1,35 @@
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 235, gameUpdate: 35, model: 'Giulia GTAm', slug: alfa-romeo-giulia-gtam, settingBrand: { name: 'Alfa Romeo' }, settingClass: { value: D } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 242, gameUpdate: 36, model: 'Vantage V12 2022', slug: aston-martin-vantage-v12-2022, settingBrand: { name: 'Aston Martin' }, settingClass: { value: D } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 268, gameUpdate: 40, model: 'E-TENSE Performance', slug: ds-automobiles-e-tense-performance, settingBrand: { name: 'DS Automobiles' }, settingClass: { value: D } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 278, gameUpdate: 41, model: EVO37, slug: kimera-evo37, settingBrand: { name: Kimera }, settingClass: { value: D } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 308, gameUpdate: 45, model: Emeya, slug: lotus-emeya, settingBrand: { name: Lotus }, settingClass: { value: D } }

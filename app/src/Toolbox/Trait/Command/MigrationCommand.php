@@ -96,8 +96,7 @@ trait MigrationCommand
     }
 
     /**
-     * @param string $brand
-     * @param string $model
+     * @param array $datas
      * @return GarageApp
      */
     public function findGarage(array $datas): GarageApp

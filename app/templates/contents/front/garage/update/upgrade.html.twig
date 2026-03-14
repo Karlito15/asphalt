@@ -1,14 +1,14 @@
 
-<section class="{{ container|default('container') }} mb-2 px-0">
-    <div class="row row-cols-3 mb-3">
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-    </div>
+<section class="{{ container|default('container') }}">
     <div class="row row-cols-4">
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
+        <div class="col">{{ form_row(form.upgrade.speed, {attr: {'max': entity.level}}) }}</div>
+        <div class="col">{{ form_row(form.upgrade.acceleration, {attr: {'max': entity.level}}) }}</div>
+        <div class="col">{{ form_row(form.upgrade.handling, {attr: {'max': entity.level}}) }}</div>
+        <div class="col">{{ form_row(form.upgrade.nitro, {attr: {'max': entity.level}}) }}</div>
+    </div>
+    <div class="row row-cols-3 mb-3">
+        <div class="col">{{ form_row(form.upgrade.common, {attr: {'max': entity.settingLevel.common}}) }}</div>
+        <div class="col">{{ form_row(form.upgrade.rare, {attr: {'max': entity.settingLevel.rare}}) }}</div>
+        <div class="col">{{ form_row(form.upgrade.epic, {attr: {'max': entity.epic}}) }}</div>
     </div>
 </section>

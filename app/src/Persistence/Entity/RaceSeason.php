@@ -55,8 +55,6 @@ class RaceSeason
 
     #[ORM\Column(type: Types::STRING, length: 128, unique:true, nullable:false)]
     #[Assert\Length(min: 1, max: 128)]
-    #[Assert\NotBlank]
-    #[Assert\NotNull]
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['name'], separator: '-')]

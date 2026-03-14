@@ -1,0 +1,50 @@
+-
+    garage: { id: 7, gameUpdate: 0, model: Chiron, slug: bugatti-chiron, settingBrand: { name: Bugatti }, settingClass: { value: S } }
+-
+    garage: { id: 27, gameUpdate: 0, model: Regera, slug: koenigsegg-regera, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 66, gameUpdate: 6, model: Jesko, slug: koenigsegg-jesko, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 96, gameUpdate: 13, model: 'Bailey Blade GT1', slug: bxr-bailey-blade-gt1, settingBrand: { name: BXR }, settingClass: { value: S } }
+-
+    garage: { id: 100, gameUpdate: 13, model: Tuatara, slug: ssc-tuatara, settingBrand: { name: SSC }, settingClass: { value: S } }
+-
+    garage: { id: 116, gameUpdate: 16, model: 'La Voiture Noire', slug: bugatti-la-voiture-noire, settingBrand: { name: Bugatti }, settingClass: { value: S } }
+-
+    garage: { id: 140, gameUpdate: 20, model: 'Venom F5', slug: hennessey-venom-f5, settingBrand: { name: Hennessey }, settingClass: { value: S } }
+-
+    garage: { id: 150, gameUpdate: 21, model: 1MW, slug: toroidion-1mw, settingBrand: { name: Toroidion }, settingClass: { value: S } }
+-
+    garage: { id: 187, gameUpdate: 27, model: 'Agera RS', slug: koenigsegg-agera-rs, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 191, gameUpdate: 28, model: Bolide, slug: bugatti-bolide, settingBrand: { name: Bugatti }, settingClass: { value: S } }
+-
+    garage: { id: 207, gameUpdate: 30, model: CCXR, slug: koenigsegg-ccxr, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 218, gameUpdate: 32, model: CC850, slug: koenigsegg-cc850, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 222, gameUpdate: 32, model: 'S7 Twin Turbo', slug: saleen-s7-twin-turbo, settingBrand: { name: Saleen }, settingClass: { value: S } }
+-
+    garage: { id: 223, gameUpdate: 33, model: 'Chiron Super Sport 300+', slug: bugatti-chiron-super-sport-300, settingBrand: { name: Bugatti }, settingClass: { value: S } }
+-
+    garage: { id: 230, gameUpdate: 34, model: Sixteen, slug: devel-sixteen, settingBrand: { name: Devel }, settingClass: { value: S } }
+-
+    garage: { id: 247, gameUpdate: 36, model: 'Aurora Tur', slug: zenvo-aurora-tur, settingBrand: { name: Zenvo }, settingClass: { value: S } }
+-
+    garage: { id: 257, gameUpdate: 38, model: 'Jesko Absolut', slug: koenigsegg-jesko-absolut, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 262, gameUpdate: 39, model: Mistral, slug: bugatti-mistral, settingBrand: { name: Bugatti }, settingClass: { value: S } }
+-
+    garage: { id: 275, gameUpdate: 40, model: Tartarus, slug: raesr-tartarus, settingBrand: { name: Raesr }, settingClass: { value: S } }
+-
+    garage: { id: 277, gameUpdate: 41, model: 'Locus Pléthore LC750', slug: htt-locus-plethore-lc750, settingBrand: { name: HTT }, settingClass: { value: S } }
+-
+    garage: { id: 295, gameUpdate: 44, model: Imperium, slug: arash-imperium, settingBrand: { name: Arash }, settingClass: { value: S } }
+-
+    garage: { id: 301, gameUpdate: 44, model: 'Super GT', slug: mosler-super-gt, settingBrand: { name: Mosler }, settingClass: { value: S } }
+-
+    garage: { id: 307, gameUpdate: 45, model: 'One:1', slug: koenigsegg-one-1, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 311, gameUpdate: 46, model: Chimera, slug: koenigsegg-chimera, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 315, gameUpdate: 46, model: 'Aeon E', slug: tushek-aeon-e, settingBrand: { name: Tushek }, settingClass: { value: S } }

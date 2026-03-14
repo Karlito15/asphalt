@@ -3,16 +3,16 @@
     <tbody>
     {% for item in entities %}
         <tr>
-            <td class="{{ classes.td }}">{{ item.Season.Chapter }}</td>
-            <td class="{{ classes.td }}">{{ item.raceOrder }}</td>
-            <td class="{{ classes.td }} text-truncate">{{ item.Mode }}</td>
-            <td class="{{ classes.td }} text-truncate">{{ item.Season }}</td>
-            <td class="{{ classes.td }} text-truncate">{{ item.Track.nameEnglish }}</td>
-            <td class="{{ classes.td }} text-truncate">{{ item.Track.nameFrench }}</td>
-            <td class="{{ classes.td }} text-center">{{item.Time }}</td>
-            <td class="{{ classes.td }} text-center">{{ component('ValueBoolean', {value: item.Finished}) }}</td>
+            <td class="{{ classes.table.td }}">{{ item.Season.Chapter }}</td>
+            <td class="{{ classes.table.td }}">{{ item.raceOrder }}</td>
+            <td class="{{ classes.table.td }} text-truncate">{{ item.Mode }}</td>
+            <td class="{{ classes.table.td }} text-truncate">{{ item.Season }}</td>
+            <td class="{{ classes.table.td }} text-truncate">{{ item.Track.nameEnglish }}</td>
+            <td class="{{ classes.table.td }} text-truncate">{{ item.Track.nameFrench }}</td>
+            <td class="{{ classes.table.td }} text-center">{{item.Time }}</td>
+            <td class="{{ classes.table.td }} text-center">{{ component('ValueBoolean', {value: item.Finished}) }}</td>
             <twig:TableDate entity="{{ item }}" />
-            <twig:TableAction id="{{ item.id }}" link="{{ 'admin.race.app.update' }}" />
+            <twig:TableActionSimple id="{{ item.id }}" link="{{ 'admin.race.app.update' }}" />
         </tr>
     {% else %}
         <twig:TableEmpty value="9" />
@@ -37,7 +37,9 @@
         <th>{{ 'text.name-french'|trans|raw }}</th>
         <th>{{ 'text.time'|trans }}</th>
         <th>{{ 'text.finished'|trans }}</th>
-        <th>{{ 'text.action'|trans }}</th>
+        <th>{{ 'text.date.created.at'|trans }}</th>
+        <th>{{ 'text.date.updated.at'|trans }}</th>
+        <th class="text-end">{{ 'text.action'|trans }}</th>
     </tr>
 {% endmacro %}
 

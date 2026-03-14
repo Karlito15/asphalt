@@ -14,25 +14,38 @@
             <!-- Stylesheets -->
             <link href="{{ asset('libraries/bootstrap/5.3.8/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
 {#          <link href="{{ asset('styles/bootstrap.css') }}" rel="stylesheet" type="text/css" />#}
+            <!-- Stylesheets -->
+            <link href="{{ asset('libraries/fontawesome/7.2.0/css/all.min.css') }}" rel="stylesheet" type="text/css" />
+            <link href="{{ asset('libraries/scroll-to-top-button/dist/jquery-backToTop.min.css') }}" rel="stylesheet" type="text/css" />
+        {% endblock %}
+    </head>
+    <body{% block bodyClass %}{% endblock %}>
+        {% block notification %}
+            {#{% include '@App/usuals/alert.html.twig' %}#}
+            {#{% include '@App/usuals/sweet-alert.html.twig'%}#}
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <twig:AlertBootstrap type="{{ label }}" message="{{ message }}" />
+                {% endfor %}
+            {% endfor %}
+        {% endblock %}
+        {% block body %}
+            {% block preloader %}{% endblock %}
+            {% block header %}{% endblock %}
+            {% block main %}{% endblock %}
+            {% block footer %}{% endblock %}
         {% endblock %}
 
         {% block javascripts %}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body{% block bodyClass %}{% endblock %}>
-        {% block body %}
+            <!-- Scripts -->
+            <script src="{{ asset('libraries/jquery/3.7.1.min.js') }}"></script>
+            {# pour le dropdwon dans le header #}
+            <script src="{{ asset('libraries/bootstrap/5.3.8/js/bootstrap.bundle.min.js') }}"></script>
 
-            {% block preloader %}
-        {#        {% include '@App/partials/back/loader.html.twig' %}#}
-            {% endblock %}
-            {% block notification %}
-                {#{% include '@App/usuals/alert.html.twig' %}#}
-                {% include '@App/usuals/sweet-alert.html.twig' %}
-            {% endblock %}
-            {% block header %}{% endblock %}
-            {% block main %}{% endblock %}
-            {% block footer %}{% endblock %}
+            {# back to top #}
+            <script src="{{ asset('libraries/scroll-to-top-button/dist/jquery-backToTop.min.js') }}"></script>
+            {% include "@App/usuals/_script-back-to-top.html.twig" %}
         {% endblock %}
     </body>
 </html>

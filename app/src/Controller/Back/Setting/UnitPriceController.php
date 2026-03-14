@@ -46,8 +46,8 @@ final class UnitPriceController extends AbstractController
         return $this->render('@App/contents/back/setting/unit-price.html.twig', [
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
-            'breadcrumb'      => self::getBreadcrump($home, $title),
-            'links'           => self::getLinksPage(),
+            'breadcrumb'      => self::Breadcrump($home, $title),
+            'links'           => self::LinksPage(),
             'container'       => 'container-fluid',
             'entities'        => $repository->findAll(),
         ]);
@@ -68,10 +68,11 @@ final class UnitPriceController extends AbstractController
             $manager->flush();
 
             // Flash Message
-            $this->addFlash('success', [
-                'title' => $page,
-                'message' => sprintf($this->translator->trans('notification.created'), $entity->getSlug())
-            ]);
+//            $this->addFlash('success', [
+//                'title' => $page,
+//                'message' => sprintf($this->translator->trans('notification.created'), $entity->getSlug())
+//            ]);
+            $this->addFlash('success', sprintf($this->translator->trans('notification.created'), $entity->getSlug()));
 
             return $this->redirectToIndex();
         }
@@ -79,8 +80,8 @@ final class UnitPriceController extends AbstractController
         return $this->render('@App/contents/back/form.html.twig', [
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
-            'breadcrumb'      => self::getBreadcrump($home, $page),
-            'links'           => self::getLinksPage(),
+            'breadcrumb'      => self::Breadcrump($home, $page),
+            'links'           => self::LinksPage(),
             'container'       => 'container-fluid',
             'entities'        => $entity,
             'form'            => $form,
@@ -111,8 +112,8 @@ final class UnitPriceController extends AbstractController
         return $this->render('@App/contents/back/form.html.twig', [
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
-            'breadcrumb'      => self::getBreadcrump($home, $page),
-            'links'           => self::getLinksPage(),
+            'breadcrumb'      => self::Breadcrump($home, $page),
+            'links'           => self::LinksPage(),
             'container'       => 'container-fluid',
             'entities'        => $entities,
             'form'            => $form,

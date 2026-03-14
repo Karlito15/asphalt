@@ -39,7 +39,7 @@ class SettingBrand
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index', 'migration', 'sheet'])]
+    #[Groups(['index', 'migration', 'sheet', 'filter'])]
     protected string $name;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
@@ -50,8 +50,6 @@ class SettingBrand
 
     #[ORM\Column(type: Types::STRING, length: 64, unique: true, nullable: false)]
     #[Assert\Length(min: 3, max: 64)]
-    #[Assert\NotBlank]
-    #[Assert\NotNull]
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['name'], separator: '-')]

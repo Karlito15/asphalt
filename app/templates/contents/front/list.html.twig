@@ -14,6 +14,11 @@
                     {{ 'btn.create'|trans }}&nbsp;<i class="fa fa-plus-square"></i>
                 </a>
             </div>
+            {% elseif app.current_route starts with 'app.page' %}
+            <div class="col-3"></div>
+            <div class="col-6">
+                <twig:ListClass link="{{ app.current_route }}" />
+            </div>
             {% else %}
             <div class="col-9">&nbsp;</div>
             {% endif %}
@@ -22,7 +27,7 @@
 
     </div>
     <div class="card-body">
-        <table class="table table-bordered table-striped text-light">
+        <table class="{{ classes.table.default }}">
             {% block table %}{% endblock %}
         </table>
     </div>

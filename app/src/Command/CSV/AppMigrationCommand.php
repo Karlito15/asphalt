@@ -87,7 +87,7 @@ class AppMigrationCommand extends Command
             ]);
             // disable interactive behavior for the greet command
             $missions->setInteractive(false);
-//            $this->getApplication()->doRun($missions, $output);
+            $this->getApplication()->doRun($missions, $output);
 
             // the command name is passed as first argument
             $races = new ArrayInput([
@@ -96,7 +96,7 @@ class AppMigrationCommand extends Command
             ]);
             // disable interactive behavior for the greet command
             $races->setInteractive(false);
-//            $this->getApplication()->doRun($races, $output);
+            $this->getApplication()->doRun($races, $output);
 
             // the command name is passed as first argument
             $inventories = new ArrayInput([
@@ -105,7 +105,7 @@ class AppMigrationCommand extends Command
             ]);
             // disable interactive behavior for the greet command
             $inventories->setInteractive(false);
-//            $this->getApplication()->doRun($inventories, $output);
+            $this->getApplication()->doRun($inventories, $output);
 
             // the command name is passed as first argument
             $garages = new ArrayInput([

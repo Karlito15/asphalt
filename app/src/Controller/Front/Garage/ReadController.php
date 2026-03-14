@@ -44,7 +44,7 @@ final class ReadController extends AbstractController
     public function read(Request $request): Response// , GarageApp $garage
     {
         // File
-        $file   = $this->getExtractionFolder() . '/' . $request->attributes->get('slug') . '.yaml';
+        $file   = $this->ExtractionFolder() . '/' . $request->attributes->get('slug') . '.yaml';
         $garage = YAML::FileToArray($file);
 
         // Variables
@@ -55,8 +55,8 @@ final class ReadController extends AbstractController
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
             'container'       => 'container-fluid',
-            'breadcrumb'      => self::getBreadcrump($home, $title),
-            'links'           => self::getLinksPage(),
+            'breadcrumb'      => self::Breadcrump($home, $title),
+            'links'           => self::LinksPage(),
             'entity'          => $garage,
         ]);
     }

@@ -61,7 +61,7 @@ class GarageBlueprintService implements CSVInterface
     {
         $garage = $this->findGarage($datas);
         $entity = new GarageBlueprint();
-        $entity->setStar1($datas['Star1']);
+        $entity->setStar1($datas['Star1']); // $this->NullToZero()
         $entity->setStar2($this->convertStringToInteger($datas['Star2']));
         $entity->setStar3($this->convertStringToInteger($datas['Star3']));
         $entity->setStar4($this->convertStringToInteger($datas['Star4']));
@@ -79,4 +79,13 @@ class GarageBlueprintService implements CSVInterface
     {
         return $this->parameter->get('csv.header.garage.blueprint');
     }
+
+//    private function NullToZero(?string $value = null): string
+//    {
+//        if ($value === 'NULL' OR $value === null) {
+//            return '0';
+//        }
+//
+//        return $value;
+//    }
 }

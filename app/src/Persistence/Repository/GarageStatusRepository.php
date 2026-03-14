@@ -18,25 +18,6 @@ class GarageStatusRepository extends ServiceEntityRepository
         parent::__construct($registry, GarageStatus::class);
     }
 
-    // DASHBOARD
-
-    /**
-     * @param string $status
-     * @param bool $value
-     * @return GarageStatus[]
-     * @example SELECT * FROM garage_status WHERE foo LIKE 'bar%';
-     */
-    public function findByStatus(string $status, bool $value): array
-    {
-        return $this->findBy([$status => $value]);
-//        return $this->createQueryBuilder('q')
-//            ->where('q.' . $status . ' = :value')
-//            ->setParameter('value', $value)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-    }
-
     // EXPORTS
 
     /**
@@ -94,6 +75,27 @@ class GarageStatusRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
+
+    // LIST
+
+//    /**
+//     * @param string $status
+//     * @param bool $value
+//     * @return GarageStatus[]
+//     * @example SELECT * FROM garage_status WHERE foo LIKE 'bar%';
+//     */
+//    public function findByStatus(string $status, bool $value): array
+//    {
+//        return $this->findBy([$status => $value]);
+//        return $this->createQueryBuilder('q')
+//            ->select('q.gold')
+//            ->where('q.' . $status . ' = :value')
+//            ->setParameter('value', $value)
+//            ->groupBy('q.id')
+//            ->getQuery()
+//            ->getScalarResult()
+//        ;
+//    }
 
     //    /**
     //     * @return GarageStatus[] Returns an array of GarageStatus objects

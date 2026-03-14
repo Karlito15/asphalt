@@ -1,14 +1,33 @@
 
-<section class="{{ container|default('container') }} mb-2 px-0">
-    <div class="row row-cols-3 mb-3">
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
+<section class="{{ container|default('container') }}">
+    <div class="row row-cols-5">
+        {# Setting Brand #}
+        <div class="col">{{ form_row(form.settingBrand) }}</div>
+        {# Model #}
+        <div class="col">{{ form_row(form.model) }}</div>{# <twig:FormInputText /> #}
+        {# Setting Class #}
+        <div class="col">{{ form_row(form.settingClass) }}</div>
+        {# Stars #}
+        <div class="col">{{ form_row(form.stars) }}</div>{# <twig:FormSelect /> #}
+        {# Update Number #}
+        <div class="col">{{ form_row(form.gameUpdate) }}</div>{# <twig:FormInputInteger /> #}
     </div>
-    <div class="row row-cols-4">
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
-        <div class="col">&nbsp;</div>
+    <div class="row row-cols-8">
+        {# Level #}
+        <div class="col">{{ form_row(form.level) }}</div>{# <twig:FormGroupInteger2Fields /> #}
+        {# Epic #}
+        <div class="col">{{ form_row(form.epic) }}</div>{# <twig:FormGroupInteger2Fields /> #}
+        {# Evo #}
+        <div class="col">{{ form_row(form.evo) }}</div>{# <twig:FormGroupInteger2Fields /> #}
+        {# Order by Class #}
+        <div class="col">{{ form_row(form.carOrder) }}</div>{# <twig:FormGroupInteger2Fields /> #}
+        {# Order by Stat #}
+        <div class="col">&nbsp;</div>{# <twig:FormGroupInteger2Fields /> #}
+        {# Setting Blueprint #}
+        <div class="col">{{ form_row(form.settingBlueprint) }}</div>
+        {# Setting Level #}
+        <div class="col">{{ form_row(form.settingLevel) }}</div>
+        {# Setting Unit Price #}
+        <div class="col">{{ form_row(form.settingUnitPrice) }}</div>
     </div>
 </section>

@@ -47,7 +47,7 @@ class SettingClass
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
-    #[Groups(['index', 'migration', 'sheet'])]
+    #[Groups(['index', 'migration', 'sheet', 'filter'])]
     protected string $value;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 1, 'unsigned' => true])]
@@ -76,8 +76,6 @@ class SettingClass
 
     #[ORM\Column(type: Types::STRING, length: 32, unique: true, nullable: false)]
     #[Assert\Length(min: 3, max: 32)]
-    #[Assert\NotBlank]
-    #[Assert\NotNull]
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['label', 'value'], separator: '-')]

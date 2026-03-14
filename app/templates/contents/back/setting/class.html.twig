@@ -3,15 +3,15 @@
     <tbody>
     {% for item in entities %}
         <tr>
-            <td class="{{ classes.td }}">{{ item.id }}</td>
-            <td class="{{ classes.td }}">{{ item.label }}</td>
-            <td class="{{ classes.td }}">{{ item.value }}</td>
-            <td class="{{ classes.td }}">{{ item.classOrder }}</td>
-            <td class="{{ classes.td }}">{{ item.carsNumber }}</td>
-            <td class="{{ classes.td }}">{{ item.median }}</td>
-            <td class="{{ classes.td }}">{{ item.slug }}</td>
+            <td class="{{ classes.table.td }}">{{ item.id }}</td>
+            <td class="{{ classes.table.td }}">{{ item.label }}</td>
+            <td class="{{ classes.table.td }}">{{ item.value }}</td>
+            <td class="{{ classes.table.td }}">{{ item.classOrder }}</td>
+            <td class="{{ classes.table.td }}">{{ item.carsNumber }}</td>
+            <td class="{{ classes.table.td }}">{{ item.median }}</td>
+            <td class="{{ classes.table.td }}">{{ item.slug }}</td>
             <twig:TableDate entity="{{ item }}" />
-            <twig:TableAction id="{{ item.id }}" link="{{ 'admin.setting.class.update' }}" />
+            <twig:TableActionSimple id="{{ item.id }}" link="{{ 'admin.setting.class.update' }}" />
         </tr>
     {% else %}
         <twig:TableEmpty value="10" />
@@ -35,9 +35,9 @@
         <th>{{ 'text.number'|trans }}</th>
         <th>{{ 'text.median'|trans }}</th>
         <th>{{ 'text.slug'|trans }}</th>
-        <th>{{ 'text.date.created.at'|trans }}</th>
-        <th>{{ 'text.date.updated.at'|trans }}</th>
-        <th>{{ 'text.action'|trans }}</th>
+        <th class="text-end">{{ 'text.date.created.at'|trans }}</th>
+        <th class="text-end">{{ 'text.date.updated.at'|trans }}</th>
+        <th class="text-end">{{ 'text.action'|trans }}</th>
     </tr>
 {% endmacro %}
 

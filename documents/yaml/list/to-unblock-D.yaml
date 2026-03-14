@@ -1,0 +1,18 @@
+-
+    garage: { id: 52, gameUpdate: 1, model: 'Elise Sprint 220', slug: lotus-elise-sprint-220, settingBrand: { name: Lotus }, settingClass: { value: D } }
+-
+    garage: { id: 114, gameUpdate: 16, model: 'I8 Roadster', slug: bmw-i8-roadster, settingBrand: { name: BMW }, settingClass: { value: D } }
+-
+    garage: { id: 118, gameUpdate: 16, model: 'Huracán Super Trofeo Evo', slug: lamborghini-huracan-super-trofeo-evo, settingBrand: { name: Lamborghini }, settingClass: { value: D } }
+-
+    garage: { id: 151, gameUpdate: 21, model: 'Electric R', slug: volkswagen-electric-r, settingBrand: { name: Volkswagen }, settingClass: { value: D } }
+-
+    garage: { id: 153, gameUpdate: 22, model: 004C, slug: glickenhaus-004c, settingBrand: { name: Glickenhaus }, settingClass: { value: D } }
+-
+    garage: { id: 220, gameUpdate: 32, model: '370Z Édition Néon', slug: nissan-370z-edition-neon, settingBrand: { name: Nissan }, settingClass: { value: D } }
+-
+    garage: { id: 225, gameUpdate: 33, model: 'Mustang Mach-E1400', slug: ford-mustang-mach-e1400, settingBrand: { name: Ford }, settingClass: { value: D } }
+-
+    garage: { id: 278, gameUpdate: 41, model: EVO37, slug: kimera-evo37, settingBrand: { name: Kimera }, settingClass: { value: D } }
+-
+    garage: { id: 308, gameUpdate: 45, model: Emeya, slug: lotus-emeya, settingBrand: { name: Lotus }, settingClass: { value: D } }

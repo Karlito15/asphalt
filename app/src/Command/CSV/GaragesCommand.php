@@ -110,16 +110,14 @@ class GaragesCommand extends Command
             // ToDo : Tags
             $this->settingUnitPrice->import($io, $folder);
             $this->blueprint->import($io, $folder);
+            $this->gauntlet->import($io, $folder);
             $this->rank->import($io, $folder);
             $this->statActual->import($io, $folder);
             $this->statMax->import($io, $folder);
             $this->statMin->import($io, $folder);
-            $this->upgrade->import($io, $folder);
-            // Gauntlet doit être importé après StatMax
-            $this->gauntlet->import($io, $folder);
-            // Status
             $this->status->import($io, $folder);
             $this->statusControl->import($io, $folder);
+            $this->upgrade->import($io, $folder);
             $io->info('Import GARAGE terminé');
             $result = true;
         } elseif ($choice === 'export') {

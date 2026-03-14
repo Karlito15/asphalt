@@ -1,0 +1,266 @@
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 4, gameUpdate: 0, model: 'Z4 LCI E89', slug: bmw-z4-lci-e89, settingBrand: { name: BMW }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 10, gameUpdate: 0, model: 'Camaro LT', slug: chevrolet-camaro-lt, settingBrand: { name: Chevrolet }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 14, gameUpdate: 0, model: 'Challenger Pack 392 Hemi Scat', slug: dodge-challenger-pack-392-hemi-scat, settingBrand: { name: Dodge }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 16, gameUpdate: 0, model: 'DS E-Tense', slug: ds-automobiles-ds-e-tense, settingBrand: { name: 'DS Automobiles' }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 22, gameUpdate: 0, model: 'Shelby GT350R', slug: ford-shelby-gt350r, settingBrand: { name: Ford }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 36, gameUpdate: 0, model: 'Lancer Evolution', slug: mitsubishi-lancer-evolution, settingBrand: { name: Mitsubishi }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 38, gameUpdate: 0, model: '37OZ Nismo', slug: nissan-37oz-nismo, settingBrand: { name: Nissan }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 43, gameUpdate: 0, model: '718 Cayman', slug: porsche-718-cayman, settingBrand: { name: Porsche }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 48, gameUpdate: 0, model: 'XL Sport Concept', slug: volkswagen-xl-sport-concept, settingBrand: { name: Volkswagen }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 52, gameUpdate: 1, model: 'Elise Sprint 220', slug: lotus-elise-sprint-220, settingBrand: { name: Lotus }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 65, gameUpdate: 6, model: G60, slug: ginetta-g60, settingBrand: { name: Ginetta }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 67, gameUpdate: 6, model: '911 Targa 4S', slug: porsche-911-targa-4s, settingBrand: { name: Porsche }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 73, gameUpdate: 7, model: Griffith, slug: tvr-griffith, settingBrand: { name: TVR }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 80, gameUpdate: 9, model: Furai, slug: mazda-furai, settingBrand: { name: Mazda }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 81, gameUpdate: 9, model: 'Leaf Nismo RC', slug: nissan-leaf-nismo-rc, settingBrand: { name: Nissan }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 84, gameUpdate: 10, model: 'Civic Type-R', slug: honda-civic-type-r, settingBrand: { name: Honda }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 87, gameUpdate: 11, model: 'Taycan Turbo S', slug: porsche-taycan-turbo-s, settingBrand: { name: Porsche }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 98, gameUpdate: 13, model: 'Corvette C7.R', slug: chevrolet-corvette-c7-r, settingBrand: { name: Chevrolet }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 103, gameUpdate: 14, model: 'Continental GT3', slug: bentley-continental-gt3, settingBrand: { name: Bentley }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 114, gameUpdate: 16, model: 'I8 Roadster', slug: bmw-i8-roadster, settingBrand: { name: BMW }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 118, gameUpdate: 16, model: 'Huracán Super Trofeo Evo', slug: lamborghini-huracan-super-trofeo-evo, settingBrand: { name: Lamborghini }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 124, gameUpdate: 17, model: 'Projet Black S', slug: infiniti-projet-black-s, settingBrand: { name: Infiniti }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 128, gameUpdate: 18, model: DaVinci, slug: italdesign-davinci, settingBrand: { name: Italdesign }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 148, gameUpdate: 21, model: TreZor, slug: renault-trezor, settingBrand: { name: Renault }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 151, gameUpdate: 21, model: 'Electric R', slug: volkswagen-electric-r, settingBrand: { name: Volkswagen }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 153, gameUpdate: 22, model: 004C, slug: glickenhaus-004c, settingBrand: { name: Glickenhaus }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 156, gameUpdate: 22, model: Emira, slug: lotus-emira, settingBrand: { name: Lotus }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 172, gameUpdate: 25, model: 'Countach 25th Anniversary', slug: lamborghini-countach-25th-anniversary, settingBrand: { name: Lamborghini }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 184, gameUpdate: 26, model: Dezir, slug: renault-dezir, settingBrand: { name: Renault }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 189, gameUpdate: 27, model: SR1, slug: peugeot-sr1, settingBrand: { name: Peugeot }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 198, gameUpdate: 28, model: R1, slug: praga-r1, settingBrand: { name: Praga }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 208, gameUpdate: 30, model: 'X-Bow GTX', slug: ktm-x-bow-gtx, settingBrand: { name: KTM }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 220, gameUpdate: 32, model: '370Z Édition Néon', slug: nissan-370z-edition-neon, settingBrand: { name: Nissan }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 225, gameUpdate: 33, model: 'Mustang Mach-E1400', slug: ford-mustang-mach-e1400, settingBrand: { name: Ford }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 246, gameUpdate: 36, model: '911 Carrera RS 3.8', slug: porsche-911-carrera-rs-3-8, settingBrand: { name: Porsche }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 284, gameUpdate: 42, model: 'Ioniq 5 N', slug: hyundai-ioniq-5-n, settingBrand: { name: Hyundai }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 288, gameUpdate: 42, model: 'GR Supra 2023', slug: toyota-gr-supra-2023, settingBrand: { name: Toyota }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 294, gameUpdate: 43, model: 'GR Supra Racing Concept', slug: toyota-gr-supra-racing-concept, settingBrand: { name: Toyota }, settingClass: { value: D } }

@@ -72,8 +72,6 @@ class InventoryApp
 
     #[ORM\Column(type: Types::STRING, length: 128, unique: true, nullable: true)]
     #[Assert\Length(min: 3, max: 128)]
-    #[Assert\NotBlank]
-    #[Assert\NotNull]
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['label', 'filter'], separator: '-')]
