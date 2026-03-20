@@ -16,7 +16,6 @@ use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Component\Serializer\Attribute\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: MissionTypeRepository::class)]
@@ -40,7 +39,6 @@ class MissionType extends MissionAbstract
     #[Assert\NoSuspiciousCharacters]
     #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
     #[Gedmo\Slug(fields: ['value'], separator: '-')]
-    #[Groups([''])]
     protected string $slug;
 
     #[ORM\OneToMany(targetEntity: MissionApp::class, mappedBy: 'type', orphanRemoval: true)]

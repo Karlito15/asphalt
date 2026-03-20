@@ -21,7 +21,7 @@ class SettingLevelRepository extends ServiceEntityRepository
         parent::__construct($registry, SettingLevel::class);
     }
 
-    // EXPORTS
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -45,7 +45,7 @@ class SettingLevelRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param SettingLevel $entity

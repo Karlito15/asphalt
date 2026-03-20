@@ -11,11 +11,12 @@ trait ApiController
      */
     public static function getHeaders(): array
     {
-        // return $request->headers->all();
         return [
-            'Cache-Control' => 'no-cache, private',
-            'Content-Type'  => 'application/json',
-            'X-Robots-Tag'  => 'noindex',
+            'Cache-Control'    => 'no-cache, private',
+            'Content-Type'     => 'application/json',
+            'X-Robots-Tag'     => 'noindex',
+            'Referrer-Policy'  => 'strict-origin-when-cross-origin',
+            // 'X-Total-Count'  => 0,
         ];
     }
 
@@ -26,7 +27,7 @@ trait ApiController
     public static function getContext(array $config = []): array
     {
         $default = [
-            'groups' => 'public'
+            'groups' => 'index'
         ];
 
         return array_merge($default, $config);

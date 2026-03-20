@@ -1,0 +1,62 @@
+-
+    garage: { id: 7, gameUpdate: 0, model: Chiron, slug: bugatti-chiron, settingBrand: { name: Bugatti }, settingClass: { value: S } }
+-
+    garage: { id: 20, gameUpdate: 0, model: 'FXX K', slug: ferrari-fxx-k, settingBrand: { name: Ferrari }, settingClass: { value: S } }
+-
+    garage: { id: 25, gameUpdate: 0, model: 'Vulcano Titanium', slug: icona-vulcano-titanium, settingBrand: { name: Icona }, settingClass: { value: S } }
+-
+    garage: { id: 27, gameUpdate: 0, model: Regera, slug: koenigsegg-regera, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 30, gameUpdate: 0, model: 'Terzo Millennio', slug: lamborghini-terzo-millennio, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
+-
+    garage: { id: 32, gameUpdate: 0, model: Egoista, slug: lamborghini-egoista, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
+-
+    garage: { id: 28, gameUpdate: 0, model: Centenario, slug: lamborghini-centenario, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
+-
+    garage: { id: 46, gameUpdate: 0, model: Nemesis, slug: trion-nemesis, settingBrand: { name: Trion }, settingClass: { value: S } }
+-
+    garage: { id: 50, gameUpdate: 0, model: 'Lykan Hypersport', slug: w-motors-lykan-hypersport, settingBrand: { name: 'W Motors' }, settingClass: { value: S } }
+-
+    garage: { id: 49, gameUpdate: 0, model: 'Fenyr Supersport', slug: w-motors-fenyr-supersport, settingBrand: { name: 'W Motors' }, settingClass: { value: S } }
+-
+    garage: { id: 59, gameUpdate: 3, model: 'TS1 GT Anniversary', slug: zenvo-ts1-gt-anniversary, settingBrand: { name: Zenvo }, settingClass: { value: S } }
+-
+    garage: { id: 66, gameUpdate: 6, model: Jesko, slug: koenigsegg-jesko, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 71, gameUpdate: 7, model: Senna, slug: mclaren-senna, settingBrand: { name: McLaren }, settingClass: { value: S } }
+-
+    garage: { id: 75, gameUpdate: 8, model: Battista, slug: automobili-pininfarina-battista, settingBrand: { name: 'Automobili Pininfarina' }, settingClass: { value: S } }
+-
+    garage: { id: 82, gameUpdate: 9, model: Nevera, slug: rimac-nevera, settingBrand: { name: Rimac }, settingClass: { value: S } }
+-
+    garage: { id: 94, gameUpdate: 12, model: Veneno, slug: lamborghini-veneno, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
+-
+    garage: { id: 96, gameUpdate: 13, model: 'Bailey Blade GT1', slug: bxr-bailey-blade-gt1, settingBrand: { name: BXR }, settingClass: { value: S } }
+-
+    garage: { id: 100, gameUpdate: 13, model: Tuatara, slug: ssc-tuatara, settingBrand: { name: SSC }, settingClass: { value: S } }
+-
+    garage: { id: 106, gameUpdate: 14, model: Speedtail, slug: mclaren-speedtail, settingBrand: { name: McLaren }, settingClass: { value: S } }
+-
+    garage: { id: 109, gameUpdate: 15, model: 'SF90 Stradale', slug: ferrari-sf90-stradale, settingBrand: { name: Ferrari }, settingClass: { value: S } }
+-
+    garage: { id: 155, gameUpdate: 22, model: Gemera, slug: koenigsegg-gemera, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 165, gameUpdate: 23, model: RS, slug: ultima-rs, settingBrand: { name: Ultima }, settingClass: { value: S } }
+-
+    garage: { id: 166, gameUpdate: 23, model: '1789', slug: vision-1789, settingBrand: { name: Vision }, settingClass: { value: S } }
+-
+    garage: { id: 187, gameUpdate: 27, model: 'Agera RS', slug: koenigsegg-agera-rs, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 224, gameUpdate: 33, model: Vayanne, slug: deus-vayanne, settingBrand: { name: Deus }, settingClass: { value: S } }
+-
+    garage: { id: 247, gameUpdate: 36, model: 'Aurora Tur', slug: zenvo-aurora-tur, settingBrand: { name: Zenvo }, settingClass: { value: S } }
+-
+    garage: { id: 253, gameUpdate: 38, model: 'Chiron Pur Sport', slug: bugatti-chiron-pur-sport, settingBrand: { name: Bugatti }, settingClass: { value: S } }
+-
+    garage: { id: 257, gameUpdate: 38, model: 'Jesko Absolut', slug: koenigsegg-jesko-absolut, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
+-
+    garage: { id: 263, gameUpdate: 39, model: 21C, slug: czinger-21c, settingBrand: { name: Czinger }, settingClass: { value: S } }
+-
+    garage: { id: 266, gameUpdate: 39, model: 'Nevera Time Attack', slug: rimac-nevera-time-attack, settingBrand: { name: Rimac }, settingClass: { value: S } }
+-
+    garage: { id: 286, gameUpdate: 42, model: 'Tuatara Striker', slug: ssc-tuatara-striker, settingBrand: { name: SSC }, settingClass: { value: S } }

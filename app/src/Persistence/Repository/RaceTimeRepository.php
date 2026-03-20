@@ -21,7 +21,7 @@ class RaceTimeRepository extends ServiceEntityRepository
         parent::__construct($registry, RaceTime::class);
     }
 
-    // EXPORTS
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -41,7 +41,7 @@ class RaceTimeRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param RaceTime $entity

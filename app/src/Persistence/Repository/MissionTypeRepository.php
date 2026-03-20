@@ -21,7 +21,7 @@ class MissionTypeRepository extends ServiceEntityRepository
         parent::__construct($registry, MissionType::class);
     }
 
-    // EXPORTS
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -42,7 +42,7 @@ class MissionTypeRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param MissionType $entity

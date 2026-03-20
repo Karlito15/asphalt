@@ -1,22 +1,25 @@
 php bin/console debug:router
---------------------------------- ---------- ------------ ------ -----------------------------------------------------
-Name                              Method     Scheme       Host   Path
---------------------------------- ---------- ------------ ------ -----------------------------------------------------
-api.garage.index                  GET        http|https   ANY    /{_locale}/api/garage/index
-api.inventory.index               GET        http|https   ANY    /{_locale}/api/inventory/index
-api.mission.index                 GET        http|https   ANY    /{_locale}/api/mission/index
-api.mission.task.index            GET        http|https   ANY    /{_locale}/api/mission/task/index
-api.mission.type.index            GET        http|https   ANY    /{_locale}/api/mission/type/index
-api.race.index                    GET        http|https   ANY    /{_locale}/api/race/index
-api.race.mode.index               GET        http|https   ANY    /{_locale}/api/race/mode/index
-api.race.region.index             GET        http|https   ANY    /{_locale}/api/race/region/index
-api.race.season.index             GET        http|https   ANY    /{_locale}/api/race/season/index
-api.race.time.index               GET        http|https   ANY    /{_locale}/api/race/time/index
-api.race.track.index              GET        http|https   ANY    /{_locale}/api/race/track/index
-api.setting.blueprint.index       GET        http|https   ANY    /{_locale}/api/setting/blueprint/index
-api.setting.brand.index           GET        http|https   ANY    /{_locale}/api/setting/brand/index
-api.setting.class.index           GET        http|https   ANY    /{_locale}/api/setting/class/index
-api.setting.level.index           GET        http|https   ANY    /{_locale}/api/setting/level/index
-api.setting.tag.index             GET        http|https   ANY    /{_locale}/api/setting/tag/index
-api.setting.unit-price.index      GET        http|https   ANY    /{_locale}/api/setting/unit-price/index
---------------------------------- ---------- ------------ ------ -----------------------------------------------------
+----------------------------------------- ---------------- ------------ ---------------------------------------------------------------
+Name                                      Method           Scheme       Path
+----------------------------------------- ---------------- ------------ ---------------------------------------------------------------
+api.garage.index                          GET              http|https   /api/garage/index
+api.filter.status                         GET              http|https   /api/filter/status/{letter}
+api.filter.toUnblock                      GET              http|https   /api/filter/toUnblock/{letter}
+api.filter.toInstallUpgrade               GET              http|https   /api/filter/toInstallUpgrade/{letter}
+api.inventory.index                       GET              http|https   /api/inventory/index
+api.mission.index                         GET              http|https   /api/mission/index
+api.mission.task.index                    GET              http|https   /api/mission/task/index
+api.mission.type.index                    GET              http|https   /api/mission/type/index
+api.race.index                            GET              http|https   /api/race/index
+api.race.mode.index                       GET              http|https   /api/race/mode/index
+api.race.region.index                     GET              http|https   /api/race/region/index
+api.race.season.index                     GET              http|https   /api/race/season/index
+api.race.time.index                       GET              http|https   /api/race/time/index
+api.race.track.index                      GET              http|https   /api/race/track/index
+api.setting.blueprint.index               GET              http|https   /api/setting/blueprint/index
+api.setting.brand.index                   GET              http|https   /api/setting/brand/index
+api.setting.class.index                   GET              http|https   /api/setting/class/index
+api.setting.level.index                   GET              http|https   /api/setting/level/index
+api.setting.tag.index                     GET              http|https   /api/setting/tag/index
+api.setting.unit-price.index              GET              http|https   /api/setting/unit-price/index
+----------------------------------------- ---------------- ------------ ---------------------------------------------------------------

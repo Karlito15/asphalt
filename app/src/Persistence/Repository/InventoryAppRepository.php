@@ -21,7 +21,7 @@ class InventoryAppRepository extends ServiceEntityRepository
         parent::__construct($registry, InventoryApp::class);
     }
 
-    // DASHBOARD
+    ### DASHBOARD
 
     /**
      * @param string $query
@@ -31,30 +31,6 @@ class InventoryAppRepository extends ServiceEntityRepository
     public function findByCategory(string $query): array
     {
         return $this->findBy(['category' => $query]);
-    }
-
-    // EXPORTS
-
-    /**
-     * Retourne les informations pour les extraire dans un fichier CSV
-     *
-     * @return array
-     */
-    public function export(): array
-    {
-        $qb = $this->createQueryBuilder('q');
-        $qb->select([
-            'q.category AS Category',
-            'q.label AS Label',
-            'q.value AS Value',
-            'q.filter AS Filter',
-            'q.position AS Position',
-            'q.active AS Active',
-        ]);
-        $qb->where('q.deletedAt IS NULL');
-        $qb->orderBy('q.id', 'ASC');
-
-        return $qb->getQuery()->getArrayResult();
     }
 
     /**
@@ -82,7 +58,31 @@ class InventoryAppRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EXPORTS
+
+    /**
+     * Retourne les informations pour les extraire dans un fichier CSV
+     *
+     * @return array
+     */
+    public function export(): array
+    {
+        $qb = $this->createQueryBuilder('q');
+        $qb->select([
+            'q.category AS Category',
+            'q.label AS Label',
+            'q.value AS Value',
+            'q.filter AS Filter',
+            'q.position AS Position',
+            'q.active AS Active',
+        ]);
+        $qb->where('q.deletedAt IS NULL');
+        $qb->orderBy('q.id', 'ASC');
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    ### EVENTS
 
     /**
      * @param InventoryApp $entity

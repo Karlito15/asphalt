@@ -14,8 +14,10 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 #[AsCommand(
-    name: 'TagCommand',
-    description: 'Add a short description for your command',
+    name: 'asphalt:cron:count:tag',
+    description: 'Compte le nombre de voitures par Tag',
+    aliases: ['asphalt-cron-count-tag'],
+    hidden: false,
 )]
 class TagCommand extends Command
 {

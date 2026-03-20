@@ -1,0 +1,78 @@
+-
+    garage: { id: 2, gameUpdate: 0, model: Vulcan, slug: aston-martin-vulcan, settingBrand: { name: 'Aston Martin' }, settingClass: { value: A } }
+-
+    garage: { id: 14, gameUpdate: 0, model: 'Viper GTS', slug: dodge-viper-gts, settingBrand: { name: Dodge }, settingClass: { value: A } }
+-
+    garage: { id: 21, gameUpdate: 0, model: LaFerrari, slug: ferrari-laferrari, settingBrand: { name: Ferrari }, settingClass: { value: A } }
+-
+    garage: { id: 29, gameUpdate: 0, model: 'Aventador SV Coupé', slug: lamborghini-aventador-sv-coupe, settingBrand: { name: Lamborghini }, settingClass: { value: A } }
+-
+    garage: { id: 34, gameUpdate: 0, model: P1, slug: mclaren-p1, settingBrand: { name: McLaren }, settingClass: { value: A } }
+-
+    garage: { id: 37, gameUpdate: 0, model: 'GT-R Nismo', slug: nissan-gt-r-nismo, settingBrand: { name: Nissan }, settingClass: { value: A } }
+-
+    garage: { id: 39, gameUpdate: 0, model: 'Huayra BC', slug: pagani-huayra-bc, settingBrand: { name: Pagani }, settingClass: { value: A } }
+-
+    garage: { id: 43, gameUpdate: 0, model: '918 Spyder', slug: porsche-918-spyder, settingBrand: { name: Porsche }, settingClass: { value: A } }
+-
+    garage: { id: 47, gameUpdate: 0, model: 'Force 1 V10', slug: vlf-force-1-v10, settingBrand: { name: VLF }, settingClass: { value: A } }
+-
+    garage: { id: 51, gameUpdate: 1, model: J50, slug: ferrari-j50, settingBrand: { name: Ferrari }, settingClass: { value: A } }
+-
+    garage: { id: 53, gameUpdate: 2, model: Akylone, slug: genty-akylone, settingBrand: { name: Genty }, settingClass: { value: A } }
+-
+    garage: { id: 55, gameUpdate: 2, model: '570S Spider', slug: mclaren-570s-spider, settingBrand: { name: McLaren }, settingClass: { value: A } }
+-
+    garage: { id: 61, gameUpdate: 5, model: 'Aventador J', slug: lamborghini-aventador-j, settingBrand: { name: Lamborghini }, settingClass: { value: A } }
+-
+    garage: { id: 63, gameUpdate: 6, model: 'LaFerrari Aperta', slug: ferrari-laferrari-aperta, settingBrand: { name: Ferrari }, settingClass: { value: A } }
+-
+    garage: { id: 64, gameUpdate: 6, model: '812 Superfast', slug: ferrari-812-superfast, settingBrand: { name: Ferrari }, settingClass: { value: A } }
+-
+    garage: { id: 76, gameUpdate: 8, model: Dendrobium, slug: vanda-electrics-dendrobium, settingBrand: { name: 'Vanda Electrics' }, settingClass: { value: A } }
+-
+    garage: { id: 77, gameUpdate: 9, model: 'Corvette ZR1', slug: chevrolet-corvette-zr1, settingBrand: { name: Chevrolet }, settingClass: { value: A } }
+-
+    garage: { id: 83, gameUpdate: 9, model: 'AT96 track version', slug: techrules-at96-track-version, settingBrand: { name: Techrules }, settingClass: { value: A } }
+-
+    garage: { id: 90, gameUpdate: 11, model: '911 GT2 RS Clubsport', slug: porsche-911-gt2-rs-clubsport, settingBrand: { name: Porsche }, settingClass: { value: A } }
+-
+    garage: { id: 92, gameUpdate: 12, model: SC18, slug: lamborghini-sc18, settingBrand: { name: Lamborghini }, settingClass: { value: A } }
+-
+    garage: { id: 102, gameUpdate: 14, model: 'Valhalla Concept Car', slug: aston-martin-valhalla-concept-car, settingBrand: { name: 'Aston Martin' }, settingClass: { value: A } }
+-
+    garage: { id: 110, gameUpdate: 15, model: 'F8 Tributo', slug: ferrari-f8-tributo, settingBrand: { name: Ferrari }, settingClass: { value: A } }
+-
+    garage: { id: 117, gameUpdate: 16, model: 'GT by Citroën', slug: citroen-gt-by-citroen, settingBrand: { name: Citroën }, settingClass: { value: A } }
+-
+    garage: { id: 125, gameUpdate: 17, model: EP9, slug: nio-ep9, settingBrand: { name: Nio }, settingClass: { value: A } }
+-
+    garage: { id: 132, gameUpdate: 18, model: Imola, slug: pagani-imola, settingBrand: { name: Pagani }, settingClass: { value: A } }
+-
+    garage: { id: 134, gameUpdate: 19, model: Victor, slug: aston-martin-victor, settingBrand: { name: 'Aston Martin' }, settingClass: { value: A } }
+-
+    garage: { id: 141, gameUpdate: 20, model: 'Aventador SVJ Roadster', slug: lamborghini-aventador-svj-roadster, settingBrand: { name: Lamborghini }, settingClass: { value: A } }
+-
+    garage: { id: 146, gameUpdate: 21, model: 'Zonda HP Barchetta', slug: pagani-zonda-hp-barchetta, settingBrand: { name: Pagani }, settingClass: { value: A } }
+-
+    garage: { id: 154, gameUpdate: 22, model: 007S, slug: glickenhaus-007s, settingBrand: { name: Glickenhaus }, settingClass: { value: A } }
+-
+    garage: { id: 160, gameUpdate: 22, model: 'Zonda R', slug: pagani-zonda-r, settingBrand: { name: Pagani }, settingClass: { value: A } }
+-
+    garage: { id: 163, gameUpdate: 23, model: 'Senna GTR', slug: mclaren-senna-gtr, settingBrand: { name: McLaren }, settingClass: { value: A } }
+-
+    garage: { id: 177, gameUpdate: 26, model: 'Continental GT Speed', slug: bentley-continental-gt-speed, settingBrand: { name: Bentley }, settingClass: { value: A } }
+-
+    garage: { id: 195, gameUpdate: 28, model: '650S GT3', slug: mclaren-650s-gt3, settingBrand: { name: McLaren }, settingClass: { value: A } }
+-
+    garage: { id: 196, gameUpdate: 28, model: 9X8, slug: peugeot-9x8, settingBrand: { name: Peugeot }, settingClass: { value: A } }
+-
+    garage: { id: 215, gameUpdate: 31, model: '935 (2019)', slug: porsche-935-2019, settingBrand: { name: Porsche }, settingClass: { value: A } }
+-
+    garage: { id: 221, gameUpdate: 32, model: 'M600 Speedster', slug: noble-m600-speedster, settingBrand: { name: Noble }, settingClass: { value: A } }
+-
+    garage: { id: 261, gameUpdate: 39, model: 'Battista Edizione Nino Farina', slug: automobili-pininfarina-battista-edizione-nino-farina, settingBrand: { name: 'Automobili Pininfarina' }, settingClass: { value: A } }
+-
+    garage: { id: 265, gameUpdate: 39, model: 'Vision One-Eleven', slug: mercedes-benz-vision-one-eleven, settingBrand: { name: Mercedes-Benz }, settingClass: { value: A } }
+-
+    garage: { id: 272, gameUpdate: 40, model: Sabre, slug: mclaren-sabre, settingBrand: { name: McLaren }, settingClass: { value: A } }

@@ -36,36 +36,57 @@ final class DashboardController extends AbstractController
         private readonly TranslatorInterface    $translator,
     ) {}
 
+    /**
+     * @throws Exception
+     */
     #[Route('/inventory.php', name: 'inventory')]
     public function inventory(Request $request): JsonResponse
     {
-		// Variables
-        $headers = $request->headers->all();
-		$datas   = $request->request->all();
-		$id      = $datas['id'];
-		$value   = $datas['value'];
-//		$slug    = array_keys($datas)[0];
+        ### Headers
+        $request->headers->set('X-API-Version', '1.0');
+        // $headers = $request->headers->all();
 
-        // Find Entity
-//      $entity  = $this->manager->getRepository(InventoryApp::class)->findOneBy(['slug' => $slug]);
-        $entity  = $this->manager->getRepository(InventoryApp::class)->findOneBy(['id' => $id]);
+        ### Request
+        $id      = (int) $request->request->get('id');
+        $value   = (int) $request->request->get('value');
+
+        ### Find Entity
+        $entity  = $this->getEntity($id);
+
+        ### Update Entity
         if (is_null($entity)) {
             $status = $this->entityNotFound();
         } else {
             $status = $this->updateEntity($entity, $value);
         }
 
-        // Delete Cache
-//        $service->cacheDelete();
 
-        // Message
+        ### Message
         $message = match ($status) {
             200 => $this->getMessageSuccess($entity),
             400 => $this->translator->trans('notification.ajax.not-found'),
-            424 => $this->translator->trans('notification.ajax.not-work'),
+            424 => $this->getMessageError(),
         };
 
-        return $this->json($message, $status, $headers);
+        return $this->json($message, $status);//, $headers
+    }
+
+    /** PRIVATE METHODS */
+
+    /**
+     * Retourne l'entité InventoryApp
+     *
+     * @param int $id
+     * @return InventoryApp|null
+     */
+    private function getEntity(int $id): ?InventoryApp
+    {
+        $result = $this->manager->getRepository(InventoryApp::class)->findOneBy(['id' => $id]);
+        if ($result instanceof InventoryApp) {
+            return $result;
+        }
+
+        return null;
     }
 
     /**
@@ -76,44 +97,48 @@ final class DashboardController extends AbstractController
      */
     private function updateEntity(InventoryApp $entity, int $value): int
     {
-        // Variables
-        $title = $this->translator->trans('text.inventory');
-
-        // Start Transaction
+        ### Start Transaction
         $this->manager->beginTransaction();
 
-        // Update Entity
-        $entity->setValue($value);
-        $this->manager->persist($entity);
+        ### Variables
+        $title = $this->translator->trans('text.inventory');
 
         try {
-            // Flush Entity
+            ### Flush Entity
+            $entity->setValue($value);
+            $this->manager->persist($entity);
             $this->manager->flush();
             $this->manager->clear();
             $this->manager->getConnection()->commit();
+
+            ### Return
             $message = $this->getMessageSuccess($entity);
             $status  = Response::HTTP_OK;
 
-            // Flash Message
-            $this->addFlash('success', [
-                'title' => $title,
-                'message' => $message
-            ]);
+            ### Flash Message
+//            $this->addFlash('success', [
+//                'title' => $title,
+//                'message' => $message
+//            ]);
+            $this->addFlash('success', $message);
         } catch (Exception $e) {
-            // Roll Back
+            ### Rollback
             $this->manager->getConnection()->rollBack();
-            $message = $this->translator->trans('notification.ajax.not-work');
+            $this->manager->getConnection()->close();
+
+            ### Return
+            $message = $this->getMessageError();
             $status  = Response::HTTP_FAILED_DEPENDENCY;
 
-            // Flash Message
-            $this->addFlash('error', [
-                'title' => $title,
-                'message' => $message
-            ]);
+            ### Flash Message
+//            $this->addFlash('error', [
+//                'title' => $title,
+//                'message' => $message
+//            ]);
+            $this->addFlash('danger', $e->getMessage());
 
-            // Logger
+            ### Logger
             $this->logger->error($e->getMessage());
-            echo $e->getMessage();
         }
 
         return $status;
@@ -125,10 +150,11 @@ final class DashboardController extends AbstractController
     private function entityNotFound(): int
     {
         // Flash Message
-        $this->addFlash('error', [
-            'title' => $this->translator->trans('text.inventory'),
-            'message' => $this->translator->trans('notification.ajax.not-found')
-        ]);
+//        $this->addFlash('error', [
+//            'title' => $this->translator->trans('text.inventory'),
+//            'message' => $this->translator->trans('notification.ajax.not-found')
+//        ]);
+        $this->addFlash('danger', $this->translator->trans('notification.ajax.not-found'));
 
         return Response::HTTP_BAD_REQUEST;
     }
@@ -140,5 +166,13 @@ final class DashboardController extends AbstractController
     private function getMessageSuccess(InventoryApp $entity): string
     {
         return sprintf($this->translator->trans('notification.updated'), $entity->getLabel());
+    }
+
+    /**
+     * @return string
+     */
+    private function getMessageError(): string
+    {
+        return $this->translator->trans('notification.ajax.not-work');
     }
 }

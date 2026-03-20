@@ -21,7 +21,39 @@ class MissionAppRepository extends ServiceEntityRepository
         parent::__construct($registry, MissionApp::class);
     }
 
-    // EXPORTS
+    ### INDEX
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function getMissions(): array
+    {
+        $qb = $this->createQueryBuilder('m')
+            ->select([
+                'm.id',
+                'm.week',
+                'm.region',
+                'm.track',
+                'm.class',
+                'm.brand',
+                'm.description',
+                'm.success',
+                'm.target'
+            ])
+            // SELECT
+            ->addselect('MissionTask.value AS task')
+            ->addselect('MissionType.value AS type')
+            // JOIN
+            ->innerJoin('m.task', 'MissionTask')
+            ->innerJoin('m.type', 'MissionType')
+            // ORDER BY
+            ->addOrderBy('m.week', 'ASC')
+        ;
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -52,7 +84,7 @@ class MissionAppRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param MissionApp $entity

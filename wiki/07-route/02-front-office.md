@@ -2,27 +2,29 @@ php bin/console debug:router
 --------------------------------- ---------- ------------ ------ -----------------------------------------------------
 Name                              Method     Scheme       Host   Path
 --------------------------------- ---------- ------------ ------ -----------------------------------------------------
-app.dashboard.index               ANY        http|https   ANY    /{_locale}/index.php
-app.dashboard.noLocale            ANY        http|https   ANY    /
-app.garage.create                 GET|POST   http|https   ANY    /{_locale}/garage/create.php
-app.garage.delete                 POST       http|https   ANY    /{_locale}/garage/delete/{id}
-app.garage.index                  GET        http|https   ANY    /{_locale}/garage/index.php
-app.garage.read                   GET        http|https   ANY    /{_locale}/garage/read/{slug}-{id}.php
-app.garage.update                 GET|POST   http|https   ANY    /{_locale}/garage/update/{slug}-{id}.php
-app.mission.index                 GET        http|https   ANY    /{_locale}/mission/index.php
-app.page.filter.gold              GET        http|https   ANY    /{_locale}/pages/filter-by-gold-{letter}.php
-app.page.filter.locked            GET        http|https   ANY    /{_locale}/pages/filter-by-locked-{letter}.php
-app.page.filter.to.gold           GET        http|https   ANY    /{_locale}/pages/filter-by-to-gold-{letter}.php
-app.page.filter.to.unlock         GET        http|https   ANY    /{_locale}/pages/filter-by-to-unlock-{letter}.php
-app.page.filter.to.upgrade        GET        http|https   ANY    /{_locale}/pages/filter-by-to-upgrade-{letter}.php
-app.page.filter.unlock            GET        http|https   ANY    /{_locale}/pages/filter-by-unlock-{letter}.php
-app.page.order.class              GET        http|https   ANY    /{_locale}/pages/order-by-class-{letter}.php
-app.page.order.event              GET        http|https   ANY    /{_locale}/pages/order-by-event-{letter}.php
-app.page.order.stat               GET        http|https   ANY    /{_locale}/pages/order-by-stat-{letter}.php
-app.page.search.garage            GET|POST   http|https   ANY    /{_locale}/pages/search-garage.php
-app.page.search.race              GET|POST   http|https   ANY    /{_locale}/pages/search-race.php
-app.page.setting.blueprint        GET        http|https   ANY    /{_locale}/pages/setting/blueprint-{letter}.php
-app.page.setting.level            GET        http|https   ANY    /{_locale}/pages/setting/level-{letter}.php
-app.page.setting.rank             GET        http|https   ANY    /{_locale}/pages/setting/rank-{letter}.php
-app.race.index                    GET        http|https   ANY    /{_locale}/race/index.php
---------------------------------- ---------- ------------ ------ -----------------------------------------------------
+app.dashboard.index                       GET              http|https   /{_locale}/index.php
+app.dashboard.noLocale                    GET              http|https   /
+app.garage.create                         GET|POST         http|https   /{_locale}/garage/create.php
+app.garage.delete                         POST             http|https   /{_locale}/garage/delete.php/{id}
+app.garage.index                          GET              http|https   /{_locale}/garage/index.php
+app.garage.read                           GET              http|https   /{_locale}/garage/read/{slug}-{id}.php
+app.garage.update                         GET|POST         http|https   /{_locale}/garage/update/{slug}-{id}.php
+app.page.filter.block                     GET              http|https   /{_locale}/pages/filter/block/class-{letter}.php
+app.page.filter.gold                      GET              http|https   /{_locale}/pages/filter/gold/class-{letter}.php
+app.page.filter.unblock                   GET              http|https   /{_locale}/pages/filter/unblock/class-{letter}.php
+app.page.filter.evo                       GET              http|https   /{_locale}/pages/filter/evo/class-{letter}.php
+app.page.filter.event                     GET              http|https   /{_locale}/pages/filter/event-class-{letter}.php
+app.page.filter.to.upgrade                GET              http|https   /{_locale}/pages/filter/to-upgrade/class-{letter}.php
+app.page.filter.to.unblock                GET              http|https   /{_locale}/pages/filter/to-unblock/class-{letter}.php
+app.page.filter.to.install.upgrade        GET              http|https   /{_locale}/pages/filter/to-install-upgrade/class-{letter}.php
+app.page.filter.to.install.import         GET              http|https   /{_locale}/pages/filter/to-install-import/class-{letter}.php
+app.page.filter.to.gold                   GET              http|https   /{_locale}/pages/filter/to-gold/class-{letter}.php
+app.page.filter.full.blueprint            GET              http|https   /{_locale}/pages/filter/full-blueprint/class-{letter}.php
+app.page.filter.full.evo                  GET              http|https   /{_locale}/pages/filter/full-evo/class-{letter}.php
+app.mission.index                         GET              http|https   /{_locale}/mission/index.php
+app.page.order.class                      GET              http|https   /{_locale}/pages/order/class/class-{letter}.php
+app.page.order.stat                       GET              http|https   /{_locale}/pages/order/stat/class-{letter}.php
+app.race.index                            GET              http|https   /{_locale}/race/index.php
+app.page.search.garage                    GET|POST         http|https   /{_locale}/pages/search/garage.php
+app.page.search.race                      GET|POST         http|https   /{_locale}/pages/search/race.php
+----------------------------------------- ---------------- ------------ ---------------------------------------------------------------

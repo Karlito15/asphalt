@@ -1,71 +1,72 @@
 php bin/console debug:router
---------------------------------- ---------- ------------ ------ -----------------------------------------------------
-Name                              Method     Scheme       Host   Path
---------------------------------- ---------- ------------ ------ -----------------------------------------------------
-admin.dashboard.cache             ANY        http|https   ANY    /{_locale}/admin/cache.php
-admin.dashboard.index             ANY        http|https   ANY    /{_locale}/admin/index.php
-admin.inventory.create            GET|POST   http|https   ANY    /{_locale}/admin/inventory/create.php
-admin.inventory.delete            POST       http|https   ANY    /{_locale}/admin/inventory/delete/{id}
-admin.inventory.index             GET        http|https   ANY    /{_locale}/admin/inventory/index.php
-admin.inventory.update            GET|POST   http|https   ANY    /{_locale}/admin/inventory/update/{id}.php
-admin.mission.create              GET|POST   http|https   ANY    /{_locale}/admin/mission/create.php
-admin.mission.delete              POST       http|https   ANY    /{_locale}/admin/mission/delete/{id}.php
-admin.mission.index               GET        http|https   ANY    /{_locale}/admin/mission/index.php
-admin.mission.task.create         GET|POST   http|https   ANY    /{_locale}/admin/mission/task/create.php
-admin.mission.task.delete         POST       http|https   ANY    /{_locale}/admin/mission/task/delete/{id}
-admin.mission.task.index          GET        http|https   ANY    /{_locale}/admin/mission/task/index.php
-admin.mission.task.update         GET|POST   http|https   ANY    /{_locale}/admin/mission/task/update/{id}.php
-admin.mission.type.create         GET|POST   http|https   ANY    /{_locale}/admin/mission/type/create.php
-admin.mission.type.delete         POST       http|https   ANY    /{_locale}/admin/mission/type/delete/{id}.php
-admin.mission.type.index          GET        http|https   ANY    /{_locale}/admin/mission/type/index.php
-admin.mission.type.update         GET|POST   http|https   ANY    /{_locale}/admin/mission/type/update/{id}.php
-admin.mission.update              GET|POST   http|https   ANY    /{_locale}/admin/mission/update/{id}.php
-admin.race.create                 GET|POST   http|https   ANY    /{_locale}/admin/race/create.php
-admin.race.delete                 POST       http|https   ANY    /{_locale}/admin/race/delete/{id}
-admin.race.index                  GET        http|https   ANY    /{_locale}/admin/race/index.php
-admin.race.mode.create            GET|POST   http|https   ANY    /{_locale}/admin/race/mode/create.php
-admin.race.mode.delete            POST       http|https   ANY    /{_locale}/admin/race/mode/delete/{id}
-admin.race.mode.index             GET        http|https   ANY    /{_locale}/admin/race/mode/index.php
-admin.race.mode.update            GET|POST   http|https   ANY    /{_locale}/admin/race/mode/update/{id}.php
-admin.race.region.create          GET|POST   http|https   ANY    /{_locale}/admin/race/region/create.php
-admin.race.region.delete          POST       http|https   ANY    /{_locale}/admin/race/region/delete/{id}
-admin.race.region.index           GET        http|https   ANY    /{_locale}/admin/race/region/index.php
-admin.race.region.update          GET|POST   http|https   ANY    /{_locale}/admin/race/region/update/{id}.php
-admin.race.season.create          GET|POST   http|https   ANY    /{_locale}/admin/race/season/create.php
-admin.race.season.delete          POST       http|https   ANY    /{_locale}/admin/race/season/delete/{id}
-admin.race.season.index           GET        http|https   ANY    /{_locale}/admin/race/season/index.php
-admin.race.season.update          GET|POST   http|https   ANY    /{_locale}/admin/race/season/update/{id}.php
-admin.race.time.create            GET|POST   http|https   ANY    /{_locale}/admin/race/time/create.php
-admin.race.time.delete            POST       http|https   ANY    /{_locale}/admin/race/time/delete/{id}.php
-admin.race.time.index             GET        http|https   ANY    /{_locale}/admin/race/time/index.php
-admin.race.time.update            GET|POST   http|https   ANY    /{_locale}/admin/race/time/update/{id}.php
-admin.race.track.create           GET|POST   http|https   ANY    /{_locale}/admin/race/track/create.php
-admin.race.track.delete           POST       http|https   ANY    /{_locale}/admin/race/track/delete/{id}
-admin.race.track.index            GET        http|https   ANY    /{_locale}/admin/race/track/index.php
-admin.race.track.update           GET|POST   http|https   ANY    /{_locale}/admin/race/track/update/{id}.php
-admin.race.update                 GET|POST   http|https   ANY    /{_locale}/admin/race/update/{slug}-{id}.php
-admin.setting.blueprint.create    GET|POST   http|https   ANY    /{_locale}/admin/setting/blueprint/create.php
-admin.setting.blueprint.delete    POST       http|https   ANY    /{_locale}/admin/setting/blueprint/delete/{id}.php
-admin.setting.blueprint.index     GET        http|https   ANY    /{_locale}/admin/setting/blueprint/index.php
-admin.setting.blueprint.update    GET|POST   http|https   ANY    /{_locale}/admin/setting/blueprint/update/{id}.php
-admin.setting.brand.create        GET|POST   http|https   ANY    /{_locale}/admin/setting/brand/create.php
-admin.setting.brand.delete        POST       http|https   ANY    /{_locale}/admin/setting/brand/delete/{id}
-admin.setting.brand.index         GET        http|https   ANY    /{_locale}/admin/setting/brand/index.php
-admin.setting.brand.update        GET|POST   http|https   ANY    /{_locale}/admin/setting/brand/update/{id}.php
-admin.setting.class.create        GET|POST   http|https   ANY    /{_locale}/admin/setting/class/create.php
-admin.setting.class.delete        POST       http|https   ANY    /{_locale}/admin/setting/class/delete/{id}
-admin.setting.class.index         GET        http|https   ANY    /{_locale}/admin/setting/class/index.php
-admin.setting.class.update        GET|POST   http|https   ANY    /{_locale}/admin/setting/class/update/{id}.php
-admin.setting.level.create        GET|POST   http|https   ANY    /{_locale}/admin/setting/level/create.php
-admin.setting.level.delete        POST       http|https   ANY    /{_locale}/admin/setting/level/delete/{id}.php
-admin.setting.level.index         GET        http|https   ANY    /{_locale}/admin/setting/level/index.php
-admin.setting.level.update        GET|POST   http|https   ANY    /{_locale}/admin/setting/level/update/{id}.php
-admin.setting.tag.create          GET|POST   http|https   ANY    /{_locale}/admin/setting/tag/create.php
-admin.setting.tag.delete          POST       http|https   ANY    /{_locale}/admin/setting/tag/delete/{id}
-admin.setting.tag.index           GET        http|https   ANY    /{_locale}/admin/setting/tag/index.php
-admin.setting.tag.update          GET|POST   http|https   ANY    /{_locale}/admin/setting/tag/update/{id}.php
-admin.setting.unit-price.create   GET|POST   http|https   ANY    /{_locale}/admin/setting/unit-price/create.php
-admin.setting.unit-price.delete   POST       http|https   ANY    /{_locale}/admin/setting/unit-price/delete/{id}.php
-admin.setting.unit-price.index    GET        http|https   ANY    /{_locale}/admin/setting/unit-price/index.php
-admin.setting.unit-price.update   GET|POST   http|https   ANY    /{_locale}/admin/setting/unit-price/update/{id}.php
---------------------------------- ---------- ------------ ------ -----------------------------------------------------
+----------------------------------------- ---------------- ------------ ---------------------------------------------------------------
+Name                                      Method           Scheme       Path
+----------------------------------------- ---------------- ------------ ---------------------------------------------------------------
+admin.dashboard.index                     GET              http|https   /{_locale}/admin/index.php
+admin.dashboard.cache                     GET              http|https   /{_locale}/admin/cache.php
+admin.dashboard.noLocale                  GET              http|https   /{_locale}/admin/
+admin.inventory.app.index                 GET              http|https   /{_locale}/admin/inventory/app/index.php
+admin.inventory.app.create                GET|POST         http|https   /{_locale}/admin/inventory/app/create.php
+admin.inventory.app.update                GET|POST         http|https   /{_locale}/admin/inventory/app/update.php/{id}
+admin.inventory.app.delete                POST             http|https   /{_locale}/admin/inventory/app/delete/{id}
+admin.mission.app.index                   GET              http|https   /{_locale}/admin/mission/app/index.php
+admin.mission.app.create                  GET|POST         http|https   /{_locale}/admin/mission/app/create.php
+admin.mission.app.update                  GET|POST         http|https   /{_locale}/admin/mission/app/update.php/{id}
+admin.mission.app.delete                  POST             http|https   /{_locale}/admin/mission/app/delete/{id}
+admin.mission.task.index                  GET              http|https   /{_locale}/admin/mission/task/index.php
+admin.mission.task.create                 GET|POST         http|https   /{_locale}/admin/mission/task/create.php
+admin.mission.task.update                 GET|POST         http|https   /{_locale}/admin/mission/task/update.php/{id}
+admin.mission.task.delete                 POST             http|https   /{_locale}/admin/mission/task/delete/{id}
+admin.mission.type.index                  GET              http|https   /{_locale}/admin/mission/type/index.php
+admin.mission.type.create                 GET|POST         http|https   /{_locale}/admin/mission/type/create.php
+admin.mission.type.update                 GET|POST         http|https   /{_locale}/admin/mission/type/update.php/{id}
+admin.mission.type.delete                 POST             http|https   /{_locale}/admin/mission/type/delete/{id}
+admin.race.app.index                      GET              http|https   /{_locale}/admin/race/app/index.php
+admin.race.app.create                     GET|POST         http|https   /{_locale}/admin/race/app/create.php
+admin.race.app.update                     GET|POST         http|https   /{_locale}/admin/race/app/update.php/{id}
+admin.race.app.delete                     POST             http|https   /{_locale}/admin/race/app/delete/{id}
+admin.race.mode.index                     GET              http|https   /{_locale}/admin/race/mode/index.php
+admin.race.mode.create                    GET|POST         http|https   /{_locale}/admin/race/mode/create.php
+admin.race.mode.update                    GET|POST         http|https   /{_locale}/admin/race/mode/update.php/{id}
+admin.race.mode.delete                    POST             http|https   /{_locale}/admin/race/mode/delete/{id}
+admin.race.region.index                   GET              http|https   /{_locale}/admin/race/region/index.php
+admin.race.region.create                  GET|POST         http|https   /{_locale}/admin/race/region/create.php
+admin.race.region.update                  GET|POST         http|https   /{_locale}/admin/race/region/update.php/{id}
+admin.race.region.delete                  POST             http|https   /{_locale}/admin/race/region/delete/{id}
+admin.race.season.index                   GET              http|https   /{_locale}/admin/race/season/index.php
+admin.race.season.create                  GET|POST         http|https   /{_locale}/admin/race/season/create.php
+admin.race.season.update                  GET|POST         http|https   /{_locale}/admin/race/season/update.php/{id}
+admin.race.season.delete                  POST             http|https   /{_locale}/admin/race/season/delete/{id}
+admin.race.time.index                     GET              http|https   /{_locale}/admin/race/time/index.php
+admin.race.time.create                    GET|POST         http|https   /{_locale}/admin/race/time/create.php
+admin.race.time.update                    GET|POST         http|https   /{_locale}/admin/race/time/update.php/{id}
+admin.race.time.delete                    POST             http|https   /{_locale}/admin/race/time/delete/{id}
+admin.race.track.index                    GET              http|https   /{_locale}/admin/race/track/index.php
+admin.race.track.create                   GET|POST         http|https   /{_locale}/admin/race/track/create.php
+admin.race.track.update                   GET|POST         http|https   /{_locale}/admin/race/track/update.php/{id}
+admin.race.track.delete                   POST             http|https   /{_locale}/admin/race/track/delete/{id}
+admin.setting.blueprint.index             GET              http|https   /{_locale}/admin/setting/blueprint/index.php
+admin.setting.blueprint.create            GET|POST         http|https   /{_locale}/admin/setting/blueprint/create.php
+admin.setting.blueprint.update            GET|POST         http|https   /{_locale}/admin/setting/blueprint/update.php/{id}
+admin.setting.blueprint.delete            POST             http|https   /{_locale}/admin/setting/blueprint/delete/{id}
+admin.setting.brand.index                 GET              http|https   /{_locale}/admin/setting/brand/index.php
+admin.setting.brand.create                GET|POST         http|https   /{_locale}/admin/setting/brand/create.php
+admin.setting.brand.update                GET|POST         http|https   /{_locale}/admin/setting/brand/update.php/{id}
+admin.setting.brand.delete                POST             http|https   /{_locale}/admin/setting/brand/delete/{id}
+admin.setting.class.index                 GET              http|https   /{_locale}/admin/setting/class/index.php
+admin.setting.class.create                GET|POST         http|https   /{_locale}/admin/setting/class/create.php
+admin.setting.class.update                GET|POST         http|https   /{_locale}/admin/setting/class/update.php/{id}
+admin.setting.class.delete                POST             http|https   /{_locale}/admin/setting/class/delete/{id}
+admin.setting.level.index                 GET              http|https   /{_locale}/admin/setting/level/index.php
+admin.setting.level.create                GET|POST         http|https   /{_locale}/admin/setting/level/create.php
+admin.setting.level.update                GET|POST         http|https   /{_locale}/admin/setting/level/update.php/{id}
+admin.setting.level.delete                POST             http|https   /{_locale}/admin/setting/level/delete/{id}
+admin.setting.tag.index                   GET              http|https   /{_locale}/admin/setting/tag/index.php
+admin.setting.tag.create                  GET|POST         http|https   /{_locale}/admin/setting/tag/create.php
+admin.setting.tag.update                  GET|POST         http|https   /{_locale}/admin/setting/tag/update.php/{id}
+admin.setting.tag.delete                  POST             http|https   /{_locale}/admin/setting/tag/delete/{id}
+admin.setting.unit-price.index            GET              http|https   /{_locale}/admin/setting/unit-price/index.php
+admin.setting.unit-price.create           GET|POST         http|https   /{_locale}/admin/setting/unit-price/create.php
+admin.setting.unit-price.update           GET|POST         http|https   /{_locale}/admin/setting/unit-price/update.php/{id}
+admin.setting.unit-price.delete           POST             http|https   /{_locale}/admin/setting/unit-price/delete/{id}
+----------------------------------------- ---------------- ------------ ---------------------------------------------------------------

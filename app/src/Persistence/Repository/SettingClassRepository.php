@@ -21,7 +21,7 @@ class SettingClassRepository extends ServiceEntityRepository
         parent::__construct($registry, SettingClass::class);
     }
 
-    // EXPORTS
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -46,7 +46,7 @@ class SettingClassRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param SettingClass $entity
@@ -76,7 +76,7 @@ class SettingClassRepository extends ServiceEntityRepository
         }
     }
 
-    // LIST
+    ### LISTS
 
     /**
      * @param string $query

@@ -36,7 +36,7 @@ final class DeleteController extends AbstractController
      * @param TranslatorInterface $translator
      * @return Response
      */
-    #[Route(path: 'delete.php/{id}', name: 'delete', requirements: ['id' => Requirement::DIGITS])]
+    #[Route(path: '/delete.php/{id}', name: 'delete', requirements: ['id' => Requirement::DIGITS])]
     public function delete(
         Request $request,
         GarageApp $garage,

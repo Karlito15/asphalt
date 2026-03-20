@@ -1,0 +1,28 @@
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 116, gameUpdate: 16, model: Divo, slug: bugatti-divo, settingBrand: { name: Bugatti }, settingClass: { value: S } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 140, gameUpdate: 20, model: 'Venom F5', slug: hennessey-venom-f5, settingBrand: { name: Hennessey }, settingClass: { value: S } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 224, gameUpdate: 33, model: Vayanne, slug: deus-vayanne, settingBrand: { name: Deus }, settingClass: { value: S } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 315, gameUpdate: 46, model: 'Aeon E', slug: tushek-aeon-e, settingBrand: { name: Tushek }, settingClass: { value: S } }

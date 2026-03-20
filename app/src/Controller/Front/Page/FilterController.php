@@ -45,10 +45,6 @@ final class FilterController extends AbstractController
 
     private static string $toUpgrade                 = 'filter-to-upgrade-%s.yaml';
 
-    private static string $orderClass                = 'order-by-class-%s.yaml';
-
-    private static string $orderStat                 = 'order-by-stat-%s.yaml';
-
     private static string $toUnblock                 = 'to-unblock-%s.yaml';
 
     private static string $toInstallUpgrade          = 'to-install-upgrade-%s.yaml';
@@ -60,7 +56,6 @@ final class FilterController extends AbstractController
     private static string $fullBlueprint             = 'full-blueprint-%s.yaml';
 
     private static string $fullEvo                   = 'full-evo-%s.yaml';
-
 
     #[Route(path: '/block/class-{letter}.php', name: 'block')]
     public function block(Request $request): Response

@@ -15,4 +15,15 @@ import './stimulus_bootstrap.js';
 console.info('CSS');
 import '../styles/app.css';
 
+/*
+ * Load HTMX
+ */
+import htmx from 'htmx.org';
+window.htmx = htmx;
+
+
+/*
+ * Bingo !
+ */
+console.log('🎉🎉🎉');
 console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');

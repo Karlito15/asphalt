@@ -13,57 +13,61 @@
         <div class="col mb-3">
             <h5>{{ 'text.page'|trans }}</h5>
             <ul class="nav flex-column">
-{#                {{ component('NavBackFooter', { links: [#}
-{#                    {'path': 'admin.inventory.index', 'text': 'text.inventory'|trans},#}
-{#                ]}) }}#}
-{#                    {'path': 'sitemap.back', 'text': 'text.sitemap'|trans},#}
+                {{ _self.Nav('admin.dashboard.index', 'text.dashboard'|trans) }}
+                {{ _self.Nav('admin.dashboard.cache', 'text.cache'|trans) }}
+                {{ _self.Nav('admin_garage_app_index', 'text.easy-admin'|trans) }}
+                {{ _self.Nav('dh_auditor_list_audits', 'text.audit'|trans) }}
+{#                {{ _self.Nav('sitemap.back ', 'text.sitemap'|trans) }}#}
+{#                {{ _self.Nav('sitemap.front ', 'text.sitemap'|trans) }}#}
             </ul>
         </div>
         <div class="col mb-3">
             <h5>{{ 'text.inventory'|trans }}</h5>
             <ul class="nav flex-column">
-{#                {{ component('NavBackFooter', { links: [#}
-{#                    {'path': 'admin.inventory.index', 'text': 'text.inventory'|trans},#}
-{#                ]}) }}#}
-{#                    {'path': 'sitemap.back', 'text': 'text.sitemap'|trans},#}
+                {{ _self.Nav('admin.inventory.app.index', 'text.inventory'|trans) }}
             </ul>
         </div>
         <div class="col mb-3">
             <h5>{{ 'text.mission'|trans }}</h5>
             <ul class="nav flex-column">
-{#                {{ component('NavBackFooter', { links: [#}
-{#                    {'path': 'admin.mission.index', 'text': 'text.mission'|trans},#}
-{#                    {'path': 'admin.mission.task.index', 'text': 'text.task'|trans},#}
-{#                    {'path': 'admin.mission.type.index', 'text': 'text.type'|trans},#}
-{#                ]}) }}#}
+                {{ _self.Nav('admin.mission.app.index', 'text.mission'|trans) }}
+                {{ _self.Nav('admin.mission.task.index', 'text.task'|trans) }}
+                {{ _self.Nav('admin.mission.type.index', 'text.type'|trans) }}
             </ul>
         </div>
         <div class="col mb-3">
             <h5>{{ 'text.race'|trans }}</h5>
             <ul class="nav flex-column">
-{#                {{ component('NavBackFooter', { links: [#}
-{#                    {'path': 'admin.race.index', 'text': 'text.race'|trans},#}
-{#                    {'path': 'admin.race.mode.index', 'text': 'text.mode'|trans},#}
-{#                    {'path': 'admin.race.region.index', 'text': 'text.region'|trans},#}
-{#                    {'path': 'admin.race.season.index', 'text': 'text.season'|trans},#}
-{#                    {'path': 'admin.race.time.index', 'text': 'text.time'|trans},#}
-{#                    {'path': 'admin.race.track.index', 'text': 'text.track'|trans},#}
-{#                ]}) }}#}
+                {{ _self.Nav('admin.race.app.index', 'text.race'|trans) }}
+                {{ _self.Nav('admin.race.mode.index', 'text.mode'|trans) }}
+                {{ _self.Nav('admin.race.region.index', 'text.region'|trans) }}
+                {{ _self.Nav('admin.race.season.index', 'text.season'|trans) }}
+                {{ _self.Nav('admin.race.time.index', 'text.time'|trans) }}
+                {{ _self.Nav('admin.race.track.index', 'text.track'|trans) }}
             </ul>
         </div>
         <div class="col mb-3">
             <h5>{{ 'text.setting'|trans }}</h5>
             <ul class="nav flex-column">
-{#                {{ component('NavBackFooter', { links: [#}
-{#                    {'path': 'admin.setting.blueprint.index', 'text': 'text.blueprint'|trans},#}
-{#                    {'path': 'admin.setting.brand.index', 'text': 'text.brand'|trans},#}
-{#                    {'path': 'admin.setting.class.index', 'text': 'text.class'|trans},#}
-{#                    {'path': 'admin.setting.level.index', 'text': 'text.level'|trans},#}
-{#                    {'path': 'admin.setting.tag.index', 'text': 'text.tag'|trans},#}
-{#                    {'path': 'admin.setting.unit-price.index', 'text': 'text.unit-price'|trans},#}
-{#                ]}) }}#}
+                {{ _self.Nav('admin.setting.blueprint.index', 'text.blueprint'|trans) }}
+                {{ _self.Nav('admin.setting.brand.index', 'text.brand'|trans) }}
+                {{ _self.Nav('admin.setting.class.index', 'text.class'|trans) }}
+                {{ _self.Nav('admin.setting.level.index', 'text.level'|trans) }}
+                {{ _self.Nav('admin.setting.tag.index', 'text.tag'|trans) }}
+                {{ _self.Nav('admin.setting.unit-price.index', 'text.unit-price'|trans) }}
             </ul>
         </div>
     </footer>
     <p class="text-center text-body-secondary small">© 2020 - {{ "now"|date("Y") }}</p>
 </div>
+
+{% macro Nav(link, text) %}
+    {% if app.current_route == link %}
+        {% set color = 'primary' %}
+    {% else %}
+        {% set color = 'secondary' %}
+    {% endif %}
+    <li class="nav-item mb-2">
+        <a href="{{ path(link) }}" class="nav-link p-0 text-body-{{ color }}">{{ text }}</a>
+    </li>
+{% endmacro %}

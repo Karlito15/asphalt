@@ -45,7 +45,7 @@ class GarageBlueprintRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param GarageBlueprint $entity

@@ -13,18 +13,18 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class RaceDTO
 {
-    public ?RaceMode $mode = null;
+    public ?RaceMode $mode     = null;
 
     public ?RaceRegion $region = null;
 
     public ?RaceSeason $season = null;
 
-    public ?RaceTime $time = null;
+    public ?RaceTime $time     = null;
 
     #[ORM\Column(type: 'integer', nullable: true)]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 30)]
-    public ?int $raceOrder = null;
+    public ?int $raceOrder     = null;
 
-    public ?bool $finished = null;
+    public ?bool $finished     = null;
 }

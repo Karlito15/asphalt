@@ -18,7 +18,7 @@ class GarageStatusRepository extends ServiceEntityRepository
         parent::__construct($registry, GarageStatus::class);
     }
 
-    // EXPORTS
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -46,7 +46,7 @@ class GarageStatusRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param GarageStatus $entity
@@ -76,7 +76,7 @@ class GarageStatusRepository extends ServiceEntityRepository
         }
     }
 
-    // LIST
+    ### LISTS
 
 //    /**
 //     * @param string $status

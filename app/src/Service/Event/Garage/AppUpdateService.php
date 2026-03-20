@@ -24,6 +24,17 @@ class AppUpdateService
 
         ### Conditions
         switch ($stars) :
+            case 3:
+                if ($status->isFullStar3()):
+                    $garage->setLevel(10);
+                endif;
+                if ($status->isFullStar2() && $status->isFullStar3() === false):
+                    $garage->setLevel(8);
+                endif;
+                if ($status->isFullStar1() && $status->isFullStar2() === false):
+                    $garage->setLevel(5);
+                endif;
+                break;
             case 4:
                 if ($status->isFullStar4()):
                     $garage->setLevel(11);
@@ -548,8 +559,6 @@ class AppUpdateService
             $statActual->setAverage($statMax->getSpeed(), $statMax->getAcceleration(), $statMax->getHandling(), $statMax->getNitro());
         endif;
     }
-
-    /** NO USAGES */
 
     /** PRIVATE METHODS */
 }

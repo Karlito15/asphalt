@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Front\Page;
 
+use App\Toolbox\File\YAML;
 use App\Toolbox\Trait\Controller\WebController;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -26,6 +27,16 @@ final class OrderController extends AbstractController
 {
     use WebController;
 
+    /** @description name of folder's Extraction  */
+    private static string $folder     = 'list';
+
+    /** @description name of file's Extraction  */
+    private static string $file       = '';
+
+    private static string $orderClass = 'order-by-class-%s.yaml';
+
+    private static string $orderStat  = 'order-by-stat-%s.yaml';
+
     #[Route(path: '/class/class-{letter}.php', name: 'class')]
     public function class(Request $request): Response
     {
@@ -39,12 +50,16 @@ final class OrderController extends AbstractController
         $this->return404($match);
 
         ### Datas
-        return $this->render('@App/contents/front/page/coming-soon.html.twig', [
-            'controller_name' => 'Garage',
+        self::$file = sprintf(self::$orderClass, $letter);
+        $datas = $this->ExtractionFolder();
+
+        return $this->render('@App/contents/front/page/order-class.html.twig', [
+            'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
             'container'       => 'container',
             'breadcrumb'      => self::Breadcrump($home, $title),
             'links'           => [],
+            'entities'        => YAML::FileToArray($datas),
         ]);
     }
 
@@ -61,12 +76,16 @@ final class OrderController extends AbstractController
         $this->return404($match);
 
         ### Datas
-        return $this->render('@App/contents/front/page/coming-soon.html.twig', [
-            'controller_name' => 'Garage',
+        self::$file = sprintf(self::$orderStat, $letter);
+        $datas = $this->ExtractionFolder();
+
+        return $this->render('@App/contents/front/page/order-stat.html.twig', [
+            'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
             'container'       => 'container',
             'breadcrumb'      => self::Breadcrump($home, $title),
             'links'           => [],
+            'entities'        => YAML::FileToArray($datas),
         ]);
     }
 }

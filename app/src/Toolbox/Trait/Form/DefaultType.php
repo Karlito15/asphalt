@@ -43,5 +43,7 @@ trait DefaultType
         // text-center fw-bolder form-control-plaintext form-control-sm
         // GarageStatMinType
         // text-center fw-bolder form-control-plaintext form-control-sm
+        // DashboardInventoryType
+        // 'text-end fw-bolder form-control form-control-lg'
     }
 }

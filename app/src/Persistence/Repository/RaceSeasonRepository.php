@@ -21,7 +21,7 @@ class RaceSeasonRepository extends ServiceEntityRepository
         parent::__construct($registry, RaceSeason::class);
     }
 
-    // EXPORTS
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -44,7 +44,7 @@ class RaceSeasonRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param RaceSeason $entity

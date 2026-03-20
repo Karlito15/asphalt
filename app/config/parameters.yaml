@@ -16,13 +16,16 @@ parameters:
         pack_price:         900
     images:
         avatar: 'images/sako-01.jpg'
+    ### FOLDERS
     folders.cache:          '%kernel.project_dir%/public/cache/'
     folders.csv:            '%kernel.project_dir%/../documents/csv/'
     folders.csv.cron:       '%kernel.project_dir%/../documents/csv/cron/'
     folders.csv.database:   '%kernel.project_dir%/../documents/csv/database/'
     folders.yaml:           '%kernel.project_dir%/../documents/yaml/'
-    folders.yaml.list:      '%kernel.project_dir%/../documents/yaml/list/'
+    folders.yaml.index:     '%kernel.project_dir%/../documents/yaml/index/'
+    folders.yaml.page:      '%kernel.project_dir%/../documents/yaml/page/'
     folders.yaml.sheet:     '%kernel.project_dir%/../documents/yaml/sheet/'
+    ### Headers CSV
     csv.header.garage.app:                ['Brand', 'Model', 'Stars', 'GameUpdate', 'CarOrder', 'StatOrder', 'Level', 'Epic', 'Evo', 'SettingClassValue']
     csv.header.garage.blueprint:          ['Brand', 'Model', 'Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6']
     csv.header.garage.gauntlet:           ['Brand', 'Model', 'Speed', 'Acceleration', 'Handling', 'Nitro', 'Mark', 'Division']
@@ -53,22 +56,16 @@ parameters:
 when@dev:
     parameters:
         cache_lifetime:
-            dashboards:     60   # 1 min
-            garages:        60   # 1 min
-            missions:       60   # 1 min
-            races:          60   # 1 min
-            sitemaps:       300  # 5 mins
-            statistics:     300  # 5 mins
+#            dashboards:     60   # 1 min
+            sitemaps:       3    # 5 mins
+#            statistics:     300  # 5 mins
         images:
             logo:           'images/logo-green.png'
 when@prod:
     parameters:
         cache_lifetime:
-            dashboards:     3600    # (60 * 60 = 1 hour)
-            garages:        3600    # (60 * 60 = 1 hour)
-            missions:       3600    # (60 * 60 = 1 hour)
-            races:          2678400 # (60 * 60 * 24 * 31 = 1 month)
+#            dashboards:     3600    # (60 * 60 = 1 hour)
             sitemaps:       2678400 # (60 * 60 * 24 * 31 = 1 month)
-            statistics:     2678400 # (60 * 60 * 24 * 31 = 1 month)
+#            statistics:     2678400 # (60 * 60 * 24 * 31 = 1 month)
         images:
             logo:           'images/logo-white.png'

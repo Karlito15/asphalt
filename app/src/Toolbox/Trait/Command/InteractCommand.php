@@ -17,7 +17,6 @@ trait InteractCommand
      */
     protected function interact(InputInterface $input, OutputInterface $output): void
     {
-        $this->io->title(static::$title);
-        $this->io->section(static::$help);
+        $this->io->title(static::$title . ' ' . static::$help);
     }
 }

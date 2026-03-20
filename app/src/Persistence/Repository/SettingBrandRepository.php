@@ -33,7 +33,7 @@ class SettingBrandRepository extends ServiceEntityRepository
         return $this->findBy(['name' => $query]);
     }
 
-    // EXPORTS
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -55,7 +55,7 @@ class SettingBrandRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param SettingBrand $entity

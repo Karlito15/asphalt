@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 #[Route(
-    path: '{_locale<%app.supported_locales%>}/api/race',
+    path: 'api/race',
     name: 'api.race.',
     options: ['expose' => false],
     methods: ['GET'],
@@ -32,7 +32,7 @@ final class AppController extends AbstractController
             Response::HTTP_OK,
             self::getHeaders(),
             self::getContext([
-                'groups' => ['api'],
+                'groups' => ['index'],
             ])
         );
     }

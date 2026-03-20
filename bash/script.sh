@@ -2,33 +2,37 @@
 clear
 
 # Composer
-php82 /volume3/web/WWW-CDN/composer.phar update --no-scripts
+php84 /volume3/web/WWW-CDN/composer.phar update --no-scripts
 
 # Symfony
-php82 /volume3/web/Symfony/Asphalt/app/bin/console about
+php84 /volume3/web/Symfony/Asphalt/app/bin/console about
 
-# Project
-php82 /volume3/web/Symfony/Asphalt/app/bin/console cache:clear --env prod
-php82 /volume3/web/Symfony/Asphalt/app/bin/console assets:install public
-php82 /volume3/web/Symfony/Asphalt/app/bin/console importmap:install
-php82 /volume3/web/Symfony/Asphalt/app/bin/console importmap:update
-php82 /volume3/web/Symfony/Asphalt/app/bin/console asset-map:compile
+# Clear Cache (Symfony & Doctrine)
+php84 /volume3/web/Symfony/Asphalt/app/bin/console cache:clear --env prod
+php84 /volume3/web/Symfony/Asphalt/app/bin/console doctrine:cache:clear-metadata
+php84 /volume3/web/Symfony/Asphalt/app/bin/console doctrine:cache:clear-query
+php84 /volume3/web/Symfony/Asphalt/app/bin/console doctrine:cache:clear-result
+
+# Assets
+php84 /volume3/web/Symfony/Asphalt/app/bin/console assets:install public
+php84 /volume3/web/Symfony/Asphalt/app/bin/console importmap:install
+php84 /volume3/web/Symfony/Asphalt/app/bin/console importmap:update
+php84 /volume3/web/Symfony/Asphalt/app/bin/console asset-map:compile
 
 # Commands
-php82 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:setting-class S
-php82 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:setting-class A
-php82 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:setting-class B
-php82 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:setting-class C
-php82 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:setting-class D
+#### Compte le nombre de voitures par Marque
+php84 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:count:brand
+#### Compte le nombre de voitures par Class
+php84 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:count:class
+#### Mets à jour la Voiture
+php84 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:checkup:garage
+#### Créer le listing du Garage
+php84 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:yaml:list:garage
+#### Créer le listing des Missions
+php84 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:yaml:list:mission
+#### Créer le listing des Courses
+php84 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:yaml:list:race
 
-php82 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:setting-brand
-
-# Export
-php82 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:order-car export
-php82 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:csv:migration export
-
-
-# php bin/console doctrine:cache:clear-metadata
-# php bin/console doctrine:cache:clear-query
-# php bin/console doctrine:cache:clear-result
-#
+# Export Database
+#### Exporte toutes les données
+php84 /volume3/web/Symfony/Asphalt/app/bin/console asphalt:csv:migration export

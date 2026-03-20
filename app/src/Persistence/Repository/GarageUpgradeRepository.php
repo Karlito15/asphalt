@@ -18,7 +18,7 @@ class GarageUpgradeRepository extends ServiceEntityRepository
         parent::__construct($registry, GarageUpgrade::class);
     }
 
-    // EXPORTS
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -48,7 +48,7 @@ class GarageUpgradeRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param GarageUpgrade $entity

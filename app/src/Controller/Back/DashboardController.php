@@ -67,10 +67,11 @@ final class DashboardController extends AbstractController
         }
 
         // Flash Message
-        $this->addFlash('success', [
-            'title'   => $this->translator->trans('text.cache'),
-            'message' => $this->translator->trans('notification.cache')
-        ]);
+//        $this->addFlash('success', [
+//            'title'   => $this->translator->trans('text.cache'),
+//            'message' => $this->translator->trans('notification.cache')
+//        ]);
+        $this->addFlash('success', $this->translator->trans('notification.cache'));
 
         return $this->redirectToIndex();
     }

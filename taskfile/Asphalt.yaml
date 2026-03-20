@@ -31,19 +31,17 @@ tasks:
             - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration import"           # Import Datas
         ignore_error: true
         platforms: [windows/amd64]
-#    cron:
-#        desc: ""
-#        cmds:
-#            - "{{.SYMFONY_CONSOLE}} asphalt:cron:order-car update"      # Import Datas
-#            - "{{.SYMFONY_CONSOLE}} asphalt:cron:setting-brand"         # Import Datas
-#            - "{{.SYMFONY_CONSOLE}} asphalt:cron:setting-class S"       # Import Datas
-#            - "{{.SYMFONY_CONSOLE}} asphalt:cron:setting-class A"       # Import Datas
-#            - "{{.SYMFONY_CONSOLE}} asphalt:cron:setting-class B"       # Import Datas
-#            - "{{.SYMFONY_CONSOLE}} asphalt:cron:setting-class C"       # Import Datas
-#            - "{{.SYMFONY_CONSOLE}} asphalt:cron:setting-class D"       # Import Datas
-#            - "{{.SYMFONY_CONSOLE}} asphalt:sheet:garage"               # Import Datas
-#        ignore_error: true
-#        platforms: [windows/amd64]
+    cron:
+        desc: "CRON"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:count:brand"           # Compte le nombre de voitures par Marque
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:count:class"           # Compte le nombre de voitures par Class
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:checkup:garage"        # Mets à jour la VoitureDESC TO DO
+            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:list:garage"           # Créer le listing du Garage
+            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:list:mission"          # Créer le listing des Missions
+            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:list:race"             # Créer le listing des Courses
+        ignore_error: true
+        platforms: [windows/amd64]
     export:
         desc: "Export Datas from Database"
         cmds:
@@ -76,7 +74,7 @@ tasks:
             - "{{.SYMFONY_CONSOLE}} importmap:update"                    # Update Librairies
             - "{{.SYMFONY_CONSOLE}} assets:install"                      # Install Assets
             - "{{.SYMFONY_CONSOLE}} asset-map:compile"                   # Compile Assets
-#            - "{{.SYMFONY_CONSOLE}} sass:build"                         # XXXXXXX
+            # - "{{.SYMFONY_CONSOLE}} sass:build"                         # XXXXXXX
         ignore_error: true
         platforms: [windows/amd64]
     dev:
@@ -84,6 +82,6 @@ tasks:
         cmds:
             - Task database
             - Task launch
-            - "rm -rf public/cache/"
+            # - "rm -rf public/cache/"
         ignore_error: true
         platforms: [windows/amd64]

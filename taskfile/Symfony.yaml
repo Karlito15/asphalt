@@ -127,3 +127,13 @@ tasks:
         desc: "Server Certificate Authority for serving HTTPS"
         cmds: 
             - "{{.SYMFONY}} local:server:ca:install"
+
+    ### XXX
+
+    cache:
+        desc: "Clear Doctrine Cache & Symfony"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-metadata"          # 
+            - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-query"             # 
+            - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-result"            # 
+            - "{{.SYMFONY_CONSOLE}} cache:clear"                            # 

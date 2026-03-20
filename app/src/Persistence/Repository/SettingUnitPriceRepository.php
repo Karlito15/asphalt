@@ -21,7 +21,7 @@ class SettingUnitPriceRepository extends ServiceEntityRepository
         parent::__construct($registry, SettingUnitPrice::class);
     }
 
-    // EXPORTS
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -57,7 +57,7 @@ class SettingUnitPriceRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param SettingUnitPrice $entity

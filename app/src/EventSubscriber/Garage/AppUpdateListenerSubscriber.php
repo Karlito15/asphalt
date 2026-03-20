@@ -29,7 +29,7 @@ class AppUpdateListenerSubscriber implements EventSubscriberInterface
                 ['onUpdateStatusControlToInstallUpgrades',  2041],
                 ['onUpdateStatusControlToUnblock',          2030],
                 ['onUpdateStatusControlUpgrade',            2020],
-                ['onUpdateCopyStatMaxToStatActual',         2010],
+//                ['onUpdateCopyStatMaxToStatActual',         2010],
             ],
         ];
     }

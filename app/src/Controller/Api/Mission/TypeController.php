@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 #[Route(
-    path: '{_locale<%app.supported_locales%>}/api/mission/type',
+    path: 'api/mission/type',
     name: 'api.mission.type.',
     options: ['expose' => false],
     methods: ['GET'],
@@ -32,7 +32,7 @@ final class TypeController extends AbstractController
             Response::HTTP_OK,
             self::getHeaders(),
             self::getContext([
-                'groups' => ['api'],
+                'groups' => ['index'],
             ])
         );
     }

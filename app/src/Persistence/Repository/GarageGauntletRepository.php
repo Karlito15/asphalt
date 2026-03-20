@@ -18,7 +18,7 @@ class GarageGauntletRepository extends ServiceEntityRepository
         parent::__construct($registry, GarageGauntlet::class);
     }
 
-    // EXPORTS
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -47,7 +47,7 @@ class GarageGauntletRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param GarageGauntlet $entity

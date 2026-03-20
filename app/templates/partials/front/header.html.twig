@@ -11,7 +11,7 @@
                     {{ _self.Nav('app.dashboard.index', 'fa-house', 'text.dashboard'|trans) }}
                     {{ _self.Nav('app.garage.index', 'fa-automobile', 'text.garage'|trans) }}
 					<li class="nav-item dropdown">
-                        <a class="nav-link text-center dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link text-center text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-regular fa-file d-block mx-auto mb-1" aria-hidden="true"></i>
                             {{ 'text.page'|trans|plural }}
 						</a>
@@ -34,15 +34,21 @@
                             <li class="bg-primary-subtle text-uppercase fw-bold px-3 pb-1">{{ 'text.order'|trans }}</li>
 							<li><a class="dropdown-item" href="{{ path('app.page.order.class', {'letter': 'S'}) }}">{{ 'text.order.class'|trans }}</a></li>
 							<li><a class="dropdown-item" href="{{ path('app.page.order.stat', {'letter': 'S'}) }}">{{ 'text.order.stat'|trans }}</a></li>
-							<li><hr class="dropdown-divider"></li>
-                            <li class="bg-primary-subtle text-uppercase fw-bold px-3 pb-1">{{ 'text.search'|trans }}</li>
-							<li><a class="dropdown-item" href="{{ path('app.page.search.garage') }}">{{ 'text.garage'|trans }}</a></li>
-							<li><a class="dropdown-item" href="{{ path('app.page.search.race') }}">{{ 'text.race'|trans }}</a></li>
-							<li><hr class="dropdown-divider"></li>
+{#							<li><hr class="dropdown-divider"></li>#}
 {#                            <li class="bg-primary-subtle px-3">{{ 'text.setting'|trans }}</li>#}
 {#							<li><a class="dropdown-item" href="{{ path('app.page.setting.blueprint', {'letter': 'S'}) }}">{{ 'text.blueprint'|trans }}</a></li>#}
 {#							<li><a class="dropdown-item" href="{{ path('app.page.setting.level', {'letter': 'S'}) }}">{{ 'text.level'|trans }}</a></li>#}
 {#							<li><a class="dropdown-item" href="{{ path('app.page.setting.rank', {'letter': 'S'}) }}">{{ 'text.rank'|trans }}</a></li>#}
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+                        <a class="nav-link text-center text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-magnifying-glass d-block mx-auto mb-1" aria-hidden="true"></i>
+                            {{ 'text.search'|trans }}
+						</a>
+						<ul class="dropdown-menu" style="z-index: 10000;">
+							<li><a class="dropdown-item" href="{{ path('app.search.garage') }}">{{ 'text.garage'|trans }}</a></li>
+							<li><a class="dropdown-item" href="{{ path('app.search.race') }}">{{ 'text.race'|trans }}</a></li>
 						</ul>
 					</li>
                     {{ _self.Nav('app.mission.index', 'fa-bullseye', 'text.mission'|trans) }}
@@ -68,6 +74,7 @@
 <div class="clearfix mt-1"></div>
 
 {% macro Nav(link, icon, text) %}
+
 {% if app.current_route == link %}
     {% set color = 'warning' %}
 {% else %}

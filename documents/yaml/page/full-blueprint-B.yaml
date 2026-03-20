@@ -1,0 +1,108 @@
+-
+    garage: { id: 3, gameUpdate: 0, model: DB11, slug: aston-martin-db11, settingBrand: { name: 'Aston Martin' }, settingClass: { value: B } }
+-
+    garage: { id: 8, gameUpdate: 0, model: 'Cien Concept', slug: cadillac-cien-concept, settingBrand: { name: Cadillac }, settingClass: { value: B } }
+-
+    garage: { id: 11, gameUpdate: 0, model: 'Corvette Grand Sport', slug: chevrolet-corvette-grand-sport, settingBrand: { name: Chevrolet }, settingClass: { value: B } }
+-
+    garage: { id: 17, gameUpdate: 0, model: W70, slug: exotic-rides-w70, settingBrand: { name: 'Exotic Rides' }, settingClass: { value: B } }
+-
+    garage: { id: 19, gameUpdate: 0, model: F12TDF, slug: ferrari-f12tdf, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+-
+    garage: { id: 18, gameUpdate: 0, model: '488 GTB', slug: ferrari-488-gtb, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+-
+    garage: { id: 23, gameUpdate: 0, model: GT, slug: ford-gt, settingBrand: { name: Ford }, settingClass: { value: B } }
+-
+    garage: { id: 24, gameUpdate: 0, model: 003S, slug: glickenhaus-003s, settingBrand: { name: Glickenhaus }, settingClass: { value: B } }
+-
+    garage: { id: 26, gameUpdate: 0, model: 'F-Type SVR', slug: jaguar-f-type-svr, settingBrand: { name: Jaguar }, settingClass: { value: B } }
+-
+    garage: { id: 31, gameUpdate: 0, model: Asterion, slug: lamborghini-asterion, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+-
+    garage: { id: 41, gameUpdate: 0, model: '911 GTS Coupé', slug: porsche-911-gts-coupe, settingBrand: { name: Porsche }, settingClass: { value: B } }
+-
+    garage: { id: 56, gameUpdate: 2, model: 'R1 550', slug: sin-r1-550, settingBrand: { name: Sin }, settingClass: { value: B } }
+-
+    garage: { id: 57, gameUpdate: 3, model: 'N', slug: apollo-n, settingBrand: { name: Apollo }, settingClass: { value: B } }
+-
+    garage: { id: 60, gameUpdate: 4, model: 'Huracán Evo Spyder', slug: lamborghini-huracan-evo-spyder, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+-
+    garage: { id: 62, gameUpdate: 5, model: 'SLR McLaren', slug: mercedes-benz-slr-mclaren, settingBrand: { name: Mercedes-Benz }, settingClass: { value: B } }
+-
+    garage: { id: 70, gameUpdate: 7, model: 'Vantage GT12', slug: aston-martin-vantage-gt12, settingBrand: { name: 'Aston Martin' }, settingClass: { value: B } }
+-
+    garage: { id: 72, gameUpdate: 7, model: '911 GT3 RS', slug: porsche-911-gt3-rs, settingBrand: { name: Porsche }, settingClass: { value: B } }
+-
+    garage: { id: 74, gameUpdate: 8, model: 'DBS Superleggera', slug: aston-martin-dbs-superleggera, settingBrand: { name: 'Aston Martin' }, settingClass: { value: B } }
+-
+    garage: { id: 79, gameUpdate: 9, model: Zerouno, slug: italdesign-zerouno, settingBrand: { name: Italdesign }, settingClass: { value: B } }
+-
+    garage: { id: 85, gameUpdate: 10, model: Evija, slug: lotus-evija, settingBrand: { name: Lotus }, settingClass: { value: B } }
+-
+    garage: { id: 89, gameUpdate: 11, model: 'Carrera GT', slug: porsche-carrera-gt, settingBrand: { name: Porsche }, settingClass: { value: B } }
+-
+    garage: { id: 86, gameUpdate: 11, model: '911 GT1 Evolution', slug: porsche-911-gt1-evolution, settingBrand: { name: Porsche }, settingClass: { value: B } }
+-
+    garage: { id: 95, gameUpdate: 12, model: 'F1 LM', slug: mclaren-f1-lm, settingBrand: { name: McLaren }, settingClass: { value: B } }
+-
+    garage: { id: 99, gameUpdate: 13, model: 'GT MK II', slug: ford-gt-mk-ii, settingBrand: { name: Ford }, settingClass: { value: B } }
+-
+    garage: { id: 101, gameUpdate: 14, model: AP-0, slug: apex-ap-0, settingBrand: { name: Apex }, settingClass: { value: B } }
+-
+    garage: { id: 111, gameUpdate: 15, model: '488 GTB Challenge EVO', slug: ferrari-488-gtb-challenge-evo, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+-
+    garage: { id: 107, gameUpdate: 15, model: 'Enzo Ferrari', slug: ferrari-enzo-ferrari, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+-
+    garage: { id: 113, gameUpdate: 16, model: IE, slug: apollo-ie, settingBrand: { name: Apollo }, settingClass: { value: B } }
+-
+    garage: { id: 127, gameUpdate: 18, model: Roma, slug: ferrari-roma, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+-
+    garage: { id: 130, gameUpdate: 18, model: 'Murcielago LP 640 Roadster', slug: lamborghini-murcielago-lp-640-roadster, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+-
+    garage: { id: 129, gameUpdate: 18, model: 'Essenza SCV12', slug: lamborghini-essenza-scv12, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+-
+    garage: { id: 136, gameUpdate: 19, model: 'W12 Coupe', slug: volkswagen-w12-coupe, settingBrand: { name: Volkswagen }, settingClass: { value: B } }
+-
+    garage: { id: 137, gameUpdate: 19, model: TSR-S, slug: zenvo-tsr-s, settingBrand: { name: Zenvo }, settingClass: { value: B } }
+-
+    garage: { id: 143, gameUpdate: 20, model: Elva, slug: mclaren-elva, settingBrand: { name: McLaren }, settingClass: { value: B } }
+-
+    garage: { id: 144, gameUpdate: 21, model: GTE, slug: drako-gte, settingBrand: { name: Drako }, settingClass: { value: B } }
+-
+    garage: { id: 152, gameUpdate: 22, model: AF10, slug: arash-af10, settingBrand: { name: Arash }, settingClass: { value: B } }
+-
+    garage: { id: 159, gameUpdate: 22, model: 'GTR-50 Italdesign', slug: nissan-gtr-50-italdesign, settingBrand: { name: Nissan }, settingClass: { value: B } }
+-
+    garage: { id: 162, gameUpdate: 23, model: One77, slug: aston-martin-one77, settingBrand: { name: 'Aston Martin' }, settingClass: { value: B } }
+-
+    garage: { id: 164, gameUpdate: 23, model: Berlinetta, slug: puritalia-berlinetta, settingBrand: { name: Puritalia }, settingClass: { value: B } }
+-
+    garage: { id: 167, gameUpdate: 24, model: 'AF8 Falcon Édition', slug: arash-af8-falcon-edition, settingBrand: { name: Arash }, settingClass: { value: B } }
+-
+    garage: { id: 173, gameUpdate: 25, model: 'Sesto Elemento', slug: lamborghini-sesto-elemento, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+-
+    garage: { id: 182, gameUpdate: 26, model: '600LT Spider', slug: mclaren-600lt-spider, settingBrand: { name: McLaren }, settingClass: { value: B } }
+-
+    garage: { id: 183, gameUpdate: 26, model: 'Huayra R', slug: pagani-huayra-r, settingBrand: { name: Pagani }, settingClass: { value: B } }
+-
+    garage: { id: 188, gameUpdate: 27, model: 'R390 GT1', slug: nissan-r390-gt1, settingBrand: { name: Nissan }, settingClass: { value: B } }
+-
+    garage: { id: 209, gameUpdate: 30, model: Revuelto, slug: lamborghini-revuelto, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+-
+    garage: { id: 212, gameUpdate: 31, model: 'M4 GT3', slug: bmw-m4-gt3, settingBrand: { name: BMW }, settingClass: { value: B } }
+-
+    garage: { id: 219, gameUpdate: 32, model: 'Solus GT', slug: mclaren-solus-gt, settingBrand: { name: McLaren }, settingClass: { value: B } }
+-
+    garage: { id: 227, gameUpdate: 33, model: Artura, slug: mclaren-artura, settingBrand: { name: McLaren }, settingClass: { value: B } }
+-
+    garage: { id: 233, gameUpdate: 34, model: Invencible, slug: lamborghini-invencible, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+-
+    garage: { id: 245, gameUpdate: 36, model: SC63, slug: lamborghini-sc63, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+-
+    garage: { id: 249, gameUpdate: 37, model: E-R9, slug: lotus-e-r9, settingBrand: { name: Lotus }, settingClass: { value: B } }
+-
+    garage: { id: 264, gameUpdate: 39, model: Temerario, slug: lamborghini-temerario, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+-
+    garage: { id: 279, gameUpdate: 41, model: 'Chevrolet Corvette Stingray', slug: lego-technic-chevrolet-corvette-stingray, settingBrand: { name: 'Lego Technic' }, settingClass: { value: B } }
+-
+    garage: { id: 289, gameUpdate: 43, model: 'GEN 3 EVO Championship Edition', slug: formule-e-gen-3-evo-championship-edition, settingBrand: { name: 'Formule E' }, settingClass: { value: B } }

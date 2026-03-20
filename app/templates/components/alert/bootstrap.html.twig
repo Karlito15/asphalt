@@ -1,4 +1,10 @@
-<div{{ attributes }} class="alert alert-{{ type }} mx-5 mt-5 mb-3" role="alert" data-bs-toggle="alert">
+<div
+    id="flash-messages"
+    class="alert alert-{{ type }} {# d-none #} mx-5 mt-5 mb-3"
+    role="alert"
+    data-bs-toggle="alert"
+    {{ attributes }}
+>
     <!-- component HTML -->
     {{ message }}
 </div>

@@ -18,7 +18,7 @@ class GarageStatMinRepository extends ServiceEntityRepository
         parent::__construct($registry, GarageStatMin::class);
     }
 
-    // EXPORTS
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -46,7 +46,7 @@ class GarageStatMinRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param GarageStatMin $entity

@@ -21,7 +21,7 @@ class SettingTagRepository extends ServiceEntityRepository
         parent::__construct($registry, SettingTag::class);
     }
 
-    // EXPORTS
+    ### EXPORTS
 
     /**
      * Retourne les informations pour les extraire dans un fichier CSV
@@ -43,7 +43,7 @@ class SettingTagRepository extends ServiceEntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
-    // EVENTS
+    ### EVENTS
 
     /**
      * @param SettingTag $entity

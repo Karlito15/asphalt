@@ -1,4 +1,0 @@
--
-    garage: { id: 108, gameUpdate: 15, model: '599XX EVO', slug: ferrari-599xx-evo, settingBrand: { name: Ferrari }, settingClass: { value: C } }
--
-    garage: { id: 169, gameUpdate: 24, model: BT62, slug: brabham-bt62, settingBrand: { name: Brabham }, settingClass: { value: C } }

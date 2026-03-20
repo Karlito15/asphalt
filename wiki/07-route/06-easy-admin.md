@@ -1,7 +1,7 @@
 php bin/console debug:router
---------------------------------- ---------- ------------ ------ -----------------------------------------------------
-Name                              Method     Scheme       Host   Path
---------------------------------- ---------- ------------ ------ -----------------------------------------------------
+----------------------------------------- ---------------- ------------ ---------------------------------------------------------------
+Name                                      Method           Scheme       Path
+----------------------------------------- ---------------- ------------ ---------------------------------------------------------------
 admin                                     ANY              ANY          /admin
 admin_garage_app_index                    GET              ANY          /admin/garage-app
 admin_garage_app_new                      GET|POST         ANY          /admin/garage-app/new
@@ -139,3 +139,4 @@ admin_setting_unit_price_render_filters   GET              ANY          /admin/s
 admin_setting_unit_price_edit             GET|POST|PATCH   ANY          /admin/setting-unit-price/{entityId}/edit
 admin_setting_unit_price_delete           POST             ANY          /admin/setting-unit-price/{entityId}/delete
 admin_setting_unit_price_detail           GET              ANY          /admin/setting-unit-price/{entityId}
+----------------------------------------- ---------------- ------------ ---------------------------------------------------------------

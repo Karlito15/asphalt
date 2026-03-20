@@ -47,13 +47,6 @@ class InventoryApp
     #[Groups(['api'])]
     protected string $label;
 
-    #[ORM\Column(nullable: false, options: ["default" => 0, 'unsigned' => true])]
-    #[Assert\NotBlank]
-    #[Assert\NotNull]
-    #[Assert\PositiveOrZero]
-    #[Groups(['api'])]
-    protected int $value = 0;
-
     #[ORM\Column(type: Types::STRING, length: 32, nullable: false, options: ["default" => '---'])]
     #[Assert\NotBlank]
     #[Assert\NotNull]
@@ -64,6 +57,13 @@ class InventoryApp
     #[ORM\Column(type: Types::SMALLINT, nullable: true)]
     #[Groups(['api'])]
     protected ?int $position = null;
+
+    #[ORM\Column(nullable: false, options: ["default" => 0, 'unsigned' => true])]
+    #[Assert\NotBlank]
+    #[Assert\NotNull]
+    #[Assert\PositiveOrZero]
+    #[Groups(['api'])]
+    protected int $value = 0;
 
     #[ORM\Column]
     #[Assert\Type(type: ['boolean'])]

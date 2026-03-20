@@ -1,0 +1,42 @@
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 211, gameUpdate: 31, model: EVO, slug: apollo-evo, settingBrand: { name: Apollo }, settingClass: { value: B } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 239, gameUpdate: 35, model: 'Huracán STO', slug: lamborghini-huracan-sto, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: true
+    toUpgrade: true
+    garage: { id: 249, gameUpdate: 37, model: E-R9, slug: lotus-e-r9, settingBrand: { name: Lotus }, settingClass: { value: B } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 255, gameUpdate: 38, model: 'Mustang RTR Spec 5 10th Anniversary', slug: ford-mustang-rtr-spec-5-10th-anniversary, settingBrand: { name: Ford }, settingClass: { value: B } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 260, gameUpdate: 39, model: Valour, slug: aston-martin-valour, settingBrand: { name: 'Aston Martin' }, settingClass: { value: B } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 288, gameUpdate: 42, model: 'GR Super Sport Concept', slug: toyota-gr-super-sport-concept, settingBrand: { name: Toyota }, settingClass: { value: B } }

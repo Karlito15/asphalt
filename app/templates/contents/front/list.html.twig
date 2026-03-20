@@ -19,6 +19,10 @@
             <div class="col-6">
                 <twig:ListClass link="{{ app.current_route }}" />
             </div>
+            {% elseif app.current_route starts with 'app.search' %}
+            <div class="col-9">
+                {% include '@App/contents/front/search/_form.html.twig' %}
+            </div>
             {% else %}
             <div class="col-9">&nbsp;</div>
             {% endif %}

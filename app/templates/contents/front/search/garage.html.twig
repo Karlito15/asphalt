@@ -1,0 +1,31 @@
+{% block table %}
+        <tbody>
+        {% for item in entities %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>
+                    <a href="javascript:void(0);">update</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        <thead>
+            {{ _self.legend() }}
+        </thead>
+        <tfoot>
+            {{ _self.legend() }}
+        </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+            <tr>
+                <th>Id</th>
+                <th>Action</th>
+            </tr>
+{% endmacro %}
+
+{% extends '@App/contents/front/list.html.twig' %}

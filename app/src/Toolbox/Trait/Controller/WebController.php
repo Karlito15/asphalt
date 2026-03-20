@@ -8,6 +8,7 @@ use App\Toolbox\System\Path;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\BufferedOutput;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -17,6 +18,7 @@ trait WebController
 {
     public function __construct(
         private readonly KernelInterface $kernel,
+        private readonly ParameterBagInterface $parameter,
         private readonly TranslatorInterface $translator,
     )
     {}
@@ -69,9 +71,13 @@ trait WebController
      */
     public function ExtractionFolder(): string
     {
-        return Path::canonicalize(
-            $this->getParameter('folders.yaml') . DIRECTORY_SEPARATOR .
-            self::$folder . DIRECTORY_SEPARATOR . self::$file);
+        $filepath = $this->getParameter('folders.yaml') . DIRECTORY_SEPARATOR . self::$folder . DIRECTORY_SEPARATOR . self::$file;
+
+        if (Path::isExists($filepath)) {
+            return Path::canonicalize($filepath);
+        }
+
+        throw $this->createNotFoundException($this->translator->trans('error.file'));
     }
 
     /** STATIC METHODS */

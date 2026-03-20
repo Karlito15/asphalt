@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 #[Route(
-    path: '{_locale<%app.supported_locales%>}/api/setting/tag',
+    path: 'api/setting/tag',
     name: 'api.setting.tag.',
     options: ['expose' => false],
     methods: ['GET'],
@@ -32,7 +32,7 @@ final class TagController extends AbstractController
             Response::HTTP_OK,
             self::getHeaders(),
             self::getContext([
-                'groups' => ['api'],
+                'groups' => ['index'],
             ])
         );
     }
