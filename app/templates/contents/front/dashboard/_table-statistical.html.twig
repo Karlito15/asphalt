@@ -1,114 +1,90 @@
 
+            <h2 class="h4 text-start text-uppercase">
+                {{ 'text.stat.class'|trans }}
+            </h2>
 
-<table class="{{ classes.table.default }} table-responsive">
-    <tbody>
-        <tr class="fw-bolder">
-            <td class="my-0 py-1 align-middle fw-normal text-start">{{ 'text.garage'|trans }}</td>
-            <td class="my-0 py-1 align-middle text-center text-info">{{ stat_garage.D }}</td>
-            <td class="my-0 py-1 align-middle text-center text-info">{{ stat_garage.C }}</td>
-            <td class="my-0 py-1 align-middle text-center text-info">{{ stat_garage.B }}</td>
-            <td class="my-0 py-1 align-middle text-center text-info">{{ stat_garage.A }}</td>
-            <td class="my-0 py-1 align-middle text-center text-info">{{ stat_garage.S }}</td>
-            <td class="my-0 py-1 align-middle text-center text-info">{{ stat_garage.T }}</td>
-        </tr>
-        <tr class="fw-bolder">
-            <td class="my-0 py-1 align-middle fw-normal text-start">{{ 'text.unblock'|trans }}</td>
-            <td class="my-0 py-1 align-middle text-center text-success">{{ stat_unblock.D }}</td>
-            <td class="my-0 py-1 align-middle text-center text-success">{{ stat_unblock.C }}</td>
-            <td class="my-0 py-1 align-middle text-center text-success">{{ stat_unblock.B }}</td>
-            <td class="my-0 py-1 align-middle text-center text-success">{{ stat_unblock.A }}</td>
-            <td class="my-0 py-1 align-middle text-center text-success">{{ stat_unblock.S }}</td>
-            <td class="my-0 py-1 align-middle text-center text-success">{{ stat_unblock.T }}</td>
-        </tr>
-        <tr class="fw-bolder">
-            <td class="my-0 py-1 align-middle fw-normal text-start">{{ 'text.block'|trans }}</td>
-            <td class="my-0 py-1 align-middle text-center text-danger">{{ stat_block.D }}</td>
-            <td class="my-0 py-1 align-middle text-center text-danger">{{ stat_block.C }}</td>
-            <td class="my-0 py-1 align-middle text-center text-danger">{{ stat_block.B }}</td>
-            <td class="my-0 py-1 align-middle text-center text-danger">{{ stat_block.A }}</td>
-            <td class="my-0 py-1 align-middle text-center text-danger">{{ stat_block.S }}</td>
-            <td class="my-0 py-1 align-middle text-center text-danger">{{ stat_block.T }}</td>
-        </tr>
-        <tr class="fw-bolder">
-            <td class="my-0 py-1 align-middle fw-normal text-start">{{ 'text.gold'|trans }}</td>
-            <td class="my-0 py-1 align-middle text-center text-warning">{{ stat_gold.D }}</td>
-            <td class="my-0 py-1 align-middle text-center text-warning">{{ stat_gold.C }}</td>
-            <td class="my-0 py-1 align-middle text-center text-warning">{{ stat_gold.B }}</td>
-            <td class="my-0 py-1 align-middle text-center text-warning">{{ stat_gold.A }}</td>
-            <td class="my-0 py-1 align-middle text-center text-warning">{{ stat_gold.S }}</td>
-            <td class="my-0 py-1 align-middle text-center text-warning">{{ stat_gold.T }}</td>
-        </tr>
-        <tr class="fw-bolder">
-            <td class="my-0 py-1 align-middle fw-normal text-start">{{ 'text.full.blueprint'|trans }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_full_blueprint.D }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_full_blueprint.C }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_full_blueprint.B }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_full_blueprint.A }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_full_blueprint.S }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_full_blueprint.T }}</td>
-        </tr>
-        <tr class="fw-bolder">
-            <td class="my-0 py-1 align-middle fw-normal text-start">{{ 'text.to.upgrade'|trans }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_upgrade.D }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_upgrade.C }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_upgrade.B }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_upgrade.A }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_upgrade.S }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_upgrade.T }}</td>
-        </tr>
-        <tr class="fw-bolder">
-            <td class="my-0 py-1 align-middle fw-normal text-start">{{ 'text.to.gold'|trans }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_gold.D }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_gold.C }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_gold.B }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_gold.A }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_gold.S }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_gold.T }}</td>
-        </tr>
-        <tr class="fw-bolder">
-            <td class="my-0 py-1 align-middle fw-normal text-start">{{ 'text.to.install.import'|trans }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_install_import.D }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_install_import.C }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_install_import.B }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_install_import.A }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_install_import.S }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_install_import.T }}</td>
-        </tr>
-        <tr class="fw-bolder">
-            <td class="my-0 py-1 align-middle fw-normal text-start">{{ 'text.to.install.upgrade'|trans }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_install_upgrade.D }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_install_upgrade.C }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_install_upgrade.B }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_install_upgrade.A }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_install_upgrade.S }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_install_upgrade.T }}</td>
-        </tr>
-        <tr class="fw-bolder">
-            <td class="my-0 py-1 align-middle fw-normal text-start">{{ 'text.to.unblock'|trans }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_unblock.D }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_unblock.C }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_unblock.B }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_unblock.A }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_unblock.S }}</td>
-            <td class="my-0 py-1 align-middle text-center">{{ stat_to_unblock.T }}</td>
-        </tr>
-    </tbody>
-    <thead>
-        {{ _self.legend() }}
-    </thead>
-    <tfoot>
-        {{ _self.legend() }}
-    </tfoot>
-</table>
+            <table class="{{ classes.table.default }} small">
+                <tbody>
+                    <tr class="fw-bolder">
+                        <td class="align-middle fw-normal text-start">{{ 'text.garage'|trans }}</td>
+                        <td class="align-middle text-center text-secondary">{{ stat_garage.D }}</td>
+                        <td class="align-middle text-center text-secondary">{{ stat_garage.C }}</td>
+                        <td class="align-middle text-center text-secondary">{{ stat_garage.B }}</td>
+                        <td class="align-middle text-center text-secondary">{{ stat_garage.A }}</td>
+                        <td class="align-middle text-center text-secondary">{{ stat_garage.S }}</td>
+                        <td class="align-middle text-center text-secondary">{{ stat_garage.T }}</td>
+                    </tr>
+                    <tr class="fw-bolder">
+                        <td class="align-middle fw-normal text-start">{{ 'text.unblock'|trans }}</td>
+                        <td class="align-middle text-center text-success">{{ stat_unblock.D }}</td>
+                        <td class="align-middle text-center text-success">{{ stat_unblock.C }}</td>
+                        <td class="align-middle text-center text-success">{{ stat_unblock.B }}</td>
+                        <td class="align-middle text-center text-success">{{ stat_unblock.A }}</td>
+                        <td class="align-middle text-center text-success">{{ stat_unblock.S }}</td>
+                        <td class="align-middle text-center text-success">{{ stat_unblock.T }}</td>
+                    </tr>
+                    <tr class="fw-bolder">
+                        <td class="align-middle fw-normal text-start">{{ 'text.block'|trans }}</td>
+                        <td class="align-middle text-center text-danger">{{ stat_block.D }}</td>
+                        <td class="align-middle text-center text-danger">{{ stat_block.C }}</td>
+                        <td class="align-middle text-center text-danger">{{ stat_block.B }}</td>
+                        <td class="align-middle text-center text-danger">{{ stat_block.A }}</td>
+                        <td class="align-middle text-center text-danger">{{ stat_block.S }}</td>
+                        <td class="align-middle text-center text-danger">{{ stat_block.T }}</td>
+                    </tr>
+                    <tr class="fw-bolder">
+                        <td class="align-middle fw-normal text-start">{{ 'text.gold'|trans }}</td>
+                        <td class="align-middle text-center text-warning">{{ stat_gold.D }}</td>
+                        <td class="align-middle text-center text-warning">{{ stat_gold.C }}</td>
+                        <td class="align-middle text-center text-warning">{{ stat_gold.B }}</td>
+                        <td class="align-middle text-center text-warning">{{ stat_gold.A }}</td>
+                        <td class="align-middle text-center text-warning">{{ stat_gold.S }}</td>
+                        <td class="align-middle text-center text-warning">{{ stat_gold.T }}</td>
+                    </tr>
+                    <tr class="fw-bolder">
+                        <td class="align-middle fw-normal text-start">{{ 'text.full.blueprint'|trans }}</td>
+                        <td class="align-middle text-center">{{ stat_full_blueprint.D }}</td>
+                        <td class="align-middle text-center">{{ stat_full_blueprint.C }}</td>
+                        <td class="align-middle text-center">{{ stat_full_blueprint.B }}</td>
+                        <td class="align-middle text-center">{{ stat_full_blueprint.A }}</td>
+                        <td class="align-middle text-center">{{ stat_full_blueprint.S }}</td>
+                        <td class="align-middle text-center">{{ stat_full_blueprint.T }}</td>
+                    </tr>
+                    <tr class="fw-bolder">
+                        <td class="align-middle fw-normal text-start">{{ 'text.to.upgrade'|trans }}</td>
+                        <td class="align-middle text-center text-primary">{{ stat_to_upgrade.D }}</td>
+                        <td class="align-middle text-center text-primary">{{ stat_to_upgrade.C }}</td>
+                        <td class="align-middle text-center text-primary">{{ stat_to_upgrade.B }}</td>
+                        <td class="align-middle text-center text-primary">{{ stat_to_upgrade.A }}</td>
+                        <td class="align-middle text-center text-primary">{{ stat_to_upgrade.S }}</td>
+                        <td class="align-middle text-center text-primary">{{ stat_to_upgrade.T }}</td>
+                    </tr>
+                    <tr class="fw-bolder">
+                        <td class="align-middle fw-normal text-start">{{ 'text.to.gold'|trans }}</td>
+                        <td class="align-middle text-center text-style">{{ stat_to_gold.D }}</td>
+                        <td class="align-middle text-center text-style">{{ stat_to_gold.C }}</td>
+                        <td class="align-middle text-center text-style">{{ stat_to_gold.B }}</td>
+                        <td class="align-middle text-center text-style">{{ stat_to_gold.A }}</td>
+                        <td class="align-middle text-center text-style">{{ stat_to_gold.S }}</td>
+                        <td class="align-middle text-center text-style">{{ stat_to_gold.T }}</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    {{ _self.legend() }}
+                </thead>
+                <tfoot>
+                    {{ _self.legend() }}
+                </tfoot>
+            </table>
 
-{% macro legend() %}
-    <tr class="table-secondary small">
-        <th class="my-0 py-1 align-middle text-start">{{ 'text.legend'|trans }}</th>
-        <th class="my-0 py-1 align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>D</th>
-        <th class="my-0 py-1 align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>C</th>
-        <th class="my-0 py-1 align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>B</th>
-        <th class="my-0 py-1 align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>A</th>
-        <th class="my-0 py-1 align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>S</th>
-        <th class="my-0 py-1 align-middle text-end">{{ 'text.total'|trans }}</th>
-    </tr>
-{% endmacro %}
+            {% macro legend() %}
+                <tr class="table-dark">
+                    <th class="align-middle text-start">{{ 'text.legend'|trans }}</th>
+                    <th class="align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>D</th>
+                    <th class="align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>C</th>
+                    <th class="align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>B</th>
+                    <th class="align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>A</th>
+                    <th class="align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>S</th>
+                    <th class="align-middle text-end">{{ 'text.total'|trans }}</th>
+                </tr>
+            {% endmacro %}

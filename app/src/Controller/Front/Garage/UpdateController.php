@@ -64,16 +64,24 @@ final class UpdateController extends AbstractController
                 $entityManager->flush();
 
                 ### Flash Message
-                $this->addFlash('success', [
-                    'title'   => $this->translator->trans('text.garage'),
-                    'message' => sprintf($this->translator->trans('notification.updated'), $title),
-                ]);
+//                $this->addFlash('success', [
+//                    'title'   => $this->translator->trans('text.garage'),
+//                    'message' => sprintf($this->translator->trans('notification.updated'), $title),
+//                ]);
+                $this->addFlash(
+                    type: 'success',
+                    message: sprintf($this->translator->trans('notification.updated'), $title),
+                );
             } catch (RuntimeException $e) {
                 ### Flash Message
-                $this->addFlash('danger', [
-                    'title'   => $this->translator->trans('text.garage'),
-                    'message' => $this->translator->trans('notification.error'),
-                ]);
+//                $this->addFlash('danger', [
+//                    'title'   => $this->translator->trans('text.garage'),
+//                    'message' => $this->translator->trans('notification.error'),
+//                ]);
+                $this->addFlash(
+                    type: 'danger',
+                    message: $this->translator->trans('notification.error'),
+                );
 
                 throw new RuntimeException($e->getMessage(), $e->getCode(), $e);
             }

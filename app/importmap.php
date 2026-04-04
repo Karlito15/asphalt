@@ -36,9 +36,6 @@ return [
     'jquery' => [
         'version' => '4.0.0',
     ],
-    'bootstrap' => [
-        'version' => '5.3.8',
-    ],
     '@popperjs/core' => [
         'version' => '2.11.8',
     ],
@@ -47,10 +44,10 @@ return [
         'type' => 'css',
     ],
     'bootstrap-table' => [
-        'version' => '1.27.0',
+        'version' => '1.27.1',
     ],
     'bootstrap-table/dist/bootstrap-table.min.css' => [
-        'version' => '1.27.0',
+        'version' => '1.27.1',
         'type' => 'css',
     ],
     'fontawesome' => [

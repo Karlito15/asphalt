@@ -1,13 +1,19 @@
 
 <!-- Header -->
 <header>
-    <div class="px-3 py-2 text-bg-dark border-bottom">
+    <div class="px-3 py-2 border-bottom">
         <div class="{{ container|default('container') }}">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="{{ path('app.dashboard.index') }}" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                    <img src="{{ asset(images.logo) }}" alt="{{ metas.title }}" style="max-height: 50px;" />
+            <div class="d-inline-flex align-items-center">
+                <a href="{{ path('app.dashboard.index') }}" class="col-xxl-auto">
+                    <img src="{{ asset(images.logo) }}" alt="{{ metas.title }}" class="img-thumbnail" style="max-height: 50px;" />
                 </a>
-                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+
+                <!-- breadcrumb -->
+                {% block breadcrumb %}
+                    {% include '@App/partials/front/breadcrumb.html.twig' %}
+                {% endblock %}
+
+                <ul class="nav col-md-36 col-xxl-auto my-md-0">
                     {{ _self.Nav('app.dashboard.index', 'fa-house', 'text.dashboard'|trans) }}
                     {{ _self.Nav('app.garage.index', 'fa-automobile', 'text.garage'|trans) }}
 					<li class="nav-item dropdown">
@@ -58,17 +64,6 @@
             </div>
         </div>
     </div>
-{#    <div class="px-3 py-2 border-bottom mb-3">#}
-{#        <div class="container d-flex flex-wrap justify-content-center">#}
-{#            <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">#}
-{#                <input type="search" class="form-control" placeholder="Search..." aria-label="Search" disabled>#}
-{#            </form>#}
-{#            <div class="text-end">#}
-{#                <a href="{{ path('app.page.search.garage') }}" class="btn btn-outline-primary me-2">{{ 'text.garage'|trans }}</a>#}
-{#                <a href="{{ path('app.page.search.race') }}" class="btn btn-outline-danger">{{ 'text.race'|trans }}</a>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
 </header>
 
 <div class="clearfix mt-1"></div>

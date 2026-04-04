@@ -57,3 +57,13 @@ php bin/console asphalt:csv:setting
 ``` shell
 php bin/console asphalt-csv-setting 
 ```
+
+
+
+### Exporte les voitures dans l'ordre par Class
+``` shell
+php bin/console asphalt:csv:order:class
+```
+``` shell
+php bin/console asphalt-csv-order-class
+```

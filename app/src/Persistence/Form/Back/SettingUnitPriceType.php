@@ -24,7 +24,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level01',
+				'label' => 'text.level01',
 				'required' => true,
 				'trim' => true,
 			])
@@ -34,7 +34,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level02',
+				'label' => 'text.level02',
 				'required' => true,
 				'trim' => true,
 			])
@@ -44,7 +44,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level03',
+				'label' => 'text.level03',
 				'required' => true,
 				'trim' => true,
 			])
@@ -54,7 +54,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level04',
+				'label' => 'text.level04',
 				'required' => true,
 				'trim' => true,
 			])
@@ -64,7 +64,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level05',
+				'label' => 'text.level05',
 				'required' => true,
 				'trim' => true,
 			])
@@ -74,7 +74,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level06',
+				'label' => 'text.level06',
 				'required' => true,
 				'trim' => true,
 			])
@@ -84,7 +84,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level07',
+				'label' => 'text.level07',
 				'required' => true,
 				'trim' => true,
 			])
@@ -94,7 +94,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level08',
+				'label' => 'text.level08',
 				'required' => true,
 				'trim' => true,
 			])
@@ -104,7 +104,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level09',
+				'label' => 'text.level09',
 				'required' => true,
 				'trim' => true,
 			])
@@ -114,7 +114,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level10',
+				'label' => 'text.level10',
 				'required' => true,
 				'trim' => true,
 			])
@@ -124,7 +124,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level11',
+				'label' => 'text.level11',
 				'required' => true,
 				'trim' => true,
 			])
@@ -134,7 +134,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level12',
+				'label' => 'text.level12',
 				'required' => true,
 				'trim' => true,
 			])
@@ -144,7 +144,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.level13',
+				'label' => 'text.level13',
 				'required' => true,
 				'trim' => true,
 			])
@@ -154,7 +154,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.common',
+				'label' => 'text.common',
 				'required' => true,
 				'trim' => true,
 			])
@@ -164,7 +164,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.rare',
+				'label' => 'text.rare',
 				'required' => true,
 				'trim' => true,
 			])
@@ -174,7 +174,7 @@ class SettingUnitPriceType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.epic',
+				'label' => 'text.epic',
 				'required' => true,
 				'trim' => true,
 			])
@@ -186,7 +186,7 @@ class SettingUnitPriceType extends AbstractType
         $resolver->setDefaults([
             'data_class' => SettingUnitPrice::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

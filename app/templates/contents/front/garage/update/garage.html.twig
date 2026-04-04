@@ -1,0 +1,104 @@
+<div class="card my-lg-2">
+    <!-- component HTML -->
+    <div class="card-header">
+        <h3 class="card-title">{{ 'text.garage'|trans }}</h3>
+    </div>
+    <div class="card-body">
+
+        <div class="row mb-lg-3 normal">
+            <div class="col-xxl-4">
+                <div class="form-floating">
+                    {{ form_widget(form.settingClass) }}
+                    {{ form_label(form.settingClass) }}
+                </div>
+            </div>
+            <div class="col-xxl-4">
+                <div class="form-floating">
+                    {{ form_widget(form.stars) }}
+                    {{ form_label(form.stars) }}
+                </div>
+            </div>
+            <div class="col-xxl-4">
+                <div class="form-floating">
+                    {{ form_widget(form.gameUpdate) }}
+                    {{ form_label(form.gameUpdate) }}
+                </div>
+            </div>
+            <div class="col-xxl-4">
+                <div class="form-floating">
+                    {{ form_widget(form.level) }}
+                    {{ form_label(form.level) }}
+                </div>
+            </div>
+            <div class="col-xxl-4">
+                <div class="form-floating">
+                    {{ form_widget(form.epic) }}
+                    {{ form_label(form.epic) }}
+                </div>
+            </div>
+            <div class="col-xxl-4">
+                <div class="form-floating">
+                    {{ form_widget(form.evo) }}
+                    {{ form_label(form.evo) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-lg-3 expert">
+            <div class="col-xxl-18">
+                <div class="form-floating">
+                    {{ form_widget(form.settingBrand) }}
+                    {{ form_label(form.settingBrand) }}
+                </div>
+            </div>
+            <div class="col-xxl-18">
+                <div class="form-floating">
+                    {{ form_widget(form.model) }}
+                    {{ form_label(form.model) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-lg-3 expert">
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.gauntlet.division) }}
+                    {{ form_label(form.gauntlet.division) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.carOrder) }}
+                    {{ form_label(form.carOrder) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="number" id="statOrder" name="statOrder" required="required" autocomplete="off" class="fw-bolder form-control" max="99" min="0" placeholder="Order by Stat" value="{{ entity.statOrder }}" disabled>
+                    <label class="m-0 fw-light form-label required" for="statOrder">Order by Stat</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-lg-3 expert">
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.settingBlueprint) }}
+                    {{ form_label(form.settingBlueprint) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.settingLevel) }}
+                    {{ form_label(form.settingLevel) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.settingUnitPrice) }}
+                    {{ form_label(form.settingUnitPrice) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

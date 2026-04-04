@@ -9,15 +9,15 @@
 -
     garage: { id: 30, gameUpdate: 0, model: 'Terzo Millennio', slug: lamborghini-terzo-millennio, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
 -
-    garage: { id: 32, gameUpdate: 0, model: Egoista, slug: lamborghini-egoista, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
+    garage: { id: 29, gameUpdate: 0, model: Centenario, slug: lamborghini-centenario, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
 -
-    garage: { id: 28, gameUpdate: 0, model: Centenario, slug: lamborghini-centenario, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
+    garage: { id: 31, gameUpdate: 0, model: Egoista, slug: lamborghini-egoista, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
 -
     garage: { id: 46, gameUpdate: 0, model: Nemesis, slug: trion-nemesis, settingBrand: { name: Trion }, settingClass: { value: S } }
 -
-    garage: { id: 50, gameUpdate: 0, model: 'Lykan Hypersport', slug: w-motors-lykan-hypersport, settingBrand: { name: 'W Motors' }, settingClass: { value: S } }
+    garage: { id: 49, gameUpdate: 0, model: 'Lykan Hypersport', slug: w-motors-lykan-hypersport, settingBrand: { name: 'W Motors' }, settingClass: { value: S } }
 -
-    garage: { id: 49, gameUpdate: 0, model: 'Fenyr Supersport', slug: w-motors-fenyr-supersport, settingBrand: { name: 'W Motors' }, settingClass: { value: S } }
+    garage: { id: 50, gameUpdate: 0, model: 'Fenyr Supersport', slug: w-motors-fenyr-supersport, settingBrand: { name: 'W Motors' }, settingClass: { value: S } }
 -
     garage: { id: 59, gameUpdate: 3, model: 'TS1 GT Anniversary', slug: zenvo-ts1-gt-anniversary, settingBrand: { name: Zenvo }, settingClass: { value: S } }
 -
@@ -37,7 +37,7 @@
 -
     garage: { id: 106, gameUpdate: 14, model: Speedtail, slug: mclaren-speedtail, settingBrand: { name: McLaren }, settingClass: { value: S } }
 -
-    garage: { id: 109, gameUpdate: 15, model: 'SF90 Stradale', slug: ferrari-sf90-stradale, settingBrand: { name: Ferrari }, settingClass: { value: S } }
+    garage: { id: 107, gameUpdate: 15, model: 'SF90 Stradale', slug: ferrari-sf90-stradale, settingBrand: { name: Ferrari }, settingClass: { value: S } }
 -
     garage: { id: 155, gameUpdate: 22, model: Gemera, slug: koenigsegg-gemera, settingBrand: { name: Koenigsegg }, settingClass: { value: S } }
 -

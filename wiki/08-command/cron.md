@@ -15,3 +15,8 @@ php bin/console asphalt:cron:count:class
 ``` shell
 php bin/console asphalt:cron:count:tag
 ```
+
+### XXXX
+``` shell
+php bin/console asphalt:cron:checkup:garage
+```

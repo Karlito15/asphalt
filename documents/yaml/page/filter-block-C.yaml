@@ -25,13 +25,6 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 280, gameUpdate: 41, model: '911 50 Years Porsche Design', slug: porsche-911-50-years-porsche-design, settingBrand: { name: Porsche }, settingClass: { value: C } }
--
-    unblock: false
-    gold: false
-    evo: false
-    eventClass: false
-    toUpgrade: false
     garage: { id: 303, gameUpdate: 45, model: 'DBS 770 Ultimate', slug: aston-martin-dbs-770-ultimate, settingBrand: { name: 'Aston Martin' }, settingClass: { value: C } }
 -
     unblock: false

@@ -95,7 +95,7 @@ class RaceType extends AbstractType
             'csrf_protection' => false, // enable/disable CSRF protection for this form
             'data_class' => RaceDTO::class,
             'method' => 'GET',
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

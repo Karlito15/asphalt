@@ -4,7 +4,7 @@
     evo: false
     eventClass: false
     toUpgrade: true
-    garage: { id: 92, gameUpdate: 12, model: SC18, slug: lamborghini-sc18, settingBrand: { name: Lamborghini }, settingClass: { value: A } }
+    garage: { id: 93, gameUpdate: 12, model: SC18, slug: lamborghini-sc18, settingBrand: { name: Lamborghini }, settingClass: { value: A } }
 -
     unblock: true
     gold: false
@@ -16,16 +16,9 @@
     unblock: false
     gold: false
     evo: false
-    eventClass: true
-    toUpgrade: true
-    garage: { id: 213, gameUpdate: 31, model: P72, slug: de-tomaso-p72, settingBrand: { name: 'De Tomaso' }, settingClass: { value: A } }
--
-    unblock: true
-    gold: false
-    evo: false
     eventClass: false
     toUpgrade: true
-    garage: { id: 232, gameUpdate: 34, model: 'Team Fordzilla P1', slug: ford-team-fordzilla-p1, settingBrand: { name: Ford }, settingClass: { value: A } }
+    garage: { id: 240, gameUpdate: 35, model: 'Utopia Coupé', slug: pagani-utopia-coupe, settingBrand: { name: Pagani }, settingClass: { value: A } }
 -
     unblock: true
     gold: false
@@ -39,7 +32,7 @@
     evo: false
     eventClass: false
     toUpgrade: true
-    garage: { id: 256, gameUpdate: 38, model: 'GT Frankie Edition', slug: ford-gt-frankie-edition, settingBrand: { name: Ford }, settingClass: { value: A } }
+    garage: { id: 255, gameUpdate: 38, model: 'GT Frankie Edition', slug: ford-gt-frankie-edition, settingBrand: { name: Ford }, settingClass: { value: A } }
 -
     unblock: true
     gold: false

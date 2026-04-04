@@ -23,7 +23,7 @@ class SettingClassType extends AbstractType
                 'attr' => [
                     'autocomplete' => 'off',
                 ],
-                'label' => 'form.label',
+                'label' => 'text.label',
                 'required' => true,
                 'trim' => true,
             ])
@@ -31,7 +31,7 @@ class SettingClassType extends AbstractType
                 'attr' => [
                     'autocomplete' => 'off',
                 ],
-                'label' => 'form.value',
+                'label' => 'text.value',
                 'required' => true,
                 'trim' => true,
             ])
@@ -39,7 +39,7 @@ class SettingClassType extends AbstractType
                 'attr' => [
                     'autocomplete' => 'off',
                 ],
-                'label' => 'form.classOrder',
+                'label' => 'text.order.class',
                 'required' => true,
                 'trim' => true,
             ])
@@ -47,7 +47,7 @@ class SettingClassType extends AbstractType
                 'attr' => [
                     'autocomplete' => 'off',
                 ],
-                'label' => 'form.median',
+                'label' => 'text.median',
                 'required' => true,
                 'trim' => true,
             ])
@@ -59,7 +59,7 @@ class SettingClassType extends AbstractType
         $resolver->setDefaults([
             'data_class' => SettingClass::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

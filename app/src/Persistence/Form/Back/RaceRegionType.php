@@ -24,7 +24,7 @@ class RaceRegionType extends AbstractType
                     'class' => null,
                     'maxlength' => 64,
                 ],
-                'label' => 'form.name',
+                'label' => 'text.name',
                 'required' => true,
                 'trim' => true,
             ])
@@ -36,7 +36,7 @@ class RaceRegionType extends AbstractType
         $resolver->setDefaults([
             'data_class' => RaceRegion::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

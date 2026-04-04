@@ -22,7 +22,7 @@ class MissionTaskType extends AbstractType
                 'attr'     => [
                     'autocomplete' => 'off',
                 ],
-                'label'    => 'form.value',
+                'label'    => 'text.value',
                 'required' => true,
             ])
         ;
@@ -33,7 +33,7 @@ class MissionTaskType extends AbstractType
         $resolver->setDefaults([
             'data_class' => MissionTask::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

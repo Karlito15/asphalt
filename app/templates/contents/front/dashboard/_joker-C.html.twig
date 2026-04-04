@@ -1,9 +1,8 @@
-<div class="row mb-2">
-    <div class="card-group">
-        <twig:CardInventory color="danger-emphasis" icon="{{ null }}" maxValue="6" form="{{ joker_5_c }}" />
-        <twig:CardInventory color="danger-emphasis" icon="{{ null }}" maxValue="8" form="{{ joker_4_c }}" />
-        <twig:CardInventory color="danger-emphasis" icon="{{ null }}" maxValue="10" form="{{ joker_3_c }}" />
-        <twig:CardInventory color="danger-emphasis" icon="{{ null }}" maxValue="10" form="{{ joker_2_c }}" />
-        <twig:CardInventory color="danger-emphasis" icon="{{ null }}" maxValue="10" form="{{ joker_1_c }}" />
-    </div>
-</div>
+
+            <div class="row row-cols-1 row-cols-xxl-5 g-xxl-3 mb-xxl-2">
+                <twig:CardInventory maxValue="{{ 6 }}" title="C5" theme="{{ 'secondary' }}" icon="{{ null }}" show="{{ true }}" form="{{ joker_5_c }}" />
+                <twig:CardInventory maxValue="{{ 8 }}" title="C4" theme="{{ 'secondary' }}" icon="{{ null }}" show="{{ true }}" form="{{ joker_4_c }}" />
+                <twig:CardInventory maxValue="{{ 10 }}" title="C3" theme="{{ 'secondary' }}" icon="{{ null }}" show="{{ true }}" form="{{ joker_3_c }}" />
+                <twig:CardInventory maxValue="{{ 10 }}" title="C2" theme="{{ 'secondary' }}" icon="{{ null }}" show="{{ true }}" form="{{ joker_2_c }}" />
+                <twig:CardInventory maxValue="{{ 10 }}" title="C1" theme="{{ 'secondary' }}" icon="{{ null }}" show="{{ true }}" form="{{ joker_1_c }}" />
+            </div>

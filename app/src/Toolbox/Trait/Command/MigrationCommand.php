@@ -8,6 +8,7 @@ use App\Persistence\Entity\GarageApp;
 use App\Service\Command\PathService;
 use App\Toolbox\File\CSV;
 use Doctrine\DBAL\Exception;
+use RuntimeException;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Filesystem\Filesystem;
 
@@ -25,31 +26,31 @@ trait MigrationCommand
         $fs = new Filesystem();
 
         if ($fs->exists($filepath)) {
-            // Read CSV File
+            ### Read CSV File
             $records = CSV::FileToArray($filepath);
 
-            // Progress Bar Start
+            ### Progress Bar Start
             $io->progressStart(count($records));
 
-            // Handling
+            ### Handling
             foreach ($records as $record) {
-                // Progress Bar +1
+                ### Progress Bar +1
                 $io->progressAdvance();
 
-                // Create Entity
+                ### Create Entity
                 $entity = $this->createEntity($record);
 
-                // Persist Entity
+                ### Persist Entity
                 $this->entityManager->persist($entity);
             }
 
-            // Progress Bar Stop
+            ### Progress Bar Stop
             $io->progressFinish();
 
             $connection = $this->entityManager->getConnection();
             $connection->beginTransaction();
             try {
-                // Flush
+                ### Flush
                 $this->entityManager->flush();
                 $this->entityManager->clear();
                 $connection->commit();
@@ -57,12 +58,13 @@ trait MigrationCommand
                 $io->newLine(3);
                 $this->logger->error('Erreur lors du flush');
                 $this->logger->error($e->getMessage());
-                $this->logger->error('Class : ' . __CLASS__);
-                $this->logger->error('CSV   : ' . $filepath);
-                // Rollback
+                $this->logger->error('Class    :    ' . __CLASS__);
+                $this->logger->error('CSV      :    ' . $filepath);
+                ### Rollback
                 $connection->rollback();
             }
         } else {
+            echo $filepath . PHP_EOL;
             throw new \RuntimeException('CSV File does not exist');
         }
     }
@@ -75,23 +77,23 @@ trait MigrationCommand
      */
     public function makeAnExport(string $root): void
     {
-        // Get Datas from Database
+        ### Get Datas from Database
         $rows = $this->repository->export();
 
-        // Get FolderPath
+        ### Get FolderPath
         $path = PathService::makeDirectory($root, self::$folder, true);
 
-        // Get FilerPath
+        ### Get FilerPath
         $csv = $path . DIRECTORY_SEPARATOR . self::$file;
 
-        // Make File
+        ### Make File
         try {
             CSV::ArrayToFile($csv, $this->getHeader(), $rows);
         } catch (\Exception $e) {
             $this->logger->error('Erreur lors de la création du CSV');
             $this->logger->error($e->getMessage());
-            $this->logger->error('Class : ' . __CLASS__);
-            $this->logger->error('CSV   : ' . $csv);
+            $this->logger->error('Class    :    ' . __CLASS__);
+            $this->logger->error('CSV      :    ' . $csv);
         }
     }
 
@@ -101,6 +103,14 @@ trait MigrationCommand
      */
     public function findGarage(array $datas): GarageApp
     {
+        if (is_null($datas['Brand'])) {
+            throw new RuntimeException('Brand cannot be null :: ' . $datas['Brand']);
+        }
+
+        if (is_null($datas['Model'])) {
+            throw new RuntimeException('Model cannot be null :: ' . $datas['Brand']);
+        }
+
         return $this->entityManager->getRepository(GarageApp::class)->findByBrandAndModel($datas['Brand'], $datas['Model']);
     }
 

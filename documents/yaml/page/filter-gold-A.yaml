@@ -11,7 +11,7 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 14, gameUpdate: 0, model: 'Viper GTS', slug: dodge-viper-gts, settingBrand: { name: Dodge }, settingClass: { value: A } }
+    garage: { id: 15, gameUpdate: 0, model: 'Viper GTS', slug: dodge-viper-gts, settingBrand: { name: Dodge }, settingClass: { value: A } }
 -
     unblock: true
     gold: true
@@ -25,7 +25,7 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 29, gameUpdate: 0, model: 'Aventador SV Coupé', slug: lamborghini-aventador-sv-coupe, settingBrand: { name: Lamborghini }, settingClass: { value: A } }
+    garage: { id: 32, gameUpdate: 0, model: 'Aventador SV Coupé', slug: lamborghini-aventador-sv-coupe, settingBrand: { name: Lamborghini }, settingClass: { value: A } }
 -
     unblock: true
     gold: true
@@ -39,7 +39,7 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 37, gameUpdate: 0, model: 'GT-R Nismo', slug: nissan-gt-r-nismo, settingBrand: { name: Nissan }, settingClass: { value: A } }
+    garage: { id: 38, gameUpdate: 0, model: 'GT-R Nismo', slug: nissan-gt-r-nismo, settingBrand: { name: Nissan }, settingClass: { value: A } }
 -
     unblock: true
     gold: true
@@ -53,7 +53,7 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 43, gameUpdate: 0, model: '918 Spyder', slug: porsche-918-spyder, settingBrand: { name: Porsche }, settingClass: { value: A } }
+    garage: { id: 41, gameUpdate: 0, model: '918 Spyder', slug: porsche-918-spyder, settingBrand: { name: Porsche }, settingClass: { value: A } }
 -
     unblock: true
     gold: true
@@ -95,14 +95,14 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 63, gameUpdate: 6, model: 'LaFerrari Aperta', slug: ferrari-laferrari-aperta, settingBrand: { name: Ferrari }, settingClass: { value: A } }
+    garage: { id: 64, gameUpdate: 6, model: '812 Superfast', slug: ferrari-812-superfast, settingBrand: { name: Ferrari }, settingClass: { value: A } }
 -
     unblock: true
     gold: true
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 64, gameUpdate: 6, model: '812 Superfast', slug: ferrari-812-superfast, settingBrand: { name: Ferrari }, settingClass: { value: A } }
+    garage: { id: 63, gameUpdate: 6, model: 'LaFerrari Aperta', slug: ferrari-laferrari-aperta, settingBrand: { name: Ferrari }, settingClass: { value: A } }
 -
     unblock: true
     gold: true
@@ -123,7 +123,7 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 90, gameUpdate: 11, model: '911 GT2 RS Clubsport', slug: porsche-911-gt2-rs-clubsport, settingBrand: { name: Porsche }, settingClass: { value: A } }
+    garage: { id: 89, gameUpdate: 11, model: '911 GT2 RS Clubsport', slug: porsche-911-gt2-rs-clubsport, settingBrand: { name: Porsche }, settingClass: { value: A } }
 -
     unblock: true
     gold: true
@@ -144,6 +144,13 @@
     evo: false
     eventClass: false
     toUpgrade: false
+    garage: { id: 163, gameUpdate: 23, model: 'Senna GTR', slug: mclaren-senna-gtr, settingBrand: { name: McLaren }, settingClass: { value: A } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
     garage: { id: 196, gameUpdate: 28, model: 9X8, slug: peugeot-9x8, settingBrand: { name: Peugeot }, settingClass: { value: A } }
 -
     unblock: true
@@ -151,11 +158,18 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 215, gameUpdate: 31, model: '935 (2019)', slug: porsche-935-2019, settingBrand: { name: Porsche }, settingClass: { value: A } }
+    garage: { id: 216, gameUpdate: 31, model: '935 (2019)', slug: porsche-935-2019, settingBrand: { name: Porsche }, settingClass: { value: A } }
 -
     unblock: true
     gold: true
     evo: false
-    eventClass: true
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 261, gameUpdate: 39, model: 'Battista Edizione Nino Farina', slug: automobili-pininfarina-battista-edizione-nino-farina, settingBrand: { name: 'Automobili Pininfarina' }, settingClass: { value: A } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
     toUpgrade: false
     garage: { id: 265, gameUpdate: 39, model: 'Vision One-Eleven', slug: mercedes-benz-vision-one-eleven, settingBrand: { name: Mercedes-Benz }, settingClass: { value: A } }

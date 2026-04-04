@@ -9,9 +9,6 @@
     {% endblock %}
 
 <main class="{% block mainClass %}{{ container|default('container') }}{% endblock %} h-100">
-    {% block breadcrumb %}
-        {% include '@App/partials/front/breadcrumb.html.twig' %}
-    {% endblock %}
 
     {% block content %}{% endblock %}
 </main>

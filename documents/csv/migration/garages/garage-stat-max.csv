@@ -10,6 +10,7 @@ Apollo	N	374.1	80.32	58.13	60.57	143.28
 Arash	AF10	337	78.73	50.41	59.6	131.44
 Arash	AF8 Falcon Édition	332.6	76.74	66.01	76.94	138.07
 Arash	Imperium	535.3	89.83	55.36	33.57	178.52
+Ares	Panther	0	0	0	0	0
 Ares	S1	307.8	89.55	78.93	68.93	136.3
 Arrinera	Hussarya 33	352.1	78.53	59.47	47.71	134.45
 Artega	Scalo Superelletra	338.7	78.28	48.14	62.98	132.03
@@ -32,7 +33,7 @@ ATS Automobili	Corsa RRTurbo	321.7	87.51	51.19	52.48	128.22
 ATS Automobili	GT	391.1	81.47	52.12	46.85	142.89
 Automobili Pininfarina	B95	395.9	85.93	60.35	45.07	146.81
 Automobili Pininfarina	Battista	368.5	88.49	80.45	78.26	153.93
-Automobili Pininfarina	Battista Edizione Nino Farina	362.6	88.29	61	42.38	138.57
+Automobili Pininfarina	Battista Edizione Nino Farina	365.4	89.37	64.44	45.9	141.28
 Bentley	Continental GT Speed	348.3	76.55	74.23	59.35	139.61
 Bentley	Continental GT3	300.8	74.74	72.52	50.79	124.71
 Bentley	Mulliner Bacalar	340.4	77.38	67.26	55.86	135.23
@@ -81,6 +82,8 @@ DS Automobiles	DS E-Tense	270.1	76.07	81.27	72.3	124.94
 DS Automobiles	E-TENSE Performance	303.8	86.03	46.54	53.59	122.49
 Exotic Rides	W70	329.7	80.21	45.2	56.71	127.96
 Faraday Future	FFZero1	423	86.06	42.83	51.7	150.9
+Ferrante Design	Elytron	0	0	0	0	0
+Ferrari	12 Cilindri	0	0	0	0	0
 Ferrari	296 GTB	341.6	81.23	65	52.13	134.99
 Ferrari	488 GTB	347.6	80.24	48.38	65.84	135.52
 Ferrari	488 GTB Challenge EVO	351.2	82.76	77.11	76.98	147.01
@@ -167,6 +170,7 @@ Lamborghini	Egoista	366.4	84.48	61.54	72.02	146.11
 Lamborghini	Essenza SCV12	340.8	85.1	75.84	74.27	144
 Lamborghini	Gallardo LP560-4	340.7	76.56	75.81	59.69	138.19
 Lamborghini	Huracán Evo Spyder	344	84.31	75.97	82.43	146.68
+Lamborghini	Huracán Sterrato	0	0	0	0	0
 Lamborghini	Huracán STO	320.3	85.88	73.05	57.09	134.08
 Lamborghini	Huracán Super Trofeo Evo	303.7	82.89	63.48	54.41	126.12
 Lamborghini	Invencible	340.4	88.49	75.74	67.64	143.07
@@ -223,6 +227,7 @@ Mercedes-Benz	2022 Showcar Vision AMG	335.1	75.36	51.75	59.32	130.38
 Mercedes-Benz	AMG GT Black Series	335.7	81.79	60.83	65.62	135.99
 Mercedes-Benz	AMG GT S	317.9	78.22	86.5	60.57	135.8
 Mercedes-Benz	C 63 AMG DTM	322.1	80.81	72.85	68.98	136.19
+Mercedes-Benz	C11	0	0	0	0	0
 Mercedes-Benz	CLK-GTR	332.7	78.92	70.49	57.24	134.84
 Mercedes-Benz	Mercedes-AMG ONE	362.4	81.53	76.78	77.12	149.46
 Mercedes-Benz	Silver Lightning	392.6	83.03	76.07	54.32	151.51
@@ -260,11 +265,15 @@ Porsche	911 50 Years Porsche Design	312.6	79.72	84.61	70.45	136.85
 Porsche	911 Carrera RS 3.8	296.9	70.52	65.24	35.55	117.05
 Porsche	911 GT1 Evolution	329.8	75.15	53.7	68.88	131.88
 Porsche	911 GT2 RS Clubsport	356.9	83.64	85.42	73.65	149.9
+Porsche	911 GT3 R rennsport	0	0	0	0	0
 Porsche	911 GT3 RS	339.4	85.84	92.97	86.39	151.15
 Porsche	911 GTS Coupé	328.8	71.21	45.85	56.6	125.62
 Porsche	911 Targa 4S	315.1	75.37	41.57	38.35	117.6
 Porsche	911 Turbo 50 Years	343.5	82.94	53.72	59.39	134.89
+Porsche	917 Living Legend	0	0	0	0	0
 Porsche	918 Spyder	362.4	83.02	51.79	79.96	144.29
+Porsche	918 Spyder Asphalt Edition	0	0	0	0	0
+Porsche	919 Street	0	0	0	0	0
 Porsche	935 (2019)	352	84.94	87.96	72.61	149.38
 Porsche	935 Dragonforce Edition	366.8	79.23	76.05	75.55	149.41
 Porsche	Boxster 25th Anniversary	298.4	71.92	45.93	53.86	117.53

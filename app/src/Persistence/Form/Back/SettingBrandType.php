@@ -25,7 +25,7 @@ class SettingBrandType extends AbstractType
                     'class' => null,
                     'max' => 64,
                 ],
-                'label' => 'form.brand',
+                'label' => 'text.brand',
                 'required' => true,
                 'trim' => true,
             ])
@@ -35,7 +35,7 @@ class SettingBrandType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.carsNumber',
+				'label' => 'text.number',
 				'required' => true,
 				'trim' => true,
 			])
@@ -47,7 +47,7 @@ class SettingBrandType extends AbstractType
         $resolver->setDefaults([
             'data_class' => SettingBrand::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

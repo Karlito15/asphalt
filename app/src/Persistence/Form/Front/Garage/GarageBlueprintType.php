@@ -70,7 +70,6 @@ class GarageBlueprintType extends AbstractType
         $resolver->setDefaults([
             'data_class' => GarageBlueprint::class,
             'allow_extra_fields' => true,
-//            'translation_domain' => 'forms',
             'translation_domain' => false,
         ]);
     }
@@ -82,7 +81,7 @@ class GarageBlueprintType extends AbstractType
     {
         return [
             'autocomplete' => 'off',
-            'class'        => 'text-start fw-bolder m-0 px-3 py-0 form-control-sm',
+            'class'        => 'fw-bolder text-center form-control',
             'max'          => 99,
             'min'          => 0,
         ];

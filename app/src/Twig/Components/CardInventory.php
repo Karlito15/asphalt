@@ -13,13 +13,19 @@ use Symfony\UX\TwigComponent\Attribute\{AsTwigComponent, PreMount};
 final class CardInventory
 {
     /** @var int */
-    public int $maxValue = 9;
-
-    /** @var string */
-    public string $color = 'primary';
+    public int $maxValue      = 999999999;
 
     /** @var string|null */
-    public string|null $icon = null;
+    public string|null $title = null;
+
+    /** @var string|null */
+    public string|null $theme = null;
+
+    /** @var string|null */
+    public string|null $icon  = null;
+
+    /** @var bool */
+    public bool $show         = false;
 
     public FormView $form;
 
@@ -27,28 +33,25 @@ final class CardInventory
     public function preMount(array $data): array
     {
         ### Ajoute une valeur par défaut si absente
-        if (!isset($data['color'])) {
-            $data['color'] = 'info';
+        if (!isset($data['theme'])) {
+            $data['theme'] = 'secondary';
         }
 
         ### Normalise une valeur
-        if (isset($data['color'])) {
+        if (isset($data['theme'])) {
             $types = [
-                'info',
-                'success',
-                'warning',
-                'danger',
                 'primary',
                 'secondary',
-                'info-emphasis',
-                'success-emphasis',
-                'warning-emphasis',
-                'danger-emphasis'
+                'body-tertiary',
+                'credit',
+                'token',
+                'epic',
+                'overlock',
+                'gauntlet',
+                'style',
+                'vip'
             ];
-            $data['color'] = in_array($data['color'], $types, true)
-                ? $data['color']
-                : 'info'
-            ;
+            $data['theme'] = in_array($data['theme'], $types, true) ? $data['theme'] : 'secondary';
         }
 
         if (is_string($data['maxValue'])) {
@@ -57,30 +60,94 @@ final class CardInventory
 
         $resolver = new OptionsResolver();
         $resolver
-            ->setRequired(['maxValue', 'color', 'icon', 'form'])
+            // Required
+            ->setRequired(['maxValue', 'form'])
+
+            // Optionnel avec default
+            ->setDefault('maxValue', 0)
             ->setAllowedTypes('maxValue', 'int')
-            ->setAllowedTypes('color', 'string')
+            ->setDefault('title', null)
+            ->setAllowedTypes('title', ['null', 'string'])
+            ->setDefault('theme', null)
+            ->setAllowedTypes('theme', ['null', 'string'])
+            ->setDefault('icon', null)
             ->setAllowedTypes('icon', ['null', 'string'])
+            ->setDefault('show', false)
+            ->setAllowedTypes('show', ['boolean'])
+            ->setDefault('form', '')
             ->setAllowedTypes('form', FormView::class)
-        ;
+    ;
 
         return $resolver->resolve($data);
     }
 
-    /** @return string */
-    public function getColor(): string
+    public function getMaxValue(): int
     {
-        return 'text-' . $this->color;
+        return $this->maxValue;
     }
 
-    /** @return string */
+    public function setMaxValue(int $maxValue): void
+    {
+        $this->maxValue = $maxValue;
+    }
+
+    public function getTheme(): string
+    {
+        ### default icon
+        if (is_null($this->theme)) {
+            return 'text-bg-primary';
+        }
+
+        return 'text-' . $this->theme;
+    }
+
+    public function setTheme(string $theme): void
+    {
+        $this->theme = $theme;
+    }
+
     public function getIcon(): string
     {
         ### default icon
         if (is_null($this->icon)) {
-            return '<i class="fa-solid fa-diamond fa-2x '. $this->getColor() . '"></i>';
+            return '<i class="fa-solid fa-diamond fa-2x"></i>';
         }
 
-        return '<i class="fa-solid ' . $this->icon . ' fa-3x ' . $this->getColor() . '"></i>';
+        return '<i class="fa-solid ' . $this->icon . ' fa-2x"></i>';
+    }
+
+    public function setIcon(?string $icon): void
+    {
+        $this->icon = $icon;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(?string $title): void
+    {
+        $this->title = $title;
+    }
+
+    public function isShow(): bool
+    {
+        return $this->show;
+    }
+
+    public function setShow(bool $show): void
+    {
+        $this->show = $show;
+    }
+
+    public function getForm(): FormView
+    {
+        return $this->form;
+    }
+
+    public function setForm(FormView $form): void
+    {
+        $this->form = $form;
     }
 }

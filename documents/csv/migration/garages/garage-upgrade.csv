@@ -7,9 +7,10 @@ Apex	AP-0	12	12	12	12	32	20	8
 Apollo	EVO	0	0	0	0	0	0	0
 Apollo	IE	12	12	12	12	32	20	8
 Apollo	N	12	12	12	12	32	20	8
-Arash	AF10	11	11	11	11	24	16	4
+Arash	AF10	11	11	11	11	24	16	8
 Arash	AF8 Falcon Édition	0	0	0	0	0	0	0
 Arash	Imperium	3	3	3	3	8	0	0
+Ares	Panther	0	0	0	0	0	0	0
 Ares	S1	12	12	12	12	36	16	8
 Arrinera	Hussarya 33	12	12	12	12	36	16	8
 Artega	Scalo Superelletra	11	11	11	11	24	12	4
@@ -32,7 +33,7 @@ ATS Automobili	Corsa RRTurbo	11	11	11	11	24	12	2
 ATS Automobili	GT	2	2	2	2	0	0	0
 Automobili Pininfarina	B95	4	4	4	4	8	0	0
 Automobili Pininfarina	Battista	13	13	13	13	28	20	16
-Automobili Pininfarina	Battista Edizione Nino Farina	9	10	9	9	20	10	1
+Automobili Pininfarina	Battista Edizione Nino Farina	13	13	13	13	24	20	16
 Bentley	Continental GT Speed	0	0	0	0	0	0	0
 Bentley	Continental GT3	11	11	11	11	28	8	1
 Bentley	Mulliner Bacalar	11	10	10	10	28	9	0
@@ -79,12 +80,14 @@ Donkervoort	D8 GTO	0	0	0	0	0	0	0
 Drako	GTE	4	4	4	4	8	0	0
 DS Automobiles	DS E-Tense	10	10	10	10	20	4	0
 DS Automobiles	E-TENSE Performance	8	8	8	8	18	2	0
-Exotic Rides	W70	11	11	11	11	24	16	4
+Exotic Rides	W70	10	10	10	10	24	4	4
 Faraday Future	FFZero1	0	0	0	0	0	0	0
+Ferrante Design	Elytron	0	0	0	0	0	0	0
+Ferrari	12 Cilindri	0	0	0	0	0	0	0
 Ferrari	296 GTB	12	12	12	12	36	16	8
 Ferrari	488 GTB	11	11	11	11	24	16	8
 Ferrari	488 GTB Challenge EVO	13	13	13	13	32	20	2
-Ferrari	499P Modificata	4	4	4	4	12	0	0
+Ferrari	499P Modificata	13	13	13	13	28	20	14
 Ferrari	599XX EVO	12	12	12	12	36	16	1
 Ferrari	812 Superfast	12	12	12	12	24	20	12
 Ferrari	Daytona SP3	10	10	10	10	24	2	2
@@ -101,7 +104,7 @@ Ferrari	LaFerrari Aperta	13	13	13	13	24	20	16
 Ferrari	Monza SP1	11	11	11	11	24	12	4
 Ferrari	Roma	9	9	9	9	20	16	2
 Ferrari	SF90 Stradale	13	13	13	13	28	20	16
-Ferrari	SF90 XX Stradale	2	2	2	2	0	0	0
+Ferrari	SF90 XX Stradale	8	8	8	8	20	8	0
 Ford	GT	11	11	11	11	24	16	8
 Ford	GT Frankie Edition	2	2	2	2	0	0	0
 Ford	GT MK II	9	9	9	9	24	14	0
@@ -136,7 +139,7 @@ Infiniti	Projet Black S	6	9	6	6	16	2	0
 Italdesign	DaVinci	4	4	4	4	12	0	0
 Italdesign	Zerouno	11	11	11	11	24	16	8
 Jaguar	C-X75	3	3	3	3	6	0	0
-Jaguar	F-Type SVR	10	10	10	10	24	4	8
+Jaguar	F-Type SVR	11	11	11	11	24	16	8
 Jaguar	XE SV Project 8	0	0	0	0	0	0	0
 Jaguar	XJ220S TWR	0	0	0	0	0	0	0
 Jaguar	XJR-15	0	0	0	0	0	0	0
@@ -155,7 +158,7 @@ Koenigsegg	One:1	0	0	0	0	0	0	0
 Koenigsegg	Regera	13	13	13	13	28	20	16
 KTM	X-Bow GTX	5	6	5	5	12	0	0
 Lamborghini	Asterion	11	11	11	11	24	16	5
-Lamborghini	Autentica	3	3	3	3	12	0	0
+Lamborghini	Autentica	9	9	9	9	24	0	0
 Lamborghini	Aventador J	12	12	12	12	24	20	12
 Lamborghini	Aventador SV Coupé	12	12	12	12	24	20	12
 Lamborghini	Aventador SVJ Roadster	7	7	7	7	16	4	0
@@ -165,8 +168,9 @@ Lamborghini	Countach LPI 800-4	10	10	10	10	20	10	0
 Lamborghini	Diablo GT	8	8	8	8	24	2	0
 Lamborghini	Egoista	13	13	13	13	28	20	16
 Lamborghini	Essenza SCV12	12	12	12	12	32	20	8
-Lamborghini	Gallardo LP560-4	12	12	12	12	36	16	4
+Lamborghini	Gallardo LP560-4	12	12	12	12	36	16	8
 Lamborghini	Huracán Evo Spyder	12	12	12	12	32	20	8
+Lamborghini	Huracán Sterrato	0	0	0	0	0	0	0
 Lamborghini	Huracán STO	0	0	0	0	0	0	0
 Lamborghini	Huracán Super Trofeo Evo	12	12	12	12	32	16	7
 Lamborghini	Invencible	12	12	12	12	32	20	8
@@ -207,7 +211,7 @@ McLaren	570S Spider	13	13	13	13	24	20	16
 McLaren	600LT Spider	12	12	12	12	32	20	2
 McLaren	650S GT3	7	7	7	7	16	4	0
 McLaren	750S Coupé	0	0	0	0	0	0	0
-McLaren	765LT	3	3	3	3	10	0	0
+McLaren	765LT	6	6	6	6	20	2	0
 McLaren	Artura	6	6	6	6	12	0	0
 McLaren	Elva	9	9	9	9	26	12	0
 McLaren	F1 LM	13	13	13	13	32	20	12
@@ -215,7 +219,7 @@ McLaren	GT	12	12	12	12	36	16	8
 McLaren	P1	12	12	12	12	24	20	12
 McLaren	Sabre	13	13	13	13	24	20	6
 McLaren	Senna	13	13	13	13	28	20	14
-McLaren	Senna GTR	8	8	8	8	18	6	0
+McLaren	Senna GTR	12	12	12	12	24	20	12
 McLaren	Solus GT	12	12	12	12	32	20	2
 McLaren	Speedtail	12	12	12	12	26	16	4
 McMurtry	Spéirling	7	7	7	7	12	0	0
@@ -223,6 +227,7 @@ Mercedes-Benz	2022 Showcar Vision AMG	9	9	8	8	22	7	0
 Mercedes-Benz	AMG GT Black Series	12	12	12	12	36	16	8
 Mercedes-Benz	AMG GT S	10	10	10	10	16	4	4
 Mercedes-Benz	C 63 AMG DTM	3	3	3	3	8	0	0
+Mercedes-Benz	C11	0	0	0	0	0	0	0
 Mercedes-Benz	CLK-GTR	7	7	7	7	12	0	0
 Mercedes-Benz	Mercedes-AMG ONE	10	10	10	10	20	16	1
 Mercedes-Benz	Silver Lightning	10	10	10	10	20	16	2
@@ -241,11 +246,11 @@ Nissan	GTR-50 Italdesign	12	12	12	12	32	20	8
 Nissan	Leaf Nismo RC	10	10	10	10	20	4	0
 Nissan	R390 GT1	8	8	8	8	26	6	0
 Nissan	Z GT4	10	10	10	10	26	8	0
-Noble	M600 Speedster	6	6	6	6	12	4	0
+Noble	M600 Speedster	8	8	8	8	20	8	0
 Pagani	Huayra BC	13	13	13	13	24	20	16
 Pagani	Huayra R	6	6	6	6	10	0	0
 Pagani	Imola	12	12	12	12	20	18	1
-Pagani	Utopia Coupé	0	0	0	0	0	0	0
+Pagani	Utopia Coupé	5	5	5	5	12	0	0
 Pagani	Zonda Cinque	3	3	3	3	12	0	0
 Pagani	Zonda HP Barchetta	12	12	12	12	24	20	0
 Pagani	Zonda R	5	5	5	5	12	0	0
@@ -260,11 +265,15 @@ Porsche	911 50 Years Porsche Design	4	4	4	0	7	0	0
 Porsche	911 Carrera RS 3.8	0	0	0	0	0	0	0
 Porsche	911 GT1 Evolution	11	11	11	11	24	12	0
 Porsche	911 GT2 RS Clubsport	13	13	13	13	24	20	16
+Porsche	911 GT3 R rennsport	0	0	0	0	0	0	0
 Porsche	911 GT3 RS	13	13	13	13	32	20	12
 Porsche	911 GTS Coupé	10	10	10	10	24	4	4
 Porsche	911 Targa 4S	11	11	11	11	28	8	4
 Porsche	911 Turbo 50 Years	0	0	0	0	0	0	0
+Porsche	917 Living Legend	0	0	0	0	0	0	0
 Porsche	918 Spyder	12	12	12	12	24	20	12
+Porsche	918 Spyder Asphalt Edition	0	0	0	0	0	0	0
+Porsche	919 Street	0	0	0	0	0	0	0
 Porsche	935 (2019)	13	13	13	13	24	20	16
 Porsche	935 Dragonforce Edition	0	0	0	0	0	0	0
 Porsche	Boxster 25th Anniversary	2	2	2	2	0	0	0
@@ -283,11 +292,11 @@ Renault	R.S. 01	12	12	12	12	36	16	8
 Renault	TreZor	9	9	8	9	23	1	0
 Rezvani	Beast X	11	11	11	11	24	12	4
 Rimac	C TWO	0	0	0	0	0	0	0
-Rimac	Concept S	3	3	3	3	4	0	0
+Rimac	Concept S	4	4	4	4	8	0	0
 Rimac	Concept_One	4	4	4	5	12	0	0
 Rimac	Nevera	6	6	6	6	16	4	0
 Rimac	Nevera R	3	3	3	3	8	0	0
-Rimac	Nevera Time Attack	13	13	13	13	28	20	8
+Rimac	Nevera Time Attack	13	13	13	13	28	20	10
 Saleen	S1	7	7	7	7	20	2	0
 Saleen	S7 Twin Turbo	3	3	3	3	12	0	0
 Sin	R1 550	12	12	12	12	32	20	8
@@ -300,7 +309,7 @@ Torino Design	Super Sport	8	8	8	8	24	8	0
 Toroidion	1MW	0	0	0	0	0	0	0
 Toyota	GR Super Sport Concept	3	3	3	3	10	0	0
 Toyota	GR Supra 2023	7	7	7	7	16	0	0
-Toyota	GR Supra Racing Concept	5	5	5	5	8	0	0
+Toyota	GR Supra Racing Concept	7	7	7	7	12	0	0
 Trion	Nemesis	13	13	13	13	28	20	16
 Tushek	Aeon E	0	0	0	0	0	0	0
 Tushek	TS 900 Racer Pro	0	0	0	0	0	0	0

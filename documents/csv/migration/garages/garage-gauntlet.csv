@@ -10,6 +10,7 @@ Apollo	N	9	9	9	9	0
 Arash	AF10	9	9	9	9	0
 Arash	AF8 Falcon Édition	9	9	9	9	0
 Arash	Imperium	9	9	9	9	0
+Ares	Panther	NULL	NULL	NULL	NULL	NULL
 Ares	S1	9	9	9	9	0
 Arrinera	Hussarya 33	9	9	9	9	0
 Artega	Scalo Superelletra	9	9	9	9	0
@@ -81,6 +82,8 @@ DS Automobiles	DS E-Tense	9	9	9	9	0
 DS Automobiles	E-TENSE Performance	9	9	9	9	0
 Exotic Rides	W70	9	9	9	9	0
 Faraday Future	FFZero1	9	9	9	9	0
+Ferrante Design	Elytron	NULL	NULL	NULL	NULL	NULL
+Ferrari	12 Cilindri	NULL	NULL	NULL	NULL	NULL
 Ferrari	296 GTB	9	9	9	9	0
 Ferrari	488 GTB	9	9	9	9	0
 Ferrari	488 GTB Challenge EVO	9	9	9	9	0
@@ -167,6 +170,7 @@ Lamborghini	Egoista	9	9	9	9	0
 Lamborghini	Essenza SCV12	9	9	9	9	0
 Lamborghini	Gallardo LP560-4	9	9	9	9	0
 Lamborghini	Huracán Evo Spyder	9	9	9	9	0
+Lamborghini	Huracán Sterrato	NULL	NULL	NULL	NULL	NULL
 Lamborghini	Huracán STO	9	9	9	9	0
 Lamborghini	Huracán Super Trofeo Evo	9	9	9	9	0
 Lamborghini	Invencible	9	9	9	9	0
@@ -223,6 +227,7 @@ Mercedes-Benz	2022 Showcar Vision AMG	9	9	9	9	0
 Mercedes-Benz	AMG GT Black Series	9	9	9	9	0
 Mercedes-Benz	AMG GT S	9	9	9	9	0
 Mercedes-Benz	C 63 AMG DTM	NULL	NULL	NULL	NULL	NULL
+Mercedes-Benz	C11	NULL	NULL	NULL	NULL	NULL
 Mercedes-Benz	CLK-GTR	9	9	9	9	0
 Mercedes-Benz	Mercedes-AMG ONE	9	9	9	9	0
 Mercedes-Benz	Silver Lightning	9	9	9	9	0
@@ -260,11 +265,15 @@ Porsche	911 50 Years Porsche Design	9	9	9	9	0
 Porsche	911 Carrera RS 3.8	9	9	9	9	0
 Porsche	911 GT1 Evolution	9	9	9	9	0
 Porsche	911 GT2 RS Clubsport	9	9	9	9	0
+Porsche	911 GT3 R rennsport	NULL	NULL	NULL	NULL	NULL
 Porsche	911 GT3 RS	9	9	9	9	0
 Porsche	911 GTS Coupé	9	9	9	9	0
 Porsche	911 Targa 4S	9	9	9	9	0
 Porsche	911 Turbo 50 Years	9	9	9	9	0
+Porsche	917 Living Legend	NULL	NULL	NULL	NULL	NULL
 Porsche	918 Spyder	9	9	9	9	0
+Porsche	918 Spyder Asphalt Edition	NULL	NULL	NULL	NULL	NULL
+Porsche	919 Street	NULL	NULL	NULL	NULL	NULL
 Porsche	935 (2019)	9	9	9	9	0
 Porsche	935 Dragonforce Edition	NULL	NULL	NULL	NULL	NULL
 Porsche	Boxster 25th Anniversary	9	9	9	9	0

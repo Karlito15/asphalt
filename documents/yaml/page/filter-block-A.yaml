@@ -18,7 +18,7 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 174, gameUpdate: 25, model: 'Countach LPI 800-4', slug: lamborghini-countach-lpi-800-4, settingBrand: { name: Lamborghini }, settingClass: { value: A } }
+    garage: { id: 175, gameUpdate: 25, model: 'Countach LPI 800-4', slug: lamborghini-countach-lpi-800-4, settingBrand: { name: Lamborghini }, settingClass: { value: A } }
 -
     unblock: false
     gold: false
@@ -30,15 +30,15 @@
     unblock: false
     gold: false
     evo: false
-    eventClass: true
-    toUpgrade: true
+    eventClass: false
+    toUpgrade: false
     garage: { id: 213, gameUpdate: 31, model: P72, slug: de-tomaso-p72, settingBrand: { name: 'De Tomaso' }, settingClass: { value: A } }
 -
     unblock: false
     gold: false
     evo: false
     eventClass: false
-    toUpgrade: false
+    toUpgrade: true
     garage: { id: 240, gameUpdate: 35, model: 'Utopia Coupé', slug: pagani-utopia-coupe, settingBrand: { name: Pagani }, settingClass: { value: A } }
 -
     unblock: false
@@ -47,3 +47,10 @@
     eventClass: false
     toUpgrade: false
     garage: { id: 321, gameUpdate: 47, model: '935 Dragonforce Edition', slug: porsche-935-dragonforce-edition, settingBrand: { name: Porsche }, settingClass: { value: A } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 330, gameUpdate: 48, model: '919 Street', slug: porsche-919-street, settingBrand: { name: Porsche }, settingClass: { value: A } }

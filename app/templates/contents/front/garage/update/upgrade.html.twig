@@ -1,14 +1,134 @@
+<div class="card mb-lg-2">
+    <!-- component HTML -->
+    <div class="card-header">
+        <h3 class="card-title">{{ 'text.upgrade'|trans|plural }}</h3>
+    </div>
+    <div class="card-body">
+        <div class="row row-cols-2">
+            <div class="col">
+                <div>
+                    {{ form_label(form.upgrade.speed) }}
+                    <output class="float-end badge text-bg-info" id="speed">{{ form.upgrade.speed.vars.value ?? 0 }}</output>
+                    {{ form_widget(form.upgrade.speed, {
+                        attr: {
+                            'oninput': 'speed.value = this.value',
+                            'max': entity.level
+                        }
+                    }) }}
+                </div>
+                <div>
+                    {{ form_label(form.upgrade.acceleration) }}
+                    <output class="float-end badge text-bg-info" id="acceleration">{{ form.upgrade.acceleration.vars.value ?? 0 }}</output>
+                    {{ form_widget(form.upgrade.acceleration, {
+                        attr: {
+                            'oninput': 'acceleration.value = this.value',
+                            'max': entity.level
+                        }
+                    }) }}
+                </div>
+                <div>
+                    {{ form_label(form.upgrade.handling) }}
+                    <output class="float-end badge text-bg-info" id="handling">{{ form.upgrade.handling.vars.value ?? 0 }}</output>
+                    {{ form_widget(form.upgrade.handling, {
+                        attr: {
+                            'oninput': 'handling.value = this.value',
+                            'max': entity.level
+                        }
+                    }) }}
+                </div>
+                <div>
+                    {{ form_label(form.upgrade.nitro) }}
+                    <output class="float-end badge text-bg-info" id="nitro">{{ form.upgrade.nitro.vars.value ?? 0 }}</output>
+                    {{ form_widget(form.upgrade.nitro, {
+                        attr: {
+                            'oninput': 'nitro.value = this.value',
+                            'max': entity.level
+                        }
+                    }) }}
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    {{ form_label(form.upgrade.common) }}
+                    <output class="float-end badge text-bg-info" id="common">{{ form.upgrade.common.vars.value ?? 0 }}</output>
+                    {{ form_widget(form.upgrade.common, {
+                        attr: {
+                            'oninput': 'common.value = this.value',
+                            'max': entity.settingLevel.common
+                        }
+                    }) }}
+                </div>
+                <div>
+                    {{ form_label(form.upgrade.rare) }}
+                    <output class="float-end badge text-bg-info" id="rare">{{ form.upgrade.rare.vars.value ?? 0 }}</output>
+                    {{ form_widget(form.upgrade.rare, {
+                        attr: {
+                            'oninput': 'rare.value = this.value',
+                            'max': entity.settingLevel.rare
+                        }
+                    }) }}
+                </div>
+                <div>
+                    {{ form_label(form.upgrade.epic) }}
+                    <output class="float-end badge text-bg-info" id="epic">{{ form.upgrade.epic.vars.value ?? 0 }}</output>
+                    {{ form_widget(form.upgrade.epic, {
+                        attr: {
+                            'oninput': 'epic.value = this.value',
+                            'max': entity.settingLevel.epic
+                        }
+                    }) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<section class="{{ container|default('container') }}">
-    <div class="row row-cols-4">
-        <div class="col">{{ form_row(form.upgrade.speed, {attr: {'max': entity.level}}) }}</div>
-        <div class="col">{{ form_row(form.upgrade.acceleration, {attr: {'max': entity.level}}) }}</div>
-        <div class="col">{{ form_row(form.upgrade.handling, {attr: {'max': entity.level}}) }}</div>
-        <div class="col">{{ form_row(form.upgrade.nitro, {attr: {'max': entity.level}}) }}</div>
-    </div>
-    <div class="row row-cols-3 mb-3">
-        <div class="col">{{ form_row(form.upgrade.common, {attr: {'max': entity.settingLevel.common}}) }}</div>
-        <div class="col">{{ form_row(form.upgrade.rare, {attr: {'max': entity.settingLevel.rare}}) }}</div>
-        <div class="col">{{ form_row(form.upgrade.epic, {attr: {'max': entity.epic}}) }}</div>
-    </div>
-</section>
+<style>
+/*.price-slider {*/
+/*    -webkit-appearance: none;*/
+/*    appearance: none;*/
+/*    width: 100%;*/
+/*    height: 8px;*/
+/*    border-radius: 999px;*/
+/*    background: #e5e7eb;*/
+/*    outline: none;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*!* Track Chrome / Safari / Edge *!*/
+/*.price-slider::-webkit-slider-runnable-track {*/
+/*    height: 8px;*/
+/*    background: #e5e7eb;*/
+/*    border-radius: 999px;*/
+/*}*/
+
+/*!* Thumb Chrome / Safari / Edge *!*/
+/*.price-slider::-webkit-slider-thumb {*/
+/*    -webkit-appearance: none;*/
+/*    appearance: none;*/
+/*    width: 22px;*/
+/*    height: 22px;*/
+/*    margin-top: -7px;*/
+/*    border: 2px solid #ffffff;*/
+/*    border-radius: 50%;*/
+/*    background: #2563eb;*/
+/*    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);*/
+/*}*/
+
+/*!* Track Firefox *!*/
+/*.price-slider::-moz-range-track {*/
+/*    height: 8px;*/
+/*    background: #e5e7eb;*/
+/*    border-radius: 999px;*/
+/*}*/
+
+/*!* Thumb Firefox *!*/
+/*.price-slider::-moz-range-thumb {*/
+/*    width: 22px;*/
+/*    height: 22px;*/
+/*    border: 2px solid #ffffff;*/
+/*    border-radius: 50%;*/
+/*    background: #2563eb;*/
+/*    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);*/
+/*}*/
+</style>

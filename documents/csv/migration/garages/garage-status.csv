@@ -7,9 +7,10 @@ Apex	AP-0	1	1	0
 Apollo	EVO	0	0	0
 Apollo	IE	1	1	0
 Apollo	N	1	1	0
-Arash	AF10	1	0	0
+Arash	AF10	1	1	0
 Arash	AF8 Falcon Édition	1	0	0
 Arash	Imperium	0	0	0
+Ares	Panther	0	0	0
 Ares	S1	1	1	0
 Arrinera	Hussarya 33	1	1	0
 Artega	Scalo Superelletra	1	1	0
@@ -32,7 +33,7 @@ ATS Automobili	Corsa RRTurbo	1	0	0
 ATS Automobili	GT	1	0	0
 Automobili Pininfarina	B95	1	0	0
 Automobili Pininfarina	Battista	1	1	0
-Automobili Pininfarina	Battista Edizione Nino Farina	1	0	0
+Automobili Pininfarina	Battista Edizione Nino Farina	1	1	0
 Bentley	Continental GT Speed	1	0	0
 Bentley	Continental GT3	1	0	0
 Bentley	Mulliner Bacalar	1	0	0
@@ -49,7 +50,7 @@ Bugatti	Centodieci	0	0	0
 Bugatti	Chiron	1	1	0
 Bugatti	Chiron Pur Sport	1	1	0
 Bugatti	Chiron Super Sport 300+	0	0	0
-Bugatti	Divo	1	0	1
+Bugatti	Divo	1	0	0
 Bugatti	EB110	1	0	0
 Bugatti	La Voiture Noire	0	0	0
 Bugatti	Mistral	1	0	0
@@ -66,7 +67,7 @@ Chrysler	ME412	0	0	0
 Citroën	DS Survolt	1	0	0
 Citroën	GT by Citroën	1	0	0
 Czinger	21C	1	0	0
-De Tomaso	P72	0	0	1
+De Tomaso	P72	0	0	0
 De Tomaso	P900	1	0	0
 Deus	Vayanne	0	0	1
 Devel	Sixteen	1	0	0
@@ -79,8 +80,10 @@ Donkervoort	D8 GTO	1	0	0
 Drako	GTE	1	0	0
 DS Automobiles	DS E-Tense	1	1	0
 DS Automobiles	E-TENSE Performance	0	0	0
-Exotic Rides	W70	1	0	0
+Exotic Rides	W70	1	1	0
 Faraday Future	FFZero1	1	0	0
+Ferrante Design	Elytron	0	0	0
+Ferrari	12 Cilindri	0	0	0
 Ferrari	296 GTB	1	1	0
 Ferrari	488 GTB	1	1	0
 Ferrari	488 GTB Challenge EVO	1	0	0
@@ -112,7 +115,7 @@ Ford	Mustang RTR Spec 5-FD	1	0	0
 Ford	Shelby GR-1	1	1	0
 Ford	Shelby GT350R	1	1	0
 Ford	Shelby Super Snake	1	0	1
-Ford	Team Fordzilla P1	1	0	1
+Ford	Team Fordzilla P1	1	0	0
 Formule E	GEN 2 Asphalt Édition	1	1	0
 Formule E	GEN 3 EVO Championship Edition	1	0	0
 FV Frangivento	Asfanè	1	0	1
@@ -126,7 +129,7 @@ Glickenhaus	007S	1	1	0
 Hennessey	Venom F5	1	0	1
 Honda	Civic Type-R	1	1	0
 HTT	Locus Pléthore LC750	1	0	0
-Hyundai	Ioniq 5 N	1	0	0
+Hyundai	Ioniq 5 N	1	0	1
 Hyundai	N Vision 74 Concept	0	0	0
 Icona	Vulcano Spyder	0	0	0
 Icona	Vulcano Titanium	1	1	0
@@ -136,7 +139,7 @@ Infiniti	Projet Black S	1	0	0
 Italdesign	DaVinci	1	0	1
 Italdesign	Zerouno	1	1	0
 Jaguar	C-X75	1	0	1
-Jaguar	F-Type SVR	1	0	0
+Jaguar	F-Type SVR	1	1	0
 Jaguar	XE SV Project 8	0	0	0
 Jaguar	XJ220S TWR	0	0	0
 Jaguar	XJR-15	1	0	1
@@ -165,8 +168,9 @@ Lamborghini	Countach LPI 800-4	0	0	0
 Lamborghini	Diablo GT	1	0	0
 Lamborghini	Egoista	1	1	0
 Lamborghini	Essenza SCV12	1	1	0
-Lamborghini	Gallardo LP560-4	1	0	0
+Lamborghini	Gallardo LP560-4	1	1	0
 Lamborghini	Huracán Evo Spyder	1	1	0
+Lamborghini	Huracán Sterrato	0	0	0
 Lamborghini	Huracán STO	0	0	0
 Lamborghini	Huracán Super Trofeo Evo	1	0	0
 Lamborghini	Invencible	1	1	0
@@ -193,7 +197,7 @@ Lexus	Electrified Sport Concept	1	0	0
 Lexus	LFA Nürburgring Package	1	0	0
 Lotus	E-R9	0	0	1
 Lotus	Elise Sprint 220	1	1	0
-Lotus	Emeya	0	0	0
+Lotus	Emeya	1	0	0
 Lotus	Emira	1	1	0
 Lotus	Evija	1	0	0
 Lotus	Evora Sport 410	1	1	0
@@ -215,7 +219,7 @@ McLaren	GT	1	1	0
 McLaren	P1	1	1	0
 McLaren	Sabre	1	0	0
 McLaren	Senna	1	0	0
-McLaren	Senna GTR	1	0	0
+McLaren	Senna GTR	1	1	0
 McLaren	Solus GT	1	0	0
 McLaren	Speedtail	1	0	0
 McMurtry	Spéirling	1	0	0
@@ -223,6 +227,7 @@ Mercedes-Benz	2022 Showcar Vision AMG	1	0	0
 Mercedes-Benz	AMG GT Black Series	1	1	0
 Mercedes-Benz	AMG GT S	1	1	0
 Mercedes-Benz	C 63 AMG DTM	0	0	0
+Mercedes-Benz	C11	0	0	0
 Mercedes-Benz	CLK-GTR	1	0	0
 Mercedes-Benz	Mercedes-AMG ONE	1	0	0
 Mercedes-Benz	Silver Lightning	1	0	0
@@ -245,7 +250,7 @@ Noble	M600 Speedster	1	0	0
 Pagani	Huayra BC	1	1	0
 Pagani	Huayra R	1	0	0
 Pagani	Imola	1	0	0
-Pagani	Utopia Coupé	0	0	0
+Pagani	Utopia Coupé	0	0	1
 Pagani	Zonda Cinque	1	0	0
 Pagani	Zonda HP Barchetta	1	0	0
 Pagani	Zonda R	1	0	0
@@ -256,15 +261,19 @@ Pininfarina	H2 Speed	1	1	0
 Pininfarina	Teorema	0	0	0
 Porsche	718 Cayman	1	1	0
 Porsche	718 Cayman GT4 Clubsport	1	1	0
-Porsche	911 50 Years Porsche Design	0	0	0
-Porsche	911 Carrera RS 3.8	1	0	0
+Porsche	911 50 Years Porsche Design	1	0	0
+Porsche	911 Carrera RS 3.8	1	0	1
 Porsche	911 GT1 Evolution	1	0	0
 Porsche	911 GT2 RS Clubsport	1	1	0
+Porsche	911 GT3 R rennsport	1	0	0
 Porsche	911 GT3 RS	1	1	0
 Porsche	911 GTS Coupé	1	1	0
 Porsche	911 Targa 4S	1	1	0
 Porsche	911 Turbo 50 Years	1	0	0
+Porsche	917 Living Legend	0	0	0
 Porsche	918 Spyder	1	1	0
+Porsche	918 Spyder Asphalt Edition	1	0	0
+Porsche	919 Street	0	0	0
 Porsche	935 (2019)	1	1	0
 Porsche	935 Dragonforce Edition	0	0	0
 Porsche	Boxster 25th Anniversary	1	0	0

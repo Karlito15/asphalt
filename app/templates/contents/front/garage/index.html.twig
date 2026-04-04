@@ -4,14 +4,14 @@
         <tr>
             <td class="{{ classes.table.td }} text-center">{{ loop.index }}</td>
             <td class="{{ classes.table.td }} text-center">{{ item.gameUpdate }}</td>
-            <td class="{{ classes.table.td }} text-center">{{ item.settingClass.value }}</td>
-            <td class="{{ classes.table.td }} text-center"><twig:ValueBoolean value="{{ item.status.unblock }}" /></td>
-            <td class="{{ classes.table.td }} text-center"><twig:ValueBoolean value="{{ item.status.gold }}" /></td>
+            <td class="{{ classes.table.td }} text-center">{{ item.class_value }}</td>
+            <td class="{{ classes.table.td }} text-center"><twig:ValueBoolean value="{{ item.status_unblock }}" /></td>
+            <td class="{{ classes.table.td }} text-center"><twig:ValueBoolean value="{{ item.status_gold }}" /></td>
             <td class="{{ classes.table.td }} text-start">
-                <a href="{{ path('app.garage.update', {id: item.id, slug: item.slug}) }}" target="_blank" class="text-decoration-none {{ _self.color(item.status.unblock, item.status.gold) }}">{{ item.settingBrand.name }}</a>
+                <a href="{{ path('app.garage.update', {id: item.id, slug: item.slug}) }}" target="_blank" class="text-decoration-none {{ _self.color(item.status_unblock, item.status_gold) }}">{{ item.brand }}</a>
             </td>
             <td class="{{ classes.table.td }} text-start">
-                <a href="{{ path('app.garage.update', {id: item.id, slug: item.slug}) }}" target="_blank" class="text-decoration-none {{ _self.color(item.status.unblock, item.status.gold) }}">{{ item.model }}</a>
+                <a href="{{ path('app.garage.update', {id: item.id, slug: item.slug}) }}" target="_blank" class="text-decoration-none {{ _self.color(item.status_unblock, item.status_gold) }}">{{ item.model }}</a>
             </td>
             <td class="{{ classes.table.td }} text-end">
                 <div class="btn-group no-padding" role="group" aria-label="{{ 'text.action'|trans }}">
@@ -58,5 +58,7 @@
         text-danger
     {% endif %}
 {% endmacro %}
+
+{% block id %} id="Garage"{% endblock %}
 
 {% extends '@App/contents/front/list.html.twig' %}

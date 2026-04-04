@@ -2,19 +2,15 @@
         <tbody>
         {% for item in entities %}
             <tr>
-                <td>{{ item.id }}</td>
-                <td>{{ item.mode.name }}</td>
-                <td>{{ item.season.chapter }}</td>
-                <td>{{ item.raceOrder }}</td>
-                <td>{{ item.season.name }}</td>
-                <td>{{ item.track.region.name }}</td>
-                <td>{{ item.track.nameEnglish }}</td>
-                <td>{{ item.track.nameFrench }}</td>
-                <td>{{ item.time.name }}</td>
-                <td>{{ item.finished }}</td>
-                <td>
-                    <a href="javascript:void(0);">update</a>
-                </td>
+                <td>{{ item.Mode }}</td>
+                <td>{{ item.Season }}</td>
+                <td>{{ item.Region }}</td>
+                <td>{{ item.English }}</td>
+                <td>{{ item.French }}</td>
+                <td>{{ item.Chapter }}</td>
+                <td>{{ item.Order }}</td>
+                <td>{{ item.Time }}</td>
+                <td>{{ item.Finished }}</td>
             </tr>
         {% else %}
             <tr>
@@ -30,19 +26,19 @@
         </tfoot>
 {% endblock %}
 
+{% block id %} id="Race"{% endblock %}
+
 {% macro legend() %}
-            <tr>
-                <th>Id</th>
+            <tr class="sticky-top">
                 <th>{{ 'text.mode'|trans }}</th>
-                <th>{{ 'text.chapter'|trans }}</th>
-                <th>{{ 'text.order.race'|trans|raw }}</th>
                 <th>{{ 'text.season'|trans }}</th>
                 <th>{{ 'text.region'|trans }}</th>
-                <th>{{ 'text.name-english'|trans|raw }}</th>
-                <th>{{ 'text.name-french'|trans|raw }}</th>
+                <th>{{ 'text.name.english'|trans|raw }}</th>
+                <th>{{ 'text.name.french'|trans|raw }}</th>
+                <th>{{ 'text.chapter'|trans }}</th>
+                <th>{{ 'text.race.order'|trans|raw }}</th>
                 <th>{{ 'text.time'|trans }}</th>
                 <th>{{ 'text.finished'|trans }}</th>
-                <th>Action</th>
             </tr>
 {% endmacro %}
 

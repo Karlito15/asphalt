@@ -7,7 +7,7 @@ parameters:
         generator:          ~
     classes:
         table:
-            default:        'table table-bordered table-striped text-light'
+            default:        'table table-bordered table-striped'
             td:             'my-0 py-0 align-middle'
         button:
             table:          'btn btn-sm btn-outline-info rounded-3 py-1 m-0'
@@ -19,13 +19,14 @@ parameters:
     ### FOLDERS
     folders.cache:          '%kernel.project_dir%/public/cache/'
     folders.csv:            '%kernel.project_dir%/../documents/csv/'
-    folders.csv.cron:       '%kernel.project_dir%/../documents/csv/cron/'
     folders.csv.database:   '%kernel.project_dir%/../documents/csv/database/'
+    folders.csv.order:      '%kernel.project_dir%/../documents/csv/order/'
     folders.yaml:           '%kernel.project_dir%/../documents/yaml/'
     folders.yaml.index:     '%kernel.project_dir%/../documents/yaml/index/'
     folders.yaml.page:      '%kernel.project_dir%/../documents/yaml/page/'
     folders.yaml.sheet:     '%kernel.project_dir%/../documents/yaml/sheet/'
     ### Headers CSV
+    csv.header.order.class:               ['Brand', 'Model','Order']
     csv.header.garage.app:                ['Brand', 'Model', 'Stars', 'GameUpdate', 'CarOrder', 'StatOrder', 'Level', 'Epic', 'Evo', 'SettingClassValue']
     csv.header.garage.blueprint:          ['Brand', 'Model', 'Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6']
     csv.header.garage.gauntlet:           ['Brand', 'Model', 'Speed', 'Acceleration', 'Handling', 'Nitro', 'Mark', 'Division']

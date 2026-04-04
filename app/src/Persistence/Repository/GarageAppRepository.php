@@ -36,6 +36,7 @@ class GarageAppRepository extends ServiceEntityRepository
     ### INDEX
 
     /**
+     * Retourne les voitures du garage
      * @return array<string, mixed>
      */
     public function getGarages(): array
@@ -204,6 +205,10 @@ class GarageAppRepository extends ServiceEntityRepository
         return $q->getQuery()->getScalarResult();
     }
 
+    public function getCarsByClass(string $class): void
+    {
+    }
+
     ### SEARCH
 
     /**
@@ -289,9 +294,10 @@ class GarageAppRepository extends ServiceEntityRepository
      */
     public function findByBrandAndModel(string $brand, string $model): GarageApp
     {
-        $brand = $this->getEntityManager()->getRepository(SettingBrand::class)->findByBrand($brand);
-
-        return $this->findOneBy(['settingBrand' => $brand, 'model' => $model]);
+        return $this->findOneBy([
+            'settingBrand' => $this->getEntityManager()->getRepository(SettingBrand::class)->findByBrand($brand),
+            'model' => $model
+        ]);
     }
 
     ### EVENTS

@@ -16,7 +16,7 @@
     unblock: false
     gold: false
     evo: false
-    eventClass: true
+    eventClass: false
     toUpgrade: true
     garage: { id: 249, gameUpdate: 37, model: E-R9, slug: lotus-e-r9, settingBrand: { name: Lotus }, settingClass: { value: B } }
 -
@@ -25,7 +25,7 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 255, gameUpdate: 38, model: 'Mustang RTR Spec 5 10th Anniversary', slug: ford-mustang-rtr-spec-5-10th-anniversary, settingBrand: { name: Ford }, settingClass: { value: B } }
+    garage: { id: 256, gameUpdate: 38, model: 'Mustang RTR Spec 5 10th Anniversary', slug: ford-mustang-rtr-spec-5-10th-anniversary, settingBrand: { name: Ford }, settingClass: { value: B } }
 -
     unblock: false
     gold: false
@@ -40,3 +40,24 @@
     eventClass: false
     toUpgrade: false
     garage: { id: 288, gameUpdate: 42, model: 'GR Super Sport Concept', slug: toyota-gr-super-sport-concept, settingBrand: { name: Toyota }, settingClass: { value: B } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 323, gameUpdate: 48, model: Panther, slug: ares-panther, settingBrand: { name: Ares }, settingClass: { value: B } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 325, gameUpdate: 48, model: '12 Cilindri', slug: ferrari-12-cilindri, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+-
+    unblock: false
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 328, gameUpdate: 48, model: '917 Living Legend', slug: porsche-917-living-legend, settingBrand: { name: Porsche }, settingClass: { value: B } }

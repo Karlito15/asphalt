@@ -24,7 +24,7 @@ class SettingBlueprintType extends AbstractType
                     'autocomplete' => 'off',
                     'max' => 3,
                 ],
-                'label' => 'form.star1',
+                'label' => 'text.star1',
                 'required' => true,
                 'trim' => true,
             ])
@@ -34,7 +34,7 @@ class SettingBlueprintType extends AbstractType
                     'max' => 99,
                     'min' => 0,
                 ],
-                'label' => 'form.star2',
+                'label' => 'text.star2',
                 'required' => true,
                 'trim' => true,
             ])
@@ -44,7 +44,7 @@ class SettingBlueprintType extends AbstractType
                     'max' => 99,
                     'min' => 0,
                 ],
-                'label' => 'form.star3',
+                'label' => 'text.star3',
                 'required' => true,
                 'trim' => true,
             ])
@@ -54,7 +54,7 @@ class SettingBlueprintType extends AbstractType
                     'max' => 99,
                     'min' => 0,
                 ],
-                'label' => 'form.star4',
+                'label' => 'text.star4',
                 'required' => false,
                 'trim' => true,
             ])
@@ -64,7 +64,7 @@ class SettingBlueprintType extends AbstractType
                     'max' => 99,
                     'min' => 0,
                 ],
-                'label' => 'form.star5',
+                'label' => 'text.star5',
                 'required' => false,
                 'trim' => true,
             ])
@@ -74,7 +74,7 @@ class SettingBlueprintType extends AbstractType
                     'max' => 99,
                     'min' => 0,
                 ],
-                'label' => 'form.star6',
+                'label' => 'text.star6',
                 'required' => false,
                 'trim' => true,
             ])
@@ -86,7 +86,7 @@ class SettingBlueprintType extends AbstractType
         $resolver->setDefaults([
             'data_class' => SettingBlueprint::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

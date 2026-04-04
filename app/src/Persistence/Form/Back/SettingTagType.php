@@ -23,7 +23,7 @@ class SettingTagType extends AbstractType
                 'attr' => [
                     'autocomplete' => 'off',
                 ],
-                'label' => 'form.value',
+                'label' => 'text.value',
                 'required' => true,
                 'trim' => true,
             ])
@@ -33,7 +33,7 @@ class SettingTagType extends AbstractType
 					'class' => null,
 					'min' => 0,
 				 ],
-				'label' => 'form.carsNumber',
+				'label' => 'text.number',
 				'required' => true,
 				'trim' => true,
 			])
@@ -45,7 +45,7 @@ class SettingTagType extends AbstractType
         $resolver->setDefaults([
             'data_class' => SettingTag::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

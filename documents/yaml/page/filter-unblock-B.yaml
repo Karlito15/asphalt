@@ -32,14 +32,14 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 19, gameUpdate: 0, model: F12TDF, slug: ferrari-f12tdf, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+    garage: { id: 19, gameUpdate: 0, model: '488 GTB', slug: ferrari-488-gtb, settingBrand: { name: Ferrari }, settingClass: { value: B } }
 -
     unblock: true
     gold: true
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 18, gameUpdate: 0, model: '488 GTB', slug: ferrari-488-gtb, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+    garage: { id: 18, gameUpdate: 0, model: F12TDF, slug: ferrari-f12tdf, settingBrand: { name: Ferrari }, settingClass: { value: B } }
 -
     unblock: true
     gold: true
@@ -67,14 +67,14 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 31, gameUpdate: 0, model: Asterion, slug: lamborghini-asterion, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+    garage: { id: 28, gameUpdate: 0, model: Asterion, slug: lamborghini-asterion, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
 -
     unblock: true
     gold: true
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 41, gameUpdate: 0, model: '911 GTS Coupé', slug: porsche-911-gts-coupe, settingBrand: { name: Porsche }, settingClass: { value: B } }
+    garage: { id: 42, gameUpdate: 0, model: '911 GTS Coupé', slug: porsche-911-gts-coupe, settingBrand: { name: Porsche }, settingClass: { value: B } }
 -
     unblock: true
     gold: true
@@ -144,7 +144,7 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 89, gameUpdate: 11, model: 'Carrera GT', slug: porsche-carrera-gt, settingBrand: { name: Porsche }, settingClass: { value: B } }
+    garage: { id: 87, gameUpdate: 11, model: 'Carrera GT', slug: porsche-carrera-gt, settingBrand: { name: Porsche }, settingClass: { value: B } }
 -
     unblock: true
     gold: false
@@ -175,18 +175,18 @@
     garage: { id: 101, gameUpdate: 14, model: AP-0, slug: apex-ap-0, settingBrand: { name: Apex }, settingClass: { value: B } }
 -
     unblock: true
-    gold: false
-    evo: false
-    eventClass: false
-    toUpgrade: false
-    garage: { id: 111, gameUpdate: 15, model: '488 GTB Challenge EVO', slug: ferrari-488-gtb-challenge-evo, settingBrand: { name: Ferrari }, settingClass: { value: B } }
--
-    unblock: true
     gold: true
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 107, gameUpdate: 15, model: 'Enzo Ferrari', slug: ferrari-enzo-ferrari, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+    garage: { id: 109, gameUpdate: 15, model: 'Enzo Ferrari', slug: ferrari-enzo-ferrari, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 108, gameUpdate: 15, model: '488 GTB Challenge EVO', slug: ferrari-488-gtb-challenge-evo, settingBrand: { name: Ferrari }, settingClass: { value: B } }
 -
     unblock: true
     gold: true
@@ -207,19 +207,19 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 130, gameUpdate: 18, model: 'Murcielago LP 640 Roadster', slug: lamborghini-murcielago-lp-640-roadster, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+    garage: { id: 129, gameUpdate: 18, model: 'Murcielago LP 640 Roadster', slug: lamborghini-murcielago-lp-640-roadster, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
 -
     unblock: true
     gold: true
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 129, gameUpdate: 18, model: 'Essenza SCV12', slug: lamborghini-essenza-scv12, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+    garage: { id: 130, gameUpdate: 18, model: 'Essenza SCV12', slug: lamborghini-essenza-scv12, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
 -
     unblock: true
     gold: true
     evo: false
-    eventClass: true
+    eventClass: false
     toUpgrade: false
     garage: { id: 136, gameUpdate: 19, model: 'W12 Coupe', slug: volkswagen-w12-coupe, settingBrand: { name: Volkswagen }, settingClass: { value: B } }
 -
@@ -245,7 +245,7 @@
     garage: { id: 144, gameUpdate: 21, model: GTE, slug: drako-gte, settingBrand: { name: Drako }, settingClass: { value: B } }
 -
     unblock: true
-    gold: false
+    gold: true
     evo: false
     eventClass: false
     toUpgrade: false
@@ -284,14 +284,14 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 173, gameUpdate: 25, model: 'Sesto Elemento', slug: lamborghini-sesto-elemento, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+    garage: { id: 176, gameUpdate: 25, model: 'Sesto Elemento', slug: lamborghini-sesto-elemento, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
 -
     unblock: true
     gold: false
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 176, gameUpdate: 25, model: 'Reventón Roadster', slug: lamborghini-reventon-roadster, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+    garage: { id: 174, gameUpdate: 25, model: 'Reventón Roadster', slug: lamborghini-reventon-roadster, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
 -
     unblock: true
     gold: false
@@ -310,7 +310,7 @@
     unblock: true
     gold: false
     evo: false
-    eventClass: true
+    eventClass: false
     toUpgrade: false
     garage: { id: 183, gameUpdate: 26, model: 'Huayra R', slug: pagani-huayra-r, settingBrand: { name: Pagani }, settingClass: { value: B } }
 -
@@ -338,7 +338,7 @@
     unblock: true
     gold: true
     evo: false
-    eventClass: true
+    eventClass: false
     toUpgrade: false
     garage: { id: 209, gameUpdate: 30, model: Revuelto, slug: lamborghini-revuelto, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
 -
@@ -394,7 +394,7 @@
     unblock: true
     gold: true
     evo: false
-    eventClass: true
+    eventClass: false
     toUpgrade: false
     garage: { id: 264, gameUpdate: 39, model: Temerario, slug: lamborghini-temerario, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
 -
@@ -445,7 +445,7 @@
     evo: false
     eventClass: false
     toUpgrade: true
-    garage: { id: 298, gameUpdate: 44, model: 'Lamborghini Revuelto', slug: lego-technic-lamborghini-revuelto, settingBrand: { name: 'Lego Technic' }, settingClass: { value: B } }
+    garage: { id: 299, gameUpdate: 44, model: 'Lamborghini Revuelto', slug: lego-technic-lamborghini-revuelto, settingBrand: { name: 'Lego Technic' }, settingClass: { value: B } }
 -
     unblock: true
     gold: false

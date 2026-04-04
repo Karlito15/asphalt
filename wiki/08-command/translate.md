@@ -1,0 +1,14 @@
+## **Translate**
+
+``` shell
+php bin/console translation:extract --force fr --domain=forms --format=yaml
+```
+``` shell
+php bin/console translation:extract --force fr --domain=security --format=yaml
+```
+``` shell
+php bin/console translation:extract --force fr --domain=validators --format=yaml
+```
+``` shell
+php bin/console translation:extract --force fr --domain=AutocompleteBundle --format=yaml
+```

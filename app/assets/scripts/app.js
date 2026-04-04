@@ -1,8 +1,9 @@
-console.clear();
+// console.clear();
 
 /*
- * Stimulus
+ * Load Stimulus
  */
+console.info('Load Stimulus');
 import './stimulus_bootstrap.js';
 /*
  * Welcome to your app's main JavaScript file!
@@ -11,16 +12,26 @@ import './stimulus_bootstrap.js';
  * which should already be in your base.html.twig.
  */
 
-// CSS
-console.info('CSS');
-import '../styles/app.css';
+/*
+ * Load CSS
+ */
+// console.info('Load CSS');
+// import '../scss/app.css';
 
 /*
  * Load HTMX
  */
+console.info('Load HTMX');
 import htmx from 'htmx.org';
 window.htmx = htmx;
 
+/*
+ * Load DataTable
+ */
+console.info('Load DataTable');
+import './datatable-garage.js';
+import './datatable-mission.js';
+import './datatable-race.js';
 
 /*
  * Bingo !

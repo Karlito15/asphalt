@@ -7,7 +7,7 @@ namespace App\Persistence\Form\Front\Garage;
 use App\Persistence\Entity\GarageUpgrade;
 use App\Toolbox\Trait\Form\DefaultType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\RangeType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -18,45 +18,45 @@ class GarageUpgradeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('speed', IntegerType::class, [
+            ->add('speed', RangeType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'form.speed',
+                'label'      => 'text.speed',
                 'label_attr' => self::labelClass(),
                 'required'   => false,
             ])
-            ->add('acceleration', IntegerType::class, [
+            ->add('acceleration', RangeType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'form.acceleration',
+                'label'      => 'text.acceleration',
                 'label_attr' => self::labelClass(),
                 'required'   => false,
             ])
-            ->add('handling', IntegerType::class, [
+            ->add('handling', RangeType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'form.handling',
+                'label'      => 'text.handling',
                 'label_attr' => self::labelClass(),
                 'required'   => false,
             ])
-            ->add('nitro', IntegerType::class, [
+            ->add('nitro', RangeType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'form.nitro',
+                'label'      => 'text.nitro',
                 'label_attr' => self::labelClass(),
                 'required'   => false,
             ])
-            ->add('common', IntegerType::class, [
+            ->add('common', RangeType::class, [
                 'attr'       => self::attrClass(36),
-                'label'      => 'form.common',
+                'label'      => 'text.common',
                 'label_attr' => self::labelClass(),
                 'required'   => false,
             ])
-            ->add('rare', IntegerType::class, [
+            ->add('rare', RangeType::class, [
                 'attr'       => self::attrClass(20),
-                'label'      => 'form.rare',
+                'label'      => 'text.rare',
                 'label_attr' => self::labelClass(),
                 'required'   => false,
             ])
-            ->add('epic', IntegerType::class, [
+            ->add('epic', RangeType::class, [
                 'attr'       => self::attrClass(16),
-                'label'      => 'form.epic',
+                'label'      => 'text.epic',
                 'label_attr' => self::labelClass(),
                 'required'   => false,
             ])
@@ -68,7 +68,7 @@ class GarageUpgradeType extends AbstractType
         $resolver->setDefaults([
             'data_class' => GarageUpgrade::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 
@@ -80,9 +80,10 @@ class GarageUpgradeType extends AbstractType
     {
         return [
             'autocomplete' => 'off',
-            'class'        => 'text-start fw-bolder m-0 px-3 py-0 form-control-sm',
+            'class'        => '',
             'max'          => $max,
             'min'          => 0,
+            'step'         => 1,
         ];
     }
 }

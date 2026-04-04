@@ -25,7 +25,7 @@ class SettingLevelType extends AbstractType
                     'max' => 13,
                     'min' => 0,
                  ],
-                'label' => 'form.level',
+                'label' => 'text.level',
                 'required' => true,
                 'trim' => true,
             ])
@@ -36,7 +36,7 @@ class SettingLevelType extends AbstractType
                     'max' => 36,
                     'min' => 0,
                  ],
-                'label' => 'form.common',
+                'label' => 'text.common',
                 'required' => true,
                 'trim' => true,
             ])
@@ -47,7 +47,7 @@ class SettingLevelType extends AbstractType
                     'max' => 20,
                     'min' => 0,
                  ],
-                'label' => 'form.rare',
+                'label' => 'text.rare',
                 'required' => true,
                 'trim' => true,
             ])
@@ -58,7 +58,7 @@ class SettingLevelType extends AbstractType
                     'max' => 16,
                     'min' => 0,
                  ],
-                'label' => 'form.epic',
+                'label' => 'text.epic',
                 'required' => true,
                 'trim' => true,
             ])
@@ -70,7 +70,7 @@ class SettingLevelType extends AbstractType
         $resolver->setDefaults([
             'data_class' => SettingLevel::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

@@ -60,4 +60,18 @@
     evo: false
     eventClass: false
     toUpgrade: true
+    garage: { id: 246, gameUpdate: 36, model: '911 Carrera RS 3.8', slug: porsche-911-carrera-rs-3-8, settingBrand: { name: Porsche }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
+    garage: { id: 284, gameUpdate: 42, model: 'Ioniq 5 N', slug: hyundai-ioniq-5-n, settingBrand: { name: Hyundai }, settingClass: { value: D } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: true
     garage: { id: 287, gameUpdate: 42, model: 'GR Supra 2023', slug: toyota-gr-supra-2023, settingBrand: { name: Toyota }, settingClass: { value: D } }

@@ -23,22 +23,22 @@ class InventoryAppType extends AbstractType
         $builder
             ->add('category', ChoiceType::class, [
                 'choices' => [
-                    'form.inventory.money'  => 'money',
-                    'form.inventory.common' => 'common',
-                    'form.inventory.rare'   => 'rare',
-                    'form.inventory.joker'  => 'joker',
+                    'text.money'  => 'money',
+                    'text.common' => 'common',
+                    'text.rare'   => 'rare',
+                    'text.joker'  => 'joker',
                 ],
-                'label' => 'form.category',
+                'label' => 'text.category',
                 'required' => true,
                 'trim' => true,
             ])
             ->add('label', TextType::class, [
-                'label' => 'form.label',
+                'label' => 'text.label',
                 'required' => true,
                 'trim' => true,
             ])
             ->add('value', NumberType::class, [
-                'label' => 'form.value',
+                'label' => 'text.value',
                 'required' => true,
                 'trim' => true,
             ])
@@ -51,12 +51,12 @@ class InventoryAppType extends AbstractType
                     'D' => 'D',
                     'S' => 'S',
                 ],
-                'label' => 'form.filter',
+                'label' => 'text.filter',
                 'required' => true,
                 'trim' => true,
             ])
             ->add('position', NumberType::class, [
-                'label' => 'form.position',
+                'label' => 'text.position',
                 'required' => true,
                 'trim' => true,
             ])
@@ -64,7 +64,7 @@ class InventoryAppType extends AbstractType
                 'attr' => [
                     'class' => 'form-check-input',
                 ],
-                'label' => 'form.active',
+                'label' => 'text.active',
                 'label_attr' => [
                     'class' => 'form-check-label'
                 ],
@@ -78,7 +78,7 @@ class InventoryAppType extends AbstractType
         $resolver->setDefaults([
             'data_class' => InventoryApp::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

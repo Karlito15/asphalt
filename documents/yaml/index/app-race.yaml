@@ -12587,7 +12587,7 @@
     French: "La Renaissance d'un Roi"
     Region: 'Le Caire'
 -
-    id: 1050
+    id: 1051
     Order: 1
     Finished: true
     slug: ch-6-ferrari-2-1-gezira-island
@@ -12599,7 +12599,7 @@
     French: 'Ile de Gezira'
     Region: 'Le Caire'
 -
-    id: 1051
+    id: 1050
     Order: 1
     Finished: true
     slug: ch-6-ferrari-2-1-the-enchanted-island

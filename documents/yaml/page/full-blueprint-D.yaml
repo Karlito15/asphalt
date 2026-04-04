@@ -1,9 +1,9 @@
 -
-    garage: { id: 5, gameUpdate: 0, model: 'Z4 LCI E89', slug: bmw-z4-lci-e89, settingBrand: { name: BMW }, settingClass: { value: D } }
+    garage: { id: 4, gameUpdate: 0, model: 'Z4 LCI E89', slug: bmw-z4-lci-e89, settingBrand: { name: BMW }, settingClass: { value: D } }
 -
-    garage: { id: 10, gameUpdate: 0, model: 'Camaro LT', slug: chevrolet-camaro-lt, settingBrand: { name: Chevrolet }, settingClass: { value: D } }
+    garage: { id: 9, gameUpdate: 0, model: 'Camaro LT', slug: chevrolet-camaro-lt, settingBrand: { name: Chevrolet }, settingClass: { value: D } }
 -
-    garage: { id: 12, gameUpdate: 0, model: 'Challenger Pack 392 Hemi Scat', slug: dodge-challenger-pack-392-hemi-scat, settingBrand: { name: Dodge }, settingClass: { value: D } }
+    garage: { id: 13, gameUpdate: 0, model: 'Challenger Pack 392 Hemi Scat', slug: dodge-challenger-pack-392-hemi-scat, settingBrand: { name: Dodge }, settingClass: { value: D } }
 -
     garage: { id: 16, gameUpdate: 0, model: 'DS E-Tense', slug: ds-automobiles-ds-e-tense, settingBrand: { name: 'DS Automobiles' }, settingClass: { value: D } }
 -
@@ -11,9 +11,9 @@
 -
     garage: { id: 36, gameUpdate: 0, model: 'Lancer Evolution', slug: mitsubishi-lancer-evolution, settingBrand: { name: Mitsubishi }, settingClass: { value: D } }
 -
-    garage: { id: 38, gameUpdate: 0, model: '37OZ Nismo', slug: nissan-37oz-nismo, settingBrand: { name: Nissan }, settingClass: { value: D } }
+    garage: { id: 37, gameUpdate: 0, model: '37OZ Nismo', slug: nissan-37oz-nismo, settingBrand: { name: Nissan }, settingClass: { value: D } }
 -
-    garage: { id: 42, gameUpdate: 0, model: '718 Cayman', slug: porsche-718-cayman, settingBrand: { name: Porsche }, settingClass: { value: D } }
+    garage: { id: 43, gameUpdate: 0, model: '718 Cayman', slug: porsche-718-cayman, settingBrand: { name: Porsche }, settingClass: { value: D } }
 -
     garage: { id: 48, gameUpdate: 0, model: 'XL Sport Concept', slug: volkswagen-xl-sport-concept, settingBrand: { name: Volkswagen }, settingClass: { value: D } }
 -
@@ -31,7 +31,7 @@
 -
     garage: { id: 84, gameUpdate: 10, model: 'Civic Type-R', slug: honda-civic-type-r, settingBrand: { name: Honda }, settingClass: { value: D } }
 -
-    garage: { id: 87, gameUpdate: 11, model: 'Taycan Turbo S', slug: porsche-taycan-turbo-s, settingBrand: { name: Porsche }, settingClass: { value: D } }
+    garage: { id: 90, gameUpdate: 11, model: 'Taycan Turbo S', slug: porsche-taycan-turbo-s, settingBrand: { name: Porsche }, settingClass: { value: D } }
 -
     garage: { id: 98, gameUpdate: 13, model: 'Corvette C7.R', slug: chevrolet-corvette-c7-r, settingBrand: { name: Chevrolet }, settingClass: { value: D } }
 -
@@ -66,5 +66,9 @@
     garage: { id: 220, gameUpdate: 32, model: '370Z Édition Néon', slug: nissan-370z-edition-neon, settingBrand: { name: Nissan }, settingClass: { value: D } }
 -
     garage: { id: 225, gameUpdate: 33, model: 'Mustang Mach-E1400', slug: ford-mustang-mach-e1400, settingBrand: { name: Ford }, settingClass: { value: D } }
+-
+    garage: { id: 246, gameUpdate: 36, model: '911 Carrera RS 3.8', slug: porsche-911-carrera-rs-3-8, settingBrand: { name: Porsche }, settingClass: { value: D } }
+-
+    garage: { id: 284, gameUpdate: 42, model: 'Ioniq 5 N', slug: hyundai-ioniq-5-n, settingBrand: { name: Hyundai }, settingClass: { value: D } }
 -
     garage: { id: 287, gameUpdate: 42, model: 'GR Supra 2023', slug: toyota-gr-supra-2023, settingBrand: { name: Toyota }, settingClass: { value: D } }

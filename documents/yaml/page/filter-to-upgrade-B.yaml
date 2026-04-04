@@ -2,7 +2,7 @@
     unblock: false
     gold: false
     evo: false
-    eventClass: true
+    eventClass: false
     toUpgrade: true
     garage: { id: 249, gameUpdate: 37, model: E-R9, slug: lotus-e-r9, settingBrand: { name: Lotus }, settingClass: { value: B } }
 -
@@ -18,4 +18,4 @@
     evo: false
     eventClass: false
     toUpgrade: true
-    garage: { id: 298, gameUpdate: 44, model: 'Lamborghini Revuelto', slug: lego-technic-lamborghini-revuelto, settingBrand: { name: 'Lego Technic' }, settingClass: { value: B } }
+    garage: { id: 299, gameUpdate: 44, model: 'Lamborghini Revuelto', slug: lego-technic-lamborghini-revuelto, settingBrand: { name: 'Lego Technic' }, settingClass: { value: B } }

@@ -1,13 +1,9 @@
 
-<div class="row row-cols-2 bg-secondary-subtle py-2">
-    <div class="col w-25">
-        <a href="{{ path(links.index) }}" class="btn btn-lg btn-outline-warning fw-bolder rounded-start-5 w-100">
-            {{ 'btn.back'|trans }}
-        </a>
-    </div>
-    <div class="col w-75">
-        <button class="btn btn-lg btn-outline-success fw-bolder rounded-end-5 w-100" type="submit">
-            {{ 'btn.register'|trans }}
-        </button>
-    </div>
+<div class="input-group sticky-bottom py-xxl-3">
+    <a href="{{ path(links.index) }}" class="btn btn-lg btn-outline-warning fw-bolder rounded-start-5 w-25">
+        {{ 'btn.back'|trans }}
+    </a>
+    <button type="submit" class="btn btn-lg btn-outline-success fw-bolder rounded-end-5 w-75">
+        {{ 'btn.register'|trans }}
+    </button>
 </div>

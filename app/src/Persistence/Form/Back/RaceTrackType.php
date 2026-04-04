@@ -26,7 +26,7 @@ class RaceTrackType extends AbstractType
                     'class' => null,
                     'maxlength' => 64
                 ],
-                'label' => 'form.nameEnglish',
+                'label' => 'text.nameEnglish',
                 'required' => true,
                 'trim' => true,
             ])
@@ -36,7 +36,7 @@ class RaceTrackType extends AbstractType
                     'class' => null,
                     'maxlength' => 64
                 ],
-                'label' => 'form.nameFrench',
+                'label' => 'text.name.french',
                 'required' => true,
                 'trim' => true,
             ])
@@ -46,7 +46,7 @@ class RaceTrackType extends AbstractType
                 ],
                 'class' => RaceRegion::class,
                 'choice_label' => 'name',
-                'label' => 'form.region',
+                'label' => 'text.region',
                 'required' => true,
                 'trim' => true,
             ])
@@ -58,7 +58,7 @@ class RaceTrackType extends AbstractType
         $resolver->setDefaults([
             'data_class' => RaceTrack::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

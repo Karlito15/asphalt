@@ -3,11 +3,11 @@
 -
     garage: { id: 72, gameUpdate: 7, model: '911 GT3 RS', slug: porsche-911-gt3-rs, settingBrand: { name: Porsche }, settingClass: { value: B } }
 -
-    garage: { id: 89, gameUpdate: 11, model: 'Carrera GT', slug: porsche-carrera-gt, settingBrand: { name: Porsche }, settingClass: { value: B } }
+    garage: { id: 87, gameUpdate: 11, model: 'Carrera GT', slug: porsche-carrera-gt, settingBrand: { name: Porsche }, settingClass: { value: B } }
 -
     garage: { id: 95, gameUpdate: 12, model: 'F1 LM', slug: mclaren-f1-lm, settingBrand: { name: McLaren }, settingClass: { value: B } }
 -
-    garage: { id: 111, gameUpdate: 15, model: '488 GTB Challenge EVO', slug: ferrari-488-gtb-challenge-evo, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+    garage: { id: 108, gameUpdate: 15, model: '488 GTB Challenge EVO', slug: ferrari-488-gtb-challenge-evo, settingBrand: { name: Ferrari }, settingClass: { value: B } }
 -
     garage: { id: 136, gameUpdate: 19, model: 'W12 Coupe', slug: volkswagen-w12-coupe, settingBrand: { name: Volkswagen }, settingClass: { value: B } }
 -

@@ -3,10 +3,10 @@
 version: '3'
 
 includes:
-    A9: ../taskfile/Asphalt.yaml
-    Com: ../taskfile/Composer.yaml
-    Test: ../taskfile/PHPUnit.yaml
-    Sym: ../taskfile/Symfony.yaml
+    A9: ../files/taskfile/Asphalt.yaml
+    Com: ../files/taskfile/Composer.yaml
+    Test: ../files/taskfile/PHPUnit.yaml
+    Sym: ../files/taskfile/Symfony.yaml
 
 vars:
     GREETING: Hello, World!

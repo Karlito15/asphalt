@@ -27,7 +27,7 @@ class DashboardInventoryType extends AbstractType
                 'attr'      => [
                     'autocomplete'   => 'off',
                     'autocapitalize' => 'none',
-                    'class'          => 'text-end fw-bolder form-control form-control-lg', // form-control-plaintext
+                    'class'          => 'text-end fw-bolder p-xxl-0 form-control form-control-plaintext',
                     'maxlength'      => 10,
                     'minlength'      => 0,
                 ],
@@ -44,7 +44,7 @@ class DashboardInventoryType extends AbstractType
         $resolver->setDefaults([
             'data_class' => InventoryApp::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => false, //'messages',
         ]);
     }
 }

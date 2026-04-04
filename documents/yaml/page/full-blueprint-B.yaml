@@ -7,9 +7,9 @@
 -
     garage: { id: 17, gameUpdate: 0, model: W70, slug: exotic-rides-w70, settingBrand: { name: 'Exotic Rides' }, settingClass: { value: B } }
 -
-    garage: { id: 19, gameUpdate: 0, model: F12TDF, slug: ferrari-f12tdf, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+    garage: { id: 19, gameUpdate: 0, model: '488 GTB', slug: ferrari-488-gtb, settingBrand: { name: Ferrari }, settingClass: { value: B } }
 -
-    garage: { id: 18, gameUpdate: 0, model: '488 GTB', slug: ferrari-488-gtb, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+    garage: { id: 18, gameUpdate: 0, model: F12TDF, slug: ferrari-f12tdf, settingBrand: { name: Ferrari }, settingClass: { value: B } }
 -
     garage: { id: 23, gameUpdate: 0, model: GT, slug: ford-gt, settingBrand: { name: Ford }, settingClass: { value: B } }
 -
@@ -17,9 +17,9 @@
 -
     garage: { id: 26, gameUpdate: 0, model: 'F-Type SVR', slug: jaguar-f-type-svr, settingBrand: { name: Jaguar }, settingClass: { value: B } }
 -
-    garage: { id: 31, gameUpdate: 0, model: Asterion, slug: lamborghini-asterion, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+    garage: { id: 28, gameUpdate: 0, model: Asterion, slug: lamborghini-asterion, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
 -
-    garage: { id: 41, gameUpdate: 0, model: '911 GTS Coupé', slug: porsche-911-gts-coupe, settingBrand: { name: Porsche }, settingClass: { value: B } }
+    garage: { id: 42, gameUpdate: 0, model: '911 GTS Coupé', slug: porsche-911-gts-coupe, settingBrand: { name: Porsche }, settingClass: { value: B } }
 -
     garage: { id: 56, gameUpdate: 2, model: 'R1 550', slug: sin-r1-550, settingBrand: { name: Sin }, settingClass: { value: B } }
 -
@@ -39,7 +39,7 @@
 -
     garage: { id: 85, gameUpdate: 10, model: Evija, slug: lotus-evija, settingBrand: { name: Lotus }, settingClass: { value: B } }
 -
-    garage: { id: 89, gameUpdate: 11, model: 'Carrera GT', slug: porsche-carrera-gt, settingBrand: { name: Porsche }, settingClass: { value: B } }
+    garage: { id: 87, gameUpdate: 11, model: 'Carrera GT', slug: porsche-carrera-gt, settingBrand: { name: Porsche }, settingClass: { value: B } }
 -
     garage: { id: 86, gameUpdate: 11, model: '911 GT1 Evolution', slug: porsche-911-gt1-evolution, settingBrand: { name: Porsche }, settingClass: { value: B } }
 -
@@ -49,17 +49,17 @@
 -
     garage: { id: 101, gameUpdate: 14, model: AP-0, slug: apex-ap-0, settingBrand: { name: Apex }, settingClass: { value: B } }
 -
-    garage: { id: 111, gameUpdate: 15, model: '488 GTB Challenge EVO', slug: ferrari-488-gtb-challenge-evo, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+    garage: { id: 109, gameUpdate: 15, model: 'Enzo Ferrari', slug: ferrari-enzo-ferrari, settingBrand: { name: Ferrari }, settingClass: { value: B } }
 -
-    garage: { id: 107, gameUpdate: 15, model: 'Enzo Ferrari', slug: ferrari-enzo-ferrari, settingBrand: { name: Ferrari }, settingClass: { value: B } }
+    garage: { id: 108, gameUpdate: 15, model: '488 GTB Challenge EVO', slug: ferrari-488-gtb-challenge-evo, settingBrand: { name: Ferrari }, settingClass: { value: B } }
 -
     garage: { id: 113, gameUpdate: 16, model: IE, slug: apollo-ie, settingBrand: { name: Apollo }, settingClass: { value: B } }
 -
     garage: { id: 127, gameUpdate: 18, model: Roma, slug: ferrari-roma, settingBrand: { name: Ferrari }, settingClass: { value: B } }
 -
-    garage: { id: 130, gameUpdate: 18, model: 'Murcielago LP 640 Roadster', slug: lamborghini-murcielago-lp-640-roadster, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+    garage: { id: 129, gameUpdate: 18, model: 'Murcielago LP 640 Roadster', slug: lamborghini-murcielago-lp-640-roadster, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
 -
-    garage: { id: 129, gameUpdate: 18, model: 'Essenza SCV12', slug: lamborghini-essenza-scv12, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+    garage: { id: 130, gameUpdate: 18, model: 'Essenza SCV12', slug: lamborghini-essenza-scv12, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
 -
     garage: { id: 136, gameUpdate: 19, model: 'W12 Coupe', slug: volkswagen-w12-coupe, settingBrand: { name: Volkswagen }, settingClass: { value: B } }
 -
@@ -79,7 +79,9 @@
 -
     garage: { id: 167, gameUpdate: 24, model: 'AF8 Falcon Édition', slug: arash-af8-falcon-edition, settingBrand: { name: Arash }, settingClass: { value: B } }
 -
-    garage: { id: 173, gameUpdate: 25, model: 'Sesto Elemento', slug: lamborghini-sesto-elemento, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+    garage: { id: 176, gameUpdate: 25, model: 'Sesto Elemento', slug: lamborghini-sesto-elemento, settingBrand: { name: Lamborghini }, settingClass: { value: B } }
+-
+    garage: { id: 181, gameUpdate: 26, model: 765LT, slug: mclaren-765lt, settingBrand: { name: McLaren }, settingClass: { value: B } }
 -
     garage: { id: 182, gameUpdate: 26, model: '600LT Spider', slug: mclaren-600lt-spider, settingBrand: { name: McLaren }, settingClass: { value: B } }
 -

@@ -27,13 +27,10 @@ final class DashboardController extends AbstractController
 {
     use WebController;
 
-    /** @description name of folder's Extraction  */
-    private static string $folder = 'list';
-
     #[Route(path: '{_locale<%app.supported_locales%>}/index.php', name: 'index')]
     public function index(
-        InventoryAppRepository $inventoryRepo,
         Request $request,
+        InventoryAppRepository $repository,
     ): Response
     {
         ### Variables
@@ -41,25 +38,25 @@ final class DashboardController extends AbstractController
         $title = $this->translator->trans('text.dashboard');
 
         ### Création des formulaires
-        $moneys  = $inventoryRepo->findByCategory('money');
+        $moneys  = $repository->findByCategory('money');
         foreach ($moneys as $money) {
             /** @var InventoryApp $money */
             $moneys[$money->getSlug()] = $this->createForm(DashboardInventoryType::class, $money)->handleRequest($request);
         }
 
-        $jokers  = $inventoryRepo->findByCategory('joker');
+        $jokers  = $repository->findByCategory('joker');
         foreach ($jokers as $money) {
             /** @var InventoryApp $money */
             $jokers[$money->getSlug()] = $this->createForm(DashboardInventoryType::class, $money)->handleRequest($request);
         }
 
-        $rares   = $inventoryRepo->findByCategory('rare');
+        $rares   = $repository->findByCategory('rare');
         foreach ($rares as $money) {
             /** @var InventoryApp $money */
             $rares[$money->getSlug()] = $this->createForm(DashboardInventoryType::class, $money)->handleRequest($request);
         }
 
-        $commons = $inventoryRepo->findByCategory('common');
+        $commons = $repository->findByCategory('common');
         foreach ($commons as $money) {
             /** @var InventoryApp $money */
             $commons[$money->getSlug()] = $this->createForm(DashboardInventoryType::class, $money)->handleRequest($request);
@@ -67,7 +64,7 @@ final class DashboardController extends AbstractController
 
         ### Flash
 //        $this->addFlash('secondary', 'Inventory ' . $this->translator->trans('notification.updated');
-        $this->addFlash('secondary', 'This is the Web App !');
+//        $this->addFlash('secondary', 'This is the Web App !');
 
         return $this->render('@App/contents/front/dashboard/index.html.twig', [
             'controller_name' => $title,
@@ -132,16 +129,16 @@ final class DashboardController extends AbstractController
             'handling'        => $commons['handling'],
             'nitro'           => $commons['nitro'],
             // Stats
-            'stat_garage'     => $this->GarageByClass(),
-            'stat_block'      => $this->FilterByClass('filter-block-*.yaml'),
-            'stat_gold'       => $this->FilterByClass('filter-gold-*.yaml'),
-            'stat_to_upgrade' => $this->FilterByClass('filter-to-upgrade-*.yaml'),
-            'stat_unblock'    => $this->FilterByClass('filter-unblock-*.yaml'),
-            'stat_full_blueprint' => $this->FilterByClass('full-blueprint-*.yaml'),
-            'stat_to_gold'    => $this->FilterByClass('to-gold-*.yaml'),
-            'stat_to_install_import'  => $this->FilterByClass('to-install-import-*.yaml'),
-            'stat_to_install_upgrade' => $this->FilterByClass('to-install-upgrade-*.yaml'),
-            'stat_to_unblock' => $this->FilterByClass('to-unblock-*.yaml'),
+            'stat_garage'             => $this->GarageByClass(),
+            'stat_block'              => $this->FilterByClass('filter-block-*.yaml'),
+            'stat_gold'               => $this->FilterByClass('filter-gold-*.yaml'),
+            'stat_to_upgrade'         => $this->FilterByClass('filter-to-upgrade-*.yaml'),
+            'stat_unblock'            => $this->FilterByClass('filter-unblock-*.yaml'),
+            'stat_full_blueprint'     => $this->FilterByClass('full-blueprint-*.yaml'),
+            'stat_to_gold'            => $this->FilterByClass('to-gold-*.yaml'),
+//            'stat_to_install_import'  => $this->FilterByClass('to-install-import-*.yaml'),
+//            'stat_to_install_upgrade' => $this->FilterByClass('to-install-upgrade-*.yaml'),
+//            'stat_to_unblock'         => $this->FilterByClass('to-unblock-*.yaml'),
         ]);
     }
 
@@ -150,6 +147,23 @@ final class DashboardController extends AbstractController
     {
         return $this->redirectToRoute('app.dashboard.index', ['_locale' => 'en'], Response::HTTP_PERMANENTLY_REDIRECT);
     }
+
+    #[Route(path: '{_locale<%app.supported_locales%>}/test.php', name: 'test')]
+    public function test(Request $request): Response
+    {
+        ### Variables
+        $home  = $this->translator->trans('text.front-office');
+        $title = $this->translator->trans('text.dashboard');
+
+        return $this->render('@App/contents/front/dashboard/test.html.twig', [
+            'controller_name' => $title,
+            'current_page'    => $request->attributes->get('_route'),
+            'container'       => 'container',
+            'breadcrumb'      => self::Breadcrump($home, $title),
+        ]);
+    }
+
+    /** PRIVATE METHODS */
 
     private function GarageByClass(): array
     {

@@ -32,4 +32,4 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 308, gameUpdate: 45, model: Emeya, slug: lotus-emeya, settingBrand: { name: Lotus }, settingClass: { value: D } }
+    garage: { id: 326, gameUpdate: 48, model: 'Huracán Sterrato', slug: lamborghini-huracan-sterrato, settingBrand: { name: Lamborghini }, settingClass: { value: D } }

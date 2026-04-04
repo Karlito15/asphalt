@@ -2,7 +2,6 @@
         <tbody>
         {% for item in entities %}
             <tr>
-                <td>{{ item.id }}</td>
                 <td>{{ item.week }}</td>
                 <td>{{ item.region }}</td>
                 <td>{{ item.track }}</td>
@@ -11,9 +10,6 @@
                 <td>{{ item.description }}</td>
                 <td>{{ item.success }}</td>
                 <td>{{ item.target }}</td>
-                <td>
-                    <a href="javascript:void(0);">update</a>
-                </td>
             </tr>
         {% else %}
             <tr>
@@ -29,9 +25,10 @@
         </tfoot>
 {% endblock %}
 
+{% block id %} id="Mission"{% endblock %}
+
 {% macro legend() %}
-            <tr>
-                <th>Id</th>
+            <tr class="sticky-top">
                 <th>{{ 'text.week'|trans }}</th>
                 <th>{{ 'text.region'|trans }}</th>
                 <th>{{ 'text.track'|trans }}</th>
@@ -40,7 +37,6 @@
                 <th>{{ 'text.description'|trans }}</th>
                 <th>{{ 'text.success'|trans }}</th>
                 <th>{{ 'text.target'|trans }}</th>
-                <th>Action</th>
             </tr>
 {% endmacro %}
 

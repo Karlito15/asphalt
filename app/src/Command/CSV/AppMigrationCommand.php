@@ -55,64 +55,64 @@ class AppMigrationCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        // Init variables
+        ### Init variables
         $io     = new SymfonyStyle($input, $output);
         $choice = $input->getArgument('choice');
 
-        // Execution time : start
+        ### Execution time : start
         $this->stopwatch->start(self::$title);
 
-        // Question
+        ### Question
         if (is_null($choice)) {
             $helper   = $this->getHelper('question');
             $question = new ChoiceQuestion('Do you want to export or import datas ?', ['export', 'import'], 'export');
             $choice   = $helper->ask($input, $output, $question);
         }
 
-        // Commands
+        ### Commands
         if ($choice === 'import') {
-            // the command name is passed as first argument
+            ### the command name is passed as first argument
             $settings = new ArrayInput([
                 'command' => 'asphalt:csv:setting',
                 'choice' => 'import'
             ]);
-            // disable interactive behavior for the greet command
+            ### disable interactive behavior for the greet command
             $settings->setInteractive(false);
             $this->getApplication()->doRun($settings, $output);
 
-            // the command name is passed as first argument
+            ### the command name is passed as first argument
             $missions = new ArrayInput([
                 'command' => 'asphalt:csv:mission',
                 'choice' => 'import'
             ]);
-            // disable interactive behavior for the greet command
+            ### disable interactive behavior for the greet command
             $missions->setInteractive(false);
             $this->getApplication()->doRun($missions, $output);
 
-            // the command name is passed as first argument
+            ### the command name is passed as first argument
             $races = new ArrayInput([
                 'command' => 'asphalt:csv:race',
                 'choice' => 'import'
             ]);
-            // disable interactive behavior for the greet command
+            ### disable interactive behavior for the greet command
             $races->setInteractive(false);
             $this->getApplication()->doRun($races, $output);
 
-            // the command name is passed as first argument
+            ### the command name is passed as first argument
             $inventories = new ArrayInput([
                 'command' => 'asphalt:csv:inventory',
                 'choice' => 'import'
             ]);
-            // disable interactive behavior for the greet command
+            ### disable interactive behavior for the greet command
             $inventories->setInteractive(false);
             $this->getApplication()->doRun($inventories, $output);
 
-            // the command name is passed as first argument
+            ### the command name is passed as first argument
             $garages = new ArrayInput([
                 'command' => 'asphalt:csv:garage',
                 'choice' => 'import'
             ]);
-            // disable interactive behavior for the greet command
+            ### disable interactive behavior for the greet command
             $garages->setInteractive(false);
             $this->getApplication()->doRun($garages, $output);
 
@@ -126,48 +126,48 @@ class AppMigrationCommand extends Command
             $io->success('Import terminé !');
             $result = true;
         } elseif ($choice === 'export') {
-            // the command name is passed as first argument
+            ### the command name is passed as first argument
             $settings = new ArrayInput([
                 'command' => 'asphalt:csv:setting',
                 'choice' => 'export'
             ]);
-            // disable interactive behavior for the greet command
+            ### disable interactive behavior for the greet command
             $settings->setInteractive(false);
             $this->getApplication()->doRun($settings, $output);
 
-            // the command name is passed as first argument
+            ### the command name is passed as first argument
             $missions = new ArrayInput([
                 'command' => 'asphalt:csv:mission',
                 'choice' => 'export'
             ]);
-            // disable interactive behavior for the greet command
+            ### disable interactive behavior for the greet command
             $missions->setInteractive(false);
             $this->getApplication()->doRun($missions, $output);
 
-            // the command name is passed as first argument
+            ### the command name is passed as first argument
             $races = new ArrayInput([
                 'command' => 'asphalt:csv:race',
                 'choice' => 'export'
             ]);
-            // disable interactive behavior for the greet command
+            ### disable interactive behavior for the greet command
             $races->setInteractive(false);
             $this->getApplication()->doRun($races, $output);
 
-            // the command name is passed as first argument
+            ### the command name is passed as first argument
             $inventories = new ArrayInput([
                 'command' => 'asphalt:csv:inventory',
                 'choice' => 'export'
             ]);
-            // disable interactive behavior for the greet command
+            ### disable interactive behavior for the greet command
             $inventories->setInteractive(false);
             $this->getApplication()->doRun($inventories, $output);
 
-            // the command name is passed as first argument
+            ### the command name is passed as first argument
             $garages = new ArrayInput([
                 'command' => 'asphalt:csv:garage',
                 'choice' => 'export'
             ]);
-            // disable interactive behavior for the greet command
+            ### disable interactive behavior for the greet command
             $garages->setInteractive(false);
             $this->getApplication()->doRun($garages, $output);
 

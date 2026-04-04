@@ -39,14 +39,14 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 32, gameUpdate: 0, model: Egoista, slug: lamborghini-egoista, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
+    garage: { id: 29, gameUpdate: 0, model: Centenario, slug: lamborghini-centenario, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
 -
     unblock: true
     gold: true
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 28, gameUpdate: 0, model: Centenario, slug: lamborghini-centenario, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
+    garage: { id: 31, gameUpdate: 0, model: Egoista, slug: lamborghini-egoista, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
 -
     unblock: true
     gold: true
@@ -60,14 +60,14 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 50, gameUpdate: 0, model: 'Lykan Hypersport', slug: w-motors-lykan-hypersport, settingBrand: { name: 'W Motors' }, settingClass: { value: S } }
+    garage: { id: 49, gameUpdate: 0, model: 'Lykan Hypersport', slug: w-motors-lykan-hypersport, settingBrand: { name: 'W Motors' }, settingClass: { value: S } }
 -
     unblock: true
     gold: false
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 49, gameUpdate: 0, model: 'Fenyr Supersport', slug: w-motors-fenyr-supersport, settingBrand: { name: 'W Motors' }, settingClass: { value: S } }
+    garage: { id: 50, gameUpdate: 0, model: 'Fenyr Supersport', slug: w-motors-fenyr-supersport, settingBrand: { name: 'W Motors' }, settingClass: { value: S } }
 -
     unblock: true
     gold: false
@@ -116,7 +116,7 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 93, gameUpdate: 12, model: 'Sián FKP 37', slug: lamborghini-sian-fkp-37, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
+    garage: { id: 92, gameUpdate: 12, model: 'Sián FKP 37', slug: lamborghini-sian-fkp-37, settingBrand: { name: Lamborghini }, settingClass: { value: S } }
 -
     unblock: true
     gold: true
@@ -144,13 +144,13 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 109, gameUpdate: 15, model: 'SF90 Stradale', slug: ferrari-sf90-stradale, settingBrand: { name: Ferrari }, settingClass: { value: S } }
+    garage: { id: 107, gameUpdate: 15, model: 'SF90 Stradale', slug: ferrari-sf90-stradale, settingBrand: { name: Ferrari }, settingClass: { value: S } }
 -
     unblock: true
     gold: false
     evo: false
     eventClass: false
-    toUpgrade: true
+    toUpgrade: false
     garage: { id: 116, gameUpdate: 16, model: Divo, slug: bugatti-divo, settingBrand: { name: Bugatti }, settingClass: { value: S } }
 -
     unblock: true
@@ -240,7 +240,7 @@
     unblock: true
     gold: false
     evo: false
-    eventClass: true
+    eventClass: false
     toUpgrade: false
     garage: { id: 230, gameUpdate: 34, model: Sixteen, slug: devel-sixteen, settingBrand: { name: Devel }, settingClass: { value: S } }
 -
@@ -369,3 +369,10 @@
     eventClass: false
     toUpgrade: false
     garage: { id: 320, gameUpdate: 47, model: Nilu, slug: nilu27-nilu, settingBrand: { name: Nilu27 }, settingClass: { value: S } }
+-
+    unblock: true
+    gold: false
+    evo: false
+    eventClass: false
+    toUpgrade: false
+    garage: { id: 331, gameUpdate: 48, model: '918 Spyder Asphalt Edition', slug: porsche-918-spyder-asphalt-edition, settingBrand: { name: Porsche }, settingClass: { value: S } }

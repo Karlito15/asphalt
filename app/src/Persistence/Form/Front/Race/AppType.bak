@@ -79,7 +79,7 @@ class AppType extends AbstractType
         $resolver->setDefaults([
             'data_class' => RaceApp::class,
             'allow_extra_fields' => false, // true
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

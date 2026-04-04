@@ -7,9 +7,10 @@ Apex	AP-0	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
 Apollo	EVO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	0
 Apollo	IE	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
 Apollo	N	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
-Arash	AF10	1	1	1	1	0	1	1	0	1	1	1	1	0	0	0	0	0	0	0	0	1	0	1
+Arash	AF10	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0
 Arash	AF8 Falcon Édition	0	0	0	0	0	0	0	0	1	1	1	1	0	0	1	1	1	1	1	1	1	0	0
 Arash	Imperium	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	1	0
+Ares	Panther	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 Ares	S1	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
 Arrinera	Hussarya 33	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
 Artega	Scalo Superelletra	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0
@@ -32,7 +33,7 @@ ATS Automobili	Corsa RRTurbo	1	1	1	1	0	1	1	0	1	1	1	1	0	0	0	0	0	0	0	0	1	0	0
 ATS Automobili	GT	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	1	1	1	1	1	1	0	0
 Automobili Pininfarina	B95	0	0	0	0	0	0	0	0	1	1	0	0	0	0	1	1	1	1	1	1	1	0	0
 Automobili Pininfarina	Battista	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0
-Automobili Pininfarina	Battista Edizione Nino Farina	0	0	0	0	1	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	1	0	1
+Automobili Pininfarina	Battista Edizione Nino Farina	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0
 Bentley	Continental GT Speed	0	0	0	0	0	0	0	0	1	1	1	1	0	0	1	1	1	1	1	1	1	0	0
 Bentley	Continental GT3	1	1	1	1	0	1	1	0	1	1	1	1	0	0	0	0	0	0	0	0	1	0	0
 Bentley	Mulliner Bacalar	0	0	0	0	0	0	0	0	1	1	1	1	1	0	1	1	1	1	1	1	1	0	1
@@ -81,10 +82,12 @@ DS Automobiles	DS E-Tense	1	1	1	1	0	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0
 DS Automobiles	E-TENSE Performance	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	1	1	1	0	0
 Exotic Rides	W70	1	1	1	1	0	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0
 Faraday Future	FFZero1	0	0	0	0	0	0	0	0	1	1	1	0	0	0	1	1	1	1	1	1	1	0	0
+Ferrante Design	Elytron	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	0
+Ferrari	12 Cilindri	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 Ferrari	296 GTB	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
 Ferrari	488 GTB	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0
 Ferrari	488 GTB Challenge EVO	1	1	1	1	1	1	1	0	1	1	1	1	1	1	0	0	0	0	0	0	1	1	0
-Ferrari	499P Modificata	0	0	0	0	0	0	0	0	1	1	0	0	0	0	1	1	1	1	1	1	1	1	0
+Ferrari	499P Modificata	1	1	1	1	1	1	1	0	1	1	1	1	1	1	0	0	0	0	0	0	1	1	0
 Ferrari	599XX EVO	1	1	1	1	0	1	1	0	1	1	1	1	1	0	0	0	0	0	0	0	1	1	0
 Ferrari	812 Superfast	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
 Ferrari	Daytona SP3	0	0	0	0	0	0	0	0	1	1	1	1	1	0	1	1	1	1	1	1	1	0	0
@@ -101,7 +104,7 @@ Ferrari	LaFerrari Aperta	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0
 Ferrari	Monza SP1	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0
 Ferrari	Roma	0	0	0	0	0	0	1	0	1	1	1	1	0	0	1	1	1	1	1	0	1	0	1
 Ferrari	SF90 Stradale	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0
-Ferrari	SF90 XX Stradale	0	0	0	0	0	0	0	0	1	1	1	0	0	0	1	1	1	1	1	1	1	0	0
+Ferrari	SF90 XX Stradale	0	0	0	0	1	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0
 Ford	GT	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0
 Ford	GT Frankie Edition	0	0	0	0	0	0	0	0	1	1	0	0	0	0	1	1	1	1	1	1	1	0	0
 Ford	GT MK II	0	0	0	0	0	1	0	0	1	1	1	1	0	0	1	1	1	1	0	1	1	0	0
@@ -126,7 +129,7 @@ Glickenhaus	007S	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0
 Hennessey	Venom F5	0	0	0	0	0	0	0	0	1	1	0	0	0	0	1	1	1	1	1	1	1	1	0
 Honda	Civic Type-R	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0
 HTT	Locus Pléthore LC750	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	1	1	1	1	1	1	1	0
-Hyundai	Ioniq 5 N	0	0	0	0	0	0	1	0	1	1	1	0	0	0	0	0	0	0	1	0	1	0	0
+Hyundai	Ioniq 5 N	0	0	0	0	0	0	1	0	1	1	1	1	0	0	0	0	0	0	1	0	1	0	0
 Hyundai	N Vision 74 Concept	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	1	1	1	1	1	1	0	0
 Icona	Vulcano Spyder	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	0
 Icona	Vulcano Titanium	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
@@ -136,11 +139,11 @@ Infiniti	Projet Black S	0	0	0	0	0	0	0	0	1	1	1	1	0	0	1	1	1	1	1	1	1	0	1
 Italdesign	DaVinci	0	0	0	0	0	0	0	0	1	1	1	1	0	0	1	1	1	1	1	1	1	0	1
 Italdesign	Zerouno	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0
 Jaguar	C-X75	0	0	0	0	0	0	0	0	1	1	1	1	0	0	1	1	1	1	1	1	1	0	0
-Jaguar	F-Type SVR	1	1	1	1	0	1	1	1	1	1	1	1	0	0	1	1	1	1	0	0	0	0	0
+Jaguar	F-Type SVR	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0
 Jaguar	XE SV Project 8	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	0
 Jaguar	XJ220S TWR	0	0	0	0	0	0	0	0	0	1	1	0	0	0	1	1	1	1	1	1	1	0	0
 Jaguar	XJR-15	0	0	0	0	0	0	0	0	1	1	0	0	0	0	1	1	1	1	1	1	1	0	0
-Jaguar	XJR-9	0	0	0	0	0	0	0	0	0	1	1	0	0	0	1	1	1	1	1	1	1	1	0
+Jaguar	XJR-9	0	0	0	0	0	0	0	0	0	1	1	1	0	0	1	1	1	1	1	1	1	1	0
 Jaguar	XKR-S GT	0	0	0	0	0	0	0	0	1	1	1	1	0	0	1	1	1	1	1	1	1	0	0
 Kepler	Motion	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	1	1	1	1	1	1	0	0
 Kimera	EVO37	0	0	0	0	0	0	0	0	0	1	1	0	0	0	1	1	1	1	1	1	1	1	0
@@ -165,8 +168,9 @@ Lamborghini	Countach LPI 800-4	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0	1	1	1	1	0
 Lamborghini	Diablo GT	0	0	0	0	0	0	0	0	1	1	1	1	1	0	1	1	1	1	1	1	1	0	1
 Lamborghini	Egoista	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0
 Lamborghini	Essenza SCV12	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
-Lamborghini	Gallardo LP560-4	1	1	1	1	0	1	1	0	1	1	1	1	1	0	0	0	0	0	0	0	1	0	1
+Lamborghini	Gallardo LP560-4	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
 Lamborghini	Huracán Evo Spyder	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	1	0
+Lamborghini	Huracán Sterrato	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 Lamborghini	Huracán STO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	0
 Lamborghini	Huracán Super Trofeo Evo	1	1	1	1	0	1	1	0	1	1	1	1	1	0	0	0	0	0	0	0	1	1	0
 Lamborghini	Invencible	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
@@ -193,7 +197,7 @@ Lexus	Electrified Sport Concept	0	0	0	0	0	0	0	0	1	1	1	1	1	0	1	1	1	1	1	1	1	0	0
 Lexus	LFA Nürburgring Package	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0	0	1	1	1	0	0
 Lotus	E-R9	0	0	0	0	0	0	0	0	0	1	1	1	1	0	1	1	1	1	1	1	1	0	0
 Lotus	Elise Sprint 220	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	1	0
-Lotus	Emeya	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	1	0
+Lotus	Emeya	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	1	1	1	1	1	1	1	0
 Lotus	Emira	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0
 Lotus	Evija	0	0	0	0	1	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	1	0	1
 Lotus	Evora Sport 410	1	1	1	1	0	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0
@@ -207,7 +211,7 @@ McLaren	570S Spider	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0
 McLaren	600LT Spider	1	1	1	1	0	1	1	0	1	1	1	1	1	0	0	0	0	0	0	0	1	1	0
 McLaren	650S GT3	0	0	0	0	1	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0
 McLaren	750S Coupé	0	0	0	0	0	0	0	0	1	1	0	0	0	0	1	1	1	1	1	1	1	0	0
-McLaren	765LT	0	0	0	0	0	0	0	0	1	1	1	1	0	0	1	1	1	1	1	1	1	0	0
+McLaren	765LT	0	0	0	0	0	0	0	0	1	1	1	1	1	0	1	1	1	1	1	1	1	0	1
 McLaren	Artura	0	0	0	0	0	0	0	0	1	1	1	1	0	0	1	1	1	1	1	1	1	0	0
 McLaren	Elva	0	0	0	0	0	0	0	0	1	1	1	1	1	0	1	1	1	1	1	1	1	0	1
 McLaren	F1 LM	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	1	0
@@ -215,7 +219,7 @@ McLaren	GT	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
 McLaren	P1	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
 McLaren	Sabre	1	1	1	1	1	1	1	0	1	1	1	1	1	1	0	0	0	0	0	0	1	0	0
 McLaren	Senna	1	1	1	1	1	1	1	0	1	1	1	1	1	1	0	0	0	0	0	0	1	0	0
-McLaren	Senna GTR	0	0	0	0	0	0	0	0	1	1	1	1	1	0	1	1	1	1	1	1	1	0	1
+McLaren	Senna GTR	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
 McLaren	Solus GT	1	1	1	1	0	1	1	0	1	1	1	1	1	0	0	0	0	0	0	0	1	1	0
 McLaren	Speedtail	0	0	0	0	1	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	1	0	1
 McMurtry	Spéirling	0	0	0	0	0	0	0	0	1	1	1	1	0	0	1	1	1	1	1	1	1	0	0
@@ -223,6 +227,7 @@ Mercedes-Benz	2022 Showcar Vision AMG	0	0	0	0	0	0	0	0	1	1	1	1	0	0	1	1	1	1	1	1	1	
 Mercedes-Benz	AMG GT Black Series	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
 Mercedes-Benz	AMG GT S	1	1	1	1	0	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0
 Mercedes-Benz	C 63 AMG DTM	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	0
+Mercedes-Benz	C11	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	0
 Mercedes-Benz	CLK-GTR	0	0	0	0	0	0	0	0	1	1	1	1	1	0	1	1	1	1	1	1	1	0	0
 Mercedes-Benz	Mercedes-AMG ONE	0	0	0	0	0	0	0	0	1	1	1	1	0	0	0	0	0	0	1	1	1	0	0
 Mercedes-Benz	Silver Lightning	0	0	0	0	0	0	0	0	1	1	1	1	1	0	0	0	0	0	1	1	1	1	0
@@ -245,7 +250,7 @@ Noble	M600 Speedster	0	0	0	0	1	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0
 Pagani	Huayra BC	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0
 Pagani	Huayra R	0	0	0	0	1	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0
 Pagani	Imola	0	0	0	0	1	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
-Pagani	Utopia Coupé	0	0	0	0	0	0	0	0	0	1	1	1	1	0	1	1	1	1	1	1	1	1	0
+Pagani	Utopia Coupé	0	0	0	0	0	0	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	1	0
 Pagani	Zonda Cinque	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	1	1	0	0
 Pagani	Zonda HP Barchetta	1	1	1	1	0	1	1	0	1	1	1	1	1	0	0	0	0	0	0	0	1	0	0
 Pagani	Zonda R	0	0	0	0	1	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0
@@ -256,15 +261,19 @@ Pininfarina	H2 Speed	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0
 Pininfarina	Teorema	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	0
 Porsche	718 Cayman	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0
 Porsche	718 Cayman GT4 Clubsport	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
-Porsche	911 50 Years Porsche Design	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	1	0	0
-Porsche	911 Carrera RS 3.8	0	0	0	0	0	0	0	0	1	1	1	0	0	0	1	1	1	1	1	1	1	0	0
+Porsche	911 50 Years Porsche Design	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	1	1	1	0	0
+Porsche	911 Carrera RS 3.8	0	0	0	0	0	0	0	0	1	1	1	1	0	0	1	1	1	1	1	1	1	0	0
 Porsche	911 GT1 Evolution	1	1	1	1	0	1	0	0	1	1	1	1	0	0	0	0	0	0	0	1	1	0	1
 Porsche	911 GT2 RS Clubsport	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0
+Porsche	911 GT3 R rennsport	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	1	1	0	0
 Porsche	911 GT3 RS	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	1	0
 Porsche	911 GTS Coupé	1	1	1	1	0	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0
 Porsche	911 Targa 4S	1	1	1	1	0	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0
 Porsche	911 Turbo 50 Years	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	1	1	1	1	1	1	0	0
+Porsche	917 Living Legend	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 Porsche	918 Spyder	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
+Porsche	918 Spyder Asphalt Edition	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	1	1	0	0
+Porsche	919 Street	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 Porsche	935 (2019)	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0
 Porsche	935 Dragonforce Edition	0	0	0	0	0	0	0	0	0	1	1	0	0	0	1	1	1	1	1	1	1	0	0
 Porsche	Boxster 25th Anniversary	0	0	0	0	0	0	0	0	1	1	1	0	0	0	1	1	1	1	1	1	1	0	0
@@ -319,5 +328,5 @@ W Motors	Lykan Édition Néon	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	1	1	1	1	1	1	0	0
 W Motors	Lykan Hypersport	1	1	1	1	0	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0
 Zenvo	Aurora Agil	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	1	1	1	0	0
 Zenvo	Aurora Tur	1	1	1	1	1	1	1	0	1	1	1	1	1	1	0	0	0	0	0	0	1	1	0
-Zenvo	TS1 GT Anniversary	1	1	1	1	1	1	1	0	1	1	1	1	1	1	0	0	0	0	0	0	1	0	0
+Zenvo	TS1 GT Anniversary	1	1	1	1	1	1	1	0	1	1	1	1	1	1	0	0	0	0	0	0	1	0	1
 Zenvo	TSR-S	1	1	1	1	0	1	1	0	1	1	1	1	1	0	0	0	0	0	0	0	1	0	0

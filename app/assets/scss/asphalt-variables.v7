@@ -1,9 +1,4 @@
-// Links
-$link-decoration: none !default;
-// Grid columns
-$grid-columns: 12 !default; /**36*/
-$grid-gutter-width: 1.5rem !default;/**0.5*/
-$grid-row-columns: 6 !default;/**18*/
+
 // Typography
 // $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-sans-serif: "Poppins", sans-serif !default;

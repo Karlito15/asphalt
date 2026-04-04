@@ -21,7 +21,7 @@ class GarageRankType extends AbstractType
         $builder
             ->add('star0', NumberType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'form.start',
+                'label'      => 'text.start',
                 'label_attr' => self::labelClass(),
                 'label_html' => false,
                 'required'   => false,
@@ -76,7 +76,6 @@ class GarageRankType extends AbstractType
         $resolver->setDefaults([
             'data_class' => GarageRank::class,
             'allow_extra_fields' => false,
-//            'translation_domain' => 'forms',
             'translation_domain' => false,
         ]);
     }
@@ -89,7 +88,7 @@ class GarageRankType extends AbstractType
     {
         return [
             'autocomplete' => 'off',
-            'class'        => 'text-start fw-bolder m-0 px-3 py-0 form-control-sm',
+            'class'        => 'fw-bolder text-center fw-bolder form-control-plaintext form-control-sm',
             'max'          => $max,
             'min'          => 0,
         ];

@@ -1,15 +1,15 @@
 -
     garage: { id: 1, gameUpdate: 0, model: '2017 NSX', slug: acura-2017-nsx, settingBrand: { name: Acura }, settingClass: { value: C } }
 -
-    garage: { id: 4, gameUpdate: 0, model: 'M4 GTS', slug: bmw-m4-gts, settingBrand: { name: BMW }, settingClass: { value: C } }
+    garage: { id: 5, gameUpdate: 0, model: '3.0 CSL Hommage', slug: bmw-3-0-csl-hommage, settingBrand: { name: BMW }, settingClass: { value: C } }
 -
-    garage: { id: 6, gameUpdate: 0, model: '3.0 CSL Hommage', slug: bmw-3-0-csl-hommage, settingBrand: { name: BMW }, settingClass: { value: C } }
+    garage: { id: 6, gameUpdate: 0, model: 'M4 GTS', slug: bmw-m4-gts, settingBrand: { name: BMW }, settingClass: { value: C } }
 -
-    garage: { id: 9, gameUpdate: 0, model: 'Camaro ZL1 50th Edition', slug: chevrolet-camaro-zl1-50th-edition, settingBrand: { name: Chevrolet }, settingClass: { value: C } }
+    garage: { id: 10, gameUpdate: 0, model: 'Camaro ZL1 50th Edition', slug: chevrolet-camaro-zl1-50th-edition, settingBrand: { name: Chevrolet }, settingClass: { value: C } }
 -
-    garage: { id: 15, gameUpdate: 0, model: 'Challenger SRT8', slug: dodge-challenger-srt8, settingBrand: { name: Dodge }, settingClass: { value: C } }
+    garage: { id: 14, gameUpdate: 0, model: 'Challenger SRT8', slug: dodge-challenger-srt8, settingBrand: { name: Dodge }, settingClass: { value: C } }
 -
-    garage: { id: 13, gameUpdate: 0, model: 'Viper ACR', slug: dodge-viper-acr, settingBrand: { name: Dodge }, settingClass: { value: C } }
+    garage: { id: 12, gameUpdate: 0, model: 'Viper ACR', slug: dodge-viper-acr, settingBrand: { name: Dodge }, settingClass: { value: C } }
 -
     garage: { id: 33, gameUpdate: 0, model: 'Evora Sport 410', slug: lotus-evora-sport-410, settingBrand: { name: Lotus }, settingClass: { value: C } }
 -
@@ -37,9 +37,9 @@
 -
     garage: { id: 103, gameUpdate: 14, model: 'Mulliner Bacalar', slug: bentley-mulliner-bacalar, settingBrand: { name: Bentley }, settingClass: { value: C } }
 -
-    garage: { id: 112, gameUpdate: 15, model: '599XX EVO', slug: ferrari-599xx-evo, settingBrand: { name: Ferrari }, settingClass: { value: C } }
+    garage: { id: 110, gameUpdate: 15, model: F40, slug: ferrari-f40, settingBrand: { name: Ferrari }, settingClass: { value: C } }
 -
-    garage: { id: 108, gameUpdate: 15, model: F40, slug: ferrari-f40, settingBrand: { name: Ferrari }, settingClass: { value: C } }
+    garage: { id: 111, gameUpdate: 15, model: '599XX EVO', slug: ferrari-599xx-evo, settingBrand: { name: Ferrari }, settingClass: { value: C } }
 -
     garage: { id: 120, gameUpdate: 17, model: 'NSX GT3 EVO', slug: acura-nsx-gt3-evo, settingBrand: { name: Acura }, settingClass: { value: C } }
 -
@@ -57,11 +57,11 @@
 -
     garage: { id: 169, gameUpdate: 24, model: BT62, slug: brabham-bt62, settingBrand: { name: Brabham }, settingClass: { value: C } }
 -
-    garage: { id: 175, gameUpdate: 25, model: 'Miura Concept', slug: lamborghini-miura-concept, settingBrand: { name: Lamborghini }, settingClass: { value: C } }
+    garage: { id: 172, gameUpdate: 25, model: 'Miura Concept', slug: lamborghini-miura-concept, settingBrand: { name: Lamborghini }, settingClass: { value: C } }
 -
-    garage: { id: 172, gameUpdate: 25, model: 'Diablo GT', slug: lamborghini-diablo-gt, settingBrand: { name: Lamborghini }, settingClass: { value: C } }
+    garage: { id: 173, gameUpdate: 25, model: 'Diablo GT', slug: lamborghini-diablo-gt, settingBrand: { name: Lamborghini }, settingClass: { value: C } }
 -
-    garage: { id: 178, gameUpdate: 26, model: EB110, slug: bugatti-eb110, settingBrand: { name: Bugatti }, settingClass: { value: C } }
+    garage: { id: 179, gameUpdate: 26, model: EB110, slug: bugatti-eb110, settingBrand: { name: Bugatti }, settingClass: { value: C } }
 -
     garage: { id: 180, gameUpdate: 26, model: 'Monza SP1', slug: ferrari-monza-sp1, settingBrand: { name: Ferrari }, settingClass: { value: C } }
 -
@@ -75,7 +75,7 @@
 -
     garage: { id: 214, gameUpdate: 31, model: CLK-GTR, slug: mercedes-benz-clk-gtr, settingBrand: { name: Mercedes-Benz }, settingClass: { value: C } }
 -
-    garage: { id: 216, gameUpdate: 31, model: 'Panamera Turbo S', slug: porsche-panamera-turbo-s, settingBrand: { name: Porsche }, settingClass: { value: C } }
+    garage: { id: 215, gameUpdate: 31, model: 'Panamera Turbo S', slug: porsche-panamera-turbo-s, settingBrand: { name: Porsche }, settingClass: { value: C } }
 -
     garage: { id: 231, gameUpdate: 34, model: '296 GTB', slug: ferrari-296-gtb, settingBrand: { name: Ferrari }, settingClass: { value: C } }
 -

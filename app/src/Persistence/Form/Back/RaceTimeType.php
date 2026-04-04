@@ -19,7 +19,7 @@ class RaceTimeType extends AbstractType
     {
         $builder
             ->add('name', IntegerType::class, [
-                'label' => 'form.name',
+                'label' => 'text.name',
                 'required' => true,
                 'trim' => true,
             ])
@@ -31,7 +31,7 @@ class RaceTimeType extends AbstractType
         $resolver->setDefaults([
             'data_class' => RaceTime::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

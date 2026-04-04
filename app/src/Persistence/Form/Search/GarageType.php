@@ -74,8 +74,8 @@ class GarageType extends AbstractType
                     'class' => self::attrClass(),
                 ],
                 'choices'       => [
-                    'form.no' => false,
-                    'form.yes' => true,
+                    'text.no' => false,
+                    'text.yes' => true,
                 ],
                 'empty_data'    => null,
                 'label'         => false, //'form.placeholder.unblock',
@@ -88,8 +88,8 @@ class GarageType extends AbstractType
                     'class' => self::attrClass(),
                 ],
                 'choices'       => [
-                    'form.no' => false,
-                    'form.yes' => true,
+                    'text.no' => false,
+                    'text.yes' => true,
                 ],
                 'empty_data'    => null,
                 'label'         => false, //'form.placeholder.gold',
@@ -107,12 +107,7 @@ class GarageType extends AbstractType
             'csrf_protection'    => false, // enable/disable CSRF protection for this form
             'data_class'         => GarageDTO::class,
             'method'             => 'GET',
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
-    }
-
-    private static function attrClass(): string
-    {
-        return 'fw-bolder';
     }
 }

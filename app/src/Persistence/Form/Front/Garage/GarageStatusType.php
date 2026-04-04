@@ -20,27 +20,27 @@ class GarageStatusType extends AbstractType
         $builder
             ->add('unblock', CheckboxType::class, [
             'attr'          => self::attrClass(),
-            'label'         => 'form.unblock',
+            'label'         => 'text.unblock',
             'required'      => false,
         ])
             ->add('gold', CheckboxType::class, [
             'attr'          => self::attrClass(),
-            'label'         => 'form.gold',
+            'label'         => 'text.gold',
             'required'      => false,
         ])
             ->add('evo', CheckboxType::class, [
             'attr'          => self::attrClass(),
-            'label'         => 'form.evo',
+            'label'         => 'text.evo',
             'required'      => false,
         ])
             ->add('eventClass', CheckboxType::class, [
             'attr'          => self::attrClass(),
-            'label'         => 'form.event.class',
+            'label'         => 'text.event.class',
             'required'      => false,
         ])
             ->add('toUpgrade', CheckboxType::class, [
             'attr'          => self::attrClass(),
-            'label'         => 'form.status.to.upgrade',
+            'label'         => 'text.to.upgrade',
             'required'      => false,
         ])
         ;
@@ -51,7 +51,7 @@ class GarageStatusType extends AbstractType
         $resolver->setDefaults([
             'data_class' => GarageStatus::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 

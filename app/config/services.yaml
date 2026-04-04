@@ -10,9 +10,9 @@ imports:
     - { resource: 'parameters.yaml' }
 
 parameters:
-    app.supported_locales:  'en|fr|it'
-    app.env:                '%env(APP_ENV)%'
-    locale:                 'en'
+    app.supported_locales: 'en|fr|it'
+    app.env:               '%env(APP_ENV)%'
+    locale:                'en'
 
 services:
     # default configuration for services in *this* file

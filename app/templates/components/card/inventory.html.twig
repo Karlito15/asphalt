@@ -1,73 +1,76 @@
 
 {# title #}
-{% if form.vars.value.filter == '-' %}
-    {% set title = form.vars.value.label %}
+{% if this.title() is null %}
+    {% if form.vars.value.filter == '-' %}
+        {% set title = form.vars.value.label %}
+    {% else %}
+        {% set title = form.vars.value.filter ~ ' ' ~ form.vars.value.label %}
+    {% endif %}
 {% else %}
-    {% set title = form.vars.value.filter ~ ' ' ~ form.vars.value.label %}
+    {% set title = this.title() %}
 {% endif %}
 
-{# resume #}
-{% set resume = (form.vars.value.value / maxValue * 100) %}
+{# percent #}
+{% set percent = (form.vars.value.value / maxValue * 100) %}
 
-<div{{ attributes }} class="card">
-{{ form_start(form) }}
-    <!-- component HTML -->
-    <div class="card-body">
-        <div class="row row-cols-2">
-            <div class="col text-center align-content-center w-25">
-                {{ this.icon()|raw }}
+<div class="col" {{ attributes }}>
+
+    <div class="card card-inventory">
+
+        <!-- Header -->
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between gap-xxl-4">
+                <div class="icon-circle">{{ this.icon()|raw }}</span></div>
+                <h2 class="h5 fw-bold text-uppercase {{ this.theme() }}"><label for="value">{{ title }}</label></h2>
             </div>
-            <div class="col w-75">
-                <div class="m-0">
-                    <h6 class="{{ this.color() }} fw-bold text-uppercase text-end pe-1"><label for="value">{{ title }}</label></h6>
-                    <input
-                        type="text"
-                        id="{{ form.vars.value.id }}"
-                        name="{{ field_name(form.children.value) }}"
-                        required="required"
-                        autocomplete="off"
-                        autocapitalize="none"
-                        class="{{ this.color() }} {{ form.children.value.vars.attr.class }}"
-                        inputmode="decimal"
-                        max="{{ maxValue }}"
-                        maxlength="10"
-                        minlength="0"
-                        placeholder="{{ title }}"
-                        tabindex="{{ form.vars.value.position }}"
-                        value="{{ field_value(form.children.value)|number_format }}"
-                        hx-post="{{ path('ajax.dashboard.inventory') }}"
-                        hx-target="#flash-messages"
-                        hx-trigger="change"
-                        aria-label="{{ title|trans }}"
-                        aria-describedby="{{ title|trans }}"
-                    />
+        </div>
+
+        <!-- Body -->
+        <div class="card-body">
+
+            {{ form_start(form) }}
+            <input
+                type="text"
+                id="{{ form.vars.value.id }}"
+                name="{{ field_name(form.children.value) }}"
+                required="required"
+                autocomplete="off"
+                autocapitalize="none"
+                class="{{ form.children.value.vars.attr.class }} {{ this.theme() }}"
+                inputmode="decimal"
+                max="{{ maxValue }}"
+                min="{{ 0 }}"
+                maxlength="10"
+                minlength="0"
+                placeholder="{{ title }}"
+                tabindex="{{ form.vars.value.position }}"
+                value="{{ field_value(form.children.value)|number_format }}"
+                aria-label="{{ title|trans }}"
+                aria-describedby="{{ title|trans }}"
+                hx-post="{{ path('ajax.dashboard.inventory') }}"
+                hx-target="#flash-messages"
+                hx-trigger="change"
+            />
+
+            {% if form.vars.errors|length > 0 %}
+                {{ form_errors(form) }}
+            {% endif %}
+            {{ form_end(form) }}
+
+        </div>
+
+        <!-- Footer -->
+        {% if this.show is true %}
+        <div class="card-footer">
+            <div class="d-flex align-items-center gap-xxl-4 mt-xxl-3">
+                <div class="progress flex-grow-1">
+                    <div id="progressBar" class="progress-bar" style="width: {{ percent|number_format(0) }}%"></div>
                 </div>
+                <small id="percentText">{{ percent|number_format(0) }}%</small>
             </div>
         </div>
-
-        <div class="clearfix mb-1"></div>
-
-        <div>
-            <small class="text-white-50 float-start">{{ form.vars.value.value|number_format }} on {{ maxValue|number_format }}</small>
-            <span class="badge text-bg-dark float-end">{{ resume|number_format(2, ',') }}%</span>
-            <div class="clearfix"></div>
-        </div>
-
-        <div class="progress">
-            <div
-                class="progress-bar l-amber"
-                role="progressbar"
-                aria-valuenow="{{ form.vars.value.value }}"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="width: {{ resume }}%;"
-            ></div>
-        </div>
+        {% endif %}
 
     </div>
-{#    <div class="card-footer">&nbsp;</div>#}
-{% if form.vars.errors|length > 0 %}
-    {{ form_errors(form) }}
-{% endif %}
-{{ form_end(form) }}
+
 </div>

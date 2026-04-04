@@ -1,0 +1,89 @@
+version: '3'
+
+silent: true
+
+vars:
+    SYMFONY: symfony
+    SYMFONY_CONSOLE: "{{.SYMFONY}} console"
+
+tasks:
+    default:
+        cmds:
+            - task: help
+
+    help:
+        desc: Display this help
+        cmds:
+            - echo "{{.GREETING}}"
+            - task --list
+
+    ### ASPHALT
+
+    database:
+        desc: "Delete Database, Create Database, Load Migrations & Import Datas to Database"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-metadata"  # 
+            - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-query"     # 
+            - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-result"    # 
+            - Task Sym:dd                                           # Delete Database
+            - Task Sym:dc                                           # Create Database
+            - Task Sym:dmm                                          # Load Migrations
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration import"   # Import Datas
+            - Task A9:cron
+        ignore_error: true
+        platforms: [windows/amd64]
+    cron:
+        desc: "CRON"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:count:brand"       # Compte le nombre de voitures par Marque
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:count:class"       # Compte le nombre de voitures par Class
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:checkup:garage"    # Mets à jour la VoitureDESC TO DO
+            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:index:garage"      # Créer le listing du Garage
+            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:index:mission"     # Créer le listing des Missions
+            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:index:race"        # Créer le listing des Courses
+            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:page:garage"       # Créer le listing des Pages
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:order:class export" # Export Garage Order By Class
+        ignore_error: true
+        platforms: [windows/amd64]
+    export:
+        desc: "Export Datas from Database"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration export"   # Export Datas
+        ignore_error: true
+        platforms: [windows/amd64]
+    launch:
+        desc: "Start Symfony server for local dev"
+        cmds:
+            - "clear"
+            - Task Sym:secure
+            - Task Sym:start
+            - Task Sym:open
+        ignore_error: true
+        platforms: [windows/amd64]
+    restart:
+        desc: "Restart Symfony Server for Local Dev"
+        cmds:
+            - "clear"
+            - Task stop
+            - Task launch
+        ignore_error: true
+        platforms: [windows/amd64]
+    scripts:
+        desc: "Clear Cache, Install Libraries, Update Librairies, Install Assets, Compile Assets"
+        cmds:
+            - "clear"
+            - "{{.SYMFONY_CONSOLE}} cache:clear"                    # Clear Cache
+            - "{{.SYMFONY_CONSOLE}} importmap:install"              # Install Libraries
+            - "{{.SYMFONY_CONSOLE}} importmap:update"               # Update Librairies
+            - "{{.SYMFONY_CONSOLE}} assets:install"                 # Install Assets
+            - "{{.SYMFONY_CONSOLE}} asset-map:compile"              # Compile Assets
+        ignore_error: true
+        platforms: [windows/amd64]
+    dev:
+        desc: "Initialize Database, Start Symfony Server & Open Browser"
+        cmds:
+            - Task database
+            - Task launch
+            # - "rm -rf public/cache/"
+        ignore_error: true
+        platforms: [windows/amd64]

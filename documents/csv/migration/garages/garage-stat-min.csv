@@ -10,6 +10,7 @@ Apollo	N	360	73	42.36	47.57	130.73
 Arash	AF10	323	73.9	39.2	44.1	120.05
 Arash	AF8 Falcon Édition	321	70.03	53.41	62.99	126.86
 Arash	Imperium	520	87.4	43.71	12.78	165.97
+Ares	Panther	0	0	0	0	0
 Ares	S1	296	75.7	62.03	52.29	121.51
 Arrinera	Hussarya 33	340	71.2	44.4	25.68	120.32
 Artega	Scalo Superelletra	300	75.7	39.29	54.6	117.4
@@ -81,6 +82,8 @@ DS Automobiles	DS E-Tense	250	59.5	45.09	51.56	101.54
 DS Automobiles	E-TENSE Performance	290.5	82	33.06	23	107.14
 Exotic Rides	W70	313	73.9	40.46	43.05	117.6
 Faraday Future	FFZero1	403	82	37.56	33.6	139.04
+Ferrante Design	Elytron	0	0	0	0	0
+Ferrari	12 Cilindri	0	0	0	0	0
 Ferrari	296 GTB	330	73.9	43.46	25.14	118.13
 Ferrari	488 GTB	330	73	41.99	56.41	125.35
 Ferrari	488 GTB Challenge EVO	330	73	47.13	50.55	125.17
@@ -167,6 +170,7 @@ Lamborghini	Egoista	350	78.4	49.16	65.97	135.88
 Lamborghini	Essenza SCV12	318	76.15	49.51	47.37	122.76
 Lamborghini	Gallardo LP560-4	325	67.6	50.25	38.4	120.31
 Lamborghini	Huracán Evo Spyder	325	72.1	46.62	51.94	123.92
+Lamborghini	Huracán Sterrato	0	0	0	0	0
 Lamborghini	Huracán STO	310	73	50.01	39.02	118.01
 Lamborghini	Huracán Super Trofeo Evo	290	72.1	46.42	31.01	109.88
 Lamborghini	Invencible	322	75.5	49.92	45.84	123.32
@@ -223,6 +227,7 @@ Mercedes-Benz	2022 Showcar Vision AMG	321	64.9	34.71	26.57	111.8
 Mercedes-Benz	AMG GT Black Series	325	72.2	43	50.97	122.79
 Mercedes-Benz	AMG GT S	310	65.8	35.63	39.96	112.85
 Mercedes-Benz	C 63 AMG DTM	306	69.4	48.17	48.86	118.11
+Mercedes-Benz	C11	0	0	0	0	0
 Mercedes-Benz	CLK-GTR	320	66.7	42.53	32.25	115.37
 Mercedes-Benz	Mercedes-AMG ONE	352	73.9	53.2	49.87	132.24
 Mercedes-Benz	Silver Lightning	380	76.6	54.63	27.83	134.77
@@ -260,11 +265,15 @@ Porsche	911 50 Years Porsche Design	300	68.5	57.8	47.29	118.4
 Porsche	911 Carrera RS 3.8	270	55.9	39.13	11.68	94.18
 Porsche	911 GT1 Evolution	310	66.7	45.1	55.86	119.42
 Porsche	911 GT2 RS Clubsport	340	74.8	55.63	49.64	130.02
+Porsche	911 GT3 R rennsport	0	0	0	0	0
 Porsche	911 GT3 RS	312	71.2	52.35	52.35	121.98
 Porsche	911 GTS Coupé	312	64.9	41.08	42.95	115.23
 Porsche	911 Targa 4S	303	64	29.2	18.15	103.59
 Porsche	911 Turbo 50 Years	330	75.7	32.47	34.91	118.27
+Porsche	917 Living Legend	0	0	0	0	0
 Porsche	918 Spyder	345	76.59	41.83	66.3	132.43
+Porsche	918 Spyder Asphalt Edition	0	0	0	0	0
+Porsche	919 Street	0	0	0	0	0
 Porsche	935 (2019)	340	75.7	55.63	55.63	131.74
 Porsche	935 Dragonforce Edition	355	71.2	53.52	55.33	133.76
 Porsche	Boxster 25th Anniversary	288	64	39.54	35.31	106.71

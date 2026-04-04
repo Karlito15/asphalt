@@ -20,28 +20,28 @@ class GarageStatMinType extends AbstractType
         $builder
             ->add('speed', NumberType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'form.speed',
+                'label'      => 'text.speed',
                 'label_attr' => self::labelClass(),
                 'scale'      => 2,
                 'required'   => false,
             ])
             ->add('acceleration', NumberType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'form.acceleration',
+                'label'      => 'text.acceleration',
                 'label_attr' => self::labelClass(),
                 'scale'      => 2,
                 'required'   => false,
             ])
             ->add('handling', NumberType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'form.handling',
+                'label'      => 'text.handling',
                 'label_attr' => self::labelClass(),
                 'scale'      => 2,
                 'required'   => false,
             ])
             ->add('nitro', NumberType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'form.nitro',
+                'label'      => 'text.nitro',
                 'label_attr' => self::labelClass(),
                 'scale'      => 2,
                 'required'   => false,
@@ -54,7 +54,7 @@ class GarageStatMinType extends AbstractType
         $resolver->setDefaults([
             'data_class'         => GarageStatMin::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 

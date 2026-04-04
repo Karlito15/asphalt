@@ -1,9 +1,11 @@
 
-<div class="row mb-2">
-    <div class="card-group">
-        <twig:CardInventory color="secondary" icon="fa-rocket" maxValue="999" form="{{ speed }}" />
-        <twig:CardInventory color="secondary" icon="fa-gauge-high" maxValue="999" form="{{ acceleration }}" />
-        <twig:CardInventory color="secondary" icon="fa-gear" maxValue="999" form="{{ handling }}" />
-        <twig:CardInventory color="secondary" icon="fa-fire" maxValue="999" form="{{ nitro }}" />
-    </div>
-</div>
+            <h2 class="h4 text-start text-uppercase">
+                {{ 'text.common'|trans|plural() }}
+            </h2>
+
+            <div class="row row-cols-1 row-cols-xxl-4 g-xxl-3 mb-xxl-2">
+                <twig:CardInventory maxValue="{{ 999 }}" title="{{ 'text.speed'|trans }}" theme="{{ 'body-tertiary' }}" icon="{{ 'fa-rocket' }}" show="{{ true }}" form="{{ speed }}" />
+                <twig:CardInventory maxValue="{{ 999 }}" title="{{ 'text.acceleration'|trans }}" theme="{{ 'body-tertiary' }}" icon="{{ 'fa-gauge-high' }}" show="{{ true }}" form="{{ acceleration }}" />
+                <twig:CardInventory maxValue="{{ 999 }}" title="{{ 'text.handling'|trans }}" theme="{{ 'body-tertiary' }}" icon="{{ 'fa-gear' }}" show="{{ true }}" form="{{ handling }}" />
+                <twig:CardInventory maxValue="{{ 999 }}" title="{{ 'text.nitro'|trans }}" theme="{{ 'body-tertiary' }}" icon="{{ 'fa-fire' }}" show="{{ true }}" form="{{ nitro }}" />
+            </div>

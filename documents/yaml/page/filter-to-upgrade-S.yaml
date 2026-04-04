@@ -4,13 +4,6 @@
     evo: false
     eventClass: false
     toUpgrade: true
-    garage: { id: 116, gameUpdate: 16, model: Divo, slug: bugatti-divo, settingBrand: { name: Bugatti }, settingClass: { value: S } }
--
-    unblock: true
-    gold: false
-    evo: false
-    eventClass: false
-    toUpgrade: true
     garage: { id: 140, gameUpdate: 20, model: 'Venom F5', slug: hennessey-venom-f5, settingBrand: { name: Hennessey }, settingClass: { value: S } }
 -
     unblock: false

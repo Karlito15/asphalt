@@ -56,7 +56,7 @@ class SettingUnitPrice extends UnitPriceAbstract
 
     public function __toString(): string
     {
-        return (string) $this->getSlug();
+        return $this->getSlug();
     }
 
     public function getSlug(): ?string

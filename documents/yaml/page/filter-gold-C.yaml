@@ -11,35 +11,35 @@
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 4, gameUpdate: 0, model: 'M4 GTS', slug: bmw-m4-gts, settingBrand: { name: BMW }, settingClass: { value: C } }
+    garage: { id: 5, gameUpdate: 0, model: '3.0 CSL Hommage', slug: bmw-3-0-csl-hommage, settingBrand: { name: BMW }, settingClass: { value: C } }
 -
     unblock: true
     gold: true
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 6, gameUpdate: 0, model: '3.0 CSL Hommage', slug: bmw-3-0-csl-hommage, settingBrand: { name: BMW }, settingClass: { value: C } }
+    garage: { id: 6, gameUpdate: 0, model: 'M4 GTS', slug: bmw-m4-gts, settingBrand: { name: BMW }, settingClass: { value: C } }
 -
     unblock: true
     gold: true
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 9, gameUpdate: 0, model: 'Camaro ZL1 50th Edition', slug: chevrolet-camaro-zl1-50th-edition, settingBrand: { name: Chevrolet }, settingClass: { value: C } }
+    garage: { id: 10, gameUpdate: 0, model: 'Camaro ZL1 50th Edition', slug: chevrolet-camaro-zl1-50th-edition, settingBrand: { name: Chevrolet }, settingClass: { value: C } }
 -
     unblock: true
     gold: true
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 15, gameUpdate: 0, model: 'Challenger SRT8', slug: dodge-challenger-srt8, settingBrand: { name: Dodge }, settingClass: { value: C } }
+    garage: { id: 14, gameUpdate: 0, model: 'Challenger SRT8', slug: dodge-challenger-srt8, settingBrand: { name: Dodge }, settingClass: { value: C } }
 -
     unblock: true
     gold: true
     evo: false
     eventClass: false
     toUpgrade: false
-    garage: { id: 13, gameUpdate: 0, model: 'Viper ACR', slug: dodge-viper-acr, settingBrand: { name: Dodge }, settingClass: { value: C } }
+    garage: { id: 12, gameUpdate: 0, model: 'Viper ACR', slug: dodge-viper-acr, settingBrand: { name: Dodge }, settingClass: { value: C } }
 -
     unblock: true
     gold: true
@@ -116,12 +116,19 @@
     evo: false
     eventClass: false
     toUpgrade: false
+    garage: { id: 91, gameUpdate: 12, model: 'Gallardo LP560-4', slug: lamborghini-gallardo-lp560-4, settingBrand: { name: Lamborghini }, settingClass: { value: C } }
+-
+    unblock: true
+    gold: true
+    evo: false
+    eventClass: false
+    toUpgrade: false
     garage: { id: 135, gameUpdate: 19, model: 'R.S. 01', slug: renault-r-s-01, settingBrand: { name: Renault }, settingClass: { value: C } }
 -
     unblock: true
     gold: true
     evo: false
-    eventClass: true
+    eventClass: false
     toUpgrade: false
     garage: { id: 157, gameUpdate: 22, model: GT, slug: mclaren-gt, settingBrand: { name: McLaren }, settingClass: { value: C } }
 -
@@ -142,14 +149,14 @@
     unblock: true
     gold: true
     evo: false
-    eventClass: true
+    eventClass: false
     toUpgrade: false
     garage: { id: 201, gameUpdate: 29, model: 'AMG GT Black Series', slug: mercedes-benz-amg-gt-black-series, settingBrand: { name: Mercedes-Benz }, settingClass: { value: C } }
 -
     unblock: true
     gold: true
     evo: false
-    eventClass: true
+    eventClass: false
     toUpgrade: false
     garage: { id: 231, gameUpdate: 34, model: '296 GTB', slug: ferrari-296-gtb, settingBrand: { name: Ferrari }, settingClass: { value: C } }
 -

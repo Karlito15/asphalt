@@ -1,2 +1,0 @@
-// Color system
-$theme-colors: map-merge($theme-colors, $asphalt-colors);

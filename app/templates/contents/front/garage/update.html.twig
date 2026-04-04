@@ -1,19 +1,20 @@
+{% extends '@App/bases/front/full.html.twig' %}
 
 {% set background, text = '', '' %}
 
 {% if entity.status.unblock == false %}
     {% set background = 'bg-danger-subtle' %}
     {% if entity.status.toUpgrade == true %}
-        {% set text   = 'text-info' %}
+        {% set text   = 'text-primary' %}
     {% else %}
-        {% set text   = 'text-danger' %}
+        {% set text   = 'text-epic' %}
     {% endif %}
 {% endif %}
 
 {% if entity.status.unblock == true %}
     {% set background = 'bg-success-subtle' %}
     {% if entity.status.toUpgrade == true %}
-        {% set text   = 'text-info' %}
+        {% set text   = 'text-primary' %}
     {% else %}
         {% set text   = 'text-success' %}
     {% endif %}
@@ -21,43 +22,66 @@
 
 {% if entity.status.unblock == true and entity.status.gold == true %}
     {% set background = 'bg-warning-subtle' %}
-    {% if entity.status.toUpgrade == true %}
-        {% set text   = 'text-info' %}
-    {% else %}
-        {% set text   = 'text-warning' %}
-    {% endif %}
+    {% set text       = 'text-warning' %}
 {% endif %}
 
 {% block content %}
 
-<div class="card {{ background }}">
-    <div class="card-header {{ background }}">
-        {% include "@App/contents/front/garage/_title.html.twig" %}
-    </div>
-    <div class="card-body">
-        {{ form_start(form) }}
-            {% include "@App/contents/front/garage/update/garage-part-1.html.twig" %}
-            <div class="row rows-2">
-                {% include "@App/contents/front/garage/update/upgrade.html.twig" %}
-                {% include "@App/contents/front/garage/update/rank.html.twig" %}
+    <section class="d-flex align-items-center justify-content-center {{ background }}">
+        <div class="col-xxl-30">
+            {% include "@App/contents/front/garage/_title.html.twig" %}
+        </div>
+        <div class="col-xxl-auto">
+            <input type="radio" class="btn-check" name="mode" id="option1" value="expert">
+            <label class="btn btn-secondary" for="option1">{{ 'text.screen.mode'|trans ~ 'text.expert'|trans }}</label>
+
+            <input type="radio" class="btn-check" name="mode" id="option2" value="normal" checked>
+            <label class="btn btn-secondary" for="option2">{{ 'text.screen.mode'|trans ~ 'text.normal'|trans }}</label>
+        </div>
+    </section>
+
+    <section class="row">
+
+    {{ form_start(form) }}
+        {% include '@App/contents/front/garage/update/garage.html.twig' %}
+
+        {% include '@App/contents/front/garage/update/status.html.twig' %}
+
+        <div class="row">
+            <div class="col-xxl-24">
+                {% include '@App/contents/front/garage/update/blueprint.html.twig' %}
             </div>
-            <div class="row rows-2">
-                {% include "@App/contents/front/garage/update/blueprint.html.twig" %}
-                {% include "@App/contents/front/garage/update/stat.html.twig" %}
+            <div class="col-xxl-12">
+                {% include '@App/contents/front/garage/update/upgrade.html.twig' %}
             </div>
-            {% include "@App/contents/front/garage/update/gauntlet.html.twig" %}
-            {% include "@App/contents/front/garage/update/status.html.twig" %}
-{#            {% include "@App/contents/front/garage/update/tag.html.twig" %}#}
-            {{ form_rest(form) }}
+        </div>
+
+        <div class="row">
+            <div class="col-xxl-22">
+                {% include '@App/contents/front/garage/update/rank.html.twig' %}
+            </div>
+            <div class="col-xxl-14">
+                {% include '@App/contents/front/garage/update/stat.html.twig' %}
+            </div>
+        </div>
+
         {% include "@App/contents/front/garage/update/_button.html.twig" %}
-        {{ form_end(form) }}
-    </div>
-    <div class="card-footer">
+
+        {{ form_rest(form) }}
+
+    {{ form_end(form) }}
+    </section>
+
+    <section class="row">
         {% include '@App/contents/front/garage/delete.html.twig' %}
-    </div>
-</div>
+    </section>
 
 
 {% endblock %}
 
-{% extends '@App/bases/front/full.html.twig' %}
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('scripts/switch-mode-expert-normal.js') }}" defer></script>
+{% endblock %}
+

@@ -28,9 +28,9 @@ class AppCreateType extends AbstractType
                 'attr'          => [
                     'autocomplete'  => 'off',
                     'class'         => 'fw-bold',
-                    'placeholder'   => 'form.model',
+                    'placeholder'   => 'text.model',
                 ],
-                'label'         => 'form.model',
+                'label'         => 'text.model',
                 'required'      => true,
                 'trim'          => true,
             ])
@@ -40,7 +40,7 @@ class AppCreateType extends AbstractType
                     'class'         => 'fw-bold',
                     'min'           => 1,
                 ],
-                'label'     => 'form.gameUpdate',
+                'label'     => 'text.game.update',
                 'required'  => true,
                 'trim'      => true,
             ])
@@ -49,13 +49,13 @@ class AppCreateType extends AbstractType
                     'class' => 'fw-bold',
                 ],
                 'choices'       => [
-                    'form.3' => 3,
-                    'form.4' => 4,
-                    'form.5' => 5,
-                    'form.6' => 6,
+                    'text.3' => 3,
+                    'text.4' => 4,
+                    'text.5' => 5,
+                    'text.6' => 6,
                 ],
-                'label'         => 'form.stars',
-                'placeholder'   => 'form.stars',
+                'label'         => 'text.stars',
+                'placeholder'   => 'text.stars',
                 'required'      => true,
                 'trim'          => true,
             ])
@@ -68,8 +68,8 @@ class AppCreateType extends AbstractType
                 'choice_label'  => 'name',
                 'class'         => SettingBrand::class,
                 'empty_data'    => null,
-                'label'         => 'form.settingBrand',
-                'placeholder'   => 'form.settingBrand',
+                'label'         => 'text.setting.brand',
+                'placeholder'   => 'text.setting.brand',
                 'required'      => true,
                 'trim'          => true,
             ])
@@ -80,8 +80,8 @@ class AppCreateType extends AbstractType
                 'choice_label'  => 'value',
                 'class'         => SettingClass::class,
                 'empty_data'    => null,
-                'label'         => 'form.settingClass',
-                'placeholder'   => 'form.settingClass',
+                'label'         => 'text.setting.class',
+                'placeholder'   => 'text.setting.class',
                 'required'      => true,
                 'trim'          => true,
             ])
@@ -93,7 +93,7 @@ class AppCreateType extends AbstractType
         $resolver->setDefaults([
             'data_class' => GarageApp::class,
             'allow_extra_fields' => false, // true
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

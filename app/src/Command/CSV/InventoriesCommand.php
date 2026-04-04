@@ -63,22 +63,22 @@ class InventoriesCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        // Init variables
+        ### Init variables
         $io         = new SymfonyStyle($input, $output);
         $choice     = $input->getArgument('choice');
         $database   = $this->parameter->get('folders.csv.database');
 
-        // Question
+        ### Question
         if (is_null($choice)) {
-            $helper = $this->getHelper('question');
+            $helper   = $this->getHelper('question');
             $question = new ChoiceQuestion('Do you want to export or import datas ?', ['export', 'import'], 'export');
-            $choice = $helper->ask($input, $output, $question);
+            $choice   = $helper->ask($input, $output, $question);
         }
 
-        // Get Directory
+        ### Get Directory
         $folder     = PathService::getLastDirectory($database);
 
-        // Services Datas
+        ### Services Datas
         if ($choice === 'import') {
             $this->inventory->import($io, $folder);
             $io->info('Import INVENTORY terminé');

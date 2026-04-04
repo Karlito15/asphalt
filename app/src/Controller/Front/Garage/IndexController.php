@@ -34,7 +34,7 @@ final class IndexController extends AbstractController
     private static string $delete = 'app.garage.delete';
 
     /** @description name of folder's Extraction  */
-    private static string $folder = 'list';
+    private static string $folder = 'index';
 
     /** @description name of file's Extraction  */
     private static string $file = 'app-garage.yaml';

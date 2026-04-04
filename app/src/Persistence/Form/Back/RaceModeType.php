@@ -24,7 +24,7 @@ class RaceModeType extends AbstractType
                     'class' => null,
                     'maxlength' => 32,
                 ],
-                'label' => 'form.mode',
+                'label' => 'text.mode',
                 'required' => true,
                 'trim' => true,
             ])
@@ -36,7 +36,7 @@ class RaceModeType extends AbstractType
         $resolver->setDefaults([
             'data_class' => RaceMode::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

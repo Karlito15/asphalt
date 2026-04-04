@@ -3,11 +3,11 @@
 -
     garage: { id: 102, gameUpdate: 14, model: 'Valhalla Concept Car', slug: aston-martin-valhalla-concept-car, settingBrand: { name: 'Aston Martin' }, settingClass: { value: A } }
 -
-    garage: { id: 110, gameUpdate: 15, model: 'F8 Tributo', slug: ferrari-f8-tributo, settingBrand: { name: Ferrari }, settingClass: { value: A } }
+    garage: { id: 112, gameUpdate: 15, model: 'F8 Tributo', slug: ferrari-f8-tributo, settingBrand: { name: Ferrari }, settingClass: { value: A } }
 -
     garage: { id: 132, gameUpdate: 18, model: Imola, slug: pagani-imola, settingBrand: { name: Pagani }, settingClass: { value: A } }
 -
-    garage: { id: 174, gameUpdate: 25, model: 'Countach LPI 800-4', slug: lamborghini-countach-lpi-800-4, settingBrand: { name: Lamborghini }, settingClass: { value: A } }
+    garage: { id: 175, gameUpdate: 25, model: 'Countach LPI 800-4', slug: lamborghini-countach-lpi-800-4, settingBrand: { name: Lamborghini }, settingClass: { value: A } }
 -
     garage: { id: 195, gameUpdate: 28, model: '650S GT3', slug: mclaren-650s-gt3, settingBrand: { name: McLaren }, settingClass: { value: A } }
 -

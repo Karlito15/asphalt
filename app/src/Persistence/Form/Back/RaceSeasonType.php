@@ -24,7 +24,7 @@ class RaceSeasonType extends AbstractType
                     'min' => 1,
                     'max' => 6,
                 ],
-                'label' => 'form.chapter',
+                'label' => 'text.chapter',
                 'required' => true,
                 'trim' => true,
             ])
@@ -34,7 +34,7 @@ class RaceSeasonType extends AbstractType
                     'class' => null,
                     'maxlength' => 64,
                 ],
-                'label' => 'form.name',
+                'label' => 'text.name',
                 'required' => true,
                 'trim' => true,
             ])
@@ -46,7 +46,7 @@ class RaceSeasonType extends AbstractType
         $resolver->setDefaults([
             'data_class' => RaceSeason::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 }

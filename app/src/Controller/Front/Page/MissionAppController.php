@@ -33,7 +33,7 @@ final class MissionAppController extends AbstractController
     private static string $delete   = 'admin.mission.app.delete';
 
     /** @description name of folder's Extraction  */
-    private static string $folder = 'list';
+    private static string $folder = 'index';
 
     /** @description name of file's Extraction  */
     private static string $file = 'app-mission.yaml';

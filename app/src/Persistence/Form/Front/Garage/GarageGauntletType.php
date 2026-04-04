@@ -25,7 +25,7 @@ class GarageGauntletType extends AbstractType
 //            ->add('mark')
             ->add('division', IntegerType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'form.division',
+                'label'      => 'text.division',
                 'label_attr' => self::labelClass(),
                 'label_html' => true,
                 'required'   => false,
@@ -38,7 +38,7 @@ class GarageGauntletType extends AbstractType
         $resolver->setDefaults([
             'data_class' => GarageGauntlet::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 

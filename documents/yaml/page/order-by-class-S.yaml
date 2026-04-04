@@ -1,59 +1,59 @@
 -
-    id: 28
+    id: 29
     gameUpdate: 0
     model: Centenario
     slug: lamborghini-centenario
-    status: { unblock: true, gold: true, id: 32 }
-    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    status: { unblock: true, gold: true, id: 29 }
+    settingBrand: { name: Lamborghini, carsNumber: 29, slug: lamborghini, id: 55 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 20
     gameUpdate: 0
     model: 'FXX K'
     slug: ferrari-fxx-k
-    status: { unblock: true, gold: true, id: 20 }
-    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    status: { unblock: true, gold: true, id: 21 }
+    settingBrand: { name: Ferrari, carsNumber: 22, slug: ferrari, id: 35 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 258
     gameUpdate: 38
     model: Autentica
     slug: lamborghini-autentica
     status: { unblock: true, gold: false, id: 258 }
-    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Lamborghini, carsNumber: 29, slug: lamborghini, id: 55 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 25
     gameUpdate: 0
     model: 'Vulcano Titanium'
     slug: icona-vulcano-titanium
     status: { unblock: true, gold: true, id: 25 }
-    settingBrand: { name: Icona, carsNumber: 1, slug: icona, id: 45 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Icona, carsNumber: 2, slug: icona, id: 46 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
-    id: 50
+    id: 49
     gameUpdate: 0
     model: 'Lykan Hypersport'
     slug: w-motors-lykan-hypersport
     status: { unblock: true, gold: true, id: 49 }
-    settingBrand: { name: 'W Motors', carsNumber: 3, slug: w-motors, id: 98 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: 'W Motors', carsNumber: 3, slug: w-motors, id: 99 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 147
     gameUpdate: 21
     model: 'Tachyon Speed'
     slug: raesr-tachyon-speed
     status: { unblock: false, gold: false, id: 147 }
-    settingBrand: { name: Raesr, carsNumber: 3, slug: raesr, id: 77 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Raesr, carsNumber: 3, slug: raesr, id: 78 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 94
     gameUpdate: 12
     model: Veneno
     slug: lamborghini-veneno
-    status: { unblock: true, gold: false, id: 91 }
-    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    status: { unblock: true, gold: false, id: 93 }
+    settingBrand: { name: Lamborghini, carsNumber: 29, slug: lamborghini, id: 55 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 236
     gameUpdate: 35
@@ -61,31 +61,31 @@
     slug: ats-automobili-gt
     status: { unblock: true, gold: false, id: 236 }
     settingBrand: { name: 'ATS Automobili', carsNumber: 2, slug: ats-automobili, id: 12 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 194
     gameUpdate: 28
     model: 'XJ220S TWR'
     slug: jaguar-xj220s-twr
     status: { unblock: false, gold: false, id: 194 }
-    settingBrand: { name: Jaguar, carsNumber: 7, slug: jaguar, id: 49 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Jaguar, carsNumber: 7, slug: jaguar, id: 50 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
-    id: 32
+    id: 31
     gameUpdate: 0
     model: Egoista
     slug: lamborghini-egoista
-    status: { unblock: true, gold: true, id: 29 }
-    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    status: { unblock: true, gold: true, id: 30 }
+    settingBrand: { name: Lamborghini, carsNumber: 29, slug: lamborghini, id: 55 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 283
     gameUpdate: 42
     model: 'N Vision 74 Concept'
     slug: hyundai-n-vision-74-concept
-    status: { unblock: false, gold: false, id: 284 }
-    settingBrand: { name: Hyundai, carsNumber: 2, slug: hyundai, id: 44 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    status: { unblock: false, gold: false, id: 283 }
+    settingBrand: { name: Hyundai, carsNumber: 2, slug: hyundai, id: 45 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 192
     gameUpdate: 28
@@ -93,55 +93,63 @@
     slug: chrysler-me412
     status: { unblock: false, gold: false, id: 192 }
     settingBrand: { name: Chrysler, carsNumber: 1, slug: chrysler, id: 22 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 46
     gameUpdate: 0
     model: Nemesis
     slug: trion-nemesis
     status: { unblock: true, gold: true, id: 46 }
-    settingBrand: { name: Trion, carsNumber: 1, slug: trion, id: 89 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Trion, carsNumber: 1, slug: trion, id: 90 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
+-
+    id: 331
+    gameUpdate: 48
+    model: '918 Spyder Asphalt Edition'
+    slug: porsche-918-spyder-asphalt-edition
+    status: { unblock: true, gold: false, id: 330 }
+    settingBrand: { name: Porsche, carsNumber: 22, slug: porsche, id: 75 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 202
     gameUpdate: 29
     model: '2015 GTA Spano'
     slug: spania-gta-2015-gta-spano
     status: { unblock: false, gold: false, id: 202 }
-    settingBrand: { name: 'Spania GTA', carsNumber: 1, slug: spania-gta, id: 83 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: 'Spania GTA', carsNumber: 1, slug: spania-gta, id: 84 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 252
     gameUpdate: 37
     model: 'GT-R Néon Édition'
     slug: nissan-gt-r-neon-edition
     status: { unblock: true, gold: false, id: 252 }
-    settingBrand: { name: Nissan, carsNumber: 8, slug: nissan, id: 69 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Nissan, carsNumber: 8, slug: nissan, id: 70 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
-    id: 109
+    id: 107
     gameUpdate: 15
     model: 'SF90 Stradale'
     slug: ferrari-sf90-stradale
-    status: { unblock: true, gold: true, id: 107 }
-    settingBrand: { name: Ferrari, carsNumber: 21, slug: ferrari, id: 34 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    status: { unblock: true, gold: true, id: 112 }
+    settingBrand: { name: Ferrari, carsNumber: 22, slug: ferrari, id: 35 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 204
     gameUpdate: 30
     model: 'Sorpasso GT3'
     slug: fv-frangivento-sorpasso-gt3
     status: { unblock: false, gold: false, id: 204 }
-    settingBrand: { name: 'FV Frangivento', carsNumber: 3, slug: fv-frangivento, id: 37 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: 'FV Frangivento', carsNumber: 3, slug: fv-frangivento, id: 38 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 71
     gameUpdate: 7
     model: Senna
     slug: mclaren-senna
     status: { unblock: true, gold: false, id: 71 }
-    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 62 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 139
     gameUpdate: 20
@@ -149,63 +157,71 @@
     slug: bugatti-veyron-16-4-grand-sport-vitesse
     status: { unblock: true, gold: false, id: 139 }
     settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 30
     gameUpdate: 0
     model: 'Terzo Millennio'
     slug: lamborghini-terzo-millennio
     status: { unblock: true, gold: true, id: 28 }
-    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Lamborghini, carsNumber: 29, slug: lamborghini, id: 55 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 166
     gameUpdate: 23
     model: '1789'
     slug: vision-1789
     status: { unblock: true, gold: false, id: 166 }
-    settingBrand: { name: Vision, carsNumber: 1, slug: vision, id: 95 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Vision, carsNumber: 1, slug: vision, id: 96 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 273
     gameUpdate: 40
     model: Teorema
     slug: pininfarina-teorema
     status: { unblock: false, gold: false, id: 273 }
-    settingBrand: { name: Pininfarina, carsNumber: 2, slug: pininfarina, id: 73 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Pininfarina, carsNumber: 2, slug: pininfarina, id: 74 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
-    id: 49
+    id: 50
     gameUpdate: 0
     model: 'Fenyr Supersport'
     slug: w-motors-fenyr-supersport
     status: { unblock: true, gold: false, id: 50 }
-    settingBrand: { name: 'W Motors', carsNumber: 3, slug: w-motors, id: 98 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: 'W Motors', carsNumber: 3, slug: w-motors, id: 99 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 133
     gameUpdate: 19
     model: Valkyrie
     slug: aston-martin-valkyrie
-    status: { unblock: true, gold: false, id: 133 }
+    status: { unblock: true, gold: false, id: 134 }
     settingBrand: { name: 'Aston Martin', carsNumber: 14, slug: aston-martin, id: 11 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 59
     gameUpdate: 3
     model: 'TS1 GT Anniversary'
     slug: zenvo-ts1-gt-anniversary
     status: { unblock: true, gold: false, id: 59 }
-    settingBrand: { name: Zenvo, carsNumber: 4, slug: zenvo, id: 99 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Zenvo, carsNumber: 4, slug: zenvo, id: 100 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
+-
+    id: 327
+    gameUpdate: 48
+    model: C11
+    slug: mercedes-benz-c11
+    status: { unblock: false, gold: false, id: 327 }
+    settingBrand: { name: Mercedes-Benz, carsNumber: 10, slug: mercedes-benz, id: 64 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 228
     gameUpdate: 33
     model: 'Concept S'
     slug: rimac-concept-s
     status: { unblock: true, gold: false, id: 228 }
-    settingBrand: { name: Rimac, carsNumber: 4, slug: rimac, id: 80 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Rimac, carsNumber: 6, slug: rimac, id: 81 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 75
     gameUpdate: 8
@@ -213,23 +229,23 @@
     slug: automobili-pininfarina-battista
     status: { unblock: true, gold: true, id: 75 }
     settingBrand: { name: 'Automobili Pininfarina', carsNumber: 3, slug: automobili-pininfarina, id: 13 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 158
     gameUpdate: 22
     model: 'Hyper Coupé'
     slug: naran-hyper-coupe
     status: { unblock: true, gold: false, id: 158 }
-    settingBrand: { name: Naran, carsNumber: 1, slug: naran, id: 66 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Naran, carsNumber: 1, slug: naran, id: 67 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 106
     gameUpdate: 14
     model: Speedtail
     slug: mclaren-speedtail
     status: { unblock: true, gold: false, id: 106 }
-    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 61 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: McLaren, carsNumber: 15, slug: mclaren, id: 62 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 193
     gameUpdate: 28
@@ -237,47 +253,47 @@
     slug: faraday-future-ffzero1
     status: { unblock: true, gold: false, id: 193 }
     settingBrand: { name: 'Faraday Future', carsNumber: 1, slug: faraday-future, id: 33 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 27
     gameUpdate: 0
     model: Regera
     slug: koenigsegg-regera
     status: { unblock: true, gold: true, id: 27 }
-    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 53 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 222
     gameUpdate: 32
     model: 'S7 Twin Turbo'
     slug: saleen-s7-twin-turbo
     status: { unblock: false, gold: false, id: 222 }
-    settingBrand: { name: Saleen, carsNumber: 2, slug: saleen, id: 81 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Saleen, carsNumber: 2, slug: saleen, id: 82 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 165
     gameUpdate: 23
     model: RS
     slug: ultima-rs
     status: { unblock: true, gold: true, id: 165 }
-    settingBrand: { name: Ultima, carsNumber: 1, slug: ultima, id: 92 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Ultima, carsNumber: 1, slug: ultima, id: 93 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
-    id: 93
+    id: 92
     gameUpdate: 12
     model: 'Sián FKP 37'
     slug: lamborghini-sian-fkp-37
-    status: { unblock: true, gold: false, id: 92 }
-    settingBrand: { name: Lamborghini, carsNumber: 28, slug: lamborghini, id: 54 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    status: { unblock: true, gold: false, id: 94 }
+    settingBrand: { name: Lamborghini, carsNumber: 29, slug: lamborghini, id: 55 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 306
     gameUpdate: 45
     model: 'Mustang RTR Spec 5-FD'
     slug: ford-mustang-rtr-spec-5-fd
     status: { unblock: true, gold: false, id: 306 }
-    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 35 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Ford, carsNumber: 11, slug: ford, id: 36 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 185
     gameUpdate: 27
@@ -285,23 +301,23 @@
     slug: ajlani-drakuma
     status: { unblock: false, gold: false, id: 185 }
     settingBrand: { name: Ajlani, carsNumber: 1, slug: ajlani, id: 2 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 122
     gameUpdate: 17
     model: Inferno
     slug: inferno-automobili-inferno
     status: { unblock: true, gold: false, id: 122 }
-    settingBrand: { name: 'Inferno Automobili', carsNumber: 1, slug: inferno-automobili, id: 46 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: 'Inferno Automobili', carsNumber: 2, slug: inferno-automobili, id: 47 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 203
     gameUpdate: 29
     model: 'Super Sport'
     slug: torino-design-super-sport
     status: { unblock: false, gold: false, id: 203 }
-    settingBrand: { name: 'Torino Design', carsNumber: 1, slug: torino-design, id: 86 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: 'Torino Design', carsNumber: 1, slug: torino-design, id: 87 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 7
     gameUpdate: 0
@@ -309,7 +325,7 @@
     slug: bugatti-chiron
     status: { unblock: true, gold: true, id: 7 }
     settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 96
     gameUpdate: 13
@@ -317,7 +333,7 @@
     slug: bxr-bailey-blade-gt1
     status: { unblock: true, gold: true, id: 96 }
     settingBrand: { name: BXR, carsNumber: 1, slug: bxr, id: 19 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 116
     gameUpdate: 16
@@ -325,31 +341,31 @@
     slug: bugatti-divo
     status: { unblock: true, gold: false, id: 115 }
     settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 170
     gameUpdate: 24
     model: 'TS 900 Racer Pro'
     slug: tushek-ts-900-racer-pro
     status: { unblock: false, gold: false, id: 170 }
-    settingBrand: { name: Tushek, carsNumber: 2, slug: tushek, id: 90 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Tushek, carsNumber: 2, slug: tushek, id: 91 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 293
     gameUpdate: 43
     model: 'Ultimate Aero TT'
     slug: ssc-ultimate-aero-tt
     status: { unblock: true, gold: false, id: 293 }
-    settingBrand: { name: SSC, carsNumber: 3, slug: ssc, id: 84 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: SSC, carsNumber: 3, slug: ssc, id: 85 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 150
     gameUpdate: 21
     model: 1MW
     slug: toroidion-1mw
     status: { unblock: false, gold: false, id: 150 }
-    settingBrand: { name: Toroidion, carsNumber: 1, slug: toroidion, id: 87 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Toroidion, carsNumber: 1, slug: toroidion, id: 88 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 253
     gameUpdate: 38
@@ -357,39 +373,39 @@
     slug: bugatti-chiron-pur-sport
     status: { unblock: true, gold: true, id: 253 }
     settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 66
     gameUpdate: 6
     model: Jesko
     slug: koenigsegg-jesko
     status: { unblock: true, gold: false, id: 66 }
-    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 53 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 266
     gameUpdate: 39
     model: 'Nevera Time Attack'
     slug: rimac-nevera-time-attack
     status: { unblock: true, gold: false, id: 266 }
-    settingBrand: { name: Rimac, carsNumber: 4, slug: rimac, id: 80 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Rimac, carsNumber: 6, slug: rimac, id: 81 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
-    id: 179
+    id: 178
     gameUpdate: 26
     model: Centodieci
     slug: bugatti-centodieci
-    status: { unblock: false, gold: false, id: 179 }
+    status: { unblock: false, gold: false, id: 178 }
     settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 241
     gameUpdate: 35
     model: 'Lykan Édition Néon'
     slug: w-motors-lykan-edition-neon
     status: { unblock: false, gold: false, id: 241 }
-    settingBrand: { name: 'W Motors', carsNumber: 3, slug: w-motors, id: 98 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: 'W Motors', carsNumber: 3, slug: w-motors, id: 99 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 262
     gameUpdate: 39
@@ -397,7 +413,7 @@
     slug: bugatti-mistral
     status: { unblock: true, gold: false, id: 262 }
     settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 121
     gameUpdate: 17
@@ -405,47 +421,47 @@
     slug: aspark-owl
     status: { unblock: true, gold: false, id: 121 }
     settingBrand: { name: Aspark, carsNumber: 1, slug: aspark, id: 10 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 309
     gameUpdate: 45
     model: Aglaia
     slug: raesr-aglaia
     status: { unblock: true, gold: false, id: 309 }
-    settingBrand: { name: Raesr, carsNumber: 3, slug: raesr, id: 77 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Raesr, carsNumber: 3, slug: raesr, id: 78 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 82
     gameUpdate: 9
     model: Nevera
     slug: rimac-nevera
     status: { unblock: true, gold: false, id: 82 }
-    settingBrand: { name: Rimac, carsNumber: 4, slug: rimac, id: 80 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Rimac, carsNumber: 6, slug: rimac, id: 81 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 187
     gameUpdate: 27
     model: 'Agera RS'
     slug: koenigsegg-agera-rs
     status: { unblock: true, gold: false, id: 187 }
-    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 53 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 277
     gameUpdate: 41
     model: 'Locus Pléthore LC750'
     slug: htt-locus-plethore-lc750
     status: { unblock: true, gold: false, id: 277 }
-    settingBrand: { name: HTT, carsNumber: 1, slug: htt, id: 43 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: HTT, carsNumber: 1, slug: htt, id: 44 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 100
     gameUpdate: 13
     model: Tuatara
     slug: ssc-tuatara
     status: { unblock: true, gold: true, id: 100 }
-    settingBrand: { name: SSC, carsNumber: 3, slug: ssc, id: 84 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: SSC, carsNumber: 3, slug: ssc, id: 85 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 223
     gameUpdate: 33
@@ -453,15 +469,15 @@
     slug: bugatti-chiron-super-sport-300
     status: { unblock: false, gold: false, id: 223 }
     settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 207
     gameUpdate: 30
     model: CCXR
     slug: koenigsegg-ccxr
     status: { unblock: false, gold: false, id: 207 }
-    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 53 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 115
     gameUpdate: 16
@@ -469,7 +485,7 @@
     slug: bugatti-la-voiture-noire
     status: { unblock: false, gold: false, id: 116 }
     settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 263
     gameUpdate: 39
@@ -477,23 +493,23 @@
     slug: czinger-21c
     status: { unblock: true, gold: false, id: 263 }
     settingBrand: { name: Czinger, carsNumber: 1, slug: czinger, id: 24 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 286
     gameUpdate: 42
     model: 'Tuatara Striker'
     slug: ssc-tuatara-striker
     status: { unblock: true, gold: false, id: 286 }
-    settingBrand: { name: SSC, carsNumber: 3, slug: ssc, id: 84 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: SSC, carsNumber: 3, slug: ssc, id: 85 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 307
     gameUpdate: 45
     model: 'One:1'
     slug: koenigsegg-one-1
     status: { unblock: true, gold: false, id: 307 }
-    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 53 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 224
     gameUpdate: 33
@@ -501,47 +517,47 @@
     slug: deus-vayanne
     status: { unblock: false, gold: false, id: 224 }
     settingBrand: { name: Deus, carsNumber: 1, slug: deus, id: 26 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 155
     gameUpdate: 22
     model: Gemera
     slug: koenigsegg-gemera
     status: { unblock: true, gold: false, id: 155 }
-    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 53 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 247
     gameUpdate: 36
     model: 'Aurora Tur'
     slug: zenvo-aurora-tur
     status: { unblock: true, gold: false, id: 247 }
-    settingBrand: { name: Zenvo, carsNumber: 4, slug: zenvo, id: 99 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Zenvo, carsNumber: 4, slug: zenvo, id: 100 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 140
     gameUpdate: 20
     model: 'Venom F5'
     slug: hennessey-venom-f5
     status: { unblock: true, gold: false, id: 140 }
-    settingBrand: { name: Hennessey, carsNumber: 1, slug: hennessey, id: 41 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Hennessey, carsNumber: 1, slug: hennessey, id: 42 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 218
     gameUpdate: 32
     model: CC850
     slug: koenigsegg-cc850
     status: { unblock: false, gold: false, id: 218 }
-    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 53 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 301
     gameUpdate: 44
     model: 'Super GT'
     slug: mosler-super-gt
     status: { unblock: true, gold: false, id: 301 }
-    settingBrand: { name: Mosler, carsNumber: 1, slug: mosler, id: 65 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Mosler, carsNumber: 1, slug: mosler, id: 66 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 191
     gameUpdate: 28
@@ -549,23 +565,23 @@
     slug: bugatti-bolide
     status: { unblock: false, gold: false, id: 191 }
     settingBrand: { name: Bugatti, carsNumber: 10, slug: bugatti, id: 18 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 257
     gameUpdate: 38
     model: 'Jesko Absolut'
     slug: koenigsegg-jesko-absolut
     status: { unblock: false, gold: false, id: 257 }
-    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 53 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 315
     gameUpdate: 46
     model: 'Aeon E'
     slug: tushek-aeon-e
     status: { unblock: true, gold: false, id: 315 }
-    settingBrand: { name: Tushek, carsNumber: 2, slug: tushek, id: 90 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Tushek, carsNumber: 2, slug: tushek, id: 91 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 230
     gameUpdate: 34
@@ -573,15 +589,15 @@
     slug: devel-sixteen
     status: { unblock: true, gold: false, id: 230 }
     settingBrand: { name: Devel, carsNumber: 1, slug: devel, id: 27 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 275
     gameUpdate: 40
     model: Tartarus
     slug: raesr-tartarus
     status: { unblock: false, gold: false, id: 275 }
-    settingBrand: { name: Raesr, carsNumber: 3, slug: raesr, id: 77 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Raesr, carsNumber: 3, slug: raesr, id: 78 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 295
     gameUpdate: 44
@@ -589,68 +605,76 @@
     slug: arash-imperium
     status: { unblock: false, gold: false, id: 295 }
     settingBrand: { name: Arash, carsNumber: 3, slug: arash, id: 6 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
+-
+    id: 324
+    gameUpdate: 48
+    model: Elytron
+    slug: ferrante-design-elytron
+    status: { unblock: false, gold: false, id: 324 }
+    settingBrand: { name: 'Ferrante Design', carsNumber: 1, slug: ferrante-design, id: 34 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 312
     gameUpdate: 46
     model: 'Bugatti Chiron Pur Sport'
     slug: lego-technic-bugatti-chiron-pur-sport
     status: { unblock: true, gold: false, id: 312 }
-    settingBrand: { name: 'Lego Technic', carsNumber: 6, slug: lego-technic, id: 55 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: 'Lego Technic', carsNumber: 7, slug: lego-technic, id: 56 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 311
     gameUpdate: 46
     model: Chimera
     slug: koenigsegg-chimera
     status: { unblock: false, gold: false, id: 311 }
-    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 52 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Koenigsegg, carsNumber: 9, slug: koenigsegg, id: 53 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 317
     gameUpdate: 47
     model: 'Vulcano Spyder'
     slug: icona-vulcano-spyder
     status: { unblock: false, gold: false, id: 317 }
-    settingBrand: { name: Icona, carsNumber: 1, slug: icona, id: 45 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Icona, carsNumber: 2, slug: icona, id: 46 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 320
     gameUpdate: 47
     model: Nilu
     slug: nilu27-nilu
     status: { unblock: true, gold: false, id: 320 }
-    settingBrand: { name: Nilu27, carsNumber: 0, slug: nilu27, id: 67 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Nilu27, carsNumber: 1, slug: nilu27, id: 68 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 322
     gameUpdate: 47
     model: 'Nevera R'
     slug: rimac-nevera-r
     status: { unblock: false, gold: false, id: 322 }
-    settingBrand: { name: Rimac, carsNumber: 4, slug: rimac, id: 80 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Rimac, carsNumber: 6, slug: rimac, id: 81 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 45
     gameUpdate: 0
     model: 'C TWO'
     slug: rimac-c-two
     status: { unblock: false, gold: false, id: 45 }
-    settingBrand: { name: Rimac, carsNumber: 4, slug: rimac, id: 80 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Rimac, carsNumber: 6, slug: rimac, id: 81 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 123
     gameUpdate: 17
     model: 'Settimo Cerchio'
     slug: inferno-automobili-settimo-cerchio
     status: { unblock: false, gold: false, id: 123 }
-    settingBrand: { name: 'Inferno Automobili', carsNumber: 1, slug: inferno-automobili, id: 46 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: 'Inferno Automobili', carsNumber: 2, slug: inferno-automobili, id: 47 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }
 -
     id: 131
     gameUpdate: 18
     model: 'Evantra Millecavalli'
     slug: mazzanti-evantra-millecavalli
     status: { unblock: false, gold: false, id: 131 }
-    settingBrand: { name: Mazzanti, carsNumber: 1, slug: mazzanti, id: 60 }
-    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 78, median: 159, slug: class-s, id: 5 }
+    settingBrand: { name: Mazzanti, carsNumber: 1, slug: mazzanti, id: 61 }
+    settingClass: { label: Class, value: S, classOrder: 5, carsNumber: 85, median: 159, slug: class-s, id: 5 }

@@ -37,6 +37,7 @@ trait DefaultType
         // text-center fw-bolder form-control form-control-sm
         // GarageRankType
         // text-center fw-bolder form-control-plaintext form-control-sm
+        // text-start fw-bolder m-0 px-3 py-0 form-control-sm
         // GarageStatActualType
         // text-center fw-bolder form-control-plaintext form-control-sm
         // GarageStatMaxType

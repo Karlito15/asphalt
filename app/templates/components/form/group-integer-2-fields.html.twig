@@ -1,3 +1,19 @@
 <div{{ attributes }}>
     <!-- component HTML -->
+    <div class="card">
+        <div class="card-header text-center py-0">
+            <span class="card-title"><label>{{ form_label(form) }}</label></span>{# {{ label }} #}
+        </div>
+        <div class="card-body px-3 py-1">
+{#            {% if maxValue is defined %}#}
+{#                {{ form_widget(form, {'attr': {'max': maxValue}}) }}#}
+{#            {% else %}#}
+{#                {{ form_widget(form) }}#}
+{#            {% endif %}#}
+            <div class="input-group">{# input-group-sm #}
+                <input type="text" class="text-center fw-bolder form-control-sm form-control form-control" value="12">{# {{ form }} #}
+                <span class="input-group-text" id="visible-addon">{{ maxValue }}</span>
+            </div>
+        </div>
+    </div>
 </div>
