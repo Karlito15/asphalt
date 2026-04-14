@@ -7,53 +7,21 @@ parameters:
         generator:          ~
     classes:
         table:
-            default:        'table table-bordered table-striped'
             td:             'my-0 py-0 align-middle'
+            empty:          'bg-danger-subtle text-center text-uppercase text-danger fw-bolder p-3'
         button:
-            table:          'btn btn-sm btn-outline-info rounded-3 py-1 m-0'
+            table:          'btn btn-sm rounded-3 py-1 m-0'
+            back:           'btn btn-outline-warning text-uppercase'
+            success:        'btn btn-outline-success text-uppercase'
+            delete:         'btn btn-outline-danger text-uppercase'
     games:
         pack_blueprint:     6
         pack_price:         900
+        evo_target:         24
     images:
         avatar: 'images/sako-01.jpg'
     ### FOLDERS
     folders.cache:          '%kernel.project_dir%/public/cache/'
-    folders.csv:            '%kernel.project_dir%/../documents/csv/'
-    folders.csv.database:   '%kernel.project_dir%/../documents/csv/database/'
-    folders.csv.order:      '%kernel.project_dir%/../documents/csv/order/'
-    folders.yaml:           '%kernel.project_dir%/../documents/yaml/'
-    folders.yaml.index:     '%kernel.project_dir%/../documents/yaml/index/'
-    folders.yaml.page:      '%kernel.project_dir%/../documents/yaml/page/'
-    folders.yaml.sheet:     '%kernel.project_dir%/../documents/yaml/sheet/'
-    ### Headers CSV
-    csv.header.order.class:               ['Brand', 'Model','Order']
-    csv.header.garage.app:                ['Brand', 'Model', 'Stars', 'GameUpdate', 'CarOrder', 'StatOrder', 'Level', 'Epic', 'Evo', 'SettingClassValue']
-    csv.header.garage.blueprint:          ['Brand', 'Model', 'Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6']
-    csv.header.garage.gauntlet:           ['Brand', 'Model', 'Speed', 'Acceleration', 'Handling', 'Nitro', 'Mark', 'Division']
-    csv.header.garage.rank:               ['Brand', 'Model', 'Star0', 'Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6']
-    csv.header.garage.stats:              ['Brand', 'Model', 'Speed', 'Acceleration', 'Handling', 'Nitro', 'Average']
-    csv.header.garage.status:             ['Brand', 'Model', 'Unblock', 'Gold', 'Evo', 'EventClass', 'ToUpgrade']
-    csv.header.garage.status.control:     ['Brand', 'Model', 'FullSpeed', 'FullAcceleration', 'FullHandling', 'FullNitro', 'FullUpgrade', 'FullCommon', 'FullRare', 'FullEpic', 'FullImport', 'FullStar1', 'FullStar2', 'FullStar3', 'FullStar4', 'FullStar5', 'FullStar6', 'FullBlueprint', 'FullEvo', 'ToInstallSpeed', 'ToInstallAcceleration', 'ToInstallHandling', 'ToInstallNitro', 'ToInstallUpgrade', 'ToInstallCommon', 'ToInstallRare', 'ToInstallEpic', 'ToInstallImport', 'ToUnblock', 'ToGold']
-    csv.header.garage.upgrade:            ['Brand', 'Model', 'Speed', 'Acceleration', 'Handling', 'Nitro', 'Common', 'Rare', 'Epic']
-    csv.header.garage.setting.blueprint:  ['Brand', 'Model', 'SettingBlueprint']
-    csv.header.garage.setting.level:      ['Brand', 'Model', 'SettingLevel']
-    csv.header.garage.setting.tag:        ['Brand', 'Model', 'SettingTag']
-    csv.header.garage.setting.unit-price: ['Brand', 'Model', 'SettingPrice']
-    csv.header.mission.app:               ['Week', 'Region', 'Track', 'Class', 'Brand', 'Description', 'Success', 'Target', 'Task', 'Type']
-    csv.header.mission.commons:           ['Value', 'Slug']
-    csv.header.inventory:                 ['Category', 'Label', 'Value', 'Filter', 'Position', 'Active']
-    csv.header.race.app:                  ['Season', 'RaceOrder', 'Mode', 'Time', 'English']
-    csv.header.race.mode:                 ['Name', 'Slug']
-    csv.header.race.region:               ['Name', 'Slug']
-    csv.header.race.season:               ['Chapter', 'Name', 'Slug']
-    csv.header.race.time:                 ['Name']
-    csv.header.race.track:                ['English', 'French', 'Slug', 'Region']
-    csv.header.setting.blueprint:         ['Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6', 'Total', 'Slug']
-    csv.header.setting.brand:             ['Name', 'Number', 'Slug']
-    csv.header.setting.class:             ['Label', 'Value', 'Order', 'Number', 'Median', 'Slug']
-    csv.header.setting.level:             ['Level', 'Common', 'Rare', 'Epic', 'Slug']
-    csv.header.setting.tag:               ['Value', 'Number', 'Slug']
-    csv.header.setting.unit-price:        ['Level01', 'Level02', 'Level03', 'Level04', 'Level05', 'Level06', 'Level07', 'Level08', 'Level09', 'Level10', 'Level11', 'Level12', 'Level13', 'Common', 'Rare', 'Epic', 'Slug']
 when@dev:
     parameters:
         cache_lifetime:
@@ -61,7 +29,9 @@ when@dev:
             sitemaps:       3    # 5 mins
 #            statistics:     300  # 5 mins
         images:
-            logo:           'images/logo-green.png'
+            logo:
+                front:     'images/logo-orange.png'
+                back:      'images/logo-green.png'
 when@prod:
     parameters:
         cache_lifetime:
@@ -69,4 +39,6 @@ when@prod:
             sitemaps:       2678400 # (60 * 60 * 24 * 31 = 1 month)
 #            statistics:     2678400 # (60 * 60 * 24 * 31 = 1 month)
         images:
-            logo:           'images/logo-white.png'
+            logo:
+                front:     'images/logo-white.png'
+                back:      'images/logo-blue.png'

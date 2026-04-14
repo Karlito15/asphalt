@@ -1,0 +1,14 @@
+
+    <!-- component HTML -->
+{% if floating is defined and floating is true %}
+    <div class="form-floating">
+        {{ form_widget(form) }}
+        {{ form_label(form) }}
+    </div>
+{% else %}
+    <div{#attributes#}>
+        {{ form_widget(form) }}
+    </div>
+{% endif %}
+{#    {{ form_help(form) }}#}
+{#    {{ form_errors(form) }}#}

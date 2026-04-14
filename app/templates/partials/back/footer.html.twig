@@ -1,11 +1,11 @@
 
 <!-- Footer -->
 <div class="{{ container|default('container') }} py-3">
-    <footer class="footer bg-body-tertiary row row-cols-1 row-cols-sm-2 row-cols-md-6 py-5 my-5 border-top">
+    <footer class="footer bg-body-tertiary row row-cols-1 row-cols-sm-2 row-cols-md-6 py-5 border-top">
         <div class="col mb-3">
-            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="{{ metas.title }}">
+            <a href="{{ path('admin.dashboard.index') }}" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="{{ metas.title }}">
                 <figure>
-                    <img src="{{ asset(images.logo) }}" alt="{{ metas.title }}" width="200" />
+                    <img src="{{ asset(images.logo.back) }}" alt="{{ metas.title }}" width="200" />
                     <figcaption class="text-center">{{ metas.title }}</figcaption>
                 </figure>
             </a>
@@ -15,13 +15,16 @@
             <ul class="nav flex-column">
                 {{ _self.Nav('admin.dashboard.index', 'text.dashboard'|trans) }}
                 {{ _self.Nav('admin.dashboard.cache', 'text.cache'|trans) }}
-                {{ _self.Nav('admin_garage_app_index', 'text.easy-admin'|trans) }}
-                {{ _self.Nav('dh_auditor_list_audits', 'text.audit'|trans) }}
+                <li class="nav-item mb-2">
+                    <a href="{{ path('easy.admin.app') }}" class="nav-link p-0 text-body-secondary" target="_blank">{{ 'text.easy-admin'|trans }}</a>
+                </li>
+{#                {{ _self.Nav('dh_auditor_list_audits', 'text.audit'|trans) }}#}
 {#                {{ _self.Nav('sitemap.back ', 'text.sitemap'|trans) }}#}
 {#                {{ _self.Nav('sitemap.front ', 'text.sitemap'|trans) }}#}
             </ul>
         </div>
         <div class="col mb-3">
+            <h5>{{ 'text.garage'|trans }}</h5>
             <h5>{{ 'text.inventory'|trans }}</h5>
             <ul class="nav flex-column">
                 {{ _self.Nav('admin.inventory.app.index', 'text.inventory'|trans) }}

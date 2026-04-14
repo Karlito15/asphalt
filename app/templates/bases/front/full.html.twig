@@ -1,7 +1,11 @@
+{% block notification %}
+    {% include "@App/partials/front/notification.html.twig" %}
+{% endblock %}
+
 {% block body %}
 
     {% block preloader %}
-{#        {% include '@App/partials/front/loader.html.twig' %}#}
+        {% include '@App/partials/front/loader.html.twig' %}
     {% endblock %}
 
     {% block header %}

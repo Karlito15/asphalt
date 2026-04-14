@@ -1,0 +1,77 @@
+<div class="card mb-lg-2 expert">
+    <!-- component HTML -->
+    <div class="card-header">
+
+    <div class="card-body">
+        <table class="table table-bordered table-striped expert">
+            <thead>
+                <tr>
+                    <th class="col-5 text-center"></th>
+                    {% if entity.stars == 4%}
+                    <th class="col-5 text-center">{{ form_label(form.rank.star1) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star2) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star3) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star4) }}</th>
+                    <th class="col-5 d-none text-center">{{ form_label(form.rank.star5) }}</th>
+                    <th class="col-5 d-none text-center">{{ form_label(form.rank.star6) }}</th>
+                    {% elseif entity.stars == 5%}
+                    <th class="col-5 text-center">{{ form_label(form.rank.star1) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star2) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star3) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star4) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star5) }}</th>
+                    <th class="col-5 d-none text-center">{{ form_label(form.rank.star6) }}</th>
+                    {% elseif entity.stars == 6%}
+                    <th class="col-5 text-center">{{ form_label(form.rank.star1) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star2) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star3) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star4) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star5) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star6) }}</th>
+                    {% else %}
+                    <th class="col-5 text-center">{{ form_label(form.rank.star1) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star2) }}</th>
+                    <th class="col-5 text-center">{{ form_label(form.rank.star3) }}</th>
+                    <th class="col-5 d-none text-center">{{ form_label(form.rank.star4) }}</th>
+                    <th class="col-5 d-none text-center">{{ form_label(form.rank.star5) }}</th>
+                    <th class="col-5 d-none text-center">{{ form_label(form.rank.star6) }}</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ form_widget(form.rank.star0) }}</td>
+                    {% if entity.stars == 4%}
+                    <td>{{ form_widget(form.rank.star1) }}</td>
+                    <td>{{ form_widget(form.rank.star2) }}</td>
+                    <td>{{ form_widget(form.rank.star3) }}</td>
+                    <td>{{ form_widget(form.rank.star4) }}</td>
+                    <td class="d-none">{{ form_widget(form.rank.star5, {attr: {hidden: 'hidden'}}) }}</td>
+                    <td class="d-none">{{ form_widget(form.rank.star6, {attr: {hidden: 'hidden'}}) }}</td>
+                    {% elseif entity.stars == 5%}
+                    <td>{{ form_widget(form.rank.star1) }}</td>
+                    <td>{{ form_widget(form.rank.star2) }}</td>
+                    <td>{{ form_widget(form.rank.star3) }}</td>
+                    <td>{{ form_widget(form.rank.star4) }}</td>
+                    <td>{{ form_widget(form.rank.star5) }}</td>
+                    <td class="d-none">{{ form_widget(form.rank.star6, {attr: {hidden: 'hidden'}}) }}</td>
+                    {% elseif entity.stars == 6%}
+                    <td>{{ form_widget(form.rank.star1) }}</td>
+                    <td>{{ form_widget(form.rank.star2) }}</td>
+                    <td>{{ form_widget(form.rank.star3) }}</td>
+                    <td>{{ form_widget(form.rank.star4) }}</td>
+                    <td>{{ form_widget(form.rank.star5) }}</td>
+                    <td>{{ form_widget(form.rank.star6) }}</td>
+                    {% else %}
+                    <td>{{ form_widget(form.rank.star1) }}</td>
+                    <td>{{ form_widget(form.rank.star2) }}</td>
+                    <td>{{ form_widget(form.rank.star3) }}</td>
+                    <td class="d-none">{{ form_widget(form.rank.star4, {attr: {hidden: 'hidden'}}) }}</td>
+                    <td class="d-none">{{ form_widget(form.rank.star5, {attr: {hidden: 'hidden'}}) }}</td>
+                    <td class="d-none">{{ form_widget(form.rank.star6, {attr: {hidden: 'hidden'}}) }}</td>
+                    {% endif %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

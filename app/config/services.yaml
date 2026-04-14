@@ -8,6 +8,8 @@
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 imports:
     - { resource: 'parameters.yaml' }
+    - { resource: 'parameters-csv.yaml' }
+    - { resource: 'parameters-yaml.yaml' }
 
 parameters:
     app.supported_locales: 'en|fr|it'

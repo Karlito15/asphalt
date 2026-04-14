@@ -1,0 +1,68 @@
+parameters:
+    ### FOLDERS
+    csv.folders:                            '%kernel.project_dir%/../documents/csv/'
+    csv.folders.database:                   '%kernel.project_dir%/../documents/csv/database/'
+    csv.folders.order:                      '%kernel.project_dir%/../documents/csv/order/'
+    ### FILES
+    csv.file.garage.app:                    'app.csv'
+    csv.file.garage.blueprint:              'garage-blueprint.csv'
+    csv.file.garage.gauntlet:               'garage-gauntlet.csv'
+    csv.file.garage.rank:                   'garage-rank.csv'
+    csv.file.garage.stat-actual:            'garage-stat-actual.csv'
+    csv.file.garage.stat-max:               'garage-stat-max.csv'
+    csv.file.garage.stat-min:               'garage-stat-min.csv'
+    csv.file.garage.status-control:         'garage-status-control.csv'
+    csv.file.garage.status:                 'garage-status.csv'
+    csv.file.garage.upgrade:                'garage-upgrade.csv'
+    csv.file.garage.setting.blueprint:      'setting-blueprint.csv'
+    csv.file.garage.setting.class:          'setting-class.csv'
+    csv.file.garage.setting.level:          'setting-level.csv'
+    csv.file.garage.setting.tag:            'setting-tag.csv'
+    csv.file.garage.setting.unit-price:     'setting-price.csv'
+    csv.file.inventory.app:                 'app.csv'
+    csv.file.mission.app:                   'app.csv'
+    csv.file.mission.type:                  'type.csv'
+    csv.file.mission.task:                  'task.csv'
+    csv.file.race.app:                      'app.csv'
+    csv.file.race.mode:                     'mode.csv'
+    csv.file.race.region:                   'region.csv'
+    csv.file.race.season:                   'season.csv'
+    csv.file.race.time:                     'time.csv'
+    csv.file.race.track:                    'track.csv'
+    csv.file.setting.blueprint:             'blueprint.csv'
+    csv.file.setting.brand:                 'brand.csv'
+    csv.file.setting.class:                 'class.csv'
+    csv.file.setting.level:                 'level.csv'
+    csv.file.setting.tag:                   'tag.csv'
+    csv.file.setting.unit-price:            'unit-price.csv'
+    ### Headers CSV
+    csv.header.order.class:                 ['Brand', 'Model', 'Order']
+    csv.header.garage.app:                  ['Brand', 'Model', 'Stars', 'GameUpdate', 'CarOrder', 'StatOrder', 'Level', 'Epic', 'Evo']
+    csv.header.garage.blueprint:            ['Brand', 'Model', 'Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6']
+    csv.header.garage.gauntlet:             ['Brand', 'Model', 'Speed', 'Acceleration', 'Handling', 'Nitro', 'Mark', 'Division']
+    csv.header.garage.rank:                 ['Brand', 'Model', 'Star0', 'Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6']
+    csv.header.garage.stats:                ['Brand', 'Model', 'Speed', 'Acceleration', 'Handling', 'Nitro', 'Average']
+    csv.header.garage.status:               ['Brand', 'Model', 'Unblock', 'Gold', 'Evo', 'EventClass', 'ToUpgrade']
+    csv.header.garage.status-control:       ['Brand', 'Model', 'FullSpeed', 'FullAcceleration', 'FullHandling', 'FullNitro', 'FullUpgrade', 'FullCommon', 'FullRare', 'FullEpic', 'FullImport', 'FullStar1', 'FullStar2', 'FullStar3', 'FullStar4', 'FullStar5', 'FullStar6', 'FullBlueprint', 'FullEvo', 'ToInstallSpeed', 'ToInstallAcceleration', 'ToInstallHandling', 'ToInstallNitro', 'ToInstallUpgrade', 'ToInstallCommon', 'ToInstallRare', 'ToInstallEpic', 'ToInstallImport', 'ToUnblock', 'ToGold']
+    csv.header.garage.upgrade:              ['Brand', 'Model', 'Speed', 'Acceleration', 'Handling', 'Nitro', 'Common', 'Rare', 'Epic']
+    csv.header.garage.settings:             ['Brand', 'Model', 'SettingBlueprint', 'SettingClass', 'SettingLevel', 'SettingTag', 'SettingPrice']
+    csv.header.garage.setting.blueprint:    ['Brand', 'Model', 'SettingBlueprint']
+    csv.header.garage.setting.class:        ['Brand', 'Model', 'SettingClass']
+    csv.header.garage.setting.level:        ['Brand', 'Model', 'SettingLevel']
+    csv.header.garage.setting.tag:          ['Brand', 'Model', 'SettingTag']
+    csv.header.garage.setting.unit-price:   ['Brand', 'Model', 'SettingPrice']
+    csv.header.mission.app:                 ['Week', 'Region', 'Track', 'Class', 'Brand', 'Description', 'Success', 'Target', 'Task', 'Type']
+    csv.header.mission.commons:             ['Value', 'Slug']
+    csv.header.inventory.app:               ['Category', 'Label', 'Value', 'Filter', 'Position', 'Active']
+    csv.header.race.app:                    ['Season', 'RaceOrder', 'Mode', 'Time', 'English']
+    csv.header.race.mode:                   ['Name', 'Slug']
+    csv.header.race.region:                 ['Name', 'Slug']
+    csv.header.race.season:                 ['Chapter', 'Name', 'Slug']
+    csv.header.race.time:                   ['Name']
+    csv.header.race.track:                  ['English', 'French', 'Slug', 'Region']
+    csv.header.setting.blueprint:           ['Star1', 'Star2', 'Star3', 'Star4', 'Star5', 'Star6', 'Total', 'Slug']
+    csv.header.setting.brand:               ['Name', 'Number', 'Slug']
+    csv.header.setting.class:               ['Label', 'Value', 'Order', 'Number', 'Median', 'Slug']
+    csv.header.setting.level:               ['Level', 'Common', 'Rare', 'Epic', 'Slug']
+    csv.header.setting.tag:                 ['Value', 'Number', 'Slug']
+    csv.header.setting.unit-price:          ['Level01', 'Level02', 'Level03', 'Level04', 'Level05', 'Level06', 'Level07', 'Level08', 'Level09', 'Level10', 'Level11', 'Level12', 'Level13', 'Common', 'Rare', 'Epic', 'Slug']

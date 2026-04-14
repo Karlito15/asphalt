@@ -1,125 +1,39 @@
-<div class="card mb-lg-2">
-    <!-- component HTML -->
+<div class="card mb-md-3">
+
     <div class="card-header">
-        <h3 class="card-title">{{ 'text.blueprint'|trans|plural }}</h3>
+        <h3 class="card-title">
+            {{ 'text.blueprint'|trans|plural }}
+        </h3>
     </div>
-    <div class="card-body" id="blueprints">
-        <div class="row row-cols-7">
-            {% if entity.stars == 6 %}
-                {{ _self.blueprint(form.blueprint.star1, entity.settingBlueprint.star1) }}
-                {{ _self.blueprint(form.blueprint.star2, entity.settingBlueprint.star2) }}
-                {{ _self.blueprint(form.blueprint.star3, entity.settingBlueprint.star3) }}
-                {{ _self.blueprint(form.blueprint.star4, entity.settingBlueprint.star4) }}
-                {{ _self.blueprint(form.blueprint.star5, entity.settingBlueprint.star5) }}
-                {{ _self.blueprint(form.blueprint.star6, entity.settingBlueprint.star6) }}
-            {% elseif entity.stars == 5 %}
-                {{ _self.blueprint(form.blueprint.star1, entity.settingBlueprint.star1) }}
-                {{ _self.blueprint(form.blueprint.star2, entity.settingBlueprint.star2) }}
-                {{ _self.blueprint(form.blueprint.star3, entity.settingBlueprint.star3) }}
-                {{ _self.blueprint(form.blueprint.star4, entity.settingBlueprint.star4) }}
-                {{ _self.blueprint(form.blueprint.star5, entity.settingBlueprint.star5) }}
-                {{ _self.blueprint(form.blueprint.star6, entity.settingBlueprint.star6, true) }}
-            {% elseif entity.stars == 4 %}
-                {{ _self.blueprint(form.blueprint.star1, entity.settingBlueprint.star1) }}
-                {{ _self.blueprint(form.blueprint.star2, entity.settingBlueprint.star2) }}
-                {{ _self.blueprint(form.blueprint.star3, entity.settingBlueprint.star3) }}
-                {{ _self.blueprint(form.blueprint.star4, entity.settingBlueprint.star4) }}
-                {{ _self.blueprint(form.blueprint.star5, entity.settingBlueprint.star5, true) }}
-                {{ _self.blueprint(form.blueprint.star6, entity.settingBlueprint.star6, true) }}
-            {% else %}
-                {{ _self.blueprint(form.blueprint.star1, entity.settingBlueprint.star1) }}
-                {{ _self.blueprint(form.blueprint.star2, entity.settingBlueprint.star2) }}
-                {{ _self.blueprint(form.blueprint.star3, entity.settingBlueprint.star3) }}
-                {{ _self.blueprint(form.blueprint.star4, entity.settingBlueprint.star4, true) }}
-                {{ _self.blueprint(form.blueprint.star5, entity.settingBlueprint.star5, true) }}
-                {{ _self.blueprint(form.blueprint.star6, entity.settingBlueprint.star6, true) }}
-            {% endif %}
-            {# Total Column #}
-            {{ _self.total(entity.blueprint.total, entity.settingBlueprint.total) }}
+
+    <div class="card-body">
+
+        <div class="row row-cols-6 gx-md-3">
+            <div class="col text-center">
+                <twig:FormBlueprint form="{{ form.blueprint.star1 }}" target="{{ entity.settingBlueprint.star1 }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormBlueprint form="{{ form.blueprint.star2 }}" target="{{ entity.settingBlueprint.star2 }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormBlueprint form="{{ form.blueprint.star3 }}" target="{{ entity.settingBlueprint.star3 }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormBlueprint form="{{ form.blueprint.star4 }}" target="{{ entity.settingBlueprint.star4 }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormBlueprint form="{{ form.blueprint.star5 }}" target="{{ entity.settingBlueprint.star5 }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormBlueprint form="{{ form.blueprint.star6 }}" target="{{ entity.settingBlueprint.star6 }}" />
+            </div>
         </div>
+{#            <div class="col text-center">#}
+{#                {{ entity.blueprint.total }}#}
+{#            </div>#}
+
     </div>
+
+    <div class="card-footer">&nbsp;</div>
+
 </div>
-
-{# ### ### ### MACROS ### ### ### #}
-
-{% macro blueprint(form, target, hidden) %}
-
-    {% set class = form.vars.attr.class %}
-    {% set total = _self.diff(target, form.vars.value)|trim|u.toString %}
-    {% if hidden is defined and hidden is true %}
-            <div class="col g-lg-2">
-                <div class="input-group mb-2">
-                    {{ form_widget(form, {attr: {hidden: 'hidden'}}) }}
-                </div>
-            </div>
-    {% else %}
-            <div class="col g-lg-2">
-                <div class="fs-5 text-center"><label for="{{ form.vars.id }}">{{ form_label(form) }}</label></div>
-                <div class="input-group mb-2">
-                    {{ form_widget(form, {attr: {'class': class ~ ' ' ~ _self.background(total)|spaceless}}) }}
-                    <input type="text" class="{{ class }} bg-info-subtle" autocomplete="off" max="{{ target }}" value="{{ target }}" disabled />
-                    <input type="text" class="{{ class ~ ' ' ~ _self.background(total)|spaceless }}" value="{{ total }}" disabled />
-                </div>
-                {{ _self.resume(total) }}
-            </div>
-    {% endif %}
-
-{% endmacro %}
-
-{% macro total(value, target) %}
-
-    {% set class = 'text-center fw-bolder form-control' %}
-    {% set total = _self.diff(target, value)|trim|u.toString %}
-            <div class="col g-lg-2">
-                <div class="fs-5 text-center"><label class="fw-bold">{{ 'text.total'|trans }}</label></div>
-                <div class="input-group mb-2">
-                    <input type="text" class="{{ class ~ ' ' ~ _self.background(total)|spaceless }}" max="{{ target }}" value="{{ value }}" disabled />
-                    <input type="text" class="{{ class }} bg-info-subtle" max="{{ target }}" value="{{ target }}" disabled />
-                    <input type="text" class="{{ class ~ ' ' ~ _self.background(total)|spaceless }}" value="{{ total }}" disabled />
-                </div>
-                {{ _self.resume(total) }}
-            </div>
-
-{% endmacro %}
-
-{% macro background(value) %}
-    {% if value > 0 or value == 'None' %}
-        {{ 'bg-danger-subtle text-danger' }}
-
-    {% else %}
-        {{ 'bg-success-subtle text-success' }}
-    {% endif %}
-{% endmacro %}
-
-{% macro diff(target, value) %}
-    {% if target == 'Key' and value == 'Key' %}
-        Done
-    {% elseif target == 'Key' and value != 'Key' %}
-        None
-    {% else %}
-        {% if value == '' %}{% set value = 0 %}{% endif %}
-        {{ target - value }}
-    {% endif %}
-{% endmacro %}
-
-{% macro resume(blueprint) %}
-    {% set class = 'w-50 fw-light text-center form-control form-control-sm' %}
-
-    {% if blueprint == 'Done' or blueprint == 'None' %}
-        {% set result = 0 %}
-    {% else %}
-        {% set result = (blueprint / games.pack_blueprint)|round(0, 'ceil') %}
-    {% endif %}
-
-    {% if result != 0 %}
-    <div class="input-group input-group-sm">
-        <input type="text" tabindex="99" class="{{ class }} text-token" value="{{ (result * games.pack_price)|number_format }} {{ 'text.token'|trans|plural|u.truncate(2, '.') }}" disabled />
-        <input type="text" tabindex="99" class="{{ class }} text-success" value="{{ result }} {{ 'text.pack'|trans|plural }}" disabled />
-    </div>
-    {% else %}
-    <div class="input-group input-group-sm">
-        <input type="text" tabindex="99" class="{{ class }}" value="" disabled />
-        <input type="text" tabindex="99" class="{{ class }}" value="" disabled />
-    </div>
-    {% endif %}
-{% endmacro %}

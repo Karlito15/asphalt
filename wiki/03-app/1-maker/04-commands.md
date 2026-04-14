@@ -1,46 +1,72 @@
 # List of Commands
 
-#### Cron
+### Cron
 ``` shell
-php bin/console make:command Cron\CarOrderCommand
+php bin/console make:command Application\Command\Cron\CheckUp\GarageUpdateCommand
 ```
 ``` shell
-php bin/console make:command Cron\SettingClassCommand
+php bin/console make:command Application\Command\Cron\Count\BrandCommand
 ```
 ``` shell
-php bin/console make:command Cron\SettingBrandCommand
+php bin/console make:command Application\Command\Cron\Count\ClassCommand
 ```
 ``` shell
-php bin/console make:command Cron\TagCommand
-```
-
-#### CSV
-``` shell
-php bin/console make:command CSV\AppMigrationCommand
-```
-``` shell
-php bin/console make:command CSV\GaragesCommand
-```
-``` shell
-php bin/console make:command CSV\InventoriesCommand
-```
-``` shell
-php bin/console make:command CSV\MissionsCommand
-```
-``` shell
-php bin/console make:command CSV\RacesCommand
-```
-``` shell
-php bin/console make:command CSV\SettingsCommand
+php bin/console make:command Application\Command\Cron\Count\TagCommand
 ```
 
-#### Database
+### CSV
 ``` shell
-php bin/console make:command Database\TruncateCommand
+php bin/console make:command Application\Command\CSV\AppMigrationCommand
+```
+``` shell
+php bin/console make:command Application\Command\CSV\AppOrderByClassCommand
+```
+``` shell
+php bin/console make:command Application\Command\CSV\GaragesCommand
+```
+``` shell
+php bin/console make:command Application\Command\CSV\InventoriesCommand
+```
+``` shell
+php bin/console make:command Application\Command\CSV\MissionsCommand
+```
+``` shell
+php bin/console make:command Application\Command\CSV\RacesCommand
+```
+``` shell
+php bin/console make:command Application\Command\CSV\SettingsCommand
 ```
 
-#### YAML
+### Database
+``` shell
+php bin/console make:command Application\Command\Database\TruncateCommand
+```
+
+### YAML
+
+#### Index
+``` shell
+php bin/console make:command Application\Command\YAML\Index\GarageCommand
+```
+``` shell
+php bin/console make:command Application\Command\YAML\Index\MissionCommand
+```
+``` shell
+php bin/console make:command Application\Command\YAML\Index\RaceCommand
+```
+
+#### Page
+``` shell
+php bin/console make:command Application\Command\YAML\Page\PageCommand
+```
+
 #### Sheet
 ``` shell
-php bin/console make:command Sheet\GarageCommand
+php bin/console make:command Application\Command\YAML\Sheet\GarageCommand
+```
+``` shell
+php bin/console make:command Application\Command\YAML\Sheet\InventoryCommand
+```
+``` shell
+php bin/console make:command Application\Command\YAML\Sheet\StatCommand
 ```

@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="{{ app.request.locale|default('en') }}" data-bs-theme="dark">
-    <head>
-        {% block meta %}
-            {% include '@App/usuals/meta.html.twig' %}
-        {% endblock %}
-        <title>{% block title %}{{ controller_name|default('Page Title') }}{% endblock %} - {{ metas.title }}</title>
+<head>
+{% block meta %}
+    {% include '@App/partials/common/meta.html.twig' %}
+{% endblock %}
+<title>{% block title %}{{ controller_name|default('Page Title') }}{% endblock %}{# - {{ metas.title }}#}</title>
 
-        {% block favicons %}
-            {% include '@App/usuals/favicon.html.twig' %}
-        {% endblock %}
+{% block favicons %}
+    {% include '@App/partials/common/favicon.html.twig' %}
+{% endblock %}
 
-        {% block stylesheets %}
-            <!-- Stylesheets -->
-            <link rel="stylesheet" type="text/css" href="{{ asset('libraries/fontawesome/7.2.0/css/all.min.css') }}" />
-            <link rel="stylesheet" type="text/css" href="{{ asset('libraries/scroll-to-top-button/dist/jquery-backToTop.min.css') }}" />
-{#            <link rel="stylesheet" type="text/css" href="{{ asset('libraries/bootstrap/5.3.8/css/bootstrap.min.css') }}" />#}
-            <link rel="stylesheet" type="text/css" href="{{ asset('styles/bootstrap-5.3.8.css') }}" />
-        {% endblock %}
-    </head>
+{% block stylesheets %}
+<!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('libraries/bootstrap/5.3.8/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('libraries/fontawesome/7.2.0/css/all.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('libraries/scroll-to-top-button/jquery-backToTop.min.css') }}" />
 
-    <body{% block bodyClass %}{% endblock %}>
-        {% block notification %}
-            {#{% include '@App/usuals/sweet-alert.html.twig'%}#}
-            {% for label, messages in app.flashes %}
-                {% for message in messages %}
-                    <twig:AlertBootstrap type="{{ label }}" message="{{ message }}" />
-                {% endfor %}
-            {% endfor %}
-        {% endblock %}
-        {% block body %}
-            {% block preloader %}{% endblock %}
-            {% block header %}{% endblock %}
-            {% block main %}{% endblock %}
-            {% block footer %}{% endblock %}
-        {% endblock %}
+    {#SASS#}
+{#    <link rel="stylesheet" type="text/css" href="{{ asset('styles/bootstrap-5.3.8.css') }}" />#}
+{% endblock %}
+</head>
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-            <!-- Scripts -->
-            <script src="{{ asset('libraries/jquery/3.7.1.min.js') }}"></script>
-            {# pour le dropdwon dans le header #}
-            <script src="{{ asset('libraries/bootstrap/5.3.8/js/bootstrap.bundle.min.js') }}"></script>
-            {# back to top #}
-            <script src="{{ asset('libraries/scroll-to-top-button/dist/jquery-backToTop.min.js') }}"></script>
-            {% include "@App/usuals/_script-back-to-top.html.twig" %}
-        {% endblock %}
+<body{% block bodyClass %}{% endblock %}>
+{% block notification %}{% endblock %}
+
+{% block body %}
+    {% block preloader %}{% endblock %}
+    {% block header %}{% endblock %}
+    {% block main %}{% endblock %}
+    {% block footer %}{% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    {% block importmap %}{{ importmap('app') }}{% endblock %}
+
+    <!-- Scripts -->
+{#            <script src="{{ asset('libraries/jquery/3.7.1.min.js') }}"></script>#}
+    <script src="{{ asset('libraries/jquery/4.0.0.min.js') }}"></script>
+    {# pour le dropdwon dans le header #}
+    <script src="{{ asset('libraries/bootstrap/5.3.8/js/bootstrap.bundle.min.js') }}"></script>
+    {# back to top #}
+    {% include "@App/partials/common/script-back-to-top.html.twig" %}
+    <!-- flash messages -->
+{#    {% include "@App/share/_script-sweet-alert.html.twig" %}#}
+{#    <script src="{{ asset('scripts/sweet-alert-dashboard.js') }}"></script>#}
+{% endblock %}
 </body>
 </html>

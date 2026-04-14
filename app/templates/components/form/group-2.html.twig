@@ -1,0 +1,8 @@
+
+    <!-- component HTML -->
+    <div class="input-group"{# attributes #}>
+        {{ form_widget(form, {'attr': {'class': 'text-center'}}) }}
+        <span class="input-group-text justify-content-center w-50" id="{{ form.vars.id }}">{{ target }}</span>
+    </div>
+{#    {{ form_help(form) }}#}
+{#    {{ form_errors(form) }}#}

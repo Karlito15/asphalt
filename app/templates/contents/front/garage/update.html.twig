@@ -7,7 +7,7 @@
     {% if entity.status.toUpgrade == true %}
         {% set text   = 'text-primary' %}
     {% else %}
-        {% set text   = 'text-epic' %}
+        {% set text   = 'text-danger' %}
     {% endif %}
 {% endif %}
 
@@ -28,10 +28,10 @@
 {% block content %}
 
     <section class="d-flex align-items-center justify-content-center {{ background }}">
-        <div class="col-xxl-30">
-            {% include "@App/contents/front/garage/_title.html.twig" %}
+        <div class="col-md-10">
+{#            {% include "@App/contents/front/garage/_title.html.twig" %}#}
         </div>
-        <div class="col-xxl-auto">
+        <div class="col-md-auto">
             <input type="radio" class="btn-check" name="mode" id="option1" value="expert">
             <label class="btn btn-secondary" for="option1">{{ 'text.screen.mode'|trans ~ 'text.expert'|trans }}</label>
 
@@ -47,21 +47,21 @@
 
         {% include '@App/contents/front/garage/update/status.html.twig' %}
 
-        <div class="row">
-            <div class="col-xxl-24">
-                {% include '@App/contents/front/garage/update/blueprint.html.twig' %}
-            </div>
-            <div class="col-xxl-12">
+        <div class="row row-cols-2 mb-md-3">
+            <div class="col-md-4">
                 {% include '@App/contents/front/garage/update/upgrade.html.twig' %}
+                {% include '@App/contents/front/garage/update/stat.html.twig' %}
+            </div>
+            <div class="col-md-8">
+                {% include '@App/contents/front/garage/update/blueprint.html.twig' %}
+                {% include '@App/contents/front/garage/update/rank.html.twig' %}
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-xxl-22">
-                {% include '@App/contents/front/garage/update/rank.html.twig' %}
+        <div class="row row-cols-2">
+            <div class="col-md-8">
             </div>
-            <div class="col-xxl-14">
-                {% include '@App/contents/front/garage/update/stat.html.twig' %}
+            <div class="col-md-4">
             </div>
         </div>
 
@@ -72,16 +72,15 @@
     {{ form_end(form) }}
     </section>
 
-    <section class="row">
+    <section class="row mt-1">
         {% include '@App/contents/front/garage/delete.html.twig' %}
     </section>
-
 
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
 
-    <script src="{{ asset('scripts/switch-mode-expert-normal.js') }}" defer></script>
+{#    <script src="{{ asset('scripts/switch-mode-expert-normal.js') }}" defer></script>#}
 {% endblock %}
 

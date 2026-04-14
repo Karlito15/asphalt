@@ -25,38 +25,4 @@ return [
     '@hotwired/turbo' => [
         'version' => '8.0.23',
     ],
-    'tom-select/dist/css/tom-select.default.css' => [
-        'version' => '2.5.2',
-        'type' => 'css',
-    ],
-    'tom-select/dist/css/tom-select.bootstrap5.css' => [
-        'version' => '2.5.2',
-        'type' => 'css',
-    ],
-    'jquery' => [
-        'version' => '4.0.0',
-    ],
-    '@popperjs/core' => [
-        'version' => '2.11.8',
-    ],
-    'bootstrap/dist/css/bootstrap.min.css' => [
-        'version' => '5.3.8',
-        'type' => 'css',
-    ],
-    'bootstrap-table' => [
-        'version' => '1.27.1',
-    ],
-    'bootstrap-table/dist/bootstrap-table.min.css' => [
-        'version' => '1.27.1',
-        'type' => 'css',
-    ],
-    'fontawesome' => [
-        'version' => '5.6.3',
-    ],
-    'htmx.org' => [
-        'version' => '2.0.8',
-    ],
-    'sweetalert' => [
-        'version' => '2.1.2',
-    ],
 ];

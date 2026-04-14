@@ -1,3 +1,5 @@
+{% extends '@App/bases/common/page-index-front.html.twig' %}
+
 {% block table %}
         <tbody>
         {% for item in entities %}
@@ -12,9 +14,7 @@
                 <td>{{ item.target }}</td>
             </tr>
         {% else %}
-            <tr>
-                <td colspan="2">no records found</td>
-            </tr>
+            <twig:TableEmpty value="8" />
         {% endfor %}
         </tbody>
         <thead>
@@ -39,5 +39,3 @@
                 <th>{{ 'text.target'|trans }}</th>
             </tr>
 {% endmacro %}
-
-{% extends '@App/contents/front/list.html.twig' %}

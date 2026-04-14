@@ -1,3 +1,5 @@
+{% extends '@App/bases/common/page-index-front.html.twig' %}
+
 {% block table %}
     <tbody>
     {% for item in entities %}
@@ -5,8 +7,8 @@
             <td class="{{ classes.table.td }} text-center">{{ loop.index }}</td>
             <td class="{{ classes.table.td }} text-center">{{ item.gameUpdate }}</td>
             <td class="{{ classes.table.td }} text-center">{{ item.settingClass.value }}</td>
-            <td class="{{ classes.table.td }} text-center"><twig:ValueBoolean value="{{ item.status.unblock }}" /></td>
-            <td class="{{ classes.table.td }} text-center"><twig:ValueBoolean value="{{ item.status.gold }}" /></td>
+            <td class="{{ classes.table.td }} text-center">{# <twig:ValueBoolean value="{{ item.status.unblock }}" /> #}</td>
+            <td class="{{ classes.table.td }} text-center">{# <twig:ValueBoolean value="{{ item.status.gold }}" /> #}</td>
             <td class="{{ classes.table.td }} text-start">
                 <a href="{{ path('app.garage.update', {id: item.id, slug: item.slug}) }}" target="_blank" class="text-decoration-none {{ _self.color(item.status.unblock, item.status.gold) }}">{{ item.settingBrand.name }}</a>
             </td>
@@ -58,5 +60,3 @@
         text-danger
     {% endif %}
 {% endmacro %}
-
-{% extends '@App/contents/front/list.html.twig' %}

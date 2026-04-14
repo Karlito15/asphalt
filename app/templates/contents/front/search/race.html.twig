@@ -1,3 +1,5 @@
+{% extends '@App/bases/common/page-index-front.html.twig' %}
+
 {% block table %}
         <tbody>
         {% for item in entities %}
@@ -8,9 +10,7 @@
                 </td>
             </tr>
         {% else %}
-            <tr>
-                <td colspan="2">no records found</td>
-            </tr>
+            <twig:TableEmpty value="2" />
         {% endfor %}
         </tbody>
         <thead>
@@ -27,5 +27,3 @@
                 <th>Action</th>
             </tr>
 {% endmacro %}
-
-{% extends '@App/contents/front/list.html.twig' %}

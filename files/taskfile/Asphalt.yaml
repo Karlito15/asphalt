@@ -20,7 +20,7 @@ tasks:
     ### ASPHALT
 
     database:
-        desc: "Delete Database, Create Database, Load Migrations & Import Datas to Database"
+        desc: "Delete Database, Create Database, Load Migrations"
         cmds:
             - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-metadata"  # 
             - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-query"     # 
@@ -28,8 +28,19 @@ tasks:
             - Task Sym:dd                                           # Delete Database
             - Task Sym:dc                                           # Create Database
             - Task Sym:dmm                                          # Load Migrations
+        ignore_error: true
+        platforms: [windows/amd64]
+    import:
+        desc: "Task Database + Import Datas to Database"
+        cmds:
+            - Task A9:database                                      # Delete Database
             - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration import"   # Import Datas
-            - Task A9:cron
+        ignore_error: true
+        platforms: [windows/amd64]
+    export:
+        desc: "Export Datas from Database"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration export"   # Export Datas
         ignore_error: true
         platforms: [windows/amd64]
     cron:
@@ -45,16 +56,9 @@ tasks:
             - "{{.SYMFONY_CONSOLE}} asphalt:csv:order:class export" # Export Garage Order By Class
         ignore_error: true
         platforms: [windows/amd64]
-    export:
-        desc: "Export Datas from Database"
-        cmds:
-            - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration export"   # Export Datas
-        ignore_error: true
-        platforms: [windows/amd64]
     launch:
         desc: "Start Symfony server for local dev"
         cmds:
-            - "clear"
             - Task Sym:secure
             - Task Sym:start
             - Task Sym:open
@@ -63,27 +67,25 @@ tasks:
     restart:
         desc: "Restart Symfony Server for Local Dev"
         cmds:
-            - "clear"
-            - Task stop
-            - Task launch
+            - Task Sym:stop
+            - Task A9:launch
         ignore_error: true
         platforms: [windows/amd64]
     scripts:
         desc: "Clear Cache, Install Libraries, Update Librairies, Install Assets, Compile Assets"
         cmds:
-            - "clear"
-            - "{{.SYMFONY_CONSOLE}} cache:clear"                    # Clear Cache
-            - "{{.SYMFONY_CONSOLE}} importmap:install"              # Install Libraries
-            - "{{.SYMFONY_CONSOLE}} importmap:update"               # Update Librairies
-            - "{{.SYMFONY_CONSOLE}} assets:install"                 # Install Assets
-            - "{{.SYMFONY_CONSOLE}} asset-map:compile"              # Compile Assets
+            - "{{.COMPOSER}} run post-update-cmd"
         ignore_error: true
         platforms: [windows/amd64]
-    dev:
-        desc: "Initialize Database, Start Symfony Server & Open Browser"
+    initialize:
+        desc: "Initialize Project"
         cmds:
-            - Task database
-            - Task launch
+            - Task A9:database
+            - Task A9:import
+#            - Task A9:cron
+            - Task A9:export
+            - Task A9:scripts
+            - Task A9:launch
             # - "rm -rf public/cache/"
-        ignore_error: true
+        ignore_error: false
         platforms: [windows/amd64]

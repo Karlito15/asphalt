@@ -1,3 +1,4 @@
+
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -17,6 +18,7 @@
 /public/assets/
 /assets/vendor/
 ###< symfony/asset-mapper ###
+
 ###> symfony/webpack-encore-bundle ###
 /.yarn/
 /.yarnrc

@@ -1,0 +1,7 @@
+parameters:
+    ### FOLDERS
+    folders.yaml:           '%kernel.project_dir%/../documents/yaml/'
+    folders.yaml.index:     '%kernel.project_dir%/../documents/yaml/index/'
+    folders.yaml.page:      '%kernel.project_dir%/../documents/yaml/page/'
+    folders.yaml.sheet:     '%kernel.project_dir%/../documents/yaml/sheet/'
+    ### FILES

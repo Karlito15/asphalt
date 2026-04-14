@@ -9,13 +9,6 @@
     <div class="col">{{ form_row(form.season) }}</div>
     <div class="col">{{ form_row(form.time) }}</div>
     <div class="col">{{ form_row(form.raceOrder) }}</div>
-    <div class="col">
-        <div class="btn-group" role="group" aria-label="finished">
-            <input type="checkbox" id="finished" class="btn-check" name="{{ field_name(form.finished) }}" autocomplete="off" value="{{ field_value(form.finished) }}">
-            <label class="btn btn-outline-primary rounded-pill" for="finished">{{ 'text.finished'|trans }}</label>
-        </div>
-    </div>
-
     {% elseif app.current_route == 'app.search.garage' %}
     <div class="col">{{ form_row(form.gameUpdate) }}</div>
     <div class="col">{{ form_row(form.brand) }}</div>

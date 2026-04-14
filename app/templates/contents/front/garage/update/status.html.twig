@@ -1,60 +1,33 @@
-<div class="card mb-lg-2 expert">
-    <!-- component HTML -->
+<div class="card mb-md-3">
+
     <div class="card-header">
-        <h3 class="card-title">{{ 'text.status'|trans|plural }}</h3>
+        <h3 class="card-title">
+            {{ 'text.status'|trans|plural }}
+        </h3>
     </div>
+
     <div class="card-body">
+
         <div class="row row-cols-5">
             <div class="col">
-{#                <input type="checkbox" class="btn-check" id="{{ form.unblock.vars.id }}" autocomplete="off"{% if form.unblock.vars.data is true %} checked{% endif %}>#}
-{#                <label for="{{ form.unblock.vars.id }}" class="btn {{ _self.color(form.status.unblock.vars.data, form.unblock.vars.name) }}">#}
-{#                    {{ 'text.unblock'|trans }}#}
-{#                </label>#}
-                {{ form_label(form.status.unblock) }}
-                {{ form_widget(form.status.unblock) }}
+                <twig:FormCheckbox form="{{ form.status.unblock }}" />
             </div>
             <div class="col">
-{#                <input type="checkbox" class="btn-check" id="{{ form.gold.vars.id }}" autocomplete="off"{% if form.gold.vars.data is true %} checked{% endif %}>#}
-{#                <label for="{{ form.gold.vars.id }}" class="btn {{ _self.color(form.status.gold.vars.data, form.gold.vars.name) }}">#}
-{#                    {{ 'text.gold'|trans }}#}
-{#                </label>#}
-                {{ form_label(form.status.gold) }}
-                {{ form_widget(form.status.gold) }}
+                <twig:FormCheckbox form="{{ form.status.gold }}" />
             </div>
             <div class="col">
-{#                <input type="checkbox" class="btn-check" id="{{ form.evo.vars.id }}" autocomplete="off"{% if form.evo.vars.data is true %} checked{% endif %}>#}
-{#                <label for="{{ form.evo.vars.id }}" class="btn {{ _self.color(form.status.evo.vars.data, form.evo.vars.name) }}">#}
-{#                    {{ 'text.evo'|trans }}#}
-{#                </label>#}
-                {{ form_label(form.status.evo) }}
-                {{ form_widget(form.status.evo) }}
+                <twig:FormCheckbox form="{{ form.status.evo }}" />
             </div>
             <div class="col">
-{#                <input type="checkbox" class="btn-check" id="{{ form.eventClass.vars.id }}" autocomplete="off"{% if form.eventClass.vars.data is true %} checked{% endif %}>#}
-{#                <label for="{{ form.eventClass.vars.id }}" class="btn {{ _self.color(form.status.eventClass.vars.data, form.eventClass.vars.name) }}">#}
-{#                    {{ 'text.event.class'|trans }}#}
-{#                </label>#}
-                {{ form_label(form.status.eventClass) }}
-                {{ form_widget(form.status.eventClass) }}
+                <twig:FormCheckbox form="{{ form.status.eventClass }}" />
             </div>
             <div class="col">
-{#                <input type="checkbox" class="btn-check" id="{{ form.toUpgrade.vars.id }}" autocomplete="off"{% if form.toUpgrade.vars.data is true %} checked{% endif %}>#}
-{#                <label for="{{ form.toUpgrade.vars.id }}" class="btn {{ _self.color(form.status.toUpgrade.vars.data, form.toUpgrade.vars.name) }}">#}
-{#                    {{ 'text.to.upgrade'|trans }}#}
-{#                </label>#}
-                {{ form_label(form.status.toUpgrade) }}
-                {{ form_widget(form.status.toUpgrade) }}
+                <twig:FormCheckbox form="{{ form.status.toUpgrade }}" />
             </div>
         </div>
-    </div>
-</div>
 
-{% macro color(value, name) %}
-    {% if (value is true) and (name == 'gold') %}
-        btn-outline-warning
-    {% elseif value is true %}
-        btn-outline-success
-    {% else %}
-        btn-outline-danger
-    {% endif %}
-{% endmacro %}
+    </div>
+
+    <div class="card-footer">&nbsp;</div>
+
+</div>

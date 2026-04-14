@@ -4,131 +4,119 @@
 #### Back
 
 ``` shell
-php bin/console make:controller Back\DashboardController
+php bin/console make:controller Application\Controller\Back\DashboardController
 ```
 
 
 #### Front
 ``` shell
-php bin/console make:controller Front\DashboardController
+php bin/console make:controller Application\Controller\Front\DashboardController
 ```
 ``` shell
-php bin/console make:controller Front\GarageAppController
+php bin/console make:controller Application\Controller\Front\Garage\AppController
 ```
 ``` shell
-php bin/console make:controller Front\MissionAppController
+php bin/console make:controller Application\Controller\Front\Garage\CreateController
 ```
 ``` shell
-php bin/console make:controller Front\RaceAppController
+php bin/console make:controller Application\Controller\Front\Garage\ReadController
 ```
 ``` shell
-php bin/console make:controller Front\Garage\CreateController
+php bin/console make:controller Application\Controller\Front\Garage\UpdateController
 ```
 ``` shell
-php bin/console make:controller Front\Garage\ReadController
+php bin/console make:controller Application\Controller\Front\Mission\AppController
 ```
 ``` shell
-php bin/console make:controller Front\Garage\UpdateController
+php bin/console make:controller Application\Controller\Front\Race\AppController
 ```
 ``` shell
-php bin/console make:controller Front\Page\Filter\StatusController
+php bin/console make:controller Application\Controller\Front\Page\FilterController
 ```
 ``` shell
-php bin/console make:controller Front\Page\Filter\TagController
+php bin/console make:controller Application\Controller\Front\Page\OrderController
 ```
 ``` shell
-php bin/console make:controller Front\Page\Order\ClassController
+php bin/console make:controller Application\Controller\Front\Search\GarageController
 ```
 ``` shell
-php bin/console make:controller Front\Page\Order\EventController
+php bin/console make:controller Application\Controller\Front\Search\RaceController
 ```
-``` shell
-php bin/console make:controller Front\Page\Order\StatController
-```
-``` shell
-php bin/console make:controller Front\Page\Search\GarageController
-```
-``` shell
-php bin/console make:controller Front\Page\Search\RaceController
-```
-    ``` shell
-    php bin/console make:controller Front\Page\Setting\BlueprintController
-    ```
-    ``` shell
-    php bin/console make:controller Front\Page\Setting\LevelController
-    ```
-    ``` shell
-    php bin/console make:controller Front\Page\Setting\RankController
-    ```
 
 
 #### Sitemap
 ``` shell
-php bin/console make:controller Sitemap\BackController
+php bin/console make:controller Application\Controller\Sitemap\BackController
 ```
 ``` shell
-php bin/console make:controller Sitemap\FrontController
+php bin/console make:controller Application\Controller\Sitemap\BundleController
 ```
-
-
-#### Ajax
 ``` shell
-php bin/console make:controller --no-template Ajax\DashboardController
+php bin/console make:controller Application\Controller\Sitemap\FrontController
 ```
-    ``` shell
-    php bin/console make:controller --no-template Ajax\GarageAppController
-    ```
 
 
 #### Api
 ``` shell
-php bin/console make:controller --no-template Api\Inventory\AppController
+php bin/console make:controller --no-template Application\Controller\Api\Inventory\AppController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Garage\AppController
+php bin/console make:controller --no-template Application\Controller\Api\Garage\AppController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Mission\AppController
+php bin/console make:controller --no-template Application\Controller\Api\Garage\FilterController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Mission\TaskController
+php bin/console make:controller --no-template Application\Controller\Api\Mission\AppController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Mission\TypeController
+php bin/console make:controller --no-template Application\Controller\Api\Mission\TaskController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Race\AppController
+php bin/console make:controller --no-template Application\Controller\Api\Mission\TypeController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Race\ModeController
+php bin/console make:controller --no-template Application\Controller\Api\Race\AppController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Race\RegionController
+php bin/console make:controller --no-template Application\Controller\Api\Race\ModeController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Race\SeasonController
+php bin/console make:controller --no-template Application\Controller\Api\Race\RegionController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Race\TimeController
+php bin/console make:controller --no-template Application\Controller\Api\Race\SeasonController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Race\TrackController
+php bin/console make:controller --no-template Application\Controller\Api\Race\TimeController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Setting\BlueprintController
+php bin/console make:controller --no-template Application\Controller\Api\Race\TrackController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Setting\BrandController
+php bin/console make:controller --no-template Application\Controller\Api\Setting\BlueprintController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Setting\ClassController
+php bin/console make:controller --no-template Application\Controller\Api\Setting\BrandController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Setting\LevelController
+php bin/console make:controller --no-template Application\Controller\Api\Setting\ClassController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Setting\TagController
+php bin/console make:controller --no-template Application\Controller\Api\Setting\LevelController
 ```
 ``` shell
-php bin/console make:controller --no-template Api\Setting\UnitPriceController
+php bin/console make:controller --no-template Application\Controller\Api\Setting\TagController
 ```
+``` shell
+php bin/console make:controller --no-template Application\Controller\Api\Setting\UnitPriceController
+```
+
+
+#### Htmx
+``` shell
+php bin/console make:controller --no-template Application\Controller\Htmx\DashboardController
+```
+    ``` shell
+    php bin/console make:controller --no-template Application\Controller\Htmx\GarageAppController
+    ```

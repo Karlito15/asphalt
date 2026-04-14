@@ -1,14 +1,18 @@
+{% block notification %}
+    {% include "@App/partials/back/notification.html.twig" %}
+{% endblock %}
+
 {% block body %}
 
     {% block preloader %}
-{#        {% include '@App/partials/back/loader.html.twig' %}#}
+        {% include '@App/partials/back/loader.html.twig' %}
     {% endblock %}
 
     {% block header %}
         {% include '@App/partials/back/header.html.twig' %}
     {% endblock %}
 
-<main class="{% block mainClass %}{{ container|default('container-fluid') }}{% endblock %} bg-body-secondary h-100">
+<main class="{% block mainClass %}{{ container|default('container-fluid') }}{% endblock %}">
     {% block breadcrumb %}
         {% include '@App/partials/back/breadcrumb.html.twig' %}
     {% endblock %}

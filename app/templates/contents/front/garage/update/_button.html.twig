@@ -1,9 +1,15 @@
 
-<div class="input-group sticky-bottom py-xxl-3">
-    <a href="{{ path(links.index) }}" class="btn btn-lg btn-outline-warning fw-bolder rounded-start-5 w-25">
+<div class="input-group{# sticky-bottom #}">
+    <a
+        href="{{ path(links.index) }}"
+        class="{{ classes.button.back }}{# btn btn-lg btn-outline-warning #} btn-lg fw-bolder rounded-start-5 w-25"
+    >
         {{ 'btn.back'|trans }}
     </a>
-    <button type="submit" class="btn btn-lg btn-outline-success fw-bolder rounded-end-5 w-75">
+    <button
+        type="submit"
+        class="{{ classes.button.success }}{# btn btn-outline-success #} btn-lg fw-bolder rounded-end-5 w-75"
+    >
         {{ 'btn.register'|trans }}
     </button>
 </div>

@@ -8,9 +8,6 @@ php bin/console make:entity GarageApp
 php bin/console make:entity GarageBlueprint
 ```
 ``` shell
-php bin/console make:entity GarageEvo
-```
-``` shell
 php bin/console make:entity GarageGauntlet
 ```
 ``` shell
@@ -27,6 +24,9 @@ php bin/console make:entity GarageStatMin
 ```
 ``` shell
 php bin/console make:entity GarageStatus
+```
+``` shell
+php bin/console make:entity GarageStatusControl
 ```
 ``` shell
 php bin/console make:entity GarageUpgrade

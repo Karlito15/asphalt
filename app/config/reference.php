@@ -125,14 +125,6 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     ...<string, DefinitionType|AliasType|PrototypeType|StackType|ArgumentsType|null>
  * }
  * @psalm-type ExtensionType = array<string, mixed>
- * @psalm-type DhAuditorConfig = array{
- *     enabled?: bool|Param, // Default: true
- *     timezone?: scalar|Param|null, // Default: "UTC"
- *     user_provider?: scalar|Param|null, // Default: "dh_auditor.user_provider"
- *     security_provider?: scalar|Param|null, // Default: "dh_auditor.security_provider"
- *     role_checker?: scalar|Param|null, // Default: "dh_auditor.role_checker"
- *     providers?: array<string, mixed>,
- * }
  * @psalm-type DoctrineConfig = array{
  *     dbal?: array{
  *         default_connection?: scalar|Param|null,
@@ -1460,6 +1452,16 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     controller_paths?: list<scalar|Param|null>,
  *     controllers_json?: scalar|Param|null, // Default: "%kernel.project_dir%/assets/controllers.json"
  * }
+ * @psalm-type TurboConfig = array{
+ *     broadcast?: bool|array{
+ *         enabled?: bool|Param, // Default: true
+ *         entity_template_prefixes?: list<scalar|Param|null>,
+ *         doctrine_orm?: bool|array{ // Enable the Doctrine ORM integration
+ *             enabled?: bool|Param, // Default: true
+ *         },
+ *     },
+ *     default_transport?: scalar|Param|null, // Default: "default"
+ * }
  * @psalm-type TwigComponentConfig = array{
  *     defaults?: array<string, string|array{ // Default: ["__deprecated__use_old_naming_behavior"]
  *         template_directory?: scalar|Param|null, // Default: "components"
@@ -1519,11 +1521,19 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         ...<string, mixed>
  *     },
  * }
+ * @psalm-type DhAuditorConfig = array{
+ *     enabled?: bool|Param, // Default: true
+ *     timezone?: scalar|Param|null, // Default: "UTC"
+ *     user_provider?: scalar|Param|null, // Default: "dh_auditor.user_provider"
+ *     security_provider?: scalar|Param|null, // Default: "dh_auditor.security_provider"
+ *     role_checker?: scalar|Param|null, // Default: "dh_auditor.role_checker"
+ *     extra_data_provider?: scalar|Param|null, // Default: null
+ *     providers?: array<string, mixed>,
+ * }
  * @psalm-type ConfigType = array{
  *     imports?: ImportsConfig,
  *     parameters?: ParametersConfig,
  *     services?: ServicesConfig,
- *     dh_auditor?: DhAuditorConfig,
  *     doctrine?: DoctrineConfig,
  *     doctrine_migrations?: DoctrineMigrationsConfig,
  *     stof_doctrine_extensions?: StofDoctrineExtensionsConfig,
@@ -1532,13 +1542,14 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     security?: SecurityConfig,
  *     twig?: TwigConfig,
  *     stimulus?: StimulusConfig,
+ *     turbo?: TurboConfig,
  *     twig_component?: TwigComponentConfig,
  *     twig_extra?: TwigExtraConfig,
+ *     dh_auditor?: DhAuditorConfig,
  *     "when@dev"?: array{
  *         imports?: ImportsConfig,
  *         parameters?: ParametersConfig,
  *         services?: ServicesConfig,
- *         dh_auditor?: DhAuditorConfig,
  *         doctrine?: DoctrineConfig,
  *         doctrine_migrations?: DoctrineMigrationsConfig,
  *         stof_doctrine_extensions?: StofDoctrineExtensionsConfig,
@@ -1550,14 +1561,15 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         twig?: TwigConfig,
  *         web_profiler?: WebProfilerConfig,
  *         stimulus?: StimulusConfig,
+ *         turbo?: TurboConfig,
  *         twig_component?: TwigComponentConfig,
  *         twig_extra?: TwigExtraConfig,
+ *         dh_auditor?: DhAuditorConfig,
  *     },
  *     "when@prod"?: array{
  *         imports?: ImportsConfig,
  *         parameters?: ParametersConfig,
  *         services?: ServicesConfig,
- *         dh_auditor?: DhAuditorConfig,
  *         doctrine?: DoctrineConfig,
  *         doctrine_migrations?: DoctrineMigrationsConfig,
  *         stof_doctrine_extensions?: StofDoctrineExtensionsConfig,
@@ -1566,14 +1578,15 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         security?: SecurityConfig,
  *         twig?: TwigConfig,
  *         stimulus?: StimulusConfig,
+ *         turbo?: TurboConfig,
  *         twig_component?: TwigComponentConfig,
  *         twig_extra?: TwigExtraConfig,
+ *         dh_auditor?: DhAuditorConfig,
  *     },
  *     "when@test"?: array{
  *         imports?: ImportsConfig,
  *         parameters?: ParametersConfig,
  *         services?: ServicesConfig,
- *         dh_auditor?: DhAuditorConfig,
  *         doctrine?: DoctrineConfig,
  *         doctrine_migrations?: DoctrineMigrationsConfig,
  *         stof_doctrine_extensions?: StofDoctrineExtensionsConfig,
@@ -1583,8 +1596,10 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         twig?: TwigConfig,
  *         web_profiler?: WebProfilerConfig,
  *         stimulus?: StimulusConfig,
+ *         turbo?: TurboConfig,
  *         twig_component?: TwigComponentConfig,
  *         twig_extra?: TwigExtraConfig,
+ *         dh_auditor?: DhAuditorConfig,
  *     },
  *     ...<string, ExtensionType|array{ // extra keys must follow the when@%env% pattern or match an extension alias
  *         imports?: ImportsConfig,

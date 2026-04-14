@@ -1,0 +1,141 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Application\Controller\Back\Setting;
+
+use App\Application\Service\Controller\WebController;
+use App\Domain\Entity\SettingTag;
+use App\Domain\Form\Back\SettingTagType;
+use App\Domain\Repository\SettingTagRepository;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Requirement\Requirement;
+
+#[Route(
+    path: '{_locale<%app.supported_locales%>}/admin/setting/tag',
+    name: 'admin.setting.tag.',
+    options: ['expose' => false],
+    schemes: ['http', 'https'],
+    format: 'html',
+    utf8: true
+)]
+final class TagController extends AbstractController
+{
+    use WebController;
+
+    /** @description link to pages */
+    private static array $crud = [
+      'index'  => 'admin.setting.tag.index',
+      'create' => 'admin.setting.tag.create',
+      'read'   => null,
+      'update' => 'admin.setting.tag.update',
+      'delete' => 'admin.setting.tag.delete',
+    ];
+
+    #[Route(path: '/index.php', name: 'index', methods: ['GET'])]
+    public function index(Request $request, SettingTagRepository $repository): Response
+    {
+        ### Variables
+        $home  = $this->translator->trans('text.back-office');
+        $title = $this->translator->trans('text.all.tags');
+
+        return $this->render('@App/contents/back/setting/tag.html.twig', [
+            'container'       => 'container-fluid',
+            'breadcrumb'      => self::Breadcrumb($home, $title),
+            'links'           => self::$crud,
+            'controller_name' => $title,
+            'current_page'    => $request->attributes->get('_route'),
+            'entities'        => $repository->findAll(),
+        ]);
+    }
+
+    #[Route('/create.php', name: 'create', methods: ['GET', 'POST'])]
+    public function create(Request $request, EntityManagerInterface $manager): Response
+    {
+        ### Variables
+        $home  = $this->translator->trans('text.setting');
+        $page  = $this->translator->trans('text.tag');
+        $title = $this->translator->trans('text.create.tag');
+        $entity = new SettingTag();
+        $form = $this->createForm(SettingTagType::class, $entity)->handleRequest($request);
+
+        ### Forms
+        if ($form->isSubmitted() && $form->isValid()) {
+            $manager->persist($entity);
+            $manager->flush();
+
+            ### Flash Message
+            $this->addFlash(
+                type:'success',
+                message: sprintf($this->translator->trans('notification.created'), $entity->getValue())
+            );
+
+            return $this->redirectToIndex();
+        }
+
+        return $this->render('@App/contents/back/common-form.html.twig', [
+            'container'       => 'container-fluid',
+            'breadcrumb'      => self::Breadcrumb($home, $page),
+            'links'           => self::$crud,
+            'controller_name' => $title,
+            'current_page'    => $request->attributes->get('_route'),
+            'entities'        => $entity,
+            'form'            => $form,
+        ]);
+    }
+
+    #[Route('/update.php/{id}', name: 'update', requirements: ['id' => Requirement::DIGITS], methods: ['GET', 'POST'])]
+    public function update(Request $request, SettingTag $entities, EntityManagerInterface $manager): Response
+    {
+        ### Variables
+        $home  = $this->translator->trans('text.setting');
+        $page  = $this->translator->trans('text.tag');
+        $title = $entities->getValue();
+        $form  = $this->createForm(SettingTagType::class, $entities)->handleRequest($request);
+
+        ### Forms
+        if ($form->isSubmitted() && $form->isValid()) {
+            $manager->flush();
+
+            ### Flash Message
+            $this->addFlash(
+                type:'info',
+                message: sprintf($this->translator->trans('notification.updated'), $entities->getId(), $entities->getValue())
+            );
+
+            return $this->redirectToIndex();
+        }
+
+        return $this->render('@App/contents/back/common-form.html.twig', [
+            'container'       => 'container-fluid',
+            'breadcrumb'      => self::Breadcrumb($home, $page),
+            'links'           => self::$crud,
+            'controller_name' => $title,
+            'current_page'    => $request->attributes->get('_route'),
+            'entities'        => $entities,
+            'form'            => $form,
+        ]);
+    }
+
+    #[Route('/delete.php/{id}', name: 'delete', requirements: ['id' => Requirement::DIGITS], methods: ['POST'])]
+    public function delete(Request $request, SettingTag $entities, EntityManagerInterface $manager): Response
+    {
+        ### Forms
+        if ($this->isCsrfTokenValid('delete'.$entities->getId(), $request->getPayload()->getString('_token'))) {
+            $manager->remove($entities);
+            $manager->flush();
+
+            ### Flash Message
+            $this->addFlash(
+                type:'error',
+                message: sprintf($this->translator->trans('notification.deleted'), $entities->getId(), $entities->getValue())
+            );
+        }
+
+        return $this->redirectToIndex();
+    }
+}

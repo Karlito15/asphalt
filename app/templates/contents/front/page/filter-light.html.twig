@@ -1,3 +1,5 @@
+{% extends '@App/bases/common/page-index-front.html.twig' %}
+
 {% block table %}
     <tbody>
     {% for item in entities %}
@@ -44,5 +46,3 @@
         <th class="col-xxl-auto text-end">{{ 'text.action'|trans }}</th>
     </tr>
 {% endmacro %}
-
-{% extends '@App/contents/front/list.html.twig' %}

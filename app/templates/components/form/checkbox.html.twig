@@ -1,0 +1,20 @@
+
+<div{# attributes #}>
+    <!-- component HTML -->
+    {{ form_widget(form, {'label_attr': {'class': _self.color(form.vars.data, form.vars.name)}}) }}
+    {{ form_label(form) }}
+</div>
+{#    {{ form_help(form) }}#}
+{#    {{ form_errors(form) }}#}
+
+{% macro color(value, name) %}
+{% if (value is true) and (name == 'gold') %}
+btn btn-outline-warning
+{% elseif (value is true) and (name == 'toUpgrade') %}
+btn btn-outline-primary
+{% elseif value is true %}
+btn btn-outline-success
+{% else %}
+btn btn-outline-danger
+{% endif %}
+{% endmacro %}

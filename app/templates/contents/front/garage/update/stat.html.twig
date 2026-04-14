@@ -1,48 +1,104 @@
+<div class="card">
 
-<div class="card mb-lg-2 expert">
-    <!-- component HTML -->
     <div class="card-header d-flex justify-content-between align-items-center">
-        <div><h3 class="card-title">{{ 'text.stat'|trans|plural }}</h3></div>
-        <div><span class="badge rounded-pill bg-danger"><i class="fa-solid fa-fire"></i>&nbsp;{{ entity.settingClass.median }}</span></div>
+        <div>
+            <h3 class="card-title">
+                {{ 'text.stat'|trans|plural }}
+            </h3>
+        </div>
+        <div>
+            <span class="badge rounded-pill bg-danger"><i class="fa-solid fa-fire"></i>&nbsp;{{ entity.settingClass.median }}</span>
+        </div>
     </div>
+
     <div class="card-body">
-        <table class="{{ classes.table.default }}">
-            <thead>
-                <tr>
-                    <th class="text-center">#</th>
-                    <th class="text-center">{{ 'text.speed'|trans }}</th>
-                    <th class="text-center">{{ 'text.acceleration'|trans|u.truncate(6, '.') }}</th>
-                    <th class="text-center">{{ 'text.handling'|trans|u.truncate(6, '.') }}</th>
-                    <th class="text-center">{{ 'text.nitro'|trans }}</th>
-                    <th class="text-center">{{ 'text.average'|trans }}</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{ 'text.stat.min'|trans }}</td>
-                    <td>{{ form_widget(form.statMin.speed) }}</td>
-                    <td>{{ form_widget(form.statMin.acceleration) }}</td>
-                    <td>{{ form_widget(form.statMin.handling) }}</td>
-                    <td>{{ form_widget(form.statMin.nitro) }}</td>
-                    <td><span class="text-center fw-bolder form-control-plaintext form-control-sm">{{ entity.statMin.average|number_format('2', ',', ' ') }}</span></td>
-                </tr>
-                <tr>
-                    <td>{{ 'text.stat.actual'|trans }}</td>
-                    <td>{{ form_widget(form.statActual.speed) }}</td>
-                    <td>{{ form_widget(form.statActual.acceleration) }}</td>
-                    <td>{{ form_widget(form.statActual.handling) }}</td>
-                    <td>{{ form_widget(form.statActual.nitro) }}</td>
-                    <td><span class="text-center fw-bolder form-control-plaintext form-control-sm">{{ entity.statActual.average|number_format('2', ',', ' ') }}</span></td>
-                </tr>
-                <tr>
-                    <td>{{ 'text.stat.max'|trans }}</td>
-                    <td>{{ form_widget(form.statMax.speed) }}</td>
-                    <td>{{ form_widget(form.statMax.acceleration) }}</td>
-                    <td>{{ form_widget(form.statMax.handling) }}</td>
-                    <td>{{ form_widget(form.statMax.nitro) }}</td>
-                    <td><span class="text-center fw-bolder form-control-plaintext form-control-sm">{{ entity.statMax.average|number_format('2', ',', ' ') }}</span></td>
-                </tr>
-            </tbody>
-        </table>
+
+        <div class="d-flex justify-content-around">
+            <div class="col fw-bolder text-start">
+                #
+            </div>
+            <div class="col text-center">
+                {{ form_label(form.statMin.speed) }}
+            </div>
+            <div class="col text-center">
+                {{ form_label(form.statMin.acceleration) }}
+            </div>
+            <div class="col text-center">
+                {{ form_label(form.statMin.handling) }}
+            </div>
+            <div class="col text-center">
+                {{ form_label(form.statMin.nitro) }}
+            </div>
+            <div class="col text-center">
+                {{ 'text.average'|trans }}
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-around">
+            <div class="col fw-bolder text-start">
+                {{ 'text.stat.min'|trans }}
+            </div>
+            <div class="col text-center">
+                <twig:FormGroup1 form="{{ form.statMin.speed }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormGroup1 form="{{ form.statMin.acceleration }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormGroup1 form="{{ form.statMin.handling }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormGroup1 form="{{ form.statMin.nitro }}" />
+            </div>
+            <div class="col text-center">
+                <span class="text-center fw-bolder form-control-plaintext form-control-sm">{{ entity.statMin.average|number_format('2', ',', ' ') }}</span>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-around">
+            <div class="col fw-bolder text-start">
+                {{ 'text.stat.max'|trans }}
+            </div>
+            <div class="col text-center">
+                <twig:FormGroup1 form="{{ form.statMax.speed }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormGroup1 form="{{ form.statMax.acceleration }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormGroup1 form="{{ form.statMax.handling }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormGroup1 form="{{ form.statMax.nitro }}" />
+            </div>
+            <div class="col text-center">
+                <span class="text-center fw-bolder form-control-plaintext form-control-sm">{{ entity.statMax.average|number_format('2', ',', ' ') }}</span>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-around">
+            <div class="col fw-bolder text-start">
+                {{ 'text.stat.actual'|trans }}
+            </div>
+            <div class="col text-center">
+                <twig:FormGroup1 form="{{ form.statActual.speed }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormGroup1 form="{{ form.statActual.acceleration }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormGroup1 form="{{ form.statActual.handling }}" />
+            </div>
+            <div class="col text-center">
+                <twig:FormGroup1 form="{{ form.statActual.nitro }}" />
+            </div>
+            <div class="col text-center">
+                <span class="text-center fw-bolder form-control-plaintext form-control-sm">{{ entity.statActual.average|number_format('2', ',', ' ') }}</span>
+            </div>
+        </div>
+
     </div>
+
+    <div class="card-footer">&nbsp;</div>
+
 </div>

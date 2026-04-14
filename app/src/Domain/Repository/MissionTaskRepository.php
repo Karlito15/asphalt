@@ -1,0 +1,99 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Domain\Repository;
+
+use App\Domain\Entity\MissionTask;
+use App\Domain\Service\Repository\SitemapRepository;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Persistence\ManagerRegistry;
+
+/**
+ * @extends ServiceEntityRepository<MissionTask>
+ */
+class MissionTaskRepository extends ServiceEntityRepository
+{
+    use SitemapRepository;
+
+    public function __construct(ManagerRegistry $registry)
+    {
+        parent::__construct($registry, MissionTask::class);
+    }
+
+    ### EXPORTS
+
+    /**
+     * Retourne les informations pour les extraire dans un fichier CSV
+     *
+     * @return array
+     */
+    public function export(): array
+    {
+        $qb = $this->createQueryBuilder('q')
+            ->select([
+                'q.value AS Value',
+                'q.slug AS Slug',
+            ])
+            ->where('q.deletedAt IS NULL')
+            ->orderBy('q.value', 'ASC')
+        ;
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    ### EVENTS
+
+    /**
+     * @param MissionTask $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function save(MissionTask $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    /**
+     * @param MissionTask $entity
+     * @param bool $flush
+     * @return void
+     */
+    public function remove(MissionTask $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    //    /**
+    //     * @return MissionTask[] Returns an array of MissionTask objects
+    //     */
+    //    public function findByExampleField($value): array
+    //    {
+    //        return $this->createQueryBuilder('m')
+    //            ->andWhere('m.exampleField = :val')
+    //            ->setParameter('val', $value)
+    //            ->orderBy('m.id', 'ASC')
+    //            ->setMaxResults(10)
+    //            ->getQuery()
+    //            ->getResult()
+    //        ;
+    //    }
+
+    //    public function findOneBySomeField($value): ?MissionTask
+    //    {
+    //        return $this->createQueryBuilder('m')
+    //            ->andWhere('m.exampleField = :val')
+    //            ->setParameter('val', $value)
+    //            ->getQuery()
+    //            ->getOneOrNullResult()
+    //        ;
+    //    }
+}

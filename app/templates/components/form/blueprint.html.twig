@@ -1,0 +1,74 @@
+{# VALUE #}
+{% set value = form.vars.value %}
+
+{# LABEL #}
+{% set label = form.vars.label %}
+
+{# Min #}
+{% set min = form.vars.attr.min %}
+
+{# ID #}
+{% set id = form.vars.id %}
+
+{# NAME #}
+{% set name = form.vars.name %}
+
+{# CLASS #}
+{% set class = form.vars.attr.class %}
+
+{# MAX #}
+{% set max = target %}
+
+{# BACKGROUND #}
+{% if value > 0 or value == 'None' %}
+    {% set background = 'bg-success-subtle text-success' %}
+{% else %}
+    {% set background = 'bg-danger-subtle text-danger' %}
+{% endif %}
+
+{# TOTAL #}
+{% set total = _self.difference(target, value)|trim|u.toString %}
+
+<div{# attributes #}>
+    <!-- component HTML -->
+    <div class="text-center">
+        {{ form_label(form) }}
+    </div>
+    <div class="input-group">
+{#            type="{{ type }}"#}
+        {{ form_widget(form, {
+            'attr': {
+                'class': class ~ ' ' ~ background,
+                'max': max,
+            },
+        }) }}
+        {{ _self.form_difference(class ~ ' ' ~ background, total) }}
+        {{ _self.form_target(class ~ ' ' ~ background, target) }}
+    </div>
+
+
+{#    {{ form_help(form) }}#}
+{#    {{ form_errors(form) }}#}
+
+</div>
+
+{% macro form_difference(class, value) %}
+    <input type="text" id="form_difference" class="{{ class }}" value="{{ value }}" readonly />
+    <label for="form_difference"></label>
+{% endmacro %}
+
+{% macro form_target(class, value) %}
+    <input type="text" id="form_target" class="{{ class }}" value="{{ value }}" readonly />
+    <label for="form_target"></label>
+{% endmacro %}
+
+{% macro difference(target, value) %}
+    {% if target == 'Key' and value == 'Key' %}
+        Done
+    {% elseif target == 'Key' and value != 'Key' %}
+        None
+    {% else %}
+        {% if value == '' %}{% set value = 0 %}{% endif %}
+        {{ (target - value) }}
+    {% endif %}
+{% endmacro %}

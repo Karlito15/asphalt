@@ -1,3 +1,5 @@
+{% extends '@App/bases/common/page-index-back.html.twig' %}
+
 {% block table %}
 
     <tbody>
@@ -10,9 +12,14 @@
             <td class="{{ classes.table.td }} text-truncate">{{ item.Track.nameEnglish }}</td>
             <td class="{{ classes.table.td }} text-truncate">{{ item.Track.nameFrench }}</td>
             <td class="{{ classes.table.td }} text-center">{{item.Time }}</td>
-            <td class="{{ classes.table.td }} text-center">{{ component('ValueBoolean', {value: item.Finished}) }}</td>
-            <twig:TableDate entity="{{ item }}" />
-            <twig:TableActionSimple id="{{ item.id }}" link="{{ 'admin.race.app.update' }}" />
+            <td class="{{ classes.table.td }} text-center">{# {{ component('ValueBoolean', {value: item.Finished}) }} #}</td>
+            <td class="{{ classes.table.td }}"><twig:TableDate value="{{ item.createdAt }}" /></td>
+            <td class="{{ classes.table.td }}"><twig:TableDate value="{{ item.updatedAt }}" /></td>
+            <td class="{{ classes.table.td }} text-end">
+                <a href="{{ path(links.update, {'id': item.id}) }}" class="{{ classes.button.table }} btn-outline-info">
+                    {{ 'text.update'|trans }}
+                </a>
+            </td>
         </tr>
     {% else %}
         <twig:TableEmpty value="9" />
@@ -42,5 +49,3 @@
         <th class="text-end">{{ 'text.action'|trans }}</th>
     </tr>
 {% endmacro %}
-
-{% extends '@App/contents/back/list.html.twig' %}

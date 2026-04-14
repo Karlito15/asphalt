@@ -1,0 +1,38 @@
+    {#{{ attributes }}#}
+
+    {% set class = 'text-center form-control' %}
+
+    {% if blueprint == 'Done' or blueprint == 'None' %}
+        {% set result = 0 %}
+    {% else %}
+        {% set result = (blueprint / games.pack_blueprint)|round(0, 'ceil') %}
+    {% endif %}
+
+    <!-- component HTML -->
+    {% if result != 0 %}
+    <div class="input-group input-group-sm mt-md-2">
+        <input
+            type="text"
+            id="blueprints"
+            class="{{ class }} text-info"
+            value="{{ (result * games.pack_price)|number_format }} {{ 'text.token'|trans|plural|u.truncate(2, '.') }}"
+            disabled
+        />
+        <label for="blueprints"></label>
+        <label for="packs"></label>
+        <input
+            type="text"
+            id="packs"
+            class="{{ class }} text-success"
+            value="{{ result }} {{ 'text.pack'|trans|plural }}"
+            disabled
+        />
+    </div>
+    {% else %}
+    <div class="input-group input-group-sm mt-md-2">
+        <input type="text" id="blueprints" class="{{ class }}" value="" disabled />
+        <label for="blueprints"></label>
+        <label for="packs"></label>
+        <input type="text" id="packs" class="{{ class }}" value="" disabled />
+    </div>
+    {% endif %}

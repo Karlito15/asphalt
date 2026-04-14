@@ -1,0 +1,83 @@
+<div class="card mb-lg-2">
+    <!-- component HTML -->
+    <div class="card-header">
+
+    </div>
+    <div class="card-body" id="blueprints">
+        <div class="row row-cols-7">
+            {% if entity.stars == 6 %}
+                {{ _self.blueprint(form.blueprint.star1, entity.settingBlueprint.star1) }}
+                {{ _self.blueprint(form.blueprint.star2, entity.settingBlueprint.star2) }}
+                {{ _self.blueprint(form.blueprint.star3, entity.settingBlueprint.star3) }}
+                {{ _self.blueprint(form.blueprint.star4, entity.settingBlueprint.star4) }}
+                {{ _self.blueprint(form.blueprint.star5, entity.settingBlueprint.star5) }}
+                {{ _self.blueprint(form.blueprint.star6, entity.settingBlueprint.star6) }}
+            {% elseif entity.stars == 5 %}
+                {{ _self.blueprint(form.blueprint.star1, entity.settingBlueprint.star1) }}
+                {{ _self.blueprint(form.blueprint.star2, entity.settingBlueprint.star2) }}
+                {{ _self.blueprint(form.blueprint.star3, entity.settingBlueprint.star3) }}
+                {{ _self.blueprint(form.blueprint.star4, entity.settingBlueprint.star4) }}
+                {{ _self.blueprint(form.blueprint.star5, entity.settingBlueprint.star5) }}
+                {{ _self.blueprint(form.blueprint.star6, entity.settingBlueprint.star6, true) }}
+            {% elseif entity.stars == 4 %}
+                {{ _self.blueprint(form.blueprint.star1, entity.settingBlueprint.star1) }}
+                {{ _self.blueprint(form.blueprint.star2, entity.settingBlueprint.star2) }}
+                {{ _self.blueprint(form.blueprint.star3, entity.settingBlueprint.star3) }}
+                {{ _self.blueprint(form.blueprint.star4, entity.settingBlueprint.star4) }}
+                {{ _self.blueprint(form.blueprint.star5, entity.settingBlueprint.star5, true) }}
+                {{ _self.blueprint(form.blueprint.star6, entity.settingBlueprint.star6, true) }}
+            {% else %}
+                {{ _self.blueprint(form.blueprint.star1, entity.settingBlueprint.star1) }}
+                {{ _self.blueprint(form.blueprint.star2, entity.settingBlueprint.star2) }}
+                {{ _self.blueprint(form.blueprint.star3, entity.settingBlueprint.star3) }}
+                {{ _self.blueprint(form.blueprint.star4, entity.settingBlueprint.star4, true) }}
+                {{ _self.blueprint(form.blueprint.star5, entity.settingBlueprint.star5, true) }}
+                {{ _self.blueprint(form.blueprint.star6, entity.settingBlueprint.star6, true) }}
+            {% endif %}
+            {# Total Column #}
+            {{ _self.total(entity.blueprint.total, entity.settingBlueprint.total) }}
+        </div>
+    </div>
+</div>
+
+{# ### ### ### MACROS ### ### ### #}
+
+{% macro blueprint(form, target, hidden) %}
+
+    {% set class = form.vars.attr.class %}
+
+    {% if hidden is defined and hidden is true %}
+            <div class="col g-lg-2">
+                <div class="input-group mb-2">
+                    {{ form_widget(form, {attr: {hidden: 'hidden'}}) }}
+                </div>
+            </div>
+    {% else %}
+            <div class="col g-lg-2">
+                <div class="fs-5 text-center"><label for="{{ form.vars.id }}">{{ form_label(form) }}</label></div>
+                <div class="input-group mb-2">
+                    {{ form_widget(form, {attr: {'class': class ~ ' ' ~ _self.background(total)}}) }}
+                    <input type="text" class="{{ class }} bg-info-subtle" autocomplete="off" max="{{ target }}" value="{{ target }}" disabled />
+                    <input type="text" class="{{ class ~ ' ' ~ _self.background(total) }}" value="{{ total }}" disabled />
+                </div>
+                {{ _self.resume(total) }}
+            </div>
+    {% endif %}
+
+{% endmacro %}
+
+{% macro total(value, target) %}
+
+    {% set class = 'text-center fw-bolder form-control' %}
+    {% set total = _self.diff(target, value)|trim|u.toString %}
+            <div class="col g-lg-2">
+                <div class="fs-5 text-center"><label class="fw-bold">{{ 'text.total'|trans }}</label></div>
+                <div class="input-group mb-2">
+                    <input type="text" class="{{ class ~ ' ' ~ _self.background(total) }}" max="{{ target }}" value="{{ value }}" disabled />
+                    <input type="text" class="{{ class }} bg-info-subtle" max="{{ target }}" value="{{ target }}" disabled />
+                    <input type="text" class="{{ class ~ ' ' ~ _self.background(total) }}" value="{{ total }}" disabled />
+                </div>
+                {{ _self.resume(total) }}
+            </div>
+
+{% endmacro %}

@@ -1,6 +1,7 @@
-{#{{ attributes }}#}
+{#<div{{ attributes }}></div>#}
+    <!-- component HTML -->
 <tr>
-    <td colspan="{{ value }}" class="bg-danger-subtle text-center text-uppercase text-danger fw-bolder p-3">
+    <td colspan="{{ value }}" class="{{ classes.table.empty }}">
         {{ 'text.no-data'|trans }}
     </td>
 </tr>

@@ -1,3 +1,5 @@
+{% extends '@App/bases/front/full.html.twig' %}
+
 {% block content %}
 
 {% set background, text = '', '' %}
@@ -16,34 +18,33 @@
 
 <div class="row">
     <div class="col-xxl-10">
+
         <div class="card">
+
             <div class="card-header text-center">
                 {% include "@App/contents/front/garage/_title.html.twig" %}
             </div>
+
             <div class="card-body">
                 {% include '@App/contents/front/garage/read/garage-part-1.html.twig' %}
-                {% include '@App/contents/front/garage/read/garage-part-5.html.twig' %}
-{#                {% include '@App/contents/front/garage/read/blueprint.html.twig' %}#}
-{#                {% include '@App/contents/front/garage/read/rank.html.twig' %}#}
+                {% include '@App/contents/front/garage/read/blueprint.html.twig' %}
+                {% include '@App/contents/front/garage/read/rank.html.twig' %}
                 {% include '@App/contents/front/garage/read/stat.html.twig' %}
-{#                {% include '@App/contents/front/garage/read/upgrade.html.twig' %}#}
+                {% include '@App/contents/front/garage/read/upgrade.html.twig' %}
                 {% include '@App/contents/front/garage/read/unit-price.html.twig' %}
                 {% include '@App/contents/front/garage/read/tag.html.twig' %}
             </div>
+
             <div class="card-footer">
                 &nbsp;
             </div>
+
         </div>
+
     </div>
     <div class="col-xxl-2">
-        <div style="display: block; position: sticky; top: 20px;">
-            <h6 class="h4 text-center">{{ 'text.action'|trans|plural }}</h6>
-            <a href="{{ path(links.index) }}" class="btn btn-outline-warning btn-lg rounded-top-5 rounded-bottom-0 w-100 mb-3">{{ 'btn.back'|trans }}</a>
-            {{ include('@App/contents/front/garage/delete.html.twig') }}
-        </div>
+        {% include '@App/contents/front/garage/read/_button.html.twig' %}
     </div>
 </div>
 
 {% endblock %}
-
-{% extends '@App/bases/front/full.html.twig' %}

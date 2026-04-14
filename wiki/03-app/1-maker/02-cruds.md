@@ -1,147 +1,188 @@
 # List of Cruds
 
-#### Garages
+### Garages
 ``` shell
-php bin/console make:crud App\Persistence\Entity\GarageApp
+php bin/console make:crud App\Domain\Entity\GarageApp
 ```
-Back\Garage\AppController
-
-``` shell
-php bin/console make:crud App\Persistence\Entity\GarageBlueprint
-```
-Back\Garage\BlueprintController
-``` shell
-php bin/console make:crud App\Persistence\Entity\GarageEvo
-```
-Back\Garage\EvoController
-``` shell
-php bin/console make:crud App\Persistence\Entity\GarageGauntlet
-```
-Back\Garage\GauntletController
-``` shell
-php bin/console make:crud App\Persistence\Entity\GarageRank
-```
-Back\Garage\RankController
-``` shell
-php bin/console make:crud App\Persistence\Entity\GarageStatActual
-```
-Back\Garage\StatActualController
-``` shell
-php bin/console make:crud App\Persistence\Entity\GarageStatMax
-```
-Back\Garage\StatMaxController
-``` shell
-php bin/console make:crud App\Persistence\Entity\GarageStatMin
-```
-Back\Garage\StatMinController
-``` shell
-php bin/console make:crud App\Persistence\Entity\GarageStatus
-```
-Back\Garage\StatusController
-``` shell
-php bin/console make:crud App\Persistence\Entity\GarageUpgrade
-```
-Back\Garage\UpgradeController
-
-#### Inventory
-``` shell
-php bin/console make:crud App\Persistence\Entity\InventoryApp
-```
-``` shell
-Back\InventoryController
+``` txt
+Application\Controller\Back\Garage\AppController
 ```
 
-#### Missions
 ``` shell
-php bin/console make:crud App\Persistence\Entity\MissionApp
+php bin/console make:crud App\Domain\Entity\GarageBlueprint
 ```
-``` shell
-Back\Mission\AppController
-```
-``` shell
-php bin/console make:crud App\Persistence\Entity\MissionTask
-```
-``` shell
-Back\Mission\TaskController
-```
-``` shell
-php bin/console make:crud App\Persistence\Entity\MissionType
-```
-``` shell
-Back\Mission\TypeController
-```
-#### Races
-``` shell
-php bin/console make:crud App\Persistence\Entity\RaceApp
-```
-``` shell
-Back\Race\AppController
-```
-``` shell
-php bin/console make:crud App\Persistence\Entity\RaceMode
-```
-``` shell
-Back\Race\ModeController
-```
-``` shell
-php bin/console make:crud App\Persistence\Entity\RaceRegion
-```
-``` shell
-Back\Race\RegionController
-```
-``` shell
-php bin/console make:crud App\Persistence\Entity\RaceSeason
-```
-``` shell
-Back\Race\SeasonController
-```
-``` shell
-php bin/console make:crud App\Persistence\Entity\RaceTime
-```
-``` shell
-Back\Race\TimeController
-```
-``` shell
-php bin/console make:crud App\Persistence\Entity\RaceTrack
-```
-``` shell
-Back\Race\TrackController
+``` txt
+Application\Controller\Back\Garage\BlueprintController
 ```
 
-#### Settings
 ``` shell
-php bin/console make:crud App\Persistence\Entity\SettingBlueprint
+php bin/console make:crud App\Domain\Entity\GarageGauntlet
 ```
-``` shell
-Back\Setting\BlueprintController
+``` txt
+Application\Controller\Back\Garage\GauntletController
 ```
+
 ``` shell
-php bin/console make:crud App\Persistence\Entity\SettingBrand
+php bin/console make:crud App\Domain\Entity\GarageRank
 ```
-``` shell
-Back\Setting\BrandController
+``` txt
+Application\Controller\Back\Garage\RankController
 ```
+
 ``` shell
-php bin/console make:crud App\Persistence\Entity\SettingClass
+php bin/console make:crud App\Domain\Entity\GarageStatActual
 ```
-``` shell
-Back\Setting\ClassController
+``` txt
+Application\Controller\Back\Garage\StatActualController
 ```
+
 ``` shell
-php bin/console make:crud App\Persistence\Entity\SettingLevel
+php bin/console make:crud App\Domain\Entity\GarageStatMax
 ```
-``` shell
-Back\Setting\LevelController
+``` txt
+Application\Controller\Back\Garage\StatMaxController
 ```
+
 ``` shell
-php bin/console make:crud App\Persistence\Entity\SettingTag
+php bin/console make:crud App\Domain\Entity\GarageStatMin
 ```
-``` shell
-Back\Setting\TagController
+``` txt
+Application\Controller\Back\Garage\StatMinController
 ```
+
 ``` shell
-php bin/console make:crud App\Persistence\Entity\SettingUnitPrice
+php bin/console make:crud App\Domain\Entity\GarageStatus
 ```
+``` txt
+Application\Controller\Back\Garage\StatusController
+```
+
 ``` shell
-Back\Setting\UnitPriceController
+php bin/console make:crud App\Domain\Entity\GarageStatusControl
+```
+``` txt
+Application\Controller\Back\Garage\StatusControlController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\GarageUpgrade
+```
+``` txt
+Application\Controller\Back\Garage\UpgradeController
+```
+
+### Inventory
+``` shell
+php bin/console make:crud App\Domain\Entity\InventoryApp
+```
+``` txt
+Application\Controller\Back\InventoryController
+```
+
+### Missions
+``` shell
+php bin/console make:crud App\Domain\Entity\MissionApp
+```
+``` txt
+Application\Controller\Back\Mission\AppController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\MissionTask
+```
+``` txt
+Application\Controller\Back\Mission\TaskController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\MissionType
+```
+``` txt
+Application\Controller\Back\Mission\TypeController
+```
+
+### Races
+``` shell
+php bin/console make:crud App\Domain\Entity\RaceApp
+```
+``` txt
+Application\Controller\Back\Race\AppController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\RaceMode
+```
+``` txt
+Application\Controller\Back\Race\ModeController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\RaceRegion
+```
+``` txt
+Application\Controller\Back\Race\RegionController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\RaceSeason
+```
+``` txt
+Application\Controller\Back\Race\SeasonController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\RaceTime
+```
+``` txt
+Application\Controller\Back\Race\TimeController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\RaceTrack
+```
+``` txt
+Application\Controller\Back\Race\TrackController
+```
+
+### Settings
+``` shell
+php bin/console make:crud App\Domain\Entity\SettingBlueprint
+```
+``` txt
+Application\Controller\Back\Setting\BlueprintController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\SettingBrand
+```
+``` txt
+Application\Controller\Back\Setting\BrandController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\SettingClass
+```
+``` txt
+Application\Controller\Back\Setting\ClassController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\SettingLevel
+```
+``` txt
+Application\Controller\Back\Setting\LevelController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\SettingTag
+```
+``` txt
+Application\Controller\Back\Setting\TagController
+```
+
+``` shell
+php bin/console make:crud App\Domain\Entity\SettingUnitPrice
+```
+``` txt
+Application\Controller\Back\Setting\UnitPriceController
 ```

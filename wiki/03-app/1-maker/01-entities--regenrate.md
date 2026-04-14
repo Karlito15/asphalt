@@ -3,13 +3,13 @@
 #### Garages
 php bin/console make:entity App\Persistence\Entity\GarageApp --regenerate --overwrite
 php bin/console make:entity App\Persistence\Entity\GarageBlueprint --regenerate --overwrite
-php bin/console make:entity App\Persistence\Entity\GarageEvo --regenerate --overwrite
 php bin/console make:entity App\Persistence\Entity\GarageGauntlet --regenerate --overwrite
 php bin/console make:entity App\Persistence\Entity\GarageRank --regenerate --overwrite
 php bin/console make:entity App\Persistence\Entity\GarageStatActual --regenerate --overwrite
 php bin/console make:entity App\Persistence\Entity\GarageStatMax --regenerate --overwrite
 php bin/console make:entity App\Persistence\Entity\GarageStatMin --regenerate --overwrite
 php bin/console make:entity App\Persistence\Entity\GarageStatus --regenerate --overwrite
+php bin/console make:entity App\Persistence\Entity\GarageStatusControl --regenerate --overwrite
 php bin/console make:entity App\Persistence\Entity\GarageUpgrade --regenerate --overwrite
 
 #### Inventory

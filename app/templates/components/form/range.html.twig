@@ -1,0 +1,13 @@
+{#<div{{ attributes }}>#}
+    <!-- component HTML -->
+    {{ form_label(form) }}
+    <output class="float-end badge text-bg-info" id="epic">{{ form.vars.value ?? 0 }}</output>
+    {{ form_widget(form, {
+        attr: {
+            'oninput': 'epic.value = this.value',
+            'max': entity.settingLevel.epic
+        }
+    }) }}
+{#</div>#}
+{#    {{ form_help(form) }}#}
+{#    {{ form_errors(form) }}#}

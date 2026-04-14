@@ -1,8 +1,10 @@
 
 <div class="card-title">
-    <h4 class="text-center">{{ 'text.garage'|trans }}</h4>
+    <h4 class="text-center">
+        {{ 'text.garage'|trans }}
+    </h4>
 </div>
-<table class="{{ classes.table.default }}">
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>{{ 'text.brand'|trans }}</th>
@@ -10,6 +12,12 @@
             <th>{{ 'text.class'|trans }}</th>
             <th>{{ 'text.game.update'|trans }}</th>
             <th>{{ 'text.stars'|trans }}</th>
+            <th>{{ 'text.level'|trans }}</th>
+            <th>{{ 'text.epic'|trans }}</th>
+            <th>{{ 'text.order.class'|trans }}</th>
+            <th>{{ 'text.order.stat'|trans }}</th>
+            <th>{{ 'text.evo'|trans }}</th>
+            <th>{{ 'text.division'|trans }}</th>
         </tr>
     </thead>
     <tbody>
@@ -19,9 +27,12 @@
             <td>{{ entity.settingClass.value }}</td>
             <td>{{ entity.gameUpdate }}</td>
             <td>{{ entity.stars }}</td>
+            <td>{{ entity.level ~ ' / ' ~ entity.settingLevel.level }}</td>
+            <td>{{ entity.epic ~ ' / ' ~ entity.settingLevel.epic }}</td>
+            <td>{{ entity.carOrder  ~ ' / ' ~ entity.settingClass.carsNumber }}</td>
+            <td>{{ entity.statOrder  ~ ' / ' ~ entity.settingClass.carsNumber }}</td>
+            <td>{{ entity.evo }}</td>
+            <td>{{ entity.gauntlet.division }}</td>
         </tr>
     </tbody>
-    {% include '@App/contents/front/garage/read/garage-part-2.html.twig' %}
-    {% include '@App/contents/front/garage/read/garage-part-3.html.twig' %}
-    {% include '@App/contents/front/garage/read/garage-part-4.html.twig' %}
 </table>

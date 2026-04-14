@@ -1,13 +1,16 @@
 
 <section class="{{ container|default('container') }} mb-2 px-0">
+
     <div class="row row-cols-2">
         {{ form_row(form.settingBrand) }}
         {{ form_row(form.model) }}
     </div>
+
     <div class="row row-cols-3">
         {{ form_row(form.settingClass) }}
         {{ form_row(form.stars) }}
         {{ form_row(form.gameUpdate, {'attr': {'value': game_update_last}}) }}
     </div>
+
 </section>
 

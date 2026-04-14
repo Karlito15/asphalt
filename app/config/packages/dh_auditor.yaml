@@ -4,14 +4,46 @@ dh_auditor:
     enabled: true
     providers:
         doctrine:
+            viewer:
+                enabled: true
+                page_size: 50
+                activity_graph:
+                    enabled: true       # Show/hide the graph (default: true)
+                    days: 30            # Number of days to display (default: 30, max: 30)
+                    layout: 'bottom'    # Graph layout: 'bottom' or 'inline' (default: 'bottom')
+                    cache:
+                        enabled: true   # Enable caching (default: true)
+                        pool: 'cache.app'  # Cache pool service ID
+                        ttl: 300        # Cache TTL in seconds (default: 300)
+
             # table_prefix: null
-            table_prefix: 'audit-log-'
+            table_prefix: 'zzz_audit_log_'
             # table_suffix: '_audit'
-            table_suffix: ~
+            table_suffix: null
             # columns ignored from auditing
             ignored_columns:
                 - 'createdAt'
                 - 'updatedAt'
-            viewer: true
+
+            entities:
+                App\Domain\Entity\GarageApp: ~
+                App\Domain\Entity\GarageBlueprint: ~
+                App\Domain\Entity\GarageGauntlet: ~
+                App\Domain\Entity\GarageRank: ~
+                App\Domain\Entity\GarageStatActual: ~
+                App\Domain\Entity\GarageStatMax: ~
+                App\Domain\Entity\GarageStatMin: ~
+                App\Domain\Entity\GarageStatus: ~
+                App\Domain\Entity\GarageStatusControl: ~
+                App\Domain\Entity\GarageUpgrade: ~
+                App\Domain\Entity\InventoryApp: ~
+                App\Domain\Entity\SettingBlueprint: ~
+                App\Domain\Entity\SettingBrand: ~
+                App\Domain\Entity\SettingClass: ~
+                App\Domain\Entity\SettingLevel: ~
+                App\Domain\Entity\SettingTag: ~
+                App\Domain\Entity\SettingUnitPrice: ~
+
+            utf8_convert: true
 
     timezone: 'Europe/Paris'

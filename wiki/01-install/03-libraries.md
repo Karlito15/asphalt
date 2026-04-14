@@ -1,25 +1,13 @@
 # Libraries
 
-#### Production
-
+### Remove
 ``` shell
 composer remove --no-scripts symfony/ux-turbo
 ```
 
+### App
 ``` shell
 composer require --no-scripts composer/package-versions-deprecated
-```
-``` shell
-composer require --no-scripts damienharper/auditor-bundle
-```
-``` shell
-composer require --no-scripts easycorp/easyadmin-bundle
-```
-``` shell
-composer require --no-scripts karlito-web/my-toolbox
-```
-``` shell
-composer require --no-scripts stof/doctrine-extensions-bundle
 ```
 ``` shell
 composer require --no-scripts symfony/apache-pack
@@ -31,9 +19,6 @@ composer require --no-scripts symfony/event-dispatcher
 composer require --no-scripts symfony/ux-twig-component
 ```
 ``` shell
-composer require --no-scripts symfonycasts/sass-bundle
-```
-``` shell
 composer require --no-scripts twig/cache-extra
 ```
 ``` shell
@@ -42,22 +27,16 @@ composer require --no-scripts twig/intl-extra
 ``` shell
 composer require --no-scripts twig/string-extra
 ```
-
-#### Development
 ``` shell
-composer require --dev --no-scripts doctrine/doctrine-fixtures-bundle
+composer require --no-scripts damienharper/auditor-bundle
 ```
 ``` shell
-composer require --dev --no-scripts fakerphp/faker
+composer require --no-scripts easycorp/easyadmin-bundle
 ```
 ``` shell
-composer require --dev --no-scripts phpstan/phpstan-symfony
+composer require --no-scripts stof/doctrine-extensions-bundle
 ```
-``` shell
-composer require --dev --no-scripts symfony/phpunit-bridge
-```
-
-#### Front
+### CSS & JS
 ``` shell
 php bin/console importmap:require tom-select/dist/css/tom-select.default.css
 ```
@@ -84,17 +63,23 @@ php bin/console importmap:require htmx.org
 php bin/console importmap:require sweetalert
 ```
 
-#### Compile
+#### Development
 ``` shell
-php bin/console asset-map:compile
+composer require --dev --no-scripts doctrine/doctrine-fixtures-bundle
+```
+``` shell
+composer require --dev --no-scripts fakerphp/faker
+```
+``` shell
+composer require --dev --no-scripts phpstan/phpstan-symfony
+```
+``` shell
+composer require --dev --no-scripts symfony/phpunit-bridge
 ```
 
-#### Front
+#### ToDo
 ``` shell
 composer require --no-scripts symfonycasts/verify-email-bundle
-```
-``` shell
-composer require --no-scripts twbs/bootstrap
 ```
 ``` shell
 composer require --no-scripts symfony/ux-autocomplete
@@ -105,3 +90,4 @@ composer require --no-scripts symfony/ux-chartjs
 ``` shell
 composer require --no-scripts twig/markdown-extra
 ```
+composer require jolicode/automapper
