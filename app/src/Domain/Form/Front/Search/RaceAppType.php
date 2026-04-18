@@ -29,7 +29,7 @@ class RaceAppType extends AbstractType
                 'class'       => RaceMode::class,
                 'empty_data'  => null,
                 'label'       => false,
-                'placeholder' => 'form.placeholder.mode',
+                'placeholder' => 'text.placeholder.mode',
                 'required'    => false,
                 'trim'        => true,
             ])
@@ -41,7 +41,7 @@ class RaceAppType extends AbstractType
                 'class'         => RaceRegion::class,
                 'label'         => false,
                 'empty_data'    => null,
-                'placeholder'   => 'form.placeholder.region',
+                'placeholder'   => 'text.placeholder.region',
                 'required'      => false,
                 'trim'          => true,
             ])
@@ -49,7 +49,7 @@ class RaceAppType extends AbstractType
                 'class'         => RaceSeason::class,
                 'label'         => false,
                 'empty_data'    => null,
-                'placeholder'   => 'form.placeholder.season',
+                'placeholder'   => 'text.placeholder.season',
                 'required'      => false,
                 'trim'          => true,
                 'query_builder' => function(EntityRepository $repo) {
@@ -60,7 +60,7 @@ class RaceAppType extends AbstractType
                 'class'       => RaceTime::class,
                 'empty_data'  => null,
                 'label'       => false,
-                'placeholder' => 'form.placeholder.time',
+                'placeholder' => 'text.placeholder.time',
                 'required'    => false,
                 'trim'        => true,
             ])
@@ -68,7 +68,7 @@ class RaceAppType extends AbstractType
                 'attr'        => [
                     'max' => 30,
                     'min' => 0,
-                    'placeholder' => 'form.placeholder.order.race',
+                    'placeholder' => 'text.placeholder.order.race',
                     'step' => 1,
                 ],
                 'empty_data'  => null,
@@ -79,7 +79,7 @@ class RaceAppType extends AbstractType
             ->add('finished', CheckboxType::class, [
                 'data'        => false,
                 'empty_data'  => null,
-                'label'       => 'form.placeholder.is.finish',
+                'label'       => 'text.placeholder.is.finish',
                 'label_attr'  => [
                     'class' => 'checkbox'
                 ],

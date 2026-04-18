@@ -1452,16 +1452,6 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     controller_paths?: list<scalar|Param|null>,
  *     controllers_json?: scalar|Param|null, // Default: "%kernel.project_dir%/assets/controllers.json"
  * }
- * @psalm-type TurboConfig = array{
- *     broadcast?: bool|array{
- *         enabled?: bool|Param, // Default: true
- *         entity_template_prefixes?: list<scalar|Param|null>,
- *         doctrine_orm?: bool|array{ // Enable the Doctrine ORM integration
- *             enabled?: bool|Param, // Default: true
- *         },
- *     },
- *     default_transport?: scalar|Param|null, // Default: "default"
- * }
  * @psalm-type TwigComponentConfig = array{
  *     defaults?: array<string, string|array{ // Default: ["__deprecated__use_old_naming_behavior"]
  *         template_directory?: scalar|Param|null, // Default: "components"
@@ -1542,7 +1532,6 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     security?: SecurityConfig,
  *     twig?: TwigConfig,
  *     stimulus?: StimulusConfig,
- *     turbo?: TurboConfig,
  *     twig_component?: TwigComponentConfig,
  *     twig_extra?: TwigExtraConfig,
  *     dh_auditor?: DhAuditorConfig,
@@ -1561,7 +1550,6 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         twig?: TwigConfig,
  *         web_profiler?: WebProfilerConfig,
  *         stimulus?: StimulusConfig,
- *         turbo?: TurboConfig,
  *         twig_component?: TwigComponentConfig,
  *         twig_extra?: TwigExtraConfig,
  *         dh_auditor?: DhAuditorConfig,
@@ -1578,7 +1566,6 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         security?: SecurityConfig,
  *         twig?: TwigConfig,
  *         stimulus?: StimulusConfig,
- *         turbo?: TurboConfig,
  *         twig_component?: TwigComponentConfig,
  *         twig_extra?: TwigExtraConfig,
  *         dh_auditor?: DhAuditorConfig,
@@ -1596,7 +1583,6 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         twig?: TwigConfig,
  *         web_profiler?: WebProfilerConfig,
  *         stimulus?: StimulusConfig,
- *         turbo?: TurboConfig,
  *         twig_component?: TwigComponentConfig,
  *         twig_extra?: TwigExtraConfig,
  *         dh_auditor?: DhAuditorConfig,

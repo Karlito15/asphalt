@@ -50,7 +50,7 @@ final class RaceController extends AbstractController
             $result = $repository->search($dto);
         }
         return $this->render('@App/contents/front/search/race.html.twig', [
-            'container'       => 'container-fluid',
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => self::$crud,
             'controller_name' => $home,

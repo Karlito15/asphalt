@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace App\Application\Controller\Front\Garage;
 
+use App\Application\Event\Garage\AppUpdateGauntletEvent;
+use App\Application\Event\Garage\AppUpdateLevelEvent;
+use App\Application\Event\Garage\AppUpdateStatusControlEvent;
+use App\Application\Event\Garage\AppUpdateStatusEvent;
 use App\Application\Service\Controller\WebController;
 use App\Domain\Entity\GarageApp;
 use App\Domain\Form\Front\Garage\AppUpdateType;
@@ -57,8 +61,11 @@ final class UpdateController extends AbstractController
 		### Vérification des données du formulaire
 		if ($form->isSubmitted() && $form->isValid()) {
 			try {
-				### Event
-//                $dispatcher->dispatch(new AppUpdateEvent($entity));
+				### Events
+                $dispatcher->dispatch(new AppUpdateStatusEvent($entity));
+                $dispatcher->dispatch(new AppUpdateStatusControlEvent($entity));
+                $dispatcher->dispatch(new AppUpdateGauntletEvent($entity));
+                $dispatcher->dispatch(new AppUpdateLevelEvent($entity));
 
 				### Doctrine
 				$manager->flush();
@@ -90,7 +97,7 @@ final class UpdateController extends AbstractController
 		}
 
 		return $this->render('@App/contents/front/garage/update.html.twig', [
-			'container'       => 'container-fluid',
+			'container'        => 'container-fluid pt-4 px-4',
 			'breadcrumb'      => self::Breadcrumb($home, $this->translator->trans('text.update')),
 			'links'           => self::$crud,
 			'controller_name' => $title,

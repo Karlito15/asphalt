@@ -1,10 +1,12 @@
 parameters:
+    ### METAS
     metas:
         title:              'Asphalt Legends Unite'
         author:             'Giancarlo PALUMBO'
         email:              'giancarlo.palumbo@free.fr'
         description:        ~
         generator:          ~
+    ### CLASSES
     classes:
         table:
             td:             'my-0 py-0 align-middle'
@@ -14,10 +16,12 @@ parameters:
             back:           'btn btn-outline-warning text-uppercase'
             success:        'btn btn-outline-success text-uppercase'
             delete:         'btn btn-outline-danger text-uppercase'
+    ### GAMES
     games:
         pack_blueprint:     6
         pack_price:         900
         evo_target:         24
+    ### IMAGES
     images:
         avatar: 'images/sako-01.jpg'
     ### FOLDERS
@@ -30,8 +34,8 @@ when@dev:
 #            statistics:     300  # 5 mins
         images:
             logo:
-                front:     'images/logo-orange.png'
-                back:      'images/logo-green.png'
+                front:      'images/logo-yellow.png'
+                back:       'images/logo-green.png'
 when@prod:
     parameters:
         cache_lifetime:

@@ -2,10 +2,10 @@
 
     {% set class = 'text-center form-control' %}
 
-    {% if blueprint == 'Done' or blueprint == 'None' %}
+    {% if value == 'Done' or value == 'None' %}
         {% set result = 0 %}
     {% else %}
-        {% set result = (blueprint / games.pack_blueprint)|round(0, 'ceil') %}
+        {% set result = (value / games.pack_blueprint)|round(0, 'ceil') %}
     {% endif %}
 
     <!-- component HTML -->

@@ -1,0 +1,332 @@
+Brand;Model;Speed;Acceleration;Handling;Nitro;Average
+Acura;"2017 NSX";305;75.7;48.17;36.81;116.42
+"Aston Martin";Vulcan;328;73;36.63;50.33;121.99
+"Aston Martin";DB11;322;66.7;38.03;43.92;117.66
+BMW;"3.0 CSL Hommage";280;63.1;44.02;39.88;106.75
+BMW;"M4 GTS";305;65.8;43.9;38.58;113.32
+BMW;"Z4 LCI E89";250;58.6;39.02;45.09;98.18
+Bugatti;Chiron;420;77.5;38.75;53.33;147.4
+Cadillac;"Cien Concept";350;68.5;30.04;50.68;124.81
+Chevrolet;"Camaro ZL1 50th Edition";250;63.1;58.14;49.95;105.3
+Chevrolet;"Corvette Grand Sport";314;67.6;70.28;66.74;129.66
+Chevrolet;"Camaro LT";265;51.4;41.17;48.53;101.53
+Dodge;"Viper GTS";340;73;40.65;56.62;127.57
+Dodge;"Challenger Pack 392 Hemi Scat";283;62.2;36.1;50.71;108
+Dodge;"Challenger SRT8";292;64;26.47;23.08;101.39
+Dodge;"Viper ACR";285;68.5;55.81;50.95;115.07
+"DS Automobiles";"DS E-Tense";250;59.5;45.09;51.56;101.54
+"Exotic Rides";W70;313;73.9;40.46;43.05;117.6
+Ferrari;F12TDF;340;73.9;31.67;69.61;128.8
+Ferrari;LaFerrari;350;73;37.68;62.91;130.9
+Ferrari;"488 GTB";330;73;41.99;56.41;125.35
+Ferrari;"FXX K";350;76.59;38.45;64.95;132.5
+Ford;GT;348;70.3;29.92;38.29;121.63
+Ford;"Shelby GT350R";276;64.9;47.58;34.38;105.71
+Glickenhaus;003S;350;73;32.33;50.68;126.5
+Icona;"Vulcano Titanium";370;75.7;35.26;53.84;133.7
+Jaguar;"F-Type SVR";322;66.7;43.33;34.31;116.59
+Koenigsegg;Regera;440;74.8;39.74;42.73;149.32
+Lamborghini;"Aventador SV Coupé";350;74.8;41.5;59.86;131.54
+Lamborghini;"Terzo Millennio";380.8;78.19;45.16;54.79;139.73
+Lamborghini;Asterion;320;73;37.51;58.07;122.15
+Lamborghini;Egoista;350;78.4;49.16;65.97;135.88
+Lamborghini;Centenario;350;74.8;39.22;61.9;131.48
+Lotus;"Evora Sport 410";300;62.2;44.09;36.32;110.65
+McLaren;P1;350;74.8;39.97;53.74;129.63
+Mercedes-Benz;"AMG GT S";310;65.8;35.63;39.96;112.85
+Mitsubishi;"Lancer Evolution";250;42.4;54.8;54.8;100.5
+Nissan;"GT-R Nismo";315;77.5;48.8;43.24;121.14
+Nissan;"37OZ Nismo";250;53.2;52.37;41.85;99.36
+Pagani;"Huayra BC";350;71.2;46.1;73.11;135.1
+Pininfarina;"H2 Speed";300;69.4;64.66;41.8;118.96
+Porsche;"918 Spyder";345;76.59;41.83;66.3;132.43
+Porsche;"911 GTS Coupé";312;64.9;41.08;42.95;115.23
+Porsche;"718 Cayman";275;55.9;51.9;39.4;105.55
+Rezvani;"Beast X";282;73;48.18;46.21;112.35
+Rimac;"C TWO";412;82.27;41.64;37.62;143.38
+Trion;Nemesis;434;73.9;39.45;35.92;145.82
+VLF;"Force 1 V10";350;73.9;43.04;60.87;131.95
+Volkswagen;"XL Sport Concept";270;46.9;49.35;42.32;102.14
+"W Motors";"Lykan Hypersport";395;74.8;37;39.79;136.65
+"W Motors";"Fenyr Supersport";405;75.7;37.7;60.97;144.84
+Ferrari;J50;333;73.9;42.27;48.91;124.52
+Lotus;"Elise Sprint 220";234;59.5;54.8;47.82;99.03
+Genty;Akylone;354;75.7;49.56;53.16;133.11
+Maserati;Alfieri;305;60.4;29.33;51.53;111.57
+McLaren;"570S Spider";356;71.2;46.08;47.38;130.17
+Sin;"R1 550";350;68.5;36.92;63.94;129.84
+Apollo;N;360;73;42.36;47.57;130.73
+Vencer;Sarthe;340;67.6;48.14;29.67;121.35
+Zenvo;"TS1 GT Anniversary";402;74.8;37.49;47.09;140.35
+Lamborghini;"Huracán Evo Spyder";325;72.1;46.62;51.94;123.92
+Lamborghini;"Aventador J";350;73;49.16;62.92;133.77
+Mercedes-Benz;"SLR McLaren";334;67.6;43.84;54.93;125.09
+Ferrari;"LaFerrari Aperta";350;73;60.62;48.65;133.07
+Ferrari;"812 Superfast";340;73.9;46.64;60.62;130.29
+Ginetta;G60;275;57.7;54.48;46.29;108.37
+Koenigsegg;Jesko;484;74.8;41.93;42.56;160.82
+Porsche;"911 Targa 4S";303;64;29.2;18.15;103.59
+Arrinera;"Hussarya 33";340;71.2;44.4;25.68;120.32
+Artega;"Scalo Superelletra";300;75.7;39.29;54.6;117.4
+"Aston Martin";"Vantage GT12";322;68.5;64.33;61.21;129.01
+McLaren;Senna;335;74.8;73.57;53.07;134.11
+Porsche;"911 GT3 RS";312;71.2;52.35;52.35;121.98
+TVR;Griffith;322;64;39.11;17.02;110.53
+"Aston Martin";"DBS Superleggera";339;69.4;48.04;51.53;126.99
+"Automobili Pininfarina";Battista;350;82;56.8;54.76;135.89
+"Vanda Electrics";Dendrobium;320;76.6;53.29;59.03;127.23
+Chevrolet;"Corvette ZR1";341;74.8;48.24;59.75;130.95
+Ford;"Shelby GR-1";305;64.9;51.53;45.98;116.85
+Italdesign;Zerouno;330;71.2;47.13;38.82;121.79
+Mazda;Furai;290;71.2;43.07;30.12;108.6
+Nissan;"Leaf Nismo RC";220;69.4;38.17;48.27;93.96
+Rimac;Nevera;412;82.27;41.64;37.62;143.38
+Techrules;"AT96 track version";350;77.5;52.98;46.61;131.77
+Honda;"Civic Type-R";271;72.1;41.15;36.45;105.18
+Lotus;Evija;350;73;45.33;42.53;127.72
+Porsche;"Taycan Turbo S";260;74.8;52.49;37.96;106.31
+Porsche;"718 Cayman GT4 Clubsport";304;60.4;58.34;44.03;116.69
+Porsche;"911 GT1 Evolution";310;66.7;45.1;55.86;119.42
+Porsche;"911 GT2 RS Clubsport";340;74.8;55.63;49.64;130.02
+Porsche;"Carrera GT";330;68.5;61.79;60.32;130.15
+Lamborghini;SC18;350;74.8;45.33;64.96;133.77
+Lamborghini;"Gallardo LP560-4";325;67.6;50.25;38.4;120.31
+Lamborghini;Veneno;355;73.9;53.52;61.51;135.98
+Lamborghini;"Sián FKP 37";350;74.8;68.27;69.04;140.53
+McLaren;"F1 LM";362;64.9;50.37;51.94;132.3
+BXR;"Bailey Blade GT1";434;74.8;40.34;54.29;150.86
+Chevrolet;"Corvette Stingray";312;73;45.3;48.59;119.72
+Chevrolet;"Corvette C7.R";295;71.2;34.77;35.9;109.22
+Ford;"GT MK II";300;76.6;57.8;49.12;120.88
+SSC;Tuatara;482.8;74.8;42.34;38.72;159.67
+Apex;AP-0;320;71.2;60.46;57.11;127.19
+"Aston Martin";"Valhalla Concept Car";354;77.41;57.27;43.91;133.15
+Bentley;"Continental GT3";285;65.8;45.88;20.94;104.41
+Bentley;"Mulliner Bacalar";322;67.6;46.32;36.23;118.04
+Jaguar;C-X75;354;66.7;57.27;57.27;133.81
+McLaren;Speedtail;403;73;46.04;53.96;144
+Ferrari;"Enzo Ferrari";350;67.15;49.16;60.88;131.8
+Ferrari;"SF90 Stradale";340;77.5;66.86;51.64;134
+Ferrari;"F8 Tributo";340;73.9;66.86;43.65;131.1
+Ferrari;F40;324;63.1;53.76;40.25;120.28
+Ferrari;"488 GTB Challenge EVO";330;73;47.13;50.55;125.17
+Ferrari;"599XX EVO";305;71.2;58.47;49.68;121.09
+Apollo;IE;335;75.7;47.64;51.09;127.36
+BMW;"I8 Roadster";250;58.6;51.16;48.33;102.02
+Bugatti;Divo;380;78.4;52.2;57.07;141.92
+Bugatti;"La Voiture Noire";420;78.4;47.5;44;147.48
+Citroën;"GT by Citroën";375;68.5;55.71;50.08;137.32
+Lamborghini;"Huracán Super Trofeo Evo";290;72.1;46.42;31.01;109.88
+Peugeot;Onyx;360;73.9;63.83;35.08;133.2
+Acura;"NSX GT3 EVO";295;60.85;63.92;55.78;118.89
+Aspark;Owl;400;82.99;45.79;35.67;141.11
+"Inferno Automobili";"Settimo Cerchio";410;81.1;46.64;23.73;140.37
+"Inferno Automobili";Inferno;395;75.7;47.45;62.07;145.06
+Infiniti;"Projet Black S";246.2;64;47.65;44.65;100.62
+Nio;EP9;313;75.7;52.47;49.64;122.7
+"ATS Automobili";"Corsa RRTurbo";305;81.1;39.39;17.31;110.7
+Ferrari;Roma;320;69.4;46.11;51.38;121.72
+Italdesign;DaVinci;250;68.5;45.09;35.38;99.74
+Lamborghini;"Essenza SCV12";318;76.15;49.51;47.37;122.76
+Lamborghini;"Murcielago LP 640 Roadster";342;69.4;49.88;37.84;124.78
+Mazzanti;"Evantra Millecavalli";403;75.7;52.41;49.44;145.14
+Pagani;Imola;360;73;47.83;51.73;133.14
+"Aston Martin";Valkyrie;360;73;52.9;57.97;135.97
+"Aston Martin";Victor;360;70.3;54.85;47.57;133.18
+Renault;"R.S. 01";300;73.9;42.37;54.6;117.72
+Volkswagen;"W12 Coupe";357;68.5;57.23;30.21;128.24
+Zenvo;TSR-S;325;74.8;50.25;40.34;122.6
+"Aston Martin";"V12 Speedster";300;68.5;37.23;42.72;112.11
+Bugatti;"Veyron 16.4 Grand Sport Vitesse";410;76.6;40.2;37;140.95
+Hennessey;"Venom F5";500;76.6;41.76;27.93;161.57
+Lamborghini;SC20;353.4;73.63;51.04;40.77;129.71
+Lamborghini;"Aventador SVJ Roadster";351;73.9;40.83;42.62;127.09
+McLaren;Elva;326;74.8;50.36;49.15;125.08
+Drako;GTE;332;73;39.97;48.8;123.44
+"Lego Technic";"McLaren Senna GTR";335;74.8;57.64;49.12;129.14
+Pagani;"Zonda HP Barchetta";338;73;51.67;59.37;130.51
+Raesr;"Tachyon Speed";389;73.45;44.85;43.75;137.76
+Renault;TreZor;280;64;42.06;41.62;106.92
+Rimac;Concept_One;355;77.5;59.7;33.7;131.48
+Toroidion;1MW;451;74.8;44.84;36.04;151.67
+Volkswagen;"Electric R";270;82.45;37.85;50.84;110.29
+Arash;AF10;323;73.9;39.2;44.1;120.05
+Glickenhaus;004C;298;70.3;40.47;36.15;111.23
+Glickenhaus;007S;340;82.9;59.38;61.67;135.99
+Koenigsegg;Gemera;400;82.9;50.01;28.93;140.46
+Lotus;Emira;290;59.5;43.07;31.91;106.12
+McLaren;GT;326;71.2;53.99;34.61;121.45
+Naran;"Hyper Coupé";370;79.3;51.18;48.53;137.25
+Nissan;"GTR-50 Italdesign";330;76.6;44.93;39.8;122.83
+Pagani;"Zonda R";353;75.7;41.77;48.95;129.86
+Saleen;S1;290;67.6;57.15;58.71;118.37
+"Aston Martin";One77;345;71.2;53.42;38.77;127.1
+McLaren;"Senna GTR";335;74.8;51.34;66.9;132.01
+Puritalia;Berlinetta;330;75.7;50.79;34.91;122.85
+Ultima;RS;402;75.7;50.19;47.09;143.75
+Vision;1789;380;74.8;44.08;47.32;136.55
+Arash;"AF8 Falcon Édition";321;70.03;53.41;62.99;126.86
+Bolwell;"MK X Nagari 500";300;73;44.09;37.23;113.58
+Brabham;BT62;305;76.6;48.06;45.98;118.91
+Tushek;"TS 900 Racer Pro";380;79.3;55.44;44.08;139.71
+Lamborghini;"Countach LPI 800-4";355;74.8;55.84;52.24;134.47
+Lamborghini;"Diablo GT";338;66.7;44.21;37.5;121.6
+Lamborghini;"Countach 25th Anniversary";293;59.5;43.38;14.14;102.51
+Lamborghini;"Sesto Elemento";325;77.5;40.46;44.2;121.79
+Lamborghini;"Reventón Roadster";340;69.4;51.14;55.63;129.04
+Lamborghini;"Miura Concept";330;65.8;39.8;38.82;118.61
+Bentley;"Continental GT Speed";335;67.6;58.75;45.17;126.63
+Bugatti;Centodieci;380;78.57;56.39;58.54;143.38
+Bugatti;EB110;336;67.6;45.51;32.39;120.38
+Ferrari;"Monza SP1";300;73.9;44.86;51.55;117.58
+McLaren;"600LT Spider";324;73.9;49.41;42.18;122.37
+McLaren;765LT;330;74.8;54.46;34.91;123.54
+Pagani;"Huayra R";360;73;42.36;43.41;129.69
+Renault;Dezir;275.7;55;44.86;51.55;106.78
+Ajlani;Drakuma;419;77.5;38.68;46.25;145.36
+Jaguar;"XE SV Project 8";322;68.5;33.35;37.19;115.26
+Koenigsegg;"Agera RS";447.2;74.8;49.16;43.12;153.57
+Nissan;"R390 GT1";354;69.4;45.71;34.66;125.94
+Peugeot;SR1;290;57.7;32.35;8.68;97.18
+Ares;S1;296;75.7;62.03;52.29;121.51
+Bugatti;Bolide;489;80.47;40.27;12.34;155.52
+Chrysler;ME412;385.8;67.6;54.84;48.95;139.3
+"Faraday Future";FFZero1;403;82;37.56;33.6;139.04
+Jaguar;"XJ220S TWR";368;70.3;50.19;67.37;138.97
+McLaren;"650S GT3";340;73.9;59.38;57.63;132.73
+Peugeot;9X8;330;82;61.79;48.59;130.6
+Porsche;"Boxster 25th Anniversary";288;64;39.54;35.31;106.71
+Praga;R1;268;74.8;42.12;38.73;105.91
+Donkervoort;"D8 GTO";286;76.6;52.62;44.88;115.03
+Ferrari;F50;325;65.8;35.74;42.27;117.2
+Mercedes-Benz;"AMG GT Black Series";325;72.2;43;50.97;122.79
+"Spania GTA";"2015 GTA Spano";373;73.9;49.08;53.09;137.27
+"Torino Design";"Super Sport";389;76.6;51.46;63.57;145.16
+"FV Frangivento";"Sorpasso GT3";382.2;78.4;48.34;17.08;131.51
+Jaguar;XJR-9;394;60.4;53.61;64.18;143.05
+Kepler;Motion;322;78.4;40.55;40.07;120.26
+Koenigsegg;CCXR;400;72.1;56.75;53.66;145.63
+KTM;"X-Bow GTX";231;64.9;42.69;50.35;97.24
+Lamborghini;Revuelto;350;76.6;46.86;16.02;122.37
+Maserati;MC12;330;66.7;47.13;9.5;113.33
+Apollo;EVO;335;75.7;43.93;45.17;124.95
+BMW;"M4 GT3";324.6;73.04;48.28;56.99;125.73
+"De Tomaso";P72;360;73.9;54.07;47.57;133.89
+Mercedes-Benz;CLK-GTR;320;66.7;42.53;32.25;115.37
+Porsche;"935 (2019)";340;75.7;55.63;55.63;131.74
+Porsche;"Panamera Turbo S";315;81.1;38.51;26.22;115.21
+Jaguar;XJR-15;307;71.2;48.28;44.33;117.7
+Koenigsegg;CC850;465;77.5;40.99;24.33;151.96
+McLaren;"Solus GT";322;77.5;51.36;37.19;122.01
+Nissan;"370Z Édition Néon";250;53.2;49.95;35.38;97.13
+Noble;"M600 Speedster";361;73;62;30.98;131.75
+Saleen;"S7 Twin Turbo";402;62.2;62.89;60.64;146.93
+Bugatti;"Chiron Super Sport 300+";440;78.4;41.54;24.79;146.18
+Deus;Vayanne;420;82.09;37;20.67;139.94
+Ford;"Mustang Mach-E1400";290;74.8;33.02;39.05;109.22
+Maserati;MC20;325;73.9;61.13;45.65;126.42
+McLaren;Artura;330;73;50.79;29.05;120.71
+Rimac;"Concept S";365;78.85;46.73;41.74;133.08
+"Aston Martin";"DBS GT Zagato";340;69.4;55.63;49.64;128.67
+Devel;Sixteen;556.2;83.8;45.52;28.39;178.48
+Ferrari;"296 GTB";330;73.9;43.46;25.14;118.12
+Ford;"Team Fordzilla P1";358;82.9;42.19;41.16;131.06
+Lamborghini;Invencible;322;75.5;49.92;45.84;123.32
+Mercedes-Benz;"2022 Showcar Vision AMG";321;64.9;34.71;26.57;111.79
+"Alfa Romeo";"Giulia GTAm";300;67.6;30.37;16.2;103.54
+"ATS Automobili";GT;380;76.6;40.02;32.17;132.2
+Ferrari;"Daytona SP3";340;74.35;36.91;35.66;121.73
+"Formule E";"GEN 2 Asphalt Édition";280;74.8;55.15;48.6;114.64
+Lamborghini;"Huracán STO";310;73;50.01;39.02;118.01
+Pagani;"Utopia Coupé";350;73;60.62;50.68;133.58
+"W Motors";"Lykan Édition Néon";395;74.8;37.84;37.56;136.3
+"Aston Martin";"Vantage V12 2022";322;69.4;31.91;21.82;111.28
+"De Tomaso";P900;320;74.8;38.94;24.59;114.58
+"FV Frangivento";Asfanè;360;74.8;46.27;43.41;131.12
+Lamborghini;SC63;340;74.8;44.4;27.67;121.72
+Porsche;"911 Carrera RS 3.8";270;55.9;39.13;11.68;94.18
+Zenvo;"Aurora Tur";450;79.3;52.05;27.52;152.22
+"Aston Martin";DB12;325;67.6;53.87;53.87;125.09
+Lotus;E-R9;353.4;79.3;47.96;26.4;126.76
+Maserati;"MC20 GT2";323;73.9;39.2;28.61;116.18
+McMurtry;Spéirling;320;86.5;49.7;37.03;123.31
+Nissan;"GT-R Néon Édition";333.5;76.6;47.48;35.17;123.19
+Bugatti;"Chiron Pur Sport";380;79.3;58.69;38.66;139.16
+Ferrari;"SF90 XX Stradale";349;79.3;50.58;31.25;127.53
+Ford;"GT Frankie Edition";355.3;70.3;45.82;57.42;132.21
+Ford;"Mustang RTR Spec 5 10th Anniversary";322;67.6;39.11;63.13;122.96
+Koenigsegg;"Jesko Absolut";530;79.3;45.21;20.92;168.86
+Lamborghini;Autentica;355;74.8;41.94;53.27;131.25
+Porsche;"Mission R";300;77.5;37.23;38.14;113.22
+"Aston Martin";Valour;322;73;39.83;28.55;115.85
+"Automobili Pininfarina";"Battista Edizione Nino Farina";350;83.26;45.33;26.22;126.2
+Bugatti;Mistral;420;77.5;50.12;30;144.41
+Czinger;21C;407;83.8;39.55;31.58;140.48
+Lamborghini;Temerario;343;77.5;41.66;27.85;122.5
+Mercedes-Benz;"Vision One-Eleven";364.5;77.5;50.62;52.2;136.21
+Rimac;"Nevera Time Attack";400;84.34;45.79;28.92;139.76
+TVR;Sagaris;298;66.7;49.35;56.17;117.56
+"DS Automobiles";"E-TENSE Performance";290.5;82;33.06;23;107.14
+Ferrari;"499P Modificata";340;75.7;51.89;51.64;129.81
+Ford;"Shelby Super Snake";346.8;76.6;56.43;34.15;128.5
+Jaguar;"XKR-S GT";300;64.9;38.6;36.32;109.96
+McLaren;Sabre;351;76.6;49.26;40.57;129.36
+Pininfarina;Teorema;401.5;73.9;47.61;33.51;139.13
+Porsche;"911 Turbo 50 Years";330;75.7;32.47;34.91;118.27
+Raesr;Tartarus;530;87.4;42.62;18.26;169.57
+"FV Frangivento";GT65;355;75.7;34.21;26.49;122.85
+HTT;"Locus Pléthore LC750";398;74.8;59.9;55.7;147.1
+Kimera;EVO37;280;72.1;64.96;34.65;112.93
+"Lego Technic";"Chevrolet Corvette Stingray";312;73;52.35;37.32;118.67
+Porsche;"911 50 Years Porsche Design";300;68.5;57.8;47.29;118.4
+Praga;Bohema;300;68.5;54.37;47.29;117.54
+Ford;"GT MK IV";350;75.5;33.86;32.33;122.92
+Hyundai;"N Vision 74 Concept";390;70.3;40.79;35;134.02
+Hyundai;"Ioniq 5 N";260;75.03;41.28;18.03;98.58
+Lexus;"Electrified Sport Concept";363;82;33.2;33.2;127.85
+SSC;"Tuatara Striker";435;76.42;52.87;32.96;149.31
+Toyota;"GR Supra 2023";250;64.9;45.09;32.14;98.03
+Toyota;"GR Super Sport Concept";350;77.5;37.69;16.02;120.3
+"Formule E";"GEN 3 EVO Championship Edition";322;83.62;46.32;41.99;123.48
+"Lego Technic";"Aston Martin Valkyrie";360;73;50.17;43.41;131.65
+Mercedes-Benz;"Mercedes-AMG ONE";352;73.9;53.2;49.87;132.24
+Nissan;"Z GT4";335;73;35.04;39.24;120.57
+SSC;"Ultimate Aero TT";414;74.98;40.93;45.83;143.94
+Toyota;"GR Supra Racing Concept";298;63.1;43.89;30.69;108.92
+Arash;Imperium;520;87.4;43.71;12.78;165.97
+Citroën;"DS Survolt";276;73;61.09;49.86;114.99
+Ferrari;"F12 Berlinetta";340;72.1;40.65;47.64;125.1
+"Lego Technic";"Ferrari FXX K";350;76.6;38.45;50.68;128.93
+"Lego Technic";"Lamborghini Revuelto";350;76.6;43.03;13.98;120.9
+Mercedes-Benz;"Silver Lightning";380;76.6;54.63;27.83;134.77
+Mosler;"Super GT";491;78.4;39.41;27.64;159.11
+Pagani;"Zonda Cinque";351;69.4;50.02;46.7;129.28
+"Aston Martin";"DBS 770 Ultimate";340;69.4;42.15;23.67;118.8
+"Automobili Pininfarina";B95;380;82.99;43.26;12.68;129.73
+BMW;"M Hybrid V8";335;75.7;45.41;47.14;125.81
+Ford;"Mustang RTR Spec 5-FD";403;73.9;46.04;58.48;145.36
+Koenigsegg;One:1;440;77.5;50.51;23.59;147.9
+Lotus;Emeya;250;63.1;51.15;46.7;102.74
+Raesr;Aglaia;425.2;80.2;39;32.54;144.23
+Dodge;"Charger SRT Hellcat Redeye Widebody";327;64.9;39.54;34.68;116.53
+Koenigsegg;Chimera;490;75.7;51.76;32.69;162.54
+"Lego Technic";"Bugatti Chiron Pur Sport";380;79.3;52.19;55.98;141.87
+McLaren;"750S Coupé";332;75.7;51.01;50.76;127.37
+Mercedes-Benz;"C 63 AMG DTM";306;69.4;48.17;48.86;118.11
+Tushek;"Aeon E";480;83.8;39.84;12.2;153.96
+Zenvo;"Aurora Agil";365;77.5;50.67;41.74;133.73
+Icona;"Vulcano Spyder";415;79.3;41.87;32.04;142.05
+"Lego Technic";"BMW M4 GT3 EVO";320;69.4;56.88;55.2;125.37
+Lexus;"LFA Nürburgring Package";325;67.6;43;30.67;116.57
+Nilu27;Nilu;400;73;41.57;48.04;140.65
+Porsche;"935 Dragonforce Edition";355;71.2;53.52;55.33;133.76
+Rimac;"Nevera R";431;84.52;39.3;18.59;143.35
+Ares;Panther;0;0;0;0;0
+"Ferrante Design";Elytron;0;0;0;0;0
+Ferrari;"12 Cilindri";0;0;0;0;0
+Lamborghini;"Huracán Sterrato";0;0;0;0;0
+Mercedes-Benz;C11;0;0;0;0;0
+Porsche;"918 Spyder Asphalt Edition";385;73;46.96;32.48;134.36
+Porsche;"911 GT3 R rennsport";0;0;0;0;0
+Porsche;"919 Street";0;0;0;0;0
+Porsche;"917 Living Legend";0;0;0;0;0

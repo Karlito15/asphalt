@@ -31,11 +31,11 @@ final class DashboardController extends AbstractController
         $title = $this->translator->trans('text.dashboard');
 
         ### Flash
-        $this->addFlash('secondary', 'This is the Web App !');
+        // $this->addFlash('primary', 'This is the Web App !');
 
         return $this->render('@App/contents/front/dashboard/index.html.twig', [
             'breadcrumb'      => self::Breadcrumb($home, $title),
-            'container'       => 'container-fluid',
+            'container'        => 'container-fluid pt-4 px-4',
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
         ]);

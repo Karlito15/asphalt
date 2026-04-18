@@ -67,7 +67,7 @@ class GarageStatMinType extends AbstractType
     {
         return [
             'autocomplete' => 'off',
-            'class'        => 'text-center fw-bolder form-control-plaintext form-control-sm',
+            'class'        => 'text-end fw-bolder form-control-plaintext form-control-sm',
         ];
     }
 }

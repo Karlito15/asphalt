@@ -23,7 +23,7 @@ class AppCreateType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            // Garage
+            ### Garage
             ->add('model', TextType::class, [
                 'attr'          => [
                     'autocomplete'  => 'off',
@@ -59,7 +59,7 @@ class AppCreateType extends AbstractType
                 'required'      => true,
                 'trim'          => true,
             ])
-            // Settings
+            ### Settings
             ->add('settingBrand', EntityType::class, [
                 'attr'          => [
                     'class' => self::attrClass(),

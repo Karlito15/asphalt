@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\Application\Controller\Front\Garage;
 
+use App\Application\Event\Garage\AppCreateEvent;
+use App\Application\Event\Setting\BrandEvent;
+use App\Application\Event\Setting\ClassEvent;
 use App\Application\Service\Controller\WebController;
 use App\Domain\Entity\GarageApp;
 use App\Domain\Form\Front\Garage\AppCreateType;
@@ -55,10 +58,8 @@ final class CreateController extends AbstractController
         ### Vérification des données du formulaire
         if ($form->isSubmitted() && $form->isValid()) {
             try {
-                ### Events
-//                $dispatcher->dispatch(new BrandEvent($garage));
-//                $dispatcher->dispatch(new ClassEvent($garage));
-//                $dispatcher->dispatch(new AppCreateEvent($manager, $garage));
+                ### Event
+                $dispatcher->dispatch(new AppCreateEvent($manager, $garage));
 
                 ### Doctrine
                 $manager->persist($garage);
@@ -79,6 +80,10 @@ final class CreateController extends AbstractController
                 throw new RuntimeException($e->getMessage(), $e->getCode(), $e);
             }
 
+            ### Events Settings
+            $dispatcher->dispatch(new BrandEvent($garage));
+            $dispatcher->dispatch(new ClassEvent($garage));
+
 //            ### Launch Command To Generate Garage List YAML
 //            $this->generateGarageList();
 
@@ -87,7 +92,7 @@ final class CreateController extends AbstractController
         }
 
         return $this->render('@App/contents/front/garage/create.html.twig', [
-            'container'        => 'container',
+            'container'         => 'container-fluid pt-4 px-4',
             'breadcrumb'       => self::Breadcrumb($home, $title),
             'links'            => self::$crud,
             'controller_name'  => $title,

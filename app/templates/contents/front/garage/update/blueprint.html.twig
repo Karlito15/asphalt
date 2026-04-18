@@ -1,4 +1,4 @@
-<div class="card mb-md-3">
+<div class="card {{ background }} mb-md-3">
 
     <div class="card-header">
         <h3 class="card-title">
@@ -6,34 +6,41 @@
         </h3>
     </div>
 
-    <div class="card-body">
+    <div class="card-body gradient">
 
-        <div class="row row-cols-6 gx-md-3">
-            <div class="col text-center">
-                <twig:FormBlueprint form="{{ form.blueprint.star1 }}" target="{{ entity.settingBlueprint.star1 }}" />
-            </div>
-            <div class="col text-center">
-                <twig:FormBlueprint form="{{ form.blueprint.star2 }}" target="{{ entity.settingBlueprint.star2 }}" />
-            </div>
-            <div class="col text-center">
-                <twig:FormBlueprint form="{{ form.blueprint.star3 }}" target="{{ entity.settingBlueprint.star3 }}" />
-            </div>
-            <div class="col text-center">
-                <twig:FormBlueprint form="{{ form.blueprint.star4 }}" target="{{ entity.settingBlueprint.star4 }}" />
-            </div>
-            <div class="col text-center">
-                <twig:FormBlueprint form="{{ form.blueprint.star5 }}" target="{{ entity.settingBlueprint.star5 }}" />
-            </div>
-            <div class="col text-center">
-                <twig:FormBlueprint form="{{ form.blueprint.star6 }}" target="{{ entity.settingBlueprint.star6 }}" />
-            </div>
+        <div class="d-flex justify-content-around gap-2">
+            {% if entity.stars == 3 %}
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star1 }}" target="{{ entity.settingBlueprint.star1 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star2 }}" target="{{ entity.settingBlueprint.star2 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star3 }}" target="{{ entity.settingBlueprint.star3 }}" /></div>
+            <div class="col d-none text-center"><twig:FormBlueprint form="{{ form.blueprint.star4 }}" target="{{ entity.settingBlueprint.star4 }}" /></div>
+            <div class="col d-none text-center"><twig:FormBlueprint form="{{ form.blueprint.star5 }}" target="{{ entity.settingBlueprint.star5 }}" /></div>
+            <div class="col d-none text-center"><twig:FormBlueprint form="{{ form.blueprint.star6 }}" target="{{ entity.settingBlueprint.star6 }}" /></div>
+            {% elseif entity.stars == 4 %}
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star1 }}" target="{{ entity.settingBlueprint.star1 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star2 }}" target="{{ entity.settingBlueprint.star2 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star3 }}" target="{{ entity.settingBlueprint.star3 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star4 }}" target="{{ entity.settingBlueprint.star4 }}" /></div>
+            <div class="col d-none text-center"><twig:FormBlueprint form="{{ form.blueprint.star5 }}" target="{{ entity.settingBlueprint.star5 }}" /></div>
+            <div class="col d-none text-center"><twig:FormBlueprint form="{{ form.blueprint.star6 }}" target="{{ entity.settingBlueprint.star6 }}" /></div>
+            {% elseif entity.stars == 5 %}
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star1 }}" target="{{ entity.settingBlueprint.star1 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star2 }}" target="{{ entity.settingBlueprint.star2 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star3 }}" target="{{ entity.settingBlueprint.star3 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star4 }}" target="{{ entity.settingBlueprint.star4 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star5 }}" target="{{ entity.settingBlueprint.star5 }}" /></div>
+            <div class="col d-none text-center"><twig:FormBlueprint form="{{ form.blueprint.star6 }}" target="{{ entity.settingBlueprint.star6 }}" /></div>
+            {% elseif entity.stars == 6 %}
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star1 }}" target="{{ entity.settingBlueprint.star1 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star2 }}" target="{{ entity.settingBlueprint.star2 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star3 }}" target="{{ entity.settingBlueprint.star3 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star4 }}" target="{{ entity.settingBlueprint.star4 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star5 }}" target="{{ entity.settingBlueprint.star5 }}" /></div>
+            <div class="col text-center"><twig:FormBlueprint form="{{ form.blueprint.star6 }}" target="{{ entity.settingBlueprint.star6 }}" /></div>
+            {% endif %}
+            <div class="col text-center"><twig:FormBlueprintTotal total="{{ entity.blueprint.total }}" target="{{ entity.settingBlueprint.total }}" /></div>
         </div>
-{#            <div class="col text-center">#}
-{#                {{ entity.blueprint.total }}#}
-{#            </div>#}
 
     </div>
-
-    <div class="card-footer">&nbsp;</div>
 
 </div>

@@ -31,15 +31,16 @@ tasks:
         ignore_error: true
         platforms: [windows/amd64]
     import:
-        desc: "Task Database + Import Datas to Database"
+        desc: "Task Database, Import CSV Files to Database"
         cmds:
-            - Task A9:database                                      # Delete Database
+            - Task A9:database                                      # Task Database
             - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration import"   # Import Datas
         ignore_error: true
         platforms: [windows/amd64]
     export:
-        desc: "Export Datas from Database"
+        desc: "Export from Database to CSV Files"
         cmds:
+            - Task A9:cron                                          # Task CRON
             - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration export"   # Export Datas
         ignore_error: true
         platforms: [windows/amd64]
@@ -48,12 +49,15 @@ tasks:
         cmds:
             - "{{.SYMFONY_CONSOLE}} asphalt:cron:count:brand"       # Compte le nombre de voitures par Marque
             - "{{.SYMFONY_CONSOLE}} asphalt:cron:count:class"       # Compte le nombre de voitures par Class
-            - "{{.SYMFONY_CONSOLE}} asphalt:cron:checkup:garage"    # Mets à jour la VoitureDESC TO DO
-            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:index:garage"      # Créer le listing du Garage
-            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:index:mission"     # Créer le listing des Missions
-            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:index:race"        # Créer le listing des Courses
-            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:page:garage"       # Créer le listing des Pages
-            - "{{.SYMFONY_CONSOLE}} asphalt:csv:order:class export" # Export Garage Order By Class
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:garage:status"     # Mets à jour la Voiture
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:garage:control"    # Mets à jour la Voiture
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:garage:gauntlet"   # Mets à jour la Voiture
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:garage:level"      # Mets à jour la Voiture
+#            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:index:garage"      # Créer le listing du Garage
+#            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:index:mission"     # Créer le listing des Missions
+#            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:index:race"        # Créer le listing des Courses
+#            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:page:garage"       # Créer le listing des Pages
+#            - "{{.SYMFONY_CONSOLE}} asphalt:csv:order:class export" # Export Garage Order By Class
         ignore_error: true
         platforms: [windows/amd64]
     launch:
@@ -80,12 +84,10 @@ tasks:
     initialize:
         desc: "Initialize Project"
         cmds:
-            - Task A9:database
             - Task A9:import
-#            - Task A9:cron
             - Task A9:export
-            - Task A9:scripts
+#            - Task A9:scripts
             - Task A9:launch
-            # - "rm -rf public/cache/"
+#            - "rm -rf public/cache/"
         ignore_error: false
         platforms: [windows/amd64]

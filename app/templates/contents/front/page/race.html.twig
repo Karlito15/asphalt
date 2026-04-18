@@ -6,16 +6,16 @@
             <tr>
                 <td>{{ item.Mode }}</td>
                 <td>{{ item.Season }}</td>
-                <td>{{ item.Region }}</td>
-                <td>{{ item.English }}</td>
-                <td>{{ item.French }}</td>
-                <td>{{ item.Chapter }}</td>
-                <td>{{ item.Order }}</td>
+                <td>{{ item.track.region.name }}</td>
+                <td>{{ item.track.nameEnglish }}</td>
+                <td>{{ item.track.nameFrench}}</td>
+                <td>{{ item.season.chapter }}</td>
+                <td>{{ item.raceOrder }}</td>
                 <td>{{ item.Time }}</td>
                 <td>{{ item.Finished }}</td>
             </tr>
         {% else %}
-            <twig:TableEmpty value="9" />
+            <twig:TableEmpty value="{{ 9 }}" />
         {% endfor %}
         </tbody>
         <thead>

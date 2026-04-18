@@ -45,7 +45,7 @@
         {{ _self.form_difference(class ~ ' ' ~ background, total) }}
         {{ _self.form_target(class ~ ' ' ~ background, target) }}
     </div>
-
+    <twig:FormBlueprintResume value="{{ total }}" />
 
 {#    {{ form_help(form) }}#}
 {#    {{ form_errors(form) }}#}
@@ -58,8 +58,8 @@
 {% endmacro %}
 
 {% macro form_target(class, value) %}
-    <input type="text" id="form_target" class="{{ class }}" value="{{ value }}" readonly />
     <label for="form_target"></label>
+    <input type="text" id="form_target" class="{{ class }}" value="{{ value }}" readonly />
 {% endmacro %}
 
 {% macro difference(target, value) %}

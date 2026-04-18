@@ -53,7 +53,7 @@ final class ReadController extends AbstractController
 //        $garage = YAML::FileToArray($file);
 
         return $this->render('@App/contents/front/garage/read.html.twig', [
-            'container'       => 'container-fluid',
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => self::$crud,
             'controller_name' => $title,

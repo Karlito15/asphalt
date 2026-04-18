@@ -1,0 +1,34 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Application\Service\Event\Garage;
+
+use App\Application\Event\Garage\AppUpdateEvent;
+
+final class StatEvent
+{
+    /**
+     * Si la voiture est Gold, alors on copie les stats max vers les stats actuelles
+     *
+     * @param AppUpdateEvent $event
+     * @return void
+     */
+    public static function copyStatMaxToStatActual(AppUpdateEvent $event): void
+    {
+        ### Variables
+        $garage     = $event->getGarage();
+        $statActual = $garage->getStatActual();
+        $statMax    = $garage->getStatMax();
+        $status     = $garage->getStatus();
+
+        ### Conditions
+        if ($status->isGold() === true):
+            $statActual->setSpeed($statMax->getSpeed());
+            $statActual->setAcceleration($statMax->getAcceleration());
+            $statActual->setHandling($statMax->getHandling());
+            $statActual->setNitro($statMax->getNitro());
+            $statActual->setAverage($statMax->getSpeed(), $statMax->getAcceleration(), $statMax->getHandling(), $statMax->getNitro());
+        endif;
+    }
+}

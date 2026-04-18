@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Application\Controller\Front\Page;
 
 use App\Application\Service\Controller\WebController;
+use App\Domain\Repository\GarageAppRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,21 +27,11 @@ final class OrderController extends AbstractController
 {
     use WebController;
 
-//    /** @description name of folder's Extraction  */
-//    private static string $folder     = 'list';
-
-//    /** @description name of file's Extraction  */
-//    private static string $file       = '';
-
-//    private static string $orderClass = 'order-by-class-%s.yaml';
-
-//    private static string $orderStat  = 'order-by-stat-%s.yaml';
-
     #[Route(path: '/class/class-{letter}.php', name: 'class')]
-    public function class(Request $request): Response
+    public function class(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
-        $home   = $this->translator->trans('text.search');
+        $home   = $this->translator->trans('text.order');
         $title  = $this->translator->trans('text.class');
         $letter = self::Letter($request->attributes->get('letter'));
         $match  = self::ControlLetter($letter);
@@ -48,26 +39,21 @@ final class OrderController extends AbstractController
         // Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$orderClass, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/order-class.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageOrder(['settingClass.value' => $letter], ['g.carOrder' => 'ASC']),
         ]);
     }
 
     #[Route(path: '/stat/class-{letter}.php', name: 'stat')]
-    public function stat(Request $request): Response
+    public function stat(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
-        $home   = $this->translator->trans('text.search');
+        $home   = $this->translator->trans('text.order');
         $title  = $this->translator->trans('text.stat');
         $letter = self::Letter($request->attributes->get('letter'));
         $match  = self::ControlLetter($letter);
@@ -75,18 +61,13 @@ final class OrderController extends AbstractController
         // Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$orderStat, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/order-stat.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageOrder(['settingClass.value' => $letter], ['g.statOrder' => 'ASC']),
         ]);
     }
 }

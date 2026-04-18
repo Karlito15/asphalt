@@ -32,12 +32,6 @@ final class AppController extends AbstractController
       'delete' => 'admin.mission.app.delete',
     ];
 
-//    /** @description name of folder's Extraction  */
-//    private static string $folder = 'index';
-
-//    /** @description name of file's Extraction  */
-//    private static string $file = 'app-mission.yaml';
-
     #[Route(path: '/index.php', name: 'index', methods: ['GET'])]
     public function index(Request $request, MissionAppRepository $repository): Response
     {
@@ -45,17 +39,13 @@ final class AppController extends AbstractController
         $home  = $this->translator->trans('text.mission');
         $title = $this->translator->trans('text.all.missions');
 
-        ### Datas
-//        $datas = $this->ExtractionFolder();
-
         return $this->render('@App/contents/front/page/mission.html.twig', [
-            'container'       => 'container',
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => self::$crud,
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
             'entities'        => $repository->findAll(),
-//            'entities'        => YAML::FileToArray($datas),
         ]);
     }
 }

@@ -32,12 +32,6 @@ final class AppController extends AbstractController
       'delete' => 'admin.race.app.delete',
     ];
 
-//    /** @description name of folder's Extraction  */
-//    private static string $folder = 'index';
-
-//    /** @description name of file's Extraction  */
-//    private static string $file = 'app-race.yaml';
-
     #[Route(path: '/index.php', name: 'index', methods: ['GET'])]
     public function index(Request $request, RaceAppRepository $repository): Response
     {
@@ -45,17 +39,13 @@ final class AppController extends AbstractController
         $home  = $this->translator->trans('text.race');
         $title = $this->translator->trans('text.all.races');
 
-        ### Datas
-//        $datas = $this->ExtractionFolder();
-
         return $this->render('@App/contents/front/page/race.html.twig', [
-            'container'       => 'container-fluid',
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
-            'links'           => self::LinksPage(),
+            'links'           => self::$crud,
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
             'entities'        => $repository->findAll(),
-//            'entities'        => YAML::FileToArray($datas),
         ]);
     }
 }

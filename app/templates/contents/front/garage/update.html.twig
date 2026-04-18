@@ -27,43 +27,23 @@
 
 {% block content %}
 
-    <section class="d-flex align-items-center justify-content-center {{ background }}">
-        <div class="col-md-10">
-{#            {% include "@App/contents/front/garage/_title.html.twig" %}#}
-        </div>
-        <div class="col-md-auto">
-            <input type="radio" class="btn-check" name="mode" id="option1" value="expert">
-            <label class="btn btn-secondary" for="option1">{{ 'text.screen.mode'|trans ~ 'text.expert'|trans }}</label>
-
-            <input type="radio" class="btn-check" name="mode" id="option2" value="normal" checked>
-            <label class="btn btn-secondary" for="option2">{{ 'text.screen.mode'|trans ~ 'text.normal'|trans }}</label>
-        </div>
-    </section>
-
     <section class="row">
 
     {{ form_start(form) }}
         {% include '@App/contents/front/garage/update/garage.html.twig' %}
 
-        {% include '@App/contents/front/garage/update/status.html.twig' %}
+        {% include '@App/contents/front/garage/update/blueprint.html.twig' %}
 
-        <div class="row row-cols-2 mb-md-3">
-            <div class="col-md-4">
+        <section class="row row-cols-2 mb-md-3">
+            <div class="col-md-8">
                 {% include '@App/contents/front/garage/update/upgrade.html.twig' %}
+            </div>
+            <div class="col-md-4">
                 {% include '@App/contents/front/garage/update/stat.html.twig' %}
             </div>
-            <div class="col-md-8">
-                {% include '@App/contents/front/garage/update/blueprint.html.twig' %}
-                {% include '@App/contents/front/garage/update/rank.html.twig' %}
-            </div>
-        </div>
+        </section>
 
-        <div class="row row-cols-2">
-            <div class="col-md-8">
-            </div>
-            <div class="col-md-4">
-            </div>
-        </div>
+        {% include '@App/contents/front/garage/update/rank.html.twig' %}
 
         {% include "@App/contents/front/garage/update/_button.html.twig" %}
 
@@ -72,7 +52,7 @@
     {{ form_end(form) }}
     </section>
 
-    <section class="row mt-1">
+    <section class="row mt-2">
         {% include '@App/contents/front/garage/delete.html.twig' %}
     </section>
 
@@ -81,6 +61,13 @@
 {% block javascripts %}
     {{ parent() }}
 
-{#    <script src="{{ asset('scripts/switch-mode-expert-normal.js') }}" defer></script>#}
+{#    <script src="{{ asset('scripts/switch-mode-expert-normal.js') }}"></script>#}
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
 {% endblock %}
 

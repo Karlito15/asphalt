@@ -190,7 +190,7 @@ class AppUpdateType extends AbstractType
             ->add('upgrade', GarageUpgradeType::class)
 
             /*
-            // Tags
+            ### Tags
             ->add('settingTag', EntityType::class, [
                 'attr'          => [
                     'class' => self::attrClass(),
@@ -207,7 +207,7 @@ class AppUpdateType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => GarageApp::class,
-            'allow_extra_fields' => false,
+            'allow_extra_fields' => true,
             'translation_domain' => 'messages',
         ]);
     }

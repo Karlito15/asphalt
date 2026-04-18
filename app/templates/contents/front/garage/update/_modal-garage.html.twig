@@ -1,0 +1,55 @@
+<div class="card mb-md-3">
+
+    <div class="card-header">
+{#        <h3 class="card-title">{{ 'text.garage'|trans }}</h3>#}
+        {% include "@App/contents/front/garage/_title.html.twig" %}
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td class="col-md-2"><twig:FormSelect form="{{ form.settingBrand }}" floating="{{ true }}" /></td>
+                <td class="col-md-3"><twig:FormSelect form="{{ form.model }}" floating="{{ true }}" /></td>
+                <td class="col-md-2"><twig:FormSelect form="{{ form.settingBlueprint }}" floating="{{ true }}" /></td>
+                <td class="col-md-2"><twig:FormSelect form="{{ form.settingLevel }}" floating="{{ true }}" /></td>
+                <td class="col-md-3"><twig:FormSelect form="{{ form.settingUnitPrice }}" floating="{{ true }}" /></td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered table-striped">
+            <tr class="text-center">
+                <td class="col-md-1">{{ form_label(form.settingClass) }}</td>
+                <td class="col-md-1">{{ form_label(form.stars) }}</td>
+                <td class="col-md-1">{{ form_label(form.gameUpdate) }}</td>
+                <td class="col-md-1">{{ form_label(form.gauntlet.division) }}</td>
+                <td class="col-md-1">{{ form_label(form.level) }}</td>
+                <td class="col-md-1">{{ form_label(form.epic) }}</td>
+                <td class="col-md-1">{{ form_label(form.evo) }}</td>
+                <td class="col-md-1">{{ form_label(form.carOrder) }}</td>
+                <td class="col-md-1"><label class="m-0 fw-light form-label" for="statOrder">Order by Stat</label></td>
+            </tr>
+            <tr>
+                <td class="col-md-1"><twig:FormSelect form="{{ form.settingClass }}" /></td>
+                <td class="col-md-1"><twig:FormSelect form="{{ form.stars }}" /></td>
+                <td class="col-md-1"><twig:FormGroup1 form="{{ form.gameUpdate }}" /></td>
+                <td class="col-md-1"><twig:FormSelect form="{{ form.gauntlet.division }}" /></td>
+                <td class="col-md-1"><twig:FormGroup2 form="{{ form.level }}" target="{{ entity.settingLevel.level }}" /></td>
+                <td class="col-md-1"><twig:FormGroup2 form="{{ form.epic }}" target="{{ entity.settingLevel.epic }}" /></td>
+                <td class="col-md-1"><twig:FormGroup2 form="{{ form.evo }}" target="{{ games.evo_target }}" /></td>
+                <td class="col-md-1"><twig:FormGroup2 form="{{ form.carOrder }}" target="{{ entity.settingClass.carsNumber }}" /></td>
+                <td class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" name="statOrder" id="statOrder" class="fw-bolder form-control" value="{{ entity.statOrder }}" disabled>
+                        <span class="input-group-text justify-content-center w-50" id="statOrder">{{ entity.settingClass.carsNumber }}</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card-footer">
+        {% include '@App/contents/front/garage/update/status.html.twig' %}
+    </div>
+
+</div>

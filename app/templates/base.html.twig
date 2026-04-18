@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block stylesheets %}
-<!-- Stylesheets -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="{{ asset('libraries/bootstrap/5.3.8/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('libraries/fontawesome/7.2.0/css/all.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('libraries/scroll-to-top-button/jquery-backToTop.min.css') }}" />
@@ -22,11 +22,11 @@
 </head>
 
 <body{% block bodyClass %}{% endblock %}>
-{% block notification %}{% endblock %}
 
 {% block body %}
     {% block preloader %}{% endblock %}
     {% block header %}{% endblock %}
+    {% block notification %}{% endblock %}
     {% block main %}{% endblock %}
     {% block footer %}{% endblock %}
 {% endblock %}
@@ -35,7 +35,6 @@
     {% block importmap %}{{ importmap('app') }}{% endblock %}
 
     <!-- Scripts -->
-{#            <script src="{{ asset('libraries/jquery/3.7.1.min.js') }}"></script>#}
     <script src="{{ asset('libraries/jquery/4.0.0.min.js') }}"></script>
     {# pour le dropdwon dans le header #}
     <script src="{{ asset('libraries/bootstrap/5.3.8/js/bootstrap.bundle.min.js') }}"></script>
@@ -44,6 +43,10 @@
     <!-- flash messages -->
 {#    {% include "@App/share/_script-sweet-alert.html.twig" %}#}
 {#    <script src="{{ asset('scripts/sweet-alert-dashboard.js') }}"></script>#}
+
+    {% if app.environment == 'dev' %}
+    <style>body { background-color: dimgray !important; }</style>
+    {% endif %}
 {% endblock %}
 </body>
 </html>

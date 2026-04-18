@@ -51,7 +51,7 @@ class SettingUnitPriceRepository extends ServiceEntityRepository
                 'q.slug AS Slug',
             ])
             ->where('q.deletedAt IS NULL')
-            ->orderBy('q.slug', 'ASC')
+            ->orderBy('q.id', 'DESC')
         ;
 
         return $qb->getQuery()->getArrayResult();

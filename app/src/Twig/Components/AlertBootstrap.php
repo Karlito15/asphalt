@@ -21,7 +21,18 @@ final class AlertBootstrap
     public function preMount(array $data): array
     {
         $resolver = new OptionsResolver();
-        $this->configureOptions($resolver);
+        $resolver->setIgnoreUndefined(true);  // Autorise extras HTML
+
+        // Required
+        $resolver->setRequired('type');
+        $resolver->setAllowedTypes('type', 'string');
+
+        // Optionnel avec default
+        $resolver->setDefault('message', '');
+        $resolver->setAllowedTypes('message', ['string', 'null']);
+
+        // Valeurs autorisées
+        $resolver->setAllowedValues('type', ['info', 'success', 'warning', 'danger', 'primary', 'secondary']);
 
         // Ajoute une valeur par défaut si absente
         if (!isset($data['type'])) {
@@ -37,21 +48,5 @@ final class AlertBootstrap
         }
 
         return $data;
-    }
-
-    private function configureOptions(OptionsResolver $resolver): void
-    {
-        $resolver->setIgnoreUndefined(true);  // Autorise extras HTML
-
-        // Required
-        $resolver->setRequired('type');
-        $resolver->setAllowedTypes('type', 'string');
-
-        // Optionnel avec default
-        $resolver->setDefault('message', '');
-        $resolver->setAllowedTypes('message', ['string', 'null']);
-
-        // Valeurs autorisées
-        $resolver->setAllowedValues('type', ['info', 'success', 'warning', 'danger', 'primary', 'secondary']);
     }
 }

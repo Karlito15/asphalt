@@ -1,0 +1,20 @@
+
+{% set calcul = _self.difference(target, total)|trim|u.toString %}
+
+<div{# attributes #}>
+    <div class="text-center">
+        <label class="fw-bold">{{ 'text.total'|trans }}</label>
+    </div>
+    <div class="input-group">
+        <!-- component HTML -->
+        <input type="text" class="fw-bolder text-center form-control bg-success-subtle text-success" value="{{ total }}" readonly="">
+        <input type="text" class="fw-bolder text-center form-control bg-success-subtle text-success" value="{{ calcul }}" readonly="">
+        <input type="text" class="fw-bolder text-center form-control bg-success-subtle text-success" value="{{ target }}" readonly="">
+    </div>
+    <twig:FormBlueprintResume value="{{ calcul }}" />
+</div>
+
+{% macro difference(target, value) %}
+    {% if value == '' %}{% set value = 0 %}{% endif %}
+    {{ (target - value) }}
+{% endmacro %}

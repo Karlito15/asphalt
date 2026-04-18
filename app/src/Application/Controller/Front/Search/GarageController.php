@@ -52,7 +52,7 @@ final class GarageController extends AbstractController
 
         ### Datas
         return $this->render('@App/contents/front/search/garage.html.twig', [
-            'container'       => 'container-fluid',
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => self::$crud,
             'controller_name' => $home,

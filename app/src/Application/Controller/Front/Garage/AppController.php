@@ -33,12 +33,6 @@ final class AppController extends AbstractController
       'delete' => 'app.garage.delete',
     ];
 
-//    /** @description name of folder's Extraction  */
-//    private static string $folder = 'index';
-
-//    /** @description name of file's Extraction  */
-//    private static string $file = 'app-garage.yaml';
-
     #[Route(path: '/index.php', name: 'index')]
     public function index(Request $request, GarageAppRepository $repository): Response
     {
@@ -46,17 +40,13 @@ final class AppController extends AbstractController
         $home  = $this->translator->trans('text.garage');
         $title = $this->translator->trans('text.all.cars');
 
-//        ### Datas
-//        $datas = $this->ExtractionFolder();
-
         return $this->render('@App/contents/front/garage/index.html.twig', [
-            'container'       => 'container',
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => self::$crud,
             'controller_name' => $title,
             'current_page'    => $request->attributes->get('_route'),
             'entities'        => $repository->findList(),
-//            'entities'        => YAML::FileToArray($datas),
         ]);
     }
 }

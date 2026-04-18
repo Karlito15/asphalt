@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Application\Controller\Front\Page;
 
 use App\Application\Service\Controller\WebController;
+use App\Domain\Repository\GarageAppRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,36 +27,8 @@ final class FilterController extends AbstractController
 {
     use WebController;
 
-//    /** @description name of folder's Extraction  */
-//    private static string $folder                    = 'list';
-
-//    /** @description name of file's Extraction  */
-//    private static string $file                      = '';
-
-//    private static string $block                     = 'filter-block-%s.yaml';
-
-//    private static string $gold                      = 'filter-gold-%s.yaml';
-
-//    private static string $unblock                   = 'filter-unblock-%s.yaml';
-
-//    private static string $evo                       = 'filter-evo-%s.yaml';
-
-//    private static string $event                     = 'filter-event-class-%s.yaml';
-
-//    private static string $toUpgrade                 = 'filter-to-upgrade-%s.yaml';
-
-//    private static string $toInstallUpgrade          = 'to-install-upgrade-%s.yaml';
-
-//    private static string $toInstallImport           = 'to-install-import-%s.yaml';
-
-//    private static string $toGold                    = 'to-gold-%s.yaml';
-
-//    private static string $fullBlueprint             = 'full-blueprint-%s.yaml';
-
-//    private static string $fullEvo                   = 'full-evo-%s.yaml';
-
     #[Route(path: '/block/class-{letter}.php', name: 'block')]
-    public function block(Request $request): Response
+    public function block(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
         $home   = $this->translator->trans('text.filter');
@@ -66,23 +39,21 @@ final class FilterController extends AbstractController
         ### Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$block, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/filter.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageFilter([
+                'status.unblock' => false,
+                'settingClass.value' => $letter,
+            ]),
         ]);
     }
 
     #[Route(path: '/gold/class-{letter}.php', name: 'gold')]
-    public function gold(Request $request): Response
+    public function gold(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
         $home   = $this->translator->trans('text.filter');
@@ -93,23 +64,22 @@ final class FilterController extends AbstractController
         ### Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$gold, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/filter.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageFilter([
+                'status.unblock' => true,
+                'status.gold' => true,
+                'settingClass.value' => $letter,
+            ]),
         ]);
     }
 
     #[Route(path: '/unblock/class-{letter}.php', name: 'unblock')]
-    public function unblock(Request $request): Response
+    public function unblock(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
         $home   = $this->translator->trans('text.filter');
@@ -120,23 +90,21 @@ final class FilterController extends AbstractController
         ### Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$unblock, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/filter.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageFilter([
+                'status.unblock' => true,
+                'settingClass.value' => $letter,
+            ]),
         ]);
     }
 
     #[Route(path: '/evo/class-{letter}.php', name: 'evo')]
-    public function evo(Request $request): Response
+    public function evo(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
         $home   = $this->translator->trans('text.filter');
@@ -147,23 +115,21 @@ final class FilterController extends AbstractController
         ### Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$evo, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/filter.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageFilter([
+                'status.evo' => true,
+                'settingClass.value' => $letter,
+            ]),
         ]);
     }
 
     #[Route(path: '/event-class-{letter}.php', name: 'event')]
-    public function event(Request $request): Response
+    public function event(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
         $home   = $this->translator->trans('text.filter');
@@ -174,23 +140,21 @@ final class FilterController extends AbstractController
         ### Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$event, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/filter.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageFilter([
+                'status.eventClass' => true,
+                'settingClass.value' => $letter,
+            ]),
         ]);
     }
 
     #[Route(path: '/to-upgrade/class-{letter}.php', name: 'to.upgrade')]
-    public function toUpgrade(Request $request): Response
+    public function toUpgrade(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
         $home   = $this->translator->trans('text.filter');
@@ -201,23 +165,21 @@ final class FilterController extends AbstractController
         ### Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$toUpgrade, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/filter.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageFilter([
+                'status.toUpgrade' => true,
+                'settingClass.value' => $letter,
+            ]),
         ]);
     }
 
     #[Route(path: '/to-install-upgrade/class-{letter}.php', name: 'to.install.upgrade')]
-    public function toInstallUpgrade(Request $request): Response
+    public function toInstallUpgrade(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
         $home   = $this->translator->trans('text.filter');
@@ -228,23 +190,18 @@ final class FilterController extends AbstractController
         ### Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$toInstallUpgrade, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/filter-light.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageFilter([]),
         ]);
     }
 
     #[Route(path: '/to-install-import/class-{letter}.php', name: 'to.install.import')]
-    public function toInstallImport(Request $request): Response
+    public function toInstallImport(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
         $home   = $this->translator->trans('text.filter');
@@ -255,23 +212,18 @@ final class FilterController extends AbstractController
         ### Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$toInstallImport, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/filter-light.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageFilter([]),
         ]);
     }
 
     #[Route(path: '/to-gold/class-{letter}.php', name: 'to.gold')]
-    public function toGold(Request $request): Response
+    public function toGold(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
         $home   = $this->translator->trans('text.filter');
@@ -282,23 +234,18 @@ final class FilterController extends AbstractController
         ### Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$toGold, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/filter-light.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageFilter([]),
         ]);
     }
 
     #[Route(path: '/full-blueprint/class-{letter}.php', name: 'full.blueprint')]
-    public function fullBlueprint(Request $request): Response
+    public function fullBlueprint(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
         $home   = $this->translator->trans('text.filter');
@@ -309,23 +256,18 @@ final class FilterController extends AbstractController
         ### Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$fullBlueprint, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/filter-light.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageFilter([]),
         ]);
     }
 
     #[Route(path: '/full-evo/class-{letter}.php', name: 'full.evo')]
-    public function fullEvo(Request $request): Response
+    public function fullEvo(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
         $home   = $this->translator->trans('text.filter');
@@ -336,18 +278,13 @@ final class FilterController extends AbstractController
         ### Letter Not Match
         $this->return404($match);
 
-        ### Datas
-//        self::$file = sprintf(self::$fullEvo, $letter);
-//        $datas = $this->ExtractionFolder();
-
-        return $this->render('@App/contents/front/page/filter-light.html.twig', [
-            'container'       => 'container',
+        return $this->render('@App/contents/front/garage/index.html.twig', [
+            'container'        => 'container-fluid pt-4 px-4',
             'breadcrumb'      => self::Breadcrumb($home, $title),
             'links'           => [],
-            'controller_name' => $title,
+            'controller_name' => $home . ' by ' . $title,
             'current_page'    => $request->attributes->get('_route'),
-            'entities'        => [],
-//            'entities'        => YAML::FileToArray($datas),
+            'entities'        => $repository->getGaragePageFilter([]),
         ]);
     }
 }

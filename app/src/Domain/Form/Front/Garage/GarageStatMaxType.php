@@ -20,28 +20,28 @@ class GarageStatMaxType extends AbstractType
         $builder
             ->add('speed', NumberType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'text.speed',
+                'label'      => false,
                 'label_attr' => self::labelClass(),
                 'scale'      => 2,
                 'required'   => false,
             ])
             ->add('acceleration', NumberType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'text.acceleration',
+                'label'      => false,
                 'label_attr' => self::labelClass(),
                 'scale'      => 2,
                 'required'   => false,
             ])
             ->add('handling', NumberType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'text.handling',
+                'label'      => false,
                 'label_attr' => self::labelClass(),
                 'scale'      => 2,
                 'required'   => false,
             ])
             ->add('nitro', NumberType::class, [
                 'attr'       => self::attrClass(),
-                'label'      => 'text.nitro',
+                'label'      => false,
                 'label_attr' => self::labelClass(),
                 'scale'      => 2,
                 'required'   => false,
@@ -54,7 +54,7 @@ class GarageStatMaxType extends AbstractType
         $resolver->setDefaults([
             'data_class' => GarageStatMax::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'messages',
+            'translation_domain' => false,
         ]);
     }
 
@@ -67,7 +67,7 @@ class GarageStatMaxType extends AbstractType
     {
         return [
             'autocomplete' => 'off',
-            'class'        => 'text-center fw-bolder form-control-plaintext form-control-sm',
+            'class'        => 'text-end fw-bolder form-control-plaintext form-control-sm',
         ];
     }
 }

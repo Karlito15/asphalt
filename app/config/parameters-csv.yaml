@@ -2,8 +2,9 @@ parameters:
     ### FOLDERS
     csv.folders:                            '%kernel.project_dir%/../documents/csv/'
     csv.folders.database:                   '%kernel.project_dir%/../documents/csv/database/'
-    csv.folders.order:                      '%kernel.project_dir%/../documents/csv/order/'
+    csv.folders.order:                      '%kernel.project_dir%/../documents/csv/order/car-by-class/'
     ### FILES
+    csv.file.order.class:                   'class-%s.csv'
     csv.file.garage.app:                    'app.csv'
     csv.file.garage.blueprint:              'garage-blueprint.csv'
     csv.file.garage.gauntlet:               'garage-gauntlet.csv'

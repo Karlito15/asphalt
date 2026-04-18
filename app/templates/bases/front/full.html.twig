@@ -1,7 +1,3 @@
-{% block notification %}
-    {% include "@App/partials/front/notification.html.twig" %}
-{% endblock %}
-
 {% block body %}
 
     {% block preloader %}
@@ -10,6 +6,10 @@
 
     {% block header %}
         {% include '@App/partials/front/header.html.twig' %}
+    {% endblock %}
+
+    {% block notification %}
+        {% include "@App/partials/front/notification.html.twig" %}
     {% endblock %}
 
 <main class="{% block mainClass %}{{ container|default('container') }}{% endblock %} h-100">

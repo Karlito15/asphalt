@@ -32,7 +32,7 @@ class GarageAppType extends AbstractType
                 'choice_label'  => 'gameUpdate',
                 'empty_data'    => null,
                 'label'         => false,
-                'placeholder'   => 'form.placeholder.update',
+                'placeholder'   => 'text.placeholder.update',
                 'query_builder' => function (EntityRepository $er): QueryBuilder {
                     return $er->createQueryBuilder('g')->groupBy('g.gameUpdate')->orderBy('g.gameUpdate', 'DESC');
                 },
@@ -47,7 +47,7 @@ class GarageAppType extends AbstractType
                 'choice_label'  => 'name',
                 'empty_data'    => null,
                 'label'         => false,
-                'placeholder'   => 'form.placeholder.brand',
+                'placeholder'   => 'text.placeholder.brand',
                 'query_builder' => function (EntityRepository $er): QueryBuilder {
                     return $er->createQueryBuilder('b')->orderBy('b.name', 'ASC');
                 },
@@ -62,7 +62,7 @@ class GarageAppType extends AbstractType
                 'choice_label'  => 'value',
                 'empty_data'    => null,
                 'label'         => false,
-                'placeholder'   => 'form.placeholder.class',
+                'placeholder'   => 'text.placeholder.class',
                 'query_builder' => function (EntityRepository $er): QueryBuilder {
                     return $er->createQueryBuilder('b')->orderBy('b.value', 'ASC');
                 },
@@ -78,8 +78,8 @@ class GarageAppType extends AbstractType
                     'text.yes' => true,
                 ],
                 'empty_data'    => null,
-                'label'         => false, //'form.placeholder.unblock',
-                'placeholder'   => 'form.placeholder.unblock',
+                'label'         => false, //'text.placeholder.unblock',
+                'placeholder'   => 'text.placeholder.unblock',
                 'required'      => false,
                 'trim'          => true,
             ])
@@ -92,8 +92,8 @@ class GarageAppType extends AbstractType
                     'text.yes' => true,
                 ],
                 'empty_data'    => null,
-                'label'         => false, //'form.placeholder.gold',
-                'placeholder'   => 'form.placeholder.gold',
+                'label'         => false, //'text.placeholder.gold',
+                'placeholder'   => 'text.placeholder.gold',
                 'required'      => false,
                 'trim'          => true,
             ])

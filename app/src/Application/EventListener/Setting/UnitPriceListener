@@ -1,0 +1,32 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Application\EventListener\Setting;
+
+use App\Application\Event\Setting\UnitPriceEvent;
+use Symfony\Component\EventDispatcher\Attribute\AsEventListener;
+
+#[AsEventListener(
+    event: UnitPriceEvent::class,
+    method: 'onGarageCreate',
+    priority: 100,
+)]
+final class UnitPriceListener
+{
+    public function __construct(
+//        protected AddGarageRelationEvent $service,
+    )
+    {}
+
+//    /**
+//     * Crée toutes les relations pour une voiture
+//     *
+//     * @param AppCreateEvent $event
+//     * @return void
+//     */
+//    public function onGarageCreate(AppCreateEvent $event): void
+//    {
+//        $this->service->addRelation($event);
+//    }
+}

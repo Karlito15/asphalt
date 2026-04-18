@@ -39,7 +39,7 @@ class SettingLevelRepository extends ServiceEntityRepository
                 'q.slug AS Slug',
             ])
             ->where('q.deletedAt IS NULL')
-            ->orderBy('q.slug', 'ASC')
+            ->orderBy('q.id', 'ASC')
         ;
 
         return $qb->getQuery()->getArrayResult();

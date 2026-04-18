@@ -1,0 +1,332 @@
+Brand;Model;Star1;Star2;Star3;Star4;Star5;Star6
+Acura;"2017 NSX";35;15;21;32;0;0
+"Aston Martin";Vulcan;45;21;28;42;0;0
+"Aston Martin";DB11;30;30;70;0;0;0
+BMW;"M4 GTS";40;20;50;0;0;0
+BMW;"Z4 LCI E89";5;8;45;0;0;0
+BMW;"3.0 CSL Hommage";20;20;50;0;0;0
+Bugatti;Chiron;60;13;16;25;38;48
+Cadillac;"Cien Concept";40;18;24;36;0;0
+Chevrolet;"Camaro LT";5;12;30;0;0;0
+Chevrolet;"Camaro ZL1 50th Edition";25;20;50;0;0;0
+Chevrolet;"Corvette Grand Sport";30;9;13;21;32;0
+Dodge;"Challenger SRT8";15;20;50;0;0;0
+Dodge;"Viper ACR";35;15;21;32;0;0
+Dodge;"Viper GTS";45;21;28;42;0;0
+Dodge;"Challenger Pack 392 Hemi Scat";20;12;30;0;0;0
+"DS Automobiles";"DS E-Tense";20;12;30;0;0;0
+"Exotic Rides";W70;40;30;70;0;0;0
+Ferrari;"488 GTB";40;18;24;36;0;0
+Ferrari;"FXX K";40;13;16;25;39;0
+Ferrari;F12TDF;30;9;13;21;32;0
+Ferrari;LaFerrari;35;12;15;24;36;0
+Ford;"Shelby GT350R";20;12;18;28;0;0
+Ford;GT;30;23;54;0;0;0
+Glickenhaus;003S;40;18;24;36;0;0
+Icona;"Vulcano Titanium";40;13;16;25;39;0
+Jaguar;"F-Type SVR";30;18;24;36;0;0
+Koenigsegg;Regera;60;13;16;25;38;48
+Lamborghini;"Aventador SV Coupé";35;12;15;24;36;0
+Lamborghini;"Terzo Millennio";60;13;16;25;38;48
+Lamborghini;Asterion;40;18;24;36;0;0
+Lamborghini;Egoista;60;13;16;25;38;48
+Lamborghini;Centenario;40;13;16;25;39;0
+Lotus;"Evora Sport 410";20;20;50;0;0;0
+McLaren;P1;35;12;15;24;36;0
+Mercedes-Benz;"AMG GT S";30;20;50;0;0;0
+Mitsubishi;"Lancer Evolution";5;12;30;0;0;0
+Nissan;"GT-R Nismo";45;21;28;42;0;0
+Nissan;"37OZ Nismo";10;20;30;0;0;0
+Pagani;"Huayra BC";50;12;15;24;37;45
+Pininfarina;"H2 Speed";35;15;21;32;0;0
+Porsche;"911 GTS Coupé";30;30;70;0;0;0
+Porsche;"718 Cayman";25;8;14;28;0;0
+Porsche;"918 Spyder";35;12;15;24;36;0
+Rezvani;"Beast X";35;15;21;32;0;0
+Rimac;"C TWO";0;0;0;0;0;0
+Trion;Nemesis;60;13;16;25;38;48
+VLF;"Force 1 V10";45;17;23;32;45;0
+Volkswagen;"XL Sport Concept";20;12;30;0;0;0
+"W Motors";"Fenyr Supersport";60;13;16;25;38;48
+"W Motors";"Lykan Hypersport";40;13;16;25;39;0
+Ferrari;J50;45;21;28;42;0;0
+Lotus;"Elise Sprint 220";10;12;18;28;0;0
+Genty;Akylone;50;23;27;36;52;62
+Maserati;Alfieri;35;15;21;32;0;0
+McLaren;"570S Spider";50;12;15;24;37;45
+Sin;"R1 550";30;9;13;21;32;0
+Apollo;N;30;9;13;21;32;0
+Vencer;Sarthe;35;15;21;28;35;0
+Zenvo;"TS1 GT Anniversary";60;13;16;25;38;48
+Lamborghini;"Huracán Evo Spyder";45;17;23;32;45;0
+Lamborghini;"Aventador J";50;23;27;36;51;0
+Mercedes-Benz;"SLR McLaren";45;17;23;32;45;0
+Ferrari;"812 Superfast";50;23;27;36;51;0
+Ferrari;"LaFerrari Aperta";50;23;27;36;52;62
+Ginetta;G60;30;23;33;42;0;0
+Koenigsegg;Jesko;Key;40;45;60;70;85
+Porsche;"911 Targa 4S";30;23;33;42;0;0
+Arrinera;"Hussarya 33";35;15;21;28;35;0
+Artega;"Scalo Superelletra";50;29;38;48;0;0
+"Aston Martin";"Vantage GT12";45;17;23;32;45;0
+McLaren;Senna;60;13;16;25;38;48
+Porsche;"911 GT3 RS";55;18;24;32;47;50
+TVR;Griffith;30;23;33;42;0;0
+"Aston Martin";"DBS Superleggera";45;17;23;32;45;0
+"Automobili Pininfarina";Battista;60;25;35;46;58;76
+"Vanda Electrics";Dendrobium;50;23;27;36;52;62
+Chevrolet;"Corvette ZR1";50;23;27;36;51;0
+Ford;"Shelby GR-1";50;29;38;48;0;0
+Italdesign;Zerouno;40;35;44;54;0;0
+Mazda;Furai;30;23;33;42;0;0
+Nissan;"Leaf Nismo RC";15;25;55;0;0;0
+Rimac;Nevera;Key;40;45;60;70;85
+Techrules;"AT96 track version";Key;30;40;50;65;80
+Honda;"Civic Type-R";30;23;33;42;0;0
+Lotus;Evija;55;18;24;32;50;61
+Porsche;"Carrera GT";45;17;23;32;45;0
+Porsche;"Taycan Turbo S";30;23;33;42;0;0
+Porsche;"718 Cayman GT4 Clubsport";Key;25;32;36;40;0
+Porsche;"911 GT1 Evolution";55;35;44;54;0;0
+Porsche;"911 GT2 RS Clubsport";Key;28;32;44;59;86
+Lamborghini;"Gallardo LP560-4";35;15;21;28;35;0
+Lamborghini;Veneno;60;13;16;25;38;48
+Lamborghini;"Sián FKP 37";85;25;29;38;54;33
+Lamborghini;SC18;Key;28;32;44;59;86
+McLaren;"F1 LM";Key;26;34;46;61;78
+BXR;"Bailey Blade GT1";85;25;29;38;54;69
+Chevrolet;"Corvette Stingray";35;15;21;28;35;0
+Chevrolet;"Corvette C7.R";Key;22;30;35;38;0
+Ford;"GT MK II";Key;35;55;85;0;0
+SSC;Tuatara;Key;40;45;60;70;85
+Apex;AP-0;45;17;23;32;45;0
+"Aston Martin";"Valhalla Concept Car";50;23;27;36;52;77
+Bentley;"Mulliner Bacalar";35;15;21;28;35;0
+Bentley;"Continental GT3";Key;26;38;64;0;0
+Jaguar;C-X75;50;23;27;36;51;0
+McLaren;Speedtail;85;25;29;38;54;69
+Ferrari;"Enzo Ferrari";45;17;23;32;45;0
+Ferrari;"F8 Tributo";50;23;27;36;52;62
+Ferrari;"SF90 Stradale";60;25;30;35;45;55
+Ferrari;F40;35;15;21;28;35;0
+Ferrari;"488 GTB Challenge EVO";Key;26;34;46;61;73
+Ferrari;"599XX EVO";Key;25;32;36;40;0
+Apollo;IE;45;17;23;32;45;0
+BMW;"I8 Roadster";30;23;33;42;0;0
+Bugatti;Divo;85;25;13;0;0;0
+Bugatti;"La Voiture Noire";0;40;45;16;0;0
+Citroën;"GT by Citroën";50;23;27;36;52;62
+Lamborghini;"Huracán Super Trofeo Evo";Key;22;30;35;38;0
+Peugeot;Onyx;50;23;27;36;52;62
+Acura;"NSX GT3 EVO";Key;25;32;36;41;0
+Aspark;Owl;85;25;21;0;0;0
+"Inferno Automobili";Inferno;85;25;29;7;0;0
+"Inferno Automobili";"Settimo Cerchio";1;0;0;0;0;0
+Infiniti;"Projet Black S";30;23;33;42;0;0
+Nio;EP9;60;40;51;63;0;0
+"ATS Automobili";"Corsa RRTurbo";Key;25;38;52;0;0
+Ferrari;Roma;55;35;44;54;0;0
+Italdesign;DaVinci;30;23;33;42;0;0
+Lamborghini;"Murcielago LP 640 Roadster";45;17;23;32;45;0
+Lamborghini;"Essenza SCV12";Key;26;34;40;62;0
+Mazzanti;"Evantra Millecavalli";70;0;0;0;0;0
+Pagani;Imola;70;23;27;36;52;59
+"Aston Martin";Valkyrie;85;25;29;26;0;0
+"Aston Martin";Victor;70;23;27;36;52;59
+Renault;"R.S. 01";Key;25;32;36;40;0
+Volkswagen;"W12 Coupe";Key;26;34;46;61;78
+Zenvo;TSR-S;Key;26;34;40;62;0
+"Aston Martin";"V12 Speedster";50;29;38;48;0;0
+Bugatti;"Veyron 16.4 Grand Sport Vitesse";85;21;0;0;0;0
+Hennessey;"Venom F5";85;25;16;0;0;0
+Lamborghini;SC20;0;28;32;44;49;0
+Lamborghini;"Aventador SVJ Roadster";70;23;27;36;52;59
+McLaren;Elva;45;17;23;32;45;0
+Drako;GTE;55;35;44;54;0;0
+"Lego Technic";"McLaren Senna GTR";0;28;32;44;3;0
+Pagani;"Zonda HP Barchetta";Key;28;32;44;83;0
+Raesr;"Tachyon Speed";0;40;41;0;0;0
+Renault;TreZor;30;23;33;42;0;0
+Rimac;Concept_One;70;23;27;11;0;0
+Toroidion;1MW;6;0;0;0;0;0
+Volkswagen;"Electric R";Key;22;30;35;38;0
+Arash;AF10;55;35;44;54;0;0
+Glickenhaus;004C;Key;22;30;35;38;0
+Glickenhaus;007S;Key;28;32;44;59;86
+Koenigsegg;Gemera;Key;40;45;60;70;85
+Lotus;Emira;30;23;33;42;0;0
+McLaren;GT;35;15;21;28;35;0
+Naran;"Hyper Coupé";85;16;0;0;0;0
+Nissan;"GTR-50 Italdesign";45;17;23;32;45;0
+Pagani;"Zonda R";Key;28;32;44;59;86
+Saleen;S1;50;29;38;48;0;0
+"Aston Martin";One77;45;17;23;32;45;0
+McLaren;"Senna GTR";50;23;27;36;51;0
+Puritalia;Berlinetta;45;17;23;32;45;0
+Ultima;RS;Key;40;45;60;70;85
+Vision;1789;85;25;29;38;54;69
+Arash;"AF8 Falcon Édition";Key;35;55;85;0;0
+Bolwell;"MK X Nagari 500";50;29;38;48;0;0
+Brabham;BT62;Key;25;32;36;41;0
+Tushek;"TS 900 Racer Pro";10;0;0;0;0;0
+Lamborghini;"Countach LPI 800-4";0;30;40;50;48;0
+Lamborghini;"Diablo GT";35;15;21;28;35;0
+Lamborghini;"Sesto Elemento";55;18;24;32;47;50
+Lamborghini;"Countach 25th Anniversary";30;23;33;42;0;0
+Lamborghini;"Reventón Roadster";Key;26;34;40;35;0
+Lamborghini;"Miura Concept";Key;25;32;36;40;0
+Bentley;"Continental GT Speed";60;40;51;63;0;0
+Bugatti;Centodieci;0;40;22;0;0;0
+Bugatti;EB110;Key;25;32;36;41;0
+Ferrari;"Monza SP1";50;29;38;48;0;0
+McLaren;765LT;45;17;23;32;45;0
+McLaren;"600LT Spider";45;17;23;32;45;0
+Pagani;"Huayra R";55;18;24;32;47;50
+Renault;Dezir;30;23;33;42;0;0
+Ajlani;Drakuma;50;0;0;0;0;0
+Jaguar;"XE SV Project 8";12;0;0;0;0;0
+Koenigsegg;"Agera RS";85;25;29;38;54;69
+Nissan;"R390 GT1";Key;26;34;40;62;0
+Peugeot;SR1;30;23;33;42;0;0
+Ares;S1;Key;25;32;36;41;0
+Bugatti;Bolide;0;10;0;0;0;0
+Chrysler;ME412;73;0;0;0;0;0
+"Faraday Future";FFZero1;85;25;29;2;0;0
+Jaguar;"XJ220S TWR";0;40;45;31;0;0
+McLaren;"650S GT3";70;23;27;36;52;59
+Peugeot;9X8;70;23;27;36;52;59
+Porsche;"Boxster 25th Anniversary";55;38;90;0;0;0
+Praga;R1;30;23;33;42;0;0
+Donkervoort;"D8 GTO";50;29;38;48;0;0
+Ferrari;F50;55;35;44;48;0;0
+Mercedes-Benz;"AMG GT Black Series";Key;25;32;36;41;0
+"Spania GTA";"2015 GTA Spano";57;0;0;0;0;0
+"Torino Design";"Super Sport";0;40;45;9;0;0
+"FV Frangivento";"Sorpasso GT3";0;40;1;0;0;0
+Jaguar;XJR-9;0;30;40;50;6;0
+Kepler;Motion;55;29;0;0;0;0
+Koenigsegg;CCXR;0;40;45;60;52;0
+KTM;"X-Bow GTX";30;23;54;0;0;0
+Lamborghini;Revuelto;Key;26;34;46;61;78
+Maserati;MC12;0;25;32;36;34;0
+Apollo;EVO;45;0;0;0;0;0
+BMW;"M4 GT3";55;35;44;54;0;0
+"De Tomaso";P72;0;30;40;50;65;16
+Mercedes-Benz;CLK-GTR;35;15;21;28;35;0
+Porsche;"935 (2019)";Key;28;32;44;59;86
+Porsche;"Panamera Turbo S";Key;25;32;36;41;0
+Jaguar;XJR-15;50;29;2;0;0;0
+Koenigsegg;CC850;0;40;45;60;42;0
+McLaren;"Solus GT";Key;26;34;40;62;0
+Nissan;"370Z Édition Néon";30;23;33;42;0;0
+Noble;"M600 Speedster";70;23;27;36;52;59
+Saleen;"S7 Twin Turbo";0;8;0;0;0;0
+Bugatti;"Chiron Super Sport 300+";0;40;45;43;0;0
+Deus;Vayanne;0;40;45;60;70;85
+Ford;"Mustang Mach-E1400";Key;22;30;35;38;0
+Maserati;MC20;45;17;23;32;27;0
+McLaren;Artura;55;35;44;54;0;0
+Rimac;"Concept S";85;25;5;0;0;0
+"Aston Martin";"DBS GT Zagato";70;14;0;0;0;0
+Devel;Sixteen;Key;40;45;60;60;0
+Ferrari;"296 GTB";Key;25;32;36;41;0
+Ford;"Team Fordzilla P1";70;23;27;36;52;46
+Lamborghini;Invencible;45;17;23;32;45;0
+Mercedes-Benz;"2022 Showcar Vision AMG";50;29;38;48;0;0
+"Alfa Romeo";"Giulia GTAm";0;22;30;15;0;0
+"ATS Automobili";GT;85;10;0;0;0;0
+Ferrari;"Daytona SP3";Key;25;32;36;40;0
+"Formule E";"GEN 2 Asphalt Édition";35;15;21;28;35;0
+Lamborghini;"Huracán STO";34;0;0;0;0;0
+Pagani;"Utopia Coupé";0;28;32;44;59;86
+"W Motors";"Lykan Édition Néon";0;40;36;0;0;0
+"Aston Martin";"Vantage V12 2022";0;22;30;35;33;0
+"De Tomaso";P900;35;15;21;28;19;0
+"FV Frangivento";Asfanè;Key;28;32;44;3;0
+Lamborghini;SC63;Key;26;34;40;62;0
+Porsche;"911 Carrera RS 3.8";30;23;33;42;0;0
+Zenvo;"Aurora Tur";85;25;29;38;54;69
+"Aston Martin";DB12;45;17;23;32;1;0
+Lotus;E-R9;0;26;34;46;61;78
+Maserati;"MC20 GT2";0;25;14;0;0;0
+McMurtry;Spéirling;50;23;27;36;13;0
+Nissan;"GT-R Néon Édition";85;25;29;38;30;0
+Bugatti;"Chiron Pur Sport";85;25;29;38;54;69
+Ferrari;"SF90 XX Stradale";70;23;27;36;52;59
+Ford;"GT Frankie Edition";50;23;0;0;0;0
+Ford;"Mustang RTR Spec 5 10th Anniversary";14;0;0;0;0;0
+Koenigsegg;"Jesko Absolut";0;40;45;60;70;85
+Lamborghini;Autentica;Key;35;36;46;28;0
+Porsche;"Mission R";50;29;38;48;0;0
+"Aston Martin";Valour;0;35;21;0;0;0
+"Automobili Pininfarina";"Battista Edizione Nino Farina";70;23;27;36;52;59
+Bugatti;Mistral;85;25;29;21;0;0
+Czinger;21C;85;25;29;38;54;69
+Lamborghini;Temerario;Key;26;34;46;61;78
+Mercedes-Benz;"Vision One-Eleven";Key;30;40;50;65;80
+Rimac;"Nevera Time Attack";Key;40;45;60;70;85
+TVR;Sagaris;50;29;38;48;0;0
+"DS Automobiles";"E-TENSE Performance";0;22;30;20;0;0
+Ferrari;"499P Modificata";70;23;27;36;52;59
+Ford;"Shelby Super Snake";70;23;27;36;52;0
+Jaguar;"XKR-S GT";50;29;38;48;0;0
+McLaren;Sabre;70;23;27;36;52;59
+Pininfarina;Teorema;38;0;0;0;0;0
+Porsche;"911 Turbo 50 Years";55;17;0;0;0;0
+Raesr;Tartarus;0;1;0;0;0;0
+"FV Frangivento";GT65;Key;26;34;40;28;0
+HTT;"Locus Pléthore LC750";85;7;0;0;0;0
+Kimera;EVO37;0;22;30;18;0;0
+"Lego Technic";"Chevrolet Corvette Stingray";45;17;23;32;45;0
+Porsche;"911 50 Years Porsche Design";50;5;0;0;0;0
+Praga;Bohema;35;15;21;9;0;0
+Ford;"GT MK IV";25;30;35;40;50;0
+Hyundai;"N Vision 74 Concept";0;40;4;0;0;0
+Hyundai;"Ioniq 5 N";15;25;35;50;0;0
+Lexus;"Electrified Sport Concept";70;23;27;36;52;11
+SSC;"Tuatara Striker";Key;40;45;60;70;85
+Toyota;"GR Super Sport Concept";0;26;20;0;0;0
+Toyota;"GR Supra 2023";15;25;35;50;0;0
+"Formule E";"GEN 3 EVO Championship Edition";Key;35;40;50;55;0
+"Lego Technic";"Aston Martin Valkyrie";30;35;5;0;0;0
+Mercedes-Benz;"Mercedes-AMG ONE";Key;40;45;50;19;0
+Nissan;"Z GT4";20;25;30;35;10;0
+SSC;"Ultimate Aero TT";35;40;45;4;0;0
+Toyota;"GR Supra Racing Concept";15;20;25;30;35;0
+Arash;Imperium;0;3;0;0;0;0
+Citroën;"DS Survolt";20;30;10;0;0;0
+Ferrari;"F12 Berlinetta";25;30;35;0;0;0
+"Lego Technic";"Ferrari FXX K";30;35;9;0;0;0
+"Lego Technic";"Lamborghini Revuelto";25;30;35;0;0;0
+Mercedes-Benz;"Silver Lightning";30;35;40;45;55;7
+Mosler;"Super GT";35;40;10;0;0;0
+Pagani;"Zonda Cinque";30;24;0;0;0;0
+"Aston Martin";"DBS 770 Ultimate";0;10;0;0;0;0
+"Automobili Pininfarina";B95;30;35;14;0;0;0
+BMW;"M Hybrid V8";Key;35;27;0;0;0
+Ford;"Mustang RTR Spec 5-FD";35;40;45;36;0;0
+Koenigsegg;One:1;35;40;1;0;0;0
+Lotus;Emeya;15;30;0;0;0;0
+Raesr;Aglaia;35;17;0;0;0;0
+Dodge;"Charger SRT Hellcat Redeye Widebody";20;25;0;0;0;0
+Koenigsegg;Chimera;0;0;0;0;0;0
+"Lego Technic";"Bugatti Chiron Pur Sport";35;7;0;0;0;0
+McLaren;"750S Coupé";25;30;15;0;0;0
+Mercedes-Benz;"C 63 AMG DTM";0;23;0;0;0;0
+Tushek;"Aeon E";35;40;45;1;0;0
+Zenvo;"Aurora Agil";30;35;4;0;0;0
+Icona;"Vulcano Spyder";25;0;0;0;0;0
+"Lego Technic";"BMW M4 GT3 EVO";25;11;0;0;0;0
+Lexus;"LFA Nürburgring Package";20;25;30;35;0;0
+Nilu27;Nilu;35;40;29;0;0;0
+Porsche;"935 Dragonforce Edition";0;40;45;15;0;0
+Rimac;"Nevera R";0;30;0;0;0;0
+Ares;Panther;0;0;0;0;0;0
+"Ferrante Design";Elytron;0;0;0;0;0;0
+Ferrari;"12 Cilindri";0;0;0;0;0;0
+Lamborghini;"Huracán Sterrato";0;0;0;0;0;0
+Mercedes-Benz;C11;35;0;0;0;0;0
+Porsche;"919 Street";0;9;0;0;0;0
+Porsche;"917 Living Legend";9;0;0;0;0;0
+Porsche;"918 Spyder Asphalt Edition";35;40;4;0;0;0
+Porsche;"911 GT3 R rennsport";20;25;4;0;0;0
