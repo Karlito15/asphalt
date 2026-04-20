@@ -1,0 +1,73 @@
+{% extends '@App/theme-lte/bases/front/full.html.twig' %}
+
+{% set background, text = '', '' %}
+
+{% if entity.status.unblock == false %}
+    {% set background = 'bg-danger-subtle' %}
+    {% if entity.status.toUpgrade == true %}
+        {% set text   = 'text-primary' %}
+    {% else %}
+        {% set text   = 'text-danger' %}
+    {% endif %}
+{% endif %}
+
+{% if entity.status.unblock == true %}
+    {% set background = 'bg-success-subtle' %}
+    {% if entity.status.toUpgrade == true %}
+        {% set text   = 'text-primary' %}
+    {% else %}
+        {% set text   = 'text-success' %}
+    {% endif %}
+{% endif %}
+
+{% if entity.status.unblock == true and entity.status.gold == true %}
+    {% set background = 'bg-warning-subtle' %}
+    {% set text       = 'text-warning' %}
+{% endif %}
+
+{% block content %}
+
+    <section class="row">
+
+    {{ form_start(form) }}
+        {% include '@App/theme-lte/contents/front/garage/update/garage.html.twig' %}
+
+        {% include '@App/theme-lte/contents/front/garage/update/blueprint.html.twig' %}
+
+        <section class="row row-cols-2 mb-md-3">
+            <div class="col-md-8">
+                {% include '@App/theme-lte/contents/front/garage/update/upgrade.html.twig' %}
+            </div>
+            <div class="col-md-4">
+                {% include '@App/theme-lte/contents/front/garage/update/stat.html.twig' %}
+            </div>
+        </section>
+
+        {% include '@App/theme-lte/contents/front/garage/update/rank.html.twig' %}
+
+        {% include "@App/theme-lte/contents/front/garage/update/_button.html.twig" %}
+
+        {{ form_rest(form) }}
+
+    {{ form_end(form) }}
+    </section>
+
+    <section class="row mt-2">
+        {% include '@App/theme-lte/contents/front/garage/delete.html.twig' %}
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+{#    <script src="{{ asset('scripts/switch-mode-expert-normal.js') }}"></script>#}
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
+{% endblock %}
+

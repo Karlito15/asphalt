@@ -1,0 +1,45 @@
+{% extends '@App/theme-aero/bases/front/full.html.twig' %}
+
+{% block container %}
+
+<div class="card">
+    <div class="card-header">
+
+        <div class="d-flex flex-row justify-content-between align-items-center">
+            <div>
+                <h2 class="h1">{{ controller_name }}</h2>
+            </div>
+            {% if current_page == 'app.garage.index' %}
+            {# Garage #}
+            <div class="datatable-toolbar">&nbsp;</div>
+            <div>
+                <a class="float-end {{ classes.button.success }} btn-lg" href="{{ path(links.create) }}">
+                    {{ 'btn.create'|trans }}&nbsp;<i class="fa fa-plus-square"></i>
+                </a>
+            </div>
+            {% elseif app.current_route starts with 'app.page' %}
+            {# Pages #}
+            <div>
+                 <twig:ListClass link="{{ app.current_route }}" />
+            </div>
+            {% elseif app.current_route starts with 'app.search' %}
+            {# Search #}
+            <div>
+                {% include '@App/theme-aero/contents/front/search/_form.html.twig' %}
+            </div>
+            {% else %}
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    <div class="card-body">
+        <table class="table table-bordered table-striped"{% block id %}{% endblock %}>
+            {% block table %}{% endblock %}
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}

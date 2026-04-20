@@ -1,0 +1,29 @@
+{% extends '@App/theme-lte/bases/front/full.html.twig' %}
+
+{% block content %}
+
+    {{ form_start(form) }}
+
+    <div class="card">
+
+        <div class="card-header">
+            <h2 class="text-center">{{ controller_name }}</h2>
+        </div>
+
+
+        <div class="card-body py-5">
+            {% include '@App/theme-lte/contents/front/garage/create/error.html.twig' %}
+
+            {% include '@App/theme-lte/contents/front/garage/create/form.html.twig' %}
+
+        </div>
+
+        <div class="card-footer py-3">
+            {% include '@App/theme-lte/contents/front/garage/create/_button.html.twig' %}
+        </div>
+
+    </div>
+
+    {{ form_end(form) }}
+
+{% endblock %}

@@ -43,13 +43,14 @@ final class TaskController extends AbstractController
         $home  = $this->translator->trans('text.mission');
         $title = $this->translator->trans('text.all.tasks');
 
-        return $this->render('@App/contents/back/mission/common.html.twig', [
-            'container'       => 'container-fluid',
-            'breadcrumb'      => self::Breadcrumb($home, $title),
-            'links'           => self::$crud,
-            'entities'        => $repository->findAll(),
-            'controller_name' => $title,
-            'current_page'    => $request->attributes->get('_route'),
+        return $this->render('@App/theme-aero/contents/back/mission/common.html.twig', [
+            'container'         => 'container-fluid',
+            'breadcrumb'        => self::Breadcrumb($home, $title),
+            'links'             => self::$crud,
+            'entities'          => $repository->findAll(),
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'theme'             => 'dark',
         ]);
     }
 
@@ -77,14 +78,15 @@ final class TaskController extends AbstractController
             return $this->redirectToIndex();
         }
 
-        return $this->render('@App/contents/back/common-form.html.twig', [
-            'container'       => 'container-fluid',
-            'breadcrumb'      => self::Breadcrumb($home, $page),
-            'links'           => self::$crud,
-            'entities'        => $entity,
-            'controller_name' => $title,
-            'current_page'    => $request->attributes->get('_route'),
-            'form'            => $form,
+        return $this->render('@App/theme-aero/contents/back/common-form.html.twig', [
+            'container'         => 'container-fluid',
+            'breadcrumb'        => self::Breadcrumb($home, $page),
+            'links'             => self::$crud,
+            'entities'          => $entity,
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'form'              => $form,
+            'theme'             => 'dark',
         ]);
     }
 
@@ -110,14 +112,15 @@ final class TaskController extends AbstractController
             return $this->redirectToIndex();
         }
 
-        return $this->render('@App/contents/back/common-form.html.twig', [
-            'container'       => 'container-fluid',
-            'breadcrumb'      => self::Breadcrumb($home, $page),
-            'links'           => self::$crud,
-            'entities'        => $entities,
-            'controller_name' => $title,
-            'current_page'    => $request->attributes->get('_route'),
-            'form'            => $form,
+        return $this->render('@App/theme-aero/contents/back/common-form.html.twig', [
+            'container'         => 'container-fluid',
+            'breadcrumb'        => self::Breadcrumb($home, $page),
+            'links'             => self::$crud,
+            'entities'          => $entities,
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'form'              => $form,
+            'theme'             => 'dark',
         ]);
     }
 

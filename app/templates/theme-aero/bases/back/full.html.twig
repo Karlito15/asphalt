@@ -1,0 +1,35 @@
+{% extends '@App/theme-aero/bases/back/base.html.twig' %}
+
+{% block wrapper %}
+
+    {% block preloader %}
+        {% include '@App/theme-aero/partials/back/loader.html.twig' %}
+    {% endblock %}
+
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+
+    <!-- Main Search -->
+    <div id="search">
+        <button id="close" type="button" class="close btn btn-primary btn-icon btn-icon-mini btn-round">x</button>
+        <form>
+            <input type="search" value="" placeholder="{{ 'text.search'|trans }}">
+            <button type="submit" class="btn btn-primary">{{ 'text.search'|trans }}</button>
+        </form>
+    </div>
+
+    {% block navbar %}
+        {% include '@App/theme-aero/partials/back/navbar.html.twig' %}
+    {% endblock %}
+
+    {% block leftSidebar %}
+        {% include '@App/theme-aero/partials/back/sidebar-left.html.twig' %}
+    {% endblock %}
+
+    {% block rightSidebar %}
+        {% include '@App/theme-aero/partials/back/sidebar-right.html.twig' %}
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+{% endblock %}

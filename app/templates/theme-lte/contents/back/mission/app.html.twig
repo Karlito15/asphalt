@@ -1,0 +1,49 @@
+{% extends '@App/theme-lte/bases/common/page-index-back.html.twig' %}
+
+{% block table %}
+
+    <tbody>
+    {% for item in entities %}
+        <tr>
+            <td class="{{ classes.table.td }}">{{ item.id }}</td>
+            <td class="{{ classes.table.td }}">{{ item.week }}</td>
+            <td class="{{ classes.table.td }}">{{ item.region }}</td>
+            <td class="{{ classes.table.td }}">{{ item.track }}</td>
+            <td class="{{ classes.table.td }}">{{ item.class }}</td>
+            <td class="{{ classes.table.td }}">{{ item.brand }}</td>
+            <td class="{{ classes.table.td }}">{{ item.description }}</td>
+            <td class="{{ classes.table.td }}">{{ item.success }}</td>
+            <td class="{{ classes.table.td }}">{{ item.target }}</td>
+            <td class="{{ classes.table.td }} text-end">
+                <a href="{{ path(links.update, {'id': item.id}) }}" class="{{ classes.button.table }} btn-outline-info">
+                    {{ 'text.update'|trans }}
+                </a>
+            </td>
+        </tr>
+    {% else %}
+        <twig:TableEmpty value="{{ 10 }}" />
+    {% endfor %}
+    </tbody>
+
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr>
+        <th>{{ 'text.id'|trans }}</th>
+        <th>{{ 'text.week'|trans }}</th>
+        <th>{{ 'text.region'|trans }}</th>
+        <th>{{ 'text.track'|trans }}</th>
+        <th>{{ 'text.class'|trans }}</th>
+        <th>{{ 'text.brand'|trans }}</th>
+        <th>{{ 'text.description'|trans }}</th>
+        <th>{{ 'text.success'|trans }}</th>
+        <th>{{ 'text.target'|trans }}</th>
+       <th class="text-end">{{ 'text.action'|trans }}</th>
+    </tr>
+{% endmacro %}

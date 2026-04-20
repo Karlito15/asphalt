@@ -1,0 +1,39 @@
+{% extends '@App/theme-aero/bases/back/full.html.twig' %}
+
+{% block content %}
+
+<!-- Main Content -->
+<section class="content">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>Dashboard</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path('admin.dashboard.index') }}"><i class="zmdi zmdi-home"></i> {{ metas.title }}</a></li>
+                    <li class="breadcrumb-item active">{{ 'text.dashboard'|trans }}</li>
+                </ul>
+                <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i class="zmdi zmdi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-xxl-12">
+                <div class="card">
+                    <div class="body">
+                    <figure>
+                        <h1 class="display-6 fw-bolder">{{ metas.title }}</h1>
+                        <img src="{{ asset('images/logo-black.png') }}" alt="{{ metas.title }}" height="200" />
+                        <figcaption class="display-4">{{ breadcrumb.page }}</figcaption>
+                    </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

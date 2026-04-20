@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Application\Controller\Front;
 
 use App\Application\Service\Controller\WebController;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Domain\Abstract\BaseController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -19,25 +19,30 @@ use Symfony\Component\Routing\Attribute\Route;
     format: 'html',
     utf8: true
 )]
-final class DashboardController extends AbstractController
+final class DashboardController extends BaseController
 {
     use WebController;
 
     #[Route(path: '{_locale<%app.supported_locales%>}/index.php', name: 'index')]
-    public function index(Request $request,): Response
+    public function index(Request $request): Response
     {
         ### Variables
-        $home  = $this->translator->trans('text.front-office');
-        $title = $this->translator->trans('text.dashboard');
+        $dashboard  = $this->translator->trans('text.home');
+        $title      = $this->translator->trans('text.dashboard');
+        $breadcrumb = [
+            ['label' => $dashboard, 'route' => 'app.dashboard.index', 'parameters' => []],
+            ['label' => $title, 'route' => null, 'parameters' => []],
+        ];
 
         ### Flash
         // $this->addFlash('primary', 'This is the Web App !');
 
-        return $this->render('@App/contents/front/dashboard/index.html.twig', [
-            'breadcrumb'      => self::Breadcrumb($home, $title),
-            'container'        => 'container-fluid pt-4 px-4',
-            'controller_name' => $title,
-            'current_page'    => $request->attributes->get('_route'),
+        return $this->render('@App/theme-lte/contents/front/dashboard/index.html.twig', [
+            'breadcrumb'        => self::breadcrumb($breadcrumb),
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'container'         => 'container-fluid pt-4 px-4',
+            'theme'             => 'dark',
         ]);
     }
 

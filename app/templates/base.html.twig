@@ -1,52 +1,34 @@
 <!DOCTYPE html>
-<html lang="{{ app.request.locale|default('en') }}" data-bs-theme="dark">
+<html lang="{{ app.request.locale|default('en') }}" data-bs-theme="{{ theme }}">
 <head>
+<title>{% block title %}{{ controller_name|default('Title Page') }}{% endblock %}</title>
 {% block meta %}
-    {% include '@App/partials/common/meta.html.twig' %}
+    {% include '@App/partials/meta.html.twig' %}
 {% endblock %}
-<title>{% block title %}{{ controller_name|default('Page Title') }}{% endblock %}{# - {{ metas.title }}#}</title>
 
 {% block favicons %}
-    {% include '@App/partials/common/favicon.html.twig' %}
+    {% include '@App/partials/favicon.html.twig' %}
 {% endblock %}
 
-{% block stylesheets %}
-    <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('libraries/bootstrap/5.3.8/css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('libraries/fontawesome/7.2.0/css/all.min.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('libraries/scroll-to-top-button/jquery-backToTop.min.css') }}" />
+{% block stylesheets %}{% endblock %}
 
-    {#SASS#}
-{#    <link rel="stylesheet" type="text/css" href="{{ asset('styles/bootstrap-5.3.8.css') }}" />#}
-{% endblock %}
+    <!--begin::Fonts-->
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('styles/fonts.css') }}" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libraries/fontawesome/7.2.0/css/all.min.css') }}" />
+    <!--end::Fonts-->
+    {#<link rel="stylesheet" href="{{ asset('styles/scrollbar.css') }}" crossorigin="anonymous" media="screen" />#}
 </head>
 
-<body{% block bodyClass %}{% endblock %}>
+<body{% block body %}{% endblock %}>
 
-{% block body %}
+{% block wrapper %}
     {% block preloader %}{% endblock %}
-    {% block header %}{% endblock %}
-    {% block notification %}{% endblock %}
-    {% block main %}{% endblock %}
-    {% block footer %}{% endblock %}
 {% endblock %}
 
-{% block javascripts %}
+{% block js %}
     {% block importmap %}{{ importmap('app') }}{% endblock %}
-
-    <!-- Scripts -->
-    <script src="{{ asset('libraries/jquery/4.0.0.min.js') }}"></script>
-    {# pour le dropdwon dans le header #}
-    <script src="{{ asset('libraries/bootstrap/5.3.8/js/bootstrap.bundle.min.js') }}"></script>
-    {# back to top #}
-    {% include "@App/partials/common/script-back-to-top.html.twig" %}
-    <!-- flash messages -->
-{#    {% include "@App/share/_script-sweet-alert.html.twig" %}#}
-{#    <script src="{{ asset('scripts/sweet-alert-dashboard.js') }}"></script>#}
-
-    {% if app.environment == 'dev' %}
-    <style>body { background-color: dimgray !important; }</style>
-    {% endif %}
 {% endblock %}
+
+{% block javascripts %}{% endblock %}
 </body>
 </html>

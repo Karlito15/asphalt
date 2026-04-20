@@ -1,0 +1,76 @@
+
+<!-- Footer -->
+<div class="{{ container|default('container') }} py-3">
+    <footer class="footer bg-body-tertiary row row-cols-1 row-cols-sm-2 row-cols-md-6 py-5 border-top">
+        <div class="col mb-3">
+            <a href="{{ path('admin.dashboard.index') }}" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="{{ metas.title }}">
+                <figure>
+                    <img src="{{ asset(images.logo.back) }}" alt="{{ metas.title }}" width="200" />
+                    <figcaption class="text-center">{{ metas.title }}</figcaption>
+                </figure>
+            </a>
+        </div>
+        <div class="col mb-3">
+            <h5>{{ 'text.page'|trans }}</h5>
+            <ul class="nav flex-column">
+                {{ _self.Nav('admin.dashboard.index', 'text.dashboard'|trans) }}
+                {{ _self.Nav('admin.dashboard.cache', 'text.cache'|trans) }}
+                <li class="nav-item mb-2">
+                    <a href="{{ path('easy.admin.app') }}" class="nav-link p-0 text-body-secondary" target="_blank">{{ 'text.easy-admin'|trans }}</a>
+                </li>
+{#                {{ _self.Nav('dh_auditor_list_audits', 'text.audit'|trans) }}#}
+{#                {{ _self.Nav('sitemap.back ', 'text.sitemap'|trans) }}#}
+{#                {{ _self.Nav('sitemap.front ', 'text.sitemap'|trans) }}#}
+            </ul>
+        </div>
+        <div class="col mb-3">
+            <h5>{{ 'text.garage'|trans }}</h5>
+            <h5>{{ 'text.inventory'|trans }}</h5>
+            <ul class="nav flex-column">
+                {{ _self.Nav('admin.inventory.app.index', 'text.inventory'|trans) }}
+            </ul>
+        </div>
+        <div class="col mb-3">
+            <h5>{{ 'text.mission'|trans }}</h5>
+            <ul class="nav flex-column">
+                {{ _self.Nav('admin.mission.app.index', 'text.mission'|trans) }}
+                {{ _self.Nav('admin.mission.task.index', 'text.task'|trans) }}
+                {{ _self.Nav('admin.mission.type.index', 'text.type'|trans) }}
+            </ul>
+        </div>
+        <div class="col mb-3">
+            <h5>{{ 'text.race'|trans }}</h5>
+            <ul class="nav flex-column">
+                {{ _self.Nav('admin.race.app.index', 'text.race'|trans) }}
+                {{ _self.Nav('admin.race.mode.index', 'text.mode'|trans) }}
+                {{ _self.Nav('admin.race.region.index', 'text.region'|trans) }}
+                {{ _self.Nav('admin.race.season.index', 'text.season'|trans) }}
+                {{ _self.Nav('admin.race.time.index', 'text.time'|trans) }}
+                {{ _self.Nav('admin.race.track.index', 'text.track'|trans) }}
+            </ul>
+        </div>
+        <div class="col mb-3">
+            <h5>{{ 'text.setting'|trans }}</h5>
+            <ul class="nav flex-column">
+                {{ _self.Nav('admin.setting.blueprint.index', 'text.blueprint'|trans) }}
+                {{ _self.Nav('admin.setting.brand.index', 'text.brand'|trans) }}
+                {{ _self.Nav('admin.setting.class.index', 'text.class'|trans) }}
+                {{ _self.Nav('admin.setting.level.index', 'text.level'|trans) }}
+                {{ _self.Nav('admin.setting.tag.index', 'text.tag'|trans) }}
+                {{ _self.Nav('admin.setting.unit-price.index', 'text.unit-price'|trans) }}
+            </ul>
+        </div>
+    </footer>
+    <p class="text-center text-body-secondary small">© 2020 - {{ "now"|date("Y") }}</p>
+</div>
+
+{% macro Nav(link, text) %}
+    {% if app.current_route == link %}
+        {% set color = 'primary' %}
+    {% else %}
+        {% set color = 'secondary' %}
+    {% endif %}
+    <li class="nav-item mb-2">
+        <a href="{{ path(link) }}" class="nav-link p-0 text-body-{{ color }}">{{ text }}</a>
+    </li>
+{% endmacro %}

@@ -8,7 +8,7 @@ php84 /volume3/web/WWW-CDN/composer.phar update --no-scripts
 php84 /volume3/web/Symfony/Asphalt/app/bin/console about
 
 # Clear Cache (Symfony & Doctrine)
-php84 /volume3/web/Symfony/Asphalt/app/bin/console cache:clear --env prod
+php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console cache:clear --env prod
 php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console cache:clear --env dev
 php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console doctrine:cache:clear-metadata
 php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console doctrine:cache:clear-query

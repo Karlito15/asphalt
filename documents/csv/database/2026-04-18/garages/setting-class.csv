@@ -1,0 +1,332 @@
+Brand;Model;SettingClass
+Acura;"2017 NSX";class-c
+"Aston Martin";Vulcan;class-a
+"Aston Martin";DB11;class-b
+BMW;"M4 GTS";class-c
+BMW;"Z4 LCI E89";class-d
+BMW;"3.0 CSL Hommage";class-c
+Bugatti;Chiron;class-s
+Cadillac;"Cien Concept";class-b
+Chevrolet;"Camaro LT";class-d
+Chevrolet;"Camaro ZL1 50th Edition";class-c
+Chevrolet;"Corvette Grand Sport";class-b
+Dodge;"Viper ACR";class-c
+Dodge;"Viper GTS";class-a
+Dodge;"Challenger Pack 392 Hemi Scat";class-d
+Dodge;"Challenger SRT8";class-c
+"DS Automobiles";"DS E-Tense";class-d
+"Exotic Rides";W70;class-b
+Ferrari;F12TDF;class-b
+Ferrari;LaFerrari;class-a
+Ferrari;"488 GTB";class-b
+Ferrari;"FXX K";class-s
+Ford;"Shelby GT350R";class-d
+Ford;GT;class-b
+Glickenhaus;003S;class-b
+Icona;"Vulcano Titanium";class-s
+Jaguar;"F-Type SVR";class-b
+Koenigsegg;Regera;class-s
+Lamborghini;"Aventador SV Coupé";class-a
+Lamborghini;Egoista;class-s
+Lamborghini;"Terzo Millennio";class-s
+Lamborghini;Centenario;class-s
+Lamborghini;Asterion;class-b
+Lotus;"Evora Sport 410";class-c
+McLaren;P1;class-a
+Mercedes-Benz;"AMG GT S";class-c
+Mitsubishi;"Lancer Evolution";class-d
+Nissan;"37OZ Nismo";class-d
+Nissan;"GT-R Nismo";class-a
+Pagani;"Huayra BC";class-a
+Pininfarina;"H2 Speed";class-c
+Porsche;"911 GTS Coupé";class-b
+Porsche;"718 Cayman";class-d
+Porsche;"918 Spyder";class-a
+Rezvani;"Beast X";class-c
+Rimac;"C TWO";class-s
+Trion;Nemesis;class-s
+VLF;"Force 1 V10";class-a
+Volkswagen;"XL Sport Concept";class-d
+"W Motors";"Lykan Hypersport";class-s
+"W Motors";"Fenyr Supersport";class-s
+Ferrari;J50;class-a
+Lotus;"Elise Sprint 220";class-d
+Genty;Akylone;class-a
+Maserati;Alfieri;class-c
+McLaren;"570S Spider";class-a
+Sin;"R1 550";class-b
+Apollo;N;class-b
+Vencer;Sarthe;class-c
+Zenvo;"TS1 GT Anniversary";class-s
+Lamborghini;"Huracán Evo Spyder";class-b
+Lamborghini;"Aventador J";class-a
+Mercedes-Benz;"SLR McLaren";class-b
+Ferrari;"LaFerrari Aperta";class-a
+Ferrari;"812 Superfast";class-a
+Ginetta;G60;class-d
+Koenigsegg;Jesko;class-s
+Porsche;"911 Targa 4S";class-d
+Arrinera;"Hussarya 33";class-c
+Artega;"Scalo Superelletra";class-c
+"Aston Martin";"Vantage GT12";class-b
+McLaren;Senna;class-s
+Porsche;"911 GT3 RS";class-b
+TVR;Griffith;class-d
+"Aston Martin";"DBS Superleggera";class-b
+"Automobili Pininfarina";Battista;class-s
+"Vanda Electrics";Dendrobium;class-a
+Chevrolet;"Corvette ZR1";class-a
+Ford;"Shelby GR-1";class-c
+Italdesign;Zerouno;class-b
+Mazda;Furai;class-d
+Nissan;"Leaf Nismo RC";class-d
+Rimac;Nevera;class-s
+Techrules;"AT96 track version";class-a
+Honda;"Civic Type-R";class-d
+Lotus;Evija;class-b
+Porsche;"911 GT2 RS Clubsport";class-a
+Porsche;"718 Cayman GT4 Clubsport";class-c
+Porsche;"Carrera GT";class-b
+Porsche;"911 GT1 Evolution";class-b
+Porsche;"Taycan Turbo S";class-d
+Lamborghini;"Gallardo LP560-4";class-c
+Lamborghini;Veneno;class-s
+Lamborghini;"Sián FKP 37";class-s
+Lamborghini;SC18;class-a
+McLaren;"F1 LM";class-b
+BXR;"Bailey Blade GT1";class-s
+Chevrolet;"Corvette Stingray";class-c
+Chevrolet;"Corvette C7.R";class-d
+Ford;"GT MK II";class-b
+SSC;Tuatara;class-s
+Apex;AP-0;class-b
+"Aston Martin";"Valhalla Concept Car";class-a
+Bentley;"Mulliner Bacalar";class-c
+Bentley;"Continental GT3";class-d
+Jaguar;C-X75;class-a
+McLaren;Speedtail;class-s
+Ferrari;"599XX EVO";class-c
+Ferrari;"Enzo Ferrari";class-b
+Ferrari;"F8 Tributo";class-a
+Ferrari;"SF90 Stradale";class-s
+Ferrari;F40;class-c
+Ferrari;"488 GTB Challenge EVO";class-b
+Apollo;IE;class-b
+BMW;"I8 Roadster";class-d
+Bugatti;"La Voiture Noire";class-s
+Bugatti;Divo;class-s
+Citroën;"GT by Citroën";class-a
+Lamborghini;"Huracán Super Trofeo Evo";class-d
+Peugeot;Onyx;class-a
+Acura;"NSX GT3 EVO";class-c
+Aspark;Owl;class-s
+"Inferno Automobili";Inferno;class-s
+"Inferno Automobili";"Settimo Cerchio";class-s
+Infiniti;"Projet Black S";class-d
+Nio;EP9;class-a
+"ATS Automobili";"Corsa RRTurbo";class-c
+Ferrari;Roma;class-b
+Italdesign;DaVinci;class-d
+Lamborghini;"Murcielago LP 640 Roadster";class-b
+Lamborghini;"Essenza SCV12";class-b
+Mazzanti;"Evantra Millecavalli";class-s
+Pagani;Imola;class-a
+"Aston Martin";Valkyrie;class-s
+"Aston Martin";Victor;class-a
+Renault;"R.S. 01";class-c
+Volkswagen;"W12 Coupe";class-b
+Zenvo;TSR-S;class-b
+"Aston Martin";"V12 Speedster";class-c
+Bugatti;"Veyron 16.4 Grand Sport Vitesse";class-s
+Hennessey;"Venom F5";class-s
+Lamborghini;"Aventador SVJ Roadster";class-a
+Lamborghini;SC20;class-a
+McLaren;Elva;class-b
+Drako;GTE;class-b
+"Lego Technic";"McLaren Senna GTR";class-a
+Pagani;"Zonda HP Barchetta";class-a
+Raesr;"Tachyon Speed";class-s
+Renault;TreZor;class-d
+Rimac;Concept_One;class-a
+Toroidion;1MW;class-s
+Volkswagen;"Electric R";class-d
+Arash;AF10;class-b
+Glickenhaus;004C;class-d
+Glickenhaus;007S;class-a
+Koenigsegg;Gemera;class-s
+Lotus;Emira;class-d
+McLaren;GT;class-c
+Naran;"Hyper Coupé";class-s
+Nissan;"GTR-50 Italdesign";class-b
+Pagani;"Zonda R";class-a
+Saleen;S1;class-c
+"Aston Martin";One77;class-b
+McLaren;"Senna GTR";class-a
+Puritalia;Berlinetta;class-b
+Ultima;RS;class-s
+Vision;1789;class-s
+Arash;"AF8 Falcon Édition";class-b
+Bolwell;"MK X Nagari 500";class-c
+Brabham;BT62;class-c
+Tushek;"TS 900 Racer Pro";class-s
+Lamborghini;"Countach 25th Anniversary";class-d
+Lamborghini;"Countach LPI 800-4";class-a
+Lamborghini;"Reventón Roadster";class-b
+Lamborghini;"Diablo GT";class-c
+Lamborghini;"Miura Concept";class-c
+Lamborghini;"Sesto Elemento";class-b
+Bentley;"Continental GT Speed";class-a
+Bugatti;Centodieci;class-s
+Bugatti;EB110;class-c
+Ferrari;"Monza SP1";class-c
+McLaren;765LT;class-b
+McLaren;"600LT Spider";class-b
+Pagani;"Huayra R";class-b
+Renault;Dezir;class-d
+Ajlani;Drakuma;class-s
+Jaguar;"XE SV Project 8";class-c
+Koenigsegg;"Agera RS";class-s
+Nissan;"R390 GT1";class-b
+Peugeot;SR1;class-d
+Ares;S1;class-c
+Bugatti;Bolide;class-s
+Chrysler;ME412;class-s
+"Faraday Future";FFZero1;class-s
+Jaguar;"XJ220S TWR";class-s
+McLaren;"650S GT3";class-a
+Peugeot;9X8;class-a
+Porsche;"Boxster 25th Anniversary";class-c
+Praga;R1;class-d
+Donkervoort;"D8 GTO";class-c
+Ferrari;F50;class-b
+Mercedes-Benz;"AMG GT Black Series";class-c
+"Spania GTA";"2015 GTA Spano";class-s
+"Torino Design";"Super Sport";class-s
+"FV Frangivento";"Sorpasso GT3";class-s
+Jaguar;XJR-9;class-a
+Kepler;Motion;class-b
+Koenigsegg;CCXR;class-s
+KTM;"X-Bow GTX";class-d
+Lamborghini;Revuelto;class-b
+Maserati;MC12;class-c
+Apollo;EVO;class-b
+BMW;"M4 GT3";class-b
+"De Tomaso";P72;class-a
+Mercedes-Benz;CLK-GTR;class-c
+Porsche;"Panamera Turbo S";class-c
+Porsche;"935 (2019)";class-a
+Jaguar;XJR-15;class-c
+Koenigsegg;CC850;class-s
+McLaren;"Solus GT";class-b
+Nissan;"370Z Édition Néon";class-d
+Noble;"M600 Speedster";class-a
+Saleen;"S7 Twin Turbo";class-s
+Bugatti;"Chiron Super Sport 300+";class-s
+Deus;Vayanne;class-s
+Ford;"Mustang Mach-E1400";class-d
+Maserati;MC20;class-b
+McLaren;Artura;class-b
+Rimac;"Concept S";class-s
+"Aston Martin";"DBS GT Zagato";class-a
+Devel;Sixteen;class-s
+Ferrari;"296 GTB";class-c
+Ford;"Team Fordzilla P1";class-a
+Lamborghini;Invencible;class-b
+Mercedes-Benz;"2022 Showcar Vision AMG";class-c
+"Alfa Romeo";"Giulia GTAm";class-d
+"ATS Automobili";GT;class-s
+Ferrari;"Daytona SP3";class-c
+"Formule E";"GEN 2 Asphalt Édition";class-c
+Lamborghini;"Huracán STO";class-b
+Pagani;"Utopia Coupé";class-a
+"W Motors";"Lykan Édition Néon";class-s
+"Aston Martin";"Vantage V12 2022";class-d
+"De Tomaso";P900;class-c
+"FV Frangivento";Asfanè;class-a
+Lamborghini;SC63;class-b
+Porsche;"911 Carrera RS 3.8";class-d
+Zenvo;"Aurora Tur";class-s
+"Aston Martin";DB12;class-b
+Lotus;E-R9;class-b
+Maserati;"MC20 GT2";class-c
+McMurtry;Spéirling;class-a
+Nissan;"GT-R Néon Édition";class-s
+Bugatti;"Chiron Pur Sport";class-s
+Ferrari;"SF90 XX Stradale";class-a
+Ford;"GT Frankie Edition";class-a
+Ford;"Mustang RTR Spec 5 10th Anniversary";class-b
+Koenigsegg;"Jesko Absolut";class-s
+Lamborghini;Autentica;class-s
+Porsche;"Mission R";class-c
+"Aston Martin";Valour;class-b
+"Automobili Pininfarina";"Battista Edizione Nino Farina";class-a
+Bugatti;Mistral;class-s
+Czinger;21C;class-s
+Lamborghini;Temerario;class-b
+Mercedes-Benz;"Vision One-Eleven";class-a
+Rimac;"Nevera Time Attack";class-s
+TVR;Sagaris;class-c
+"DS Automobiles";"E-TENSE Performance";class-d
+Ferrari;"499P Modificata";class-a
+Ford;"Shelby Super Snake";class-a
+Jaguar;"XKR-S GT";class-c
+McLaren;Sabre;class-a
+Pininfarina;Teorema;class-s
+Porsche;"911 Turbo 50 Years";class-b
+Raesr;Tartarus;class-s
+"FV Frangivento";GT65;class-b
+HTT;"Locus Pléthore LC750";class-s
+Kimera;EVO37;class-d
+"Lego Technic";"Chevrolet Corvette Stingray";class-b
+Porsche;"911 50 Years Porsche Design";class-c
+Praga;Bohema;class-c
+Ford;"GT MK IV";class-b
+Hyundai;"N Vision 74 Concept";class-s
+Hyundai;"Ioniq 5 N";class-d
+Lexus;"Electrified Sport Concept";class-a
+SSC;"Tuatara Striker";class-s
+Toyota;"GR Supra 2023";class-d
+Toyota;"GR Super Sport Concept";class-b
+"Formule E";"GEN 3 EVO Championship Edition";class-b
+"Lego Technic";"Aston Martin Valkyrie";class-a
+Mercedes-Benz;"Mercedes-AMG ONE";class-a
+Nissan;"Z GT4";class-c
+SSC;"Ultimate Aero TT";class-s
+Toyota;"GR Supra Racing Concept";class-d
+Arash;Imperium;class-s
+Citroën;"DS Survolt";class-c
+Ferrari;"F12 Berlinetta";class-b
+"Lego Technic";"Ferrari FXX K";class-a
+"Lego Technic";"Lamborghini Revuelto";class-b
+Mercedes-Benz;"Silver Lightning";class-a
+Mosler;"Super GT";class-s
+Pagani;"Zonda Cinque";class-a
+"Aston Martin";"DBS 770 Ultimate";class-c
+"Automobili Pininfarina";B95;class-a
+BMW;"M Hybrid V8";class-b
+Ford;"Mustang RTR Spec 5-FD";class-s
+Koenigsegg;One:1;class-s
+Lotus;Emeya;class-d
+Raesr;Aglaia;class-s
+Dodge;"Charger SRT Hellcat Redeye Widebody";class-c
+Koenigsegg;Chimera;class-s
+"Lego Technic";"Bugatti Chiron Pur Sport";class-s
+McLaren;"750S Coupé";class-b
+Mercedes-Benz;"C 63 AMG DTM";class-c
+Tushek;"Aeon E";class-s
+Zenvo;"Aurora Agil";class-a
+Icona;"Vulcano Spyder";class-s
+"Lego Technic";"BMW M4 GT3 EVO";class-b
+Lexus;"LFA Nürburgring Package";class-c
+Nilu27;Nilu;class-s
+Porsche;"935 Dragonforce Edition";class-a
+Rimac;"Nevera R";class-s
+Ares;Panther;class-b
+"Ferrante Design";Elytron;class-s
+Ferrari;"12 Cilindri";class-b
+Lamborghini;"Huracán Sterrato";class-d
+Mercedes-Benz;C11;class-s
+Porsche;"911 GT3 R rennsport";class-c
+Porsche;"919 Street";class-a
+Porsche;"917 Living Legend";class-b
+Porsche;"918 Spyder Asphalt Edition";class-s

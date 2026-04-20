@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace App\Application\Service\Controller;
 
-use App\Infrastructure\System\Folder;
-use Symfony\Bundle\FrameworkBundle\Console\Application;
-use Symfony\Component\Console\Input\ArrayInput;
-use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -46,58 +42,49 @@ trait WebController
         }
     }
 
-    /**
-     * Régénère les fichiers YAML pour les pages index
-     *
-     * @return void
-     */
-    public function generateGarageList(): void
-    {
-        ### Launch Command To Generate Garage List YAML
-        $application = new Application($this->kernel);
-        $application->setAutoExit(false);
-        $input = new ArrayInput([
-            'command' => 'asphalt:yaml:list:garage', // Nom de votre commande
-            // Arguments optionnels
-            // 'fooArgument' => 'barValue',
-            // Options
-            // '--bar' => 'fooValue',
-            // '--baz' => true,
-        ]);
-        $output = new BufferedOutput();
-        try {
-            $application->run($input, $output);
-            $this->addFlash('success', 'YAML Generated Successfully');
-        } catch (\Exception $e) {
-            throw new \RuntimeException($e->getMessage());
-        }
-    }
+//    /**
+//     * Régénère les fichiers YAML pour les pages index
+//     *
+//     * @return void
+//     */
+//    public function generateGarageList(): void
+//    {
+//        ### Launch Command To Generate Garage List YAML
+//        $application = new Application($this->kernel);
+//        $application->setAutoExit(false);
+//        $input = new ArrayInput([
+//            'command' => 'asphalt:yaml:list:garage', // Nom de votre commande
+//            // Arguments optionnels
+//            // 'fooArgument' => 'barValue',
+//            // Options
+//            // '--bar' => 'fooValue',
+//            // '--baz' => true,
+//        ]);
+//        $output = new BufferedOutput();
+//        try {
+//            $application->run($input, $output);
+//            $this->addFlash('success', 'YAML Generated Successfully');
+//        } catch (\Exception $e) {
+//            throw new \RuntimeException($e->getMessage());
+//        }
+//    }
 
-    /**
-     * @return string
-     */
-    public function ExtractionFolder(): string
-    {
-        $filepath = $this->getParameter('folders.yaml') . DIRECTORY_SEPARATOR . self::$folder . DIRECTORY_SEPARATOR . self::$file;
-
-        if (Values::isExists($filepath)) {
-            return Folder::canonicalize($filepath);
-        }
-
-        throw $this->createNotFoundException($this->translator->trans('error.file'));
-    }
+//    /**
+//     * @return string
+//     */
+//    public function ExtractionFolder(): string
+//    {
+//        // $filepath = $this->getParameter('folders.yaml') . DIRECTORY_SEPARATOR . self::$folder . DIRECTORY_SEPARATOR . self::$file;
+//        $filepath = $this->getParameter('folders.yaml') . DIRECTORY_SEPARATOR;
+//
+//        if (Folder::isExists($filepath)) {
+//            return Folder::canonicalize($filepath);
+//        }
+//
+//        throw $this->createNotFoundException($this->translator->trans('error.file'));
+//    }
 
     /** STATIC METHODS */
-
-    /**
-     * @param string|null $home
-     * @param string|null $page
-     * @return null[]|string[]
-     */
-    public static function Breadcrumb(null|string $home, null|string $page) :array
-    {
-        return ['home' => $home, 'page' => $page];
-    }
 
     /**
      * Retourne la lettre de la Class en minuscule

@@ -1,0 +1,29 @@
+{% extends '@App/base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('themes/aero/assets/plugins/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('themes/aero/assets/css/style.min.css') }}">
+{% endblock %}
+
+{% block body %} class="theme-green theme-dark"{% endblock %}
+
+{% block wrapper %}
+    {% block preloader %}{% endblock %}
+    {% block navbar %}{% endblock %}
+    {% block leftSidebar %}{% endblock %}
+    {% block rightSidebar %}{% endblock %}
+    {% block content %}{% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    <!-- Jquery Core Js -->
+    <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
+    <script type="text/javascript" src="{{ asset('themes/aero/assets/bundles/libscripts.bundle.js') }}"></script>
+    <!-- slimscroll, waves Scripts Plugin Js -->
+    <script type="text/javascript" src="{{ asset('themes/aero/assets/bundles/vendorscripts.bundle.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('themes/aero/assets/bundles/c3.bundle.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('themes/aero/assets/bundles/mainscripts.bundle.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('themes/aero/assets/js/pages/index.js') }}"></script>
+{% endblock %}

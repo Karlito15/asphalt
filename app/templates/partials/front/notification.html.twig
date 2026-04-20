@@ -1,6 +1,0 @@
-{#{% include '@App/partials/common/sweet-alert.html.twig'%}#}
-{% for label, messages in app.flashes %}
-    {% for message in messages %}
-        <twig:AlertBootstrap type="{{ label }}" message="{{ message }}" />
-    {% endfor %}
-{% endfor %}

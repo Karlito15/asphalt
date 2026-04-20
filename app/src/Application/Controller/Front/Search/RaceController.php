@@ -6,9 +6,9 @@ namespace App\Application\Controller\Front\Search;
 
 use App\Application\DTO\Search\RaceDTO;
 use App\Application\Service\Controller\WebController;
+use App\Domain\Abstract\BaseController;
 use App\Domain\Form\Front\Search\RaceAppType;
 use App\Domain\Repository\RaceAppRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -22,7 +22,7 @@ use Symfony\Component\Routing\Attribute\Route;
     format: 'html',
     utf8: true
 )]
-final class RaceController extends AbstractController
+final class RaceController extends BaseController
 {
     use WebController;
 
@@ -39,25 +39,32 @@ final class RaceController extends AbstractController
     public function race(Request $request, RaceAppRepository $repository): Response
     {
         ### Variables
-        $result = [];
-        $home   = $this->translator->trans('text.search');
-        $title  = $this->translator->trans('text.race');
-        $dto    = new RaceDTO();
-        $form   = $this->createForm(RaceAppType::class, $dto)->handleRequest($request);
+        $result     = [];
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $search     = $this->translator->trans('text.search');
+        $title      = $this->translator->trans('text.race');
+        $dto        = new RaceDTO();
+        $form       = $this->createForm(RaceAppType::class, $dto)->handleRequest($request);
+        $breadcrumb = [
+            ['label' => $dashboard, 'route' => 'app.dashboard.index', 'parameters' => []],
+            ['label' => $search, 'route' => 'app.search.race', 'parameters' => []],
+            ['label' => $title, 'route' => null, 'parameters' => []],
+        ];
 
         ### Form
         if ($form->isSubmitted() && $form->isValid()) {
             $result = $repository->search($dto);
         }
-        return $this->render('@App/contents/front/search/race.html.twig', [
-            'container'        => 'container-fluid pt-4 px-4',
-            'breadcrumb'      => self::Breadcrumb($home, $title),
-            'links'           => self::$crud,
-            'controller_name' => $home,
-            'current_page'    => $request->attributes->get('_route'),
-            'entities'        => $result,
-            'form'            => $form->createView(),
-            'count'           => count($result),
+        return $this->render('@App/theme-lte/contents/front/search/race.html.twig', [
+            'breadcrumb'        => self::breadcrumb($breadcrumb),
+            'links'             => self::$crud,
+            'controller_name'   => $search . ' ' . $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'entities'          => $result,
+            'form'              => $form->createView(),
+            'count'             => count($result),
+            'container'         => 'container-fluid pt-4 px-4',
+            'theme'             => 'dark',
         ]);
     }
 }

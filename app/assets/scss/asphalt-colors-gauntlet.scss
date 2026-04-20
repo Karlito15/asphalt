@@ -1,0 +1,24 @@
+// Color system
+
+// fusv-disable
+$gauntlet-100: tint-color($gauntlet, 80%) !default;
+$gauntlet-200: tint-color($gauntlet, 60%) !default;
+$gauntlet-300: tint-color($gauntlet, 40%) !default;
+$gauntlet-400: tint-color($gauntlet, 20%) !default;
+$gauntlet-500: $gauntlet !default;
+$gauntlet-600: shade-color($gauntlet, 20%) !default;
+$gauntlet-700: shade-color($gauntlet, 40%) !default;
+$gauntlet-800: shade-color($gauntlet, 60%) !default;
+$gauntlet-900: shade-color($gauntlet, 80%) !default;
+
+$gauntlets: (
+  "gauntlet-100": $gauntlet-100,
+  "gauntlet-200": $gauntlet-200,
+  "gauntlet-300": $gauntlet-300,
+  "gauntlet-400": $gauntlet-400,
+  "gauntlet-500": $gauntlet-500,
+  "gauntlet-600": $gauntlet-600,
+  "gauntlet-700": $gauntlet-700,
+  "gauntlet-800": $gauntlet-800,
+  "gauntlet-900": $gauntlet-900
+) !default;

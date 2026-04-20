@@ -1,0 +1,162 @@
+
+<!--begin::Sidebar-->
+<aside class="app-sidebar bg-body-tertiary shadow">
+    <!--begin::Sidebar Brand-->
+    <div class="sidebar-brand">
+        <!--begin::Brand Link-->
+        <a href="{{ path('app.dashboard.index') }}" class="brand-link">
+            <!--begin::Brand Image-->
+{#            <img src="{{ asset('images/logo-official.webp') }}" class="brand-image opacity-75 shadow" alt="{{ metas.title }}" />#}
+            <img src="{{ asset(images.logo.front) }}" class="brand-image opacity-75 shadow" alt="{{ metas.title }}" />
+            <!--end::Brand Image-->
+            <!--begin::Brand Text-->
+{#            <span class="brand-text">{{ metas.title }}</span>#}
+            <!--end::Brand Text-->
+        </a>
+        <!--end::Brand Link-->
+    </div>
+    <!--end::Sidebar Brand-->
+    <!--begin::Sidebar Wrapper-->
+    <div class="sidebar-wrapper">
+        <nav class="mt-2">
+            <!--begin::Sidebar Menu-->
+            <ul
+                class="nav sidebar-menu flex-column"
+                data-lte-toggle="treeview"
+                role="list"
+                aria-label="navigation"
+                data-accordion="false"
+                id="navigation"
+            >
+                <li class="nav-item">
+                    <a href="{{ path('app.dashboard.index') }}" class="nav-link active">
+                        <i class="nav-icon fa fa-house"></i>
+                        <p>
+                            {{ 'text.dashboard'|trans }}
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('app.garage.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-automobile"></i>
+                        <p>{{ 'text.garage'|trans }}</p>
+                    </a>
+                </li>
+                <li class="nav-header">{{ 'text.page'|trans|plural }}</li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon bi bi-box-seam-fill"></i>
+                        <p>
+                            {{ 'text.filter'|trans }}
+                            <i class="nav-arrow bi bi-chevron-right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ path('app.page.filter.unblock', {'letter': 'S'}) }}" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>{{ 'text.unblock'|trans }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('app.page.filter.block', {'letter': 'S'}) }}" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>{{ 'text.block'|trans }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('app.page.filter.gold', {'letter': 'S'}) }}" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>{{ 'text.gold'|trans }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('app.page.filter.event', {'letter': 'S'}) }}" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>{{ 'text.event.class'|trans }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('app.page.filter.evo', {'letter': 'S'}) }}" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>{{ 'text.evo'|trans }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon bi bi-box-seam-fill"></i>
+                        <p>
+                            {{ 'text.order'|trans }}
+                            <i class="nav-arrow bi bi-chevron-right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ path('app.page.order.class', {'letter': 'S'}) }}" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>{{ 'text.order.class'|trans }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('app.page.order.stat', {'letter': 'S'}) }}" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>{{ 'text.order.stat'|trans }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon bi bi-box-seam-fill"></i>
+                        <p>
+                            {{ 'text.search'|trans }}
+                            <i class="nav-arrow bi bi-chevron-right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ path('app.dashboard.index') }}" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>{{ 'text.garage'|trans }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('app.dashboard.index') }}" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>{{ 'text.race'|trans }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-header">{{ 'text.app'|trans|plural }}</li>
+                <li class="nav-item">
+                    <a href="{{ path('app.race.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-flag-checkered"></i>
+                        <p>{{ 'text.race'|trans }}</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('app.mission.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-bullseye"></i>
+                        <p>{{ 'text.mission'|trans }}</p>
+                    </a>
+                </li>
+                <li class="nav-header">{{ 'text.back-office'|trans }}</li>
+                <li class="nav-item">
+                    <a href="{{ path('admin.dashboard.index') }}" class="nav-link">
+                        <i class="nav-icon bi bi-circle text-danger"></i>
+                        <p class="text text-danger">{{ 'text.dashboard'|trans }}</p>
+                    </a>
+                </li>
+            </ul>
+            <!--end::Sidebar Menu-->
+        </nav>
+    </div>
+    <!--end::Sidebar Wrapper-->
+</aside>
+<!--end::Sidebar-->

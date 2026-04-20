@@ -78,12 +78,16 @@ class GarageAppRepository extends ServiceEntityRepository
     public function getGaragePageFilter(array|null $where = null): array
     {
         $qb = $this->queryGarage();
+
+        ### WHERE
         if (!is_null($where)) {
             foreach ($where as $key => $value) {
                 $parameter = str_replace('.', '_', $key);
                 $qb->andWhere($key . ' = :' . $parameter)->setParameter($parameter, $value);
             }
         }
+
+        ### ORDER
         $qb->addOrderBy('g.carOrder', 'ASC');
 
         return $qb->getQuery()->getArrayResult();

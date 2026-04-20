@@ -1,0 +1,83 @@
+/**
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;700;900&display=swap" rel="stylesheet">
+*/
+
+@font-face {
+    font-family: "Black Ops One", sans-serif;
+    src: url('../fonts/BlackOpsOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Fira Code", monospace;
+    src: url('../fonts/FiraCode-Regular.ttf'), url('../fonts/FiraCode-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Titillium Web", sans-serif;
+    src:
+        url('../fonts/TitilliumWeb-Black.ttf'),
+        url('../fonts/TitilliumWeb-Bold.ttf'),
+        url('../fonts/TitilliumWeb-ExtraLight.ttf'),
+        url('../fonts/TitilliumWeb-Regular.ttf')
+        format('truetype');
+}
+
+/** BLACK OPS ONE */
+
+.black-ops-one-regular {
+    font-family: "Black Ops One", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/** FIRA CODE */
+
+.fira-code-regular {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fira-code-bold {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/** TITILLIUM WEB */
+
+.titillium-web-extralight {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.titillium-web-regular {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.titillium-web-bold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.titillium-web-black {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}

@@ -43,13 +43,14 @@ final class BlueprintController extends AbstractController
         $home  = $this->translator->trans('text.setting');
         $title = $this->translator->trans('text.all.blueprints');
 
-        return $this->render('@App/contents/back/setting/blueprint.html.twig', [
-            'container'       => 'container-fluid',
-            'breadcrumb'      => self::Breadcrumb($home, $title),
-            'links'           => self::$crud,
-            'controller_name' => $title,
-            'current_page'    => $request->attributes->get('_route'),
-            'entities'        => $repository->findAll(),
+        return $this->render('@App/theme-aero/contents/back/setting/blueprint.html.twig', [
+            'container'         => 'container-fluid',
+            'breadcrumb'        => self::Breadcrumb($home, $title),
+            'links'             => self::$crud,
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'entities'          => $repository->findAll(),
+            'theme'             => 'dark',
         ]);
     }
 
@@ -77,14 +78,15 @@ final class BlueprintController extends AbstractController
             return $this->redirectToIndex();
         }
 
-        return $this->render('@App/contents/back/common-form.html.twig', [
-            'container'       => 'container-fluid',
-            'breadcrumb'      => self::Breadcrumb($home, $page),
-            'links'           => self::$crud,
-            'entities'        => $entity,
-            'controller_name' => $title,
-            'current_page'    => $request->attributes->get('_route'),
-            'form'            => $form,
+        return $this->render('@App/theme-aero/contents/back/common-form.html.twig', [
+            'container'         => 'container-fluid',
+            'breadcrumb'        => self::Breadcrumb($home, $page),
+            'links'             => self::$crud,
+            'entities'          => $entity,
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'form'              => $form,
+            'theme'             => 'dark',
         ]);
     }
 
@@ -110,14 +112,15 @@ final class BlueprintController extends AbstractController
             return $this->redirectToIndex();
         }
 
-        return $this->render('@App/contents/back/common-form.html.twig', [
-            'container'       => 'container-fluid',
-            'breadcrumb'      => self::Breadcrumb($home, $page),
-            'links'           => self::$crud,
-            'controller_name' => $title,
-            'current_page'    => $request->attributes->get('_route'),
-            'entities'        => $entities,
-            'form'            => $form,
+        return $this->render('@App/theme-aero/contents/back/common-form.html.twig', [
+            'container'         => 'container-fluid',
+            'breadcrumb'        => self::Breadcrumb($home, $page),
+            'links'             => self::$crud,
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'entities'          => $entities,
+            'form'              => $form,
+            'theme'             => 'dark',
         ]);
     }
 

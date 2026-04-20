@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+:root {
+    --shadow-card: 0 1rem 2rem rgba(0, 0, 0, 0.75);
+    --title-font-display: "Black Ops One", system-ui, sans-serif;
+    --sidebar-width: 100px;
+}
+
+:root,
+[data-bs-theme=light] {
+}
+
+:root,
+[data-bs-theme=dark] {
+}
+
+@media (min-width: 1400px) {
+    :root {
+        --min-height: 5vw;
+        --sidebar-width: 200px;
+    }
+}
+
+.app-wrapper {
+    display: grid;
+    grid-template-areas: "app-sidebar app-header" "app-sidebar app-main" "app-sidebar app-footer";
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-columns: auto 1fr;
+    grid-gap: 0;
+    align-content: stretch;
+    align-items: stretch;
+    max-width: 100vw;
+    min-height: 95vh;
+}
+
+.app-header {
+    grid-area: app-header;
+    max-width: 100vw;
+    min-height: var(--min-height);
+}
+
+.app-sidebar {
+    grid-area: app-sidebar;
+    max-width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+}
+
+.app-sidebar .img-fluid {
+    height: 40px;
+}
+
+.app-main {
+    grid-area: app-main;
+    max-width: 100vw;
+    min-height: var(--min-height);
+}
+
+.app-content {}
+
+.app-footer {
+    grid-area: app-footer;
+    max-width: 100vw;
+    min-height: var(--min-height);
+}
+
+.app-footer .img-fluid {
+    height: var(--min-height);
+}

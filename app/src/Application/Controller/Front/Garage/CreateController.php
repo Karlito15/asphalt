@@ -8,11 +8,11 @@ use App\Application\Event\Garage\AppCreateEvent;
 use App\Application\Event\Setting\BrandEvent;
 use App\Application\Event\Setting\ClassEvent;
 use App\Application\Service\Controller\WebController;
+use App\Domain\Abstract\BaseController;
 use App\Domain\Entity\GarageApp;
 use App\Domain\Form\Front\Garage\AppCreateType;
 use Doctrine\ORM\EntityManagerInterface;
 use RuntimeException;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,7 +27,7 @@ use Symfony\Component\Routing\Attribute\Route;
     format: 'html',
     utf8: true
 )]
-final class CreateController extends AbstractController
+final class CreateController extends BaseController
 {
     use WebController;
 
@@ -48,8 +48,14 @@ final class CreateController extends AbstractController
     ): Response
     {
         ### Variables
-        $home  = $this->translator->trans('text.garage');
-        $title = $this->translator->trans('text.create.car');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $garage     = $this->translator->trans('text.garage');
+        $title      = $this->translator->trans('text.create.car');
+        $breadcrumb = [
+            ['label' => $dashboard, 'route' => 'app.dashboard.index', 'parameters' => []],
+            ['label' => $garage, 'route' => 'app.garage.index', 'parameters' => []],
+            ['label' => $title, 'route' => null, 'parameters' => []],
+        ];
 
         ### Création du formulaire
         $garage = new GarageApp();
@@ -91,15 +97,16 @@ final class CreateController extends AbstractController
             return $this->redirectToIndex();
         }
 
-        return $this->render('@App/contents/front/garage/create.html.twig', [
+        return $this->render('@App/theme-lte/contents/front/garage/create.html.twig', [
+            'breadcrumb'        => self::breadcrumb($breadcrumb),
+            'links'             => self::$crud,
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'garage'            => $garage,
+            'game_update_last'  => $manager->getRepository(GarageApp::class)->getLastUpdate(),
+            'form'              => $form,
             'container'         => 'container-fluid pt-4 px-4',
-            'breadcrumb'       => self::Breadcrumb($home, $title),
-            'links'            => self::$crud,
-            'controller_name'  => $title,
-            'current_page'     => $request->attributes->get('_route'),
-            'garage'           => $garage,
-            'game_update_last' => $manager->getRepository(GarageApp::class)->getLastUpdate(),
-            'form'             => $form,
+            'theme'             => 'dark',
         ]);
     }
 }
