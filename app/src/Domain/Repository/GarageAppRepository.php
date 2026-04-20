@@ -43,26 +43,11 @@ class GarageAppRepository extends ServiceEntityRepository
      */
     public function findList(): array
     {
-        $qb = $this
-            ->createQueryBuilder('g')
-            ->select(self::$select)
-            ### Join Garage Status
-            ->leftJoin('g.status', 'status')
-            ->addSelect('status.unblock AS status_unblock')
-            ->addSelect('status.gold AS status_gold')
-            ->addSelect('status.toUpgrade AS status_to_upgrade')
-            ### Join Setting Brand
-            ->leftJoin('g.settingBrand', 'settingBrand')
-            ->addSelect('settingBrand.name AS brand')
-            ### Join Setting Class
-            ->leftJoin('g.settingClass', 'settingClass')
-            ->addSelect('settingClass.value AS class_value')
-            ->addSelect('settingClass.classOrder AS class_order')
-            ### GROUP BY
-            ->groupBy('g.id')
-            ### ORDER BY
-            ->orderBy('g.gameUpdate', 'DESC')
-        ;
+        $qb = $this->queryGarage();
+
+        ### ORDER
+        $qb->orderBy('g.gameUpdate', 'DESC');
+        $qb->addOrderBy('class_order', 'DESC');
 
         return $qb->getQuery()->getArrayResult();
     }
@@ -78,12 +63,16 @@ class GarageAppRepository extends ServiceEntityRepository
     public function getGaragePageFilter(array|null $where = null): array
     {
         $qb = $this->queryGarage();
+
+        ### WHERE
         if (!is_null($where)) {
             foreach ($where as $key => $value) {
                 $parameter = str_replace('.', '_', $key);
                 $qb->andWhere($key . ' = :' . $parameter)->setParameter($parameter, $value);
             }
         }
+
+        ### ORDER
         $qb->addOrderBy('g.carOrder', 'ASC');
 
         return $qb->getQuery()->getArrayResult();

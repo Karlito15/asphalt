@@ -1,0 +1,88 @@
+{% extends '@App/base.html.twig' %}
+
+{% block meta %}
+{{ parent() }}
+<!--begin::Accessibility Features-->
+<!-- Skip links will be dynamically added by accessibility.js -->
+<meta name="supported-color-schemes" content="light dark" />
+<link rel="preload" href="{{ asset('themes/lte/assets/css/adminlte.css') }}" as="style" />
+<!--end::Accessibility Features-->
+{% endblock %}
+
+{% block stylesheets %}
+<!--begin::Third Party Plugin(OverlayScrollbars)-->
+{#<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css" crossorigin="anonymous" />#}
+<!--end::Third Party Plugin(OverlayScrollbars)-->
+<!--begin::Third Party Plugin(Bootstrap Icons)-->
+<link rel="stylesheet" href="{{ asset('libraries/bootstrap-icons/1.13.1/bootstrap-icons.min.css') }}" crossorigin="anonymous" />
+<!--end::Third Party Plugin(Bootstrap Icons)-->
+<!--begin::Required Plugin(AdminLTE)-->
+<link rel="stylesheet" href="{{ asset('themes/lte/assets/css/adminlte.css') }}" />
+<!--end::Required Plugin(AdminLTE)-->
+
+
+    {% if app.environment == 'dev' %}
+    <style>
+        .app-sidebar .sidebar-brand, .app-header.bg-body { background-color: darkred !important; }
+    </style>
+    {% endif %}
+
+{% endblock %}
+
+{% block body %} class="layout-fixed sidebar-expand-lg bg-body-secondary"{% endblock %}
+
+{% block wrapper %}
+    {% block preloader %}{% endblock %}
+<!--begin::App Wrapper-->
+<div class="app-wrapper">
+    {% block header %}{% endblock %}
+    {% block sidebar %}{% endblock %}
+    {% block container %}{% endblock %}
+    {% block footer %}{% endblock %}
+</div>
+<!--end::App Wrapper-->
+{% endblock %}
+
+{% block javascripts %}
+<!--begin::Script-->
+<!--begin::Third Party Plugin(OverlayScrollbars)-->
+{#<script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js" crossorigin="anonymous"></script>#}
+<!--end::Third Party Plugin(OverlayScrollbars)-->
+<!--begin::Required Plugin(popperjs for Bootstrap 5)-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<!--end::Required Plugin(popperjs for Bootstrap 5)-->
+<!--begin::Required Plugin(Bootstrap 5)-->
+<script src="{{ asset('libraries/bootstrap/5.3.8/js/bootstrap.min.js') }}" crossorigin="anonymous"></script>
+<!--end::Required Plugin(Bootstrap 5)-->
+<!--begin::Required Plugin(AdminLTE)-->
+<script src="{{ asset('themes/lte/assets/js/adminlte.js') }}"></script>
+<!--end::Required Plugin(AdminLTE)-->
+<!--begin::OverlayScrollbars Configure-->
+<script>
+// const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
+// const Default = {
+//     scrollbarTheme: 'os-theme-light',
+//     scrollbarAutoHide: 'leave',
+//     scrollbarClickScroll: true,
+// };
+// document.addEventListener('DOMContentLoaded', function() {
+    // const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+    // Disable OverlayScrollbars on mobile devices to prevent touch interference
+    // const isMobile = window.innerWidth <= 992;
+    // if (
+    //     sidebarWrapper &&
+    //     (OverlayScrollbarsGlobal ? .OverlayScrollbars !== undefined) && !isMobile
+    // ) {
+    //     OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+    //         scrollbars: {
+    //             theme: Default.scrollbarTheme,
+    //             autoHide: Default.scrollbarAutoHide,
+    //             clickScroll: Default.scrollbarClickScroll,
+    //         },
+    //     });
+    // }
+// });
+</script>
+<!--end::OverlayScrollbars Configure-->
+<!--end::Script-->
+{% endblock %}

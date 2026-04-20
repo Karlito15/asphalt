@@ -1,0 +1,25 @@
+
+<!--begin::Row-->
+<div class="row">
+    <div class="col-sm-6">
+        <h3 class="mb-0">{{ controller_name }}</h3>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-end">
+        {% for item in breadcrumb %}
+            {% if item.route is not empty %}
+            <li class="breadcrumb-item">
+                <a href="{{ path(item.route, item.params|default({})) }}">
+                    {{ item.label }}
+                </a>
+            </li>
+            {% else %}
+            <li class="breadcrumb-item active fw-bolder" aria-current="page">
+                {{ item.label }}
+            </li>
+            {% endif %}
+        {% endfor %}
+        </ol>
+    </div>
+</div>
+<!--end::Row-->

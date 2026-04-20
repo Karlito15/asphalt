@@ -1,0 +1,29 @@
+{% extends '@App/theme-lte/bases/common/page-index-front.html.twig' %}
+
+{% block table %}
+        <tbody>
+        {% for item in entities %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>
+                    <a href="javascript:void(0);">update</a>
+                </td>
+            </tr>
+        {% else %}
+            <twig:TableEmpty value="{{ 2 }}" />
+        {% endfor %}
+        </tbody>
+        <thead>
+            {{ _self.legend() }}
+        </thead>
+        <tfoot>
+            {{ _self.legend() }}
+        </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+            <tr>
+                <th>Id</th>
+                <th>Action</th>
+            </tr>
+{% endmacro %}

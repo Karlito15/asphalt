@@ -68,7 +68,7 @@ final class BackController extends AbstractController
 
         ### Response
         return new Response(
-            $this->renderView('@App/contents/sitemap/index.xml.twig', [
+            $this->renderView('@App/theme-lte/contents/sitemap/index.xml.twig', [
                 'controller_name' => 'Back',
                 'urls'            => $urls,
                 'hostname'        => $hostname,

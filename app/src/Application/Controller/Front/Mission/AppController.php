@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Application\Controller\Front\Mission;
 
 use App\Application\Service\Controller\WebController;
+use App\Domain\Abstract\BaseController;
 use App\Domain\Repository\MissionAppRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -19,7 +19,7 @@ use Symfony\Component\Routing\Attribute\Route;
     format: 'html',
     utf8: true
 )]
-final class AppController extends AbstractController
+final class AppController extends BaseController
 {
     use WebController;
 
@@ -36,16 +36,21 @@ final class AppController extends AbstractController
     public function index(Request $request, MissionAppRepository $repository): Response
     {
         ### Variables
-        $home  = $this->translator->trans('text.mission');
-        $title = $this->translator->trans('text.all.missions');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.all.missions');
+        $breadcrumb = [
+            ['label' => $dashboard, 'route' => 'app.dashboard.index', 'parameters' => []],
+            ['label' => $title, 'route' => null, 'parameters' => []],
+        ];
 
-        return $this->render('@App/contents/front/page/mission.html.twig', [
-            'container'        => 'container-fluid pt-4 px-4',
-            'breadcrumb'      => self::Breadcrumb($home, $title),
-            'links'           => self::$crud,
-            'controller_name' => $title,
-            'current_page'    => $request->attributes->get('_route'),
-            'entities'        => $repository->findAll(),
+        return $this->render('@App/theme-lte/contents/front/page/mission.html.twig', [
+            'breadcrumb'        => self::breadcrumb($breadcrumb),
+            'links'             => self::$crud,
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'entities'          => $repository->findAll(),
+            'container'         => 'container-fluid pt-4 px-4',
+            'theme'             => 'dark',
         ]);
     }
 }

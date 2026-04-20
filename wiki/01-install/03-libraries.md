@@ -62,6 +62,9 @@ php bin/console importmap:require htmx.org
 ``` shell
 php bin/console importmap:require sweetalert
 ```
+``` shell
+php bin/console importmap:require @popperjs/core
+```
 
 #### Development
 ``` shell

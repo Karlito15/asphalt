@@ -21,28 +21,31 @@ parameters:
         pack_blueprint:     6
         pack_price:         900
         evo_target:         24
-    ### IMAGES
-    images:
-        avatar: 'images/sako-01.jpg'
     ### FOLDERS
     folders.cache:          '%kernel.project_dir%/public/cache/'
 when@dev:
     parameters:
+        ### CACHES
         cache_lifetime:
-#            dashboards:     60   # 1 min
+            dashboards:     60   # 1 min
             sitemaps:       3    # 5 mins
-#            statistics:     300  # 5 mins
+            statistics:     300  # 5 mins
+        ### IMAGES
         images:
+            avatar:         'images/sako-01.jpg'
             logo:
                 front:      'images/logo-yellow.png'
                 back:       'images/logo-green.png'
 when@prod:
     parameters:
+        ### CACHES
         cache_lifetime:
-#            dashboards:     3600    # (60 * 60 = 1 hour)
+            dashboards:     3600    # (60 * 60 = 1 hour)
             sitemaps:       2678400 # (60 * 60 * 24 * 31 = 1 month)
-#            statistics:     2678400 # (60 * 60 * 24 * 31 = 1 month)
+            statistics:     2678400 # (60 * 60 * 24 * 31 = 1 month)
+        ### IMAGES
         images:
+            avatar:         'images/sako-01.jpg'
             logo:
-                front:     'images/logo-white.png'
-                back:      'images/logo-blue.png'
+                front:      'images/logo-white.png'
+                back:       'images/logo-blue.png'

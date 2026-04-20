@@ -1,0 +1,51 @@
+{% extends '@App/theme-lte/bases/common/page-index-back.html.twig' %}
+
+{% block table %}
+
+    <tbody>
+    {% for item in entities %}
+        <tr>
+            <td class="{{ classes.table.td }}">{{ item.id }}</td>
+            <td class="{{ classes.table.td }}">{{ item.category }}</td>
+            <td class="{{ classes.table.td }}">{{ item.label }}</td>
+            <td class="{{ classes.table.td }} text-end">{{ item.value|number_format }}</td>
+            <td class="{{ classes.table.td }} text-center">{{ item.filter }}</td>
+            <td class="{{ classes.table.td }} text-center">{{ item.position }}</td>
+            <td class="{{ classes.table.td }} text-center">{# {{ component('ValueBoolean', {value: item.active}) }} #}</td>
+            <td class="{{ classes.table.td }}">{{ item.slug }}</td>
+            <td class="{{ classes.table.td }}"><twig:TableDate value="{{ item.createdAt }}" /></td>
+            <td class="{{ classes.table.td }}"><twig:TableDate value="{{ item.updatedAt }}" /></td>
+            <td class="{{ classes.table.td }} text-end">
+                <a href="{{ path(links.update, {'id': item.id}) }}" class="{{ classes.button.table }} btn-outline-info">
+                    {{ 'text.update'|trans }}
+                </a>
+            </td>
+        </tr>
+    {% else %}
+        <twig:TableEmpty value="{{ 11 }}" />
+    {% endfor %}
+    </tbody>
+
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr>
+        <th>{{ 'text.id'|trans|plural|upper }}</th>
+        <th>{{ 'text.category'|trans|plural|upper }}</th>
+        <th>{{ 'text.label'|trans|plural|upper }}</th>
+        <th class="text-end">{{ 'text.value'|trans|plural|upper }}</th>
+        <th class="text-center">{{ 'text.filter'|trans|plural|upper }}</th>
+        <th class="text-center">{{ 'text.position'|trans|plural|upper }}</th>
+        <th class="text-center">{{ 'text.active'|trans|plural|upper }}</th>
+        <th>{{ 'text.slug'|trans|plural|upper }}</th>
+        <th>{{ 'text.date.created.at'|trans|upper }}</th>
+        <th>{{ 'text.date.updated.at'|trans|upper }}</th>
+        <th class="text-end">{{ 'text.action'|trans|upper }}</th>
+    </tr>
+{% endmacro %}

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Application\Controller\Front\Garage;
 
 use App\Application\Service\Controller\WebController;
+use App\Domain\Abstract\BaseController;
 use App\Domain\Repository\GarageAppRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -20,7 +20,7 @@ use Symfony\Component\Routing\Attribute\Route;
     format: 'html',
     utf8: true
 )]
-final class AppController extends AbstractController
+final class AppController extends BaseController
 {
     use WebController;
 
@@ -37,16 +37,21 @@ final class AppController extends AbstractController
     public function index(Request $request, GarageAppRepository $repository): Response
     {
         ### Variables
-        $home  = $this->translator->trans('text.garage');
-        $title = $this->translator->trans('text.all.cars');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.all.cars');
+        $breadcrumb = [
+            ['label' => $dashboard, 'route' => 'app.dashboard.index', 'parameters' => []],
+            ['label' => $title, 'route' => null, 'parameters' => []],
+        ];
 
-        return $this->render('@App/contents/front/garage/index.html.twig', [
-            'container'        => 'container-fluid pt-4 px-4',
-            'breadcrumb'      => self::Breadcrumb($home, $title),
-            'links'           => self::$crud,
-            'controller_name' => $title,
-            'current_page'    => $request->attributes->get('_route'),
-            'entities'        => $repository->findList(),
+        return $this->render('@App/theme-lte/contents/front/garage/index.html.twig', [
+            'breadcrumb'        => self::breadcrumb($breadcrumb),
+            'links'             => self::$crud,
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'entities'          => $repository->findList(),
+            'container'         => 'container-fluid pt-4 px-4',
+            'theme'             => 'dark',
         ]);
     }
 }

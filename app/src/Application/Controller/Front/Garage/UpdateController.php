@@ -9,11 +9,11 @@ use App\Application\Event\Garage\AppUpdateLevelEvent;
 use App\Application\Event\Garage\AppUpdateStatusControlEvent;
 use App\Application\Event\Garage\AppUpdateStatusEvent;
 use App\Application\Service\Controller\WebController;
+use App\Domain\Abstract\BaseController;
 use App\Domain\Entity\GarageApp;
 use App\Domain\Form\Front\Garage\AppUpdateType;
 use Doctrine\ORM\EntityManagerInterface;
 use RuntimeException;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -30,7 +30,7 @@ use Symfony\Component\Routing\Requirement\Requirement;
 	format: 'html',
 	utf8: true
 )]
-final class UpdateController extends AbstractController
+final class UpdateController extends BaseController
 {
 	use WebController;
 
@@ -52,8 +52,14 @@ final class UpdateController extends AbstractController
 	): Response
 	{
 		### Variables
-		$home  = $this->translator->trans('text.garage');
-		$title = $entity->getSettingBrand()->getName() . ' ' . $entity->getModel();
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $garage     = $this->translator->trans('text.garage');
+		$title      = $entity->getSettingBrand()->getName() . ' ' . $entity->getModel();
+        $breadcrumb = [
+            ['label' => $dashboard, 'route' => 'app.dashboard.index', 'parameters' => []],
+            ['label' => $garage, 'route' => 'app.garage.index', 'parameters' => []],
+            ['label' => $this->translator->trans('text.update'), 'route' => null, 'parameters' => []],
+        ];
 
 		### Création du Formulaire
 		$form = $this->createForm(AppUpdateType::class, $entity)->handleRequest($request);
@@ -96,14 +102,15 @@ final class UpdateController extends AbstractController
 			);
 		}
 
-		return $this->render('@App/contents/front/garage/update.html.twig', [
-			'container'        => 'container-fluid pt-4 px-4',
-			'breadcrumb'      => self::Breadcrumb($home, $this->translator->trans('text.update')),
-			'links'           => self::$crud,
-			'controller_name' => $title,
-			'current_page'    => $request->attributes->get('_route'),
-			'entity'          => $entity,
-			'form'            => $form,
+		return $this->render('@App/theme-lte/contents/front/garage/update.html.twig', [
+			'breadcrumb'        => self::breadcrumb($breadcrumb),
+			'links'             => self::$crud,
+			'controller_name'   => $title,
+			'current_page'      => $request->attributes->get('_route'),
+			'entity'            => $entity,
+			'form'              => $form,
+			'container'         => 'container-fluid pt-4 px-4',
+            'theme'             => 'dark',
 		]);
 	}
 }

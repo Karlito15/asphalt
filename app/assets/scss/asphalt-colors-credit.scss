@@ -1,0 +1,24 @@
+// Color system
+
+// fusv-disable
+$credit-100: tint-color($credit, 80%) !default;
+$credit-200: tint-color($credit, 60%) !default;
+$credit-300: tint-color($credit, 40%) !default;
+$credit-400: tint-color($credit, 20%) !default;
+$credit-500: $credit !default;
+$credit-600: shade-color($credit, 20%) !default;
+$credit-700: shade-color($credit, 40%) !default;
+$credit-800: shade-color($credit, 60%) !default;
+$credit-900: shade-color($credit, 80%) !default;
+
+$credits: (
+  "credit-100": $credit-100,
+  "credit-200": $credit-200,
+  "credit-300": $credit-300,
+  "credit-400": $credit-400,
+  "credit-500": $credit-500,
+  "credit-600": $credit-600,
+  "credit-700": $credit-700,
+  "credit-800": $credit-800,
+  "credit-900": $credit-900
+) !default;

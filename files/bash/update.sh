@@ -2,14 +2,14 @@
 clear
 
 # Composer
-php84 /volume3/web/WWW-CDN/composer.phar update --no-scripts
+php84 /volume3/web/WWW-CDN/composer.phar update --no-scripts --no-dev
 
 # Symfony
 php84 /volume3/web/Symfony/Asphalt/app/bin/console about
 
 # Clear Cache (Symfony & Doctrine)
-php84 /volume3/web/Symfony/Asphalt/app/bin/console cache:clear --env prod
-php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console cache:clear --env dev
+php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console cache:clear --env prod
+# php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console cache:clear --env dev
 php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console doctrine:cache:clear-metadata
 php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console doctrine:cache:clear-query
 php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console doctrine:cache:clear-result
@@ -33,13 +33,5 @@ php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console asphalt:
 php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:garage:gauntlet
 #### Mets à jour la Voiture
 php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console asphalt:cron:garage:level
-#### Créer le listing du Garage
-# php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console asphalt:yaml:index:garage
-#### Créer le listing des Missions
-# php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console asphalt:yaml:index:mission
-#### Créer le listing des Courses
-# php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console asphalt:yaml:index:race
-#### Export Garage Order By Class
-# php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console asphalt:csv:order:class export
 #### Exporte toutes les données
 php84 -d memory_limit=512M /volume3/web/Symfony/Asphalt/app/bin/console asphalt:csv:migration export

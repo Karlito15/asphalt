@@ -1,0 +1,43 @@
+{% extends '@App/theme-lte/bases/common/page-index-front.html.twig' %}
+
+{% block table %}
+        <tbody>
+        {% for item in entities %}
+            <tr>
+                <td>{{ item.Mode }}</td>
+                <td>{{ item.Season }}</td>
+                <td>{{ item.track.region.name }}</td>
+                <td>{{ item.track.nameEnglish }}</td>
+                <td>{{ item.track.nameFrench}}</td>
+                <td>{{ item.season.chapter }}</td>
+                <td>{{ item.raceOrder }}</td>
+                <td>{{ item.Time }}</td>
+                <td>{{ item.Finished }}</td>
+            </tr>
+        {% else %}
+            <twig:TableEmpty value="{{ 9 }}" />
+        {% endfor %}
+        </tbody>
+        <thead>
+            {{ _self.legend() }}
+        </thead>
+        <tfoot>
+            {{ _self.legend() }}
+        </tfoot>
+{% endblock %}
+
+{% block id %} id="Race"{% endblock %}
+
+{% macro legend() %}
+            <tr>{#  class="sticky-top" #}
+                <th>{{ 'text.mode'|trans }}</th>
+                <th>{{ 'text.season'|trans }}</th>
+                <th>{{ 'text.region'|trans }}</th>
+                <th>{{ 'text.name.english'|trans|raw }}</th>
+                <th>{{ 'text.name.french'|trans|raw }}</th>
+                <th>{{ 'text.chapter'|trans }}</th>
+                <th>{{ 'text.race.order'|trans|raw }}</th>
+                <th>{{ 'text.time'|trans }}</th>
+                <th>{{ 'text.finished'|trans }}</th>
+            </tr>
+{% endmacro %}

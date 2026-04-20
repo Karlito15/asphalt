@@ -1,0 +1,43 @@
+{% extends '@App/theme-lte/bases/front/base.html.twig' %}
+
+{% block header %}
+    {% include '@App/theme-lte/partials/front/header.html.twig' %}
+{% endblock %}
+
+{% block sidebar %}
+    {% include '@App/theme-lte/partials/front/sidebar.html.twig' %}
+{% endblock %}
+
+{% block container %}
+
+    {% block main %}
+<!--begin::App Wrapper-->
+<div class="app-wrapper">
+    <!--begin::App Main-->
+    <main class="app-main">
+        <!--begin::App Content Header-->
+        <div class="app-content-header">
+        {% block breadcrumb %}
+            {% include '@App/theme-lte/partials/front/breadcrumb.html.twig' %}
+        {% endblock %}
+        </div>
+        <div class="app-content">
+            <!--begin::Container-->
+            <div class="container-fluid">
+                <!--begin::Row-->
+                {% block content %}{% endblock %}
+                <!--end::Row-->
+            </div>
+            <!--end::Container-->
+        </div>
+        <!--end::App Content-->
+    </main>
+    <!--end::App Main-->
+</div>
+    {% endblock %}
+
+{% endblock %}
+
+{% block footer %}
+    {% include '@App/theme-lte/partials/front/footer.html.twig' %}
+{% endblock %}

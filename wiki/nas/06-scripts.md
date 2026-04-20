@@ -58,10 +58,3 @@ php84 bin/console asphalt:cron:garage:status
 ``` shell
 php84 bin/console asphalt:cron:garage:control
 ```
-
-
-
-                
-                
-                
-                

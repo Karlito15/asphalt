@@ -45,24 +45,25 @@ final class DashboardController extends AbstractController
         ### Flash
         $this->addFlash('primary', 'Welcome to Admin !');
 
-        return $this->render('@App/contents/back/dashboard/index.html.twig', [
-            'breadcrumb'      => self::Breadcrumb($home, $title),
-            'container'       => 'container-fluid',
-            'controller_name' => $title . " - " . $home,
-            'current_page'    => $request->attributes->get('_route'),
+        return $this->render('@App/theme-aero/contents/back/dashboard/index.html.twig', [
+            'breadcrumb'        => self::Breadcrumb($home, $title),
+            'container'         => 'container-fluid',
+            'controller_name'   => $title . " - " . $home,
+            'current_page'      => $request->attributes->get('_route'),
+            'theme'             => 'dark',
         ]);
     }
 
     #[Route('/cache.php', name: 'cache')]
     public function cache(): Response
     {
-        // Get Directory
+        ### Get Directory
         $directory = $this->getParameter('folders.cache');
 
-        // Get Key Name of Cache
+        ### Get Key Name of Cache
         $caches = array_keys($this->getParameter('cache_lifetime'));
 
-        // File System
+        ### File System
         $filesystem = new Filesystem();
 
         foreach ($caches as $name) {
@@ -73,7 +74,7 @@ final class DashboardController extends AbstractController
             }
         }
 
-        // Flash Message
+        ### Flash Message
 //        $this->addFlash('success', [
 //            'title'   => $this->translator->trans('text.cache'),
 //            'message' => $this->translator->trans('notification.cache')

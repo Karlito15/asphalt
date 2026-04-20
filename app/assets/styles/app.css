@@ -1,24 +1,23 @@
 :root {
     --shadow-card: 0 1rem 2rem rgba(0, 0, 0, 0.75);
-    --racing-font-display:'Clash Display', system-ui, sans-serif;
 }
 
 /*body {*/
 /*    background-color: transparent !important;*/
 /*}*/
 
-.background {
-    background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%)
-}
+/*.background {*/
+/*    background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%)*/
+/*}*/
 
-.ombre {
-    box-shadow: var(--shadow-card);
-}
+/*.ombre {*/
+/*    box-shadow: var(--shadow-card);*/
+/*}*/
 
-.gradient {
-    background: linear-gradient(135deg, #1F2937, #020617)
-}
+/*.gradient {*/
+/*    background: linear-gradient(135deg, #1F2937, #020617)*/
+/*}*/
 
-.font-racing {
-    font-family: var(--racing-font-display);
-}
+/*.font-racing {*/
+/*    font-family: var(--racing-font-display);*/
+/*}*/

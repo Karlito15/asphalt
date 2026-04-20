@@ -1,0 +1,71 @@
+{% extends '@App/theme-lte/bases/common/page-index-back.html.twig' %}
+
+{% block table %}
+
+    <tbody>
+    {% for item in entities %}
+        <tr>
+            <td class="{{ classes.table.td }}">{{ item.id }}</td>
+            <td class="{{ classes.table.td }} text-end">{{ item.level01|number_format }}</td>
+            <td class="{{ classes.table.td }} text-end">{{ item.level02|number_format }}</td>
+            <td class="{{ classes.table.td }} text-end">{{ item.level03|number_format }}</td>
+            <td class="{{ classes.table.td }} d-none">{{ item.level04|number_format }}</td>
+            <td class="{{ classes.table.td }} d-none">{{ item.level05|number_format }}</td>
+            <td class="{{ classes.table.td }} d-none">{{ item.level06|number_format }}</td>
+            <td class="{{ classes.table.td }} d-none">{{ item.level07|number_format }}</td>
+            <td class="{{ classes.table.td }} d-none">{{ item.level08|number_format }}</td>
+            <td class="{{ classes.table.td }} d-none">{{ item.level09|number_format }}</td>
+            <td class="{{ classes.table.td }} d-none">{{ item.level10|number_format }}</td>
+            <td class="{{ classes.table.td }} text-end">{{ item.level11|number_format }}</td>
+            <td class="{{ classes.table.td }} text-end">{{ item.level12|number_format }}</td>
+            <td class="{{ classes.table.td }} text-end">{{ item.level13|number_format }}</td>
+            <td class="{{ classes.table.td }} text-end">{{ item.common|number_format }}</td>
+            <td class="{{ classes.table.td }} text-end">{{ item.rare|number_format }}</td>
+            <td class="{{ classes.table.td }} text-end">{{ item.epic|number_format }}</td>
+            <td class="{{ classes.table.td }} text-end">{{ item.slug|u.truncate(24, '...') }}</td>
+            <td class="{{ classes.table.td }}"><twig:TableDate value="{{ item.createdAt }}" /></td>
+            <td class="{{ classes.table.td }}"><twig:TableDate value="{{ item.updatedAt }}" /></td>
+            <td class="{{ classes.table.td }} text-end">
+                <a href="{{ path(links.update, {'id': item.id}) }}" class="{{ classes.button.table }} btn-outline-info">
+                    {{ 'text.update'|trans }}
+                </a>
+            </td>
+        </tr>
+    {% else %}
+        <twig:TableEmpty value="{{ 21 }}" />
+    {% endfor %}
+    </tbody>
+
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+{% endblock %}
+
+{% macro legend() %}
+    <tr>
+        <th>{{ 'text.id'|trans }}</th>
+        <th class="text-end">{{ 'text.level01'|trans }}</th>
+        <th class="text-end">{{ 'text.level02'|trans }}</th>
+        <th class="text-end">{{ 'text.level03'|trans }}</th>
+        <th class="d-none">{{ 'text.level04'|trans }}</th>
+        <th class="d-none">{{ 'text.level05'|trans }}</th>
+        <th class="d-none">{{ 'text.level06'|trans }}</th>
+        <th class="d-none">{{ 'text.level07'|trans }}</th>
+        <th class="d-none">{{ 'text.level08'|trans }}</th>
+        <th class="d-none">{{ 'text.level09'|trans }}</th>
+        <th class="d-none">{{ 'text.level10'|trans }}</th>
+        <th class="text-end">{{ 'text.level11'|trans }}</th>
+        <th class="text-end">{{ 'text.level12'|trans }}</th>
+        <th class="text-end">{{ 'text.level13'|trans }}</th>
+        <th class="text-end">{{ 'text.common'|trans }}</th>
+        <th class="text-end">{{ 'text.rare'|trans }}</th>
+        <th class="text-end">{{ 'text.epic'|trans }}</th>
+        <th class="text-end">{{ 'text.slug'|trans }}</th>
+        <th>{{ 'text.date.created.at'|trans }}</th>
+        <th>{{ 'text.date.updated.at'|trans }}</th>
+       <th class="text-end">{{ 'text.action'|trans }}</th>
+    </tr>
+{% endmacro %}
