@@ -11,8 +11,10 @@
 {% block container %}
 
     {% block main %}
+
 <!--begin::App Wrapper-->
 <div class="app-wrapper">
+
     <!--begin::App Main-->
     <main class="app-main">
         <!--begin::App Content Header-->
@@ -24,6 +26,11 @@
         <div class="app-content">
             <!--begin::Container-->
             <div class="container-fluid">
+                {% block notification %}
+                    <div id="flash-messages" class="d-none"></div>
+                    {% include '@App/theme-lte/partials/front/notification.html.twig' %}
+                {% endblock %}
+
                 <!--begin::Row-->
                 {% block content %}{% endblock %}
                 <!--end::Row-->

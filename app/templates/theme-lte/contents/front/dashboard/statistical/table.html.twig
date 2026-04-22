@@ -1,0 +1,36 @@
+
+<h4 class="h4 text-start text-uppercase">
+    {{ 'text.stat.class'|trans }}
+</h4>
+
+<table class="table table-bordered table-striped">{#  small #}
+    <tbody>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    </tbody>
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+</table>
+
+{% macro legend() %}
+    <tr class="table-dark">
+        <th class="align-middle text-start">{{ 'text.legend'|trans }}</th>
+        <th class="align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>D</th>
+        <th class="align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>C</th>
+        <th class="align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>B</th>
+        <th class="align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>A</th>
+        <th class="align-middle text-center"><span class="d-md-none d-lg-inline-block">{{ 'text.class'|trans }}&nbsp;</span>S</th>
+        <th class="align-middle text-end">{{ 'text.total'|trans }}</th>
+    </tr>
+{% endmacro %}

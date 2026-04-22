@@ -21,6 +21,43 @@ class InventoryAppRepository extends ServiceEntityRepository
         parent::__construct($registry, InventoryApp::class);
     }
 
+    ### DASHBOARD
+
+    /**
+     * @param string $query
+     * @return InventoryApp[]
+     * @example SELECT * FROM inventory_app WHERE foo LIKE 'bar%';
+     */
+    public function findByCategory(string $query): array
+    {
+        return $this->findBy(['category' => $query]);
+    }
+
+//    /**
+//     * Retourne les informations pour les extraire dans un fichier YAML
+//     *
+//     * @param string $category
+//     * @return array
+//     */
+//    public function sheet(string $category): array
+//    {
+//        $qb = $this->createQueryBuilder('q');
+//        $qb->select([
+//            'q.category AS Category',
+//            'q.label AS Label',
+//            'q.value AS Value',
+//            'q.filter AS Filter',
+//            'q.position AS Position',
+//            'q.active AS Active',
+//        ]);
+//        $qb->where('q.deletedAt IS NULL');
+//        $qb->andWhere('q.category = :category')->setParameter('category', $category);
+//        $qb->andWhere('q.active = 1');
+//        $qb->orderBy('q.id', 'ASC');
+//
+//        return $qb->getQuery()->getArrayResult();
+//    }
+
     ### EXPORTS
 
     /**

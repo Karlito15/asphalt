@@ -20,11 +20,12 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "composer/package-versions-deprecated": "^1.11.99.5",
-        "damienharper/auditor-bundle": "^7.2",
+        "damienharper/auditor-bundle": "^7.2.1",
+        "damienharper/auditor-doctrine-provider": "^1.2",
         "doctrine/doctrine-bundle": "^3.2.2",
         "doctrine/doctrine-migrations-bundle": "^4.0",
         "doctrine/orm": "^3.6.3",
-        "easycorp/easyadmin-bundle": "^5.0.4",
+        "easycorp/easyadmin-bundle": "^5.0.6",
         "league/csv": "^9.28",
         "phpdocumentor/reflection-docblock": "^6.0.3",
         "phpstan/phpdoc-parser": "^2.3.2",
@@ -52,11 +53,12 @@
         "symfony/runtime": "8.0.*",
         "symfony/security-bundle": "8.0.*",
         "symfony/serializer": "8.0.*",
-        "symfony/stimulus-bundle": "^2.34",
+        "symfony/stimulus-bundle": "^2.35",
         "symfony/string": "8.0.*",
         "symfony/translation": "8.0.*",
         "symfony/twig-bundle": "8.0.*",
-        "symfony/ux-twig-component": "^2.34",
+        "symfony/ux-live-component": "^3.0",
+        "symfony/ux-twig-component": "^2.35",
         "symfony/validator": "8.0.*",
         "symfony/web-link": "8.0.*",
         "symfony/yaml": "8.0.*",
@@ -70,7 +72,7 @@
         "doctrine/doctrine-fixtures-bundle": "^4.3.1",
         "fakerphp/faker": "^1.24.1",
         "phpstan/phpstan-symfony": "^2.0.15",
-        "phpunit/phpunit": "^13.1.1",
+        "phpunit/phpunit": "^13.1.7",
         "roave/security-advisories": "dev-latest",
         "symfony/browser-kit": "8.0.*",
         "symfony/css-selector": "8.0.*",
@@ -83,7 +85,10 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/"
-        }
+        },
+        "exclude-from-classmap": [
+            "vendor/damienharper/auditor-doctrine-provider/src/Provider/Doctrine"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

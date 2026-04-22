@@ -1,0 +1,17 @@
+
+<h4 class="text-start text-uppercase">
+    {{ 'text.coin'|trans|plural() }}
+</h4>
+
+<div class="row row-cols-1 row-cols-md-3 g-md-3 mb-md-3">
+    <twig:FormDashboardInventory maxValue="{{ 999999999 }}" title="{{ 'text.credit'|trans|plural }}" theme="warning" icon="fa-money-check-dollar" show="{{ false }}" form="{{ credits }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999999 }}" title="{{ 'text.token'|trans|plural }}" theme="warning" icon="fa-coins" show="{{ false }}" form="{{ tokens }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999999 }}" title="{{ 'text.epic'|trans|plural }}" theme="warning" icon="fa-money-bill-1" show="{{ false }}" form="{{ epics }}" />
+</div>
+
+<div class="row row-cols-1 row-cols-md-4 g-md-3">
+    <twig:FormDashboardInventory maxValue="{{ 1000 }}" title="{{ 'text.overlock'|trans|plural }}" theme="warning" icon="fa-sack-dollar" show="{{ false }}" form="{{ overlocks }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999999 }}" title="{{ 'text.gauntlet'|trans|plural }}" theme="warning" icon="fa-medal" show="{{ false }}" form="{{ gauntlet }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999999 }}" title="{{ 'text.style'|trans|plural }}" theme="warning" icon="fa-star" show="{{ false }}" form="{{ style }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999999 }}" title="{{ 'text.vip'|trans|plural }}" theme="warning" icon="fa-crown" show="{{ false }}" form="{{ vip }}" />
+</div>

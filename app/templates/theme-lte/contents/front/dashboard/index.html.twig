@@ -1,5 +1,22 @@
 {% extends '@App/theme-lte/bases/front/full.html.twig' %}
 
 {% block content %}
-CODE HERE
+
+    <main class="row">
+        <section class="col-md-9">
+            {% include '@App/theme-lte/contents/front/dashboard/inventory/money.html.twig' %}
+            {% include '@App/theme-lte/contents/front/dashboard/inventory/jokers.html.twig' %}
+            {% include '@App/theme-lte/contents/front/dashboard/inventory/import-rares.html.twig' %}
+            {% include '@App/theme-lte/contents/front/dashboard/inventory/import-commons.html.twig' %}
+        </section>
+        <section class="col-md-3">
+            {% include '@App/theme-lte/contents/front/dashboard/statistical/table.html.twig' %}
+        </section>
+    </main>
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('styles/card-inventory.css') }}" />
 {% endblock %}

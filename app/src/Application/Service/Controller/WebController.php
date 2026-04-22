@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Application\Service\Controller;
 
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,6 +15,7 @@ trait WebController
 {
     public function __construct(
         private readonly KernelInterface $kernel,
+        private readonly EntityManagerInterface $manager,
         private readonly ParameterBagInterface $parameter,
         private readonly TranslatorInterface $translator,
     )

@@ -1,0 +1,36 @@
+
+<h4 class="text-start text-uppercase">
+    {{ 'text.import'|trans|plural() }}
+</h4>
+
+<div class="row row-cols-1 row-cols-md-5 g-md-3 mb-md-3">
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.speed'|trans }} D" theme="danger" icon="fa-rocket" show="{{ true }}" form="{{ speed_d }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.speed'|trans }} C" theme="danger" icon="fa-rocket" show="{{ true }}" form="{{ speed_c }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.speed'|trans }} B" theme="danger" icon="fa-rocket" show="{{ true }}" form="{{ speed_b }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.speed'|trans }} A" theme="danger" icon="fa-rocket" show="{{ true }}" form="{{ speed_a }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.speed'|trans }} S" theme="danger" icon="fa-rocket" show="{{ true }}" form="{{ speed_s }}" />
+</div>
+
+<div class="row row-cols-1 row-cols-md-5 g-md-3 mb-md-3">
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.acceleration'|trans|u.truncate(6, '.') }} D" theme="danger" icon="fa-gauge-high" show="{{ true }}" form="{{ acceleration_d }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.acceleration'|trans|u.truncate(6, '.') }} C" theme="danger" icon="fa-gauge-high" show="{{ true }}" form="{{ acceleration_c }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.acceleration'|trans|u.truncate(6, '.') }} B" theme="danger" icon="fa-gauge-high" show="{{ true }}" form="{{ acceleration_b }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.acceleration'|trans|u.truncate(6, '.') }} A" theme="danger" icon="fa-gauge-high" show="{{ true }}" form="{{ acceleration_a }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.acceleration'|trans|u.truncate(6, '.') }} S" theme="danger" icon="fa-gauge-high" show="{{ true }}" form="{{ acceleration_s }}" />
+</div>
+
+<div class="row row-cols-1 row-cols-md-5 g-md-3 mb-md-3">
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.handling'|trans|u.truncate(6, '.') }} D" theme="danger" icon="fa-gear" show="{{ true }}" form="{{ handling_d }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.handling'|trans|u.truncate(6, '.') }} C" theme="danger" icon="fa-gear" show="{{ true }}" form="{{ handling_c }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.handling'|trans|u.truncate(6, '.') }} B" theme="danger" icon="fa-gear" show="{{ true }}" form="{{ handling_b }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.handling'|trans|u.truncate(6, '.') }} A" theme="danger" icon="fa-gear" show="{{ true }}" form="{{ handling_a }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.handling'|trans|u.truncate(6, '.') }} S" theme="danger" icon="fa-gear" show="{{ true }}" form="{{ handling_s }}" />
+</div>
+
+<div class="row row-cols-1 row-cols-md-5 g-md-3 mb-md-3">
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.nitro'|trans }} D" theme="danger" icon="fa-fire" show="{{ true }}" form="{{ nitro_d }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.nitro'|trans }} C" theme="danger" icon="fa-fire" show="{{ true }}" form="{{ nitro_c }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.nitro'|trans }} B" theme="danger" icon="fa-fire" show="{{ true }}" form="{{ nitro_b }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.nitro'|trans }} A" theme="danger" icon="fa-fire" show="{{ true }}" form="{{ nitro_a }}" />
+    <twig:FormDashboardInventory maxValue="{{ 999 }}" title="{{ 'text.nitro'|trans }} S" theme="danger" icon="fa-fire" show="{{ true }}" form="{{ nitro_s }}" />
+</div>
