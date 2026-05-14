@@ -7,6 +7,7 @@ includes:
     Com: ../files/taskfile/Composer.yaml
     Test: ../files/taskfile/PHPUnit.yaml
     Sym: ../files/taskfile/Symfony.yaml
+    Dev: ../files/taskfile/Development.yaml
 
 vars:
     GREETING: Hello, World!

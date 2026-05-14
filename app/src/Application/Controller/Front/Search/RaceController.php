@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 #[Route(
     path: '/{_locale<%app.supported_locales%>}/search',
-    name: 'app.search.',
+    name: 'app.page.search.',
     options: ['expose' => false],
     methods: ['GET', 'POST'],
     schemes: ['http', 'https'],

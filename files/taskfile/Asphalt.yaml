@@ -19,17 +19,6 @@ tasks:
 
     ### ASPHALT
 
-    database:
-        desc: "Delete Database, Create Database, Load Migrations"
-        cmds:
-            - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-metadata"  # 
-            - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-query"     # 
-            - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-result"    # 
-            - Task Sym:dd                                           # Delete Database
-            - Task Sym:dc                                           # Create Database
-            - Task Sym:dmm                                          # Load Migrations
-        ignore_error: true
-        platforms: [windows/amd64]
     import:
         desc: "Task Database, Import CSV Files to Database"
         cmds:
@@ -60,21 +49,6 @@ tasks:
 #            - "{{.SYMFONY_CONSOLE}} asphalt:csv:order:class export" # Export Garage Order By Class
         ignore_error: true
         platforms: [windows/amd64]
-    launch:
-        desc: "Start Symfony server for local dev"
-        cmds:
-            - Task Sym:secure
-            - Task Sym:start
-            - Task Sym:open
-        ignore_error: true
-        platforms: [windows/amd64]
-    restart:
-        desc: "Restart Symfony Server for Local Dev"
-        cmds:
-            - Task Sym:stop
-            - Task A9:launch
-        ignore_error: true
-        platforms: [windows/amd64]
     scripts:
         desc: "Clear Cache, Install Libraries, Update Librairies, Install Assets, Compile Assets"
         cmds:
@@ -87,7 +61,7 @@ tasks:
             - Task A9:import
             - Task A9:export
 #            - Task A9:scripts
-            - Task A9:launch
+            - Task Dev:launch
 #            - "rm -rf public/cache/"
         ignore_error: false
         platforms: [windows/amd64]

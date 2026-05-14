@@ -54,7 +54,6 @@ php bin/console importmap:require bootstrap-table
 ```
 ``` shell
 php bin/console importmap:require fontawesome
-php bin/console importmap:require fortawesome/fontawesome-free
 ```
 ``` shell
 php bin/console importmap:require htmx.org
@@ -79,6 +78,9 @@ composer require --dev --no-scripts phpstan/phpstan-symfony
 ``` shell
 composer require --dev --no-scripts symfony/phpunit-bridge
 ```
+``` shell
+composer require --dev --no-scripts roave/security-advisories dev-latest
+```
 
 #### ToDo
 ``` shell
@@ -93,4 +95,7 @@ composer require --no-scripts symfony/ux-chartjs
 ``` shell
 composer require --no-scripts twig/markdown-extra
 ```
+
+``` shell
 composer require jolicode/automapper
+```

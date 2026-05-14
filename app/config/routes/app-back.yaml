@@ -1,5 +1,0 @@
-# config/routes/back.yaml
-#back:
-#  resource: ../../src/
-#  type: attribute
-#  prefix: /back

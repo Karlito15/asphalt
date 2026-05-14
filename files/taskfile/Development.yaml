@@ -1,0 +1,48 @@
+version: '3'
+
+silent: true
+
+vars:
+    COMPOSER: composer
+    SYMFONY: symfony
+    SYMFONY_CONSOLE: "{{.SYMFONY}} console"
+
+tasks:
+    default:
+        cmds:
+            - task: help
+
+    ### Karlito
+
+    launch:
+        desc: "Start Symfony server for local dev"
+        cmds:
+            - Task Sym:secure
+            - Task Sym:start
+            - Task Sym:open
+        ignore_error: true
+        platforms: [windows/amd64]
+    restart:
+        desc: "Restart Symfony Server for local Dev"
+        cmds:
+            - Task Sym:stop
+            - Task Dev:launch
+        ignore_error: true
+        platforms: [windows/amd64]
+    cache:
+        desc: "Clear Cache Doctrine & Symfony"
+        cmds:
+            - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-metadata"          # 
+            - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-query"             # 
+            - "{{.SYMFONY_CONSOLE}} doctrine:cache:clear-result"            # 
+            - "{{.SYMFONY_CONSOLE}} cache:clear"                            # 
+        ignore_error: true
+        platforms: [windows/amd64]
+    database:
+        desc: "Database Delete, create, load migrations"
+        cmds:
+            - Task Sym:dd
+            - Task Sym:dc
+            - Task Sym:dmm
+        ignore_error: true
+        platforms: [windows/amd64]

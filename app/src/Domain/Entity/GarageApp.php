@@ -32,7 +32,7 @@ class GarageApp
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
+    #[Assert\Type(type: ['integer', 'null'], message: 'The value "{{ value }}" is not a valid "{{ type }}".')]
     #[Groups(['index', 'sheet', 'filter'])]
     protected ?int $id = null;
 
@@ -87,7 +87,7 @@ class GarageApp
     #[ORM\Column(type: Types::SMALLINT, nullable: false, options: ['default' => 0, 'unsigned' => true])]
     #[Assert\PositiveOrZero]
     #[Assert\Range(min: 0, max: 24)]
-    #[Assert\Type(type: 'integer', message: 'The value {{ value }} is not a valid {{ type }}.')]
+    #[Assert\Type(type: 'integer', message: 'The value "{{ value }}" is not a valid "{{ type }}".')]
     #[Groups(['sheet'])]
     protected int $evo = 0;
 
@@ -101,7 +101,7 @@ class GarageApp
     #[ORM\Column(type: Types::STRING, length: 255, unique: true, nullable: false)]
     #[Assert\Length(min: 1, max: 255)]
     #[Assert\NoSuspiciousCharacters]
-    #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
+    #[Assert\Type(type: 'string', message: 'The value "{{ value }}" is not a valid "{{ type }}".')]
     #[Groups(['index', 'sheet', 'filter'])]
     protected string $slug;
 

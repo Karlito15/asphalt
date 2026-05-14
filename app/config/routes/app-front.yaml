@@ -1,5 +1,0 @@
-# config/routes/front.yaml
-#front:
-#  resource: ../../src/
-#  type: attribute
-#  prefix: /

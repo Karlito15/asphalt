@@ -43,7 +43,7 @@
                 </li>
                 <li class="nav-header">{{ 'text.page'|trans|plural }}</li>
 
-                <li class="nav-item">
+                <li class="nav-item{% if app.request.attributes.get('_route') starts with 'app.page.filter.' %} menu-open{% endif %}">
                     <a href="#" class="nav-link">
                         <i class="nav-icon bi bi-box-seam-fill"></i>
                         <p>
@@ -82,9 +82,21 @@
                                 <p>{{ 'text.evo'|trans }}</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ path('app.page.filter.to.upgrade', {'letter': 'S'}) }}" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>{{ 'text.to.upgrade'|trans }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('app.page.filter.to.gold', {'letter': 'S'}) }}" class="nav-link text-danger disabled">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>{{ 'text.to.gold'|trans }}</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item{% if app.request.attributes.get('_route') starts with 'app.page.order.' %} menu-open{% endif %}">
                     <a href="#" class="nav-link">
                         <i class="nav-icon bi bi-box-seam-fill"></i>
                         <p>
@@ -107,7 +119,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item{% if app.request.attributes.get('_route') starts with 'app.page.search.' %} menu-open{% endif %}">
                     <a href="#" class="nav-link">
                         <i class="nav-icon bi bi-box-seam-fill"></i>
                         <p>
@@ -117,13 +129,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ path('app.dashboard.index') }}" class="nav-link">
+                            <a href="{{ path('app.dashboard.index') }}" class="nav-link disabled">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>{{ 'text.garage'|trans }}</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ path('app.dashboard.index') }}" class="nav-link">
+                            <a href="{{ path('app.dashboard.index') }}" class="nav-link disabled">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>{{ 'text.race'|trans }}</p>
                             </a>
