@@ -25,7 +25,6 @@ final class DashboardController extends BaseController
 {
     use WebController;
 
-
     #[Route(path: '{_locale<%app.supported_locales%>}/index.php', name: 'index')]
     public function index(Request $request, InventoryAppRepository $repository): Response
     {

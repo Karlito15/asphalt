@@ -12,6 +12,9 @@ class BaseController extends AbstractController
      */
     protected static function breadcrumb(array $datas = []): array
     {
+        ### init variables
+        $breadcrumb = [];
+
         foreach ($datas as $item) {
             $breadcrumb[] = [
                 'label'  => $item['label'] ?? '',

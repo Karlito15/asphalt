@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace App\Application\Controller\Back\Setting;
 
 use App\Application\Service\Controller\WebController;
+use App\Domain\Abstract\BaseController;
 use App\Domain\Entity\SettingTag;
 use App\Domain\Form\Back\SettingTagType;
 use App\Domain\Repository\SettingTagRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -23,7 +23,7 @@ use Symfony\Component\Routing\Requirement\Requirement;
     format: 'html',
     utf8: true
 )]
-final class TagController extends AbstractController
+final class TagController extends BaseController
 {
     use WebController;
 
@@ -42,10 +42,14 @@ final class TagController extends AbstractController
         ### Variables
         $home  = $this->translator->trans('text.back-office');
         $title = $this->translator->trans('text.all.tags');
+        $breadcrumb = [
+            ['label' => $home, 'route' => 'admin.dashboard.index', 'parameters' => []],
+            ['label' => $title, 'route' => null, 'parameters' => []],
+        ];
 
         return $this->render('@App/theme-aero/contents/back/setting/tag.html.twig', [
             'container'         => 'container-fluid',
-            'breadcrumb'        => self::Breadcrumb($home, $title),
+            'breadcrumb'        => self::Breadcrumb($breadcrumb),
             'links'             => self::$crud,
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
@@ -63,6 +67,10 @@ final class TagController extends AbstractController
         $title = $this->translator->trans('text.create.tag');
         $entity = new SettingTag();
         $form = $this->createForm(SettingTagType::class, $entity)->handleRequest($request);
+        $breadcrumb = [
+            ['label' => $home, 'route' => 'admin.dashboard.index', 'parameters' => []],
+            ['label' => $title, 'route' => self::$crud['index'], 'parameters' => []],
+        ];
 
         ### Forms
         if ($form->isSubmitted() && $form->isValid()) {
@@ -80,7 +88,7 @@ final class TagController extends AbstractController
 
         return $this->render('@App/theme-aero/contents/back/common-form.html.twig', [
             'container'         => 'container-fluid',
-            'breadcrumb'        => self::Breadcrumb($home, $page),
+            'breadcrumb'        => self::Breadcrumb($breadcrumb),
             'links'             => self::$crud,
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
@@ -98,6 +106,10 @@ final class TagController extends AbstractController
         $page  = $this->translator->trans('text.tag');
         $title = $entities->getValue();
         $form  = $this->createForm(SettingTagType::class, $entities)->handleRequest($request);
+        $breadcrumb = [
+            ['label' => $home, 'route' => 'admin.dashboard.index', 'parameters' => []],
+            ['label' => $title, 'route' => self::$crud['index'], 'parameters' => []],
+        ];
 
         ### Forms
         if ($form->isSubmitted() && $form->isValid()) {
@@ -114,7 +126,7 @@ final class TagController extends AbstractController
 
         return $this->render('@App/theme-aero/contents/back/common-form.html.twig', [
             'container'         => 'container-fluid',
-            'breadcrumb'        => self::Breadcrumb($home, $page),
+            'breadcrumb'        => self::Breadcrumb($breadcrumb),
             'links'             => self::$crud,
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),

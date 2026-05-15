@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace App\Application\Controller\Back\Race;
 
 use App\Application\Service\Controller\WebController;
+use App\Domain\Abstract\BaseController;
 use App\Domain\Entity\RaceApp;
 use App\Domain\Form\Back\RaceAppType;
 use App\Domain\Repository\RaceAppRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -23,7 +23,7 @@ use Symfony\Component\Routing\Requirement\Requirement;
     format: 'html',
     utf8: true
 )]
-final class AppController extends AbstractController
+final class AppController extends BaseController
 {
     use WebController;
 
@@ -42,10 +42,14 @@ final class AppController extends AbstractController
         ### Variables
         $home  = $this->translator->trans('text.race');
         $title = $this->translator->trans('text.all.races');
+        $breadcrumb = [
+            ['label' => $home, 'route' => 'admin.dashboard.index', 'parameters' => []],
+            ['label' => $title, 'route' => null, 'parameters' => []],
+        ];
 
         return $this->render('@App/theme-aero/contents/back/race/app.html.twig', [
             'container'         => 'container-fluid',
-            'breadcrumb'        => self::Breadcrumb($home, $title),
+            'breadcrumb'        => self::Breadcrumb($breadcrumb),
             'links'             => self::$crud,
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
@@ -62,6 +66,10 @@ final class AppController extends AbstractController
         $title  = $this->translator->trans('text.create.race');
         $entity = new RaceApp();
         $form   = $this->createForm(RaceAppType::class, $entity)->handleRequest($request);
+        $breadcrumb = [
+            ['label' => $home, 'route' => 'admin.dashboard.index', 'parameters' => []],
+            ['label' => $title, 'route' => self::$crud['index'], 'parameters' => []],
+        ];
 
         ### Forms
         if ($form->isSubmitted() && $form->isValid()) {
@@ -79,7 +87,7 @@ final class AppController extends AbstractController
 
         return $this->render('@App/theme-aero/contents/back/common-form.html.twig', [
             'container'         => 'container-fluid',
-            'breadcrumb'        => self::Breadcrumb($home, $title),
+            'breadcrumb'        => self::Breadcrumb($breadcrumb),
             'links'             => self::$crud,
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
@@ -96,6 +104,10 @@ final class AppController extends AbstractController
         $home  = $this->translator->trans('text.race');
         $title = $entities->getSlug();
         $form  = $this->createForm(RaceAppType::class, $entities)->handleRequest($request);
+        $breadcrumb = [
+            ['label' => $home, 'route' => 'admin.dashboard.index', 'parameters' => []],
+            ['label' => $title, 'route' => self::$crud['index'], 'parameters' => []],
+        ];
 
         ### Forms
         if ($form->isSubmitted() && $form->isValid()) {
@@ -112,7 +124,7 @@ final class AppController extends AbstractController
 
         return $this->render('@App/theme-aero/contents/back/common-form.html.twig', [
             'container'         => 'container-fluid',
-            'breadcrumb'        => self::Breadcrumb($home, $title),
+            'breadcrumb'        => self::Breadcrumb($breadcrumb),
             'links'             => self::$crud,
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),

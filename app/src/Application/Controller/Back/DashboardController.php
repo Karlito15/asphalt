@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Application\Controller\Back;
 
 use App\Application\Service\Controller\WebController;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Domain\Abstract\BaseController;
 use Symfony\Component\Filesystem\Exception\InvalidArgumentException;
 use Symfony\Component\Filesystem\Exception\RuntimeException;
 use Symfony\Component\Filesystem\Filesystem;
@@ -22,7 +22,7 @@ use Symfony\Component\Routing\Attribute\Route;
     format: 'html',
     utf8: true
 )]
-final class DashboardController extends AbstractController
+final class DashboardController extends BaseController
 {
     use WebController;
 
@@ -41,12 +41,16 @@ final class DashboardController extends AbstractController
         ### Variables
         $home  = $this->translator->trans('text.back-office');
         $title = $this->translator->trans('text.dashboard');
+        $breadcrumb = [
+            ['label' => $home, 'route' => 'admin.dashboard.index', 'parameters' => []],
+            ['label' => $title, 'route' => null, 'parameters' => []],
+        ];
 
         ### Flash
         $this->addFlash('primary', 'Welcome to Admin !');
 
         return $this->render('@App/theme-aero/contents/back/dashboard/index.html.twig', [
-            'breadcrumb'        => self::Breadcrumb($home, $title),
+            'breadcrumb'        => self::Breadcrumb($breadcrumb),
             'container'         => 'container-fluid',
             'controller_name'   => $title . " - " . $home,
             'current_page'      => $request->attributes->get('_route'),

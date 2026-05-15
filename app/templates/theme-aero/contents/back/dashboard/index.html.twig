@@ -21,14 +21,14 @@
     </div>
     <div class="container-fluid">
         <div class="row clearfix">
-            <div class="col-xxl-12">
+            <div class="col-lg-12">
                 <div class="card">
                     <div class="body">
-                    <figure>
-                        <h1 class="display-6 fw-bolder">{{ metas.title }}</h1>
-                        <img src="{{ asset('images/logo-black.png') }}" alt="{{ metas.title }}" height="200" />
-                        <figcaption class="display-4">{{ breadcrumb.page }}</figcaption>
-                    </figure>
+                        <figure class="text-center">
+                            <h1 class="display-6 fw-bolder">{{ metas.title }}</h1>
+                            <img src="{{ asset('images/logo-black.png') }}" alt="{{ metas.title }}" height="200" />
+                            <figcaption class="display-4">{{ breadcrumb.0.label }}</figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>

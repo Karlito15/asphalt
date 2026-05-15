@@ -1,3 +1,5 @@
+# to launch the script : sh /volume3/web/Symfony/Asphalt/files/bash/update.sh
+
 #!/bin/bash
 clear
 

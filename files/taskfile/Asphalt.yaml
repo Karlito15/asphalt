@@ -58,9 +58,11 @@ tasks:
     initialize:
         desc: "Initialize Project"
         cmds:
+            - Task Dev:database
             - Task A9:import
-            - Task A9:export
+#            - Task A9:export
 #            - Task A9:scripts
+            - Task Dev:cache
             - Task Dev:launch
 #            - "rm -rf public/cache/"
         ignore_error: false
