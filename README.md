@@ -2,7 +2,9 @@
 
 ## Symfony App for Asphalt Garage Database
  
-#### Base on : Symfony 8.0
+#### Version : 5.0
+#### Base on : Symfony 8.0.X
+#### PHP     : 8.4
 
 ###### Charset
 ``` text

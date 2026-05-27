@@ -22,7 +22,6 @@ tasks:
     import:
         desc: "Task Database, Import CSV Files to Database"
         cmds:
-            - Task A9:database                                      # Task Database
             - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration import"   # Import Datas
         ignore_error: true
         platforms: [windows/amd64]
@@ -58,11 +57,9 @@ tasks:
     initialize:
         desc: "Initialize Project"
         cmds:
+            - Task Dev:cache
             - Task Dev:database
             - Task A9:import
-#            - Task A9:export
-#            - Task A9:scripts
-            - Task Dev:cache
             - Task Dev:launch
 #            - "rm -rf public/cache/"
         ignore_error: false

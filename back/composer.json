@@ -1,0 +1,215 @@
+{
+    "name": "karlito-web/asphalt",
+    "homepage": "https://github.com/Karlito15/asphalt",
+    "description": "Asphalt 9",
+    "keywords": ["php", "apache", "symfony", "composer", "bootstrap", "font-awesome"],
+    "authors": [
+        {
+            "name": "Karlito15",
+            "email": "giancarlo.palumbo@free.fr",
+            "homepage": "https://www.giancarlo-palumbo.myds.me/",
+            "role": "Freelance"
+        }
+    ],
+    "type": "project",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.4",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "composer/package-versions-deprecated": "^1.11.99.5",
+        "damienharper/auditor": "4.0",
+        "doctrine/doctrine-bundle": "^3.2",
+        "doctrine/doctrine-migrations-bundle": "^4.0",
+        "doctrine/orm": "^3.6.6",
+        "easycorp/easyadmin-bundle": "^5.0.6",
+        "league/csv": "^9.28",
+        "phpdocumentor/reflection-docblock": "^6.0",
+        "phpstan/phpdoc-parser": "^2.3",
+        "stof/doctrine-extensions-bundle": "^1.15.3",
+        "symfony/apache-pack": ">=1.0.1",
+        "symfony/asset": "8.0.*",
+        "symfony/asset-mapper": "8.0.*",
+        "symfony/console": "8.0.*",
+        "symfony/doctrine-messenger": "8.0.*",
+        "symfony/dotenv": "8.0.*",
+        "symfony/expression-language": "8.0.*",
+        "symfony/flex": "^2",
+        "symfony/form": "8.0.*",
+        "symfony/framework-bundle": "8.0.*",
+        "symfony/http-client": "8.0.*",
+        "symfony/intl": "8.0.*",
+        "symfony/mailer": "8.0.*",
+        "symfony/mime": "8.0.*",
+        "symfony/monolog-bundle": "^3.0|^4.0",
+        "symfony/notifier": "8.0.*",
+        "symfony/process": "8.0.*",
+        "symfony/property-access": "8.0.*",
+        "symfony/property-info": "8.0.*",
+        "symfony/runtime": "8.0.*",
+        "symfony/security-bundle": "8.0.*",
+        "symfony/serializer": "8.0.*",
+        "symfony/stimulus-bundle": "^3.0",
+        "symfony/string": "8.0.*",
+        "symfony/translation": "8.0.*",
+        "symfony/twig-bundle": "8.0.*",
+        "symfony/ux-turbo": "^3.0",
+        "symfony/validator": "8.0.*",
+        "symfony/web-link": "8.0.*",
+        "symfony/yaml": "8.0.*",
+        "twig/extra-bundle": "^2.12|^3.0",
+        "twig/intl-extra": "^3.24",
+        "twig/string-extra": "^3.24",
+        "twig/twig": "^2.12|^3.0"
+    },
+    "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^4.3.1",
+        "fakerphp/faker": "^1.24.1",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-symfony": "^2.0.15",
+        "phpunit/phpunit": "^13.1",
+        "roave/security-advisories": "dev-latest",
+        "symfony/browser-kit": "8.0.*",
+        "symfony/css-selector": "8.0.*",
+        "symfony/debug-bundle": "8.0.*",
+        "symfony/maker-bundle": "^1.0",
+        "symfony/phpunit-bridge": "^8.0.8",
+        "symfony/stopwatch": "8.0.*",
+        "symfony/web-profiler-bundle": "8.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "symfony/flex": true,
+            "symfony/runtime": true
+        },
+        "bump-after-update": true,
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "vendor-dir": "vendor/",
+        "process-timeout": 600
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": true,
+            "require": "8.0.*",
+            "docker": true
+        }
+    },
+    "replace": {
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php73": "*",
+        "symfony/polyfill-php74": "*",
+        "symfony/polyfill-php80": "*",
+        "symfony/polyfill-php81": "*",
+        "symfony/polyfill-php82": "*",
+        "symfony/polyfill-php83": "*",
+        "symfony/polyfill-php84": "*"
+    },
+    "scripts": {
+        "db-reset": [
+            "php bin/console doctrine:database:drop --force --if-exists",
+            "php bin/console doctrine:database:create",
+            "php bin/console doctrine:migrations:migrate --no-interaction",
+            "@import-inventory",
+            "@import-mission",
+            "@import-race",
+            "@import-setting",
+            "@import-garage"
+        ],
+        "import-inventory": [
+            "php bin/console asphalt:csv:inventory import"
+        ],
+        "import-mission": [
+            "php bin/console asphalt:csv:mission:type import",
+            "php bin/console asphalt:csv:mission:task import",
+            "php bin/console asphalt:csv:mission:app import"
+        ],
+        "import-race": [
+            "php bin/console asphalt:csv:race:mode import",
+            "php bin/console asphalt:csv:race:region import",
+            "php bin/console asphalt:csv:race:season import",
+            "php bin/console asphalt:csv:race:time import",
+            "php bin/console asphalt:csv:race:track import",
+            "php bin/console asphalt:csv:race:app import"
+        ],
+        "import-setting": [
+            "php bin/console asphalt:csv:setting:blueprint import",
+            "php bin/console asphalt:csv:setting:brand import",
+            "php bin/console asphalt:csv:setting:class import",
+            "php bin/console asphalt:csv:setting:level import",
+            "php bin/console asphalt:csv:setting:tag import",
+            "php bin/console asphalt:csv:setting:unit import"
+        ],
+        "import-garage": [
+            "php bin/console asphalt:csv:garage:app import",
+            "php bin/console asphalt:csv:garage:setting:blueprint import",
+            "php bin/console asphalt:csv:garage:setting:level import",
+            "php bin/console asphalt:csv:garage:setting:unit import",
+            "php bin/console asphalt:csv:garage:blueprint import",
+            "php bin/console asphalt:csv:garage:gauntlet import",
+            "php bin/console asphalt:csv:garage:rank import",
+            "php bin/console asphalt:csv:garage:stat:actual import",
+            "php bin/console asphalt:csv:garage:stat:max import",
+            "php bin/console asphalt:csv:garage:stat:min import",
+            "php bin/console asphalt:csv:garage:status import",
+            "php bin/console asphalt:csv:garage:status:control import",
+            "php bin/console asphalt:csv:garage:upgrade import"
+        ],
+        "truncate": [
+            "php bin/console asphalt:database:truncate",
+            "@import-inventory",
+            "@import-mission",
+            "@import-race",
+            "@import-setting",
+            "@import-garage"
+        ],
+        "tests": "vendor/bin/phpunit",
+        "check-code": [
+            "php vendor/bin/phpstan analyse -c phpstan.dist.neon --memory-limit 4G > ../vars/phpstan/result.txt",
+            "php bin/console doctrine:schema:validate"
+        ],
+        "clean": [
+            "php bin/console doctrine:cache:clear-metadata",
+            "php bin/console doctrine:cache:clear-query",
+            "php bin/console doctrine:cache:clear-result",
+            "php bin/console cache:clear"
+        ],
+        "assets": [
+            "php bin/console importmap:install",
+            "php bin/console importmap:update",
+            "php bin/console asset-map:compile"
+        ],
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ],
+        "auto-scripts": {
+            "clear-cache": "symfony-cmd",
+            "assets": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        }
+    }
+}

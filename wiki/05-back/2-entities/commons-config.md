@@ -3,7 +3,7 @@
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(nullable: true, options: ['unsigned' => true])]
-    #[Assert\Type(type: ['integer', 'null'], message: 'The value {{ value }} is not a valid {{ type }}.')]
+    #[Assert\Type(type: ['integer', 'null'])]
     #[Groups(['index'])]
     private ?int $id = null;
 ```
@@ -15,7 +15,7 @@
     #[Assert\NotBlank]
     #[Assert\NotNull]
     #[Assert\NoSuspiciousCharacters]
-    #[Assert\Type(type: 'string', message: 'The value {{ value }} is not a valid {{ type }}.')]
+    #[Assert\Type(type: 'string')]
     #[Gedmo\Slug(fields: ['value'], separator: '-')]
     #[Groups(['index'])]
     private string $slug;

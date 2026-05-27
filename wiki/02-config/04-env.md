@@ -24,7 +24,7 @@ APP_SHARE_DIR=var/share
 ###< symfony/framework-bundle ###
 
 ###> symfony/routing ###
-# Configure how to generate URLs in non-HTTP contexts, such as CLI commands.
+# ConfigureCommand how to generate URLs in non-HTTP contexts, such as CLI commands.
 # See https://symfony.com/doc/current/routing.html#generating-urls-in-commands
 DEFAULT_URI=http://localhost
 ###< symfony/routing ###

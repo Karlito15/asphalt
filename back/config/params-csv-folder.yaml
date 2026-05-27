@@ -1,0 +1,5 @@
+parameters:
+    ### FOLDERS
+    csv.folders:                '%kernel.project_dir%/../documents/csv/'
+    csv.folders.database.datas: '%kernel.project_dir%/../documents/csv/database/datas/'
+    csv.folders.database.order: '%kernel.project_dir%/../documents/csv/database/order/car-by-class/'

@@ -1,0 +1,27 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+    A9: ../files/taskfile/Asphalt.yaml
+    Com: ../files/taskfile/Composer.yaml
+    Test: ../files/taskfile/PHPUnit.yaml
+    Sym: ../files/taskfile/Symfony.yaml
+    Dev: ../files/taskfile/Development.yaml
+
+vars:
+    GREETING: Hello, World!
+
+env:
+    dev: --env dev
+
+tasks:
+    default:
+        desc: Print a greeting message
+        cmds:
+            - echo "{{.GREETING}}"
+        silent: true
+
+    greet:
+        cmds:
+            - echo $dev

@@ -1,7 +1,7 @@
 ``` yaml
 framework:
     router:
-        # Configure how to generate URLs in non-HTTP contexts, such as CLI commands.
+        # ConfigureCommand how to generate URLs in non-HTTP contexts, such as CLI commands.
         # See https://symfony.com/doc/current/routing.html#generating-urls-in-commands
         #default_uri: http://localhost
         utf8: true
