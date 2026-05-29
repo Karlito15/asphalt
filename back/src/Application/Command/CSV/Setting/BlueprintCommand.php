@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Application\Command\CSV\Setting;
 
-use App\Domain\Repository\InventoryAppRepository;
+use App\Domain\Repository\SettingBlueprintRepository;
 use App\Infrastructure\Command\Helpers\Directory;
 use App\Infrastructure\Command\Traits\{
     ConfigureCommand,
@@ -53,11 +53,11 @@ class BlueprintCommand extends Command
     private static string $folderName = 'settings';
 
     public function __construct(
-        private readonly ContainerInterface     $container,
-        private readonly EntityManagerInterface $entityManager,
-        private readonly LoggerInterface        $logger,
-        private readonly ParameterBagInterface  $parameter,
-        private readonly InventoryAppRepository $repository,
+        private readonly ContainerInterface         $container,
+        private readonly EntityManagerInterface     $entityManager,
+        private readonly LoggerInterface            $logger,
+        private readonly ParameterBagInterface      $parameter,
+        private readonly SettingBlueprintRepository $repository,
     )
     {
         parent::__construct();

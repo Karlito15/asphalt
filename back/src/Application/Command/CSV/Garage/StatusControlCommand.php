@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Application\Command\CSV\Garage;
 
-use App\Domain\Repository\InventoryAppRepository;
+use App\Domain\Repository\GarageStatusControlRepository;
 use App\Infrastructure\Command\Helpers\Directory;
 use App\Infrastructure\Command\Traits\{
     ConfigureCommand,
@@ -48,7 +48,7 @@ class StatusControlCommand extends Command
     protected static string $help     = '';
 
     private static string $database   = 'csv.folders.database.datas';
-    private static string $file       = 'csv.file.garage.app';
+    private static string $file       = 'csv.file.garage.status-control';
     private static string $header     = 'csv.header.garage.status-control';
     private static string $folderName = 'garages';
 
@@ -57,7 +57,7 @@ class StatusControlCommand extends Command
         private readonly EntityManagerInterface $entityManager,
         private readonly LoggerInterface        $logger,
         private readonly ParameterBagInterface  $parameter,
-        private readonly InventoryAppRepository $repository,
+        private readonly GarageStatusControlRepository $repository,
     )
     {
         parent::__construct();

@@ -74,7 +74,7 @@ class SettingUnitPriceCrudController extends AbstractCrudController
         yield IntegerField::new('common')->onlyOnIndex();
         yield IntegerField::new('rare')->onlyOnIndex();
         yield IntegerField::new('epic')->onlyOnIndex();
-        yield DateTimeField::new('createdAt')->onlyOnIndex();
-        yield DateTimeField::new('updatedAt')->onlyOnIndex();
+        yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
+        yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
     }
 }

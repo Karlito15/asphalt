@@ -57,7 +57,7 @@ class SettingBrandCrudController extends AbstractCrudController
         yield IdField::new('id')->onlyOnIndex();
         yield TextField::new('name');
         yield IntegerField::new('carsNumber')->onlyOnIndex();
-        yield DateTimeField::new('createdAt')->onlyOnIndex();
-        yield DateTimeField::new('updatedAt')->onlyOnIndex();
+        yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
+        yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
     }
 }

@@ -33,7 +33,7 @@ class InventoryAppCrudController extends AbstractCrudController
         yield IntegerField::new('position')->setCssClass('text-end');
         yield IntegerField::new('value')->setCssClass('text-success text-end');
         yield BooleanField::new('active');
-        yield DateTimeField::new('createdAt')->onlyOnIndex();
-        yield DateTimeField::new('updatedAt')->onlyOnIndex();
+        yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
+        yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
     }
 }

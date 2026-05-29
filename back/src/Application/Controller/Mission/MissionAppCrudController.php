@@ -7,6 +7,7 @@ namespace App\Application\Controller\Mission;
 use App\Domain\Entity\MissionApp;
 use EasyCorp\Bundle\EasyAdminBundle\Attribute\AdminDashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
@@ -35,9 +36,9 @@ class MissionAppCrudController extends AbstractCrudController
         yield TextEditorField::new('description');
         yield IntegerField::new('success');
         yield IntegerField::new('target');
-//        yield IntegerField::new('MissionTask');
-//        yield IntegerField::new('MissionType');
-        yield DateTimeField::new('createdAt')->onlyOnIndex();
-        yield DateTimeField::new('updatedAt')->onlyOnIndex();
+        yield AssociationField::new('task')->renderAsHtml();
+        yield AssociationField::new('type')->renderAsHtml();
+        yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
+        yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
     }
 }

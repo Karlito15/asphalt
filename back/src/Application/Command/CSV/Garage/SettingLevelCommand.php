@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Application\Command\CSV\Garage;
 
-use App\Domain\Repository\InventoryAppRepository;
+use App\Domain\Repository\GarageAppRepository;
 use App\Infrastructure\Command\Helpers\Directory;
 use App\Infrastructure\Command\Traits\{
     ConfigureCommand,
@@ -57,7 +57,7 @@ class SettingLevelCommand extends Command
         private readonly EntityManagerInterface $entityManager,
         private readonly LoggerInterface        $logger,
         private readonly ParameterBagInterface  $parameter,
-        private readonly InventoryAppRepository $repository,
+        private readonly GarageAppRepository    $repository,
     )
     {
         parent::__construct();
@@ -115,6 +115,41 @@ class SettingLevelCommand extends Command
     }
 
     /** PRIVATE METHODS */
+
+    private function export(string $root)
+    {
+        /** Start Export */
+        ### Init Variable
+        $datas = [];
+
+        ### Get Datas from Database
+        $rows = $this->repository->findAll();
+
+        ### Handler
+        foreach ($rows as $row) {
+            $datas[] = [
+                $row->getSettingBrand()->getName(),
+                $row->getModel(),
+                $row->getSettingLevel()->getSlug(),
+            ];
+        }
+
+        ### Make Directory
+        $path   = Directory::makeDirectory($root, $this->getFolder(), true);
+
+        ### Get FilePath
+        $csv    = Directory::normalize($path . $this->getFile());
+
+        ### Make File
+        try {
+            CSV::toFile($csv, $this->getHeader(), $datas);
+        } catch (\Exception $e) {
+            $this->logger->error('Erreur lors de la création du CSV');
+            $this->logger->error('CSV : ' . $this->getFile());
+            $this->logger->error($e->getMessage());
+        }
+        /** End Export */
+    }
 
     /**
      * @param string $folder

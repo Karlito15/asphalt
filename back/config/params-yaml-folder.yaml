@@ -1,6 +1,0 @@
-parameters:
-    ### FOLDERS
-    yaml.folders.:      '%kernel.project_dir%/../documents/yaml/'
-    yaml.folders.index: '%kernel.project_dir%/../documents/yaml/index/'
-    yaml.folders.page:  '%kernel.project_dir%/../documents/yaml/page/'
-    yaml.folders.sheet: '%kernel.project_dir%/../documents/yaml/sheet/'

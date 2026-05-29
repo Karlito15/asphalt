@@ -66,7 +66,7 @@ class SettingBlueprintCrudController extends AbstractCrudController
 		yield IntegerField::new('star5');
 		yield IntegerField::new('star6');
 		yield IntegerField::new('total')->onlyOnDetail();
-		yield DateTimeField::new('createdAt')->onlyOnIndex();
-		yield DateTimeField::new('updatedAt')->onlyOnIndex();
+		yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
+		yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
 	}
 }

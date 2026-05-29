@@ -60,7 +60,7 @@ class SettingClassCrudController extends AbstractCrudController
         yield IntegerField::new('classOrder');
         yield IntegerField::new('carsNumber')->onlyOnIndex();
         yield IntegerField::new('median');
-        yield DateTimeField::new('createdAt')->onlyOnIndex();
-        yield DateTimeField::new('updatedAt')->onlyOnIndex();
+        yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
+        yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
     }
 }

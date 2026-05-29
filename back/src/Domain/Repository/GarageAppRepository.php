@@ -38,8 +38,10 @@ class GarageAppRepository extends ServiceEntityRepository
                 'g.level AS Level',
                 'g.epic AS Epic',
                 'g.evo AS Evo',
+                'c.slug AS SettingClass',
             ])
             ->join('g.settingBrand', 'b')
+            ->join('g.settingClass', 'c')
             ->orderBy('g.gameUpdate', 'ASC')
             ->addOrderBy('b.name', 'ASC')
         ;

@@ -11,8 +11,6 @@ imports:
     - { resource: 'params-csv-file.yaml' }
     - { resource: 'params-csv-folder.yaml' }
     - { resource: 'params-csv-header.yaml' }
-    - { resource: 'params-yaml-file.yaml' }
-    - { resource: 'params-yaml-folder.yaml' }
 
 parameters:
     app.supported_locales: 'en|fr|it'

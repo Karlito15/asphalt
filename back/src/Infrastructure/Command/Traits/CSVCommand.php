@@ -2,7 +2,6 @@
 
 namespace App\Infrastructure\Command\Traits;
 
-use App\Domain\Entity\GarageApp;
 use App\Infrastructure\Command\Helpers\Directory;
 use App\Infrastructure\Data\CSV;
 
@@ -12,13 +11,13 @@ Trait CSVCommand
     {
         /** Start Export */
         ### Get Datas from Database
-        $rows = $this->repository->export();
+        $rows   = $this->repository->export();
 
         ### Make Directory
-        $path = Directory::makeDirectory($root, $this->getFolder(), true);
+        $path   = Directory::makeDirectory($root, $this->getFolder(), true);
 
         ### Get FilePath
-        $csv = Directory::normalize($path . $this->getFile());
+        $csv    = Directory::normalize($path . $this->getFile());
 
         ### Make File
         try {

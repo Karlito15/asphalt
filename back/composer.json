@@ -137,6 +137,45 @@
             "@import-setting",
             "@import-garage"
         ],
+        "export-inventory": [
+            "php bin/console asphalt:csv:inventory export"
+        ],
+        "export-mission": [
+            "php bin/console asphalt:csv:mission:type export",
+            "php bin/console asphalt:csv:mission:task export",
+            "php bin/console asphalt:csv:mission:app export"
+        ],
+        "export-race": [
+            "php bin/console asphalt:csv:race:mode export",
+            "php bin/console asphalt:csv:race:region export",
+            "php bin/console asphalt:csv:race:season export",
+            "php bin/console asphalt:csv:race:time export",
+            "php bin/console asphalt:csv:race:track export",
+            "php bin/console asphalt:csv:race:app export"
+        ],
+        "export-setting": [
+            "php bin/console asphalt:csv:setting:blueprint export",
+            "php bin/console asphalt:csv:setting:brand export",
+            "php bin/console asphalt:csv:setting:class export",
+            "php bin/console asphalt:csv:setting:level export",
+            "php bin/console asphalt:csv:setting:tag export",
+            "php bin/console asphalt:csv:setting:unit export"
+        ],
+        "export-garage": [
+            "php bin/console asphalt:csv:garage:app export",
+            "php bin/console asphalt:csv:garage:blueprint export",
+            "php bin/console asphalt:csv:garage:gauntlet export",
+            "php bin/console asphalt:csv:garage:rank export",
+            "php bin/console asphalt:csv:garage:stat:actual export",
+            "php bin/console asphalt:csv:garage:stat:max export",
+            "php bin/console asphalt:csv:garage:stat:min export",
+            "php bin/console asphalt:csv:garage:status export",
+            "php bin/console asphalt:csv:garage:status:control export",
+            "php bin/console asphalt:csv:garage:upgrade export",
+            "php bin/console asphalt:csv:garage:setting:blueprint export",
+            "php bin/console asphalt:csv:garage:setting:level export",
+            "php bin/console asphalt:csv:garage:setting:unit export"
+        ],
         "import-inventory": [
             "php bin/console asphalt:csv:inventory import"
         ],
@@ -183,6 +222,13 @@
             "@import-race",
             "@import-setting",
             "@import-garage"
+        ],
+        "export": [
+            "@export-inventory",
+            "@export-mission",
+            "@export-race",
+            "@export-setting",
+            "@export-garage"
         ],
         "tests": "vendor/bin/phpunit",
         "check-code": [

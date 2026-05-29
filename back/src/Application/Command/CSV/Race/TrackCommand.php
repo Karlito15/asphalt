@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Application\Command\CSV\Race;
 
-use App\Domain\Repository\InventoryAppRepository;
+use App\Domain\Repository\RaceTrackRepository;
 use App\Infrastructure\Command\Helpers\Directory;
 use App\Infrastructure\Command\Traits\{
     ConfigureCommand,
@@ -57,7 +57,7 @@ class TrackCommand extends Command
         private readonly EntityManagerInterface $entityManager,
         private readonly LoggerInterface        $logger,
         private readonly ParameterBagInterface  $parameter,
-        private readonly InventoryAppRepository $repository,
+        private readonly RaceTrackRepository $repository,
     )
     {
         parent::__construct();

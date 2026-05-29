@@ -31,7 +31,8 @@ use Symfony\Component\HttpFoundation\Response;
 #[AdminDashboard(
 //    routePath: '/admin/dashboard.php',
     routePath: '/',
-    routeName: 'admin.dashboard.index'
+    routeName: 'admin.dashboard.index',
+    routeOptions: ['method' => 'GET']
 )]
 final class DashboardController extends AbstractDashboardController
 {
