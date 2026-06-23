@@ -22,45 +22,100 @@ tasks:
     import:
         desc: "Task Database, Import CSV Files to Database"
         cmds:
-            - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration import"   # Import Datas
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:inventory import"                   # Inventory
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:mission:type import"                # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:mission:task import"                # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:mission:app import"                 # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:race:mode import"                   # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:race:region import"                 # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:race:season import"                 # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:race:time import"                   # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:race:track import"                  # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:race:app import"                    # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:setting:blueprint import"           # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:setting:brand import"               # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:setting:class import"               # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:setting:level import"               # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:setting:tag import"                 # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:setting:unit import"                # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:app import"                  # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:setting:blueprint import"    # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:setting:level import"        # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:setting:unit import"         # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:balance import"              # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:blueprint import"            # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:gauntlet import"             # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:rank import"                 # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:stat:actual import"          # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:stat:max import"             # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:stat:min import"             # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:status import"               # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:status:control import"       # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:upgrade import"              # XXXXXXXXX
+#            - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration import"                  # Import Datas
         ignore_error: true
         platforms: [windows/amd64]
     export:
         desc: "Export from Database to CSV Files"
         cmds:
-            - Task A9:cron                                          # Task CRON
-            - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration export"   # Export Datas
+#            - Task A9:cron                                                          # Task CRON
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:inventory export"                   # Inventory
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:mission:type export"                # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:mission:task export"                # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:mission:app export"                 # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:race:mode export"                   # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:race:region export"                 # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:race:season export"                 # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:race:time export"                   # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:race:track export"                  # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:race:app export"                    # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:setting:blueprint export"           # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:setting:brand export"               # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:setting:class export"               # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:setting:level export"               # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:setting:tag export"                 # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:setting:unit export"                # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:app export"                  # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:setting:blueprint export"    # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:setting:level export"        # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:setting:unit export"         # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:blueprint export"            # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:gauntlet export"             # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:rank export"                 # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:stat:actual export"          # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:stat:max export"             # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:stat:min export"             # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:status export"               # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:status:control export"       # XXXXXXXXX
+            - "{{.SYMFONY_CONSOLE}} asphalt:csv:garage:upgrade export"              # XXXXXXXXX
+#            - "{{.SYMFONY_CONSOLE}} asphalt:csv:migration export"                  # Export Datas
         ignore_error: true
         platforms: [windows/amd64]
     cron:
         desc: "CRON"
         cmds:
-            - "{{.SYMFONY_CONSOLE}} asphalt:cron:count:brand"       # Compte le nombre de voitures par Marque
-            - "{{.SYMFONY_CONSOLE}} asphalt:cron:count:class"       # Compte le nombre de voitures par Class
-            - "{{.SYMFONY_CONSOLE}} asphalt:cron:garage:status"     # Mets à jour la Voiture
-            - "{{.SYMFONY_CONSOLE}} asphalt:cron:garage:control"    # Mets à jour la Voiture
-            - "{{.SYMFONY_CONSOLE}} asphalt:cron:garage:gauntlet"   # Mets à jour la Voiture
-            - "{{.SYMFONY_CONSOLE}} asphalt:cron:garage:level"      # Mets à jour la Voiture
-#            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:index:garage"      # Créer le listing du Garage
-#            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:index:mission"     # Créer le listing des Missions
-#            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:index:race"        # Créer le listing des Courses
-#            - "{{.SYMFONY_CONSOLE}} asphalt:yaml:page:garage"       # Créer le listing des Pages
-#            - "{{.SYMFONY_CONSOLE}} asphalt:csv:order:class export" # Export Garage Order By Class
-        ignore_error: true
-        platforms: [windows/amd64]
-    scripts:
-        desc: "Clear Cache, Install Libraries, Update Librairies, Install Assets, Compile Assets"
-        cmds:
-            - "{{.COMPOSER}} run post-update-cmd"
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:garage"
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:setting"
+            - "{{.SYMFONY_CONSOLE}} asphalt:cron:statistical"
         ignore_error: true
         platforms: [windows/amd64]
     initialize:
         desc: "Initialize Project"
         cmds:
-            - Task Dev:cache
+            - "clear"
+            # - Task Dev:cache
             - Task Dev:database
             - Task A9:import
-            - Task Dev:launch
-#            - "rm -rf public/cache/"
+            # - Task Dev:launch
+            # - "rm -rf public/cache/"
+        ignore_error: false
+        platforms: [windows/amd64]
+    truncate:
+        desc: "Truncate Datas"
+        cmds:
+            - "clear"
+            - Task Dev:cache
+            - "{{.SYMFONY_CONSOLE}} asphalt:database:truncate"
+            - Task A9:import
         ignore_error: false
         platforms: [windows/amd64]

@@ -1,0 +1,24 @@
+// Color system
+
+// fusv-disable
+$token-100: tint-color($token, 80%) !default;
+$token-200: tint-color($token, 60%) !default;
+$token-300: tint-color($token, 40%) !default;
+$token-400: tint-color($token, 20%) !default;
+$token-500: $token !default;
+$token-600: shade-color($token, 20%) !default;
+$token-700: shade-color($token, 40%) !default;
+$token-800: shade-color($token, 60%) !default;
+$token-900: shade-color($token, 80%) !default;
+
+$tokens: (
+  "token-100": $token-100,
+  "token-200": $token-200,
+  "token-300": $token-300,
+  "token-400": $token-400,
+  "token-500": $token-500,
+  "token-600": $token-600,
+  "token-700": $token-700,
+  "token-800": $token-800,
+  "token-900": $token-900
+) !default;

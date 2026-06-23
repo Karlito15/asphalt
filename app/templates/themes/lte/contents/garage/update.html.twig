@@ -1,0 +1,46 @@
+
+{% extends '@App/themes/lte/bases/full.html.twig' %}
+
+{% block content %}
+
+    {% from "@App/themes/lte/contents/garage/_macros.html.twig" import getBackgroundColor, getTextColor %}
+
+    {% set background, text = getBackgroundColor(entity.status)|u.toString|trim, getTextColor(entity.status)|u.toString|trim %}
+
+{{ form_start(form) }}
+    <div class="row">
+        <div class="col">{% include '@App/themes/lte/contents/garage/update/garage.html.twig' with {'background': background, 'text': text} %}</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col">{% include '@App/themes/lte/contents/garage/update/blueprint.html.twig' with {'background': background, 'text': text} %}</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col">{% include '@App/themes/lte/contents/garage/update/upgrade.html.twig' with {'background': background, 'text': text} %}</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col">{% include '@App/themes/lte/contents/garage/update/rank.html.twig' with {'background': background, 'text': text} %}</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col">{% include '@App/themes/lte/contents/garage/update/stat.html.twig' with {'background': background, 'text': text} %}</div>
+    </div>
+
+    <div class="row row-cols-2">
+        <div class="col-6">{% include '@App/themes/lte/contents/garage/update/price.html.twig' with {'background': background, 'text': text} %}</div>
+        <div class="col-6">{% include '@App/themes/lte/contents/garage/update/status.html.twig' with {'background': background, 'text': text} %}</div>
+    </div>
+
+    {% include '@App/themes/lte/contents/garage/_button.html.twig' %}
+
+    {{ form_rest(form) }}
+
+{{ form_end(form) }}
+
+    <section class="mt-3">
+    {% include '@App/themes/lte/contents/commons/form-delete.html.twig' %}
+    </section>
+
+{% endblock %}

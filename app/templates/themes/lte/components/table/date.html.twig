@@ -1,0 +1,8 @@
+{#<div{{ attributes }}>#}
+    <!-- component HTML -->
+{% if value is not null %}
+    {{ value|date('Y-m-d') }}
+{% else %}
+    <i class="fa fa-minus"></i>
+{% endif %}
+{#</div>#}

@@ -1,0 +1,45 @@
+{% extends '@App/themes/lte/base.html.twig' %}
+
+{% block body %} class="layout-fixed sidebar-expand-lg sidebar-mini sidebar-collapse bg-body-tertiary reduce-motion app-loaded"{% endblock %}
+
+{% block wrapper %}
+    {% block header %}
+        {% include '@App/themes/lte/partials/header.html.twig' %}
+    {% endblock %}
+
+    {% block sidebar %}
+        {% include '@App/themes/lte/partials/sidebar.html.twig' %}
+    {% endblock %}
+
+    {% block container %}
+    <!--begin::App Main-->
+    <main class="app-main bg-carbon-fiber">
+        <!--begin::App Content Header-->
+        <div class="app-content-header mx-3">
+        {% block breadcrumb %}
+            {% include '@App/themes/lte/partials/breadcrumb.html.twig' %}
+        {% endblock %}
+        </div>
+        <div class="app-content">
+            <!--begin::Container-->
+            <div class="container-fluid">
+                {% block notification %}
+                    <div id="flash-messages" class="d-none"></div>
+                    {% include '@App/themes/lte/partials/notification.html.twig' %}
+                {% endblock %}
+
+                <!--begin::Row-->
+                {% block content %}{% endblock %}
+                <!--end::Row-->
+            </div>
+            <!--end::Container-->
+        </div>
+        <!--end::App Content-->
+    </main>
+    <!--end::App Main-->
+    {% endblock %}
+
+    {% block footer %}
+        {% include '@App/themes/lte/partials/footer.html.twig' %}
+    {% endblock %}
+{% endblock %}

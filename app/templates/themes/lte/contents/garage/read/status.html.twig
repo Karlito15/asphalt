@@ -1,0 +1,22 @@
+
+<div class="card border border-opacity-25 border-white border-1 shadow-sm">
+    <div class="card-header border-bottom-0 py-1 px-2 fs-1">{{ 'text.status'|trans }}</div>
+    <div class="card-body row row-cols-4 py-1 px-2">
+        <div class="text-center">
+            <input type="checkbox" id="status_unblock" name="status[unblock]" class="btn-check" value="{{ entity.status.unblock }}" checked="checked">
+            <label class="btn btn-outline-success w-100" for="status_unblock">UnBlock</label>
+        </div>
+        <div class="text-center">
+            <input type="checkbox" id="status_evo" name="status[evo]" class="btn-check" value="0" checked="checked">
+            <label class="btn btn-outline-success w-100" for="status_evo">Evo</label>
+        </div>
+        <div class="text-center">
+            <input type="checkbox" id="status_event_class" name="status[event_class]" class="btn-check" value="0" checked="checked">
+            <label class="btn btn-outline-success w-100" for="status_event_class">Event Class</label>
+        </div>
+        <div class="text-center">
+            <input type="checkbox" id="status_to_upgrade" name="status[to_upgrade]" class="btn-check" value="0" checked="checked">
+            <label class="btn btn-outline-success w-100" for="status_to_upgrade">To Upgrade</label>
+        </div>
+    </div>
+</div>

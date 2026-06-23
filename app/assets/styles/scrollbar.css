@@ -1,0 +1,55 @@
+/** Elements **/
+/*::-webkit-scrollbar */
+/*::-webkit-scrollbar-button */
+/*::-webkit-scrollbar-track */
+/*::-webkit-scrollbar-track-piece */
+/*::-webkit-scrollbar-thumb */
+/*::-webkit-scrollbar-corner */
+/*::-webkit-resizer */
+
+/** States **/
+/*:horizontal */
+/*:vertical */
+/*:decrement */
+/*:increment */
+/*:start */
+/*:end */
+/*:double-button */
+/*:single-button */
+/*:no-button */
+/*:corner-present */
+/*:window-inactive */
+
+/* Works on Chrome/Edge/Safari **/
+/* la barre entière. */
+*::-webkit-scrollbar {
+  width: 1rem;
+}
+/* la piste (la zone de progression) de la barre de défilement. */
+*::-webkit-scrollbar-track {
+  background: rgba(74, 93 , 115, 0.75);
+}
+/* l'emplacement qui permet de déplacer la barre de défilement. */
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(28, 28, 28, 0.75);
+  border-radius: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.75);
+}
+/* les boutons de la barre de défilement (les flèches vers le bas ou le haut). */
+*::-webkit-scrollbar-button {
+	background-color: rgba(255, 255, 255, 0.75);
+}
+/* la partie de la piste qui n'est pas couverte par le bouton de la barre de défilement. */
+*::-webkit-scrollbar-track-piece {}
+/* le coin inférieur de la barre où les barres horizontales et verticales se rencontrent. */
+*::-webkit-scrollbar-corner {}
+/* le bouton qui apparaît dans le coin inférieur de certains éléments et qui permet de les redimensionner. */
+*::-webkit-resizer {}
+
+
+/* Works in Firefox **/
+* {
+  	scrollbar-color: rgba(74, 93 , 115, 0.75) rgba(28, 28, 28, 0.75);
+  	scrollbar-width: thin; /* auto, thin, none; **/
+  	/*resizer: auto;*/
+}

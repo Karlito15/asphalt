@@ -1,0 +1,53 @@
+
+<div class="card border border-opacity-25 border-white border-1 shadow-sm {{ background }}">
+    <div class="card-header border-bottom-0 py-1 px-2 fs-1">{{ 'text.upgrade'|trans|plural }}</div>
+    <div class="card-body py-1 px-2">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th class="w-25 py-1 text-start">Legend</th>
+                    <th class="w-25 py-1 text-end">{{ 'text.garage'|trans }}</th>
+                    <th class="w-25 py-1 text-end">{{ 'text.setting'|trans|plural }}</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                <td class="w-25 py-1 text-start">{{ 'text.speed'|trans }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.upgrade.speed }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.settingLevel.level }}</td>
+            </tr>
+            <tr>
+                <td class="w-25 py-1 text-start">{{ 'text.acceleration'|trans }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.upgrade.acceleration }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.settingLevel.level }}</td>
+            </tr>
+            <tr>
+                <td class="w-25 py-1 text-start">{{ 'text.handling'|trans }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.upgrade.handling }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.settingLevel.level }}</td>
+            </tr>
+            <tr>
+                <td class="w-25 py-1 text-start">{{ 'text.nitro'|trans }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.upgrade.nitro }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.settingLevel.level }}</td>
+            </tr>
+            <tr>
+                <td class="w-25 py-1 text-start">{{ 'text.common'|trans }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.upgrade.common }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.settingLevel.common }}</td>
+            </tr>
+            <tr>
+                <td class="w-25 py-1 text-start">{{ 'text.rare'|trans }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.upgrade.rare }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.settingLevel.rare }}</td>
+            </tr>
+            <tr>
+                <td class="w-25 py-1 text-start">{{ 'text.epic'|trans }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.upgrade.epic }}</td>
+                <td class="w-25 py-1 text-end">{{ entity.settingLevel.epic }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Application\Controller\WWW\Pages;
+
+use App\Domain\Repository\GarageAppRepository;
+use App\Infrastructure\Abstract\Controller\AbstractBaseController;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Requirement\Requirement;
+use Symfony\Contracts\Translation\TranslatorInterface;
+
+#[Route(
+    path: '/{_locale<%app.supported_locales%>}/pages/order',
+    name: 'app.page.order.',
+    requirements: ['letter' => Requirement::ASCII_SLUG],
+    options: ['expose' => false],
+    defaults: ['letter' => 'S'],
+    methods: ['GET'],
+    schemes: ['http', 'https'],
+    format: 'html',
+    utf8: true
+)]
+final class OrderController extends AbstractBaseController
+{
+    #[Route(path: '/class/class-{letter}.php', name: 'class')]
+    public function class(
+        GarageAppRepository $repository,
+        Request $request,
+        TranslatorInterface $translator
+    ): Response
+    {
+        ### Variables
+        $letter     = self::Letter($request->attributes->get('letter'));
+        $match      = self::ControlLetter($letter);
+        $dashboard  = $translator->trans('text.dashboard');
+        $title      = $translator->trans('text.order') . ' by ' . $translator->trans('text.class');
+        $breadcrumb = [
+            ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
+            ['label' => $title, 'route' => 'app.page.order.class', null, 'params' => []],
+        ];
+
+        // Letter Not Match
+        $this->return404($match);
+
+        return $this->render('@App/themes/lte/contents/garage/index.html.twig', [
+            'breadcrumb'        => self::breadcrumb($breadcrumb),
+            'links'             => [],
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'entities'          => $repository->getGaragePageOrder(['settingClass.value' => $letter], ['g.carOrder' => 'ASC']),
+            'container'         => 'container-fluid pt-4 px-4',
+            'theme'             => 'dark',
+        ]);
+    }
+
+    #[Route(path: '/stat/class-{letter}.php', name: 'stat')]
+    public function stat(
+        GarageAppRepository $repository,
+        Request $request,
+        TranslatorInterface $translator
+    ): Response
+    {
+        ### Variables
+        $letter     = self::Letter($request->attributes->get('letter'));
+        $match      = self::ControlLetter($letter);
+        $dashboard  = $translator->trans('text.dashboard');
+        $title      = $translator->trans('text.order') . ' by ' . $translator->trans('text.stat');
+        $breadcrumb = [
+            ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
+            ['label' => $title, 'route' => 'app.page.order.stat', null, 'params' => []],
+        ];
+
+        // Letter Not Match
+        $this->return404($match);
+
+        return $this->render('@App/themes/lte/contents/garage/index.html.twig', [
+            'breadcrumb'        => self::breadcrumb($breadcrumb),
+            'links'             => [],
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'entities'          => $repository->getGaragePageOrder(['settingClass.value' => $letter], ['g.statOrder' => 'ASC']),
+            'container'         => 'container-fluid pt-4 px-4',
+            'theme'             => 'dark',
+        ]);
+    }
+}

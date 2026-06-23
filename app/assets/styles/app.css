@@ -1,3 +1,33 @@
 body {
-    background-color: skyblue;
+    background-color: transparent !important;
+}
+
+.bg-carbon-premium {
+  background:
+    linear-gradient(45deg, #111111 25%, transparent 25%) -10px 0,
+    linear-gradient(-45deg, #111111 25%, transparent 25%) -10px 0,
+    linear-gradient(45deg, transparent 75%, #1a1a1a 75%),
+    linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+  background-size: 8px 8px;
+  background-color: #161616;
+}
+
+.bg-carbon-fiber {
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+        /*url("../images/carbon-fiber-02.jpg")*/
+        /*url("../images/carbon-fiber-03.jpg")*/
+        /*url("../images/carbon-fiber-04.jpg")*/
+        url("../images/carbon-fiber-06.jpg")
+        /*url("../images/carbon-fiber-07.jpg")*/
+        /*url("../images/carbon-fiber-08.jpg")*/
+        /*url("../images/carbon-fiber-09.jpg")*/
+        /*url("../images/carbon-fiber-10.jpg")*/
+    ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*filter: contrast(300%) sepia(100%); grayscale(80%) contrast(200%)*/
 }

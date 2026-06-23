@@ -1,0 +1,57 @@
+
+{% from "@App/themes/lte/contents/garage/_macros.html.twig" import getStars, getClass %}
+
+<div class="card border border-opacity-25 border-white border-1 shadow-sm {{ background }}">
+{#    <div class="card-header border-bottom-0 py-1 px-2 fs-1">{{ 'text.garage'|trans }}</div>#}
+    <div class="card-body py-3 px-2">
+
+        <div class="row row-cols-2 row-gap-3 mb-3">
+            <twig:FormFloating column="{{ 3 }}" form="{{ form.settingBrand }}" />
+            <twig:FormFloating column="{{ 9 }}" form="{{ form.model }}" />
+            <twig:FormFloating column="{{ 3 }}" form="{{ form.settingClass }}" />
+            <twig:FormFloating column="{{ 3 }}" form="{{ form.stars }}" />
+            <twig:FormFloating column="{{ 3 }}" form="{{ form.gameUpdate }}" />
+            <twig:FormFloating column="{{ 3 }}" form="{{ form.gauntlet.division }}" />
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-1 text-center text-capitalize">{{ 'text.level'|trans }}</div>
+            <div class="col-1 text-center text-capitalize">{{ 'text.epic'|trans }}</div>
+            <div class="col-1 text-center text-capitalize">{{ 'text.evo'|trans }}</div>
+            <div class="col-1 text-center text-capitalize">{{ 'text.order.class'|trans }}</div>
+            <div class="col-1 text-center text-capitalize">{{ 'text.order.stat'|trans }}</div>
+            <div class="col-1">&nbsp;</div>
+            <div class="col-2">{{ 'text.level'|trans }}</div>
+            <div class="col-2">{{ 'text.blueprint'|trans }}</div>
+            <div class="col-2">{{ 'text.unit-price'|trans }}</div>
+        </div>
+
+        <div class="row">
+            <twig:FormGroup column="{{ 1 }}" maxValue="{{ 13 }}" form="{{ form.level }}" />
+            <twig:FormGroup column="{{ 1 }}" maxValue="{{ 16 }}" form="{{ form.epic }}" />
+            <twig:FormGroup column="{{ 1 }}" maxValue="{{ 24 }}" form="{{ form.evo }}" />
+            <twig:FormGroup column="{{ 1 }}" maxValue="{{ entity.settingClass.carsNumber }}" form="{{ form.carOrder }}" />
+            <div class="col-1">
+                <!-- component HTML -->
+                <div class="input-group">
+                    <input
+                        type="number"
+                        id="statOrder"
+                        name="statOrder"
+                        autocomplete="off"
+                        class="text-center form-control"
+                        placeholder="Order by Stat"
+                        value="{{ entity.statOrder }}"
+                        aria-label="Order by Class"
+                    >
+                    <span class="input-group-text justify-content-center w-50" id="statOrder">{{ entity.settingClass.carsNumber }}</span>
+                </div>
+            </div>
+            <div class="col-1">&nbsp;</div>
+            <twig:FormControl column="{{ 2 }}" form="{{ form.settingLevel }}" />
+            <twig:FormControl column="{{ 2 }}" form="{{ form.settingBlueprint }}" />
+            <twig:FormControl column="{{ 2 }}" form="{{ form.settingUnitPrice }}" />
+        </div>
+
+    </div>
+</div>

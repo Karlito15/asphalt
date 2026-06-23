@@ -1,0 +1,90 @@
+
+<h4 class="text-start text-uppercase">
+    {{ 'text.stat.class'|trans }}
+</h4>
+
+<table class="table table-bordered table-striped">
+    <tbody>
+    <tr>
+        <td class="text-start">{{ 'text.garage'|trans|plural }}</td>
+        <td class="text-center">{{ alls.value.D }}</td>
+        <td class="text-center">{{ alls.value.C }}</td>
+        <td class="text-center">{{ alls.value.B }}</td>
+        <td class="text-center">{{ alls.value.A }}</td>
+        <td class="text-center">{{ alls.value.S }}</td>
+        <td class="text-end">{{ alls.value.T }}</td>
+    </tr>
+    <tr>
+        <td class="text-danger-emphasis text-start">{{ 'text.block'|trans|plural }}</td>
+        <td class="text-danger-emphasis text-center">{{ blocks.value.D }}</td>
+        <td class="text-danger-emphasis text-center">{{ blocks.value.C }}</td>
+        <td class="text-danger-emphasis text-center">{{ blocks.value.B }}</td>
+        <td class="text-danger-emphasis text-center">{{ blocks.value.A }}</td>
+        <td class="text-danger-emphasis text-center">{{ blocks.value.S }}</td>
+        <td class="text-danger-emphasis text-end">{{ blocks.value.T }}</td>
+    </tr>
+    <tr>
+        <td class="text-success-emphasis text-start">{{ 'text.unblock'|trans|plural }}</td>
+        <td class="text-success-emphasis text-center">{{ unblocks.value.D }}</td>
+        <td class="text-success-emphasis text-center">{{ unblocks.value.C }}</td>
+        <td class="text-success-emphasis text-center">{{ unblocks.value.B }}</td>
+        <td class="text-success-emphasis text-center">{{ unblocks.value.A }}</td>
+        <td class="text-success-emphasis text-center">{{ unblocks.value.S }}</td>
+        <td class="text-success-emphasis text-end">{{ unblocks.value.T }}</td>
+    </tr>
+    <tr>
+        <td class="text-warning-emphasis text-start">{{ 'text.gold'|trans|plural }}</td>
+        <td class="text-warning-emphasis text-center">{{ golds.value.D }}</td>
+        <td class="text-warning-emphasis text-center">{{ golds.value.C }}</td>
+        <td class="text-warning-emphasis text-center">{{ golds.value.B }}</td>
+        <td class="text-warning-emphasis text-center">{{ golds.value.A }}</td>
+        <td class="text-warning-emphasis text-center">{{ golds.value.S }}</td>
+        <td class="text-warning-emphasis text-end">{{ golds.value.T }}</td>
+    </tr>
+    <tr>
+        <td class="text-info-emphasis text-start">{{ 'text.to.upgrade'|trans|plural }}</td>
+        <td class="text-info-emphasis text-center">{{ toUpgrades.value.D }}</td>
+        <td class="text-info-emphasis text-center">{{ toUpgrades.value.C }}</td>
+        <td class="text-info-emphasis text-center">{{ toUpgrades.value.B }}</td>
+        <td class="text-info-emphasis text-center">{{ toUpgrades.value.A }}</td>
+        <td class="text-info-emphasis text-center">{{ toUpgrades.value.S }}</td>
+        <td class="text-info-emphasis text-end">{{ toUpgrades.value.T }}</td>
+    </tr>
+    <tr>
+        <td class="text-start">&nbsp;</td>
+        <td class="text-center">&nbsp;</td>
+        <td class="text-center">&nbsp;</td>
+        <td class="text-center">&nbsp;</td>
+        <td class="text-center">&nbsp;</td>
+        <td class="text-center">&nbsp;</td>
+        <td class="text-end">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="text-start">&nbsp;</td>
+        <td class="text-center">&nbsp;</td>
+        <td class="text-center">&nbsp;</td>
+        <td class="text-center">&nbsp;</td>
+        <td class="text-center">&nbsp;</td>
+        <td class="text-center">&nbsp;</td>
+        <td class="text-end">&nbsp;</td>
+    </tr>
+    </tbody>
+    <thead>
+        {{ _self.legend() }}
+    </thead>
+    <tfoot>
+        {{ _self.legend() }}
+    </tfoot>
+</table>
+
+{% macro legend() %}
+    <tr class="table-dark">
+        <th class="align-middle text-start">{{ 'text.class'|trans }}</th>
+        <th class="align-middle text-center"><i class="fa-solid fa-d"></i></th>
+        <th class="align-middle text-center"><i class="fa-solid fa-c"></i></th>
+        <th class="align-middle text-center"><i class="fa-solid fa-b"></i></th>
+        <th class="align-middle text-center"><i class="fa-solid fa-a"></i></th>
+        <th class="align-middle text-center"><i class="fa-solid fa-s"></i></th>
+        <th class="align-middle text-end">{{ 'text.total'|trans }}</th>
+    </tr>
+{% endmacro %}

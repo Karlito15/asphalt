@@ -1,0 +1,17 @@
+
+<section class="{{ container|default('container') }} mb-2 px-0">
+
+    <div class="row row-cols-2">
+        <twig:FormFloating column="{{ 4 }}" form="{{ form.settingBrand }}" />
+        <twig:FormFloating column="{{ 8 }}" form="{{ form.model }}" />
+    </div>
+
+    <div class="row row-cols-3 mt-5">
+        <twig:FormFloating column="{{ 4 }}" form="{{ form.settingClass }}" />
+        <twig:FormFloating column="{{ 4 }}" form="{{ form.stars }}" />
+{#        <twig:FormFloating column="{{ 4 }}" form="{{ form.gameUpdate, {'attr': {'value': game_update_last}} }}" />#}
+        {{ form_row(form.gameUpdate, {'attr': {'value': game_update_last}}) }}
+    </div>
+
+</section>
+

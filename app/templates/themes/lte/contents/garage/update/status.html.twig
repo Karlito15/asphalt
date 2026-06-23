@@ -1,0 +1,23 @@
+
+<div class="card border border-opacity-25 border-white border-1 shadow-sm">
+    <div class="card-header border-bottom-0 py-1 px-2 fs-1">{{ 'text.status'|trans }}</div>
+    <div class="card-body row row-cols-4 py-1 px-2">
+        <div class="row row-cols-5">
+            <div class="col">
+                <twig:FormCheckbox form="{{ form.status.unblock }}" />
+            </div>
+            <div class="col">
+                <twig:FormCheckbox form="{{ form.status.gold }}" />
+            </div>
+            <div class="col">
+                <twig:FormCheckbox form="{{ form.status.evo }}" />
+            </div>
+            <div class="col">
+                <twig:FormCheckbox form="{{ form.status.eventClass }}" />
+            </div>
+            <div class="col">
+                <twig:FormCheckbox form="{{ form.status.toUpgrade }}" />
+            </div>
+        </div>
+    </div>
+</div>

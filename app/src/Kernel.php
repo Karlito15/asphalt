@@ -33,6 +33,6 @@ class Kernel extends BaseKernel
 
     private function getVarsDir(): string
     {
-        return dirname($this->getProjectDir()) . DIRECTORY_SEPARATOR . 'vars' . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR;
+        return dirname($this->getProjectDir()) . DIRECTORY_SEPARATOR . 'vars' . DIRECTORY_SEPARATOR;
     }
 }

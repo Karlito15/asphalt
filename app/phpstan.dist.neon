@@ -1,8 +1,17 @@
 parameters:
-    level: 6
+    level: 9
     paths:
         - bin/
-        - config/
         - public/
         - src/
+    excludePaths:
+        - config/
         - tests/
+    fileExtensions:
+        - php
+    tmpDir: ../vars/phpstan
+    # PHP 8.4.15
+    phpVersion: 80415
+#includes:
+#    - vendor/phpstan/phpstan-symfony/extension.neon
+#    - vendor/phpstan/phpstan-symfony/rules.neon

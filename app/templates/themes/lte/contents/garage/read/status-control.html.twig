@@ -1,0 +1,30 @@
+
+<div class="card border border-opacity-25 border-white border-1 shadow-sm">
+    <div class="card-header border-bottom-0 py-1 px-2 fs-1">{{ 'text.status'|trans }}</div>
+    <div class="card-body row row-cols-2 py-1 px-2 gy-3">
+        <div class="text-center">
+            <input type="checkbox" id="status_toInstallUpgrade" name="status[toInstallUpgrade]" class="btn-check" value="0">
+            <label class="btn btn-outline-success w-100" for="status_toInstallUpgrade">To Install Upgrade</label>
+        </div>
+        <div class="text-center">
+            <input type="checkbox" id="status_fullUpgrade" name="status[fullUpgrade]" class="btn-check" value="0">
+            <label class="btn btn-outline-success w-100" for="status_fullUpgrade">Full Upgrade</label>
+        </div>
+        <div class="text-center">
+            <input type="checkbox" id="status_toInstallImport" name="status[toInstallImport]" class="btn-check" value="0">
+            <label class="btn btn-outline-success w-100" for="status_toInstallImport">To Install Import</label>
+        </div>
+        <div class="text-center">
+            <input type="checkbox" id="status_fullImport" name="status[fullImport]" class="btn-check" value="0">
+            <label class="btn btn-outline-success w-100" for="status_fullImport">Full Import</label>
+        </div>
+        <div class="text-center">
+            <input type="checkbox" id="status_fullBlueprint" name="status[fullBlueprint]" class="btn-check" value="{{ entity.statusControl.fullBlueprint }}">
+            <label class="btn btn-outline-success w-100" for="status_fullBlueprint">Full Blueprint</label>
+        </div>
+        <div class="text-center">
+            <input type="checkbox" id="status_toGold" name="status[toGold]" class="btn-check" value="0">
+            <label class="btn btn-outline-success w-100" for="status_toGold">To Gold</label>
+        </div>
+    </div>
+</div>

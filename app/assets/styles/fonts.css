@@ -1,0 +1,238 @@
+/** BLACK OPS ONE */
+
+@font-face {
+    font-family: "Black Ops One", sans-serif;
+    src:
+        url('../fonts/BlackOpsOne-Regular.ttf')
+        format('truetype');
+}
+
+.black-ops-one-regular {
+    font-family: "Black Ops One", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/** BUNGEE */
+
+.bungee-regular {
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bungee-shade-regular {
+    font-family: "Bungee Shade", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bungee-inline-regular {
+    font-family: "Bungee Inline", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/** FIRA CODE */
+
+@font-face {
+    font-family: "Fira Code", monospace;
+    src:
+        url('../fonts/FiraCode-Regular.ttf'),
+        url('../fonts/FiraCode-Bold.ttf')
+        format('truetype');
+}
+
+.fira-code-regular {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fira-code-bold {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/** MONOTON */
+
+.monoton-regular {
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/** OSWALD */
+
+@font-face {
+    font-family: "Oswald", sans-serif;
+    src:
+        url('../fonts/Oswald-Regular.ttf'),
+        url('../fonts/Oswald-Medium.ttf'),
+        url('../fonts/Oswald-Bold.ttf')
+        format('truetype');
+}
+
+.oswald-regular {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.oswald-medium {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.oswald-bold {
+    font-family: "Oswald", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/** PLAYFAIR DISPLAY */
+
+@font-face {
+    font-family: "Playfair Display", serif;
+    src:
+        url('../fonts/PlayfairDisplay-Black.ttf'),
+        url('../fonts/PlayfairDisplay-Bold.ttf'),
+        url('../fonts/PlayfairDisplay-ExtraBold.ttf'),
+        url('../fonts/PlayfairDisplay-Medium.ttf'),
+        url('../fonts/PlayfairDisplay-Regular.ttf')
+        format('truetype');
+}
+
+.playfair-display-regular {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.playfair-display-medium {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.playfair-display-bold {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.playfair-display-extrabold {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.playfair-display-black {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/** POPPINS */
+
+@font-face {
+    font-family: "Poppins", sans-serif;
+    src:
+        url('../fonts/Poppins-Black.ttf'),
+        url('../fonts/Poppins-Bold.ttf'),
+        url('../fonts/Poppins-ExtraBold.ttf'),
+        url('../fonts/Poppins-Regular.ttf'),
+        url('../fonts/Poppins-SemiBold.ttf')
+        format('truetype');
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/** RUBIK MONO ONE */
+
+@font-face {
+    font-family: "Rubik Mono One", monospace;
+    src:
+        url('../fonts/RubikMonoOne-Regular.ttf')
+        format('truetype');
+}
+
+.rubik-mono-one-regular {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/** TITILLIUM WEB */
+
+@font-face {
+    font-family: "Titillium Web", sans-serif;
+    src:
+        url('../fonts/TitilliumWeb-Black.ttf'),
+        url('../fonts/TitilliumWeb-Bold.ttf'),
+        url('../fonts/TitilliumWeb-ExtraLight.ttf'),
+        url('../fonts/TitilliumWeb-Regular.ttf')
+        format('truetype');
+}
+
+.titillium-web-extralight {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.titillium-web-regular {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.titillium-web-bold {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.titillium-web-black {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}

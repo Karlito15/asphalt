@@ -1,0 +1,17 @@
+
+{% extends '@App/themes/lte/bases/full.html.twig' %}
+
+{% block content %}
+
+    {{ form_start(form) }}
+
+    {% include '@App/themes/lte/contents/garage/create/error.html.twig' %}
+    {% include '@App/themes/lte/contents/garage/create/form.html.twig' %}
+
+    <section class="mt-3">
+        {% include '@App/themes/lte/contents/garage/_button.html.twig' %}
+    </section>
+
+    {{ form_end(form) }}
+
+{% endblock %}

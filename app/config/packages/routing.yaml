@@ -4,6 +4,10 @@ framework:
         # See https://symfony.com/doc/current/routing.html#generating-urls-in-commands
         default_uri: '%env(DEFAULT_URI)%'
 
+        strict_requirements: true
+
+        utf8: true
+
 when@prod:
     framework:
         router:

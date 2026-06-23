@@ -1,0 +1,8 @@
+{#<div{{ attributes }}>#}
+    <!-- component HTML -->
+{% if value is true %}
+    <i class="{{ icons.check }} text-success"></i>
+{% else %}
+    <i class="{{ icons.xmark }} text-danger"></i>
+{% endif %}
+{#</div>#}

@@ -1,0 +1,29 @@
+
+{% extends '@App/themes/lte/bases/full.html.twig' %}
+
+{% block content %}
+
+    {% from "@App/themes/lte/contents/garage/_macros.html.twig" import getBackgroundColor, getTextColor %}
+
+    {% set background, text = getBackgroundColor(entity.status)|u.toString|trim, getTextColor(entity.status)|u.toString|trim %}
+
+{#    {{ dump(entity.statusControl) }}#}
+
+    <div class="row row-cols-1">
+        <div class="col-12">{% include '@App/themes/lte/contents/garage/read/garage.html.twig' with {'background': background, 'text': text} %}</div>
+    </div>
+
+    <div class="row row-cols-4">
+        <div class="col-3">{% include '@App/themes/lte/contents/garage/read/rank.html.twig' with {'background': background, 'text': text} %}</div>
+        <div class="col-3">{% include '@App/themes/lte/contents/garage/read/blueprint.html.twig' with {'background': background, 'text': text} %}</div>
+        <div class="col-3">{% include '@App/themes/lte/contents/garage/read/upgrade.html.twig' with {'background': background, 'text': text} %}</div>
+        <div class="col-3">{% include '@App/themes/lte/contents/garage/read/stat.html.twig' with {'background': background, 'text': text} %}</div>
+    </div>
+
+    <div class="row row-cols-3">
+        <div class="col-4">{% include '@App/themes/lte/contents/garage/read/price.html.twig' with {'background': background, 'text': text} %}</div>
+        <div class="col-4">{% include '@App/themes/lte/contents/garage/read/status.html.twig' with {'background': background, 'text': text} %}</div>
+        <div class="col-4">{% include '@App/themes/lte/contents/garage/read/status-control.html.twig' with {'background': background, 'text': text} %}</div>
+    </div>
+
+{% endblock %}

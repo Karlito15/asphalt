@@ -1,0 +1,22 @@
+form.3: 3
+form.4: 4
+form.5: 5
+form.6: 6
+form.blueprint: 'Blueprint'
+form.brand: 'Brand'
+form.class: 'Class'
+form.division: 'Division'
+form.epic: 'Epic'
+form.event.class: 'Event Class'
+form.evo: 'Evo'
+form.game.update: 'Upd. N°'
+form.gold: 'Gold'
+form.level: 'Level'
+form.model: 'Model'
+form.order.class: 'Order by Class'
+form.stars: 'Stars'
+form.to.upgrade: 'To Upgrade'
+form.unblock: 'Unblock'
+form.unit-price: 'Unit Price'
+form.confirmation: 'Are you sure you want to delete this item ?'
+### To Delete

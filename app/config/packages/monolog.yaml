@@ -6,10 +6,26 @@ when@dev:
     monolog:
         handlers:
             main:
-                type: stream
+                # type: stream
+                # path: "%kernel.logs_dir%/%kernel.environment%.log"
+                # level: debug
+                # channels: ["!event"]
+                type: rotating_file
                 path: "%kernel.logs_dir%/%kernel.environment%.log"
-                level: debug
+                level: INFO # DEBUG | INFO | NOTICE | ERROR
+                max_files: 7
                 channels: ["!event"]
+                date_format: Y-m-d
+                filename_format: '{date}-{filename}'
+                ident: true
+            # uncomment to get logging in your browser
+            # you may have to allow bigger header sizes in your Web server configuration
+            #firephp:
+            #    type: firephp
+            #    level: info
+            #chromephp:
+            #    type: chromephp
+            #    level: info
             console:
                 type: console
                 process_psr_3_messages: false

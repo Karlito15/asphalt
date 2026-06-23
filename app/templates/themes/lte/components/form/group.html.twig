@@ -1,0 +1,10 @@
+
+<div class="col-{{ this.column() }}"{{ attributes }}>
+    <!-- component HTML -->
+    <div class="input-group">
+        {{ form_widget(form, {'attr': {'class': 'text-center'}}) }}
+        <span class="input-group-text justify-content-center w-50" id="{{ form.vars.id }}">{{ this.maxValue() }}</span>
+    {#    {{ form_help(form) }}#}
+    {#    {{ form_errors(form) }}#}
+    </div>
+</div>
