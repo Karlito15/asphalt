@@ -4,10 +4,11 @@
 clear
 
 # Composer
-php84 /volume3/web/WWW-CDN/composer.phar update --no-scripts --no-dev
+php84 -d memory_limit=2048M /volume3/web/WWW-CDN/composer.phar self-update
+php84 -d memory_limit=2048M /volume3/web/WWW-CDN/composer.phar update --no-scripts --no-dev
 
 # Symfony
-php84 /volume3/web/Symfony/Karlito-Web/Asphalt/app/bin/console about
+php84 -d memory_limit=2048M /volume3/web/Symfony/Karlito-Web/Asphalt/app/bin/console about
 
 # Clear Cache (Symfony & Doctrine)
 php84 -d memory_limit=2048M /volume3/web/Symfony/Karlito-Web/Asphalt/app/bin/console cache:clear --env prod
