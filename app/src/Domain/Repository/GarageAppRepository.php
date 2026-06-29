@@ -54,6 +54,65 @@ class GarageAppRepository extends ServiceEntityRepository
 
     ### END::INDEX
 
+    ### PAGES START
+
+    /**
+     * Pour les pages Pages/Filter & Pages/Settings
+     *
+     * @param array|null $where
+     * @return GarageApp[]
+     */
+    public function getGaragePageFilter(array|null $where = null): array
+    {
+        $qb = $this->queryGarage();
+
+        ### WHERE
+        if (!is_null($where)) {
+            foreach ($where as $key => $value) {
+                $parameter = str_replace('.', '_', $key);
+                $qb->andWhere($key . ' = :' . $parameter)->setParameter($parameter, $value);
+            }
+        }
+
+        ### ORDER
+        $qb->addOrderBy('g.carOrder', 'ASC');
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    /**
+     * @param array|null $where     column and value
+     * @param array|null $order     column and sense ('ASC' or 'DESC')
+     * @param array|null $limit     offset and limit
+     * @return array
+     */
+    public function getGaragePageOrder(array|null $where = null, array|null $order = null, array|null $limit = null): array
+    {
+        $qb = $this->queryGarage();
+
+        ### WHERE
+        if ($where) {
+            $key = key($where);
+            $qb->andWhere($key . ' = :value')->setParameter('value', $where[$key]);
+        }
+
+        ### ORDER
+        if ($order) {
+            $key = key($order);
+            $qb->addOrderBy($key, $order[$key]);
+        }
+
+        ### LIMIT
+        if ($limit) {
+            $qb->setFirstResult($limit[0])->setMaxResults($limit[1]);
+        }
+
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    ### PAGES END
+
     ### BEGIN::CREATE
 
     /**

@@ -1,4 +1,4 @@
-<div{#{{ attributes }}#}>
+<div class="col"{#{{ attributes }}#}>
     <!-- component HTML -->
     {{ form_widget(form, {'label_attr': {'class': _self.color(form.vars.data, form.vars.name)}}) }}
     {{ form_label(form) }}
@@ -8,12 +8,12 @@
 
 {% macro color(value, name) %}
 {% if (value is true) and (name == 'gold') %}
-btn btn-outline-warning
+w-100 btn btn-outline-warning
 {% elseif (value is true) and (name == 'toUpgrade') %}
-btn btn-outline-primary
+w-100 btn btn-outline-primary
 {% elseif value is true %}
-btn btn-outline-success
+w-100 btn btn-outline-success
 {% else %}
-btn btn-outline-danger
+w-100 btn btn-outline-danger
 {% endif %}
 {% endmacro %}

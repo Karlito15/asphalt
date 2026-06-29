@@ -8,29 +8,25 @@
     {% set background, text = getBackgroundColor(entity.status)|u.toString|trim, getTextColor(entity.status)|u.toString|trim %}
 
 {{ form_start(form) }}
-    <div class="row">
+    <div class="row mb-2">
         <div class="col">{% include '@App/themes/lte/contents/garage/update/garage.html.twig' with {'background': background, 'text': text} %}</div>
     </div>
+    <div class="row mb-2">
+        <div class="col">{% include '@App/themes/lte/contents/garage/update/status.html.twig' with {'background': background, 'text': text} %}</div>
+    </div>
 
-    <div class="row mb-3">
+    <div class="row mb-2">
         <div class="col">{% include '@App/themes/lte/contents/garage/update/blueprint.html.twig' with {'background': background, 'text': text} %}</div>
     </div>
 
-    <div class="row mb-3">
-        <div class="col">{% include '@App/themes/lte/contents/garage/update/upgrade.html.twig' with {'background': background, 'text': text} %}</div>
+    <div class="row mb-2">
+        <div class="col-6">{% include '@App/themes/lte/contents/garage/update/upgrade.html.twig' with {'background': background, 'text': text} %}</div>
+        <div class="col-6">{% include '@App/themes/lte/contents/garage/update/rank.html.twig' with {'background': background, 'text': text} %}</div>
     </div>
 
-    <div class="row mb-3">
-        <div class="col">{% include '@App/themes/lte/contents/garage/update/rank.html.twig' with {'background': background, 'text': text} %}</div>
-    </div>
-
-    <div class="row mb-3">
-        <div class="col">{% include '@App/themes/lte/contents/garage/update/stat.html.twig' with {'background': background, 'text': text} %}</div>
-    </div>
-
-    <div class="row row-cols-2">
+    <div class="row row-cols-2 mb-2">
+        <div class="col-6">{% include '@App/themes/lte/contents/garage/update/stat.html.twig' with {'background': background, 'text': text} %}</div>
         <div class="col-6">{% include '@App/themes/lte/contents/garage/update/price.html.twig' with {'background': background, 'text': text} %}</div>
-        <div class="col-6">{% include '@App/themes/lte/contents/garage/update/status.html.twig' with {'background': background, 'text': text} %}</div>
     </div>
 
     {% include '@App/themes/lte/contents/garage/_button.html.twig' %}

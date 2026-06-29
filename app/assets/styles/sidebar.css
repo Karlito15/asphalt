@@ -1,0 +1,7 @@
+.sidebar-wrapper {
+    background-image: url("../images/sidebar-02.jpg");
+    background-position: bottom 30px right 0;
+    background-repeat: no-repeat;
+    /*background-size: contain;*/
+    background-size: 250px;
+}

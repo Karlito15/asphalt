@@ -61,17 +61,8 @@
     </tfoot>
 {% endblock %}
 
-{% block tableId %}
+{% block tableId -%}
     {% if current_page == 'app.garage.index' %} id="Garage"{% endif %}
-{% endblock %}
-
-{% block stylesheets %}
-    {{ parent() }}
-    {% if app.environment == 'dev' %}
-    <link rel="stylesheet" href="{{ asset('libraries/bootstrap-table/1.27/dist/bootstrap-table.css') }}">
-    {% else %}
-    <link rel="stylesheet" href="{{ asset('libraries/bootstrap-table/1.27/dist/bootstrap-table.min.css') }}">
-    {% endif %}
 {% endblock %}
 
 {% macro legend() %}

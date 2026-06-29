@@ -13,6 +13,13 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class RaceAppRepository extends ServiceEntityRepository
 {
+    private static array $select = [
+        'r.id AS Id',
+        'r.raceOrder AS Order',
+        'r.finished AS Finished',
+        'r.slug AS Slug'
+    ];
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, RaceApp::class);
@@ -30,11 +37,11 @@ class RaceAppRepository extends ServiceEntityRepository
         $datas = [];
         foreach ($this->findBy([], ['season' => 'ASC', 'raceOrder' => 'ASC']) as $race) {
             $datas[] = [
-                'Season' => $race->getSeason()->getName(),
+                'Season'    => $race->getSeason()->getName(),
                 'RaceOrder' => $race->getRaceOrder(),
-                'Mode' => $race->getMode()->getName(),
-                'Time' => $race->getTime()->getName(),
-                'English' => $race->getTrack()->getNameEnglish(),
+                'Mode'      => $race->getMode()->getName(),
+                'Time'      => $race->getTime()->getName(),
+                'English'   => $race->getTrack()->getNameEnglish(),
             ];
         }
 

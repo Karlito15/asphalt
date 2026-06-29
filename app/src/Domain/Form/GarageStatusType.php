@@ -16,31 +16,31 @@ class GarageStatusType extends AbstractForm
     {
         $builder
             ->add('unblock', CheckboxType::class, [
-//                'attr'          => self::attrClass(),
+                'attr'          => self::attrClassPrivate(),
                 'label'         => 'form.unblock',
                 'label_attr'    => self::attrLabel(),
                 'required'      => false,
             ])
             ->add('gold', CheckboxType::class, [
-//                'attr'          => self::attrClass(),
+                'attr'          => self::attrClassPrivate(),
                 'label'         => 'form.gold',
                 'label_attr'    => self::attrLabel(),
                 'required'      => false,
             ])
             ->add('toUpgrade', CheckboxType::class, [
-//                'attr'          => self::attrClass(),
+                'attr'          => self::attrClassPrivate(),
                 'label'         => 'form.to.upgrade',
                 'label_attr'    => self::attrLabel(),
                 'required'      => false,
             ])
             ->add('evo', CheckboxType::class, [
-//                'attr'          => self::attrClass(),
+                'attr'          => self::attrClassPrivate(),
                 'label'         => 'form.evo',
                 'label_attr'    => self::attrLabel(),
                 'required'      => false,
             ])
             ->add('eventClass', CheckboxType::class, [
-//                'attr'          => self::attrClass(),
+                'attr'          => self::attrClassPrivate(),
                 'label'         => 'form.event.class',
                 'label_attr'    => self::attrLabel(),
                 'required'      => false,
@@ -57,16 +57,15 @@ class GarageStatusType extends AbstractForm
         ]);
     }
 
-//    /** PRIVATE METHODS */
-//
-//    /**
-//     * @return array
-//     */
-//    private static function attrClass(): array
-//    {
-//        return [
-//            'class' => 'btn-check'//form-check-input
-//        ];
-//    }
-//
+    /** PRIVATE METHODS */
+
+    /**
+     * @return array
+     */
+    private static function attrClassPrivate(): array
+    {
+        return [
+            'class' => 'btn-check'
+        ];
+    }
 }

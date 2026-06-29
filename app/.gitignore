@@ -27,3 +27,17 @@ phpstan.neon
 /.php-cs-fixer.php
 /.php-cs-fixer.cache
 ###< friendsofphp/php-cs-fixer ###
+
+###> symfony/webpack-encore-bundle ###
+/.yarn/
+/.yarnrc
+/node_modules/
+/public/build/
+/public/cache/*
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
+
+###> ide ###
+ide-twig.json
+###< ide ###

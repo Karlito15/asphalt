@@ -25,18 +25,22 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 )]
 final class FilterController extends AbstractBaseController
 {
+    public function __construct(
+        readonly TranslatorInterface $translator,
+    )
+    {}
+
     #[Route(path: '/block/class-{letter}.php', name: 'block')]
     public function block(
         Request $request,
         GarageAppRepository $repository,
-        TranslatorInterface $translator,
     ): Response
     {
         ### Variables
         $letter     = self::Letter($request->attributes->get('letter'));
         $match      = self::ControlLetter($letter);
-        $dashboard  = $translator->trans('text.dashboard');
-        $title      = $translator->trans('text.filter') . ' by ' . $translator->trans('text.block');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.block');
         $breadcrumb = [
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.block', 'params' => []],
@@ -64,13 +68,12 @@ final class FilterController extends AbstractBaseController
     public function unblock(
         Request $request,
         GarageAppRepository $repository,
-        TranslatorInterface $translator,
     ): Response
     {
         $letter     = self::Letter($request->attributes->get('letter'));
         $match      = self::ControlLetter($letter);
-        $dashboard  = $translator->trans('text.dashboard');
-        $title      = $translator->trans('text.filter') . ' by ' . $translator->trans('text.unblock');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.unblock');
         $breadcrumb = [
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.unblock', 'params' => []],
@@ -98,14 +101,13 @@ final class FilterController extends AbstractBaseController
     public function gold(
         Request $request,
         GarageAppRepository $repository,
-        TranslatorInterface $translator,
     ): Response
     {
         ### Variables
         $letter     = self::Letter($request->attributes->get('letter'));
         $match      = self::ControlLetter($letter);
-        $dashboard  = $translator->trans('text.dashboard');
-        $title      = $translator->trans('text.filter') . ' by ' . $translator->trans('text.gold');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.gold');
         $breadcrumb = [
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.gold', 'params' => []],
@@ -134,14 +136,13 @@ final class FilterController extends AbstractBaseController
     public function evo(
         Request $request,
         GarageAppRepository $repository,
-        TranslatorInterface $translator,
     ): Response
     {
         ### Variables
         $letter     = self::Letter($request->attributes->get('letter'));
         $match      = self::ControlLetter($letter);
-        $dashboard  = $translator->trans('text.dashboard');
-        $title      = $translator->trans('text.filter') . ' by ' . $translator->trans('text.evo');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.evo');
         $breadcrumb = [
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.evo', 'params' => []],
@@ -169,14 +170,13 @@ final class FilterController extends AbstractBaseController
     public function event(
         Request $request,
         GarageAppRepository $repository,
-        TranslatorInterface $translator,
     ): Response
     {
         ### Variables
         $letter     = self::Letter($request->attributes->get('letter'));
         $match      = self::ControlLetter($letter);
-        $dashboard  = $translator->trans('text.dashboard');
-        $title      = $translator->trans('text.filter') . ' by ' . $translator->trans('text.event.class');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.event.class');
         $breadcrumb = [
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.event', 'params' => []],
@@ -204,14 +204,13 @@ final class FilterController extends AbstractBaseController
     public function toUpgrade(
         Request $request,
         GarageAppRepository $repository,
-        TranslatorInterface $translator,
     ): Response
     {
         ### Variables
         $letter     = self::Letter($request->attributes->get('letter'));
         $match      = self::ControlLetter($letter);
-        $dashboard  = $translator->trans('text.dashboard');
-        $title      = $translator->trans('text.filter') . ' by ' . $translator->trans('text.to.upgrade');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.to.upgrade');
         $breadcrumb = [
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.to.upgrade', 'params' => []],
@@ -239,14 +238,13 @@ final class FilterController extends AbstractBaseController
     public function toInstallUpgrade(
         Request $request,
         GarageAppRepository $repository,
-        TranslatorInterface $translator,
     ): Response
     {
         ### Variables
         $letter     = self::Letter($request->attributes->get('letter'));
         $match      = self::ControlLetter($letter);
-        $dashboard  = $translator->trans('text.dashboard');
-        $title      = $translator->trans('text.filter') . ' by ' . $translator->trans('text.to.install.upgrade');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.to.install.upgrade');
         $breadcrumb = [
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.to.install.upgrade', 'params' => []],
@@ -270,14 +268,13 @@ final class FilterController extends AbstractBaseController
     public function toInstallImport(
         Request $request,
         GarageAppRepository $repository,
-        TranslatorInterface $translator,
     ): Response
     {
         ### Variables
         $letter     = self::Letter($request->attributes->get('letter'));
         $match      = self::ControlLetter($letter);
-        $dashboard  = $translator->trans('text.dashboard');
-        $title      = $translator->trans('text.filter') . ' by ' . $translator->trans('text.to.install.import');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.to.install.import');
         $breadcrumb = [
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.to.install.import', 'params' => []],
@@ -301,14 +298,13 @@ final class FilterController extends AbstractBaseController
     public function toGold(
         Request $request,
         GarageAppRepository $repository,
-        TranslatorInterface $translator,
     ): Response
     {
         ### Variables
         $letter     = self::Letter($request->attributes->get('letter'));
         $match      = self::ControlLetter($letter);
-        $dashboard  = $translator->trans('text.dashboard');
-        $title      = $translator->trans('text.filter') . ' by ' . $translator->trans('text.to.gold');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.to.gold');
         $breadcrumb = [
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.to.gold', 'params' => []],
@@ -332,14 +328,13 @@ final class FilterController extends AbstractBaseController
     public function fullBlueprint(
         Request $request,
         GarageAppRepository $repository,
-        TranslatorInterface $translator,
     ): Response
     {
         ### Variables
         $letter     = self::Letter($request->attributes->get('letter'));
         $match      = self::ControlLetter($letter);
-        $dashboard  = $translator->trans('text.dashboard');
-        $title      = $translator->trans('text.filter') . ' by ' . $translator->trans('text.full.blueprint');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.full.blueprint');
         $breadcrumb = [
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.full.blueprint', 'params' => []],
@@ -363,17 +358,21 @@ final class FilterController extends AbstractBaseController
     public function fullEvo(
         Request $request,
         GarageAppRepository $repository,
-        TranslatorInterface $translator,
     ): Response
     {
         ### Variables
         $letter     = self::Letter($request->attributes->get('letter'));
         $match      = self::ControlLetter($letter);
-        $dashboard  = $translator->trans('text.dashboard');
-        $title      = $translator->trans('text.filter') . ' by ' . $translator->trans('text.full.evo');
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.full.evo');
         $breadcrumb = [
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.full.evo', 'params' => []],
+        ];
+        $query      = [
+//            'status.unblock'     => true,
+//            'status.gold'        => true,
+//            'settingClass.value' => $letter,
         ];
 
         ### Letter Not Match
@@ -384,7 +383,7 @@ final class FilterController extends AbstractBaseController
             'links'             => [],
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'entities'          => $repository->getGaragePageFilter([]),
+            'entities'          => $repository->getGaragePageFilter($query),
             'container'         => 'container-fluid pt-4 px-4',
             'theme'             => 'dark',
         ]);

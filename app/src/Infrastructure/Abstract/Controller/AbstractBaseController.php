@@ -30,18 +30,18 @@ abstract class AbstractBaseController extends AbstractController
         return $breadcrumb;
     }
 
-//    /**
-//     * Page 404
-//     *
-//     * @param bool $bool
-//     * @return void
-//     */
-//    protected function return404(bool $bool): void
-//    {
-//        if (!$bool) {
-//            throw $this->createNotFoundException($this->translator->trans('error.class'));
-//        }
-//    }
+    /**
+     * Page 404
+     *
+     * @param bool $bool
+     * @return void
+     */
+    protected function return404(bool $bool): void
+    {
+        if (!$bool) {
+            throw $this->createNotFoundException($this->translator->trans('error.class'));
+        }
+    }
 
     /** STATIC METHODS */
 
