@@ -2,21 +2,14 @@
 <!--begin::Row-->
 <div class="row">
     <div class="col-6">
-{#        <h3 class="mb-0 black-ops-one-regular">{{ controller_name|trim }}</h3>#}
-{#        <h3 class="mb-0 bungee-inline-regular">{{ controller_name|trim }}</h3>#}
-{#        <h3 class="mb-0 bungee-regular">{{ controller_name|trim }}</h3>#}
-{#        <h3 class="mb-0 bungee-shade-regular">{{ controller_name|trim }}</h3>#}
-{#        <h3 class="mb-0 oswald-bold">{{ controller_name|trim }}</h3>#}
-        <h3 class="mb-0 poppins-black">{{ controller_name|trim }}</h3>
+        <span class="breadcrumb">{{ controller_name|trim }}</span>
     </div>
     <div class="col-6">
         <ol class="breadcrumb float-end">
         {% for item in breadcrumb %}
             {% if item.route is not empty %}
             <li class="breadcrumb-item">
-                <a href="{{ path(item.route, item.params|default({})) }}">
-                    {{ item.label }}
-                </a>
+                <a href="{{ path(item.route, item.params|default({})) }}">{{ item.label }}</a>
             </li>
             {% else %}
             <li class="breadcrumb-item active fw-bolder" aria-current="page">

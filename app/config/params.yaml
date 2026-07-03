@@ -28,10 +28,10 @@ parameters:
         nitro:              🔥
         check:              'fa-solid fa-check'
         xmark:              'fa-solid fa-xmark'
-        gauge:              'fa-solid fa-gauge-high'    # Acceleration
-        fire:               'fa-solid fa-fire'          # Nitro
-        gear:               'fa-solid fa-gear'          # Handling
         rocket:             'fa-solid fa-rocket'        # Speed
+        gauge:              'fa-solid fa-gauge-high'    # Acceleration
+        gear:               'fa-solid fa-gear'          # Handling
+        fire:               'fa-solid fa-fire'          # Nitro
         star:
             full:           'fa-solid fa-star'
             empty:          'fa-regular fa-star'

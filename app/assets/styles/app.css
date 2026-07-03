@@ -33,3 +33,13 @@ body {
     background-size: cover;
     /*filter: contrast(300%) sepia(100%); grayscale(80%) contrast(200%)*/
 }
+
+/**/
+.form-floating > label {
+    left: inherit;
+}
+
+/**/
+div.app-wrapper main#main.app-main div.app-content div.container-fluid div.col div.info-box span.info-box-icon i.fa-2x {
+    font-size: 40.5px;
+}

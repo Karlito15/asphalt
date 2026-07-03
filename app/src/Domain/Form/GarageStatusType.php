@@ -18,31 +18,31 @@ class GarageStatusType extends AbstractForm
             ->add('unblock', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
                 'label'         => 'form.unblock',
-                'label_attr'    => self::attrLabel(),
+                'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('gold', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
                 'label'         => 'form.gold',
-                'label_attr'    => self::attrLabel(),
+                'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('toUpgrade', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
                 'label'         => 'form.to.upgrade',
-                'label_attr'    => self::attrLabel(),
+                'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('evo', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
                 'label'         => 'form.evo',
-                'label_attr'    => self::attrLabel(),
+                'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('eventClass', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
                 'label'         => 'form.event.class',
-                'label_attr'    => self::attrLabel(),
+                'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
         ;
@@ -53,7 +53,7 @@ class GarageStatusType extends AbstractForm
         $resolver->setDefaults([
             'data_class' => GarageStatus::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',//messages
+            'translation_domain' => 'forms',
         ]);
     }
 
@@ -66,6 +66,16 @@ class GarageStatusType extends AbstractForm
     {
         return [
             'class' => 'btn-check'
+        ];
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    public static function attrLabelPrivate(): array
+    {
+        return [
+            'class' => 'btn btn-outline-info w-100',
         ];
     }
 }

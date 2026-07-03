@@ -1,0 +1,56 @@
+
+<div class="card border border-opacity-50 border-white border-1 shadow-sm {{ background }}">
+    <div class="card-body row row-cols-3 gx-4 gy-3">
+        <twig:ReaderGroup
+            label="{{ 'text.level'|trans }}"
+            icon="fa-arrow-up-wide-short"
+            value="{{ entity.level }}"
+            max="{{ entity.settingLevel.level }}"
+        />
+
+        <twig:ReaderGroup
+            label="{{ 'text.epic'|trans }}"
+            icon="fa-crown"
+            value="{{ entity.epic }}"
+            max="{{ entity.settingLevel.epic }}"
+        />
+
+        <twig:ReaderGroup
+            label="{{ 'text.order.class'|trans }}"
+            icon="fa-arrow-up-a-z"
+            value="{{ entity.carOrder }}"
+            max="{{ entity.settingClass.carsNumber }}"
+        />
+
+        <twig:ReaderGroup
+            label="{{ 'text.order.stat'|trans }}"
+            icon="fa-arrow-up-1-9"
+            value="{{ entity.statOrder }}"
+            max="{{ entity.settingClass.carsNumber }}"
+        />
+
+        <div class="col">
+            <div class="info-box bg-transparent text-secondary">
+                <div class="info-box-content">
+                    <span class="info-box-text">{{ 'text.game.update'|trans }}</span>
+                    <span class="info-box-number text-light">
+                        {{ entity.gameUpdate  }}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        {% if entity.status.evo == true %}
+        <div class="col">
+            <div class="info-box bg-transparent text-secondary">
+                <div class="info-box-content">
+                    <span class="info-box-text">{{ 'text.evo'|trans }}</span>
+                    <span class="info-box-number text-light">
+                        {{ entity.evo  }} / 24
+                    </span>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>

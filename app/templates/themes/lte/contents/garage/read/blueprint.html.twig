@@ -1,57 +1,77 @@
 
-<div class="card border border-opacity-25 border-white border-1 shadow-sm {{ background }}">
-    <div class="card-header border-bottom-0 py-1 px-2 fs-1">{{ 'text.blueprint'|trans|plural }}</div>
+<div class="card border border-opacity-50 border-white border-1 shadow-sm {{ background }}">
+    <div class="card-header border-bottom-0 py-1 px-2">
+        <i class="fa-solid fa-coins"></i>&nbsp;{{ 'text.blueprint'|trans|plural }}
+    </div>
     <div class="card-body py-1 px-2">
         <table class="table table-striped table-bordered">
-            <thead>
+            <thead class="poppins-black">
                 <tr>
-                    <th class="w-25 py-1 text-start">Legend</th>
-                    <th class="w-25 py-1 text-end">{{ 'text.garage'|trans }}</th>
-                    <th class="w-25 py-1 text-end">{{ 'text.setting'|trans|plural }}</th>
+                    <th class="text-start">Legend</th>
+                    <th class="text-end">{{ 'text.garage'|trans }}</th>
+                    <th class="text-end">{{ 'text.setting'|trans|plural }}</th>
                 </tr>
             </thead>
             <tbody>
-            <tr>
-                <td class="w-25 py-1 text-start">{{ 'text.star1'|trans }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.blueprint.star1 }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.settingBlueprint.star1 }}</td>
-            </tr>
-            <tr>
-                <td class="w-25 py-1 text-start">{{ 'text.star2'|trans }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.blueprint.star2 }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.settingBlueprint.star2 }}</td>
-            </tr>
-            <tr>
-                <td class="w-25 py-1 text-start">{{ 'text.star3'|trans }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.blueprint.star3 }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.settingBlueprint.star3 }}</td>
-            </tr>
-            {% if entity.stars >= 4 %}
-            <tr>
-                <td class="w-25 py-1 text-start">{{ 'text.star4'|trans }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.blueprint.star4 }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.settingBlueprint.star4 }}</td>
-            </tr>
-            {% endif %}
-            {% if entity.stars >= 5 %}
-            <tr>
-                <td class="w-25 py-1 text-start">{{ 'text.star5'|trans }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.blueprint.star5 }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.settingBlueprint.star5 }}</td>
-            </tr>
-            {% endif %}
-            {% if entity.stars >= 6 %}
-            <tr>
-                <td class="w-25 py-1 text-start">{{ 'text.star6'|trans }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.blueprint.star6 }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.settingBlueprint.star6 }}</td>
-            </tr>
-            {% endif %}
-            <tr>
-                <td class="w-25 py-1 text-start">{{ 'text.total'|trans }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.blueprint.total }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.settingBlueprint.total }}</td>
-            </tr>
+                <tr>
+                    <td class="text-start text-warning">
+                        <span class="d-block d-lg-none"><i class="fa-solid fa-1"></i><i class="{{ icons.star.full }}"></i></span>
+                        <span class="d-none d-lg-block"><i class="{{ icons.star.full }}"></i></span>
+                    </td>
+                    <td class="text-end">{{ entity.blueprint.star1 }}</td>
+                    <td class="text-end">{{ entity.settingBlueprint.star1 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-start text-warning">
+                        <span class="d-block d-lg-none"><i class="fa-solid fa-2"></i><i class="{{ icons.star.full }}"></i></span>
+                        <span class="d-none d-lg-block">{% for i in 1..2 %}<i class="{{ icons.star.full }}"></i>{% endfor  %}</span>
+                    </td>
+                    <td class="text-end">{{ entity.blueprint.star2 }}</td>
+                    <td class="text-end">{{ entity.settingBlueprint.star2 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-start text-warning">
+                        <span class="d-block d-lg-none"><i class="fa-solid fa-3"></i><i class="{{ icons.star.full }}"></i></span>
+                        <span class="d-none d-lg-block">{% for i in 1..3 %}<i class="{{ icons.star.full }}"></i>{% endfor  %}</span>
+                    </td>
+                    <td class="text-end">{{ entity.blueprint.star3 }}</td>
+                    <td class="text-end">{{ entity.settingBlueprint.star3 }}</td>
+                </tr>
+                {% if entity.stars >= 4 %}
+                <tr>
+                    <td class="text-start text-warning">
+                        <span class="d-block d-lg-none"><i class="fa-solid fa-4"></i><i class="{{ icons.star.full }}"></i></span>
+                        <span class="d-none d-lg-block">{% for i in 1..4 %}<i class="{{ icons.star.full }}"></i>{% endfor  %}</span>
+                    </td>
+                    <td class="text-end">{{ entity.blueprint.star4 }}</td>
+                    <td class="text-end">{{ entity.settingBlueprint.star4 }}</td>
+                </tr>
+                {% endif %}
+                {% if entity.stars >= 5 %}
+                <tr>
+                    <td class="text-start text-warning">
+                        <span class="d-block d-lg-none"><i class="fa-solid fa-5"></i><i class="{{ icons.star.full }}"></i></span>
+                        <span class="d-none d-lg-block">{% for i in 1..5 %}<i class="{{ icons.star.full }}"></i>{% endfor  %}</span>
+                    </td>
+                    <td class="text-end">{{ entity.blueprint.star5 }}</td>
+                    <td class="text-end">{{ entity.settingBlueprint.star5 }}</td>
+                </tr>
+                {% endif %}
+                {% if entity.stars >= 6 %}
+                <tr>
+                    <td class="text-start text-warning">
+                        <span class="d-block d-lg-none"><i class="fa-solid fa-6"></i><i class="{{ icons.star.full }}"></i></span>
+                        <span class="d-none d-lg-block">{% for i in 1..6 %}<i class="{{ icons.star.full }}"></i>{% endfor  %}</span>
+                    </td>
+                    <td class="text-end">{{ entity.blueprint.star6 }}</td>
+                    <td class="text-end">{{ entity.settingBlueprint.star6 }}</td>
+                </tr>
+                {% endif %}
+                <tr>
+                    <td class="text-start">{{ 'text.total'|trans }}</td>
+                    <td class="text-end">{{ entity.blueprint.total }}</td>
+                    <td class="text-end">{{ entity.settingBlueprint.total }}</td>
+                </tr>
             </tbody>
         </table>
     </div>

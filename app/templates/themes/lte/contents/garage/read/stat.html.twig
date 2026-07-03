@@ -1,59 +1,61 @@
 
-<div class="card border border-opacity-25 border-white border-1 shadow-sm {{ background }}">
-    <div class="card-header border-bottom-0 py-1 px-2 fs-1">{{ 'text.stat'|trans|plural }}</div>
+<div class="card border border-opacity-50 border-white border-1 shadow-sm {{ background }}">
+    <div class="card-header border-bottom-0 py-1 px-2">
+        <i class="fa-solid fa-chart-line"></i>&nbsp;{{ 'text.stat'|trans|plural }}
+    </div>
     <div class="card-body py-1 px-2">
         <table class="table table-striped table-bordered">
-            <thead>
+            <thead class="poppins-black">
                 <tr>
-                    <th class="w-25 py-1 text-start">Legend</th>
-                    <th class="w-25 py-1 text-end">{{ 'text.stat.min'|trans }}</th>
-                    <th class="w-25 py-1 text-end">{{ 'text.stat.max'|trans }}</th>
-                    <th class="w-25 py-1 text-end">{{ 'text.stat.actual'|trans }}</th>
+                    <th class="w-25 text-start">Legend</th>
+                    <th class="w-25 text-end">{{ 'text.stat.min'|trans }}</th>
+                    <th class="w-25 text-end">{{ 'text.stat.actual'|trans }}</th>
+                    <th class="w-25 text-end">{{ 'text.stat.max'|trans }}</th>
                 </tr>
             </thead>
             <tbody>
-            <tr>
-                <td class="w-25 py-1 text-start">
-                    <span class="d-block d-lg-none"><i class="{{ icons.rocket }}"></i></span>
-                    <span class="d-none d-lg-block">{{ 'text.speed'|trans }}</span>
-                </td>
-                <td class="w-25 py-1 text-end">{{ entity.statMin.speed|number_format('2', ',', ' ') }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.statMax.speed|number_format('2', ',', ' ') }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.statActual.speed|number_format('2', ',', ' ') }}</td>
-            </tr>
-            <tr>
-                <td class="w-25 py-1 text-start">
-                    <span class="d-block d-lg-none"><i class="{{ icons.gauge }}"></i></span>
-                    <span class="d-none d-lg-block">{{ 'text.acceleration'|trans }}</span>
-                </td>
-                <td class="w-25 py-1 text-end">{{ entity.statMin.acceleration|number_format('2', ',', ' ') }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.statMax.acceleration|number_format('2', ',', ' ') }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.statActual.acceleration|number_format('2', ',', ' ') }}</td>
-            </tr>
-            <tr>
-                <td class="w-25 py-1 text-start">
-                    <span class="d-block d-lg-none"><i class="{{ icons.gear }}"></i></span>
-                    <span class="d-none d-lg-block">{{ 'text.handling'|trans }}</span>
-                </td>
-                <td class="w-25 py-1 text-end">{{ entity.statMin.handling|number_format('2', ',', ' ') }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.statMax.handling|number_format('2', ',', ' ') }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.statActual.handling|number_format('2', ',', ' ') }}</td>
-            </tr>
-            <tr>
-                <td class="w-25 py-1 text-start">
-                    <span class="d-block d-lg-none"><i class="{{ icons.fire }}"></i></span>
-                    <span class="d-none d-lg-block">{{ 'text.nitro'|trans }}</span>
-                </td>
-                <td class="w-25 py-1 text-end">{{ entity.statMin.nitro|number_format('2', ',', ' ') }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.statMax.nitro|number_format('2', ',', ' ') }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.statActual.nitro|number_format('2', ',', ' ') }}</td>
-            </tr>
-            <tr>
-                <td class="w-25 py-1 text-start">{{ 'text.average'|trans }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.statMin.average|number_format('2', ',', ' ') }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.statMax.average|number_format('2', ',', ' ') }}</td>
-                <td class="w-25 py-1 text-end">{{ entity.statActual.average|number_format('2', ',', ' ') }}</td>
-            </tr>
+                <tr>
+                    <td class="w-25 text-start">
+                        <span class="d-block d-lg-none"><i class="{{ icons.rocket }}"></i></span>
+                        <span class="d-none d-lg-block">{{ icons.speed }}&nbsp;{{ 'text.speed'|trans }}</span>
+                    </td>
+                    <td class="w-25 text-end">{{ entity.statMin.speed|number_format('2', ',', ' ') }}</td>
+                    <td class="w-25 text-end">{{ entity.statActual.speed|number_format('2', ',', ' ') }}</td>
+                    <td class="w-25 text-end">{{ entity.statMax.speed|number_format('2', ',', ' ') }}</td>
+                </tr>
+                <tr>
+                    <td class="w-25 text-start">
+                        <span class="d-block d-lg-none"><i class="{{ icons.gauge }}"></i></span>
+                        <span class="d-none d-lg-block">{{ icons.acceleration }}&nbsp;{{ 'text.acceleration'|trans }}</span>
+                    </td>
+                    <td class="w-25 text-end">{{ entity.statMin.acceleration|number_format('2', ',', ' ') }}</td>
+                    <td class="w-25 text-end">{{ entity.statActual.acceleration|number_format('2', ',', ' ') }}</td>
+                    <td class="w-25 text-end">{{ entity.statMax.acceleration|number_format('2', ',', ' ') }}</td>
+                </tr>
+                <tr>
+                    <td class="w-25 text-start">
+                        <span class="d-block d-lg-none"><i class="{{ icons.gear }}"></i></span>
+                        <span class="d-none d-lg-block">{{ icons.handling }}&nbsp;{{ 'text.handling'|trans }}</span>
+                    </td>
+                    <td class="w-25 text-end">{{ entity.statMin.handling|number_format('2', ',', ' ') }}</td>
+                    <td class="w-25 text-end">{{ entity.statActual.handling|number_format('2', ',', ' ') }}</td>
+                    <td class="w-25 text-end">{{ entity.statMax.handling|number_format('2', ',', ' ') }}</td>
+                </tr>
+                <tr>
+                    <td class="w-25 text-start">
+                        <span class="d-block d-lg-none"><i class="{{ icons.fire }}"></i></span>
+                        <span class="d-none d-lg-block">{{ icons.nitro }}&nbsp;{{ 'text.nitro'|trans }}</span>
+                    </td>
+                    <td class="w-25 text-end">{{ entity.statMin.nitro|number_format('2', ',', ' ') }}</td>
+                    <td class="w-25 text-end">{{ entity.statActual.nitro|number_format('2', ',', ' ') }}</td>
+                    <td class="w-25 text-end">{{ entity.statMax.nitro|number_format('2', ',', ' ') }}</td>
+                </tr>
+                <tr>
+                    <td class="w-25 text-start">{{ 'text.average'|trans }}</td>
+                    <td class="w-25 text-end">{{ entity.statMin.average|number_format('2', ',', ' ') }}</td>
+                    <td class="w-25 text-end">{{ entity.statActual.average|number_format('2', ',', ' ') }}</td>
+                    <td class="w-25 text-end">{{ entity.statMax.average|number_format('2', ',', ' ') }}</td>
+                </tr>
             </tbody>
         </table>
     </div>

@@ -1,0 +1,15 @@
+
+    <!-- component HTML -->
+    <div class="col"{{ attributes }}>
+        <div class="info-box bg-transparent text-secondary">
+            <span class="info-box-icon">
+                {{ this.icon()|raw }}
+            </span>
+            <div class="info-box-content">
+                <span class="info-box-text">{{ this.label() }}</span>
+                <span class="info-box-number text-light">
+                    {{ this.value() }} / {{ this.max() }}
+                </span>
+            </div>
+        </div>
+    </div>

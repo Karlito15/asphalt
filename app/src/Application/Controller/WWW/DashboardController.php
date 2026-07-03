@@ -80,16 +80,16 @@ final class DashboardController extends AbstractBaseController
             'container'         => 'container-fluid pt-4 px-4',
             'theme'             => 'dark',
             ### Forms
-//            'moneys'            => $formMoneys,
-//            'jokers'            => $formJokers,
-//            'rares'             => $formRares,
-//            'commons'           => $formCommons,
+            'moneys'            => $formMoneys,
+            'jokers'            => $formJokers,
+            'rares'             => $formRares,
+            'commons'           => $formCommons,
             ### Stats
-//            'alls'              => $statistical->findOneBy(['slug' => 'garage-alls']),
-//            'blocks'            => $statistical->findOneBy(['slug' => 'garage-blocks']),
-//            'unblocks'          => $statistical->findOneBy(['slug' => 'garage-unblocks']),
-//            'golds'             => $statistical->findOneBy(['slug' => 'garage-golds']),
-//            'toUpgrades'        => $statistical->findOneBy(['slug' => 'garage-to-upgrades']),
+            'alls'              => $statistical->findOneBy(['slug' => 'garage-alls']),
+            'blocks'            => $statistical->findOneBy(['slug' => 'garage-blocks']),
+            'unblocks'          => $statistical->findOneBy(['slug' => 'garage-unblocks']),
+            'golds'             => $statistical->findOneBy(['slug' => 'garage-golds']),
+            'toUpgrades'        => $statistical->findOneBy(['slug' => 'garage-to-upgrades']),
         ]);
     }
 

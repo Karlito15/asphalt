@@ -1,72 +1,216 @@
+<style>
 
-<div class="card border border-opacity-25 border-white border-1 shadow-sm {{ background }}">
-    <div class="card-header border-bottom-0 py-1 px-2 fs-1 poppins-black">
-        <span class="">{{ 'text.stat'|trans|plural }}</span>
-        <span class="badge rounded-pill bg-danger">
+.gradient {
+    background: linear-gradient(135deg, #1F2937, #020617)
+}
+
+</style>
+
+
+<div class="card border border-opacity-50 border-white border-1 shadow-sm {{ background }}">
+    <div class="card-header border-bottom-0">
+        <span class="float-start">{{ 'text.stat'|trans|plural }}</span>
+        <span class="float-end badge rounded-pill bg-danger">
             <i class="fa-solid fa-fire"></i>&nbsp;{{ entity.settingClass.median }}
         </span>
     </div>
-    <div class="card-body py-1 px-2">
-
-        <div class="card-body gradient">
-
-            <div class="d-flex justify-content-around">
-                <div class="col fw-bolder text-start">
-                    &nbsp;
-                </div>
-                <div class="col fw-bolder text-end">
-                    {{ 'text.stat.min'|trans }}
-                </div>
-                <div class="col fw-bolder text-end">
-                    {{ 'text.stat.max'|trans }}
-                </div>
-                <div class="col fw-bolder text-end">
-                    {{ 'text.stat.actual'|trans }}
-                </div>
+    <div class="card-body gradient">
+        <div class="d-flex justify-content-around">
+            <div class="col-3 text-start">
+                <label for="">
+                    <input
+                        type="text"
+                        autocomplete="off"
+                        class="form-control-plaintext form-control-sm form-control"
+                        value="{{ 'text.legend'|trans }}"
+                        readonly
+                    />
+                </label>
             </div>
-
-            <div class="d-flex justify-content-around align-items-center">
-                <div class="col">⚡</div>
-                <twig:FormControl target="Stat" form="{{ form.statMin.speed }}" />
-                <twig:FormControl target="Stat" form="{{ form.statMax.speed }}" />
-                <twig:FormControl target="Stat" form="{{ form.statActual.speed }}" />
+            <div class="col-3 text-end">
+                {{ 'text.stat.min'|trans }}
             </div>
-
-            <div class="d-flex justify-content-around align-items-center">
-                <div class="col">🚀</div>
-                <twig:FormControl target="Stat" form="{{ form.statMin.acceleration }}" />
-                <twig:FormControl target="Stat" form="{{ form.statMax.acceleration }}" />
-                <twig:FormControl target="Stat" form="{{ form.statActual.acceleration }}" />
+            <div class="col-3 text-end">
+                {{ 'text.stat.max'|trans }}
             </div>
-
-            <div class="d-flex justify-content-around align-items-center">
-                <div class="col">🎯</div>
-                <twig:FormControl target="Stat" form="{{ form.statMin.handling }}" />
-                <twig:FormControl target="Stat" form="{{ form.statMax.handling }}" />
-                <twig:FormControl target="Stat" form="{{ form.statActual.handling }}" />
+            <div class="col-3 text-end">
+                {{ 'text.stat.actual'|trans }}
             </div>
-
-            <div class="d-flex justify-content-around align-items-center">
-                <div class="col">🔥</div>
-                <twig:FormControl target="Stat" form="{{ form.statMin.nitro }}" />
-                <twig:FormControl target="Stat" form="{{ form.statMax.nitro }}" />
-                <twig:FormControl target="Stat" form="{{ form.statActual.nitro }}" />
-            </div>
-
-            <div class="d-flex justify-content-around align-items-center">
-                <div class="col fw-bolder text-start">{{ 'text.average'|trans }}</div>
-                <div class="col fw-bolder text-end">
-                    <span class="black-ops-one-regular fs-5 text-end fw-bolder">{{ entity.statMin.average|number_format('2', ',', ' ') }}</span>
-                </div>
-                <div class="col fw-bolder text-end">
-                    <span class="black-ops-one-regular fs-5 text-end fw-bolder">{{ entity.statMax.average|number_format('2', ',', ' ') }}</span>
-                </div>
-                <div class="col fw-bolder text-end">
-                    <span class="black-ops-one-regular fs-5 text-end fw-bolder">{{ entity.statActual.average|number_format('2', ',', ' ') }}</span>
-                </div>
-            </div>
-
         </div>
 
+        <div class="d-flex justify-content-around">
+            <div class="col-3 text-start">
+                <label for="">
+                    <input
+                        type="text"
+                        autocomplete="off"
+                        class="form-control-plaintext form-control-sm form-control"
+                        value="{{ 'text.speed'|trans }}"
+                        readonly
+                    />
+                </label>
+            </div>
+            <div class="col-3 text-end">
+                <twig:UpdaterStat
+                    entity="{{ entity.statMin }}"
+                    formulaire="{{ form.statMin.speed }}"
+                />
+            </div>
+            <div class="col-3 text-end">
+                <twig:UpdaterStat
+                    entity="{{ entity.statMax }}"
+                    formulaire="{{ form.statMax.speed }}"
+                />
+            </div>
+            <div class="col-3 text-end">
+                <twig:UpdaterStat
+                    entity="{{ entity.statActual }}"
+                    formulaire="{{ form.statActual.speed }}"
+                />
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-around">
+            <div class="col-3 text-start text-nowrap">
+                <label for="">
+                    <input
+                        type="text"
+                        autocomplete="off"
+                        class="form-control-plaintext form-control-sm form-control"
+                        value="{{ 'text.acceleration'|trans }}"
+                        readonly
+                    />
+                </label>
+            </div>
+            <div class="col-3 text-end">
+                <twig:UpdaterStat
+                    entity="{{ entity.statMin }}"
+                    formulaire="{{ form.statMin.acceleration }}"
+                />
+            </div>
+            <div class="col-3 text-end">
+                <twig:UpdaterStat
+                    entity="{{ entity.statMax }}"
+                    formulaire="{{ form.statMax.acceleration }}"
+                />
+            </div>
+            <div class="col-3 text-end">
+                <twig:UpdaterStat
+                    entity="{{ entity.statActual }}"
+                    formulaire="{{ form.statActual.acceleration }}"
+                />
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-around">
+            <div class="col-3 text-start">
+                <label for="">
+                    <input
+                        type="text"
+                        autocomplete="off"
+                        class="form-control-plaintext form-control-sm form-control"
+                        value="{{ 'text.handling'|trans }}"
+                        readonly
+                    />
+                </label>
+            </div>
+            <div class="col-3 text-end">
+                <twig:UpdaterStat
+                    entity="{{ entity.statMin }}"
+                    formulaire="{{ form.statMin.handling }}"
+                />
+            </div>
+            <div class="col-3 text-end">
+                <twig:UpdaterStat
+                    entity="{{ entity.statMax }}"
+                    formulaire="{{ form.statMax.handling }}"
+                />
+            </div>
+            <div class="col-3 text-end">
+                <twig:UpdaterStat
+                    entity="{{ entity.statActual }}"
+                    formulaire="{{ form.statActual.handling }}"
+                />
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-around">
+            <div class="col-3 text-start">
+                <label for="">
+                    <input
+                        type="text"
+                        autocomplete="off"
+                        class="form-control-plaintext form-control-sm form-control"
+                        value="{{ 'text.nitro'|trans }}"
+                        readonly
+                    />
+                </label>
+            </div>
+            <div class="col-3 text-end">
+                <twig:UpdaterStat
+                    entity="{{ entity.statMin }}"
+                    formulaire="{{ form.statMin.nitro }}"
+                />
+            </div>
+            <div class="col-3 text-end">
+                <twig:UpdaterStat
+                    entity="{{ entity.statMax }}"
+                    formulaire="{{ form.statMax.nitro }}"
+                />
+            </div>
+            <div class="col-3 text-end">
+                <twig:UpdaterStat
+                    entity="{{ entity.statActual }}"
+                    formulaire="{{ form.statActual.nitro }}"
+                />
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-around">
+            <div class="col-3 text-start">
+                <label for="">
+                    <input
+                        type="text"
+                        autocomplete="off"
+                        class="form-control-plaintext form-control-sm form-control"
+                        value="{{ 'text.average'|trans }}"
+                        readonly
+                    />
+                </label>
+            </div>
+            <div class="col-3 text-end">
+                <label for="">
+                    <input
+                        type="text"
+                        autocomplete="off"
+                        class="form-control-plaintext form-control-sm text-end form-control"
+                        value="{{ entity.statMin.average|number_format('2', ',', ' ') }}"
+                        readonly
+                    />
+                </label>
+            </div>
+            <div class="col-3 text-end">
+                <label for="">
+                    <input
+                        type="text"
+                        autocomplete="off"
+                        class="form-control-plaintext form-control-sm text-end form-control"
+                        value="{{ entity.statMax.average|number_format('2', ',', ' ') }}"
+                        readonly
+                    />
+                </label>
+            </div>
+            <div class="col-3 text-end">
+                <label for="">
+                    <input
+                        type="text"
+                        autocomplete="off"
+                        class="form-control-plaintext form-control-sm text-end form-control"
+                        value="{{ entity.statActual.average|number_format('2', ',', ' ') }}"
+                        readonly
+                    />
+                </label>
+            </div>
+        </div>
     </div>
 </div>

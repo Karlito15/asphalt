@@ -1,0 +1,39 @@
+
+<!-- component HTML -->
+<div class="col"{{ attributes }}>
+
+    <!--begin::info-box-->
+    <div class="info-box {{ this.background()|raw }}">
+        <span class="info-box-icon">
+            {{ this.icon()|raw }}
+        </span>
+        <div class="info-box-content">
+            <div class="info-box-text">
+                <label for="{{ this.id() }}">{{ this.title()|raw }}</label>
+            </div>
+            <div class="info-box-number text-end">
+                <input
+                    type="text"
+                    name="{{ this.slug() }}"
+                    id="{{ this.id() }}"
+                    class="form-control-plaintext fw-bolder text-end align-items-center {{ this.background()|raw }}"
+                    autocomplete="off"
+                    autocapitalize="none"
+                    max="{{ this.maxValue() }}"
+                    min="{{ 0 }}"
+                    maxlength="9"
+                    minlength="0"
+                    placeholder="{{ this.label() }}"
+                    tabindex="{{ this.position() }}"
+                    value="{{ this.value() }}"
+                />
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: {{ this.percent() }}%"></div>
+            </div>
+            <div class="progress-description text-end"> {{ this.percent() }}% </div>
+        </div>
+    </div>
+    <!--end::info-box-->
+
+</div>

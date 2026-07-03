@@ -1,16 +1,58 @@
-	<h4 class="text-start text-uppercase">
-		{{ 'text.coin'|trans|plural }}
-	</h4>
 
+	<h3 class="text-start text-uppercase bungee-shade-regular">
+		{{ 'text.coin'|trans|plural }}
+	</h3>
 	<div class="row row-cols-3 g-md-3 mb-md-1">
-		<twig:FormDashboardMoney maxValue="{{ 999999999 }}" title="{{ 'text.credit'|trans|plural }}" icon="fa-money-check-dollar" entity="{{ moneys.1.viewData }}" />
-		<twig:FormDashboardMoney maxValue="{{ 999999 }}" title="{{ 'text.token'|trans|plural }}" icon="fa-coins" entity="{{ moneys.2.viewData }}" />
-		<twig:FormDashboardMoney maxValue="{{ 999999 }}" title="{{ 'text.epic'|trans|plural }}" icon="fa-money-bill-1" entity="{{ moneys.3.viewData }}" />
+		<twig:UpdaterMoney
+            maxValue="{{ 999999999 }}"
+            title="{{ 'text.credit'|trans|plural }}"
+            icon="fa-money-check-dollar"
+            background="{{ 'warning' }}"
+            entity="{{ moneys.1.viewData }}"
+        />
+		<twig:UpdaterMoney
+            maxValue="{{ 999999 }}"
+            title="{{ 'text.token'|trans|plural }}"
+            icon="fa-coins"
+            background="{{ 'info' }}"
+            entity="{{ moneys.2.viewData }}"
+        />
+		<twig:UpdaterMoney
+            maxValue="{{ 999999 }}"
+            title="{{ 'text.epic'|trans|plural }}"
+            icon="fa-money-bill-1"
+            background="{{ 'danger' }}"
+            entity="{{ moneys.3.viewData }}"
+        />
 	</div>
 
 	<div class="row row-cols-4 g-md-3 mb-md-1">
-		<twig:FormDashboardMoney maxValue="{{ 1000 }}" title="{{ 'text.overlock'|trans|plural }}" icon="fa-sack-dollar" entity="{{ moneys.4.viewData }}" />
-		<twig:FormDashboardMoney maxValue="{{ 999999 }}" title="{{ 'text.gauntlet'|trans|plural }}" icon="fa-medal" entity="{{ moneys.5.viewData }}" />
-		<twig:FormDashboardMoney maxValue="{{ 999999 }}" title="{{ 'text.style'|trans|plural }}" icon="fa-star" entity="{{ moneys.6.viewData }}" />
-		<twig:FormDashboardMoney maxValue="{{ 999999 }}" title="{{ 'text.vip'|trans|plural }}" icon="fa-crown" entity="{{ moneys.7.viewData }}" />
+		<twig:UpdaterMoney
+            maxValue="{{ 1000 }}"
+            title="{{ 'text.overlock'|trans|plural }}"
+            icon="fa-sack-dollar"
+            background="{{ null }}"
+            entity="{{ moneys.4.viewData }}"
+        />
+		<twig:UpdaterMoney
+            maxValue="{{ 999999 }}"
+            title="{{ 'text.gauntlet'|trans|plural }}"
+            icon="fa-medal"
+            background="{{ 'primary' }}"
+            entity="{{ moneys.5.viewData }}"
+        />
+		<twig:UpdaterMoney
+            maxValue="{{ 999999 }}"
+            title="{{ 'text.style'|trans|plural }}"
+            icon="fa-star"
+            background="{{ null }}"
+            entity="{{ moneys.6.viewData }}"
+        />
+		<twig:UpdaterMoney
+            maxValue="{{ 999999 }}"
+            title="{{ 'text.vip'|trans|plural }}"
+            icon="fa-crown"
+            background="{{ 'success' }}"
+            entity="{{ moneys.7.viewData }}"
+        />
 	</div>

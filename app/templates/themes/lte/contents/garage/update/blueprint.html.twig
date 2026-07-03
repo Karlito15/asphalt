@@ -1,12 +1,51 @@
 
-<div class="card border border-opacity-25 border-white border-1 shadow-sm {{ background }}">
-    <div class="card-header border-bottom-0 py-1 px-2 fs-1 poppins-black">{{ 'text.blueprint'|trans|plural }}</div>
-    <div class="card-body py-1 px-2">
+<div class="card border border-opacity-50 border-white border-1 shadow-sm {{ background }}">
+    <div class="card-header border-bottom-0">
+        {{ 'text.blueprint'|trans|plural }}
+    </div>
+    <div class="card-body">
+        <div class="row row-cols-6 g-2">
+            <twig:UpdaterBlueprint
+                maxValue="{{ entity.settingBlueprint.star1 }}"
+                title="{{ 'text.star1'|trans }}"
+                entity="{{ entity.blueprint }}"
+                formulaire="{{ form.blueprint.star1.vars.form }}"
+            />
 
-        <div class="row row-cols-2 mb-3">
-            <div class="col-10">{% include '@App/themes/lte/contents/garage/update/blueprint-stars.html.twig' with {'background': background, 'text': text} %}</div>
-            <div class="col-2">{% include '@App/themes/lte/contents/garage/update/blueprint-total.html.twig' with {'background': background, 'text': text} %}</div>
+            <twig:UpdaterBlueprint
+                maxValue="{{ entity.settingBlueprint.star2 }}"
+                title="{{ 'text.star2'|trans }}"
+                entity="{{ entity.blueprint }}"
+                formulaire="{{ form.blueprint.star2.vars.form }}"
+            />
+
+            <twig:UpdaterBlueprint
+                maxValue="{{ entity.settingBlueprint.star3 }}"
+                title="{{ 'text.star3'|trans }}"
+                entity="{{ entity.blueprint }}"
+                formulaire="{{ form.blueprint.star3.vars.form }}"
+            />
+
+            <twig:UpdaterBlueprint
+                maxValue="{{ entity.settingBlueprint.star4 }}"
+                title="{{ 'text.star4'|trans }}"
+                entity="{{ entity.blueprint }}"
+                formulaire="{{ form.blueprint.star4.vars.form }}"
+            />
+
+            <twig:UpdaterBlueprint
+                maxValue="{{ entity.settingBlueprint.star5 }}"
+                title="{{ 'text.star5'|trans|plural }}"
+                entity="{{ entity.blueprint }}"
+                formulaire="{{ form.blueprint.star5.vars.form }}"
+            />
+
+            <twig:UpdaterBlueprint
+                maxValue="{{ entity.settingBlueprint.star6 }}"
+                title="{{ 'text.star6'|trans|plural }}"
+                entity="{{ entity.blueprint }}"
+                formulaire="{{ form.blueprint.star6.vars.form }}"
+            />
         </div>
-
     </div>
 </div>

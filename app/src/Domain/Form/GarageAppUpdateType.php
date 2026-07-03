@@ -122,7 +122,7 @@ class GarageAppUpdateType extends AbstractForm
                     'class' => self::attrClass(),
                 ],
                 'class'         => SettingBlueprint::class,
-                'label'         => false, //'form.blueprint',
+                'label'         => 'form.blueprint',
                 'label_attr'    => self::labelClass(),
                 'placeholder'   => 'form.blueprint',
                 'required'      => true,
@@ -158,7 +158,7 @@ class GarageAppUpdateType extends AbstractForm
                     'class' => self::attrClass(),
                 ],
                 'class'         => SettingLevel::class,
-                'label'         => false, //'form.level',
+                'label'         => 'form.level',
                 'label_attr'    => self::labelClass(),
                 'placeholder'   => 'form.level',
                 'required'      => true,
@@ -169,7 +169,7 @@ class GarageAppUpdateType extends AbstractForm
                     'class' => self::attrClass(),
                 ],
                 'class'         => SettingUnitPrice::class,
-                'label'         => false, //'form.unit-price',
+                'label'         => 'form.unit-price',
                 'label_attr'    => self::labelClass(),
                 'placeholder'   => 'form.unit-price',
                 'required'      => true,
@@ -184,6 +184,7 @@ class GarageAppUpdateType extends AbstractForm
             ->add('statMax', GarageStatMaxType::class)
             ->add('statMin', GarageStatMinType::class)
             ->add('status', GarageStatusType::class)
+            ->add('statusControl', GarageStatusControlType::class)
             ->add('upgrade', GarageUpgradeType::class)
 
             /*

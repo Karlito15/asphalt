@@ -1,0 +1,55 @@
+
+{% set formClass = formulaire.vars.attr.class ~ ' bg-secondary-subtle text-secondary' %}
+{% set packs     = (this.rest() / games.pack_blueprint)|round(0, 'ceil')|abs %}
+
+<div class="col"{{ attributes }}>
+    <!-- component HTML -->
+    <div class="form-floating">
+        {{ form_widget(formulaire, {
+            'attr': {
+                'class': formulaire.vars.attr.class ~ this.class() ~ '',
+                'max': this.maxValue(),
+                'min': formulaire.vars.attr.min,
+            }
+        }) }}
+        {{ form_label(formulaire) }}
+    </div>
+
+    <div class="input-group input-group-sm mt-1">
+        <input
+            type="text"
+            id="target"
+            class="{{ formClass }}"
+            value="{{ this.maxValue() }}"
+            readonly
+        />
+        <label for="target"></label>
+        <label for="rest"></label>
+        <input
+            type="text"
+            id="rest"
+            class="{{ formulaire.vars.attr.class ~ this.class() }}"
+            value="{{ this.rest() }}"
+            readonly
+        />
+    </div>
+
+    <div class="input-group input-group-sm mt-1">
+        <input
+            type="text"
+            id="packs"
+            class="form-control text-center text-success"
+            value="{{ packs }} {{ 'text.pack'|trans|plural|u.truncate(2, '.') }}"
+            readonly
+        />
+        <label for="packs"></label>
+        <label for="blueprints"></label>
+        <input
+            type="text"
+            id="blueprints"
+            class="form-control text-center text-info"
+            value="{{ (packs * games.pack_price)|abs|number_format }} {{ 'text.token'|trans|plural|u.truncate(2, '.') }}"
+            readonly
+        />
+    </div>
+</div>

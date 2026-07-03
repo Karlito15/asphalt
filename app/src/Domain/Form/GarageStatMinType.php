@@ -16,28 +16,28 @@ class GarageStatMinType extends AbstractForm
     {
         $builder
             ->add('speed', NumberType::class, [
-                'attr'       => self::attrClassPrivate(),
+                'attr'       => self::attrClassStat(),
                 'label'      => false,
                 'label_attr' => self::labelClass(),
                 'scale'      => 2,
                 'required'   => false,
             ])
             ->add('acceleration', NumberType::class, [
-                'attr'       => self::attrClassPrivate(),
+                'attr'       => self::attrClassStat(),
                 'label'      => false,
                 'label_attr' => self::labelClass(),
                 'scale'      => 2,
                 'required'   => false,
             ])
             ->add('handling', NumberType::class, [
-                'attr'       => self::attrClassPrivate(),
+                'attr'       => self::attrClassStat(),
                 'label'      => false,
                 'label_attr' => self::labelClass(),
                 'scale'      => 2,
                 'required'   => false,
             ])
             ->add('nitro', NumberType::class, [
-                'attr'       => self::attrClassPrivate(),
+                'attr'       => self::attrClassStat(),
                 'label'      => false,
                 'label_attr' => self::labelClass(),
                 'scale'      => 2,
@@ -51,20 +51,7 @@ class GarageStatMinType extends AbstractForm
         $resolver->setDefaults([
             'data_class' => GarageStatMin::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',//messages
+            'translation_domain' => 'forms',
         ]);
-    }
-
-    /** PRIVATE METHODS */
-
-    /**
-     * @return array
-     */
-    private static function attrClassPrivate(): array
-    {
-        return [
-            'autocomplete' => 'off',
-            'class'        => 'black-ops-one-regular fs-5 text-end fw-bolder form-control-plaintext form-control-sm',
-        ];
     }
 }

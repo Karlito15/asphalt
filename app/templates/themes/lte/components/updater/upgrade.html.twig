@@ -1,0 +1,13 @@
+
+<div class="text-start"{{ attributes }}>
+    <!-- component HTML -->
+    <label class="form-label" for="{{ this.id() }}">{{ this.title() }}</label>
+    <output class="float-end badge text-bg-warning">{{ this.maxValue() }}</output>
+    <output class="float-end badge text-bg-info me-3" id="{{ this.title()|lower }}_range">{{ formulaire.vars.value ?? 0 }}</output>
+    {{ form_widget(formulaire, {
+        attr: {
+            'oninput': this.title()|lower ~ '_range.value = this.value',
+            'max': this.maxValue()
+        }
+    }) }}
+</div>

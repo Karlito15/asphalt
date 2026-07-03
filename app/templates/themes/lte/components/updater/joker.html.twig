@@ -1,0 +1,35 @@
+
+<!-- component HTML -->
+<div class="col"{{ attributes }}>
+
+    <!--begin::info-box-->
+    <div class="info-box">
+        <div class="info-box-content">
+            <span class="info-box-text">
+                <label for="{{ this.id() }}">
+                    {{ this.letter()|raw }}{{ this.star()|raw }}
+                </label>
+            </span>
+            <span class="info-box-number">{{ this.percent() }}<small>%</small></span>
+        </div>
+        <span class="info-box-icon text-bg-info">
+            <input
+                type="text"
+                name=" {{ this.slug() }}"
+                id="{{ this.id() }}"
+                class="form-control-plaintext text-center align-items-center text-bg-info"
+                autocomplete="off"
+                autocapitalize="none"
+                max="{{ this.maxValue() }}"
+                min="{{ 0 }}"
+                maxlength="2"
+                minlength="0"
+                placeholder="{{ this.label() }}"
+                tabindex="{{ this.position() }}"
+                value="{{ this.value() }}"
+            />
+        </span>
+    </div>
+    <!--end::info-box-->
+
+</div>

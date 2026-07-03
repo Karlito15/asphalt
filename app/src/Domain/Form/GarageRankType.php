@@ -72,7 +72,7 @@ class GarageRankType extends AbstractForm
         $resolver->setDefaults([
             'data_class' => GarageRank::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',//messages
+            'translation_domain' => 'forms',
         ]);
     }
 
@@ -86,7 +86,7 @@ class GarageRankType extends AbstractForm
     {
         return [
             'autocomplete' => 'off',
-            'class'        => 'black-ops-one-regular fs-5 text-end fw-bolder form-control-plaintext form-control-sm pe-3',
+            'class'        => 'form-control-plaintext text-end pe-5',
             'max'          => $max,
             'min'          => 0,
         ];

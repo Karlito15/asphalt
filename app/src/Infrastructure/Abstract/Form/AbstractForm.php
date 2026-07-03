@@ -22,7 +22,7 @@ abstract class AbstractForm extends AbstractType
     public static function labelClass(): array
     {
         return [
-            'class' => 'm-0 fw-light',
+            'class' => 'fw-bolder',
         ];
     }
 
@@ -35,12 +35,13 @@ abstract class AbstractForm extends AbstractType
     }
 
     /**
-     * @return array<string, string>
+     * @return array
      */
-    public static function attrLabel(): array
+    public static function attrClassStat(): array
     {
         return [
-            'class' => 'btn btn-outline-info',
+            'autocomplete' => 'off',
+            'class'        => 'form-control-plaintext form-control-sm text-end',
         ];
     }
 
@@ -50,7 +51,7 @@ abstract class AbstractForm extends AbstractType
      */
     public static function star(int $number = 0): string
     {
-        $star = '<i class="fa-solid fa-star small text-warning"></i>';
+        $star = '<i class="fa-solid fa-star fa-1x text-warning"></i>';
 
         return match ($number) {
             1 => $star,
@@ -59,7 +60,7 @@ abstract class AbstractForm extends AbstractType
             4 => $star . $star . $star . $star,
             5 => $star . $star . $star . $star . $star,
             6 => $star . $star . $star . $star . $star . $star,
-            default => '<i class="fa-regular fa-star small text-danger"></i>',
+            default => '<i class="fa-regular fa-star fa-1x text-danger"></i>',
         };
     }
 }

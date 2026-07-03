@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Application\Command\Cron;
 
-use App\Domain\Entity\GarageApp;
 use App\Infrastructure\Event\Garage\StatisticalEvent;
 use App\Infrastructure\Command\Traits\{
     ConfigureCommand,

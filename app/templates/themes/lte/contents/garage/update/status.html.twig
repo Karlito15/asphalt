@@ -1,15 +1,204 @@
 
-{% from "@App/themes/lte/contents/garage/_macros.html.twig" import getStars, getClass %}
-
-<div class="card border border-opacity-25 border-white border-1 shadow-sm {{ background }}">
-    <div class="card-header border-bottom-0 py-1 px-2 fs-1 poppins-black">{{ 'text.status'|trans }}</div>
-    <div class="card-body py-1 px-2">
-        <div class="row row-cols-5">
-            <twig:FormCheckbox form="{{ form.status.unblock }}" />
-            <twig:FormCheckbox form="{{ form.status.gold }}" />
-            <twig:FormCheckbox form="{{ form.status.evo }}" />
-            <twig:FormCheckbox form="{{ form.status.eventClass }}" />
-            <twig:FormCheckbox form="{{ form.status.toUpgrade }}" />
+<div class="card border border-opacity-50 border-white border-1 shadow-sm {{ background }}">
+    <div class="card-header border-bottom-0">
+        {{ 'text.status'|trans }}
+    </div>
+    <div class="card-body">
+        <div class="d-flex justify-content-around column-gap-4">
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.status }}"
+                    formulaire="{{ form.status.unblock }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.status }}"
+                    formulaire="{{ form.status.gold }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.status }}"
+                    formulaire="{{ form.status.evo }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.status }}"
+                    formulaire="{{ form.status.eventClass }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.status }}"
+                    formulaire="{{ form.status.toUpgrade }}"
+                />
+            </div>
+        </div>
+        <div class="row row-cols-3 g-3 mt-2">
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.toInstallSpeed }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullSpeed }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.toInstallAcceleration }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullAcceleration }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.toInstallHandling }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullHandling }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.toInstallNitro }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullNitro }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.toInstallCommon }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullCommon }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.toInstallRare }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullRare }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.toInstallEpic }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullEpic }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullStar1 }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullStar2 }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullStar3 }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullStar4 }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullStar5 }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullStar6 }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullBlueprint }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.toInstallUpgrade }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullUpgrade }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.toInstallImport }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullImport }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.toGold }}"
+                />
+            </div>
+            <div class="col">
+                <twig:UpdaterCheckbox
+                    entity="{{ entity.statusControl }}"
+                    formulaire="{{ form.statusControl.fullEvo }}"
+                />
+            </div>
         </div>
     </div>
 </div>
