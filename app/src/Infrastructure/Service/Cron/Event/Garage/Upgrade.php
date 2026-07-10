@@ -9,6 +9,54 @@ use App\Infrastructure\Event\Garage\AppEvent;
 final readonly class Upgrade
 {
     /**
+     * Vérifie si toutes les conditions sont remplies pour installer toutes les évolutions de la voiture
+     *
+     * @param AppEvent $event
+     * @return void
+     */
+    public static function statusToGold(AppEvent $event): void
+    {
+        ### Variables
+        $epic     = $event->getEpic();
+        $settings = $event->getSettingUpgrades();
+        $entity   = $event->getGarage()->getStatusControl();
+
+        ### Conditions
+        if ($entity->isFullBlueprint()):
+            if ($epic === $settings["epic"]):
+                $entity->setToGold(true);
+            endif;
+        else:
+            $entity->setToGold(false);
+        endif;
+
+        ### Already Gold
+        if ($event->getGarage()->getStatus()->isGold()):
+            $entity->setToGold(false);
+        endif;
+    }
+
+    /**
+     * Vérifie si toutes les conditions sont remplies pour la voiture Gold
+     *
+     * @param AppEvent $event
+     * @return void
+     */
+    public static function statusGold(AppEvent $event): void
+    {
+        ### Variables
+        $status  = $event->getGarage()->getStatus();
+        $control = $event->getGarage()->getStatusControl();
+
+        ### Conditions
+        if ($control->isFullBlueprint() && $control->isFullUpgrade() && $control->isFullImport()):
+            $status->setGold(true);
+        else:
+            $status->setGold(false);
+        endif;
+    }
+
+    /**
      * XXXX
      *
      * @param AppEvent $event
@@ -18,12 +66,13 @@ final readonly class Upgrade
     {
         ### Variables
         $level   = $event->getLevel();
+        $epic    = $event->getEpic();
         $upgrade = $event->getUpgrade();
         $setting = $event->getSettingUpgrades();
         $entity  = $event->getGarage()->getStatusControl();
 
         ### Conditions
-        ### Speed
+        ###### Speed
         if (($upgrade["speed"] < $level)) :
             $entity
                 ->setToInstallSpeed(true)
@@ -47,7 +96,7 @@ final readonly class Upgrade
             ;
         endif;
 
-        ### Acceleration
+        ###### Acceleration
         if (($upgrade["acceleration"] < $level)) :
             $entity
                 ->setToInstallAcceleration(true)
@@ -72,7 +121,7 @@ final readonly class Upgrade
             ;
         endif;
 
-        ### Handling
+        ###### Handling
         if (($upgrade["handling"] < $level)) :
             $entity
                 ->setToInstallHandling(true)
@@ -97,7 +146,7 @@ final readonly class Upgrade
             ;
         endif;
 
-        ### Nitro
+        ###### Nitro
         if (($upgrade["nitro"] < $level)) :
             $entity
                 ->setToInstallNitro(true)
@@ -121,49 +170,76 @@ final readonly class Upgrade
             ;
         endif;
 
-        ### Common
-        if (($setting['common'] > 0) && ($upgrade["common"] === $setting["common"])):
+        ###### Common
+        if ($upgrade["common"] === $setting["common"]):
             $entity
                 ->setToInstallCommon(false)
                 ->setFullCommon(true)
             ;
         else:
-            $entity
-                ->setToInstallCommon(true)
-                ->setToInstallImport(true)
-                ->setFullCommon(false)
-                ->setFullImport(false)
-            ;
+            if ($level > 2) :
+                $entity
+                    ->setToInstallCommon(true)
+                    ->setToInstallImport(true)
+                    ->setFullCommon(false)
+                    ->setFullImport(false)
+                ;
+            else:
+                $entity
+                    ->setToInstallCommon(false)
+                    ->setToInstallImport(false)
+                    ->setFullCommon(false)
+                    ->setFullImport(false)
+                ;
+            endif;
         endif;
 
-        ### Rare
-        if (($setting['rare'] > 0) && ($upgrade["rare"] === $setting["rare"])):
+        ###### Rare
+        if ($upgrade["rare"] === $setting["rare"]):
             $entity
                 ->setToInstallRare(false)
                 ->setFullRare(true)
             ;
         else:
-            $entity
-                ->setToInstallRare(true)
-                ->setToInstallImport(true)
-                ->setFullRare(false)
-                ->setFullImport(false)
-            ;
+            if ($level > 2) :
+                $entity
+                    ->setToInstallRare(true)
+                    ->setToInstallImport(true)
+                    ->setFullRare(false)
+                    ->setFullImport(false)
+                ;
+            else:
+                $entity
+                    ->setToInstallRare(false)
+                    ->setToInstallImport(false)
+                    ->setFullRare(false)
+                    ->setFullImport(false)
+                ;
+            endif;
         endif;
 
-        ### Epic
-        if (($setting['epic'] > 0) && ($upgrade["epic"] === $setting["epic"])):
+        ###### Epic
+        if ($upgrade["epic"] === $setting["epic"]):
             $entity
                 ->setToInstallEpic(false)
                 ->setFullEpic(true)
             ;
         else:
-            $entity
-                ->setToInstallEpic(true)
-                ->setToInstallImport(true)
-                ->setFullEpic(false)
-                ->setFullImport(false)
-            ;
+            if ($level > 8 && $epic > 0) :
+                $entity
+                    ->setToInstallEpic(true)
+                    ->setToInstallImport(true)
+                    ->setFullEpic(false)
+                    ->setFullImport(false)
+                ;
+            else:
+                $entity
+                    ->setToInstallEpic(false)
+                    ->setToInstallImport(false)
+                    ->setFullEpic(false)
+                    ->setFullImport(false)
+                ;
+            endif;
         endif;
     }
 
@@ -240,28 +316,4 @@ final readonly class Upgrade
         endif;
     }
 
-    /**
-     * @param AppEvent $event
-     * @return void
-     */
-    public static function statusToGold(AppEvent $event): void
-    {
-        ### Variables
-        $epic    = $event->getEpic();
-        $upgrade = $event->getUpgrade();
-        $setting = $event->getSettingUpgrades();
-        $entity  = $event->getGarage()->getStatusControl();
-
-        ### Conditions
-        if ($entity->isFullBlueprint() && ($epic === $setting["epic"])):
-            $entity->setToGold(true);
-        else:
-            $entity->setToGold(false);
-        endif;
-
-        ### Already Gold
-        if ($event->getGarage()->getStatus()->isGold()):
-            $entity->setToGold(false);
-        endif;
-    }
 }

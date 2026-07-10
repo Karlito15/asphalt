@@ -60,7 +60,7 @@ abstract class AbstractForm extends AbstractType
             4 => $star . $star . $star . $star,
             5 => $star . $star . $star . $star . $star,
             6 => $star . $star . $star . $star . $star . $star,
-            default => '<i class="fa-regular fa-star fa-1x text-danger"></i>',
+            default => 'form.star.empty',
         };
     }
 }

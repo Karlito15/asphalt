@@ -29,49 +29,15 @@ final class GarageAppListener
     {}
 
     /**
-     * XXX
+     * Vérifie si le nombre de cartes pour la première étoile est atteint
      *
      * @param AppEvent $event
      * @return void
      */
-    #[AsEventListener(event: AppEvent::class, priority: 900)]
-    public function onUpdateInstallUpgrade(AppEvent $event): void
+    #[AsEventListener(event: AppEvent::class, priority: 1003)]
+    public function onUpdateUnblock(AppEvent $event): void
     {
-        $this->upgrade::statusControlUpgrade($event);
-        $this->upgrade::statusControlFullUpgrade($event);
-    }
-
-    /**
-     * XXX
-     *
-     * @param AppEvent $event
-     * @return void
-     */
-    #[AsEventListener(event: AppEvent::class, priority: 800)]
-    public function onUpdateToGold(AppEvent $event): void
-    {
-        $this->upgrade::statusToGold($event);
-    }
-
-    /**
-     * Vérifie si toutes les conditions sont remplies pour la voiture Gold
-     *
-     * @param AppEvent $event
-     * @return void
-     */
-    #[AsEventListener(event: AppEvent::class, priority: 700)]
-    public function onUpdateStatusGold(AppEvent $event): void
-    {
-        ### Variables
-        $status  = $event->getGarage()->getStatus();
-        $control = $event->getGarage()->getStatusControl();
-
-        ### Conditions
-        if ($control->isFullBlueprint() && $control->isFullUpgrade() && $control->isFullImport()):
-            $status->setGold(true);
-        else:
-            $status->setGold(false);
-        endif;
+        $this->blueprint::statusUnblock($event);
     }
 
     /**
@@ -80,22 +46,14 @@ final class GarageAppListener
      * @param AppEvent $event
      * @return void
      */
-    #[AsEventListener(event: AppEvent::class, priority: 600)]
+    #[AsEventListener(event: AppEvent::class, priority: 1002)]
     public function onUpdateBlueprint(AppEvent $event): void
     {
-        $this->blueprint::statusControlBlueprint($event);
-    }
-
-    /**
-     * Met à jour automatiquement le Level de la voiture
-     *
-     * @param AppEvent $event
-     * @return void
-     */
-    #[AsEventListener(event: AppEvent::class, priority: 500)]
-    public function onUpdateGarageLevel(AppEvent $event): void
-    {
-        $this->level::getLevel($event);
+        $this->blueprint::statusControlFullStar2($event);
+        $this->blueprint::statusControlFullStar3($event);
+        $this->blueprint::statusControlFullStar4($event);
+        $this->blueprint::statusControlFullStar5($event);
+        $this->blueprint::statusControlFullStar6($event);
     }
 
     /**
@@ -104,22 +62,60 @@ final class GarageAppListener
      * @param AppEvent $event
      * @return void
      */
-    #[AsEventListener(event: AppEvent::class, priority: 400)]
+    #[AsEventListener(event: AppEvent::class, priority: 1001)]
     public function onUpdateFullBlueprint(AppEvent $event): void
     {
         $this->blueprint::statusControlFullBlueprint($event);
     }
 
     /**
-     * Vérifie si le nombre de cartes pour la première étoile est atteint
+     * Vérifie si tous les blueprints sont completés niveau par niveau
+     * Met à jour automatiquement le Level de la voiture
      *
      * @param AppEvent $event
      * @return void
      */
-    #[AsEventListener(event: AppEvent::class, priority: 300)]
-    public function onUpdateUnblock(AppEvent $event): void
+    #[AsEventListener(event: AppEvent::class, priority: 901)]
+    public function onUpdateGarageLevel(AppEvent $event): void
     {
-        $this->blueprint::statusUnblock($event);
+        $this->level::getLevel($event);
+    }
+
+    /**
+     * XXX
+     *
+     * @param AppEvent $event
+     * @return void
+     */
+    #[AsEventListener(event: AppEvent::class, priority: 803)]
+    public function onUpdateInstallUpgrade(AppEvent $event): void
+    {
+        $this->upgrade::statusControlUpgrade($event);
+        $this->upgrade::statusControlFullUpgrade($event);
+    }
+
+    /**
+     * Vérifie si toutes les conditions sont remplies pour la voiture Gold
+     *
+     * @param AppEvent $event
+     * @return void
+     */
+    #[AsEventListener(event: AppEvent::class, priority: 802)]
+    public function onUpdateStatusGold(AppEvent $event): void
+    {
+        $this->upgrade::statusGold($event);
+    }
+
+    /**
+     * Vérifie si toutes les conditions sont remplies pour installer toutes les évolutions de la voiture
+     *
+     * @param AppEvent $event
+     * @return void
+     */
+    #[AsEventListener(event: AppEvent::class, priority: 801)]
+    public function onUpdateToGold(AppEvent $event): void
+    {
+        $this->upgrade::statusToGold($event);
     }
 
     /**
@@ -128,7 +124,7 @@ final class GarageAppListener
      * @param AppEvent $event
      * @return void
      */
-    #[AsEventListener(event: AppEvent::class, priority: 200)]
+    #[AsEventListener(event: AppEvent::class, priority: 202)]
     public function onUpdateFullEvo(AppEvent $event): void
     {
         $this->evo::statusControlEvo($event);
@@ -140,7 +136,7 @@ final class GarageAppListener
      * @param AppEvent $event
      * @return void
      */
-    #[AsEventListener(event: AppEvent::class, priority: 100)]
+    #[AsEventListener(event: AppEvent::class, priority: 201)]
     public function onUpdateGauntletMark(AppEvent $event): void
     {
         $this->gauntlet::mark($event);
@@ -151,7 +147,7 @@ final class GarageAppListener
      * @param AppEvent $event
      * @return void
      */
-    #[AsEventListener(event: AppEvent::class, priority: 20)]
+    #[AsEventListener(event: AppEvent::class, priority: 102)]
     public function onUpdateCost(AppEvent $event): void
     {
         $this->price->paid($event);
@@ -162,7 +158,7 @@ final class GarageAppListener
     /**
      * @return void
      */
-    #[AsEventListener(event: StatisticalEvent::class, priority: 10)]
+    #[AsEventListener(event: StatisticalEvent::class, priority: 101)]
     public function onUpdateStatistical(): void
     {
         $this->statistical->countGarageByClass();

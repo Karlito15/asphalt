@@ -208,6 +208,6 @@ class GarageBlueprint
     public function postUpdate(LifecycleEventArgs $args): void
     {
         $args->getObject()->setTotal();
-        $args->getObjectManager()->getRepository(GarageBlueprint::class)->save($args->getObject(), true);
+        $args->getObjectManager()->flush();
     }
 }

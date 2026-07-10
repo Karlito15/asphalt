@@ -1,26 +1,18 @@
-<div{{ attributes }}>
+
+<div class="col"{{ attributes }}>
     <!-- component HTML -->
     {{ form_label(formulaire) }}
-    {{ form_widget(formulaire) }}
+    {{ form_widget(formulaire, {'label_attr': {'class': _self.color(formulaire.vars.data, formulaire.vars.name)}}) }}
 </div>
 
-
-{#<div class="col"#}{#{{ attributes }}#}{#>#}
-{#    <!-- component HTML -->#}
-{#    {{ form_widget(form, {'label_attr': {'class': _self.color(form.vars.data, form.vars.name)}}) }}#}
-{#    {{ form_label(form) }}#}
-{#    {{ form_help(form) }}#}
-{#    {{ form_errors(form) }}#}
-{#</div>#}
-
-{#{% macro color(value, name) %}#}
-{#{% if (value is true) and (name == 'gold') %}#}
-{#w-100 btn btn-outline-warning#}
-{#{% elseif (value is true) and (name == 'toUpgrade') %}#}
-{#w-100 btn btn-outline-primary#}
-{#{% elseif value is true %}#}
-{#w-100 btn btn-outline-success#}
-{#{% else %}#}
-{#w-100 btn btn-outline-danger#}
-{#{% endif %}#}
-{#{% endmacro %}#}
+{% macro color(value, name) %}
+{% if (value is true) and (name == 'gold') %}
+btn btn-outline-warning w-100
+{% elseif (value is true) and (name == 'toUpgrade') %}
+btn btn-outline-primary w-100
+{% elseif value is true %}
+btn btn-outline-success w-100
+{% else %}
+btn btn-outline-danger w-100
+{% endif %}
+{% endmacro %}

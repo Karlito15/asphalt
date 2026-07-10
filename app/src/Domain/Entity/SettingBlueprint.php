@@ -267,6 +267,6 @@ class SettingBlueprint
     public function postUpdate(LifecycleEventArgs $args): void
     {
         $args->getObject()->setTotal()->setSlug();
-        $args->getObjectManager()->getRepository(SettingBlueprint::class)->save($args->getObject(), true);
+        $args->getObjectManager()->flush();
     }
 }

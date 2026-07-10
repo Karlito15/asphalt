@@ -75,7 +75,7 @@ class GarageStatusType extends AbstractForm
     public static function attrLabelPrivate(): array
     {
         return [
-            'class' => 'btn btn-outline-info w-100',
+            'class' => 'btn btn-outline-secondary w-100',
         ];
     }
 }

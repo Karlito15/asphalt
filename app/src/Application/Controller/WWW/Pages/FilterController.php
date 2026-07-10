@@ -249,6 +249,10 @@ final class FilterController extends AbstractBaseController
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.to.install.upgrade', 'params' => []],
         ];
+        $query      = [
+            'status_control.toInstallUpgrade' => true,
+            'settingClass.value' => $letter,
+        ];
 
         ### Letter Not Match
         $this->return404($match);
@@ -258,7 +262,7 @@ final class FilterController extends AbstractBaseController
             'links'             => [],
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'entities'          => $repository->getGaragePageFilter([]),
+            'entities'          => $repository->getGaragePageFilter($query),
             'container'         => 'container-fluid pt-4 px-4',
             'theme'             => 'dark',
         ]);
@@ -279,6 +283,10 @@ final class FilterController extends AbstractBaseController
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.to.install.import', 'params' => []],
         ];
+        $query      = [
+            'status_control.toInstallImport' => true,
+            'settingClass.value' => $letter,
+        ];
 
         ### Letter Not Match
         $this->return404($match);
@@ -288,7 +296,7 @@ final class FilterController extends AbstractBaseController
             'links'             => [],
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'entities'          => $repository->getGaragePageFilter([]),
+            'entities'          => $repository->getGaragePageFilter($query),
             'container'         => 'container-fluid pt-4 px-4',
             'theme'             => 'dark',
         ]);
@@ -309,6 +317,10 @@ final class FilterController extends AbstractBaseController
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.to.gold', 'params' => []],
         ];
+        $query      = [
+            'status_control.toGold' => true,
+            'settingClass.value' => $letter,
+        ];
 
         ### Letter Not Match
         $this->return404($match);
@@ -318,7 +330,7 @@ final class FilterController extends AbstractBaseController
             'links'             => [],
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'entities'          => $repository->getGaragePageFilter([]),
+            'entities'          => $repository->getGaragePageFilter($query),
             'container'         => 'container-fluid pt-4 px-4',
             'theme'             => 'dark',
         ]);
@@ -339,6 +351,11 @@ final class FilterController extends AbstractBaseController
             ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
             ['label' => $title, 'route' => 'app.page.filter.full.blueprint', 'params' => []],
         ];
+        $query      = [
+            'status.gold' => false,
+            'status_control.fullBlueprint' => true,
+            'settingClass.value' => $letter,
+        ];
 
         ### Letter Not Match
         $this->return404($match);
@@ -348,7 +365,7 @@ final class FilterController extends AbstractBaseController
             'links'             => [],
             'controller_name'   => $title,
             'current_page'      => $request->attributes->get('_route'),
-            'entities'          => $repository->getGaragePageFilter([]),
+            'entities'          => $repository->getGaragePageFilter($query),
             'container'         => 'container-fluid pt-4 px-4',
             'theme'             => 'dark',
         ]);
@@ -370,9 +387,78 @@ final class FilterController extends AbstractBaseController
             ['label' => $title, 'route' => 'app.page.filter.full.evo', 'params' => []],
         ];
         $query      = [
-//            'status.unblock'     => true,
-//            'status.gold'        => true,
-//            'settingClass.value' => $letter,
+            'status_control.fullEvo' => true,
+            'settingClass.value' => $letter,
+        ];
+
+        ### Letter Not Match
+        $this->return404($match);
+
+        return $this->render('@App/themes/lte/contents/garage/index.html.twig', [
+            'breadcrumb'        => self::breadcrumb($breadcrumb),
+            'links'             => [],
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'entities'          => $repository->getGaragePageFilter($query),
+            'container'         => 'container-fluid pt-4 px-4',
+            'theme'             => 'dark',
+        ]);
+    }
+
+    #[Route(path: '/full-upgrade/class-{letter}.php', name: 'full.upgrade')]
+    public function fullUpgrade(
+        Request $request,
+        GarageAppRepository $repository,
+    ): Response
+    {
+        ### Variables
+        $letter     = self::Letter($request->attributes->get('letter'));
+        $match      = self::ControlLetter($letter);
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.full.upgrade');
+        $breadcrumb = [
+            ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
+            ['label' => $title, 'route' => 'app.page.filter.full.upgrade', 'params' => []],
+        ];
+        $query      = [
+            'status.gold' => false,
+            'status_control.fullUpgrade' => true,
+            'settingClass.value' => $letter,
+        ];
+
+        ### Letter Not Match
+        $this->return404($match);
+
+        return $this->render('@App/themes/lte/contents/garage/index.html.twig', [
+            'breadcrumb'        => self::breadcrumb($breadcrumb),
+            'links'             => [],
+            'controller_name'   => $title,
+            'current_page'      => $request->attributes->get('_route'),
+            'entities'          => $repository->getGaragePageFilter($query),
+            'container'         => 'container-fluid pt-4 px-4',
+            'theme'             => 'dark',
+        ]);
+    }
+
+    #[Route(path: '/full-import/class-{letter}.php', name: 'full.import')]
+    public function fullImport(
+        Request $request,
+        GarageAppRepository $repository,
+    ): Response
+    {
+        ### Variables
+        $letter     = self::Letter($request->attributes->get('letter'));
+        $match      = self::ControlLetter($letter);
+        $dashboard  = $this->translator->trans('text.dashboard');
+        $title      = $this->translator->trans('text.filter') . ' by ' . $this->translator->trans('text.full.import');
+        $breadcrumb = [
+            ['label' => $dashboard, 'route' => 'app.dashboard.index', 'params' => []],
+            ['label' => $title, 'route' => 'app.page.filter.full.import', 'params' => []],
+        ];
+        $query      = [
+            'status.gold' => false,
+            'status_control.fullImport' => true,
+            'settingClass.value' => $letter,
         ];
 
         ### Letter Not Match

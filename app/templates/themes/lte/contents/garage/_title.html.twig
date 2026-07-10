@@ -1,0 +1,27 @@
+
+{% from "@App/themes/lte/contents/garage/_macros.html.twig" import getStars, getClass %}
+
+<div class="card border border-opacity-50 border-white border-1 shadow-sm {{ background }}">
+    <div class="card-header border-bottom-0 py-0 {{ text }}">
+        <h1 class="titillium-web-bold fw-bolder display-3 titre-premium">{{ entity.settingBrand.name }}</h1>
+        <h1 class="titillium-web-bold fw-bolder display-1 titre-premium">{{ entity.model }}</h1>
+    </div>
+    <div class="card-body">
+        <div class="row row-cols-2">
+            <div class="col-2">
+                <div class="info-box ecusson">
+                  <span class="ecusson-label text-center">{{ 'text.class'|trans }}</span>
+                  <span class="ecusson-rang text-center rubik-mono-one-regular display-2">{{ entity.settingClass.value }}</span>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="info-box ecusson">
+                    <div class="info-box-content">
+                        <span class="ecusson-label">{{ 'text.stars'|trans }}</span>
+                        <span>{{ getStars(entity, text)  }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

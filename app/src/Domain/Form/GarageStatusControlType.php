@@ -17,163 +17,163 @@ class GarageStatusControlType extends AbstractType
         $builder
             ->add('toInstallSpeed', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.to.install.speed',
+                'label'         => 'text.speed',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullSpeed', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.speed',
+                'label'         => 'text.speed',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('toInstallAcceleration', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.to.install.acceleration',
+                'label'         => 'text.acceleration',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullAcceleration', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.acceleration',
+                'label'         => 'text.acceleration',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('toInstallHandling', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.to.install.handling',
+                'label'         => 'text.handling',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullHandling', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.handling',
+                'label'         => 'text.handling',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('toInstallNitro', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.to.install.nitro',
+                'label'         => 'text.nitro',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullNitro', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.nitro',
+                'label'         => 'text.nitro',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('toInstallCommon', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.to.install.common',
+                'label'         => 'text.common',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullCommon', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.common',
+                'label'         => 'text.common',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('toInstallRare', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.to.install.rare',
+                'label'         => 'text.rare',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullRare', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.rare',
+                'label'         => 'text.rare',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('toInstallEpic', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.to.install.epic',
+                'label'         => 'text.epic',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullEpic', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.epic',
+                'label'         => 'text.epic',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullStar1', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.star.1',
+                'label'         => 'text.star1',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullStar2', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.star.2',
+                'label'         => 'text.star2',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullStar3', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.star.3',
+                'label'         => 'text.star3',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullStar4', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.star.4',
+                'label'         => 'text.star4',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullStar5', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.star.5',
+                'label'         => 'text.star5',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullStar6', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.star.6',
+                'label'         => 'text.star6',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullBlueprint', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.blueprint',
+                'label'         => 'text.full.blueprint',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('toInstallUpgrade', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.to.install.upgrade',
+                'label'         => 'text.upgrade',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullUpgrade', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.upgrade',
+                'label'         => 'text.full.upgrade',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('toInstallImport', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.to.install.import',
+                'label'         => 'text.import',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullImport', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.import',
+                'label'         => 'text.full.import',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('toGold', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.to.gold',
+                'label'         => 'text.to.gold',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
             ->add('fullEvo', CheckboxType::class, [
                 'attr'          => self::attrClassPrivate(),
-                'label'         => 'form.full.evo',
+                'label'         => 'text.full.evo',
                 'label_attr'    => self::attrLabelPrivate(),
                 'required'      => false,
             ])
@@ -185,7 +185,7 @@ class GarageStatusControlType extends AbstractType
         $resolver->setDefaults([
             'data_class' => GarageStatusControl::class,
             'allow_extra_fields' => false,
-            'translation_domain' => 'forms',
+            'translation_domain' => 'messages',
         ]);
     }
 
@@ -207,7 +207,7 @@ class GarageStatusControlType extends AbstractType
     public static function attrLabelPrivate(): array
     {
         return [
-            'class' => 'btn btn-outline-info w-100',
+            'class' => 'btn btn-outline-secondary w-100',
         ];
     }
 }

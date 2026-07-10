@@ -1,5 +1,0 @@
-``` yaml
-framework:
-    property_info:
-        with_constructor_extractor: true
-```

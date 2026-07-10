@@ -138,6 +138,16 @@ final readonly class Garage
         $this->manager->flush();
     }
 
+    public function countGarageFullUpgradeByClass(): void
+    {
+
+    }
+
+    public function countGarageFullImportByClass(): void
+    {
+
+    }
+
     /** PRIVATE METHODS */
 
     /**

@@ -4,3 +4,17 @@
     background-repeat: no-repeat;
     background-size: 250px;
 }
+
+/* Désactiver le survol / l'agrandissement automatique de la barre latérale */
+.sidebar-mini.sidebar-collapse .app-sidebar:hover {
+    min-width: 4.5rem !important; /* Force la largeur minimale initiale du mode réduit */
+    max-width: 4.5rem !important; /* Force la largeur maximale initiale du mode réduit */
+
+}
+
+/* Masquer le texte ou les éléments qui s'affichent normalement au survol */
+.sidebar-mini.sidebar-collapse .app-sidebar:hover .brand-text,
+.sidebar-mini.sidebar-collapse .app-sidebar:hover .nav-text,
+.sidebar-mini.sidebar-collapse .app-sidebar:hover .nav-link span:not(.nav-icon) {
+    display: none !important;
+}

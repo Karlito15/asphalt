@@ -7,7 +7,6 @@ namespace App\Infrastructure\Service\Cron\Event\Setting;
 use App\Domain\Entity\GarageApp;
 use App\Domain\Entity\SettingBrand;
 use App\Domain\Entity\SettingClass;
-use App\Domain\Entity\StatisticalGarage;
 use App\Infrastructure\Event\Garage\SettingEvent;
 use Doctrine\ORM\EntityManagerInterface;
 

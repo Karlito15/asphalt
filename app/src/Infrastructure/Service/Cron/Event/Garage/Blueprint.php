@@ -17,96 +17,128 @@ final readonly class Blueprint
     public static function statusUnblock(AppEvent $event): void
     {
         ### Variables
-        $status = $event->getGarage()->getStatus();
+        $status  = $event->getGarage()->getStatus();
+        $control = $event->getGarage()->getStatusControl();
 
         ### Conditions
         if ($event->getBlueprintFirstStar() === $event->getSettingFirstStar()):
             $status->setUnblock(true);
+            $control->setFullStar1(true);
         else:
             $status->setUnblock(false);
+            $control->setFullStar1(false);
         endif;
     }
 
     /**
-     * Vérifie pour chaque étoile si le nombre de cartes nécessaires est atteint
+     * Vérifie si le nombre de cartes pour la deuxième étoile est atteint
      *
      * @param AppEvent $event
      * @return void
      */
-    public static function statusControlBlueprint(AppEvent $event): void
+    public static function statusControlFullStar2(AppEvent $event): void
     {
         ### Variables
-        $star       = $event->getStars();
-        $blueprint  = $event->getBlueprintAllStars();
-        $setting    = $event->getSettingAllStars();
         $control    = $event->getGarage()->getStatusControl();
+        $blueprints = $event->getBlueprintAllStars();
+        $settings   = $event->getSettingAllStars();
 
         ### Conditions
-
-        ### Star 1
-        if ($blueprint['star1'] === $setting['star1']):
-            $control->setFullStar1(true);
-        else:
-            $control->setFullStar1(false);
-        endif;
-
-        ### Star 2
-        if ($blueprint['star2'] === $setting['star2']):
+        if ($blueprints['star2'] === $settings['star2']):
             $control->setFullStar2(true);
         else:
             $control->setFullStar2(false);
         endif;
+    }
 
-        ### Star 3
-        if ($blueprint['star3'] === $setting['star3']):
+    /**
+     * Vérifie si le nombre de cartes pour la troisième étoile est atteint
+     *
+     * @param AppEvent $event
+     * @return void
+     */
+    public static function statusControlFullStar3(AppEvent $event): void
+    {
+        ### Variables
+        $control    = $event->getGarage()->getStatusControl();
+        $blueprints = $event->getBlueprintAllStars();
+        $settings   = $event->getSettingAllStars();
+
+        ### Conditions
+        if ($blueprints['star3'] === $settings['star3']):
             $control->setFullStar3(true);
         else:
             $control->setFullStar3(false);
         endif;
+    }
 
-        switch ($star):
-            case 6:
-                ### Star 4
-                if ($blueprint['star4'] === $setting['star4']):
-                    $control->setFullStar4(true);
-                else:
-                    $control->setFullStar4(false);
-                endif;
+    /**
+     * Vérifie si le nombre de cartes pour la quatrième étoile est atteint
+     *
+     * @param AppEvent $event
+     * @return void
+     */
+    public static function statusControlFullStar4(AppEvent $event): void
+    {
+        if($event->getStars() > 3) {
+            ### Variables
+            $control    = $event->getGarage()->getStatusControl();
+            $blueprints = $event->getBlueprintAllStars();
+            $settings   = $event->getSettingAllStars();
 
-                ### Star 5
-                if ($blueprint['star5'] === $setting['star5']):
-                    $control->setFullStar5(true);
-                else:
-                    $control->setFullStar5(false);
-                endif;
+            ### Conditions
+            if ($blueprints['star4'] === $settings['star4']):
+                $control->setFullStar4(true);
+            else:
+                $control->setFullStar4(false);
+            endif;
+        }
+    }
 
-                ### Star 6
-                if ($blueprint['star6'] === $setting['star6']):
-                    $control->setFullStar6(true);
-                else:
-                    $control->setFullStar6(false);
-                endif;
-                break;
-            case 5:
-                if ($blueprint['star4'] === $setting['star4']):
-                    $control->setFullStar4(true);
-                else:
-                    $control->setFullStar4(false);
-                endif;
-                if ($blueprint['star5'] === $setting['star5']):
-                    $control->setFullStar5(true);
-                else:
-                    $control->setFullStar5(false);
-                endif;
-                break;
-            case 4:
-                if ($blueprint['star4'] === $setting['star4']):
-                    $control->setFullStar4(true);
-                else:
-                    $control->setFullStar4(false);
-                endif;
-                break;
-        endswitch;
+    /**
+     * Vérifie si le nombre de cartes pour la cinquième étoile est atteint
+     *
+     * @param AppEvent $event
+     * @return void
+     */
+    public static function statusControlFullStar5(AppEvent $event): void
+    {
+        if($event->getStars() > 3) {
+            ### Variables
+            $control    = $event->getGarage()->getStatusControl();
+            $blueprints = $event->getBlueprintAllStars();
+            $settings   = $event->getSettingAllStars();
+
+            ### Conditions
+            if ($blueprints['star5'] === $settings['star5']):
+                $control->setFullStar5(true);
+            else:
+                $control->setFullStar5(false);
+            endif;
+        }
+    }
+
+    /**
+     * Vérifie si le nombre de cartes pour la sixième étoile est atteint
+     *
+     * @param AppEvent $event
+     * @return void
+     */
+    public static function statusControlFullStar6(AppEvent $event): void
+    {
+        if($event->getStars() > 3) {
+            ### Variables
+            $control    = $event->getGarage()->getStatusControl();
+            $blueprints = $event->getBlueprintAllStars();
+            $settings   = $event->getSettingAllStars();
+
+            ### Conditions
+            if ($blueprints['star6'] === $settings['star6']):
+                $control->setFullStar6(true);
+            else:
+                $control->setFullStar6(false);
+            endif;
+        }
     }
 
     /**
@@ -118,61 +150,15 @@ final readonly class Blueprint
     public static function statusControlFullBlueprint(AppEvent $event): void
     {
         ### Variables
-        $star       = $event->getStars();
         $control    = $event->getGarage()->getStatusControl();
+        $blueprints = $event->getBlueprintAllStars();
+        $settings   = $event->getSettingAllStars();
 
         ### Conditions
-        switch ($star):
-            case 6:
-                if (
-                    ($control->isFullStar1() === true) AND
-                    ($control->isFullStar2() === true) AND
-                    ($control->isFullStar3() === true) AND
-                    ($control->isFullStar4() === true) AND
-                    ($control->isFullStar5() === true) AND
-                    ($control->isFullStar6() === true)
-                ):
-                    $control->setFullBlueprint(true);
-                else :
-                    $control->setFullBlueprint(false);
-                endif;
-                break;
-            case 5:
-                if (
-                    ($control->isFullStar1() === true) AND
-                    ($control->isFullStar2() === true) AND
-                    ($control->isFullStar3() === true) AND
-                    ($control->isFullStar4() === true) AND
-                    ($control->isFullStar5() === true)
-                ):
-                    $control->setFullBlueprint(true);
-                else :
-                    $control->setFullBlueprint(false);
-                endif;
-                break;
-            case 4:
-                if (
-                    ($control->isFullStar1() === true) AND
-                    ($control->isFullStar2() === true) AND
-                    ($control->isFullStar3() === true) AND
-                    ($control->isFullStar4() === true)
-                ):
-                    $control->setFullBlueprint(true);
-                else :
-                    $control->setFullBlueprint(false);
-                endif;
-                break;
-            case 3:
-                if (
-                    ($control->isFullStar1() === true) AND
-                    ($control->isFullStar2() === true) AND
-                    ($control->isFullStar3() === true)
-                ):
-                    $control->setFullBlueprint(true);
-                else :
-                    $control->setFullBlueprint(false);
-                endif;
-                break;
-        endswitch;
+        if ($blueprints['total'] === $settings['total']):
+            $control->setFullBlueprint(true);
+        else:
+            $control->setFullBlueprint(false);
+        endif;
     }
 }

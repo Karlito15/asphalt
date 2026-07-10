@@ -161,6 +161,6 @@ class GarageStatMax
     public function postUpdate(LifecycleEventArgs $args): void
     {
         $args->getObject()->setAverage($this->getSpeed(), $this->getAcceleration(), $this->getHandling(), $this->getNitro());
-        $args->getObjectManager()->getRepository(GarageStatMax::class)->save($args->getObject(), true);
+        $args->getObjectManager()->flush();
     }
 }

@@ -95,54 +95,6 @@
     font-style: normal;
 }
 
-/** PLAYFAIR DISPLAY */
-
-@font-face {
-    font-family: "Playfair Display", serif;
-    src:
-        url('../fonts/PlayfairDisplay-Black.ttf'),
-        url('../fonts/PlayfairDisplay-Bold.ttf'),
-        url('../fonts/PlayfairDisplay-ExtraBold.ttf'),
-        url('../fonts/PlayfairDisplay-Medium.ttf'),
-        url('../fonts/PlayfairDisplay-Regular.ttf')
-        format('truetype');
-}
-
-.playfair-display-regular {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.playfair-display-medium {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.playfair-display-bold {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.playfair-display-extrabold {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-}
-
-.playfair-display-black {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-}
-
 /** POPPINS */
 
 @font-face {

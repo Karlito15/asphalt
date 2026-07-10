@@ -31,18 +31,12 @@
 {% endmacro %}
 
 {% macro getStars(entity, color) %}
-    <i class="{% if entity.statusControl.fullStar1 is true %}{{ icons.star.full }}{% else %}{% if entity.blueprint.star1 > 0 %}{{ icons.star.half }}{% else %}{{ icons.star.empty
-    }}{% endif %}{% endif %} {{ color }} fa-3x"></i>
-    <i class="{% if entity.statusControl.fullStar2 is true %}{{ icons.star.full }}{% else %}{% if entity.blueprint.star2 > 0 %}{{ icons.star.half }}{% else %}{{ icons.star.empty
-    }}{% endif %}{% endif %} {{ color }} fa-3x"></i>
-    <i class="{% if entity.statusControl.fullStar3 is true %}{{ icons.star.full }}{% else %}{% if entity.blueprint.star3 > 0 %}{{ icons.star.half }}{% else %}{{ icons.star.empty
-    }}{% endif %}{% endif %} {{ color }} fa-3x"></i>
-    <i class="{% if entity.statusControl.fullStar4 is true %}{{ icons.star.full }}{% else %}{% if entity.blueprint.star4 > 0 %}{{ icons.star.half }}{% else %}{{ icons.star.empty
-    }}{% endif %}{% endif %} {{ color }} fa-3x"></i>
-    <i class="{% if entity.statusControl.fullStar5 is true %}{{ icons.star.full }}{% else %}{% if entity.blueprint.star5 > 0 %}{{ icons.star.half }}{% else %}{{ icons.star.empty
-    }}{% endif %}{% endif %} {{ color }} fa-3x"></i>
-    <i class="{% if entity.statusControl.fullStar6 is true %}{{ icons.star.full }}{% else %}{% if entity.blueprint.star6 > 0 %}{{ icons.star.half }}{% else %}{{ icons.star.empty
-    }}{% endif %}{% endif %} {{ color }} fa-3x"></i>
+    <i class="{% if entity.statusControl.fullStar1 is true %}{{ icons.star.full }}{% else %}{% if entity.blueprint.star1 > 0 %}{{ icons.star.half }}{% else %}{{ icons.star.empty }}{% endif %}{% endif %} {{ color }} fa-3x"></i>
+    <i class="{% if entity.statusControl.fullStar2 is true %}{{ icons.star.full }}{% else %}{% if entity.blueprint.star2 > 0 %}{{ icons.star.half }}{% else %}{{ icons.star.empty }}{% endif %}{% endif %} {{ color }} fa-3x"></i>
+    <i class="{% if entity.statusControl.fullStar3 is true %}{{ icons.star.full }}{% else %}{% if entity.blueprint.star3 > 0 %}{{ icons.star.half }}{% else %}{{ icons.star.empty }}{% endif %}{% endif %} {{ color }} fa-3x"></i>
+    <i class="{% if entity.statusControl.fullStar4 is true %}{{ icons.star.full }}{% else %}{% if entity.blueprint.star4 > 0 %}{{ icons.star.half }}{% else %}{{ icons.star.empty }}{% endif %}{% endif %} {{ color }} fa-3x"></i>
+    <i class="{% if entity.statusControl.fullStar5 is true %}{{ icons.star.full }}{% else %}{% if entity.blueprint.star5 > 0 %}{{ icons.star.half }}{% else %}{{ icons.star.empty }}{% endif %}{% endif %} {{ color }} fa-3x"></i>
+    <i class="{% if entity.statusControl.fullStar6 is true %}{{ icons.star.full }}{% else %}{% if entity.blueprint.star6 > 0 %}{{ icons.star.half }}{% else %}{{ icons.star.empty }}{% endif %}{% endif %} {{ color }} fa-3x"></i>
 {% endmacro %}
 
 {% macro getClass(setting, color) %}

@@ -4,6 +4,13 @@ framework:
         paths:
             - assets/
         missing_import_mode: strict
+#        excluded_patterns:
+#            - '**/assets/scss/_*.scss'
+#            - '**/assets/**/_*.scss'
+
+#        precompress:
+#            # the extensions considered safe (css, js, json, svg, xml, ttf, otf, wasm, etc.)
+#            extensions: ['css', 'js', 'json', 'svg', 'xml']
 
 when@prod:
     framework:

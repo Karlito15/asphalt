@@ -1,0 +1,59 @@
+.titre-premium {
+    /* Choix d'une police moderne et épaisse */
+    letter-spacing: 2px;
+
+    /* 1. Création du dégradé (effet métallique/doré) */
+    background: linear-gradient(to right, #f9d423, #ff4e50, #f9d423);
+
+    /* 2. On applique le fond uniquement sur le texte */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. On rend la couleur d'origine du texte transparente */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback */
+
+    /* 4. Ajout d'une ombre pour l'effet "Glow" (Lueur) */
+    /* Note : On utilise filter au lieu de text-shadow car text-shadow s'applique parfois mal par-dessus un background-clip */
+    filter: drop-shadow(0px 4px 8px rgba(255, 78, 80, 0.4));
+}
+
+
+/* Ecusson */
+.ecusson {
+  /* Centrage des éléments à l'intérieur du badge */
+  display: inline-flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  /*justify-content: center;*/
+
+  /* Dimensions et forme */
+  /*min-width: 90px;*/
+  /*height: 100px;*/
+  border-radius: 12px; /* Coins arrondis pour la modernité */
+
+  /* Couleurs et bordures */
+  background-color: rgba(20, 20, 20, 0.85); /* Fond gris très foncé légèrement transparent */
+  border: 2px solid #f9d423; /* Bordure dorée/jaune */
+
+  /* Effet de lueur (Néon) : une ombre externe et une ombre interne */
+  box-shadow:
+    0 0 15px rgba(249, 212, 35, 0.5),
+    inset 0 0 10px rgba(249, 212, 35, 0.2);
+
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+.ecusson-label {
+  color: #aaaaaa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.ecusson-rang {
+  line-height: 0.8;
+  /* Effet doré sur le S */
+  color: #f9d423;
+  text-shadow: 0 0 10px rgba(249, 212, 35, 0.8);
+}

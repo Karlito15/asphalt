@@ -25,6 +25,9 @@ return [
     '@hotwired/turbo' => [
         'version' => '8.0.23',
     ],
+    '@popperjs/core' => [
+        'version' => '2.11.8',
+    ],
     'htmx.org' => [
         'version' => '2.0.10',
     ],

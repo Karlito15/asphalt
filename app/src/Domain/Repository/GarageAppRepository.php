@@ -259,6 +259,15 @@ class GarageAppRepository extends ServiceEntityRepository
             ->addSelect('status.unblock AS status_unblock')
             ->addSelect('status.gold AS status_gold')
             ->addSelect('status.toUpgrade AS status_to_upgrade')
+            ### Join Garage Status Control
+            ->leftJoin('g.statusControl', 'status_control')
+            ->addSelect('status_control.toGold AS status_to_gold')
+            ->addSelect('status_control.toInstallUpgrade AS status_to_install_upgrade')
+            ->addSelect('status_control.toInstallImport AS status_to_install_import')
+            ->addSelect('status_control.fullBlueprint AS status_full_blueprint')
+            ->addSelect('status_control.fullUpgrade')
+            ->addSelect('status_control.fullImport')
+            ->addSelect('status_control.fullEvo')
             ### Join Setting Brand
             ->leftJoin('g.settingBrand', 'settingBrand')
             ->addSelect('settingBrand.name AS brand')
