@@ -3,11 +3,6 @@
 
 {% block body %} class="layout-fixed sidebar-expand-lg sidebar-mini sidebar-collapse reduce-motion app-loaded bg-body-tertiary"{% endblock %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('styles/garage.css') }}" />
-{% endblock %}
-
 {% block content %}
 
     {% from "@App/themes/lte/contents/garage/_macros.html.twig" import getBackgroundColor, getTextColor %}
@@ -20,19 +15,23 @@
         <div class="col-8">
             {% include '@App/themes/lte/contents/garage/_title.html.twig' with {'background': background, 'text': text} %}
             <div class="mb-5"></div>
-            {% include '@App/themes/lte/contents/garage/update/garage.html.twig' with {'background': background, 'text': text} %}
-            <div class="mb-5"></div>
             {% include '@App/themes/lte/contents/garage/update/blueprint.html.twig' with {'background': background, 'text': text} %}
         </div>
         <div class="col-4">
-            {% include '@App/themes/lte/contents/garage/update/status.html.twig' with {'background': background, 'text': text} %}
+        {% include '@App/themes/lte/contents/garage/update/garage.html.twig' with {'background': background, 'text': text} %}
+            <div class="mb-5"></div>
+        {% include '@App/themes/lte/contents/garage/update/upgrade.html.twig' with {'background': background, 'text': text} %}
         </div>
     </div>
 
     <div class="row row-cols-2 g-5 mb-5">
-        <div class="col-6">{% include '@App/themes/lte/contents/garage/update/upgrade.html.twig' with {'background': background, 'text': text} %}</div>
-        <div class="col-2">{% include '@App/themes/lte/contents/garage/update/rank.html.twig' with {'background': background, 'text': text} %}</div>
+        <div class="col-4">{% include '@App/themes/lte/contents/garage/update/status.html.twig' with {'background': background, 'text': text} %}</div>
+        <div class="col-4">{% include '@App/themes/lte/contents/garage/update/rank.html.twig' with {'background': background, 'text': text} %}</div>
         <div class="col-4">{% include '@App/themes/lte/contents/garage/update/stat.html.twig' with {'background': background, 'text': text} %}</div>
+    </div>
+
+    <div class="row">
+        {% include '@App/themes/lte/contents/garage/update/configuration.html.twig' with {'background': background, 'text': text} %}
     </div>
 
     {% include '@App/themes/lte/contents/garage/_button.html.twig' %}

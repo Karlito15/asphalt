@@ -6,6 +6,7 @@ clear
 # Composer
 php84 -d memory_limit=2048M /volume3/web/WWW-CDN/composer.phar self-update
 php84 -d memory_limit=2048M /volume3/web/WWW-CDN/composer.phar update --no-scripts --no-dev
+php84 -d memory_limit=2048M /volume3/web/WWW-CDN/composer.phar dump-env prod
 
 # Symfony
 php84 -d memory_limit=2048M /volume3/web/Symfony/Karlito-Web/Asphalt/app/bin/console about
@@ -24,6 +25,10 @@ php84 -d memory_limit=2048M /volume3/web/Symfony/Karlito-Web/Asphalt/app/bin/con
 php84 -d memory_limit=2048M /volume3/web/Symfony/Karlito-Web/Asphalt/app/bin/console asset-map:compile
 
 # Commands
+php84 -d memory_limit=2048M /volume3/web/Symfony/Karlito-Web/Asphalt/app/bin/console asphalt:cron:garage
+php84 -d memory_limit=2048M /volume3/web/Symfony/Karlito-Web/Asphalt/app/bin/console asphalt:cron:setting
+php84 -d memory_limit=2048M /volume3/web/Symfony/Karlito-Web/Asphalt/app/bin/console asphalt:cron:statistical
+
 #### Compte le nombre de voitures par Marque
 # php84 -d memory_limit=2048M /volume3/web/Symfony/Karlito-Web/Asphalt/app/bin/console asphalt:cron:count:brand
 #### Compte le nombre de voitures par Class

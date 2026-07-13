@@ -1,0 +1,117 @@
+
+<div class="card border border-opacity-50 border-white border-1 shadow-sm {{ background }} d-none" id="light">
+    <div class="card-header border-bottom-0">
+        {{ 'text.configuration'|trans }}
+    </div>
+    <div class="card-body">
+        <div class="row row-cols-3 row-gap-3">
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.settingBrand) }}
+                    {{ form_label(form.settingBrand) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.model) }}
+                    {{ form_label(form.model) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.settingClass) }}
+                    {{ form_label(form.settingClass) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.stars) }}
+                    {{ form_label(form.stars) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.gameUpdate) }}
+                    {{ form_label(form.gameUpdate) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.gauntlet.division) }}
+                    {{ form_label(form.gauntlet.division) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.settingLevel) }}
+                    {{ form_label(form.settingLevel) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.settingBlueprint) }}
+                    {{ form_label(form.settingBlueprint) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    {{ form_widget(form.settingUnitPrice) }}
+                    {{ form_label(form.settingUnitPrice) }}
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-6 row-gap-3">
+            <div class="col">
+                {{ form_label(form.evo) }}
+                <div class="input-group">
+                    {{ form_widget(form.evo) }}
+                    <label for="maxEvo"></label>
+                    <input
+                        type="text"
+                        id="maxEvo"
+                        class="form-control text-center text-info"
+                        value="24"
+                        readonly
+                    />
+                </div>
+            </div>
+            <div class="col">
+                {{ form_label(form.carOrder) }}
+                <div class="input-group">
+                    {{ form_widget(form.carOrder) }}
+                    <label for="maxCarOrder"></label>
+                    <input
+                        type="text"
+                        id="maxCarOrder"
+                        class="form-control text-center text-info"
+                        value="{{ entity.settingClass.carsNumber }}"
+                        readonly
+                    />
+                </div>
+            </div>
+            <div class="col">
+                <label class="fw-bolder form-label required" for="statOrder">{{ 'text.order.stat'|trans }}</label>
+                <div class="input-group">
+                    <input
+                        type="number"
+                        id="statOrder"
+                        name="statOrder"
+                        autocomplete="off"
+                        class="text-center form-control"
+                        placeholder="{{ 'text.order.stat'|trans }}"
+                        value="{{ entity.statOrder }}"
+                        aria-label="{{ 'text.order.stat'|trans }}"
+                    >
+                    <label for="maxCarOrder"></label>
+                    <input
+                        type="text"
+                        id="maxCarOrder"
+                        class="form-control text-center text-info"
+                        value="{{ entity.settingClass.carsNumber }}"
+                        readonly
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

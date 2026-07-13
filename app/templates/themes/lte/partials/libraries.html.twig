@@ -1,0 +1,84 @@
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libraries/fontawesome/7.2.0/css/all.min.css') }}" />
+
+{% if app.current_route == 'app.garage.index' %}
+    {% if app.environment == 'dev' %}
+    <link rel="stylesheet" href="{{ asset('libraries/bootstrap-table/1.27/dist/bootstrap-table.css') }}">
+    {% else %}
+    <link rel="stylesheet" href="{{ asset('libraries/bootstrap-table/1.27/dist/bootstrap-table.min.css') }}">
+    {% endif %}
+{% endif %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% if app.current_route == 'app.garage.index' %}
+    <script src="{{ asset('libraries/jquery/4.0.0.min.js') }}"></script>
+    <!-- Scripts -->
+    {% if app.environment == 'dev' %}
+    <script src="{{ asset('libraries/bootstrap-table/1.27/dist/bootstrap-table.js') }}"></script>
+    {% else %}
+    <script src="{{ asset('libraries/bootstrap-table/1.27/dist/bootstrap-table.min.js') }}"></script>
+    {% endif %}
+    <script>
+        const $table        = $('#Garage');
+        const GarageColumns = [];
+        console.warn($table);
+        function initTable () {
+            $table.bootstrapTable({
+                locale: 'en-US',
+                // locale: 'fr-FR',
+                columns: GarageColumns,
+                buttonsAlign: 'end',
+
+                cache: false,
+
+                icons: {
+                    paginationSwitchDown: 'fa-caret-square-down',
+                    paginationSwitchUp: 'fa-caret-square-up',
+                    refresh: 'fa-sync',
+                    toggleOff: 'fa-toggle-off',
+                    toggleOn: 'fa-toggle-on',
+                    columns: 'fa-th-list',
+                    fullscreen: 'fa-arrows-alt',
+                    detailOpen: 'fa-plus',
+                    detailClose: 'fa-minus'
+                },
+                iconSize: 'sm',
+                iconsPrefix: 'fa',
+
+                pageList: [20, 40, 60, 80, 100, 'all'],
+                pageSize: 15,
+                pagination: true,
+                paginationHAlign: 'end',
+                paginationVAlign: 'bottom',
+                paginationLoop: true,
+
+                search: true,
+                searchAlign: 'start',
+                searchAccentNeutralise: true,
+                searchHighlight: true,
+                searchTimeOut: 200,
+                visibleSearch: false,
+
+                silentSort: false,
+
+                showButtonIcons: true,
+                showButtonText: false,
+                showColumns: true,
+                showColumnsSearch: true,
+                showColumnsToggleAll: true,
+                showExtendedPagination: true,
+                showFullscreen: false,
+                showPaginationSwitch: true,
+                showSearchButton: false,
+                showSearchClearButton: true,
+            })
+        }
+        // Start
+        initTable();
+    </script>
+{% endif %}
+{% endblock %}

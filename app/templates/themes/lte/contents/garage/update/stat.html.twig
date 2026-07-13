@@ -1,20 +1,12 @@
-<style>
 
-.gradient {
-    background: linear-gradient(135deg, #1F2937, #020617)
-}
-
-</style>
-
-
-<div class="card border border-opacity-50 border-white border-1 shadow-sm {{ background }}">
+<div class="card border border-opacity-50 border-white border-1 shadow-sm {{ background }} d-none" id="light">
     <div class="card-header border-bottom-0">
         <span class="float-start">{{ 'text.stat'|trans|plural }}</span>
         <span class="float-end badge rounded-pill bg-danger">
             <i class="fa-solid fa-fire"></i>&nbsp;{{ entity.settingClass.median }}
         </span>
     </div>
-    <div class="card-body gradient">
+    <div class="card-body">
         <div class="d-flex justify-content-around">
             <div class="col-3 text-start">
                 <label for="">

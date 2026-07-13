@@ -19,7 +19,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 #[Route(
 	path: '/{_locale<%app.supported_locales%>}/garage',
 	name: 'app.garage.',
-	requirements: ['id' => Requirement::DIGITS, 'slug' => Requirement::ASCII_SLUG],
+	requirements: ['id' => Requirement::DIGITS, 'slug' => Requirement::ASCII_SLUG, 'mode' => Requirement::ASCII_SLUG],
 	options: ['expose' => false],
 	methods: ['GET', 'POST'],
 	schemes: ['http', 'https'],
@@ -37,13 +37,18 @@ final class UpdateController extends AbstractBaseController
         'delete' => 'app.garage.delete',
 	];
 
-	#[Route('/update/{id}/{slug}.php', name: 'update')]
+	#[Route('/update/{mode}/{id}/{slug}.php',
+        name: 'update',
+        requirements: ['mode' => 'light|full'],
+        defaults: ['mode' => 'light'],
+    )]
 	public function update(
 		EntityManagerInterface $manager,
 		EventDispatcherInterface $dispatcher,
 		GarageApp $entity,
 		Request $request,
         TranslatorInterface $translator,
+        string $mode
 	): Response
 	{
 		### Variables
@@ -96,6 +101,7 @@ final class UpdateController extends AbstractBaseController
             'form'              => $form,
             'container'         => 'container-fluid pt-4 px-4',
             'theme'             => 'dark',
+            'mode'              => $mode,
 		]);
 	}
 }

@@ -43,3 +43,67 @@ body {
 div.app-wrapper main#main.app-main div.app-content div.container-fluid div.col div.info-box span.info-box-icon i.fa-2x {
     font-size: 40.5px;
 }
+
+/* TITLE */
+/* ChatGPT */
+.title-premium {
+    background:
+        linear-gradient(
+            180deg,
+            #fbe8ab 0%,
+            #e5c06e 18%,
+            #c99947 38%,
+            #a87531 60%,
+            #7c5724 82%,
+            #4d3513 100%
+        );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke:.8px rgba(80,55,18,.45);
+
+    text-shadow:
+        0 1px 0 rgba(255,255,255,.15),
+        0 2px 2px rgba(0,0,0,.35),
+        0 4px 8px rgba(0,0,0,.25)
+    ;
+}
+
+/* Box */
+.class-box {
+    position: relative;
+    display: flex;
+    width: 120px;
+    min-height: 140px;
+    padding: 0.5rem;
+    background:url("../images/badge-01.png") no-repeat;
+}
+.class-box .class-box-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    /*line-height: 1.8;*/
+}
+.class-box-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.stars {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    border-radius: 12px;
+    background-color: rgba(20, 20, 20, 0.85);
+    border: 2px solid #f9d423;
+    box-shadow: 0 0 15px rgba(249, 212, 35, 0.5), inset 0 0 10px rgba(249, 212, 35, 0.2);
+}
+
+
+/* TEST */
+.gradient {
+    background: linear-gradient(135deg, #1F2937, #020617)
+}
