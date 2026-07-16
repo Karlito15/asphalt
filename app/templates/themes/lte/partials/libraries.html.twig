@@ -1,6 +1,9 @@
 {% block stylesheets %}
 
+{# Font Awesome #}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libraries/fontawesome/7.2.0/css/all.min.css') }}" />
+{# Back To Top #}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('libraries/animated-back-to-top-button/style.css') }}" />
 
 {% if app.current_route == 'app.garage.index' %}
     {% if app.environment == 'dev' %}
@@ -12,10 +15,15 @@
 
 {% endblock %}
 
+
+
 {% block javascripts %}
 
+<script src="{{ asset('libraries/jquery/4.0.0.min.js') }}"></script>
+{# Back To Top #}
+<script src="{{ asset('libraries/animated-back-to-top-button/backtotop.js') }}"></script>
+
 {% if app.current_route == 'app.garage.index' %}
-    <script src="{{ asset('libraries/jquery/4.0.0.min.js') }}"></script>
     <!-- Scripts -->
     {% if app.environment == 'dev' %}
     <script src="{{ asset('libraries/bootstrap-table/1.27/dist/bootstrap-table.js') }}"></script>
@@ -81,4 +89,5 @@
         initTable();
     </script>
 {% endif %}
+
 {% endblock %}

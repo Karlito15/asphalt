@@ -71,7 +71,7 @@ final class DashboardController extends AbstractBaseController
         }
 
         ### Flash
-        $this->addFlash('primary', 'This is the Web App !');
+        $this->addFlash(type: 'info', message: 'This is the Web App !');
 
         return $this->render('@App/themes/lte/contents/dashboard/index.html.twig', [
             'breadcrumb'        => self::breadcrumb($breadcrumb),

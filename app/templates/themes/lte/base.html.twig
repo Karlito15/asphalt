@@ -55,6 +55,21 @@
 
 <body{% block body %}{% endblock %}>
 
+<span id="backtotop-btn">
+    <!------------------------->
+    <!-- ROCKET EMOJI BUTTON -->
+    <!------------------------->
+    <span class="rocket">🚀</span>
+    <!----------------->
+    <!-- TEXT BUTTON -->
+    <!----------------->
+    <!-- <span class="text">Back To Top</span> -->
+    <!-------------------------->
+    <!-- ARROW TOP SVG BUTTON -->
+    <!-------------------------->
+    <!-- <img class="arrow-top" src="https://www.linkpicture.com/q/up-arrow.svg"> -->
+</span>
+
 <!--begin::App Wrapper-->
 <div class="app-wrapper">
     {% block wrapper %}
@@ -75,6 +90,7 @@
 {% endif %}
 
 {% block javascripts %}
+
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
 {#    <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js" crossorigin="anonymous"></script>#}
     <!--end::Third Party Plugin(OverlayScrollbars)-->

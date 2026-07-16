@@ -1,6 +1,6 @@
 import './stimulus_bootstrap.js';
 
-/* Mode Full vs Light*/
+/* Mode : Full vs Light */
 import './mode.js';
 
 /*

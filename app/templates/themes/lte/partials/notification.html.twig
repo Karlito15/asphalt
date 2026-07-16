@@ -1,6 +1,6 @@
-
 {% for label, messages in app.flashes %}
     {% for message in messages %}
-        <twig:AlertBootstrap type="{{ label }}" message="{{ message }}" />
+{#        <twig:AlertBootstrap type="{{ label }}" message="{{ message }}" />#}
+        <twig:AlertSweet type="{{ label }}" message="{{ message }}" />
     {% endfor %}
 {% endfor %}
