@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Application\Controller\EasyAdmin\Mission;
 
 use App\Domain\Entity\MissionTask;
-use EasyCorp\Bundle\EasyAdminBundle\Attribute\AdminDashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;

@@ -8,8 +8,6 @@ use App\Domain\Entity\SettingTag;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 final class TagCrudController extends AbstractCrudController
@@ -49,10 +47,10 @@ final class TagCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
-        yield IdField::new('id')->onlyOnIndex();
-        yield TextField::new('value');
-        yield IntegerField::new('carsNumber');
-        yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
-        yield DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex();
+        return [
+            TextField::new('value'),
+            DateTimeField::new('createdAt')->setFormat('yyyy-MM-dd')->onlyOnIndex(),
+            DateTimeField::new('updatedAt')->setFormat('yyyy-MM-dd')->onlyOnIndex(),
+        ];
     }
 }

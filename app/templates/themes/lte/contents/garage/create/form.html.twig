@@ -2,15 +2,40 @@
 <section class="{{ container|default('container') }} mb-2 px-0">
 
     <div class="row row-cols-2">
-        <twig:FormFloating column="{{ 4 }}" form="{{ form.settingBrand }}" />
-        <twig:FormFloating column="{{ 8 }}" form="{{ form.model }}" />
+        <div class="col">
+            <div class="form-floating">
+                {{ form_widget(form.settingBrand) }}
+                {{ form_label(form.settingBrand) }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-floating">
+                {{ form_widget(form.model) }}
+                {{ form_label(form.model) }}
+            </div>
+        </div>
     </div>
 
     <div class="row row-cols-3 mt-5">
-        <twig:FormFloating column="{{ 4 }}" form="{{ form.settingClass }}" />
-        <twig:FormFloating column="{{ 4 }}" form="{{ form.stars }}" />
-{#        <twig:FormFloating column="{{ 4 }}" form="{{ form.gameUpdate, {'attr': {'value': game_update_last}} }}" />#}
-        {{ form_row(form.gameUpdate, {'attr': {'value': game_update_last}}) }}
+        <div class="col">
+            <div class="form-floating">
+                {{ form_widget(form.settingClass) }}
+                {{ form_label(form.settingClass) }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-floating">
+                {{ form_widget(form.stars) }}
+                {{ form_label(form.stars) }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-floating">
+                {{ form_widget(form.gameUpdate, {'attr': {'value': game_update_last}}) }}
+                {{ form_label(form.gameUpdate) }}
+            </div>
+        </div>
+{#        {{ form_row(form.gameUpdate, {'attr': {'value': game_update_last}}) }}#}
     </div>
 
 </section>
